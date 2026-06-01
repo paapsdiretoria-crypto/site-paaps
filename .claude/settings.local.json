@@ -1,0 +1,40 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p \"/Users/mac/SITE PAAPS/paaps-site/css\")",
+      "Bash(mkdir -p \"/Users/mac/SITE PAAPS/paaps-site/js\")",
+      "Bash(mkdir -p \"/Users/mac/SITE PAAPS/paaps-site/imagens\")",
+      "Bash(mkdir -p \"/Users/mac/SITE PAAPS/paaps-site/sobre\")",
+      "Bash(mkdir -p \"/Users/mac/SITE PAAPS/paaps-site/servicos\")",
+      "Bash(cp \"/Users/mac/SITE PAAPS/INSUMOS/IDENTIDADE VISUAL/01 - Logo/01 - Logo sem descritivo/Paaps - Logo marrom-8.png\" \"/Users/mac/SITE PAAPS/paaps-site/logo.png\")",
+      "Bash(cp \"/Users/mac/SITE PAAPS/INSUMOS/IDENTIDADE VISUAL/01 - Logo/01 - Logo sem descritivo/Paaps - Logo marrom-8.png\" \"/Users/mac/SITE PAAPS/paaps-site/imagens/logo-marrom.png\")",
+      "Bash(cp \"/Users/mac/SITE PAAPS/INSUMOS/IDENTIDADE VISUAL/01 - Logo/01 - Logo sem descritivo/Paaps - Logo branco-8.png\" \"/Users/mac/SITE PAAPS/paaps-site/imagens/logo-branco.png\")",
+      "Bash(cp \"/Users/mac/SITE PAAPS/INSUMOS/IDENTIDADE VISUAL/01 - Logo/01 - Logo sem descritivo/Paaps - Logo marrom + colorido-8.png\" \"/Users/mac/SITE PAAPS/paaps-site/imagens/logo-colorido.png\")",
+      "Bash(cp \"/Users/mac/SITE PAAPS/INSUMOS/IDENTIDADE VISUAL/06 - Pontinhos/Paaps - Pontinhos colorido -8.png\" \"/Users/mac/SITE PAAPS/paaps-site/imagens/pontinhos-colorido.png\")",
+      "Bash(cp \"/Users/mac/SITE PAAPS/INSUMOS/IDENTIDADE VISUAL/04 - Texturas/Paaps - Textura 1 marrom-8.png\" \"/Users/mac/SITE PAAPS/paaps-site/imagens/textura-marrom.png\")",
+      "Bash(cp \"/Users/mac/SITE PAAPS/INSUMOS/IDENTIDADE VISUAL/04 - Texturas/Paaps - Textura 1 amarelo-8.png\" \"/Users/mac/SITE PAAPS/paaps-site/imagens/textura-amarelo.png\")",
+      "Bash(cp \"/Users/mac/SITE PAAPS/INSUMOS/IDENTIDADE VISUAL/04 - Texturas/Paaps - Textura 1 branco-8.png\" \"/Users/mac/SITE PAAPS/paaps-site/imagens/textura-branco.png\")",
+      "Bash(cp \"/Users/mac/SITE PAAPS/INSUMOS/IDENTIDADE VISUAL/04 - Texturas/Paaps - Textura 1 verde-8.png\" \"/Users/mac/SITE PAAPS/paaps-site/imagens/textura-verde.png\")",
+      "Bash(cp \"/Users/mac/SITE PAAPS/INSUMOS/FOTOS/FOTOS BVMG ISAAC/IMG_7720.JPG\" \"/Users/mac/SITE PAAPS/paaps-site/imagens/hero-territorio.jpg\")",
+      "Bash(cp \"/Users/mac/SITE PAAPS/INSUMOS/FOTOS/FOTOS BVMG ISAAC/IMG_7724.JPG\" \"/Users/mac/SITE PAAPS/paaps-site/imagens/territorio-2.jpg\")",
+      "Bash(cp \"/Users/mac/SITE PAAPS/INSUMOS/FOTOS/FOTOS BVMG ISAAC/IMG_7728.JPG\" \"/Users/mac/SITE PAAPS/paaps-site/imagens/territorio-3.jpg\")",
+      "Bash(cp \"/Users/mac/SITE PAAPS/INSUMOS/FOTOS/Case de Bela Vista de Minas/bela-vista3.jpg\" \"/Users/mac/SITE PAAPS/paaps-site/imagens/case-bvmg-1.jpg\")",
+      "Bash(cp \"/Users/mac/SITE PAAPS/INSUMOS/FOTOS/Case de Bela Vista de Minas/PHOTO-2025-09-19-17-02-45.jpg\" \"/Users/mac/SITE PAAPS/paaps-site/imagens/case-bvmg-2.jpg\")",
+      "Bash(gh auth *)",
+      "Read(//usr/local/bin/**)",
+      "Read(//opt/homebrew/bin/**)",
+      "Bash(ls /opt/homebrew/bin/ 2>/dev/null | head -20 || echo \"no homebrew\")",
+      "Read(//opt/homebrew/**)",
+      "Read(//opt/**)",
+      "Read(//usr/local/**)",
+      "Bash(sw_vers)",
+      "Bash(curl -fsSL https://api.github.com/repos/cli/cli/releases/latest)",
+      "Bash(python3 -c \"import sys,json; data=json.load\\(sys.stdin\\); [print\\(a['name'], a['browser_download_url']\\) for a in data['assets'] if 'macOS' in a['name'] or 'darwin' in a['name'].lower\\(\\)]\")",
+      "Bash(curl -fsSL https://github.com/cli/cli/releases/download/v2.93.0/gh_2.93.0_macOS_arm64.zip -o /tmp/gh.zip)",
+      "Bash(git init *)",
+      "Bash(git config *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
+    ]
+  }
+}
