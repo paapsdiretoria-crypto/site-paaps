@@ -1,0 +1,20 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Arquivos brutos / assets de produção (não vão para o repo)
+INSUMOS/
+DOCX BASE/
+NOSSA CAMISETA PAAPS/
+NOSSOS CLIENTES E PARCEIROS/
+
+# Editor
+.vscode/
+*.swp
+*.swo
+
+# Temporários
+*.tmp
+*.log

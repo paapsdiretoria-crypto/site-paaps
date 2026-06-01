@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --cor-fundo: #f5f1e1;
+  --cor-marrom: #442309;
+  --cor-terracota: #cb4710;
+  --cor-oliva: #aea349;
+  --cor-amarelo: #f7c31c;
+  --cor-bege-rosa: #bbada2;
+  --cor-lilas: #bcb6f2;
+  --cor-branco: #ffffff;
+  --fonte-titulo: 'League Spartan', Arial, sans-serif;
+  --fonte-corpo: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --sombra: 0 4px 24px rgba(68,35,9,0.10);
+  --max-largura: 1200px;
+  --raio: 4px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--fonte-corpo);
+  background-color: var(--cor-fundo);
+  color: var(--cor-marrom);
+  font-size: 16px;
+  line-height: 1.7;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+}
+
+.container {
+  max-width: var(--max-largura);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.secao {
+  padding: 96px 0;
+}
+
+.secao--escura {
+  background: var(--cor-marrom);
+  color: var(--cor-branco);
+}
+
+.secao--terracota {
+  background: var(--cor-terracota);
+  color: var(--cor-branco);
+}
+
+.secao--oliva {
+  background: var(--cor-oliva);
+  color: var(--cor-branco);
+}
+
+.secao--amarelo {
+  background: var(--cor-amarelo);
+  color: var(--cor-marrom);
+}
+
+h1 {
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  line-height: 1.1;
+}
+
+h3 {
+  font-family: var(--fonte-titulo);
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+.btn-primario {
+  display: inline-block;
+  background: var(--cor-terracota);
+  color: var(--cor-branco);
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 16px 32px;
+  border-radius: var(--raio);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.btn-primario:hover {
+  opacity: 0.88;
+  transform: translateY(-2px);
+}
+
+.btn-primario--pequeno {
+  padding: 10px 20px;
+  font-size: 0.78rem;
+}
+
+.btn-secundario {
+  display: inline-block;
+  background: transparent;
+  color: var(--cor-terracota);
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 14px 30px;
+  border-radius: var(--raio);
+  border: 2px solid var(--cor-terracota);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-secundario:hover {
+  background: var(--cor-terracota);
+  color: var(--cor-branco);
+}
+
+.btn-branco {
+  display: inline-block;
+  background: var(--cor-branco);
+  color: var(--cor-terracota);
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 16px 32px;
+  border-radius: var(--raio);
+  text-decoration: none;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.btn-branco:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* Marcadores coloridos */
+.marcadores {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.marcador {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.marcador--amarelo { background: var(--cor-amarelo); }
+.marcador--terracota { background: var(--cor-terracota); }
+.marcador--oliva { background: var(--cor-oliva); }
+.marcador--marrom { background: var(--cor-marrom); }
+.marcador--branco { background: var(--cor-branco); }
+.marcador--lilas { background: var(--cor-lilas); }
+
+.marcador--pequeno {
+  width: 8px;
+  height: 8px;
+}
+
+/* Label de seção */
+.label-secao {
+  font-family: var(--fonte-titulo);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--cor-bege-rosa);
+  margin-bottom: 16px;
+  display: block;
+}
+
+.label-secao--branca {
+  color: rgba(255,255,255,0.65);
+}
+
+.label-secao--amarela {
+  color: var(--cor-amarelo);
+}
+
+/* Número grande */
+.numero-grande {
+  font-family: var(--fonte-titulo);
+  font-weight: 800;
+  font-size: clamp(3rem, 8vw, 5rem);
+  color: var(--cor-amarelo);
+  line-height: 1;
+  display: block;
+}
+
+.numero-grande--terracota {
+  color: var(--cor-terracota);
+}
+
+.numero-grande--marrom {
+  color: var(--cor-marrom);
+}
+
+/* Subtexto de número */
+.numero-subtexto {
+  font-family: var(--fonte-corpo);
+  font-size: 0.88rem;
+  line-height: 1.4;
+  color: rgba(255,255,255,0.85);
+  margin-top: 8px;
+}
+
+.numero-subtexto--marrom {
+  color: var(--cor-marrom);
+  opacity: 0.75;
+}
+
+/* Faixa manifesto */
+.faixa-manifesto {
+  background: var(--cor-marrom);
+  color: var(--cor-amarelo);
+  padding: 28px 40px;
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  font-size: clamp(0.78rem, 2vw, 1rem);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Animações de entrada */
+.animar {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animar.visivel {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animar-delay-1 { transition-delay: 0.1s; }
+.animar-delay-2 { transition-delay: 0.2s; }
+.animar-delay-3 { transition-delay: 0.3s; }
+.animar-delay-4 { transition-delay: 0.4s; }
+
+/* ═══════════════════════════════════════
+   RESPONSIVIDADE
+═══════════════════════════════════════ */
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .secao {
+    padding: 64px 0;
+  }
+
+  .btn-primario,
+  .btn-branco,
+  .btn-secundario {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .secao {
+    padding: 56px 0;
+  }
+}
