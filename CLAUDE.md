@@ -72,6 +72,24 @@ Breakpoints em `components.css`:
 - `≤ 768px`: header hamburger ativo, grids viram 1 coluna, nav oculta
 - `≤ 480px`: hero usa `100svh`, grid-numeros vira 1 coluna
 
+## GitHub
+
+Repositório: https://github.com/paapsdiretoria-crypto/site-paaps  
+Branch principal: `main`  
+GitHub CLI: `~/bin/gh`
+
+**Auto-push ativo:** ao final de cada conversa com o Claude Code, um hook automático detecta alterações, faz commit e push para o GitHub. Não é necessário commitar manualmente.
+
+Para commitar e enviar manualmente:
+```bash
+cd "/Users/mac/SITE PAAPS"
+git add -A
+git commit -m "descrição da alteração"
+git push
+```
+
+Arquivos **excluídos** do repositório (ver `.gitignore`): `INSUMOS/`, `DOCX BASE/`, `NOSSA CAMISETA PAAPS/`, `NOSSOS CLIENTES E PARCEIROS/`.
+
 ## Contato institucional
 
 - WhatsApp: `https://wa.me/5511995231724`

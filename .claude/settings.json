@@ -1,0 +1,26 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd \"/Users/mac/SITE PAAPS\" && git diff --quiet HEAD 2>/dev/null && git diff --staged --quiet 2>/dev/null || (git add -A && git commit -m \"auto: atualização do site $(date '+%Y-%m-%d %H:%M')\" && git push)"
+          }
+        ]
+      }
+    ]
+  },
+  "permissions": {
+    "allow": [
+      "Bash(git status*)",
+      "Bash(git diff*)",
+      "Bash(git add*)",
+      "Bash(git commit*)",
+      "Bash(git push*)",
+      "Bash(git log*)",
+      "Bash(~/bin/gh*)"
+    ]
+  }
+}
