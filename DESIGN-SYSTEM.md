@@ -1,7 +1,7 @@
 # DESIGN SYSTEM PAAPS — v1.0
 **Fundação de Marca · Sistema Visual · Componentes · Regras Anti-Erro**
 
-> Documento gerado a partir de análise cruzada dos arquivos do site (`paaps-site/`), dos 25+ designs do Canva (pasta FAFr38vYHlc) e dos assets disponíveis. Última atualização: junho/2026.
+> Documento gerado a partir de análise cruzada dos arquivos do site (`paaps-site/`), dos 25+ designs do Canva (pasta FAFr38vYHlc), dos assets em `INSUMOS/` e documentos de referência. Última atualização: junho/2026.
 
 ---
 
@@ -127,7 +127,18 @@ box-shadow: 0 12px 40px rgba(68,35,9,0.15);
 box-shadow: 0 4px 32px rgba(68,35,9,0.14);
 ```
 
-### 2.5 Cor externa única (fora da paleta)
+### 2.5 Cor adicional identificada nas texturas/gradientes (INSUMOS)
+
+Os arquivos de textura e gradiente em `INSUMOS/IDENTIDADE VISUAL/` revelam duas cores da identidade que **não têm variável CSS no site atual** mas fazem parte da paleta completa da marca:
+
+| Cor | Uso nos assets | CSS equivalente aproximado |
+|---|---|---|
+| **Cinza** | Textura 1-5 cinza, Gradiente Cinza | — (não usado no site) |
+| **Verde** | Textura 1-5 verde, Gradiente Verde, Pontinhos verde+amarelo | Próximo de `--cor-oliva` (#aea349) |
+
+> O "verde" dos INSUMOS pode ser a mesma cor `--cor-oliva` já definida, ou uma variante mais fria. Verificar a `Paaps - Paleta de Cor.jpg` para confirmar os HEX exatos. O cinza não tem equivalente no CSS e deve ser tratado como cor de aplicação offline/impressa apenas.
+
+### 2.6 Cor externa única (fora da paleta)
 
 ```css
 #25D366  /* verde WhatsApp — SOMENTE no botão/ícone do WhatsApp */
@@ -147,16 +158,27 @@ background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' ...opacit
 
 ### 3.1 Famílias Tipográficas
 
+O PAAPS possui **três fontes distintas** na identidade visual:
+
 ```css
+/* Fonte do LOGOTIPO (não usada no CSS do site — só no arquivo .ai e no PNG do logo) */
+Evermore  →  INSUMOS/IDENTIDADE VISUAL/02 - Tipografia/Evermore - Tipografia logo.zip
+
+/* Fonte de títulos, labels, botões, nav, interface */
 --fonte-titulo: 'League Spartan', Arial, sans-serif;
+/* Fonte do DESCRITIVO abaixo do logo (e corpo de texto) */
 --fonte-corpo:  'Helvetica Neue', Helvetica, Arial, sans-serif;
 ```
 
-**League Spartan** — Google Fonts. Pesos usados: 400, 500, 600, 700, 800.  
-**Uso:** Headlines, labels, botões, nav, tags, contadores, faixa manifesto.
+> ⚠️ **IMPORTANTE:** A palavra "PAAPS" no logotipo é desenhada na fonte **Evermore** — não League Spartan. Nunca tentar recriar o logo com League Spartan. Usar sempre os arquivos oficiais de `INSUMOS/IDENTIDADE VISUAL/01 - Logo/`.
 
-**Helvetica Neue** — Sistema. Pesos usados: 400 (regular).  
-**Uso:** Parágrafos, corpo de texto longo, subtextos de números.
+**Evermore** — Fonte exclusiva do logotipo. Arquivo fonte em `INSUMOS/IDENTIDADE VISUAL/02 - Tipografia/Evermore - Tipografia logo.zip`. Uso restrito ao símbolo da marca.
+
+**League Spartan** — Google Fonts. Pesos usados: 400, 500, 600, 700, 800. Arquivo em `INSUMOS/IDENTIDADE VISUAL/02 - Tipografia/League Spartan - Tipografia texto.zip`.  
+**Uso:** Headlines, labels, botões, nav, tags, contadores, faixa manifesto, textos de interface.
+
+**Helvetica Neue** — Sistema (e descritivo do logo). Arquivo em `INSUMOS/IDENTIDADE VISUAL/02 - Tipografia/Helvética - Tipografia Descritivo.zip`. Pesos usados: 400 (regular).  
+**Uso:** Parágrafos, corpo de texto longo, subtextos de números, descritivo abaixo do logotipo.
 
 ### 3.2 Escala de Tipos — Títulos
 
@@ -724,52 +746,198 @@ Sumário:
 
 ## 9. ASSETS E INVENTÁRIO
 
-### 9.1 Versões do Logotipo
+### 9.1 Versões do Logotipo — Arquivos Fonte (INSUMOS)
 
-| Arquivo | Fundo de uso |
-|---|---|
-| `imagens/logo-colorido.png` | Fundo bege/claro (--cor-fundo) |
-| `imagens/logo-marrom.png` | Fundo bege/claro (alternativa mais sóbria) |
-| `imagens/logo-branco.png` | Fundos escuros (marrom, terracota, oliva) |
+A fonte da verdade para os logos é `INSUMOS/IDENTIDADE VISUAL/01 - Logo/`. Os arquivos em `paaps-site/imagens/` são cópias exportadas para uso no site.
 
-**Altura canônica no header:** 48px.  
-**Altura no footer:** 40px.  
-**Regra:** nunca usar o logo colorido sobre fundo escuro. Nunca usar o logo branco sobre fundo claro.
+#### Logo sem descritivo (somente o símbolo PAAPS)
 
-### 9.2 Pontinhos (elementos gráficos decorativos)
-
-| Arquivo | Uso |
-|---|---|
-| `imagens/pontinhos-colorido.png` | Elemento decorativo em fundos claros |
-| `imagens/pontinhos-marrom.png` | Elemento decorativo, versão monochrome marrom |
-| `imagens/pontinhos-branco.png` | Elemento decorativo em fundos escuros |
-
-**Uso:** elementos de textura, cantos de seção, fundos de cards especiais.
-
-### 9.3 Texturas de Fundo
-
-| Arquivo | Uso |
-|---|---|
-| `imagens/textura-marrom.png` | Footer (340px, blend: multiply) |
-| `imagens/textura-amarelo.png` | Seções amarelas, backgrounds editoriais |
-| `imagens/textura-branco.png` | Overlays ou fundos de seção branca |
-| `imagens/textura-verde.png` | Aplicações específicas (pouco usada no site) |
-
-### 9.4 Fotografia
-
-| Arquivo | Descrição | Uso no site |
+| Arquivo INSUMOS | Versão | Fundo de uso |
 |---|---|---|
-| `hero-territorio.jpg` | Vista aérea de território | Hero da home |
-| `case-bvmg-1.jpg` | Equipe em campo — BV Minas | Case (principal) |
-| `case-bvmg-2/3/4.jpg` | Mais fotos do case | Página case |
-| `equipe-2.jpg` | Equipe técnica em campo | Card equipe |
-| `equipe-3.jpg` | PAAPS em presença territorial | Card equipe |
-| `equipe-4.jpg` | (disponível, não usada na home) | Páginas internas |
-| `territorio-2/3.jpg` | Paisagens territoriais | Páginas internas |
+| `01 - Logo sem descritivo/Paaps - Logo.ai` | Vetor fonte (Illustrator) | — |
+| `01 - Logo sem descritivo/Paaps - Logo branco + colorido-8.png` | Símbolo branco + letras coloridas | Fundos escuros |
+| `01 - Logo sem descritivo/Paaps - Logo branco-8.png` | Totalmente branco | Fundos escuros |
+| `01 - Logo sem descritivo/Paaps - Logo marrom + colorido-8.png` | Símbolo marrom + letras coloridas | Fundos claros |
+| `01 - Logo sem descritivo/Paaps - Logo marrom-8.png` | Totalmente marrom | Fundos claros |
 
-**Tratamento de foto padrão:** overlay `rgba(68,35,9,0.58)` sobre imagens de fundo (hero). Fotos em cards: `object-fit: cover`.
+#### Logo com descritivo (símbolo + "Psicologia Social para Políticas Públicas")
 
-### 9.5 Ícones
+| Arquivo INSUMOS | Versão | Fundo de uso |
+|---|---|---|
+| `02 - Logo com descritivo/Paaps - Logo com Descritivo.ai` | Vetor fonte (Illustrator) | — |
+| `02 - Logo com descritivo/Paaps - Logo branco com descritivo branco-8.png` | Branco completo | Fundos escuros |
+| `02 - Logo com descritivo/Paaps - Logo marrom com descritivo amarelo-8.png` | Logo marrom + descritivo amarelo | Fundos claros — **versão preferencial** |
+| `02 - Logo com descritivo/Paaps - Logo marrom com descritivo amarelo_1-8.png` | Variante de layout do anterior | Fundos claros |
+| `02 - Logo com descritivo/Paaps - Logo marrom com descritivo marrom-8.png` | Marrom monocromo | Fundos bege/claro |
+| `02 - Logo com descritivo/Paaps - Logo marrom com descritivo verde-8.png` | Logo marrom + descritivo verde | Fundos claros |
+| `02 - Logo com descritivo/Paaps - Logo marrom com descritivo vermelho-8.png` | Logo marrom + descritivo vermelho/terracota | Fundos claros |
+
+> ⚠️ A subpasta `(Antigo) Autoria de Impacto Social em Rede/` contém o tagline anterior da marca. **Não usar** — descritivo atual é "Psicologia Social para Políticas Públicas".
+
+#### Logo PAAPS + DIGGING (co-branding)
+
+| Arquivo INSUMOS | Versão |
+|---|---|
+| `08 - Paaps + Digging/01 - Logo Paaaps + Digging/Logo Paaps + Digging - Branco.png` | Branco |
+| `08 - Paaps + Digging/01 - Logo Paaaps + Digging/Logo Paaps + Digging - Marrom.png` | Marrom |
+| `08 - Paaps + Digging/01 - Logo Paaaps + Digging/Logo Paaps + Digging - Vinho.png` | Vinho/terracota |
+| `08 - Paaps + Digging/01 - Logo Paaaps + Digging/Paaps - Logo + Digging.pdf` | PDF fonte |
+
+#### Logo ECOA (parceira)
+
+| Arquivo INSUMOS | Versão |
+|---|---|
+| `01a - Logo Ecoa/Ecoa - Logo branco + cor-8.png` | Branco + cor |
+| `01a - Logo Ecoa/Ecoa - Logo branco-8.png` | Branco |
+| `01a - Logo Ecoa/Ecoa - Logo marrom + cor-8.png` | Marrom + cor |
+| `01a - Logo Ecoa/Ecoa - Logo marrom-8.png` | Marrom |
+| `01a - Logo Ecoa/Paaps - Logo Ecoa.pdf` | PDF |
+
+#### Versões no site (exportações prontas para uso web)
+
+| Arquivo `paaps-site/imagens/` | Equivalente INSUMOS |
+|---|---|
+| `logo-colorido.png` | Logo sem descritivo, marrom + colorido |
+| `logo-marrom.png` | Logo sem descritivo, totalmente marrom |
+| `logo-branco.png` | Logo sem descritivo, totalmente branco |
+
+**Altura no header:** 48px · **Altura no footer:** 40px  
+**Regra:** nunca usar logo colorido sobre fundo escuro. Nunca usar logo branco sobre fundo claro.
+
+---
+
+### 9.2 Paleta de Cor — Arquivo Oficial
+
+| Arquivo INSUMOS | Conteúdo |
+|---|---|
+| `03 - Paleta de Cor/Paaps - Paleta de Cor.jpg` | Paleta oficial com swatches nomeados |
+| `08 - Paaps + Digging/03 - Paleta de Cor Paaps + Digging/Paaps - + Digging Paleta de Cor.pdf` | Paleta co-branded com Digging |
+
+---
+
+### 9.3 Texturas — Inventário Completo (INSUMOS)
+
+Há **5 tipos de textura** × **7 cores** = 35 arquivos. Caminho base: `INSUMOS/IDENTIDADE VISUAL/04 - Texturas/`
+
+| Cor disponível | Texturas disponíveis |
+|---|---|
+| **amarelo** | Textura 1, 2, 3, 4, 5 |
+| **branco** | Textura 1, 2, 3, 4, 5 |
+| **cinza** | Textura 1, 2, 3, 4, 5 |
+| **lilás** | Textura 1, 2, 3, 4, 5 |
+| **marrom** | Textura 1, 2, 3, 4, 5 |
+| **verde** | Textura 1, 2, 3, 4, 5 |
+| **vermelho** | Textura 1, 2, 3, 4, 5 |
+
+**Nome do arquivo:** `Paaps - Textura [1-5] [cor]-8.png`  
+**Exemplo:** `Paaps - Textura 1 marrom-8.png`
+
+> As 4 texturas em `paaps-site/imagens/` (textura-amarelo, textura-branco, textura-marrom, textura-verde) são exportações selecionadas desse conjunto. Os outros 31 arquivos estão disponíveis no INSUMOS para novas aplicações.
+
+---
+
+### 9.4 Gradientes (INSUMOS — não usados no site ainda)
+
+Caminho: `INSUMOS/IDENTIDADE VISUAL/05 - Gradiente/`
+
+| Arquivo | Cor |
+|---|---|
+| `Paaps - Gradiente Amarelo-8.png` | Amarelo |
+| `Paaps - Gradiente Branco-8.png` | Branco |
+| `Paaps - Gradiente Cinza-8.png` | Cinza |
+| `Paaps - Gradiente Lilás-8.png` | Lilás |
+| `Paaps - Gradiente Marrom-8.png` | Marrom |
+| `Paaps - Gradiente Verde-8.png` | Verde |
+| `Paaps - Gradiente Vermelho-8.png` | Vermelho/terracota |
+
+**Uso potencial:** overlays de seção, fundos de destaque, backgrounds de posts no Canva.
+
+---
+
+### 9.5 Pontinhos — Inventário Completo (INSUMOS)
+
+Caminho: `INSUMOS/IDENTIDADE VISUAL/06 - Pontinhos/`
+
+| Arquivo INSUMOS | Variante | Versão no site |
+|---|---|---|
+| `Paaps - Pontinhos.ai` | Vetor fonte | — |
+| `Paaps - Pontinhos colorido -8.png` | Multicolor | `imagens/pontinhos-colorido.png` |
+| `Paaps - Pontinhos marrom-8.png` | Marrom | `imagens/pontinhos-marrom.png` |
+| `Paaps - Pontinhos branco-8.png` | Branco | `imagens/pontinhos-branco.png` |
+| `Paaps - Pontinhos vermelho + amarelo-8.png` | Vermelho/terracota + amarelo | *(não importado)* |
+| `Paaps - Pontinhos verde + amarelo -8.png` | Verde/oliva + amarelo | *(não importado)* |
+| `Paaps - Pontinhos vermelho + verde -8.png` | Vermelho + verde | *(não importado)* |
+
+---
+
+### 9.6 Templates Oficiais de Layout (INSUMOS)
+
+Caminho: `INSUMOS/IDENTIDADE VISUAL/07 - Template/`  
+Arquivo fonte: `Paaps - Template.ai`
+
+| Arquivo | Variação |
+|---|---|
+| `Paaps - Template 1-8.png` | Layout base único |
+| `Paaps - Template 2a/2b-8.png` | Layout 2 — variantes a e b |
+| `Paaps - Template 3a/3b-8.png` | Layout 3 — variantes a e b |
+| `Paaps - Template 4a/4b-8.png` | Layout 4 — variantes a e b |
+| `Paaps - Template 5a/5b-8.png` | Layout 5 — variantes a e b |
+
+**Uso:** base para criação de materiais impressos, apresentações, peças offline.
+
+---
+
+### 9.7 Formas Decorativas PAAPS + DIGGING (INSUMOS)
+
+Caminho: `INSUMOS/IDENTIDADE VISUAL/08 - Paaps + Digging/02 - Formas Paaps + Digging/`  
+16 formas disponíveis: `Paapas + Digging Forma [1-16]-8.png`  
+Arquivo fonte: `Paaps - Logo + Formas.pdf`
+
+**Uso:** elementos gráficos para peças co-branded com a Digging, materiais institucionais.
+
+---
+
+### 9.8 Fotografia — Acervo Completo (INSUMOS/FOTOS)
+
+#### Case Bela Vista de Minas
+
+| Subpasta | Conteúdo | Qtd aproximada |
+|---|---|---|
+| `Case de Bela Vista de Minas/` | Fotos JPG de campo, vídeos MOV/MP4 | 35+ fotos, 5 vídeos |
+| `FOTOS BVMG ISAAC/` | Acervo fotográfico profissional de campo, BV Minas | **200+ fotos JPG** (IMG_7720–IMG_8002) |
+
+> O acervo `FOTOS BVMG ISAAC/` é a fonte mais rica de fotografias do PAAPS. As 4 imagens do site (`case-bvmg-1/2/3/4.jpg`) foram exportadas deste conjunto — há centenas de fotos disponíveis para novas páginas.
+
+#### Outros projetos fotografados
+
+| Subpasta | Projeto | Conteúdo |
+|---|---|---|
+| `MÃES ATÍPICAS RJ/` | Especiais da Maré + PROINAPE | ~35 fotos JPG |
+| `CRAFTSAPIENS (MUNDO DIGITAL)/` | Grupos em mundo digital (Minecraft?) | 20 imagens JPG/PNG |
+| `ECOA FOTOS/` | Atividades da Comunidade ECOA | 4 capturas de tela PNG |
+| `OUTRAS FOTOS/` | Eventos, pessoas, referências | ~15 arquivos mistos |
+
+#### Arquivos nomeados relevantes em OUTRAS FOTOS
+
+| Arquivo | Descrição provável |
+|---|---|
+| `DSC03011-24.jpg`, `DSC03040-45.jpg`, `DSC03075-3.jpg`, `DSC03222-74.jpg` | Fotos profissionais de evento/campo |
+| `falando foto 2.jpg` | Foto de apresentação/fala pública |
+| `MARIA QUINZINHO.jpg` | Personagem/pessoa nomeada |
+| `bell-hooks.jpg.webp` | Referência bibliográfica (bell hooks) |
+
+---
+
+### 9.9 Aplicação da Identidade Visual (INSUMOS/APLICAÇÃO DA ID. VISUAL)
+
+| Arquivo | Conteúdo |
+|---|---|
+| `A GovTech de Psicologia Social do Brasil..pdf` | Documento/apresentação com aplicação da ID visual em contexto institucional |
+| `WhatsApp Image 2026-05-24 at 17.37.29/58/11/24.jpeg` | 4 imagens de aplicação (mockups, impressos ou fotos de material) |
+
+---
+
+### 9.10 Ícones SVG (site)
 
 Todos os ícones são SVGs inline, sem dependência de biblioteca. Padrão:
 - `viewBox="0 0 24 24"` para ícones de interface (nav, botões, redes)
@@ -872,6 +1040,7 @@ Lista oficial para a esteira de logos e menções:
 
 ### 11.2 Erros de Tipografia
 
+❌ **NUNCA recriar o logo em League Spartan** — a fonte do logotipo é **Evermore** (`INSUMOS/02 - Tipografia/Evermore - Tipografia logo.zip`). Usar sempre os PNGs ou .ai oficiais  
 ❌ Nunca adicionar `text-transform: uppercase` via HTML (é sempre via CSS)  
 ❌ Nunca usar Helvetica Neue em labels, botões, tags, nav ou títulos  
 ❌ Nunca usar League Spartan com `font-weight` diferente dos pesos carregados (400/500/600/700/800)  
