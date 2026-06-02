@@ -13,6 +13,7 @@ O código do site vive em `paaps-site/`. Cada página é uma pasta com seu próp
 ```
 paaps-site/
   index.html          ← Home
+  logo.png            ← logo principal (único asset na raiz, fora de imagens/)
   sobre/index.html
   servicos/index.html
   como-contratar/index.html
@@ -22,8 +23,12 @@ paaps-site/
     style.css         ← variáveis globais, tipografia, utilitários, responsividade base
     components.css    ← header, hero, cards, footer, componentes específicos
   js/main.js          ← hamburger, scroll, esteira marquee, IntersectionObserver, contadores
-  imagens/            ← assets do site (fotos, logos, texturas, pontinhos)
+  imagens/            ← assets do site (fotos, texturas, pontinhos — exceto logo.png)
 ```
+
+Na raiz do repositório:
+- `DESIGN-SYSTEM.md` — documentação completa do design system (cores, tipografia, componentes, voz)
+- `PROMPT_CLAUDE_CODE_SITE_PAAPS.md` — prompt de referência para trabalho no site
 
 `INSUMOS/` contém os arquivos fonte da identidade visual (logos originais, paleta, tipografia, texturas) e fotos brutas. `DOCX BASE/` contém documentos de referência institucional.
 
@@ -82,7 +87,7 @@ GitHub CLI: `~/bin/gh`
 
 Para commitar e enviar manualmente:
 ```bash
-cd "/Users/mac/SITE PAAPS"
+cd "/Users/mac/Desktop/SITE PAAPS"
 git add -A
 git commit -m "descrição da alteração"
 git push

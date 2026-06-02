@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "cd \"/Users/mac/SITE PAAPS\" && git diff --quiet HEAD 2>/dev/null && git diff --staged --quiet 2>/dev/null || (git add -A && git commit -m \"auto: atualização do site $(date '+%Y-%m-%d %H:%M')\" && git push)"
+            "command": "cd \"/Users/mac/Desktop/SITE PAAPS\" && git diff --quiet HEAD 2>/dev/null && git diff --staged --quiet 2>/dev/null || (git add -A && git commit -m \"auto: atualização do site $(date '+%Y-%m-%d %H:%M')\" && git push)"
           }
         ]
       }
