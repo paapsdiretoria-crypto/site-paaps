@@ -74,14 +74,15 @@ function renderQualityTiles() {
       const aRows = byAccount['amalluvasconcellos'] || [];
       const pRows = byAccount['paaps.brasil'] || [];
       const dates = allDates(byAccount);
+      const rowField = field.replace('avg_', ''); // avg_save_rate → save_rate
       const vals = dates.map(d => {
         let s = 0, c = 0;
-        const av = valueOn(aRows, d, field.replace('avg_','').replace('_rate','_rate'));
-        const pv = valueOn(pRows, d, field.replace('avg_','').replace('_rate','_rate'));
+        const av = valueOn(aRows, d, rowField);
+        const pv = valueOn(pRows, d, rowField);
         if (av !== null) { s += av; c++; }
         if (pv !== null) { s += pv; c++; }
         return c > 0 ? s / c : 0;
-      }).filter(v => v !== null);
+      });
       sparkEl.innerHTML = sparklineSVG(vals, color);
     }
 
@@ -127,12 +128,14 @@ function renderViralSection() {
   if (events.length === 0) {
     document.getElementById('viralSection').style.opacity = '0.4';
     document.getElementById('viralBadge').style.display  = 'none';
+    document.getElementById('viralBadgeHm').style.display = 'none';
     document.getElementById('viralNote').textContent = 'Nenhum evento viral detectado no período.';
     return;
   }
 
   document.getElementById('viralSection').style.opacity = '1';
   document.getElementById('viralBadge').style.display   = '';
+  document.getElementById('viralBadgeHm').style.display = '';
   const peak = events.reduce((a,b) => a.total_interactions > b.total_interactions ? a : b);
 
   // Peak metrics
