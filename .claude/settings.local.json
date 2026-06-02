@@ -34,7 +34,9 @@
       "Bash(git init *)",
       "Bash(git config *)",
       "Bash(git add *)",
-      "Bash(git commit -m ' *)"
+      "Bash(git commit -m ' *)",
+      "WebFetch(domain:mcp.windsor.ai)",
+      "Bash(claude mcp *)"
     ]
   }
 }
