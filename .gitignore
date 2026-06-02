@@ -18,3 +18,9 @@ NOSSOS CLIENTES E PARCEIROS/
 # Temporários
 *.tmp
 *.log
+
+# Configurações com credenciais (nunca commitar)
+instagram/dashboard/js/config.js
+
+# Configurações locais do Claude Code (podem conter credenciais ou paths pessoais)
+.claude/settings.local.json

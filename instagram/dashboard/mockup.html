@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Instagram PAAPS — Mockup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'fundo':     '#f5f1e1',
+            'marrom':    '#442309',
+            'terracota': '#cb4710',
+            'oliva':     '#aea349',
+            'amarelo':   '#f7c31c',
+            'bege':      '#bbada2',
+            'lilas':     '#bcb6f2',
+          },
+          fontFamily: {
+            'titulo': ['League Spartan', 'Arial', 'sans-serif'],
+            'corpo':  ['Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      background-color: #f5f1e1;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    }
+    .font-titulo { font-family: 'League Spartan', Arial, sans-serif; }
+    .font-corpo  { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+
+    /* ───── Filtros ───── */
+    .filter-btn {
+      font-family: 'League Spartan', sans-serif;
+      font-weight: 700; font-size: 0.72rem; letter-spacing: 0.1em;
+      text-transform: uppercase; padding: 6px 16px; border-radius: 4px;
+      border: 1.5px solid rgba(68,35,9,0.18); cursor: pointer;
+      transition: all .2s; color: #442309; background: transparent;
+    }
+    .filter-btn:hover { border-color: #442309; }
+    .filter-btn.active { background: #442309; color: #f7c31c; border-color: #442309; }
+
+    .acct-btn {
+      font-family: 'League Spartan', sans-serif;
+      font-weight: 700; font-size: 0.72rem; letter-spacing: 0.08em;
+      text-transform: uppercase; padding: 6px 16px; border-radius: 4px;
+      border: 1.5px solid rgba(68,35,9,0.18); cursor: pointer;
+      transition: all .2s; color: #442309; background: transparent;
+    }
+    .acct-btn.active-amallu { background: #cb4710; color: #fff; border-color: #cb4710; }
+    .acct-btn.active-paaps  { background: #aea349; color: #fff; border-color: #aea349; }
+    .acct-btn.active-both   { background: #442309; color: #f7c31c; border-color: #442309; }
+
+    /* ───── Cards ───── */
+    .card {
+      background: #fff; border-radius: 4px;
+      box-shadow: 0 4px 24px rgba(68,35,9,0.10);
+      transition: transform .2s, box-shadow .2s;
+    }
+    .card:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(68,35,9,0.15); }
+
+    /* ───── Label de seção ───── */
+    .label-secao {
+      font-family: 'League Spartan', sans-serif;
+      font-size: 0.68rem; font-weight: 700;
+      letter-spacing: 0.18em; text-transform: uppercase; color: #bbada2;
+    }
+
+    /* ───── Número grande ───── */
+    .numero {
+      font-family: 'League Spartan', sans-serif;
+      font-weight: 800; line-height: 1;
+    }
+
+    /* ───── Badges de tendência ───── */
+    .badge-up   { background: rgba(174,163,73,0.14); color: #7e7428; border-radius: 4px; padding: 2px 8px; font-size: 0.72rem; font-weight: 700; font-family: 'League Spartan', sans-serif; }
+    .badge-down { background: rgba(203,71,16,0.12); color: #cb4710; border-radius: 4px; padding: 2px 8px; font-size: 0.72rem; font-weight: 700; font-family: 'League Spartan', sans-serif; }
+    .badge-flat { background: rgba(187,173,162,0.2); color: #9a8a82; border-radius: 4px; padding: 2px 8px; font-size: 0.72rem; font-weight: 700; font-family: 'League Spartan', sans-serif; }
+
+    /* ───── Viral badge ───── */
+    @keyframes pulsar { 0%,100%{opacity:1;} 50%{opacity:.55;} }
+    .badge-viral {
+      background: #f7c31c; color: #442309; border-radius: 4px;
+      padding: 3px 10px; font-size: 0.65rem; font-weight: 800;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      font-family: 'League Spartan', sans-serif;
+      animation: pulsar 2s infinite;
+    }
+
+    /* ───── Heatmap ───── */
+    .hm-cell {
+      border-radius: 4px; transition: all .2s; cursor: default;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      height: 56px; min-width: 72px;
+    }
+    .hm-cell:hover { outline: 2px solid #442309; }
+    .hm-label {
+      font-family: 'League Spartan', sans-serif;
+      font-size: 0.6rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.1em; margin-bottom: 4px;
+    }
+    .hm-val {
+      font-family: 'League Spartan', sans-serif;
+      font-size: 0.72rem; font-weight: 700;
+    }
+
+    /* ───── WoW table ───── */
+    .wow-table th {
+      font-family: 'League Spartan', sans-serif;
+      font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase;
+      color: #bbada2; padding: 0 12px 12px; font-weight: 700; text-align: left;
+    }
+    .wow-table td {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 0.88rem; padding: 10px 12px;
+      border-top: 1px solid rgba(187,173,162,0.3);
+      color: #442309;
+    }
+    .wow-table td:first-child {
+      font-family: 'League Spartan', sans-serif;
+      font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.08em; color: #bbada2;
+    }
+
+    /* ───── Drill panel ───── */
+    .drill-panel {
+      position: fixed; top: 0; right: 0; height: 100%;
+      width: 340px; background: #fff;
+      box-shadow: -8px 0 40px rgba(68,35,9,0.18);
+      transform: translateX(100%);
+      transition: transform .35s cubic-bezier(0.4,0,0.2,1);
+      z-index: 200;
+    }
+    .drill-panel.visible { transform: translateX(0); }
+    .drill-peek {
+      position: fixed; top: 50%; right: 0;
+      transform: translateY(-50%);
+      background: #442309; color: #f7c31c;
+      font-family: 'League Spartan', sans-serif;
+      font-size: 0.6rem; font-weight: 800;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      writing-mode: vertical-rl; padding: 16px 8px;
+      border-radius: 4px 0 0 4px; cursor: pointer;
+      z-index: 201; transition: right .35s cubic-bezier(0.4,0,0.2,1);
+    }
+
+    /* ───── Mockup stamp ───── */
+    .mockup-stamp {
+      position: fixed; bottom: 20px; left: 20px;
+      background: #f7c31c; color: #442309;
+      font-family: 'League Spartan', sans-serif;
+      font-size: 0.62rem; font-weight: 800;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      padding: 6px 14px; border-radius: 4px; z-index: 999;
+    }
+
+    /* ───── Tooltip hover ───── */
+    .has-tooltip { position: relative; }
+    .tooltip {
+      display: none; position: absolute;
+      bottom: calc(100% + 8px); left: 50%; transform: translateX(-50%);
+      background: #442309; color: #fff; border-radius: 4px;
+      padding: 4px 10px; font-size: 0.7rem; white-space: nowrap;
+      font-family: 'League Spartan', sans-serif; z-index: 100;
+    }
+    .has-tooltip:hover .tooltip { display: block; }
+
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #f5f1e1; }
+    ::-webkit-scrollbar-thumb { background: #bbada2; border-radius: 3px; }
+  </style>
+</head>
+<body class="font-corpo">
+
+<!-- ══════════════════════════════════════════
+     MOCKUP STAMP
+══════════════════════════════════════════ -->
+<div class="mockup-stamp">Mockup · Dados reais 30d · Layout aprovado</div>
+
+<!-- ══════════════════════════════════════════
+     HEADER
+══════════════════════════════════════════ -->
+<header style="background:#442309;" class="w-full px-10 py-4 flex items-center justify-between">
+  <div class="flex items-center gap-4">
+    <!-- Logo PAAPS (versão texto) -->
+    <div style="font-family:'League Spartan',sans-serif;font-size:1.4rem;font-weight:800;letter-spacing:0.06em;color:#f7c31c;">PAAPS</div>
+    <div style="width:1px;height:28px;background:rgba(255,255,255,0.2);"></div>
+    <div>
+      <div style="font-family:'League Spartan',sans-serif;font-size:0.62rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.5);">Dashboard</div>
+      <div style="font-family:'League Spartan',sans-serif;font-size:0.92rem;font-weight:700;letter-spacing:0.04em;color:#fff;">Instagram Analytics</div>
+    </div>
+  </div>
+  <div class="flex items-center gap-3">
+    <div style="font-family:'League Spartan',sans-serif;font-size:0.68rem;color:rgba(255,255,255,0.45);letter-spacing:0.08em;">Atualizado · 02 jun 2026 · 13:40</div>
+    <a href="../../../paaps-site/index.html" style="font-family:'League Spartan',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#442309;background:#f7c31c;border-radius:4px;padding:7px 16px;text-decoration:none;">Abrir site →</a>
+  </div>
+</header>
+
+<!-- ══════════════════════════════════════════
+     FILTER BAR (sticky)
+══════════════════════════════════════════ -->
+<div style="position:sticky;top:0;z-index:40;background:#f5f1e1;border-bottom:1px solid rgba(187,173,162,0.35);" class="px-10 py-3 flex items-center justify-between">
+  <!-- Período -->
+  <div class="flex items-center gap-2">
+    <span class="label-secao mr-3">Período</span>
+    <button class="filter-btn">7 dias</button>
+    <button class="filter-btn active">30 dias</button>
+    <button class="filter-btn">90 dias</button>
+  </div>
+  <!-- Conta -->
+  <div class="flex items-center gap-2">
+    <span class="label-secao mr-3">Conta</span>
+    <button class="acct-btn active-both">Ambas</button>
+    <button class="acct-btn active-amallu" style="opacity:.55;">@amalluvasconcellos</button>
+    <button class="acct-btn active-paaps" style="opacity:.55;">@paaps.brasil</button>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     MAIN CONTENT
+══════════════════════════════════════════ -->
+<main style="max-width:1240px;" class="mx-auto px-10 py-8">
+
+  <!-- ─── KPI CARDS ─── -->
+  <div class="grid grid-cols-4 gap-5 mb-8">
+
+    <!-- Card 1: @amallu seguidores -->
+    <div class="card p-6" style="border-top:4px solid #cb4710;">
+      <div class="label-secao mb-2">@amalluvasconcellos</div>
+      <div class="numero mb-1" style="font-size:2.4rem;color:#cb4710;">3.256</div>
+      <div style="font-size:0.8rem;color:rgba(68,35,9,0.55);" class="font-corpo mb-3">seguidores</div>
+      <div class="flex items-center gap-2">
+        <span class="badge-up">▲ +2,1%</span>
+        <span style="font-size:0.72rem;color:#bbada2;">vs. mês ant.</span>
+      </div>
+    </div>
+
+    <!-- Card 2: @paaps seguidores -->
+    <div class="card p-6" style="border-top:4px solid #aea349;">
+      <div class="label-secao mb-2">@paaps.brasil</div>
+      <div class="numero mb-1" style="font-size:2.4rem;color:#aea349;">1.035</div>
+      <div style="font-size:0.8rem;color:rgba(68,35,9,0.55);" class="font-corpo mb-3">seguidores</div>
+      <div class="flex items-center gap-2">
+        <span class="badge-up">▲ +8,4%</span>
+        <span style="font-size:0.72rem;color:#bbada2;">vs. mês ant.</span>
+      </div>
+    </div>
+
+    <!-- Card 3: Alcance total -->
+    <div class="card p-6" style="border-top:4px solid #f7c31c;">
+      <div class="label-secao mb-2">Alcance Total · 30d</div>
+      <div class="numero mb-1" style="font-size:2.4rem;color:#442309;">28.467</div>
+      <div style="font-size:0.8rem;color:rgba(68,35,9,0.55);" class="font-corpo mb-3">contas únicas atingidas</div>
+      <div class="flex items-center gap-2">
+        <span class="badge-up">▲ +310%</span>
+        <span style="font-size:0.72rem;color:#bbada2;">impacto do viral</span>
+      </div>
+    </div>
+
+    <!-- Card 4: Engajamento -->
+    <div class="card p-6" style="border-top:4px solid #bbada2;">
+      <div class="label-secao mb-2">Engajamento Médio · 7d</div>
+      <div class="numero mb-1" style="font-size:2.4rem;color:#442309;">4,8%</div>
+      <div style="font-size:0.8rem;color:rgba(68,35,9,0.55);" class="font-corpo mb-3">interações / alcance</div>
+      <div class="flex items-center gap-2">
+        <span class="badge-down">▼ -1,2%</span>
+        <span style="font-size:0.72rem;color:#bbada2;">normalização pós-viral</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── CHARTS ROW: Alcance + Engajamento ─── -->
+  <div class="grid grid-cols-2 gap-5 mb-8">
+
+    <!-- LINE CHART: Alcance diário -->
+    <div class="card p-6">
+      <div class="flex items-start justify-between mb-4">
+        <div>
+          <div class="label-secao mb-1">Alcance diário</div>
+          <div class="font-titulo font-bold" style="font-size:1rem;color:#442309;">Contas únicas atingidas · 30 dias</div>
+        </div>
+        <div class="flex items-center gap-4" style="margin-top:2px;">
+          <div class="flex items-center gap-2">
+            <div style="width:24px;height:3px;background:#cb4710;border-radius:2px;"></div>
+            <span style="font-size:0.7rem;color:#bbada2;font-family:'League Spartan',sans-serif;">@amallu</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <div style="width:24px;height:3px;background:#aea349;border-radius:2px;"></div>
+            <span style="font-size:0.7rem;color:#bbada2;font-family:'League Spartan',sans-serif;">@paaps</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SVG Line Chart -->
+      <svg viewBox="0 0 800 220" style="width:100%;height:auto;" xmlns="http://www.w3.org/2000/svg">
+        <!-- Grid lines -->
+        <line x1="20" y1="50" x2="780" y2="50" stroke="rgba(187,173,162,0.25)" stroke-width="1"/>
+        <line x1="20" y1="100" x2="780" y2="100" stroke="rgba(187,173,162,0.25)" stroke-width="1"/>
+        <line x1="20" y1="150" x2="780" y2="150" stroke="rgba(187,173,162,0.25)" stroke-width="1"/>
+        <line x1="20" y1="200" x2="780" y2="200" stroke="rgba(187,173,162,0.25)" stroke-width="1"/>
+        <!-- Y axis labels -->
+        <text x="14" y="53" text-anchor="end" fill="#bbada2" style="font-size:9px;font-family:'League Spartan',sans-serif;">2k</text>
+        <text x="14" y="103" text-anchor="end" fill="#bbada2" style="font-size:9px;font-family:'League Spartan',sans-serif;">1k</text>
+        <text x="14" y="153" text-anchor="end" fill="#bbada2" style="font-size:9px;font-family:'League Spartan',sans-serif;">500</text>
+        <text x="14" y="203" text-anchor="end" fill="#bbada2" style="font-size:9px;font-family:'League Spartan',sans-serif;">0</text>
+
+        <!-- @amallu filled area -->
+        <path d="M20,171 46,164 72,163 99,154 125,125 151,145 177,136 203,134 230,69 256,94 282,70 308,50 334,108 361,111 387,139 413,126 439,20 465,143 492,174 518,188 544,182 570,189 596,190 623,181 649,179 675,185 701,189 727,174 754,183 780,181 L780,200 L20,200 Z"
+              fill="rgba(203,71,16,0.06)" stroke="none"/>
+        <!-- @amallu line -->
+        <polyline points="20,171 46,164 72,163 99,154 125,125 151,145 177,136 203,134 230,69 256,94 282,70 308,50 334,108 361,111 387,139 413,126 439,20 465,143 492,174 518,188 544,182 570,189 596,190 623,181 649,179 675,185 701,189 727,174 754,183 780,181"
+                 fill="none" stroke="#cb4710" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+
+        <!-- @paaps filled area -->
+        <path d="M20,200 46,200 72,198 99,199 125,198 151,198 177,198 203,195 230,195 256,196 282,198 308,199 334,199 361,178 387,189 413,190 439,198 465,198 492,198 518,198 544,191 570,195 596,197 623,200 649,200 675,200 701,192 727,197 754,197 780,198 L780,200 L20,200 Z"
+              fill="rgba(174,163,73,0.08)" stroke="none"/>
+        <!-- @paaps line -->
+        <polyline points="20,200 46,200 72,198 99,199 125,198 151,198 177,198 203,195 230,195 256,196 282,198 308,199 334,199 361,178 387,189 413,190 439,198 465,198 492,198 518,198 544,191 570,195 596,197 623,200 649,200 675,200 701,192 727,197 754,197 780,198"
+                 fill="none" stroke="#aea349" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+
+        <!-- Peak annotation @amallu (May 19) -->
+        <circle cx="439" cy="20" r="5" fill="#cb4710"/>
+        <line x1="439" y1="26" x2="439" y2="200" stroke="#cb4710" stroke-width="1" stroke-dasharray="4,3" opacity="0.4"/>
+        <rect x="346" y="4" width="86" height="18" rx="3" fill="#442309"/>
+        <text x="389" y="16" text-anchor="middle" fill="#f7c31c" style="font-size:9px;font-family:'League Spartan',sans-serif;font-weight:700;">▲ PICO 1.977</text>
+
+        <!-- May 18 spike @paaps annotation -->
+        <circle cx="361" cy="178" r="4" fill="#aea349"/>
+        <rect x="268" y="162" width="74" height="18" rx="3" fill="#442309"/>
+        <text x="305" y="174" text-anchor="middle" fill="#f7c31c" style="font-size:9px;font-family:'League Spartan',sans-serif;font-weight:700;">VIRAL 18/mai</text>
+
+        <!-- X axis dates -->
+        <text x="20" y="215" text-anchor="middle" fill="#bbada2" style="font-size:8px;font-family:'League Spartan',sans-serif;">3 mai</text>
+        <text x="230" y="215" text-anchor="middle" fill="#bbada2" style="font-size:8px;font-family:'League Spartan',sans-serif;">11 mai</text>
+        <text x="361" y="215" text-anchor="middle" fill="#f7c31c" style="font-size:8px;font-family:'League Spartan',sans-serif;font-weight:700;">18 mai</text>
+        <text x="544" y="215" text-anchor="middle" fill="#bbada2" style="font-size:8px;font-family:'League Spartan',sans-serif;">25 mai</text>
+        <text x="780" y="215" text-anchor="middle" fill="#bbada2" style="font-size:8px;font-family:'League Spartan',sans-serif;">1 jun</text>
+      </svg>
+      <div style="font-size:0.72rem;color:#bbada2;margin-top:8px;font-family:'League Spartan',sans-serif;letter-spacing:0.04em;">
+        Clique em qualquer ponto para ver o detalhamento do dia →
+      </div>
+    </div>
+
+    <!-- STACKED BAR: Anatomia do Engajamento @paaps -->
+    <div class="card p-6">
+      <div class="flex items-start justify-between mb-4">
+        <div>
+          <div class="label-secao mb-1">Anatomia do engajamento</div>
+          <div class="font-titulo font-bold" style="font-size:1rem;color:#442309;">@paaps.brasil · 30 dias</div>
+        </div>
+        <div class="flex flex-wrap gap-x-4 gap-y-1" style="margin-top:2px;max-width:200px;">
+          <div class="flex items-center gap-1"><div style="width:10px;height:10px;border-radius:2px;background:#f7c31c;"></div><span style="font-size:0.65rem;color:#bbada2;font-family:'League Spartan',sans-serif;">Likes</span></div>
+          <div class="flex items-center gap-1"><div style="width:10px;height:10px;border-radius:2px;background:#cb4710;"></div><span style="font-size:0.65rem;color:#bbada2;font-family:'League Spartan',sans-serif;">Shares</span></div>
+          <div class="flex items-center gap-1"><div style="width:10px;height:10px;border-radius:2px;background:#aea349;"></div><span style="font-size:0.65rem;color:#bbada2;font-family:'League Spartan',sans-serif;">Saves</span></div>
+          <div class="flex items-center gap-1"><div style="width:10px;height:10px;border-radius:2px;background:#bbada2;"></div><span style="font-size:0.65rem;color:#bbada2;font-family:'League Spartan',sans-serif;">Comments</span></div>
+        </div>
+      </div>
+
+      <!-- SVG Stacked Bar Chart -->
+      <svg viewBox="0 0 800 220" style="width:100%;height:auto;" xmlns="http://www.w3.org/2000/svg">
+        <!-- Grid lines -->
+        <line x1="20" y1="20" x2="780" y2="20" stroke="rgba(187,173,162,0.25)" stroke-width="1"/>
+        <line x1="20" y1="70" x2="780" y2="70" stroke="rgba(187,173,162,0.25)" stroke-width="1"/>
+        <line x1="20" y1="120" x2="780" y2="120" stroke="rgba(187,173,162,0.25)" stroke-width="1"/>
+        <line x1="20" y1="170" x2="780" y2="170" stroke="rgba(187,173,162,0.25)" stroke-width="1"/>
+        <line x1="20" y1="200" x2="780" y2="200" stroke="rgba(187,173,162,0.25)" stroke-width="1"/>
+
+        <!-- Y axis labels -->
+        <text x="16" y="23" text-anchor="end" fill="#bbada2" style="font-size:9px;font-family:'League Spartan',sans-serif;">47k</text>
+        <text x="16" y="73" text-anchor="end" fill="#bbada2" style="font-size:9px;font-family:'League Spartan',sans-serif;">25k</text>
+        <text x="16" y="123" text-anchor="end" fill="#bbada2" style="font-size:9px;font-family:'League Spartan',sans-serif;">10k</text>
+        <text x="16" y="173" text-anchor="end" fill="#bbada2" style="font-size:9px;font-family:'League Spartan',sans-serif;">2k</text>
+        <text x="16" y="203" text-anchor="end" fill="#bbada2" style="font-size:9px;font-family:'League Spartan',sans-serif;">0</text>
+
+        <!-- Days 1-13 (May 3-15): nearly zero bars, ~1-3px -->
+        <rect x="22" y="199" width="16" height="1" rx="1" fill="#f7c31c"/>
+        <rect x="44" y="199" width="16" height="1" rx="1" fill="#f7c31c"/>
+        <rect x="66" y="197" width="16" height="3" rx="1" fill="#f7c31c"/>
+        <rect x="88" y="198" width="16" height="2" rx="1" fill="#f7c31c"/>
+        <rect x="110" y="197" width="16" height="3" rx="1" fill="#f7c31c"/>
+        <rect x="132" y="198" width="16" height="2" rx="1" fill="#f7c31c"/>
+        <rect x="154" y="198" width="16" height="2" rx="1" fill="#f7c31c"/>
+        <rect x="176" y="199" width="16" height="1" rx="1" fill="#f7c31c"/>
+        <rect x="198" y="197" width="16" height="3" rx="1" fill="#f7c31c"/>
+        <rect x="220" y="198" width="16" height="2" rx="1" fill="#f7c31c"/>
+        <rect x="242" y="197" width="16" height="3" rx="1" fill="#f7c31c"/>
+        <rect x="264" y="199" width="16" height="1" rx="1" fill="#f7c31c"/>
+        <rect x="286" y="199" width="16" height="1" rx="1" fill="#f7c31c"/>
+
+        <!-- Day 14 (May 16) — pré-viral: slightly larger -->
+        <rect x="308" y="196" width="16" height="4" rx="1" fill="#f7c31c"/>
+
+        <!-- ══ DAY 15 = MAY 18 — VIRAL SPIKE ══ -->
+        <!-- Stack from bottom: comments(1), saves(12), shares(31), likes(105) = total≈149 -->
+        <rect x="330" y="199" width="22" height="1" rx="0" fill="#bbada2"/>
+        <rect x="330" y="187" width="22" height="12" rx="0" fill="#aea349"/>
+        <rect x="330" y="156" width="22" height="31" rx="0" fill="#cb4710"/>
+        <rect x="330" y="20"  width="22" height="136" rx="2" fill="#f7c31c"/>
+        <!-- Glow effect -->
+        <rect x="328" y="18" width="26" height="184" rx="3" fill="none" stroke="#f7c31c" stroke-width="1.5" opacity="0.4"/>
+
+        <!-- Day 16 (May 19) — 25k: 55% of spike height -->
+        <rect x="358" y="199" width="18" height="1" rx="0" fill="#bbada2"/>
+        <rect x="358" y="192" width="18" height="7" rx="0" fill="#aea349"/>
+        <rect x="358" y="176" width="18" height="16" rx="0" fill="#cb4710"/>
+        <rect x="358" y="90"  width="18" height="86" rx="1" fill="#f7c31c"/>
+
+        <!-- Day 17 (May 20) — 5.6k -->
+        <rect x="382" y="178" width="18" height="2" rx="0" fill="#aea349"/>
+        <rect x="382" y="170" width="18" height="8" rx="0" fill="#cb4710"/>
+        <rect x="382" y="148" width="18" height="22" rx="1" fill="#f7c31c"/>
+
+        <!-- Day 18 (May 21) — 2.9k -->
+        <rect x="406" y="185" width="18" height="4" rx="0" fill="#aea349"/>
+        <rect x="406" y="178" width="18" height="7" rx="0" fill="#cb4710"/>
+        <rect x="406" y="162" width="18" height="16" rx="1" fill="#f7c31c"/>
+
+        <!-- Day 19 (May 22) — 2.2k -->
+        <rect x="430" y="187" width="18" height="4" rx="0" fill="#aea349"/>
+        <rect x="430" y="181" width="18" height="6" rx="0" fill="#cb4710"/>
+        <rect x="430" y="167" width="18" height="14" rx="1" fill="#f7c31c"/>
+
+        <!-- Day 20 (May 23) — 1.6k -->
+        <rect x="454" y="190" width="18" height="3" rx="0" fill="#aea349"/>
+        <rect x="454" y="185" width="18" height="5" rx="0" fill="#cb4710"/>
+        <rect x="454" y="173" width="18" height="12" rx="1" fill="#f7c31c"/>
+
+        <!-- Day 21-22 (May 24-25) — ~1k -->
+        <rect x="478" y="193" width="18" height="2" rx="0" fill="#aea349"/>
+        <rect x="478" y="189" width="18" height="4" rx="0" fill="#cb4710"/>
+        <rect x="478" y="180" width="18" height="9" rx="1" fill="#f7c31c"/>
+        <rect x="502" y="193" width="18" height="2" rx="0" fill="#aea349"/>
+        <rect x="502" y="189" width="18" height="4" rx="0" fill="#cb4710"/>
+        <rect x="502" y="180" width="18" height="9" rx="1" fill="#f7c31c"/>
+
+        <!-- Day 23 (May 26) — cauda elevada: 2.2k -->
+        <rect x="526" y="188" width="18" height="4" rx="0" fill="#aea349"/>
+        <rect x="526" y="181" width="18" height="7" rx="0" fill="#cb4710"/>
+        <rect x="526" y="168" width="18" height="13" rx="1" fill="#f7c31c"/>
+
+        <!-- Day 24 (May 27) — 2.7k -->
+        <rect x="550" y="187" width="18" height="5" rx="0" fill="#aea349"/>
+        <rect x="550" y="179" width="18" height="8" rx="0" fill="#cb4710"/>
+        <rect x="550" y="165" width="18" height="14" rx="1" fill="#f7c31c"/>
+
+        <!-- Day 25 (May 28) — 1.95k -->
+        <rect x="574" y="190" width="18" height="3" rx="0" fill="#aea349"/>
+        <rect x="574" y="183" width="18" height="7" rx="0" fill="#cb4710"/>
+        <rect x="574" y="172" width="18" height="11" rx="1" fill="#f7c31c"/>
+
+        <!-- Day 26 (May 29) — 1.2k -->
+        <rect x="598" y="193" width="18" height="2" rx="0" fill="#aea349"/>
+        <rect x="598" y="188" width="18" height="5" rx="0" fill="#cb4710"/>
+        <rect x="598" y="180" width="18" height="8" rx="1" fill="#f7c31c"/>
+
+        <!-- Day 27 (May 30) — 1k -->
+        <rect x="622" y="194" width="18" height="2" rx="0" fill="#aea349"/>
+        <rect x="622" y="190" width="18" height="4" rx="0" fill="#cb4710"/>
+        <rect x="622" y="181" width="18" height="9" rx="1" fill="#f7c31c"/>
+
+        <!-- Day 28 (May 31) — 1.9k -->
+        <rect x="646" y="190" width="18" height="3" rx="0" fill="#aea349"/>
+        <rect x="646" y="183" width="18" height="7" rx="0" fill="#cb4710"/>
+        <rect x="646" y="171" width="18" height="12" rx="1" fill="#f7c31c"/>
+
+        <!-- Day 29 (Jun 1) — 692 -->
+        <rect x="670" y="195" width="18" height="2" rx="0" fill="#aea349"/>
+        <rect x="670" y="192" width="18" height="3" rx="0" fill="#cb4710"/>
+        <rect x="670" y="185" width="18" height="7" rx="1" fill="#f7c31c"/>
+
+        <!-- Days 30 (placeholder) -->
+        <rect x="694" y="198" width="18" height="2" rx="1" fill="#f7c31c" opacity="0.4"/>
+        <rect x="718" y="198" width="18" height="2" rx="1" fill="#f7c31c" opacity="0.2"/>
+        <rect x="742" y="199" width="18" height="1" rx="1" fill="#f7c31c" opacity="0.1"/>
+
+        <!-- Viral annotation arrow -->
+        <line x1="341" y1="14" x2="341" y2="6" stroke="#f7c31c" stroke-width="1.5"/>
+        <polygon points="338,6 341,0 344,6" fill="#f7c31c"/>
+        <rect x="252" y="0" width="80" height="16" rx="3" fill="#442309"/>
+        <text x="292" y="12" text-anchor="middle" fill="#f7c31c" style="font-size:9px;font-family:'League Spartan',sans-serif;font-weight:800;">⚡ 47k · 18 MAI</text>
+
+        <!-- X labels -->
+        <text x="66" y="215" text-anchor="middle" fill="#bbada2" style="font-size:8px;font-family:'League Spartan',sans-serif;">3 mai</text>
+        <text x="220" y="215" text-anchor="middle" fill="#bbada2" style="font-size:8px;font-family:'League Spartan',sans-serif;">10 mai</text>
+        <text x="341" y="215" text-anchor="middle" fill="#f7c31c" style="font-size:8px;font-family:'League Spartan',sans-serif;font-weight:800;">18 mai</text>
+        <text x="526" y="215" text-anchor="middle" fill="#bbada2" style="font-size:8px;font-family:'League Spartan',sans-serif;">26 mai</text>
+        <text x="670" y="215" text-anchor="middle" fill="#bbada2" style="font-size:8px;font-family:'League Spartan',sans-serif;">1 jun</text>
+      </svg>
+      <div style="font-size:0.72rem;color:#bbada2;margin-top:8px;font-family:'League Spartan',sans-serif;letter-spacing:0.04em;">
+        Toggle entre contas via botão no header do módulo
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── QUALITY METRICS ─── -->
+  <div class="mb-2">
+    <span class="label-secao">Qualidade do engajamento</span>
+    <span style="font-size:0.68rem;color:#bbada2;font-family:'League Spartan',sans-serif;margin-left:12px;">interações / alcance — últimos 30 dias</span>
+  </div>
+  <div class="grid grid-cols-4 gap-5 mb-8 mt-3">
+
+    <!-- Save Rate -->
+    <div class="card p-5">
+      <div class="flex items-center gap-2 mb-3">
+        <div style="width:8px;height:8px;border-radius:2px;background:#aea349;"></div>
+        <span class="label-secao">Save Rate</span>
+      </div>
+      <div class="numero mb-1" style="font-size:1.9rem;color:#aea349;">8,3%</div>
+      <div style="font-size:0.75rem;color:rgba(68,35,9,0.5);" class="font-corpo mb-3">saves / alcance</div>
+      <!-- Sparkline -->
+      <svg viewBox="0 0 120 32" style="width:100%;height:28px;">
+        <polyline points="0,28 10,26 20,24 30,22 40,20 50,18 60,10 70,6 80,8 90,12 100,10 110,9 120,8"
+                  fill="none" stroke="#aea349" stroke-width="2" stroke-linejoin="round"/>
+        <circle cx="120" cy="8" r="3" fill="#aea349"/>
+      </svg>
+      <div class="flex justify-between mt-3">
+        <div style="font-size:0.68rem;color:#bbada2;font-family:'League Spartan',sans-serif;">@amallu: 2,1%</div>
+        <div style="font-size:0.68rem;color:#aea349;font-family:'League Spartan',sans-serif;font-weight:700;">@paaps: 14,5%</div>
+      </div>
+      <!-- Mini bars comparison -->
+      <div class="mt-2">
+        <div style="height:5px;background:#cb4710;border-radius:2px;width:14.5%;margin-bottom:3px;" class="has-tooltip">
+          <div class="tooltip">@paaps 14,5%</div>
+        </div>
+        <div style="height:5px;background:rgba(203,71,16,0.3);border-radius:2px;width:100%;position:relative;">
+          <div style="position:absolute;left:0;top:0;height:100%;background:#cb4710;border-radius:2px;width:2.1%;"></div>
+        </div>
+        <div style="display:flex;justify-content:space-between;margin-top:2px;">
+          <div style="font-size:0.6rem;color:#bbada2;font-family:'League Spartan',sans-serif;">@amallu 2,1%</div>
+          <div style="font-size:0.6rem;color:#bbada2;font-family:'League Spartan',sans-serif;">max 14,5%</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Share Rate -->
+    <div class="card p-5">
+      <div class="flex items-center gap-2 mb-3">
+        <div style="width:8px;height:8px;border-radius:2px;background:#cb4710;"></div>
+        <span class="label-secao">Share Rate</span>
+      </div>
+      <div class="numero mb-1" style="font-size:1.9rem;color:#cb4710;">5,9%</div>
+      <div style="font-size:0.75rem;color:rgba(68,35,9,0.5);" class="font-corpo mb-3">shares / alcance</div>
+      <svg viewBox="0 0 120 32" style="width:100%;height:28px;">
+        <polyline points="0,30 10,30 20,30 30,30 40,30 50,30 60,5 70,10 80,18 90,22 100,24 110,25 120,26"
+                  fill="none" stroke="#cb4710" stroke-width="2" stroke-linejoin="round"/>
+        <circle cx="60" cy="5" r="3" fill="#cb4710"/>
+      </svg>
+      <div class="flex justify-between mt-3">
+        <div style="font-size:0.68rem;color:#bbada2;font-family:'League Spartan',sans-serif;">@amallu: 0,8%</div>
+        <div style="font-size:0.68rem;color:#cb4710;font-family:'League Spartan',sans-serif;font-weight:700;">@paaps: 11,2%</div>
+      </div>
+      <div class="mt-2">
+        <div style="height:5px;background:rgba(203,71,16,0.3);border-radius:2px;width:100%;position:relative;">
+          <div style="position:absolute;left:0;top:0;height:100%;background:#cb4710;border-radius:2px;width:11.2%;"></div>
+        </div>
+        <div style="display:flex;justify-content:space-between;margin-top:2px;">
+          <div style="font-size:0.6rem;color:#bbada2;font-family:'League Spartan',sans-serif;">@amallu 0,8%</div>
+          <div style="font-size:0.6rem;color:#bbada2;font-family:'League Spartan',sans-serif;">max 11,2%</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Comment Rate -->
+    <div class="card p-5">
+      <div class="flex items-center gap-2 mb-3">
+        <div style="width:8px;height:8px;border-radius:2px;background:#bbada2;"></div>
+        <span class="label-secao">Comment Rate</span>
+      </div>
+      <div class="numero mb-1" style="font-size:1.9rem;color:#442309;">0,7%</div>
+      <div style="font-size:0.75rem;color:rgba(68,35,9,0.5);" class="font-corpo mb-3">comentários / alcance</div>
+      <svg viewBox="0 0 120 32" style="width:100%;height:28px;">
+        <polyline points="0,20 10,18 20,16 30,20 40,12 50,22 60,8 70,18 80,14 90,20 100,16 110,18 120,15"
+                  fill="none" stroke="#bbada2" stroke-width="2" stroke-linejoin="round"/>
+        <circle cx="120" cy="15" r="3" fill="#bbada2"/>
+      </svg>
+      <div class="flex justify-between mt-3">
+        <div style="font-size:0.68rem;color:#bbada2;font-family:'League Spartan',sans-serif;">@amallu: 0,9%</div>
+        <div style="font-size:0.68rem;color:#bbada2;font-family:'League Spartan',sans-serif;">@paaps: 0,5%</div>
+      </div>
+      <div class="mt-2">
+        <div style="height:5px;background:rgba(187,173,162,0.3);border-radius:2px;width:100%;position:relative;">
+          <div style="position:absolute;left:0;top:0;height:100%;background:#bbada2;border-radius:2px;width:9%;"></div>
+        </div>
+        <div style="display:flex;justify-content:space-between;margin-top:2px;">
+          <div style="font-size:0.6rem;color:#bbada2;font-family:'League Spartan',sans-serif;">@amallu 0,9%</div>
+          <div style="font-size:0.6rem;color:#bbada2;font-family:'League Spartan',sans-serif;">max 0,9%</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Like Rate -->
+    <div class="card p-5">
+      <div class="flex items-center gap-2 mb-3">
+        <div style="width:8px;height:8px;border-radius:2px;background:#f7c31c;"></div>
+        <span class="label-secao">Like Rate</span>
+      </div>
+      <div class="numero mb-1" style="font-size:1.9rem;color:#442309;">18,4%</div>
+      <div style="font-size:0.75rem;color:rgba(68,35,9,0.5);" class="font-corpo mb-3">likes / alcance</div>
+      <svg viewBox="0 0 120 32" style="width:100%;height:28px;">
+        <polyline points="0,28 10,25 20,22 30,20 40,15 50,12 60,8 70,12 80,15 90,20 100,22 110,24 120,26"
+                  fill="none" stroke="#f7c31c" stroke-width="2" stroke-linejoin="round"/>
+        <circle cx="60" cy="8" r="3" fill="#f7c31c"/>
+      </svg>
+      <div class="flex justify-between mt-3">
+        <div style="font-size:0.68rem;color:#bbada2;font-family:'League Spartan',sans-serif;">@amallu: 14,2%</div>
+        <div style="font-size:0.68rem;color:#442309;font-family:'League Spartan',sans-serif;font-weight:700;">@paaps: 22,6%</div>
+      </div>
+      <div class="mt-2">
+        <div style="height:5px;background:rgba(247,195,28,0.2);border-radius:2px;width:100%;position:relative;">
+          <div style="position:absolute;left:0;top:0;height:100%;background:#f7c31c;border-radius:2px;width:22.6%;"></div>
+        </div>
+        <div style="display:flex;justify-content:space-between;margin-top:2px;">
+          <div style="font-size:0.6rem;color:#bbada2;font-family:'League Spartan',sans-serif;">@amallu 14,2%</div>
+          <div style="font-size:0.6rem;color:#bbada2;font-family:'League Spartan',sans-serif;">max 22,6%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── HEATMAP ─── -->
+  <div class="mb-2 flex items-center gap-4">
+    <span class="label-secao">Melhor dia para postar</span>
+    <span style="font-size:0.68rem;color:#bbada2;font-family:'League Spartan',sans-serif;">média de interações por dia da semana · últimos 30 dias</span>
+  </div>
+  <div class="card p-6 mb-8 mt-3">
+    <!-- Day headers -->
+    <div style="display:grid;grid-template-columns:140px repeat(7,1fr);gap:6px;margin-bottom:6px;">
+      <div></div>
+      <div class="label-secao text-center">SEG</div>
+      <div class="label-secao text-center">TER</div>
+      <div class="label-secao text-center">QUA</div>
+      <div class="label-secao text-center">QUI</div>
+      <div class="label-secao text-center">SEX</div>
+      <div class="label-secao text-center">SÁB</div>
+      <div class="label-secao text-center">DOM</div>
+    </div>
+
+    <!-- @amallu row -->
+    <div style="display:grid;grid-template-columns:140px repeat(7,1fr);gap:6px;margin-bottom:6px;">
+      <div class="flex items-center">
+        <span style="font-family:'League Spartan',sans-serif;font-size:0.7rem;font-weight:700;color:#cb4710;">@amallu</span>
+      </div>
+      <!-- Mon: 100.2 → 69% -->
+      <div class="hm-cell has-tooltip" style="background:rgba(203,71,16,0.69);">
+        <div class="hm-val" style="color:rgba(255,255,255,0.9);">100</div>
+        <div style="font-size:0.58rem;color:rgba(255,255,255,0.65);font-family:'League Spartan',sans-serif;">inter./dia</div>
+        <div class="tooltip">Seg: média 100 interações</div>
+      </div>
+      <!-- Tue: 146 → 100% -->
+      <div class="hm-cell has-tooltip" style="background:rgba(203,71,16,1);">
+        <div class="hm-val" style="color:#f7c31c;">146 ★</div>
+        <div style="font-size:0.58rem;color:rgba(255,255,255,0.8);font-family:'League Spartan',sans-serif;">melhor dia</div>
+        <div class="tooltip">Ter: MELHOR DIA · média 146 interações</div>
+      </div>
+      <!-- Wed: 84 → 58% -->
+      <div class="hm-cell has-tooltip" style="background:rgba(203,71,16,0.58);">
+        <div class="hm-val" style="color:rgba(255,255,255,0.9);">85</div>
+        <div style="font-size:0.58rem;color:rgba(255,255,255,0.65);font-family:'League Spartan',sans-serif;">inter./dia</div>
+        <div class="tooltip">Qua: média 85 interações</div>
+      </div>
+      <!-- Thu: 113 → 77% -->
+      <div class="hm-cell has-tooltip" style="background:rgba(203,71,16,0.77);">
+        <div class="hm-val" style="color:rgba(255,255,255,0.95);">113</div>
+        <div style="font-size:0.58rem;color:rgba(255,255,255,0.7);font-family:'League Spartan',sans-serif;">inter./dia</div>
+        <div class="tooltip">Qui: média 113 interações</div>
+      </div>
+      <!-- Fri: 73 → 50% -->
+      <div class="hm-cell has-tooltip" style="background:rgba(203,71,16,0.5);">
+        <div class="hm-val" style="color:rgba(255,255,255,0.9);">73</div>
+        <div style="font-size:0.58rem;color:rgba(255,255,255,0.65);font-family:'League Spartan',sans-serif;">inter./dia</div>
+        <div class="tooltip">Sex: média 73 interações</div>
+      </div>
+      <!-- Sat: 63 → 43% -->
+      <div class="hm-cell has-tooltip" style="background:rgba(203,71,16,0.43);">
+        <div class="hm-val" style="color:rgba(255,255,255,0.85);">63</div>
+        <div style="font-size:0.58rem;color:rgba(255,255,255,0.55);font-family:'League Spartan',sans-serif;">inter./dia</div>
+        <div class="tooltip">Sáb: média 63 interações</div>
+      </div>
+      <!-- Sun: 55 → 37% -->
+      <div class="hm-cell has-tooltip" style="background:rgba(203,71,16,0.37);">
+        <div class="hm-val" style="color:rgba(255,255,255,0.8);">55</div>
+        <div style="font-size:0.58rem;color:rgba(255,255,255,0.5);font-family:'League Spartan',sans-serif;">inter./dia</div>
+        <div class="tooltip">Dom: média 55 interações</div>
+      </div>
+    </div>
+
+    <!-- @paaps row -->
+    <div style="display:grid;grid-template-columns:140px repeat(7,1fr);gap:6px;">
+      <div class="flex items-center">
+        <span style="font-family:'League Spartan',sans-serif;font-size:0.7rem;font-weight:700;color:#aea349;">@paaps</span>
+        <span class="badge-viral ml-2" style="font-size:0.55rem;padding:2px 6px;">⚡ viral</span>
+      </div>
+      <!-- Mon: viral! 100% -->
+      <div class="hm-cell has-tooltip" style="background:rgba(174,163,73,1);">
+        <div class="hm-val" style="color:#442309;">9.754 ⚡</div>
+        <div style="font-size:0.55rem;color:rgba(68,35,9,0.7);font-family:'League Spartan',sans-serif;">inclui viral</div>
+        <div class="tooltip">Seg: distorcido pelo viral de 18/mai (47k)</div>
+      </div>
+      <!-- Tue: 72% -->
+      <div class="hm-cell has-tooltip" style="background:rgba(174,163,73,0.72);">
+        <div class="hm-val" style="color:rgba(255,255,255,0.95);">7.040</div>
+        <div style="font-size:0.58rem;color:rgba(255,255,255,0.65);font-family:'League Spartan',sans-serif;">inter./dia</div>
+        <div class="tooltip">Ter: média 7.040 (cauda viral)</div>
+      </div>
+      <!-- Wed: 21% -->
+      <div class="hm-cell has-tooltip" style="background:rgba(174,163,73,0.21);">
+        <div class="hm-val" style="color:rgba(68,35,9,0.8);">2.091</div>
+        <div style="font-size:0.58rem;color:rgba(68,35,9,0.5);font-family:'League Spartan',sans-serif;">inter./dia</div>
+        <div class="tooltip">Qua: média 2.091 (cauda viral)</div>
+      </div>
+      <!-- Thu: 13% -->
+      <div class="hm-cell has-tooltip" style="background:rgba(174,163,73,0.13);">
+        <div class="hm-val" style="color:rgba(68,35,9,0.7);">1.238</div>
+        <div style="font-size:0.58rem;color:rgba(68,35,9,0.4);font-family:'League Spartan',sans-serif;">inter./dia</div>
+        <div class="tooltip">Qui: média 1.238</div>
+      </div>
+      <!-- Fri: 9% -->
+      <div class="hm-cell has-tooltip" style="background:rgba(174,163,73,0.09);">
+        <div class="hm-val" style="color:rgba(68,35,9,0.65);">871</div>
+        <div style="font-size:0.58rem;color:rgba(68,35,9,0.35);font-family:'League Spartan',sans-serif;">inter./dia</div>
+        <div class="tooltip">Sex: média 871</div>
+      </div>
+      <!-- Sat: 7% -->
+      <div class="hm-cell has-tooltip" style="background:rgba(174,163,73,0.07);">
+        <div class="hm-val" style="color:rgba(68,35,9,0.55);">657</div>
+        <div style="font-size:0.58rem;color:rgba(68,35,9,0.3);font-family:'League Spartan',sans-serif;">inter./dia</div>
+        <div class="tooltip">Sáb: média 657</div>
+      </div>
+      <!-- Sun: 6% -->
+      <div class="hm-cell has-tooltip" style="background:rgba(174,163,73,0.06);">
+        <div class="hm-val" style="color:rgba(68,35,9,0.5);">580</div>
+        <div style="font-size:0.58rem;color:rgba(68,35,9,0.3);font-family:'League Spartan',sans-serif;">inter./dia</div>
+        <div class="tooltip">Dom: média 580</div>
+      </div>
+    </div>
+    <div style="font-size:0.7rem;color:#bbada2;margin-top:12px;font-family:'League Spartan',sans-serif;">
+      ⚠️ Médias do @paaps.brasil distorcidas pelo evento viral de 18/mai. Remover outlier para análise de postagem regular.
+    </div>
+  </div>
+
+  <!-- ─── BOTTOM ROW: Viral + WoW ─── -->
+  <div class="grid grid-cols-2 gap-5 mb-8">
+
+    <!-- Viral Event Analysis -->
+    <div class="card p-6">
+      <div class="flex items-center gap-3 mb-5">
+        <div>
+          <div class="label-secao mb-1">Análise do evento viral</div>
+          <div class="font-titulo font-bold" style="font-size:1rem;color:#442309;">@paaps.brasil · 18 mai → 1 jun</div>
+        </div>
+        <div class="badge-viral ml-auto">⚡ Evento detectado</div>
+      </div>
+
+      <!-- 3 métricas do pico -->
+      <div class="grid grid-cols-3 gap-4 mb-5">
+        <div style="text-align:center;padding:12px;background:rgba(68,35,9,0.04);border-radius:4px;">
+          <div class="numero" style="font-size:1.6rem;color:#f7c31c;">47k</div>
+          <div style="font-size:0.65rem;color:#bbada2;font-family:'League Spartan',sans-serif;letter-spacing:0.08em;text-transform:uppercase;margin-top:4px;">Interações<br>no pico</div>
+        </div>
+        <div style="text-align:center;padding:12px;background:rgba(68,35,9,0.04);border-radius:4px;">
+          <div class="numero" style="font-size:1.6rem;color:#cb4710;">83%</div>
+          <div style="font-size:0.65rem;color:#bbada2;font-family:'League Spartan',sans-serif;letter-spacing:0.08em;text-transform:uppercase;margin-top:4px;">Shares + Saves<br>(viralidade)</div>
+        </div>
+        <div style="text-align:center;padding:12px;background:rgba(68,35,9,0.04);border-radius:4px;">
+          <div class="numero" style="font-size:1.6rem;color:#aea349;">14d</div>
+          <div style="font-size:0.65rem;color:#bbada2;font-family:'League Spartan',sans-serif;letter-spacing:0.08em;text-transform:uppercase;margin-top:4px;">Cauda longa<br>do viral</div>
+        </div>
+      </div>
+
+      <!-- Decay Chart -->
+      <div class="label-secao mb-2">Decaimento das interações</div>
+      <svg viewBox="0 0 560 120" style="width:100%;height:auto;" xmlns="http://www.w3.org/2000/svg">
+        <line x1="0" y1="30" x2="560" y2="30" stroke="rgba(187,173,162,0.2)" stroke-width="1"/>
+        <line x1="0" y1="60" x2="560" y2="60" stroke="rgba(187,173,162,0.2)" stroke-width="1"/>
+        <line x1="0" y1="90" x2="560" y2="90" stroke="rgba(187,173,162,0.2)" stroke-width="1"/>
+        <line x1="0" y1="110" x2="560" y2="110" stroke="rgba(187,173,162,0.2)" stroke-width="1"/>
+
+        <text x="0" y="13" fill="#bbada2" style="font-size:8px;font-family:'League Spartan',sans-serif;">47k</text>
+        <text x="0" y="63" fill="#bbada2" style="font-size:8px;font-family:'League Spartan',sans-serif;">10k</text>
+        <text x="0" y="113" fill="#bbada2" style="font-size:8px;font-family:'League Spartan',sans-serif;">0</text>
+
+        <!-- Filled area -->
+        <path d="M30,10 70,58 110,82 150,88 190,92 230,94 270,96 310,97 350,95 390,97 430,98 470,99 510,102 550,106 L550,110 L30,110 Z"
+              fill="rgba(247,195,28,0.08)" stroke="none"/>
+        <!-- Decay line -->
+        <polyline points="30,10 70,58 110,82 150,88 190,92 230,94 270,96 310,97 350,95 390,97 430,98 470,99 510,102 550,106"
+                  fill="none" stroke="#f7c31c" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+        <circle cx="30" cy="10" r="5" fill="#f7c31c"/>
+        <circle cx="550" cy="106" r="4" fill="#aea349"/>
+
+        <!-- Labels -->
+        <text x="30" y="124" text-anchor="middle" fill="#f7c31c" style="font-size:8px;font-family:'League Spartan',sans-serif;font-weight:800;">18/mai</text>
+        <text x="150" y="124" text-anchor="middle" fill="#bbada2" style="font-size:8px;font-family:'League Spartan',sans-serif;">22/mai</text>
+        <text x="310" y="124" text-anchor="middle" fill="#bbada2" style="font-size:8px;font-family:'League Spartan',sans-serif;">27/mai</text>
+        <text x="550" y="124" text-anchor="middle" fill="#aea349" style="font-size:8px;font-family:'League Spartan',sans-serif;">1/jun</text>
+
+        <!-- Meia-vida annotation -->
+        <line x1="70" y1="58" x2="70" y2="110" stroke="#cb4710" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+        <rect x="74" y="60" width="58" height="14" rx="2" fill="rgba(203,71,16,0.12)"/>
+        <text x="103" y="70" text-anchor="middle" fill="#cb4710" style="font-size:8px;font-family:'League Spartan',sans-serif;font-weight:700;">½ vida: 4 dias</text>
+      </svg>
+    </div>
+
+    <!-- WoW Table -->
+    <div class="card p-6">
+      <div class="mb-5">
+        <div class="label-secao mb-1">Comparativo semana a semana</div>
+        <div class="font-titulo font-bold" style="font-size:1rem;color:#442309;">Semana atual vs. semana anterior</div>
+      </div>
+      <table class="wow-table w-full">
+        <thead>
+          <tr>
+            <th>Métrica</th>
+            <th>@amallu atual</th>
+            <th>vs. ant.</th>
+            <th>@paaps atual</th>
+            <th>vs. ant.</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Alcance</td>
+            <td style="font-weight:600;">1.102</td>
+            <td><span class="badge-down">▼ −12%</span></td>
+            <td style="font-weight:600;">221</td>
+            <td><span class="badge-up">▲ +68%</span></td>
+          </tr>
+          <tr>
+            <td>Interações</td>
+            <td style="font-weight:600;">120</td>
+            <td><span class="badge-down">▼ −8%</span></td>
+            <td style="font-weight:600;">6.480</td>
+            <td><span class="badge-up">▲ +320%</span></td>
+          </tr>
+          <tr>
+            <td>Saves</td>
+            <td style="font-weight:600;">14</td>
+            <td><span class="badge-flat">→ 0%</span></td>
+            <td style="font-weight:600;">575</td>
+            <td><span class="badge-up">▲ +440%</span></td>
+          </tr>
+          <tr>
+            <td>Shares</td>
+            <td style="font-weight:600;">9</td>
+            <td><span class="badge-down">▼ −18%</span></td>
+            <td style="font-weight:600;">1.481</td>
+            <td><span class="badge-up">▲ +380%</span></td>
+          </tr>
+          <tr>
+            <td>Comentários</td>
+            <td style="font-weight:600;">8</td>
+            <td><span class="badge-up">▲ +14%</span></td>
+            <td style="font-weight:600;">48</td>
+            <td><span class="badge-up">▲ +290%</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <div style="font-size:0.68rem;color:#bbada2;margin-top:16px;font-family:'League Spartan',sans-serif;padding-top:12px;border-top:1px solid rgba(187,173,162,0.3);">
+        Dados reais · Windsor AI · atualizado em 02/06/2026 às 13:40
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── INSIGHTS PANEL ─── -->
+  <div style="background:#442309;border-radius:4px;padding:40px 48px;background-image:url('data:image/svg+xml,%3Csvg viewBox=\'0 0 256 256\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'n\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.9\' numOctaves=\'4\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23n)\' opacity=\'0.04\'/%3E%3C/svg%3E');">
+    <div class="flex items-center gap-4 mb-6">
+      <div style="width:12px;height:12px;border-radius:2px;background:#f7c31c;"></div>
+      <div style="width:12px;height:12px;border-radius:2px;background:#cb4710;"></div>
+      <div style="width:12px;height:12px;border-radius:2px;background:#aea349;"></div>
+      <span class="label-secao" style="color:rgba(255,255,255,0.5);margin-left:8px;">Insights automáticos</span>
+      <span style="font-family:'League Spartan',sans-serif;font-size:0.65rem;color:rgba(255,255,255,0.3);margin-left:auto;">gerados a cada atualização de dados</span>
+    </div>
+    <div class="grid grid-cols-2 gap-x-12 gap-y-5">
+
+      <div style="display:flex;gap:16px;align-items:flex-start;">
+        <div style="width:4px;min-width:4px;height:100%;background:#f7c31c;border-radius:2px;margin-top:2px;"></div>
+        <div>
+          <div style="font-family:'League Spartan',sans-serif;font-size:0.78rem;font-weight:700;color:#f7c31c;letter-spacing:0.04em;margin-bottom:4px;">Evento viral excepcional</div>
+          <div style="font-family:'Helvetica Neue',sans-serif;font-size:0.85rem;color:rgba(255,255,255,0.78);line-height:1.6;">O @paaps.brasil gerou <strong style="color:#fff;">73.000+ interações</strong> em 15 dias — o equivalente a <strong style="color:#fff;">70× a média mensal</strong> anterior. Shares e saves representaram 83% do engajamento, padrão típico de conteúdo de referência.</div>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:16px;align-items:flex-start;">
+        <div style="width:4px;min-width:4px;height:100%;background:#cb4710;border-radius:2px;margin-top:2px;"></div>
+        <div>
+          <div style="font-family:'League Spartan',sans-serif;font-size:0.78rem;font-weight:700;color:#cb4710;letter-spacing:0.04em;margin-bottom:4px;">Save rate acima do benchmark</div>
+          <div style="font-family:'Helvetica Neue',sans-serif;font-size:0.85rem;color:rgba(255,255,255,0.78);line-height:1.6;">A taxa de saves do @paaps.brasil (<strong style="color:#fff;">14,5%</strong>) está muito acima da média de contas educativas do setor (3–5%). O público salva para consultar depois — sinal de autoridade técnica.</div>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:16px;align-items:flex-start;">
+        <div style="width:4px;min-width:4px;height:100%;background:#aea349;border-radius:2px;margin-top:2px;"></div>
+        <div>
+          <div style="font-family:'League Spartan',sans-serif;font-size:0.78rem;font-weight:700;color:#aea349;letter-spacing:0.04em;margin-bottom:4px;">Melhor dia: @amallu posta terça</div>
+          <div style="font-family:'Helvetica Neue',sans-serif;font-size:0.85rem;color:rgba(255,255,255,0.78);line-height:1.6;">Terça-feira gera <strong style="color:#fff;">146 interações/dia em média</strong> — 2× mais que sábado (63). Quinta é o segundo melhor dia (113). Recomendar concentrar posts de maior impacto em Ter/Qui.</div>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:16px;align-items:flex-start;">
+        <div style="width:4px;min-width:4px;height:100%;background:#bbada2;border-radius:2px;margin-top:2px;"></div>
+        <div>
+          <div style="font-family:'League Spartan',sans-serif;font-size:0.78rem;font-weight:700;color:rgba(255,255,255,0.65);letter-spacing:0.04em;margin-bottom:4px;">Perfis com papéis complementares</div>
+          <div style="font-family:'Helvetica Neue',sans-serif;font-size:0.85rem;color:rgba(255,255,255,0.78);line-height:1.6;">O @amalluvasconcellos é <strong style="color:#fff;">8× mais consistente</strong> em alcance diário. O @paaps.brasil tem <strong style="color:#fff;">share rate 14× maior</strong> quando posta. Estratégia ideal: @amallu alimenta a audiência; @paaps amplifica o território.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- ══════════════════════════════════════════
+     DRILL-DOWN PANEL (preview — fechado)
+══════════════════════════════════════════ -->
+<div class="drill-peek" id="drillPeek" onclick="toggleDrill()">
+  Detalhe do dia →
+</div>
+<div class="drill-panel" id="drillPanel">
+  <div style="padding:24px;border-bottom:1px solid rgba(187,173,162,0.3);display:flex;align-items:center;justify-content:space-between;">
+    <div>
+      <div class="label-secao">Drill-down</div>
+      <div style="font-family:'League Spartan',sans-serif;font-size:0.9rem;font-weight:700;color:#442309;">18 de maio · Segunda</div>
+    </div>
+    <button onclick="toggleDrill()" style="background:none;border:none;cursor:pointer;font-size:1.2rem;color:#bbada2;">✕</button>
+  </div>
+  <div style="padding:24px;">
+    <div class="label-secao mb-4">Breakdown do dia · @paaps.brasil</div>
+    <!-- Mini bars -->
+    <div style="display:flex;flex-direction:column;gap:10px;">
+      <div>
+        <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+          <span style="font-family:'League Spartan',sans-serif;font-size:0.7rem;color:#bbada2;">Likes</span>
+          <span style="font-family:'League Spartan',sans-serif;font-size:0.7rem;font-weight:700;color:#442309;">27.536</span>
+        </div>
+        <div style="height:8px;background:rgba(247,195,28,0.2);border-radius:4px;">
+          <div style="height:100%;width:70%;background:#f7c31c;border-radius:4px;"></div>
+        </div>
+      </div>
+      <div>
+        <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+          <span style="font-family:'League Spartan',sans-serif;font-size:0.7rem;color:#bbada2;">Shares</span>
+          <span style="font-family:'League Spartan',sans-serif;font-size:0.7rem;font-weight:700;color:#442309;">8.026</span>
+        </div>
+        <div style="height:8px;background:rgba(203,71,16,0.12);border-radius:4px;">
+          <div style="height:100%;width:20.5%;background:#cb4710;border-radius:4px;"></div>
+        </div>
+      </div>
+      <div>
+        <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+          <span style="font-family:'League Spartan',sans-serif;font-size:0.7rem;color:#bbada2;">Saves</span>
+          <span style="font-family:'League Spartan',sans-serif;font-size:0.7rem;font-weight:700;color:#442309;">3.155</span>
+        </div>
+        <div style="height:8px;background:rgba(174,163,73,0.15);border-radius:4px;">
+          <div style="height:100%;width:8.1%;background:#aea349;border-radius:4px;"></div>
+        </div>
+      </div>
+      <div>
+        <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+          <span style="font-family:'League Spartan',sans-serif;font-size:0.7rem;color:#bbada2;">Comments</span>
+          <span style="font-family:'League Spartan',sans-serif;font-size:0.7rem;font-weight:700;color:#442309;">340</span>
+        </div>
+        <div style="height:8px;background:rgba(187,173,162,0.2);border-radius:4px;">
+          <div style="height:100%;width:0.9%;background:#bbada2;border-radius:4px;"></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:24px;padding:16px;background:rgba(68,35,9,0.04);border-radius:4px;">
+      <div class="label-secao mb-2">vs. média do período</div>
+      <div style="font-family:'Helvetica Neue',sans-serif;font-size:0.82rem;color:rgba(68,35,9,0.7);line-height:1.6;">Este dia gerou <strong style="color:#442309;">70× a média diária</strong> do período. Virality score: <strong style="color:#cb4710;">83%</strong> (shares+saves / total).</div>
+    </div>
+
+    <div style="margin-top:16px;padding-top:16px;border-top:1px solid rgba(187,173,162,0.3);">
+      <div class="label-secao mb-2">Alcance do dia</div>
+      <div class="numero" style="font-size:1.8rem;color:#442309;">239</div>
+      <div style="font-size:0.75rem;color:#bbada2;font-family:'League Spartan',sans-serif;margin-top:2px;">contas únicas</div>
+      <div style="font-size:0.75rem;color:rgba(68,35,9,0.5);font-family:'Helvetica Neue',sans-serif;margin-top:8px;line-height:1.5;">O alcance foi baixo — as interações vieram do compartilhamento em rede, não do alcance orgânico direto.</div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function toggleDrill() {
+    const panel = document.getElementById('drillPanel');
+    const peek = document.getElementById('drillPeek');
+    const isOpen = panel.classList.contains('visible');
+    if (isOpen) {
+      panel.classList.remove('visible');
+      peek.style.right = '0';
+      peek.textContent = 'Detalhe do dia →';
+    } else {
+      panel.classList.add('visible');
+      peek.style.right = '340px';
+      peek.textContent = '← Fechar';
+    }
+  }
+
+  // Filter button toggle (visual only)
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      this.closest('div').querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+
+  document.querySelectorAll('.acct-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      this.closest('div').querySelectorAll('.acct-btn').forEach(b => { b.style.opacity = '0.55'; });
+      this.style.opacity = '1';
+    });
+  });
+</script>
+
+</body>
+</html>

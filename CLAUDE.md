@@ -95,6 +95,57 @@ git push
 
 Arquivos **excluídos** do repositório (ver `.gitignore`): `INSUMOS/`, `DOCX BASE/`, `NOSSA CAMISETA PAAPS/`, `NOSSOS CLIENTES E PARCEIROS/`.
 
+## Workspace Instagram
+
+A pasta `instagram/` contém dois workspaces de gestão de conteúdo e um dashboard de analytics:
+
+```
+instagram/
+  amalluvasconcellos/   ← workspace do perfil pessoal de Mallu Vasconcellos
+    CLAUDE.md           ← contexto de voz, conta e instruções de produção
+    conteudo/           ← rascunhos de posts, legendas, roteiros
+    calendario/         ← planejamento editorial
+    analises/           ← relatórios e insights extraídos da API
+  paaps.brasil/         ← workspace do perfil institucional do PAAPS
+    CLAUDE.md           ← contexto institucional e instruções de produção
+    conteudo/
+    calendario/
+    analises/
+  dashboard/            ← dashboard de analytics em tempo real
+    index.html          ← app principal (HTML + Tailwind CDN + Chart.js)
+    mockup.html         ← mockup estático de referência visual
+    css/dashboard.css   ← estilos do dashboard (design system PAAPS)
+    js/
+      api.js            ← fetch Windsor AI + processamento de dados
+      charts.js         ← Chart.js: linha dupla, stacked bar, sparklines, decay
+      filters.js        ← estado global (dashState) + re-render orquestrado
+      insights.js       ← geração automática de insights textuais
+      main.js           ← init, renderKPIs, heatmap, WoW, viral section
+      config.js         ← ⚠ NÃO COMMITADO — chave Windsor (ver config.example.js)
+      config.example.js ← template de configuração sem credencial
+    img/
+      logo-marrom.png   ← logo PAAPS marrom (copiado de INSUMOS para uso no dashboard)
+```
+
+### Como rodar o dashboard
+
+```bash
+cd "instagram/dashboard" && python3 -m http.server 8091
+# Abrir: http://localhost:8091
+```
+
+O dashboard busca dados ao vivo da Windsor AI (Instagram Insights API). Requer `config.js` com a chave local.
+
+### Segurança de credenciais
+
+- `instagram/dashboard/js/config.js` está no `.gitignore` — **nunca commitar**
+- A chave Windsor fica **apenas local**, nunca no repositório
+- Para configurar em nova máquina: copiar `config.example.js` → `config.js` e inserir a chave
+
+### MCP Excalidraw
+
+O arquivo `.mcp.json` na raiz configura o servidor MCP do Excalidraw (`https://mcp.excalidraw.com/mcp`). Requer reinício do Claude Code para ativação. Não contém credenciais — pode ser commitado.
+
 ## Contato institucional
 
 - WhatsApp: `https://wa.me/5511995231724`

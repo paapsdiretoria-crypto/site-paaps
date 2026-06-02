@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Instagram — PAAPS</title>
+
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/dashboard.css">
+
+  <!-- Chart.js v4 + plugin de anotação -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3.0.1/dist/chartjs-plugin-annotation.min.js"></script>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     HEADER — logo marrom + fundo fundo
+══════════════════════════════════════════ -->
+<header class="dashboard-header">
+  <div style="display:flex;align-items:center;gap:20px;">
+    <img src="img/logo-marrom.png" alt="PAAPS" style="height:44px;width:auto;">
+    <div style="width:1px;height:32px;background:rgba(68,35,9,0.15);"></div>
+    <div>
+      <div class="label-secao">Dashboard</div>
+      <div class="font-titulo" style="font-size:0.96rem;font-weight:700;color:#442309;margin-top:1px;">Instagram Analytics</div>
+    </div>
+  </div>
+  <div style="display:flex;align-items:center;gap:12px;">
+    <span id="apiError" style="display:none;font-family:'League Spartan',sans-serif;font-size:0.72rem;color:#cb4710;"></span>
+    <span class="label-secao" style="color:rgba(68,35,9,0.4);">Atualizado <span id="lastUpdated">—</span></span>
+    <a href="../../paaps-site/index.html"
+       style="font-family:'League Spartan',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#fff;background:#cb4710;border-radius:4px;padding:7px 16px;text-decoration:none;">
+      Abrir site →
+    </a>
+  </div>
+</header>
+
+<!-- ══════════════════════════════════════════
+     FILTER BAR (sticky)
+══════════════════════════════════════════ -->
+<div class="filter-bar">
+  <div style="display:flex;align-items:center;gap:8px;">
+    <span class="label-secao" style="margin-right:4px;">Período</span>
+    <button class="filter-btn" data-period="last_7d">7 dias</button>
+    <button class="filter-btn active" data-period="last_30d">30 dias</button>
+    <button class="filter-btn" data-period="last_90d">90 dias</button>
+  </div>
+  <div style="display:flex;align-items:center;gap:8px;">
+    <span class="label-secao" style="margin-right:4px;">Conta</span>
+    <button class="acct-btn active-both" data-account="both">Ambas</button>
+    <button class="acct-btn" data-account="amallu">@amalluvasconcellos</button>
+    <button class="acct-btn" data-account="paaps">@paaps.brasil</button>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     MAIN CONTENT
+══════════════════════════════════════════ -->
+<main style="max-width:1240px;margin:0 auto;padding:32px 40px 64px;">
+
+  <!-- ─── KPI CARDS ──────────────────────────────────────── -->
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-bottom:32px;">
+
+    <!-- @amallu -->
+    <div class="card" style="padding:24px;border-top:4px solid #cb4710;">
+      <div class="label-secao" style="margin-bottom:8px;">@amalluvasconcellos</div>
+      <div class="numero data-content" id="followers-amallu" style="font-size:2.2rem;color:#cb4710;">—</div>
+      <div style="font-size:0.78rem;color:rgba(68,35,9,0.5);margin:4px 0 12px;">seguidores</div>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <span id="wow-reach-amallu"></span>
+        <span class="label-secao">alcance WoW</span>
+      </div>
+    </div>
+
+    <!-- @paaps -->
+    <div class="card" style="padding:24px;border-top:4px solid #aea349;">
+      <div class="label-secao" style="margin-bottom:8px;">@paaps.brasil</div>
+      <div class="numero data-content" id="followers-paaps" style="font-size:2.2rem;color:#aea349;">—</div>
+      <div style="font-size:0.78rem;color:rgba(68,35,9,0.5);margin:4px 0 12px;">seguidores</div>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <span id="wow-reach-paaps"></span>
+        <span class="label-secao">alcance WoW</span>
+      </div>
+    </div>
+
+    <!-- Alcance total -->
+    <div class="card" style="padding:24px;border-top:4px solid #f7c31c;">
+      <div class="label-secao" style="margin-bottom:8px;">Alcance Total</div>
+      <div class="numero data-content" id="total-reach" style="font-size:2.2rem;color:#442309;">—</div>
+      <div style="font-size:0.78rem;color:rgba(68,35,9,0.5);margin:4px 0 12px;">contas únicas · período</div>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <span id="wow-interactions-amallu"></span>
+        <span class="label-secao">interações WoW</span>
+      </div>
+    </div>
+
+    <!-- Engajamento médio -->
+    <div class="card" style="padding:24px;border-top:4px solid #bbada2;">
+      <div class="label-secao" style="margin-bottom:8px;">Engajamento Médio</div>
+      <div class="numero data-content" id="avg-engagement" style="font-size:2.2rem;color:#442309;">—</div>
+      <div style="font-size:0.78rem;color:rgba(68,35,9,0.5);margin:4px 0 12px;">interações / alcance · 7d</div>
+      <span class="label-secao">ambas as contas</span>
+    </div>
+  </div>
+
+  <!-- ─── CHARTS ROW ──────────────────────────────────────── -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:32px;">
+
+    <!-- Alcance diário (linha) -->
+    <div class="card" style="padding:24px;">
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:16px;">
+        <div>
+          <div class="label-secao" style="margin-bottom:4px;">Alcance diário</div>
+          <div class="font-titulo" style="font-size:0.96rem;font-weight:700;color:#442309;">Contas únicas atingidas</div>
+        </div>
+        <div style="display:flex;gap:12px;align-items:center;margin-top:2px;">
+          <div style="display:flex;align-items:center;gap:6px;">
+            <div style="width:20px;height:3px;background:#cb4710;border-radius:2px;"></div>
+            <span class="label-secao">@amallu</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:6px;">
+            <div style="width:20px;height:3px;background:#aea349;border-radius:2px;"></div>
+            <span class="label-secao">@paaps</span>
+          </div>
+        </div>
+      </div>
+      <div class="chart-wrap">
+        <canvas id="reachChart"></canvas>
+      </div>
+      <div class="label-secao" style="margin-top:10px;">Clique em qualquer ponto para ver o detalhe do dia →</div>
+    </div>
+
+    <!-- Engajamento (stacked bar) -->
+    <div class="card" style="padding:24px;">
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:16px;">
+        <div>
+          <div class="label-secao" style="margin-bottom:4px;">Anatomia do engajamento</div>
+          <div class="font-titulo" style="font-size:0.96rem;font-weight:700;color:#442309;">Likes · Shares · Saves · Comments</div>
+        </div>
+        <div style="display:flex;gap:6px;">
+          <button class="eng-btn" data-eng-account="amalluvasconcellos">@amallu</button>
+          <button class="eng-btn active" data-eng-account="paaps.brasil">@paaps</button>
+        </div>
+      </div>
+      <div class="chart-wrap">
+        <canvas id="engagementChart"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── QUALITY TILES ──────────────────────────────────── -->
+  <div class="label-secao" style="margin-bottom:12px;">Qualidade do engajamento · interações / alcance</div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-bottom:32px;">
+
+    <!-- Save Rate -->
+    <div class="card" style="padding:20px;">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
+        <div style="width:8px;height:8px;border-radius:2px;background:#aea349;"></div>
+        <span class="label-secao">Save Rate</span>
+      </div>
+      <div class="numero data-content" id="save-rate-num" style="font-size:1.8rem;color:#aea349;">—</div>
+      <div style="font-size:0.72rem;color:rgba(68,35,9,0.45);margin:4px 0 10px;">saves / alcance</div>
+      <div id="save-rate-spark"></div>
+      <div style="margin-top:10px;">
+        <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+          <span class="label-secao" id="save-rate-amallu">—</span>
+          <span class="label-secao" id="save-rate-paaps" style="color:#aea349;">—</span>
+        </div>
+        <div class="rate-bar-track" style="margin-bottom:4px;">
+          <div class="rate-bar-fill" id="save-bar-amallu" style="background:#cb4710;width:0%;"></div>
+        </div>
+        <div class="rate-bar-track">
+          <div class="rate-bar-fill" id="save-bar-paaps" style="background:#aea349;width:0%;"></div>
+        </div>
+        <div style="display:flex;justify-content:space-between;margin-top:3px;">
+          <span class="label-secao">@amallu</span>
+          <span class="label-secao">@paaps</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Share Rate -->
+    <div class="card" style="padding:20px;">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
+        <div style="width:8px;height:8px;border-radius:2px;background:#cb4710;"></div>
+        <span class="label-secao">Share Rate</span>
+      </div>
+      <div class="numero data-content" id="share-rate-num" style="font-size:1.8rem;color:#cb4710;">—</div>
+      <div style="font-size:0.72rem;color:rgba(68,35,9,0.45);margin:4px 0 10px;">shares / alcance</div>
+      <div id="share-rate-spark"></div>
+      <div style="margin-top:10px;">
+        <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+          <span class="label-secao" id="share-rate-amallu">—</span>
+          <span class="label-secao" id="share-rate-paaps" style="color:#cb4710;">—</span>
+        </div>
+        <div class="rate-bar-track" style="margin-bottom:4px;">
+          <div class="rate-bar-fill" id="share-bar-amallu" style="background:#cb4710;width:0%;"></div>
+        </div>
+        <div class="rate-bar-track">
+          <div class="rate-bar-fill" id="share-bar-paaps" style="background:#cb4710;width:0%;"></div>
+        </div>
+        <div style="display:flex;justify-content:space-between;margin-top:3px;">
+          <span class="label-secao">@amallu</span>
+          <span class="label-secao">@paaps</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Comment Rate -->
+    <div class="card" style="padding:20px;">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
+        <div style="width:8px;height:8px;border-radius:2px;background:#bbada2;"></div>
+        <span class="label-secao">Comment Rate</span>
+      </div>
+      <div class="numero data-content" id="comment-rate-num" style="font-size:1.8rem;color:#442309;">—</div>
+      <div style="font-size:0.72rem;color:rgba(68,35,9,0.45);margin:4px 0 10px;">comentários / alcance</div>
+      <div id="comment-rate-spark"></div>
+      <div style="margin-top:10px;">
+        <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+          <span class="label-secao" id="comment-rate-amallu">—</span>
+          <span class="label-secao" id="comment-rate-paaps">—</span>
+        </div>
+        <div class="rate-bar-track" style="margin-bottom:4px;">
+          <div class="rate-bar-fill" id="comment-bar-amallu" style="background:#bbada2;width:0%;"></div>
+        </div>
+        <div class="rate-bar-track">
+          <div class="rate-bar-fill" id="comment-bar-paaps" style="background:#bbada2;width:0%;"></div>
+        </div>
+        <div style="display:flex;justify-content:space-between;margin-top:3px;">
+          <span class="label-secao">@amallu</span>
+          <span class="label-secao">@paaps</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Like Rate -->
+    <div class="card" style="padding:20px;">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
+        <div style="width:8px;height:8px;border-radius:2px;background:#f7c31c;"></div>
+        <span class="label-secao">Like Rate</span>
+      </div>
+      <div class="numero data-content" id="like-rate-num" style="font-size:1.8rem;color:#442309;">—</div>
+      <div style="font-size:0.72rem;color:rgba(68,35,9,0.45);margin:4px 0 10px;">likes / alcance</div>
+      <div id="like-rate-spark"></div>
+      <div style="margin-top:10px;">
+        <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+          <span class="label-secao" id="like-rate-amallu">—</span>
+          <span class="label-secao" id="like-rate-paaps">—</span>
+        </div>
+        <div class="rate-bar-track" style="margin-bottom:4px;">
+          <div class="rate-bar-fill" id="like-bar-amallu" style="background:#f7c31c;width:0%;"></div>
+        </div>
+        <div class="rate-bar-track">
+          <div class="rate-bar-fill" id="like-bar-paaps" style="background:#f7c31c;width:0%;"></div>
+        </div>
+        <div style="display:flex;justify-content:space-between;margin-top:3px;">
+          <span class="label-secao">@amallu</span>
+          <span class="label-secao">@paaps</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── HEATMAP ─────────────────────────────────────────── -->
+  <div class="label-secao" style="margin-bottom:12px;">Melhor dia para postar · média de interações por dia da semana</div>
+  <div class="card" style="padding:24px;margin-bottom:32px;">
+    <!-- Header de dias -->
+    <div style="display:grid;grid-template-columns:160px repeat(7,1fr);gap:6px;margin-bottom:6px;">
+      <div></div>
+      <div class="label-secao" style="text-align:center;">Seg</div>
+      <div class="label-secao" style="text-align:center;">Ter</div>
+      <div class="label-secao" style="text-align:center;">Qua</div>
+      <div class="label-secao" style="text-align:center;">Qui</div>
+      <div class="label-secao" style="text-align:center;">Sex</div>
+      <div class="label-secao" style="text-align:center;">Sáb</div>
+      <div class="label-secao" style="text-align:center;">Dom</div>
+    </div>
+    <!-- @amallu row -->
+    <div style="display:grid;grid-template-columns:160px repeat(7,1fr);gap:6px;margin-bottom:6px;">
+      <div style="display:flex;align-items:center;">
+        <span class="font-titulo" style="font-size:0.72rem;font-weight:700;color:#cb4710;">@amalluvasconcellos</span>
+      </div>
+      <div class="hm-cell" id="hm-amallu-0"><div class="hm-val">—</div></div>
+      <div class="hm-cell" id="hm-amallu-1"><div class="hm-val">—</div></div>
+      <div class="hm-cell" id="hm-amallu-2"><div class="hm-val">—</div></div>
+      <div class="hm-cell" id="hm-amallu-3"><div class="hm-val">—</div></div>
+      <div class="hm-cell" id="hm-amallu-4"><div class="hm-val">—</div></div>
+      <div class="hm-cell" id="hm-amallu-5"><div class="hm-val">—</div></div>
+      <div class="hm-cell" id="hm-amallu-6"><div class="hm-val">—</div></div>
+    </div>
+    <!-- @paaps row -->
+    <div style="display:grid;grid-template-columns:160px repeat(7,1fr);gap:6px;">
+      <div style="display:flex;align-items:center;gap:8px;">
+        <span class="font-titulo" style="font-size:0.72rem;font-weight:700;color:#aea349;">@paaps.brasil</span>
+        <span class="badge-viral" id="viralBadge" style="display:none;font-size:0.55rem;padding:2px 6px;">⚡</span>
+      </div>
+      <div class="hm-cell" id="hm-paaps-0"><div class="hm-val">—</div></div>
+      <div class="hm-cell" id="hm-paaps-1"><div class="hm-val">—</div></div>
+      <div class="hm-cell" id="hm-paaps-2"><div class="hm-val">—</div></div>
+      <div class="hm-cell" id="hm-paaps-3"><div class="hm-val">—</div></div>
+      <div class="hm-cell" id="hm-paaps-4"><div class="hm-val">—</div></div>
+      <div class="hm-cell" id="hm-paaps-5"><div class="hm-val">—</div></div>
+      <div class="hm-cell" id="hm-paaps-6"><div class="hm-val">—</div></div>
+    </div>
+    <div class="label-secao" style="margin-top:12px;">⚠ Médias distorcidas por eventos virais são sinalizadas automaticamente</div>
+  </div>
+
+  <!-- ─── VIRAL + WoW ─────────────────────────────────────── -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:32px;">
+
+    <!-- Viral -->
+    <div class="card" id="viralSection" style="padding:24px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
+        <div>
+          <div class="label-secao" style="margin-bottom:4px;">Análise do evento viral</div>
+          <div class="font-titulo" style="font-size:0.96rem;font-weight:700;color:#442309;">@paaps.brasil · decaimento</div>
+        </div>
+        <div class="badge-viral" id="viralBadge" style="margin-left:auto;">⚡ Evento detectado</div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px;">
+        <div style="text-align:center;padding:12px;background:rgba(68,35,9,0.04);border-radius:4px;">
+          <div class="numero data-content" id="viral-peak-ti" style="font-size:1.5rem;color:#f7c31c;">—</div>
+          <div class="label-secao" style="margin-top:5px;">Pico</div>
+          <div class="label-secao" id="viral-peak-date" style="margin-top:2px;color:rgba(68,35,9,0.4);font-size:0.58rem;">—</div>
+        </div>
+        <div style="text-align:center;padding:12px;background:rgba(68,35,9,0.04);border-radius:4px;">
+          <div class="numero data-content" id="viral-peak-vs" style="font-size:1.5rem;color:#cb4710;">—</div>
+          <div class="label-secao" style="margin-top:5px;">Viralidade</div>
+          <div class="label-secao" style="margin-top:2px;color:rgba(68,35,9,0.4);font-size:0.58rem;">shares+saves/total</div>
+        </div>
+        <div style="text-align:center;padding:12px;background:rgba(68,35,9,0.04);border-radius:4px;">
+          <div class="numero data-content" id="viral-halflife" style="font-size:1.5rem;color:#aea349;">—</div>
+          <div class="label-secao" style="margin-top:5px;">Meia-vida</div>
+          <div class="label-secao" id="viral-tail" style="margin-top:2px;color:rgba(68,35,9,0.4);font-size:0.58rem;">—</div>
+        </div>
+      </div>
+      <div class="label-secao" style="margin-bottom:8px;">Decaimento das interações</div>
+      <div class="chart-wrap" style="height:150px;">
+        <canvas id="viralChart"></canvas>
+      </div>
+      <div id="viralNote" class="label-secao" style="margin-top:8px;color:rgba(68,35,9,0.4);"></div>
+    </div>
+
+    <!-- WoW -->
+    <div class="card" style="padding:24px;">
+      <div style="margin-bottom:20px;">
+        <div class="label-secao" style="margin-bottom:4px;">Comparativo semana a semana</div>
+        <div class="font-titulo" style="font-size:0.96rem;font-weight:700;color:#442309;">Semana atual vs. semana anterior</div>
+      </div>
+      <table class="wow-table">
+        <thead>
+          <tr>
+            <th>Métrica</th>
+            <th>@amallu</th>
+            <th>WoW</th>
+            <th>@paaps</th>
+            <th>WoW</th>
+          </tr>
+        </thead>
+        <tbody id="wowTbody">
+          <tr><td colspan="5" style="color:#bbada2;text-align:center;padding:20px;">Carregando…</td></tr>
+        </tbody>
+      </table>
+      <div style="margin-top:16px;padding-top:12px;border-top:1px solid rgba(187,173,162,0.3);">
+        <span class="label-secao">Fonte: Windsor AI · Instagram Insights · dados reais</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── INSIGHTS ─────────────────────────────────────────── -->
+  <div style="background:#442309;border-radius:4px;padding:40px 48px;background-image:url('data:image/svg+xml,%3Csvg viewBox=\'0 0 256 256\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'n\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.9\' numOctaves=\'4\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23n)\' opacity=\'0.04\'/%3E%3C/svg%3E');">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:28px;">
+      <div style="width:12px;height:12px;border-radius:2px;background:#f7c31c;"></div>
+      <div style="width:12px;height:12px;border-radius:2px;background:#cb4710;"></div>
+      <div style="width:12px;height:12px;border-radius:2px;background:#aea349;"></div>
+      <span class="label-secao" style="color:rgba(255,255,255,0.5);margin-left:8px;">Insights automáticos</span>
+      <span class="label-secao" style="margin-left:auto;color:rgba(255,255,255,0.25);">gerados a cada atualização</span>
+    </div>
+    <div id="insightsPanel" style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+      <div style="color:rgba(255,255,255,0.3);font-size:0.85rem;">Carregando insights…</div>
+    </div>
+  </div>
+
+</main>
+
+<!-- ══════════════════════════════════════════
+     DRILL-DOWN PANEL
+══════════════════════════════════════════ -->
+<div class="drill-peek" id="drillPeek">Detalhe do dia →</div>
+
+<div class="drill-panel" id="drillPanel">
+  <div style="padding:20px 24px;border-bottom:1px solid rgba(187,173,162,0.3);display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:#fff;z-index:1;">
+    <div>
+      <div class="label-secao">Drill-down</div>
+      <div class="font-titulo" style="font-size:0.9rem;font-weight:700;color:#442309;" id="drillTitle">—</div>
+    </div>
+    <button id="drillClose" style="background:none;border:none;cursor:pointer;font-size:1.1rem;color:#bbada2;padding:4px 8px;">✕</button>
+  </div>
+  <div style="padding:24px;" id="drillContent">
+    <p style="color:#bbada2;font-size:0.82rem;">Clique em um ponto do gráfico de alcance para ver o detalhe do dia.</p>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     SCRIPTS
+══════════════════════════════════════════ -->
+<script src="js/api.js"></script>
+<script src="js/filters.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/insights.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
