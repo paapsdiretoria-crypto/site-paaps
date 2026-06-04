@@ -1,0 +1,240 @@
+/* ════════════════════════════════════════════════════════════
+   PAAPS Dashboard — Tema Editorial Escuro
+   Variáveis e overrides completos sobre base de dashboard.css
+   ════════════════════════════════════════════════════════════ */
+
+/* ── Reset e base ──────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background-color: #120c05;
+  background-image:
+    radial-gradient(ellipse at 20% 10%, rgba(203,71,16,0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 90%, rgba(174,163,73,0.05) 0%, transparent 50%),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #f5f1e1;
+  min-height: 100vh;
+}
+
+/* ── Tipografia ──────────────────────────────────────────── */
+.font-titulo { font-family: 'League Spartan', Arial, sans-serif; }
+
+.label-secao {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 0.68rem; font-weight: 700;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: rgba(245,241,225,0.35);
+}
+
+.numero {
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 800; line-height: 1;
+}
+
+/* ── Cards ───────────────────────────────────────────────── */
+.card {
+  background: #1e130a;
+  border: 1px solid rgba(245,241,225,0.07);
+  border-radius: 4px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.45);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 48px rgba(0,0,0,0.6);
+  border-color: rgba(245,241,225,0.12);
+}
+
+/* ── Header ──────────────────────────────────────────────── */
+.dashboard-header {
+  background: #120c05;
+  border-bottom: 1px solid rgba(245,241,225,0.08);
+  padding: 14px 40px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+
+/* ── Filter bar ──────────────────────────────────────────── */
+.filter-bar {
+  position: sticky; top: 0; z-index: 40;
+  background: #120c05;
+  border-bottom: 1px solid rgba(245,241,225,0.06);
+  padding: 10px 40px;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px;
+}
+
+.filter-btn {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; padding: 6px 16px;
+  border-radius: 4px; border: 1.5px solid rgba(245,241,225,0.12);
+  background: transparent; color: rgba(245,241,225,0.6); cursor: pointer;
+  transition: all 0.2s;
+}
+.filter-btn:hover { border-color: rgba(245,241,225,0.35); color: #f5f1e1; }
+.filter-btn.active { background: #f7c31c; color: #1a1008; border-color: #f7c31c; }
+
+.acct-btn {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase; padding: 6px 16px;
+  border-radius: 4px; border: 1.5px solid rgba(245,241,225,0.12);
+  background: transparent; color: rgba(245,241,225,0.6); cursor: pointer;
+  transition: all 0.2s;
+}
+.acct-btn:hover { border-color: rgba(245,241,225,0.35); color: #f5f1e1; }
+.acct-btn.active-both   { background: #f7c31c; color: #1a1008;  border-color: #f7c31c; }
+.acct-btn.active-amallu { background: #e07050; color: #fff;     border-color: #e07050; }
+.acct-btn.active-paaps  { background: #c8b85a; color: #1a1008;  border-color: #c8b85a; }
+
+/* ── Badges de tendência ─────────────────────────────────── */
+.badge-up   { background: rgba(174,163,73,0.18);  color: #c8b85a; border-radius: 4px; padding: 2px 8px; font-size: 0.72rem; font-weight: 700; font-family: 'League Spartan', sans-serif; white-space: nowrap; }
+.badge-down { background: rgba(224,112,80,0.16);  color: #e07050; border-radius: 4px; padding: 2px 8px; font-size: 0.72rem; font-weight: 700; font-family: 'League Spartan', sans-serif; white-space: nowrap; }
+.badge-flat { background: rgba(245,241,225,0.08); color: rgba(245,241,225,0.4); border-radius: 4px; padding: 2px 8px; font-size: 0.72rem; font-weight: 700; font-family: 'League Spartan', sans-serif; white-space: nowrap; }
+
+/* ── Viral badge ─────────────────────────────────────────── */
+@keyframes pulsar { 0%,100%{opacity:1;} 50%{opacity:0.5;} }
+.badge-viral {
+  background: #f7c31c; color: #1a1008; border-radius: 4px;
+  padding: 3px 10px; font-size: 0.65rem; font-weight: 800;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  font-family: 'League Spartan', sans-serif;
+  animation: pulsar 2s infinite; white-space: nowrap;
+}
+
+/* ── Heatmap cells ───────────────────────────────────────── */
+.hm-cell {
+  border-radius: 4px; transition: all 0.2s; cursor: default;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  height: 56px; min-width: 0;
+  background: rgba(245,241,225,0.04);
+}
+.hm-cell:hover { outline: 1.5px solid rgba(247,195,28,0.5); }
+
+.hm-label {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 0.6rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.1em;
+  color: rgba(245,241,225,0.3); margin-bottom: 4px;
+}
+.hm-val {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 0.75rem; font-weight: 700;
+  color: rgba(245,241,225,0.55);
+  transition: color 0.2s;
+}
+
+/* ── WoW table ───────────────────────────────────────────── */
+.wow-table { width: 100%; border-collapse: collapse; }
+.wow-table th {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase;
+  color: rgba(245,241,225,0.3); padding: 0 12px 12px; font-weight: 700; text-align: left;
+}
+.wow-table td {
+  font-size: 0.88rem; padding: 10px 12px;
+  border-top: 1px solid rgba(245,241,225,0.06);
+  color: #f5f1e1;
+}
+.wow-table td:first-child {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 0.72rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.08em;
+  color: rgba(245,241,225,0.3);
+}
+
+/* ── Insights panel ──────────────────────────────────────── */
+.insights-panel {
+  background: #0e0904;
+  border: 1px solid rgba(245,241,225,0.06);
+  border-radius: 4px;
+  padding: 40px 48px;
+  background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
+}
+
+/* ── Drill-down panel ────────────────────────────────────── */
+.drill-panel {
+  position: fixed; top: 0; right: 0; height: 100%; width: 340px;
+  background: #1a1008;
+  border-left: 1px solid rgba(245,241,225,0.08);
+  box-shadow: -12px 0 48px rgba(0,0,0,0.6);
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(0.4,0,0.2,1);
+  z-index: 200; overflow-y: auto;
+}
+.drill-panel.visible { transform: translateX(0); }
+
+.drill-peek {
+  position: fixed; top: 50%; right: 0;
+  transform: translateY(-50%);
+  background: #f7c31c; color: #1a1008;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 0.6rem; font-weight: 800; letter-spacing: 0.18em;
+  text-transform: uppercase; writing-mode: vertical-rl;
+  padding: 16px 8px; border-radius: 4px 0 0 4px;
+  cursor: pointer; z-index: 201;
+  transition: right 0.35s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* ── Loading skeleton ────────────────────────────────────── */
+@keyframes shimmer { 0%{background-position:200% 0} 100%{background-position:-200% 0} }
+.skeleton {
+  background: linear-gradient(90deg, #1e130a 25%, #2a1a0c 50%, #1e130a 75%);
+  background-size: 200% 100%; animation: shimmer 1.5s infinite;
+  border-radius: 4px; display: none;
+}
+.data-content { transition: opacity 0.3s; }
+
+/* ── Chart containers ────────────────────────────────────── */
+.chart-wrap { position: relative; height: 260px; width: 100%; }
+
+/* ── API error ───────────────────────────────────────────── */
+#apiError {
+  display: none;
+  background: rgba(224,112,80,0.12);
+  color: #e07050;
+  border: 1px solid rgba(224,112,80,0.25);
+  border-radius: 4px; padding: 12px 20px; margin: 0 40px 20px;
+  font-family: 'League Spartan', sans-serif; font-size: 0.8rem;
+}
+
+/* ── Scrollbar ───────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #120c05; }
+::-webkit-scrollbar-thumb { background: rgba(245,241,225,0.15); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(247,195,28,0.4); }
+
+/* ── Eng toggle ──────────────────────────────────────────── */
+.eng-btn {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase; padding: 4px 12px;
+  border-radius: 4px; border: 1.5px solid rgba(245,241,225,0.12);
+  background: transparent; color: rgba(245,241,225,0.5); cursor: pointer;
+  transition: all 0.18s;
+}
+.eng-btn:hover { border-color: rgba(245,241,225,0.35); color: #f5f1e1; }
+.eng-btn.active { background: #f7c31c; color: #1a1008; border-color: #f7c31c; }
+
+/* ── Quality tile bars ───────────────────────────────────── */
+.rate-bar-track {
+  height: 5px; background: rgba(245,241,225,0.06);
+  border-radius: 3px; margin-bottom: 2px; overflow: hidden;
+}
+.rate-bar-fill { height: 100%; border-radius: 3px; transition: width 0.5s ease; }
+
+/* ── Divisores de seção ──────────────────────────────────── */
+hr {
+  border: none;
+  border-top: 1px solid rgba(245,241,225,0.06);
+  margin: 24px 0;
+}
+
+/* ── Seleção de texto ────────────────────────────────────── */
+::selection {
+  background: rgba(247,195,28,0.25);
+  color: #f5f1e1;
+}
