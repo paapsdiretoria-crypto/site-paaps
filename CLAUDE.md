@@ -2,6 +2,8 @@
 
 Esta pasta contém três projetos distintos que compartilham insumos de marca. Cada projeto tem seu próprio `CLAUDE.md` interno.
 
+**Para agentes:** leia `mapa-de-contexto.md` para saber o que ler dado o que você está fazendo.
+
 ---
 
 ## Estrutura geral

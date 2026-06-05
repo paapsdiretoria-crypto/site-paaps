@@ -1,6 +1,30 @@
+<!--
+╔══════════════════════════════════════════════════════════════╗
+║  ⚠ ARQUIVO APOSENTADO — NÃO USAR COMO INSTRUÇÃO ATIVA  ⚠   ║
+╚══════════════════════════════════════════════════════════════╝
+
+Este arquivo é a skill paaps-brand-design original, mantido apenas
+como referência histórica. Todo o seu conteúdo foi redistribuído em
+jun/2026 nos 6 arquivos do nucleo-comum/:
+
+  voz-paaps.md          ← Partes 7 (voz, personas, editorias)
+  identidade-aplicada.md ← Partes 1, 2, 6, 11 (design + Canva)
+  criterios-design.md   ← Partes 1.4, 2.2, 6 (checklist)
+  qualidade-frontend.md ← skill frontend-design destilada
+  visual-instagram.md   ← Parte 8 (3 modos visuais)
+  mapa-fontes-foto.md   ← Parte 11.4 (fontes de foto)
+
+Se você chegou aqui procurando instruções de design, voz ou Canva:
+→ Leia os arquivos acima em insumos-compartilhados/nucleo-comum/
+→ Consulte mapa-de-contexto.md na raiz do projeto para saber o que ler
+
+NÃO copie instruções deste arquivo — podem estar desatualizadas
+ou conflitar com as versões corrigidas no nucleo-comum.
+-->
+
 ---
-name: paaps-brand-design
-description: Sistema de design e orquestração de agentes visuais da marca PAAPS. Use quando precisar criar qualquer artefato visual da marca: dashboards de analytics, carrosséis para Instagram/LinkedIn, sites institucionais, peças editoriais, relatórios. Este skill atua como mastermind de decisão estética e coordena subagentes especializados por contexto. Antes de executar, detecta o contexto (dashboard / social media / site / impresso) e aplica a estratégia visual correspondente.
+name: paaps-brand-design (APOSENTADO)
+description: ARQUIVO APOSENTADO. Use insumos-compartilhados/nucleo-comum/ no lugar.
 ---
 
 # PAAPS Brand Design Intelligence
