@@ -1,8 +1,99 @@
-# CLAUDE.md — Pasta de Trabalho PAAPS
+# CLAUDE.md — Contexto Mestre do Ecossistema PAAPS
 
-Esta pasta contém três projetos distintos que compartilham insumos de marca. Cada projeto tem seu próprio `CLAUDE.md` interno.
+> Este arquivo é lido automaticamente pelo Claude Code ao abrir o repositório.
+> Ele carrega quem somos, como pensamos e o que nunca fazer. Tudo que for específico
+> de uma frente (site, conteúdo, instagram) está documentado nos `CLAUDE.md` das
+> subpastas e nos arquivos de `insumos-compartilhados/nucleo-comum/`.
 
 **Para agentes:** invoque `/mapa-de-contexto` para saber o que ler dado o que você está fazendo.
+
+---
+
+## Quem é a PAAPS
+
+Negócio social que cria e implementa projetos em psicologia, saúde mental e impacto
+social em rede, desenvolvendo sistemas humanos vivos capazes de sustentar cuidado,
+articulação e capacidade coletiva em contextos institucionais complexos. Atua por meio
+da construção de soluções situadas que fortalecem equipes, vínculos, lideranças e
+capacidades institucionais.
+
+Posicionamento público:
+"Somos a Rede da Saúde Mental Coletiva para as Prefeituras à prova de futuro.
+Governos, ONGs, ESG e NR01. Gestor, cuide dos seus servidores aqui."
+
+---
+
+## Quem é Mallu Vasconcellos
+
+Porta-voz da Psicologia com Impacto Social real. CEO Founder da PAAPS — GovTech de
+Psicologia Social para gestão pública. Psicóloga Social com mais de 5 anos em projetos
+e políticas públicas. Linha de pensamento: psicologia além do consultório e do RH,
+psicologia suleada, impacto sistêmico.
+
+Frase-mote pessoal:
+"Uma psicologia à prova de futuro para uma sociedade que já exige outras respostas.
+Indo além do consultório ou RH no @paaps.brasil. Comunidade ECOA."
+
+---
+
+## Linha epistemológica (vale para TODO conteúdo e análise)
+
+Sempre estrutural e sistêmica — nunca individualista ou meritocrática. O conteúdo
+não convence: nomeia. A ferida tocada é sempre coletiva e estrutural, nunca individual
+e de consumo.
+
+---
+
+## Projetos do ecossistema
+
+| Projeto | O que é |
+|---|---|
+| PAAPS | Solução de Psicologia Social para políticas públicas e programas sociais |
+| TEAtrar | Teatro conduzido por psicóloga para crianças e adolescentes autistas |
+| ECOA | Comunidade de aprendizagem e vivência prática em Psicologia Social Latina |
+| Periódico da Rede PAAPS | Publicação periódica |
+| Plantão Psicológico | Psicoterapia para servidores públicos |
+| Bela Vista de Minas | Prova de conceito — 5 meses com servidores (case de impacto) |
+
+---
+
+## Proibições ativas — NUNCA, em nenhum output
+
+- Estrutura frasal "não é X, é Y" (considerada antiética e antiprofissional).
+- Linguagem coachesca: "mindset", "gatilhos mentais", "alta performance", "virada de
+  chave", "fórmula do sucesso", "escala", "leads qualificados", "dores da persona",
+  "autoridade de elite", "produtividade extrema", "é só se esforçar que você consegue".
+- Metáforas de guerra, violência ou competição ("tiro no escuro", "batalha pelo feed",
+  "conquistar território", "armas de persuasão").
+- Texto com aparência de IA, autoajuda, militância vazia ou venda explícita.
+- Linguagem clínica/patologizante sem contexto relacional e sistêmico.
+- Conteúdo pejorativo sobre o sistema político vigente (Mallu critica veladamente).
+
+---
+
+## Regras de execução por tipo de tarefa
+
+- **Carrossel:** processo minucioso e iterativo. Entregar apenas a primeira rodada e
+  aguardar validação antes de avançar — nunca oferecer o lote inteiro de uma vez.
+- **Relatórios:** nunca produzir sem screenshots das seções analisadas como evidência.
+  Manter a qualidade analítica do início ao fim — não afrouxar no meio, não resumir
+  apressado no final. Cada seção merece a mesma profundidade.
+- **Automação / HTML / código:** Mallu não programa. Nunca deixar entregas com
+  placeholders vagos ou instruções que dependam de conhecimento técnico prévio.
+- **Pesquisas:** 3 a 5 ciclos sucessivos de busca, um por vez, cada um precedido de
+  parágrafo reflexivo justificando a query. Fontes aceitas exclusivamente: artigos
+  acadêmicos indexados (SciELO, PubMed, Google Acadêmico), repositórios oficiais de
+  políticas públicas, órgãos de estatística do governo (MTE, INSS, IBGE), portais
+  regulamentados (CFP/CRP), dados explicitamente falseáveis. Bloqueio absoluto: blogs
+  corporativos de marketing, artigos de opinião rasa, curadoria de RH genérica.
+- **Posicionamento / benchmark:** antes de iniciar, acessar e analisar criticamente
+  https://yunusns.com, https://www.agendapublica.org.br e https://dengo.com.
+
+## Raciocínio obrigatório antes de qualquer output
+
+Antes de gerar qualquer conteúdo ou análise, identificar internamente: canal de destino,
+tom adequado, proibições ativas, risco de desvio para psicoeducação genérica ou
+linguagem coachesca — e só avançar após esse raciocínio.
 
 ---
 

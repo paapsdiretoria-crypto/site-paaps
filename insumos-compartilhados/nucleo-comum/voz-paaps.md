@@ -1,4 +1,4 @@
-# Voz PAAPS — Gabarito de Conteúdo
+# Voz PAAPS — Gabarito de Voz e Conteúdo
 
 Este arquivo é o gabarito que o **Crítico de Conteúdo** usa para julgar se um texto "soa PAAPS". Todo agente que escreve legenda, roteiro, título ou copy lê este arquivo antes de produzir qualquer peça.
 
@@ -122,3 +122,67 @@ A perspectiva é SEMPRE **estrutural e sistêmica**. Nunca individualista. Nunca
 ## 8. Contradições da Skill Anterior — Resolvidas
 
 A versão anterior da skill tinha a instrução de buscar fotos no Unsplash. **Esta instrução está revogada.** A regra de fonte de imagem está em `mapa-fontes-foto.md`.
+
+---
+
+## 9. Filosofia de Conteúdo — O Norte que Orienta Tudo
+
+**A audiência nunca precisa ser convencida.** O conteúdo não convence — ele nomeia.
+A audiência já sente o que vai ser dito; o que ela não tinha eram as palavras. Se o
+conteúdo está tentando convencer alguém de algo, está no registro errado.
+
+**O argumento É o gancho.** Não existe gancho artificial. A tensão real da ideia já é
+o que para o scroll. Quando se fabrica um gancho em cima de um argumento bom, enfraquece
+o argumento.
+
+### Os 4 princípios (em ordem de prioridade)
+
+1. **Cutuca uma ferida coletiva e estrutural** (prioridade máxima). Nunca individual e
+   de consumo. Quanto mais específica e estrutural a ferida, mais poderoso o conteúdo.
+2. **Desafia o senso comum da psicologia hegemônica.** A contradição precisa aparecer
+   nos primeiros 3 segundos / primeiro slide.
+3. **Clareza instantânea — uma ideia só.** Uma ideia por reel, uma tensão por carrossel.
+4. **Loop que emerge da tensão — nunca fabricado.** Nada de "você sabia que...".
+
+### Tema vs. tensão
+
+Tema é "saúde mental no trabalho". Tensão é "a gestora que cuida de todo mundo menos
+dela mesma e chama isso de profissionalismo". A tensão já é o conteúdo. O argumento
+sempre vem da Mallu — de uma observação de campo, de uma raiva, de algo que alguém disse.
+
+---
+
+## 10. Tom de Voz por Canal
+
+| Canal | Tom |
+|---|---|
+| @amalluvasconcellos (Instagram) | Direta, sem floreio, com profundidade. "a gente" em vez de "nós". Crítica e didática acessível. Nunca jargão desnecessário. Emojis com moderação. Evitar traços grandes "—". Autoridade oculta. |
+| LinkedIn Mallu | CEO Founder e psicóloga social-sistêmica. Argumenta com dados e campo. Conecta teoria à gestão pública. Nunca informal demais, nunca frio demais. |
+| LinkedIn PAAPS | Institucional, sem perder profundidade crítica. Fala para gestores, ESG, NR01, parceiros. |
+
+---
+
+## 11. Público Real — Dados Validados
+
+84,2% mulheres | 87% entre 18–34 anos | 96,6% Brasil
+
+Cidades: São Paulo (17,4%), Belo Horizonte (5,1%), Rio de Janeiro (4,3%).
+
+Perfil: estudantes e profissionais de psicologia, políticas públicas, assistência social,
+educação.
+
+---
+
+## 12. O Que Viraliza / O Que Não Funciona
+
+**Viraliza:**
+- Reels de câmera no rosto + fundo orgânico + crítica à psicologia hegemônica (até 61k
+  views, 96% não-seguidores)
+- Filosofia aplicada ao cotidiano
+- Conteúdo sobre identidade da psicóloga social
+- Salvamentos altos = conteúdo de referência
+
+**Não funciona:**
+- LinkedIn sem estratégia (0 comentários, alcance só na base)
+- Stories sem CTA estruturado
+- Conteúdo viral sem funil não converte

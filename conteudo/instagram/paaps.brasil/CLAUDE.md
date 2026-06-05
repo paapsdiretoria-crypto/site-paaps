@@ -46,3 +46,17 @@ paaps.brasil/
 - Email: paaps@digging.com.br
 - Instagram: @paaps.brasil
 - Site: paaps-site/index.html (repositório local)
+
+---
+
+## Contexto de voz herdado (migrado do Claude Chat)
+
+Este workspace produz conteúdo institucional para @paaps.brasil. Antes de qualquer peça,
+ler:
+- `../../../CLAUDE.md` (raiz)
+- `../../../insumos-compartilhados/nucleo-comum/voz-paaps.md`
+- Agentes `paaps-carrossel.md` e `paaps-linkedin.md`.
+
+Paleta deste canal: PAAPS PURO. Função: posicionamento institucional, parceiros, B2G.
+Tom institucional sem perder profundidade crítica. Fala para gestores, servidores,
+parceiros e movimentos sociais.

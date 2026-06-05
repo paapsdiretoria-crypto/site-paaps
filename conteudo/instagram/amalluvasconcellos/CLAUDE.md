@@ -39,3 +39,17 @@ amalluvasconcellos/
   calendario/         ← planejamento editorial
   analises/           ← relatórios e insights extraídos da API
 ```
+
+---
+
+## Contexto de voz herdado (migrado do Claude Chat)
+
+Este workspace produz conteúdo para @amalluvasconcellos. Antes de qualquer peça, ler:
+- `../../../CLAUDE.md` (raiz — proibições e linha epistemológica)
+- `../../../insumos-compartilhados/nucleo-comum/voz-paaps.md`
+- O agente correspondente em `../../../.claude/agents/` (mallu-reels, paaps-carrossel,
+  mallu-linkedin).
+
+Paleta deste canal: AMALLUVASCONCELLOS. Função no funil: topo (alcance/descoberta via
+Reels) + retenção/salvamento (carrossel). Público real: 84% mulheres, 87% entre 18–34,
+96% Brasil.
