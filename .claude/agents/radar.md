@@ -1,7 +1,7 @@
 ---
 name: radar
 description: Agente de pesquisa e mapeamento de pautas. Acionar quando precisar identificar 20 temas/notícias/acontecimentos em ascensão — antes de explodirem — para alimentar a produção de conteúdo do PAAPS.
-model: claude-sonnet-4-6
+model: sonnet
 tools: [WebSearch, WebFetch, Read]
 memory: project
 color: yellow
