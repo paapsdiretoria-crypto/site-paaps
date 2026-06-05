@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Workflow de Conteúdo PAAPS</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background: #f5f1e1; color: #442309; line-height: 1.6; padding: 40px 20px; }
+  h1 { font-size: 1.5rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px; }
+  .sub { color: #7a5c3a; font-size: 0.9rem; margin-bottom: 40px; }
+
+  .camada { margin-bottom: 32px; }
+  .camada-header { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.18em; color: #7a5c3a; margin-bottom: 12px; padding-bottom: 6px; border-bottom: 2px solid #cb4710; }
+
+  .etapa { display: flex; gap: 16px; margin-bottom: 10px; align-items: flex-start; }
+  .etapa-icon { width: 32px; height: 32px; border-radius: 4px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 14px; margin-top: 2px; }
+  .etapa-corpo { flex: 1; }
+  .etapa-titulo { font-weight: 600; font-size: 0.95rem; }
+  .etapa-desc { font-size: 0.85rem; color: #6b4f2e; margin-top: 2px; }
+  .etapa-risco { font-size: 0.8rem; color: #bd0909; margin-top: 4px; background: #fff0f0; border-left: 3px solid #bd0909; padding: 4px 8px; border-radius: 2px; }
+  .etapa-real { font-size: 0.8rem; color: #3d6b1a; margin-top: 4px; background: #f0fadf; border-left: 3px solid #608520; padding: 4px 8px; border-radius: 2px; }
+  .etapa-melhoria { font-size: 0.8rem; color: #305bab; margin-top: 4px; background: #edf2ff; border-left: 3px solid #305bab; padding: 4px 8px; border-radius: 2px; }
+
+  /* tipos */
+  .auto { background: #fff6b6; border: 1px solid #af7e02; color: #6b4f00; }
+  .decisao { background: #ffc6c6; border: 1px solid #bd0909; color: #7a0000; }
+  .real { background: #dbfaad; border: 1px solid #608520; color: #2d5010; }
+  .handoff { background: #c6dcff; border: 1px solid #305bab; color: #1a3670; }
+  .ok { background: #adf0c7; border: 1px solid #087429; color: #054d1a; }
+  .humano { background: #dbfaad; border: 1px solid #608520; color: #2d5010; }
+
+  .seta { text-align: center; color: #9b8060; font-size: 1.2rem; margin: 4px 0; }
+  .paralelo { background: #fffbf0; border: 1px dashed #cb4710; border-radius: 6px; padding: 12px 16px; margin: 8px 0; }
+  .paralelo-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.14em; color: #cb4710; font-weight: 700; margin-bottom: 8px; }
+
+  .legenda { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; padding: 16px; background: white; border-radius: 6px; border: 1px solid #d4c5a9; }
+  .leg-item { display: flex; align-items: center; gap: 8px; font-size: 0.8rem; }
+  .leg-box { width: 18px; height: 18px; border-radius: 3px; flex-shrink: 0; }
+
+  hr { border: none; border-top: 1px solid #d4c5a9; margin: 24px 0; }
+
+  @media (max-width: 600px) { body { padding: 20px 12px; } }
+</style>
+</head>
+<body>
+
+<h1>Workflow de Produção de Conteúdo PAAPS</h1>
+<p class="sub">46 etapas · 4 camadas · pontos de risco, decisão e Trabalho Real mapeados</p>
+
+<div class="legenda">
+  <div class="leg-item"><div class="leg-box" style="background:#fff6b6;border:1px solid #af7e02"></div> Etapa automatizada</div>
+  <div class="leg-item"><div class="leg-box" style="background:#ffc6c6;border:1px solid #bd0909"></div> Decisão / verificação</div>
+  <div class="leg-item"><div class="leg-box" style="background:#dbfaad;border:1px solid #608520"></div> Trabalho Real (humano)</div>
+  <div class="leg-item"><div class="leg-box" style="background:#c6dcff;border:1px solid #305bab"></div> Handoff entre camadas</div>
+  <div class="leg-item"><div class="leg-box" style="background:#adf0c7;border:1px solid #087429"></div> Marco positivo</div>
+</div>
+
+<!-- GATILHO -->
+<div class="camada">
+  <div class="camada-header">Gatilho — O que inicia uma sessão</div>
+
+  <div class="etapa">
+    <div class="etapa-icon decisao">?</div>
+    <div class="etapa-corpo">
+      <div class="etapa-titulo">Qual é o motivo desta sessão?</div>
+      <div class="etapa-desc">Três caminhos possíveis — todos convergem para o Radar</div>
+    </div>
+  </div>
+
+  <div class="paralelo">
+    <div class="paralelo-label">Um dos três gatilhos</div>
+    <div class="etapa">
+      <div class="etapa-icon auto">📅</div>
+      <div class="etapa-corpo"><div class="etapa-titulo">Ciclo semanal regular</div></div>
+    </div>
+    <div class="etapa">
+      <div class="etapa-icon auto">📰</div>
+      <div class="etapa-corpo"><div class="etapa-titulo">Evento ou notícia emergente</div></div>
+    </div>
+    <div class="etapa">
+      <div class="etapa-icon humano">💡</div>
+      <div class="etapa-corpo"><div class="etapa-titulo">Mallu traz tema específico</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="seta">↓</div>
+
+<!-- CAMADA 1 -->
+<div class="camada">
+  <div class="camada-header">Camada 1 — Detecção automatizada</div>
+
+  <div class="etapa">
+    <div class="etapa-icon auto">📡</div>
+    <div class="etapa-corpo">
+      <div class="etapa-titulo">Radar — busca temas em alta</div>
+      <div class="etapa-desc">Windsor API + WebSearch. Rastreia o que está em circulação no território.</div>
+      <div class="etapa-risco">⚠ Risco: dados podem ser superficiais ou sem ancoragem territorial. Verificar contexto antes de prosseguir.</div>
+    </div>
+  </div>
+
+  <div class="seta">↓</div>
+
+  <div class="etapa">
+    <div class="etapa-icon decisao">✓</div>
+    <div class="etapa-corpo">
+      <div class="etapa-titulo">Dados são recentes e territorialmente relevantes?</div>
+      <div class="etapa-desc">SIM → Cartógrafo &nbsp;|&nbsp; NÃO → ampliar busca manualmente e retornar ao Radar</div>
+    </div>
+  </div>
+
+  <div class="seta">↓ SIM</div>
+
+  <div class="etapa">
+    <div class="etapa-icon auto">🗺</div>
+    <div class="etapa-corpo">
+      <div class="etapa-titulo">Cartógrafo — mapeia ângulos críticos do PAAPS</div>
+      <div class="etapa-desc">Para cada tema encontrado, identifica o recorte sistêmico que o PAAPS pode trazer.</div>
+      <div class="etapa-risco">⚠ Risco: ângulo pode parecer PAAPS mas ser individualista. Pergunta-chave: "a perspectiva culpa a pessoa ou o sistema?"</div>
+    </div>
+  </div>
+
+  <div class="seta">↓</div>
+
+  <div class="etapa">
+    <div class="etapa-icon decisao">✓</div>
+    <div class="etapa-corpo">
+      <div class="etapa-titulo">Ângulo captura perspectiva sistêmica e não individualista?</div>
+      <div class="etapa-desc">SIM → Curador &nbsp;|&nbsp; NÃO → reformular ângulo e retornar ao Cartógrafo</div>
+    </div>
+  </div>
+
+  <div class="seta">↓ SIM</div>
+
+  <div class="etapa">
+    <div class="etapa-icon auto">✂️</div>
+    <div class="etapa-corpo">
+      <div class="etapa-titulo">Curador — seleciona 3 temas com potência real</div>
+      <div class="etapa-desc">Cruza outputs do Radar e do Cartógrafo. Corta para os 3 com maior potência de posicionamento.</div>
+    </div>
+  </div>
+
+  <div class="seta">↓</div>
+
+  <div class="etapa">
+    <div class="etapa-icon decisao">✓</div>
+    <div class="etapa-corpo">
+      <div class="etapa-titulo">Há 3 temas distintos com potência de posicionamento?</div>
+      <div class="etapa-desc">SIM → apresentar à Mallu &nbsp;|&nbsp; NÃO → nova rodada de detecção do zero</div>
+    </div>
+  </div>
+</div>
+
+<div class="seta">↓ SIM</div>
+
+<!-- CAMADA 2 -->
+<div class="camada">
+  <div class="camada-header">Camada 2 — Captação do raciocínio de Mallu (você entra aqui)</div>
+
+  <div class="etapa">
+    <div class="etapa-icon handoff">→</div>
+    <div class="etapa-corpo">
+      <div class="etapa-titulo">Curador apresenta os 3 temas à Mallu</div>
+      <div class="etapa-desc">Com contexto: o que está em alta, qual é o ângulo do PAAPS, por que cada tema tem potência.</div>
+    </div>
+  </div>
+
+  <div class="seta">↓</div>
+
+  <div class="etapa">
+    <div class="etapa-icon real">🧠</div>
+    <div class="etapa-corpo">
+      <div class="etapa-titulo">TRABALHO REAL — Mallu lê e reage com intuição</div>
+      <div class="etapa-desc">Antes de responder formalmente, Mallu já está filtrando pelos temas pelo que viveu na semana — com quem falou, o que a incomodou, o que está processando. Esse pré-processamento é invisível no processo mas determina tudo.</div>
+      <div class="etapa-real">💡 O que o sistema não captura: a intuição de Mallu sobre relevância já aconteceu antes de qualquer resposta escrita.</div>
+    </div>
+  </div>
+
+  <div class="seta">↓</div>
+
+  <div class="etapa">
+    <div class="etapa-icon handoff">✍</div>
+    <div class="etapa-corpo">
+      <div class="etapa-titulo">Fase 1 — Pergunta aberta: "Como você se posicionaria?"</div>
+      <div class="etapa-desc">Mallu responde livremente. Sem opções pré-definidas. É aqui que o raciocínio dela entra no sistema.</div>
+      <div class="etapa-risco">⚠ Risco: resposta apressada contamina todos os canais. Uma resposta fraca aqui gera briefing fraco → 6 peças fracas.</div>
+    </div>
+  </div>
+
+  <div class="seta">↓</div>
+
+  <div class="etapa">
+    <div class="etapa-icon decisao">✓</div>
+    <div class="etapa-corpo">
+      <div class="etapa-titulo">Resposta tem profundidade e perspectiva pessoal?</div>
+      <div class="etapa-desc">SIM → Fase 2 &nbsp;|&nbsp; NÃO → agente aprofunda com pergunta de acompanhamento e retorna</div>
+      <div class="etapa-melhoria">💡 Melhoria: checar o estado de Mallu antes de iniciar. Se tempo ou energia estão baixos, simplificar a Fase 1. Qualidade da captação &gt; velocidade do ciclo.</div>
+    </div>
+  </div>
+
+  <div class="seta">↓ SIM</div>
+
+  <div class="etapa">
+    <div class="etapa-icon handoff">☑</div>
+    <div class="etapa-corpo">
+      <div class="etapa-titulo">Fase 2 — 5 a 10 escolhas de referências, tom e recorte</div>
+      <div class="etapa-desc">Mallu clica nas opções. Refina: quem é citado, qual é o tom (irônico, técnico, afetivo), qual é o ângulo exato.</div>
+    </div>
+  </div>
+
+  <div class="seta">↓</div>
+
+  <div class="etapa">
+    <div class="etapa-icon decisao">✓</div>
+    <div class="etapa-corpo">
+      <div class="etapa-titulo">As opções capturam a nuance de Mallu?</div>
+      <div class="etapa-desc">SIM → Tradutor &nbsp;|&nbsp; NÃO → Mallu corrige ou adiciona opção que falta e retorna</div>
+    </div>
+  </div>
+
+  <div class="seta">↓ SIM</div>
+
+  <div class="etapa">
+    <div class="etapa-icon auto">🔁</div>
+    <div class="etapa-corpo">
+      <div class="etapa-titulo">Tradutor — processa raciocínio de Mallu e pesquisa estrutural</div>
+      <div class="etapa-desc">O agente mais crítico do sistema. Capta a linha de raciocínio, identifica referências, pesquisa a problemática estrutural e gera o briefing único.</div>
+      <div class="etapa-risco">⚠ Risco: pode capturar a superfície do raciocínio e perder a profundidade. Sinal de alerta: briefing que soa genérico ou que poderia ser de qualquer organização.</div>
+    </div>
+  </div>
+
+  <div class="seta">↓</div>
+
+  <div class="etapa">
+    <div class="etapa-icon real">🧠</div>
+    <div class="etapa-corpo">
+      <div class="etapa-titulo">TRABALHO REAL — o briefing soa autenticamente como Mallu?</div>
+      <div class="etapa-desc">SIM → briefing aprovado &nbsp;|&nbsp; NÃO → reescrever com mais fidelidade e retornar ao Tradutor</div>
+      <div class="etapa-real">💡 Este é o momento mais importante de verificação. Se o briefing não soa como Mallu, nenhum canal vai produzir algo que soe como Mallu.</div>
+      <div class="etapa-melhoria">💡 Melhoria: o Tradutor deveria apresentar o briefing para aprovação de Mallu antes de enviá-lo aos canais. Este step não existe hoje.</div>
+    </div>
+  </div>
+
+  <div class="seta">↓ SIM</div>
+
+  <div class="etapa">
+    <div class="etapa-icon ok">✅</div>
+    <div class="etapa-corpo">
+      <div class="etapa-titulo">Briefing aprovado — alimenta todos os 6 canais</div>
+      <div class="etapa-desc">A partir daqui, 6 subagentes de canal recebem o mesmo briefing e trabalham em paralelo.</div>
+    </div>
+  </div>
+</div>
+
+<div class="seta">↓</div>
+
+<!-- CAMADA 3 -->
+<div class="camada">
+  <div class="camada-header">Camada 3 — Produção por canal (6 canais em paralelo)</div>
+
+  <div class="paralelo">
+    <div class="paralelo-label">Os 6 canais recebem o briefing ao mesmo tempo</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:0.82rem;">
+      <div style="background:#e8f8f0;padding:8px;border-radius:4px;border:1px solid #0f6e56">📝 Mallu — LinkedIn<br><span style="color:#555;font-size:0.78rem">Autoridade analítica, leitura de sistema</span></div>
+      <div style="background:#e8f8f0;padding:8px;border-radius:4px;border:1px solid #0f6e56">🎥 Mallu — Reels/TikTok<br><span style="color:#555;font-size:0.78rem">Roteiros poético-políticos em vídeo</span></div>
+      <div style="background:#e8f8f0;padding:8px;border-radius:4px;border:1px solid #0f6e56">📱 PAAPS — Carrossel IG<br><span style="color:#555;font-size:0.78rem">Militante, irônico, foco na Cláudia</span></div>
+      <div style="background:#e8f8f0;padding:8px;border-radius:4px;border:1px solid #0f6e56">💼 PAAPS — LinkedIn<br><span style="color:#555;font-size:0.78rem">Técnico-estratégico, dados duros</span></div>
+      <div style="background:#e8f8f0;padding:8px;border-radius:4px;border:1px solid #0f6e56">📘 PAAPS — Facebook<br><span style="color:#555;font-size:0.78rem">Registro institucional</span></div>
+      <div style="background:#e8f8f0;padding:8px;border-radius:4px;border:1px solid #0f6e56">🌿 Interlocutor ECOA<br><span style="color:#555;font-size:0.78rem">Comunidade — entra o Gustavo</span></div>
+    </div>
+  </div>
+
+  <div class="seta">↓ cada canal passa pelas etapas abaixo</div>
+
+  <div class="etapa">
+    <div class="etapa-icon auto">✍</div>
+    <div class="etapa-corpo">
+      <div class="etapa-titulo">Canal gera rascunho no tom específico</div>
+      <div class="etapa-desc">Cada canal tem contexto próprio (CLAUDE.md do canal). O rascunho respeita voz, formato e público do canal.</div>
+    </div>
+  </div>
+
+  <div class="seta">↓</div>
+
+  <div class="etapa">
+    <div class="etapa-icon decisao">✓</div>
+    <div class="etapa-corpo">
+      <div class="etapa-titulo">Crítico de conteúdo: passa no checklist de voz PAAPS?</div>
+      <div class="etapa-desc">Verifica: voz assertiva e acolhedora, perspectiva sistêmica, sem clichê de IA, sem linguagem coachesca, dados com fonte. PASSA → Crítico de design &nbsp;|&nbsp; FALHA → revisar e retornar ao canal</div>
+    </div>
+  </div>
+
+  <div class="seta">↓ PASSA</div>
+
+  <div class="etapa">
+    <div class="etapa-icon decisao">✓</div>
+    <div class="etapa-corpo">
+      <div class="etapa-titulo">Crítico de design: legibilidade, crédito e hierarquia OK?</div>
+      <div class="etapa-desc">Verifica: texto legível sobre imagem, crédito de fotógrafo presente, border-radius 4px, paleta correta, League Spartan nos títulos. PASSA → Buscador &nbsp;|&nbsp; FALHA → corrigir visual</div>
+    </div>
+  </div>
+
+  <div class="seta">↓ PASSA</div>
+
+  <div class="etapa">
+    <div class="etapa-icon decisao">✓</div>
+    <div class="etapa-corpo">
+      <div class="etapa-titulo">Buscador: existe foto documental real e adequada ao tema?</div>
+      <div class="etapa-desc">Busca em ordem: Flickr Ministério da Saúde → acervo local PAAPS. Foto real, gente real, território real, escala humana.</div>
+      <div class="etapa-real">💡 Trabalho Real: a seleção de foto modifica o sentido do texto. É curadoria editorial, não busca técnica. Foto errada = mensagem errada.</div>
+      <div class="etapa-risco">⚠ SIM → Aplicador Visual &nbsp;|&nbsp; NÃO → modo tipográfico: texto como protagonista absoluto (Modo Palavra-Manifesto)</div>
+    </div>
+  </div>
+
+  <div class="seta">↓</div>
+
+  <div class="etapa">
+    <div class="etapa-icon auto">🎨</div>
+    <div class="etapa-corpo">
+      <div class="etapa-titulo">Aplicador Visual — monta a peça no Canva</div>
+      <div class="etapa-desc">Usa o template DAHLWb1s8U0. Insere texto via find_and_replace (preserva cores por região). Sobe foto via MCP.</div>
+    </div>
+  </div>
+
+  <div class="seta">↓</div>
+
+  <div class="etapa">
+    <div class="etapa-icon decisao">✓</div>
+    <div class="etapa-corpo">
+      <div class="etapa-titulo">Placeholder substituído e crédito de fotógrafo presente?</div>
+      <div class="etapa-desc">OK → verificação cruzada &nbsp;|&nbsp; NÃO → corrigir antes de avançar e retornar</div>
+      <div class="etapa-risco">⚠ Placeholder não substituído é o erro mais comum e mais visível. Nunca deixar chegar à Mallu com placeholder.</div>
+    </div>
+  </div>
+
+  <div class="seta">↓ OK</div>
+
+  <div class="etapa">
+    <div class="etapa-icon decisao">✓</div>
+    <div class="etapa-corpo">
+      <div class="etapa-titulo">Verificação cruzada: todos os canais com a mesma mensagem central?</div>
+      <div class="etapa-desc">SIM → todas as peças prontas &nbsp;|&nbsp; NÃO → alinhar canais divergentes e retornar à etapa de rascunho</div>
+      <div class="etapa-risco">⚠ 6 canais em paralelo podem produzir ênfases diferentes. Consistência de posicionamento é obrigatória — a Mallu fala com uma voz, não seis.</div>
+    </div>
+  </div>
+
+  <div class="seta">↓ SIM</div>
+
+  <div class="etapa">
+    <div class="etapa-icon handoff">→</div>
+    <div class="etapa-corpo">
+      <div class="etapa-titulo">Todas as peças prontas para revisão final da Mallu</div>
+    </div>
+  </div>
+</div>
+
+<div class="seta">↓</div>
+
+<!-- CAMADA 4 -->
+<div class="camada">
+  <div class="camada-header">Camada 4 — Aprovação final e publicação</div>
+
+  <div class="etapa">
+    <div class="etapa-icon real">🧠</div>
+    <div class="etapa-corpo">
+      <div class="etapa-titulo">TRABALHO REAL — Mallu revisa com o olhar de quem viveu o tema</div>
+      <div class="etapa-desc">Não é checagem técnica. É o momento em que Mallu percebe o que queria dizer mas não disse — ou o que o sistema exagerou, simplificou ou errou no tom.</div>
+      <div class="etapa-real">💡 Reservar tempo real para este momento. Revisão com pressa gera aprovações equivocadas — a peça parece certa mas não representa o pensamento dela.</div>
+    </div>
+  </div>
+
+  <div class="seta">↓</div>
+
+  <div class="etapa">
+    <div class="etapa-icon decisao">✓</div>
+    <div class="etapa-corpo">
+      <div class="etapa-titulo">Mallu aprova esta peça?</div>
+      <div class="etapa-desc">APROVA → publicar &nbsp;|&nbsp; REVISA → avaliar tipo de ajuste</div>
+    </div>
+  </div>
+
+  <div class="seta">↓ REVISA</div>
+
+  <div class="etapa">
+    <div class="etapa-icon decisao">✓</div>
+    <div class="etapa-corpo">
+      <div class="etapa-titulo">É ajuste pequeno ou retrabalho profundo?</div>
+      <div class="etapa-desc">
+        <strong>Pequeno:</strong> Mallu edita diretamente no Canva e resubmete para aprovação<br>
+        <strong>Profundo:</strong> retornar ao Tradutor com novo enquadramento — o briefing estava errado, não a execução
+      </div>
+      <div class="etapa-real">💡 Trabalho Real: quando vai para retrabalho profundo, raramente é falha técnica. É porque o sistema não capturou a leitura sistêmica que Mallu faz do tema. O Tradutor precisa de mais tempo e atenção, não de correção no Canva.</div>
+    </div>
+  </div>
+
+  <div class="seta">↓ APROVA</div>
+
+  <div class="etapa">
+    <div class="etapa-icon ok">✅</div>
+    <div class="etapa-corpo">
+      <div class="etapa-titulo">PUBLICAR — todas as peças aprovadas pela Mallu</div>
+      <div class="etapa-desc">Nenhuma peça vai a público sem aprovação explícita. O sistema produz; Mallu valida e decide.</div>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<!-- MELHORIAS -->
+<div class="camada">
+  <div class="camada-header">4 melhorias de processo identificadas</div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+    <div style="background:#edf2ff;border:1px solid #305bab;border-radius:6px;padding:14px;">
+      <div style="font-weight:700;font-size:0.85rem;color:#305bab;margin-bottom:6px;">1. Checar o estado de Mallu antes de iniciar</div>
+      <div style="font-size:0.82rem;color:#333">Se energia ou tempo estão baixos, simplificar a Fase 1 e ampliar a Fase 2. Qualidade da captação &gt; velocidade do ciclo.</div>
+    </div>
+    <div style="background:#edf2ff;border:1px solid #305bab;border-radius:6px;padding:14px;">
+      <div style="font-weight:700;font-size:0.85rem;color:#305bab;margin-bottom:6px;">2. Mallu aprova o briefing antes dos canais</div>
+      <div style="font-size:0.82rem;color:#333">O Tradutor deveria apresentar o briefing para Mallu antes de enviá-lo aos 6 canais. Este step não existe hoje e é onde mais se perde nuance.</div>
+    </div>
+    <div style="background:#edf2ff;border:1px solid #305bab;border-radius:6px;padding:14px;">
+      <div style="font-weight:700;font-size:0.85rem;color:#305bab;margin-bottom:6px;">3. Retrospectiva semanal fecha o loop</div>
+      <div style="font-size:0.82rem;color:#333">Quais peças tiveram mais engajamento? O que elas tinham em comum? Alimentar Radar e Cartógrafo com esse aprendizado melhora cada ciclo.</div>
+    </div>
+    <div style="background:#edf2ff;border:1px solid #305bab;border-radius:6px;padding:14px;">
+      <div style="font-weight:700;font-size:0.85rem;color:#305bab;margin-bottom:6px;">4. Índice de fotos aprovadas com tags</div>
+      <div style="font-size:0.82rem;color:#333">Hoje o Buscador começa do zero a cada carrossel. Um acervo curado por tema, território e emoção economiza tempo e garante coerência visual.</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

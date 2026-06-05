@@ -1,80 +1,100 @@
-# Workflow de Agentes — Produção de Conteúdo PAAPS
+# Workflow de Agentes — Produção de Conteúdo PAAPS (v2)
 
-Versão texto do SVG `workflow_agentes_conteudo_paaps.svg`. Descreve o fluxo completo de uma sessão de produção, do início ao post publicado.
+Fluxo completo de uma sessão de produção. Última revisão: jun/2026.
 
 ---
 
-## Camada 1 — Detecção
+## Camada 1 — Inteligência
 
 ```
-Agente Radar  ──────────────────────────────────► Agente Curador
-  Rastreia temas em alta + KPIs virais
-
-Agente Cartógrafo  ──────────────────────────────► Agente Curador
-  Mapeia ângulos críticos do PAAPS
+┌─────────────────────────────────────┐   ┌──────────────────────────────────────────┐
+│             RADAR                   │   │             SENTINELA                    │
+│  20 pautas em ascensão              │   │  Lê dashboard Windsor + perfis IG/LI     │
+│  Não o que explodiu — o que sobe    │   │  Auto-report: o que funcionou/falhou      │
+│  Política, legislação, viral,       │   │  Estratégias complexas para o ciclo      │
+│  cultura, relatórios, episódios     │   │  Cruza com as 20 pautas do Radar         │
+│  Parâmetro: potencial PAAPS +       │   │  Ranqueia top 5 pautas com mais chance   │
+│  momento de ascensão                │   │                                          │
+└─────────────┬───────────────────────┘   └────────────────────────┬─────────────────┘
+              │                                                      │
+              └──────────────────────┬───────────────────────────────┘
+                                     ↓
+┌────────────────────────────────────────────────────────────────────┐
+│                          TECELÃ                                     │
+│  Conectora criativa — não é Cartógrafo, não é academicista         │
+│  Repertório: Foucault, Lélia, Mbembe, bell hooks, Freire + 18 mais │
+│  Apresenta a ideia PRIMEIRO — referencia depois (como fotógrafo)   │
+│  Entrega: raciocínio crítico por pauta, ângulo por canal           │
+└────────────────────────────┬───────────────────────────────────────┘
+                             ↓
+┌────────────────────────────────────────────────────────────────────┐
+│                         NARRADOR                                    │
+│  Escreve o documento completo de briefing (briefing-YYYY-MM-DD.md) │
+│  Pode chamar Radar, Sentinela, Tecelã para revisão/aprofundamento  │
+│  Documento contém: conjuntura, pautas, raciocínios, sacadas,       │
+│  direcionamentos por canal, estratégia do Sentinela, pergunta      │
+│  aberta para Mallu                                                 │
+│  Salva em: conteudo/briefings/                                     │
+└────────────────────────────┬───────────────────────────────────────┘
+                             ↓
 ```
 
-**Agente Curador** corta a lista para os 3 temas com maior potência de debate e os apresenta à Mallu.
+---
+
+## Camada 2 — Captação de Mallu
+
+```
+Mallu lê o documento do Narrador
+  ↓
+Fase 1: resposta livre ("Como você se posicionaria nessa semana?")
+  ↓
+Fase 2: 5-10 escolhas de tom, referências, recorte
+  ↓
+TRADUTOR (⚠ incompleto) → processa e gera briefing final para canais
+```
 
 ---
 
-## Camada 2 — Captação (Mallu entra aqui)
+## Camada 3 — Produção por Canal (⚠ agentes incompletos)
 
-**Fase 1 — pergunta aberta**
-> "Como você se posicionaria sobre este tema?"
-Mallu responde livremente, sem escolhas predefinidas.
+```
+6 canais em paralelo:
+  mallu-linkedin / mallu-reels / paaps-carrossel
+  paaps-linkedin / paaps-facebook / ecoa
 
-**Fase 2 — 5 a 10 escolhas múltiplas**
-Refina referências, recorte e tom. Mallu clica nas opções.
-
-**Agente Tradutor — o cérebro do sistema**
-- Capta a linha de raciocínio de Mallu
-- Identifica referências e de quem se fala
-- Pesquisa a fundo a problemática estrutural
-- Gera o briefing único que alimenta todos os canais
-
----
-
-## Camada 3 — Produção por canal
-
-Cada agente de canal recebe o briefing do Tradutor e opera com um time interno.
-
-| Canal | Tom / foco |
-|---|---|
-| Persona Mallu — LinkedIn | Autoridade analítica, leitura de sistema |
-| Mallu — Reels/TikTok | Roteiros poético-políticos em vídeo |
-| PAAPS — carrossel IG | Militante, irônico, foco na Cláudia |
-| PAAPS — Facebook | Registro institucional |
-| PAAPS — LinkedIn | Técnico-estratégico, dados duros |
-| Interlocutor ECOA | Comunidade — entra o Gustavo |
-
-**Time interno de cada canal:**
-
-| Agente | Função |
-|---|---|
-| Aplicador visual | Canva: fontes, paleta, sombras, transparência, legibilidade |
-| Copywriter estratégico | Tom assertivo mas acolhedor, nunca genérico ou de IA |
+Cada canal aciona time de apoio:
+  critico-conteudo → voz PAAPS
+  critico-design   → visual, créditos, legibilidade
+  buscador-fotos   → foto documental real
+  aplicador-visual → Canva (já documentado em identidade-aplicada.md)
+```
 
 ---
 
-## Camada 4 — Aprovação final
+## Camada 4 — Aprovação
 
-**Mallu valida e publica.** Nenhuma publicação sai sem revisão.
+```
+Mallu revisa e aprova cada peça
+  → aprovação: publicar
+  → ajuste pequeno: editar no Canva
+  → retrabalho profundo: volta ao Tradutor com novo ângulo
+```
 
 ---
 
-## Pontos de decisão humana
+## Pontos de decisão humana (Mallu)
 
-Mallu intervém em exatamente dois momentos:
-
-1. **Camada 2** — responde a pergunta aberta + faz as escolhas múltiplas
-2. **Camada 4** — valida tudo antes de publicar
+1. **Camada 2:** lê o documento do Narrador e responde com perspectiva pessoal
+2. **Camada 4:** valida tudo antes de publicar
 
 **Gustavo** entra apenas no agente Interlocutor ECOA.
 
 ---
 
-## Notas de implementação
+## Mudanças da v1
 
-- Na arquitetura v2, o "Copywriter estratégico" foi desmembrado em dois agentes mais precisos: **Crítico de conteúdo** (avalia voz, devolve feedback) e o próprio **subagente de canal** (que escreve). Ver `arquitetura_v2.md`.
-- O Aplicador Visual já existe como conjunto de instruções em `nucleo-comum/identidade-aplicada.md` + MCP Canva configurado.
+- Radar: 20 temas (não 3), escopo jornalístico amplo, parâmetro de ascensão
+- Sentinela: novo agente de inteligência estratégica (não existia)
+- Cartógrafo → Tecelã: conectora criativa, não academicista
+- Curador → Narrador: escreve documento completo, não lista de 3 temas
+- Briefings salvos em `conteudo/briefings/`

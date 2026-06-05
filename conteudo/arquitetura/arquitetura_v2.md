@@ -1,60 +1,64 @@
 # Arquitetura v2 — Sistema de Agentes PAAPS
 
-Versão texto do SVG `arquitetura_v2_agentes_paaps_orquestrador_criticos.svg`. Leia este arquivo; use o SVG apenas para visualização.
+Versão texto do SVG `arquitetura_v2_agentes_paaps_orquestrador_criticos.svg`.
+
+**Última revisão:** jun/2026 — mudanças aprovadas por Mallu (ver detalhes abaixo).
 
 ---
 
 ## Orquestrador
 
-**`conteudo/CLAUDE.md`** — coordena todas as camadas e os handoffs entre agentes.
+**`conteudo/CLAUDE.md`** — coordena todas as camadas.
 
 ---
 
-## Camada 1 — Detecção
+## Camada 1 — Inteligência (3 agentes)
 
-Radar e Cartógrafo rodam **em paralelo**. Os dois convergem para o Curador.
+### Radar e Sentinela rodam em PARALELO
 
-| Agente | Função |
-|---|---|
-| **Radar** | Detecta temas em alta com dados reais (Windsor API + WebSearch) |
-| **Cartógrafo** | Mapeia os ângulos críticos do PAAPS nos temas encontrados |
-| **Curador** | Ponte: funde os dois outputs → apresenta 3 temas à Mallu com maior potência de posicionamento |
+| Agente | Arquivo | Função | Status |
+|---|---|---|---|
+| **Radar** | `.claude/agents/radar.md` | 20 pautas em ascensão (não em explosão). Escopo: política, legislação, viral, cultura, geopolítica, relatórios, datas culturais | ✅ Definido |
+| **Sentinela** | `.claude/agents/sentinela.md` | Analisa dashboard Windsor + perfis IG/LinkedIn de Mallu e PAAPS. Auto-report crítico. Estratégias complexas | ✅ Definido (NOVO) |
 
----
+### Depois do paralelo — em sequência:
 
-## Camada 2 — Captação
-
-Mallu entra aqui. Só ela traz a perspectiva única.
-
-1. **Fase 1** — pergunta aberta → Mallu responde livremente
-2. **Fase 2** — 5–10 escolhas múltiplas → Mallu clica nas opções
-3. **Tradutor** → processa as respostas e gera o briefing que alimenta todos os canais
+| Agente | Arquivo | Função | Status |
+|---|---|---|---|
+| **Tecelã** | `.claude/agents/tecela.md` | Conectora criativa. Leitura crítica das pautas + dados do Sentinela. Repertório em 22 autores. Ideia primeiro, autor depois. NÃO academicista | ✅ Definido (ex-Cartógrafo) |
+| **Narrador** | `.claude/agents/narrador.md` | Escreve documento completo de briefing. Pode chamar agentes anteriores. Entrega: `briefing-YYYY-MM-DD.md` | ✅ Definido (ex-Curador) |
 
 ---
 
-## Camada 3 — Subagentes de canal
+## Camada 2 — Captação de Mallu
 
-Cada canal recebe o briefing do Tradutor e aciona o time de apoio antes de fechar a peça.
+Mallu lê o documento do Narrador e responde com sua perspectiva (Fase 1 + Fase 2).
 
-**Canais:**
-
-| Agente | Perfil |
-|---|---|
-| Mallu — LinkedIn | Autoridade analítica, leitura de sistema |
-| Mallu — Reels/TikTok | Roteiros poético-políticos em vídeo |
-| PAAPS — carrossel IG | Militante, irônico, foco na Cláudia |
-| PAAPS — LinkedIn | Técnico-estratégico, dados duros |
-| PAAPS — Facebook | Registro institucional |
-| Interlocutor ECOA | Comunidade — entra o Gustavo |
-
-**Time de apoio (acionado por cada canal):**
-
-| Agente | Função | Status |
+| Agente | Arquivo | Status |
 |---|---|---|
-| Crítico de conteúdo | Avalia se soa PAAPS; devolve feedback de como falaria | A construir |
-| Crítico de design | Checa texto sobreposto, crédito de fotógrafo, legibilidade | A construir |
-| Buscador de fotos | Baixa foto real com crédito; salva na pasta certa | A construir |
-| Aplicador visual (Canva) | Executa a peça no Canva | **Já existe** |
+| **Tradutor** | `.claude/agents/tradutor.md` | ⚠ INCOMPLETO |
+
+---
+
+## Camada 3 — Produção por Canal
+
+| Canal | Arquivo | Status |
+|---|---|---|
+| Mallu — LinkedIn | `.claude/agents/mallu-linkedin.md` | ⚠ INCOMPLETO |
+| Mallu — Reels/TikTok | `.claude/agents/mallu-reels.md` | ⚠ INCOMPLETO |
+| PAAPS — carrossel IG | `.claude/agents/paaps-carrossel.md` | ⚠ INCOMPLETO |
+| PAAPS — LinkedIn | `.claude/agents/paaps-linkedin.md` | ⚠ INCOMPLETO |
+| PAAPS — Facebook | `.claude/agents/paaps-facebook.md` | ⚠ INCOMPLETO |
+| Interlocutor ECOA | `.claude/agents/ecoa.md` | ⚠ INCOMPLETO |
+
+**Time de apoio (por canal):**
+
+| Agente | Arquivo | Status |
+|---|---|---|
+| Crítico de conteúdo | `.claude/agents/critico-conteudo.md` | ⚠ INCOMPLETO |
+| Crítico de design | `.claude/agents/critico-design.md` | ⚠ INCOMPLETO |
+| Buscador de fotos | `.claude/agents/buscador-fotos.md` | ⚠ INCOMPLETO |
+| Aplicador visual | `.claude/agents/aplicador-visual.md` | ⚠ INCOMPLETO (instruções em `identidade-aplicada.md`) |
 
 ---
 
@@ -68,20 +72,30 @@ Cada canal recebe o briefing do Tradutor e aciona o time de apoio antes de fecha
 
 | Item | Status |
 |---|---|
-| Aplicador visual | ✅ Existe — `nucleo-comum/identidade-aplicada.md` + MCP Canva |
-| Orquestrador | ✅ Esboço — `conteudo/CLAUDE.md` |
-| Núcleo comum (6 arquivos) | ✅ Criado |
-| Radar, Cartógrafo, Curador, Tradutor | 🔲 A construir |
-| 6 subagentes de canal | 🔲 A construir |
-| Crítico de conteúdo | 🔲 A construir |
-| Crítico de design | 🔲 A construir |
-| Buscador de fotos | 🔲 A construir (depende de `mapa-fontes-foto.md` completo) |
+| Nucleo comum (6 arquivos) | ✅ Criado |
+| Radar | ✅ Definido |
+| Sentinela (novo) | ✅ Definido |
+| Tecelã (ex-Cartógrafo) | ✅ Definido |
+| Narrador (ex-Curador) | ✅ Definido |
+| Tradutor | ⚠ Placeholder |
+| 6 agentes de canal | ⚠ Placeholders |
+| 4 agentes de apoio | ⚠ Placeholders |
+
+---
+
+## Mudanças da v1 para a v2
+
+1. **Radar** ampliado: 20 temas (era 3), escopo jornalístico, parâmetro de aprovação é potencial de posicionamento PAAPS + ascensão (não "dados recentes")
+2. **Sentinela** adicionado: agente novo de inteligência estratégica — lê dashboard + perfis IG/LinkedIn
+3. **Cartógrafo** → **Tecelã**: novo nome, novo papel — conectora criativa com repertório crítico, não academicista
+4. **Curador** → **Narrador**: escreve documento completo de briefing (não seleciona 3 temas)
+5. **Camada 2** reformulada: Mallu lê o documento do Narrador (não uma lista de 3 temas)
 
 ---
 
 ## Convenções de implementação
 
-- Subagentes definidos em **`.claude/agents/`** (raiz do projeto)
-- Skills do nucleo-comum pré-carregadas via campo `skills:` no frontmatter de cada subagente
-- Agent teams requerem `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1` em `settings.json`
-- Roteador de contexto: skill `/mapa-de-contexto` em `.claude/skills/`
+- Agentes definidos em **`.claude/agents/`** (raiz do projeto)
+- Agent teams requerem `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1`
+- Skills do nucleo-comum pré-carregadas via campo `skills:` no frontmatter
+- Roteador: `/mapa-de-contexto` em `.claude/skills/`
