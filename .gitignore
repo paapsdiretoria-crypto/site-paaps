@@ -5,10 +5,12 @@
 ._*
 
 # Arquivos brutos / assets de produção (não vão para o repo)
-INSUMOS/
-DOCX BASE/
-NOSSA CAMISETA PAAPS/
-NOSSOS CLIENTES E PARCEIROS/
+insumos-compartilhados/fotos/
+insumos-compartilhados/identidade-visual/
+insumos-compartilhados/aplicacao-id-visual/
+insumos-compartilhados/nossa-camiseta-paaps/
+insumos-compartilhados/nossos-clientes-e-parceiros/
+insumos-compartilhados/docs/*-imagens/
 
 # Editor
 .vscode/
@@ -20,7 +22,7 @@ NOSSOS CLIENTES E PARCEIROS/
 *.log
 
 # Configurações com credenciais (nunca commitar)
-instagram/dashboard/js/config.js
+conteudo/dashboard/js/config.js
 
 # Configurações locais do Claude Code (podem conter credenciais ou paths pessoais)
 .claude/settings.local.json

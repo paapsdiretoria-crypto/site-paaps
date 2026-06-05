@@ -1,0 +1,96 @@
+SITE PAAPS/   ← renomear para PAAPS/ no Finder quando quiser
+│
+├── CLAUDE.md                         ← visão geral da pasta de trabalho
+├── .gitignore
+├── .claude/
+│   ├── settings.json
+│   └── settings.local.json           ← não commitado
+│
+├── insumos-compartilhados/
+│   ├── fotos/                        ← não commitado (1,5 GB)
+│   │   ├── case-bela-vista-de-minas/ (87 arquivos)
+│   │   ├── fotos-bvmg-isaac/         (208 arquivos — fotógrafo profissional)
+│   │   ├── craftsapiens-mundo-digital/ (22 arquivos)
+│   │   ├── ecoa-fotos/               (4 arquivos — exclusivo Interlocutor ECOA)
+│   │   ├── maes-atipicas-rj/         (35 arquivos)
+│   │   └── outras-fotos/             (17 arquivos)
+│   │
+│   ├── identidade-visual/            ← não commitado
+│   │   ├── 01-logo/
+│   │   ├── 01a-logo-ecoa/            ← sub-marca ECOA
+│   │   ├── 02-tipografia/
+│   │   ├── 03-paleta-de-cor/
+│   │   ├── 04-texturas/              (35 PNG — 5 tipos × 7 cores)
+│   │   ├── 05-gradiente/
+│   │   ├── 06-pontinhos/
+│   │   ├── 07-template/
+│   │   └── 08-paaps-digging/
+│   │
+│   ├── aplicacao-id-visual/          ← não commitado
+│   ├── nossa-camiseta-paaps/         ← não commitado
+│   ├── nossos-clientes-e-parceiros/  ← não commitado
+│   │
+│   ├── docs/                         ← commitado (texto útil para agentes)
+│   │   ├── manual-marca-posicionamento.md
+│   │   ├── manual-marca-posicionamento-imagens/  ← não commitado
+│   │   ├── paaps-pesquisa-mercado.md
+│   │   └── paaps-pesquisa-mercado-imagens/       ← não commitado
+│   │
+│   └── nucleo-comum/                 ← O CORAÇÃO — lido por todos os agentes
+│       ├── voz-paaps.md              ← gabarito de voz e proibições ativas
+│       ├── identidade-aplicada.md    ← paleta, tipografia, Canva workflow
+│       ├── criterios-design.md       ← checklist do crítico de design
+│       ├── qualidade-frontend.md     ← princípios de design (web + Canva)
+│       ├── visual-instagram.md       ← 3 modos visuais, regras fotográficas
+│       └── mapa-fontes-foto.md       ← fontes de foto (espaço reservado)
+│
+├── site/
+│   ├── CLAUDE.md                     ← instruções do projeto site
+│   ├── DESIGN-SYSTEM.md
+│   ├── PROMPT_CLAUDE_CODE_SITE_PAAPS.md
+│   ├── .claude/skills/
+│   │   └── frontend-design.md
+│   └── paaps-site/
+│       ├── index.html
+│       ├── logo.png
+│       ├── sobre/index.html
+│       ├── servicos/index.html
+│       ├── como-contratar/index.html
+│       ├── case/index.html
+│       ├── contato/index.html
+│       ├── css/
+│       │   ├── style.css
+│       │   └── components.css
+│       ├── js/main.js
+│       └── imagens/                  (20 assets)
+│
+├── conteudo/
+│   ├── CLAUDE.md                     ← orquestrador (esboço)
+│   ├── .mcp.json                     ← conectores MCP (Canva etc.)
+│   ├── _skill-original-para-desmembrar.md  ← skill antiga (referência, não apagar)
+│   ├── agentes/                      ← vazia — skills dos agentes virão aqui
+│   ├── arquitetura/
+│   │   ├── arquitetura_v2_agentes_paaps_orquestrador_criticos.svg
+│   │   └── workflow_agentes_conteudo_paaps.svg
+│   ├── dashboard/                    ← analytics Windsor AI (lê as duas contas)
+│   │   ├── index.html
+│   │   ├── css/
+│   │   ├── img/
+│   │   └── js/
+│   │       ├── config.js             ← não commitado (chave Windsor)
+│   │       └── (outros .js)
+│   └── instagram/
+│       ├── amalluvasconcellos/
+│       │   ├── CLAUDE.md
+│       │   ├── conteudo/             ← vazia (posts, legendas, roteiros)
+│       │   ├── calendario/           ← vazia
+│       │   └── analises/             ← vazia
+│       └── paaps.brasil/
+│           ├── CLAUDE.md
+│           ├── conteudo/             ← vazia
+│           ├── calendario/           ← vazia
+│           └── analises/             ← vazia
+│
+└── DOCX BASE/                        ← aguardando decisão da Mallu sobre descarte
+    ├── manual_marca_posicionamento_paaps.docx
+    └── paaps_pesquisa_mercado.docx

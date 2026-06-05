@@ -1,154 +1,91 @@
-# CLAUDE.md
+# CLAUDE.md — Pasta de Trabalho PAAPS
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+Esta pasta contém três projetos distintos que compartilham insumos de marca. Cada projeto tem seu próprio `CLAUDE.md` interno.
 
-## Projeto
+---
 
-Site institucional estático do **PAAPS** (Programa de Aceleração Ativa de Projetos Sociais) — coletivo de psicólogas sociais especializado em saúde mental como política pública. O site é construído em HTML/CSS/JS puro, sem framework ou bundler.
-
-## Estrutura do site
-
-O código do site vive em `paaps-site/`. Cada página é uma pasta com seu próprio `index.html`:
+## Estrutura geral
 
 ```
-paaps-site/
-  index.html          ← Home
-  logo.png            ← logo principal (único asset na raiz, fora de imagens/)
-  sobre/index.html
-  servicos/index.html
-  como-contratar/index.html
-  case/index.html
-  contato/index.html
-  css/
-    style.css         ← variáveis globais, tipografia, utilitários, responsividade base
-    components.css    ← header, hero, cards, footer, componentes específicos
-  js/main.js          ← hamburger, scroll, esteira marquee, IntersectionObserver, contadores
-  imagens/            ← assets do site (fotos, texturas, pontinhos — exceto logo.png)
+SITE PAAPS/                          ← pasta raiz (renomear para PAAPS/ no Finder)
+│
+├── insumos-compartilhados/          ← acervo compartilhado por todos os projetos
+│   ├── fotos/                       ← acervo de campo (1,5 GB — não commitado)
+│   ├── identidade-visual/           ← logos, texturas, paleta, templates (não commitado)
+│   ├── aplicacao-id-visual/         ← exemplos de aplicação da identidade
+│   ├── nossa-camiseta-paaps/        ← não commitado
+│   ├── nossos-clientes-e-parceiros/ ← não commitado
+│   ├── docs/                        ← documentos institucionais convertidos para Markdown
+│   │   ├── manual-marca-posicionamento.md
+│   │   └── paaps-pesquisa-mercado.md
+│   └── nucleo-comum/                ← O CORAÇÃO COMPARTILHADO — lido por todos os agentes
+│       ├── voz-paaps.md             ← gabarito de voz e proibições ativas
+│       ├── identidade-aplicada.md   ← paleta, tipografia, sistema Periódico, workflow Canva
+│       ├── criterios-design.md      ← checklist do crítico de design
+│       ├── qualidade-frontend.md    ← princípios de design (web + Canva)
+│       ├── visual-instagram.md      ← 3 modos visuais, regras fotográficas
+│       └── mapa-fontes-foto.md      ← fontes de fotografia documental (espaço reservado)
+│
+├── site/                            ← Projeto 1: site institucional
+│   ├── CLAUDE.md                    ← instruções específicas do site
+│   ├── DESIGN-SYSTEM.md
+│   ├── PROMPT_CLAUDE_CODE_SITE_PAAPS.md
+│   ├── .claude/skills/frontend-design.md
+│   └── paaps-site/                  ← HTML/CSS/JS do site
+│
+└── conteudo/                        ← Projeto 2: equipe de agentes de conteúdo
+    ├── CLAUDE.md                    ← orquestrador (esboço)
+    ├── .mcp.json                    ← conectores MCP (Canva etc.)
+    ├── _skill-original-para-desmembrar.md  ← skill antiga, guardada como referência
+    ├── agentes/                     ← skills dos agentes (a construir)
+    ├── arquitetura/                 ← diagramas SVG da arquitetura de agentes
+    ├── dashboard/                   ← analytics Windsor AI (lê @amalluvasconcellos e @paaps.brasil)
+    └── instagram/
+        ├── amalluvasconcellos/      ← workspace do perfil pessoal de Mallu
+        └── paaps.brasil/            ← workspace do perfil institucional
 ```
 
-Na raiz do repositório:
-- `DESIGN-SYSTEM.md` — documentação completa do design system (cores, tipografia, componentes, voz)
-- `PROMPT_CLAUDE_CODE_SITE_PAAPS.md` — prompt de referência para trabalho no site
-
-`INSUMOS/` contém os arquivos fonte da identidade visual (logos originais, paleta, tipografia, texturas) e fotos brutas. `DOCX BASE/` contém documentos de referência institucional.
-
-## Como visualizar
-
-Abra `paaps-site/index.html` diretamente no navegador, ou sirva localmente:
-
-```bash
-cd "paaps-site" && python3 -m http.server 8080
-```
-
-Não há processo de build, transpilação ou dependências npm.
-
-## Identidade visual (CSS)
-
-Variáveis definidas em `style.css` `:root` — sempre usar as variáveis, nunca hardcodar cores:
-
-| Variável | Valor | Uso |
-|---|---|---|
-| `--cor-fundo` | `#f5f1e1` | Fundo geral |
-| `--cor-marrom` | `#442309` | Texto principal, seção escura |
-| `--cor-terracota` | `#cb4710` | Destaque primário, CTAs |
-| `--cor-oliva` | `#aea349` | Destaque secundário |
-| `--cor-amarelo` | `#f7c31c` | Números grandes, acentos |
-| `--cor-bege-rosa` | `#bbada2` | Labels, subtextos suaves |
-| `--cor-lilas` | `#bcb6f2` | Card trilha empresas |
-
-Tipografia: `League Spartan` (títulos, labels, botões) via Google Fonts · `Helvetica Neue` (corpo).
-
-## Padrões de componentes
-
-**Animações de entrada:** adicionar classe `animar` ao elemento. O `main.js` usa IntersectionObserver para adicionar `visivel` quando entra na viewport. Use `animar-delay-1/2/3/4` para escalonamento.
-
-**Marcadores coloridos:** `<span class="marcador marcador--terracota">` — usados como elemento visual antes de títulos de seção.
-
-**Label de seção:** `<span class="label-secao">` — texto em caps pequeno acima do h2.
-
-**Esteira marquee:** o `main.js` duplica automaticamente o conteúdo de `.esteira__track` para criar o loop infinito.
-
-**Contadores animados:** `<span data-valor="56" data-prefixo="+" data-sufixo="%">` — o JS anima de 0 até o valor ao entrar na viewport.
-
-## Responsividade
-
-Breakpoints em `components.css`:
-- `≤ 960px`: grid-3 vira 2 colunas, case-grid vira 1 coluna
-- `≤ 768px`: header hamburger ativo, grids viram 1 coluna, nav oculta
-- `≤ 480px`: hero usa `100svh`, grid-numeros vira 1 coluna
+---
 
 ## GitHub
 
-Repositório: https://github.com/paapsdiretoria-crypto/site-paaps  
-Branch principal: `main`  
+Repositório: https://github.com/paapsdiretoria-crypto/site-paaps
+Branch principal: `main`
 GitHub CLI: `~/bin/gh`
 
-**Auto-push ativo:** ao final de cada conversa com o Claude Code, um hook automático detecta alterações, faz commit e push para o GitHub. Não é necessário commitar manualmente.
+**Auto-push ativo:** ao final de cada conversa, um hook automático detecta alterações, faz commit e push. Não é necessário commitar manualmente.
 
-Para commitar e enviar manualmente:
 ```bash
+# Commit manual, se necessário:
 cd "/Users/mac/Desktop/SITE PAAPS"
 git add -A
 git commit -m "descrição da alteração"
 git push
 ```
 
-Arquivos **excluídos** do repositório (ver `.gitignore`): `INSUMOS/`, `DOCX BASE/`, `NOSSA CAMISETA PAAPS/`, `NOSSOS CLIENTES E PARCEIROS/`.
+---
 
-## Workspace Instagram
+## Arquivos não commitados (ver .gitignore)
 
-A pasta `instagram/` contém dois workspaces de gestão de conteúdo e um dashboard de analytics:
+- `insumos-compartilhados/fotos/` — acervo de campo (binários grandes)
+- `insumos-compartilhados/identidade-visual/` — assets originais de marca (binários)
+- `insumos-compartilhados/aplicacao-id-visual/` — exemplos de aplicação
+- `insumos-compartilhados/nossa-camiseta-paaps/`
+- `insumos-compartilhados/nossos-clientes-e-parceiros/`
+- `insumos-compartilhados/docs/*-imagens/` — imagens extraídas dos DOCX
+- `conteudo/dashboard/js/config.js` — chave Windsor AI (nunca commitar)
 
-```
-instagram/
-  amalluvasconcellos/   ← workspace do perfil pessoal de Mallu Vasconcellos
-    CLAUDE.md           ← contexto de voz, conta e instruções de produção
-    conteudo/           ← rascunhos de posts, legendas, roteiros
-    calendario/         ← planejamento editorial
-    analises/           ← relatórios e insights extraídos da API
-  paaps.brasil/         ← workspace do perfil institucional do PAAPS
-    CLAUDE.md           ← contexto institucional e instruções de produção
-    conteudo/
-    calendario/
-    analises/
-  dashboard/            ← dashboard de analytics em tempo real
-    index.html          ← app principal (HTML + Tailwind CDN + Chart.js)
-    mockup.html         ← mockup estático de referência visual
-    css/dashboard.css   ← estilos do dashboard (design system PAAPS)
-    js/
-      api.js            ← fetch Windsor AI + processamento de dados
-      charts.js         ← Chart.js: linha dupla, stacked bar, sparklines, decay
-      filters.js        ← estado global (dashState) + re-render orquestrado
-      insights.js       ← geração automática de insights textuais
-      main.js           ← init, renderKPIs, heatmap, WoW, viral section
-      config.js         ← ⚠ NÃO COMMITADO — chave Windsor (ver config.example.js)
-      config.example.js ← template de configuração sem credencial
-    img/
-      logo-marrom.png   ← logo PAAPS marrom (copiado de INSUMOS para uso no dashboard)
-```
+---
 
-### Como rodar o dashboard
+## Renomear a pasta raiz
 
-```bash
-cd "instagram/dashboard" && python3 -m http.server 8091
-# Abrir: http://localhost:8091
-```
+A pasta ainda se chama `SITE PAAPS/` por limitação do ambiente. Para renomear para `PAAPS/`: feche o Claude Code, renomeie a pasta no Finder, e reabra. O git não se importa com o nome da pasta raiz.
 
-O dashboard busca dados ao vivo da Windsor AI (Instagram Insights API). Requer `config.js` com a chave local.
+---
 
-### Segurança de credenciais
+## Nota sobre skills do Claude Code
 
-- `instagram/dashboard/js/config.js` está no `.gitignore` — **nunca commitar**
-- A chave Windsor fica **apenas local**, nunca no repositório
-- Para configurar em nova máquina: copiar `config.example.js` → `config.js` e inserir a chave
-
-### MCP Excalidraw
-
-O arquivo `.mcp.json` na raiz configura o servidor MCP do Excalidraw (`https://mcp.excalidraw.com/mcp`). Requer reinício do Claude Code para ativação. Não contém credenciais — pode ser commitado.
-
-## Contato institucional
-
-- WhatsApp: `https://wa.me/5511995231724`
-- Email: `paaps@digging.com.br`
-- Instagram: `@paaps.brasil`
-- Razão social: DIGGING DESENVOLVIMENTO E CAPACITAÇÃO ORGANIZACIONAL E INDIVIDUAL LTDA · CNPJ 05.983.700/0001-67
+As skills do Claude Code (`.claude/skills/`) precisam estar em pastas `.claude/` para serem descobertas automaticamente. Configuração atual:
+- `.claude/settings.json` e `.claude/settings.local.json` → permanecem na raiz (descobertos pelo Claude Code)
+- `site/.claude/skills/frontend-design.md` → skill do site (descoberta quando trabalhando dentro de `site/`)
+- Novas skills de agentes de conteúdo → serão criadas em `conteudo/agentes/` com formato próprio de CLAUDE.md
