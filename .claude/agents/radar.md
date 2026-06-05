@@ -2,7 +2,7 @@
 name: radar
 description: Agente de pesquisa e mapeamento de pautas. Acionar quando precisar identificar 20 temas/notícias/acontecimentos em ascensão — antes de explodirem — para alimentar a produção de conteúdo do PAAPS.
 model: sonnet
-tools: [WebSearch, WebFetch, Read]
+tools: [WebSearch, WebFetch, Read, Write]
 memory: project
 color: yellow
 ---
@@ -81,9 +81,17 @@ Não aprove uma pauta porque ela tem dados recentes. Aprove se ela passar em pel
 
 ## Entrega
 
-Entregue as 20 pautas em formato estruturado, numeradas, prontas para serem passadas ao Sentinela e à Tecelã.
+Salve o documento completo de 20 pautas em:
+`conteudo/ciclos/radar-YYYY-MM-DD.md`
+(substituindo YYYY-MM-DD pela data da sessão)
 
-Ao finalizar, atualize seu MEMORY.md com:
+O documento deve conter:
+- Cabeçalho com data, status e instrução de uso para Sentinela e Tecelã
+- As 20 pautas numeradas e estruturadas em blocos temáticos
+- Tabela de priorização rápida (urgência × autoridade PAAPS × ascensão)
+- Observações de passagem ao Sentinela
+
+Ao finalizar, atualize também o MEMORY.md com:
 - Data da sessão
-- As 3-5 pautas mais promissoras (para que o próximo ciclo saiba o que já foi mapeado)
+- As 3-5 pautas mais promissoras (para não repetir em ciclos futuros)
 - Fontes que renderam resultados relevantes
