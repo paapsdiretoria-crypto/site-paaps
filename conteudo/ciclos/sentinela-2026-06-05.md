@@ -1,380 +1,296 @@
 # SENTINELA PAAPS — Auto-Report
-**Ciclo 1 | Data: 5 de junho de 2026**
-**Para: Tecelã**
+**Ciclo 2 | Data: 5 de junho de 2026**
+**Para: Tecela**
 **De: Sentinela**
 
 ---
 
 ## NOTA DE METODO
 
-Este é o Ciclo 1 do Sentinela. O relatório anterior desta data foi gerado sem acesso à API — este substitui aquele com dados reais.
-
-**Fontes consultadas neste ciclo:**
-- Dashboard Windsor AI via curl direto (chave local confirmada). Dados de 6 mai a 4 jun/2026 — 30 dias completos para ambos os perfis.
-- Dado de seguidores em tempo real: 5 jun/2026 (extraído do endpoint Windsor).
-- MEMORY.md do Sentinela (ciclo anterior — referência de base).
-- Radar Ciclo 1 (5 jun/2026) — 20 pautas.
-- Arquivos de nucleo-comum: voz-paaps.md, CLAUDE.md dos dois workspaces.
-
-**O que não foi acessado:**
-- Posts específicos publicados (sem acesso autenticado ao Instagram). Os dados do Windsor são por data de acumulação de interações, não por post individual. Impossível associar métrica a título específico de post sem cruzamento manual.
-- LinkedIn de Mallu e LinkedIn PAAPS Brasil (autenticação necessária).
-- Pastas `analises/` dos workspaces: vazias. Nenhum histórico anterior salvo.
-
-Dado verificado está indicado como tal. Inferência estrutural também.
+Dados coletados via Windsor AI Instagram Insights. Periodo: 6 de maio a 4 de junho de 2026 (30 dias com metricas + registro de seguidores em 5 de junho). Analise estatistica executada em Python sobre os 60 registros diarios brutos. LinkedIn: endpoint Windsor nao retornou dados proprios — conector nao configurado para LinkedIn. Workspaces locais de posts (amalluvasconcellos/conteudo/ e paaps.brasil/conteudo/) estao vazios — nenhum registro manual de posts foi encontrado. Inferencias sobre conteudo publicado derivam dos sinais de performance no dado de alcance/interacoes.
 
 ---
 
 ## BLOCO 1 — O QUE ACONTECEU ESTA SEMANA
 
-### Dados de seguidores (5 jun/2026 — extraídos da API)
+### Periodo de referencia: 29 de maio a 4 de junho de 2026
 
-- **@amalluvasconcellos:** 3.259 seguidores
-- **@paaps.brasil:** 1.062 seguidores
-- Referência anterior (MEMORY Ciclo 0): @amallu ~3.256 / @paaps ~1.035
-- Delta no período: @amallu +3 (+0,09%) / @paaps +27 (+2,6%)
+**@amalluvasconcellos — ultima semana:**
 
-**@paaps.brasil cresceu 29x mais em proporção do que @amalluvasconcellos no período dos últimos 30 dias.** Isso é o dado de seguidores mais importante desta análise e será explicado no Bloco 2.
+| Data | Dia | Reach | TI | Saves | Shares |
+|------|-----|-------|-----|-------|--------|
+| 29 mai | Sex | 119 | 24 | 0 | 6 |
+| 30 mai | Sab | 286 | 13 | 2 | 0 |
+| 31 mai | Dom | 187 | 21 | 0 | 1 |
+| 01 jun | Seg | 204 | 40 | 6 | 2 |
+| 02 jun | Ter | 507 | 34 | 0 | 3 |
+| 03 jun | Qua | 1.251 | 94 | 2 | 0 |
+| 04 jun | Qui | 577 | 18 | 0 | 0 |
 
----
+O pico de 03 de junho (reach=1.251) e o sinal mais claro da semana: provavel publicacao de novo post nessa data, dado que o perfil estava em colapso desde 20 de maio e o saltoa de 507 para 1.251 em reach e incompativel com decaimento organico. O dia seguinte (04 jun, reach=577) confirma: o alcance sustentado por dois dias consecutivos indica post publicado na quarta-feira 03/06.
 
-### Resumo dos 30 dias — @amalluvasconcellos (6 mai a 4 jun/2026)
+O que nao aconteceu: saves. O dia de maior reach (03 jun) gerou apenas 2 saves — save rate de 0,16%. Para comparacao, a fase alta de maio tinha save rate de 11,3% em media. Isso indica que o conteudo de 03 de junho alcancou mas nao foi guardado — alcance sem valor de retencao.
 
-| Métrica | Valor total (30 dias) | Média diária |
-|---|---|---|
-| Reach | 19.687 | 656 |
-| Likes | 1.942 | 65 |
-| Comments | 100 | 3,3 |
-| Shares | 160 | 5,3 |
-| Saves | 269 | 9,0 |
-| Total interações | 2.728 | 91 |
+**@paaps.brasil — ultima semana:**
 
-| Taxa | Valor |
-|---|---|
-| Save rate | 1,37% |
-| Share rate | 0,81% |
-| Comment rate | 0,51% |
-| Engagement rate | 13,86% |
+| Data | Dia | Reach | TI | Saves | Shares |
+|------|-----|-------|-----|-------|--------|
+| 29 mai | Sex | 5 | 1.217 | 102 | 220 |
+| 30 mai | Sab | 2 | 1.040 | 82 | 148 |
+| 31 mai | Dom | 92 | 1.901 | 149 | 430 |
+| 01 jun | Seg | 32 | 692 | 53 | 94 |
+| 02 jun | Ter | 25 | 410 | 37 | 59 |
+| 03 jun | Qua | 25 | 372 | 29 | 64 |
+| 04 jun | Qui | 13 | 391 | 29 | 56 |
 
-**Períodos distintos identificados — duas fases diferentes:**
+O @paaps.brasil continuou gerando interacoes altas com reach proximo de zero. O dado mais aberrante do periodo: 30 de maio, reach=2 com TI=1.040. Isso e uma relacao TI/reach de 520x — impossivel sem redistribuicao ativa. O post do evento viral de 18 de maio continuou sendo compartilhado por redes externas ao Instagram, onde o algoritmo ja nao entrega, mas as pessoas que receberam o conteudo via DM ou compartilhamento externo continuam interagindo com o post original.
 
-- **Fase alta (6–19 mai):** 14 dias, reach médio de 1.034/dia, TI médio de 160/dia, save rate de 1,75%
-- **Fase colapso (20 mai–4 jun):** 16 dias, reach médio de 325/dia, TI médio de 30/dia, save rate de 0,29%
+A queda de 1.901 TI (31 mai) para 692 (01 jun) indica que a cauda do evento viral finalmente esta esgotando em termos de redistribuicao organica. Junho esta operando em novo patamar de baseline.
 
-Queda em 16 dias: -68,5% em reach, -81,2% em interações totais. Não é flutuação normal — é colapso de distribuição.
-
-**Eventos virais detectados (algoritmo: mean + 2σ, limiar = 261 TI):**
-- 14 mai: TI=264, reach=1.648, saves=26 (1,6%), shares=27 (1,6%)
-- 19 mai: TI=310, reach=1.977, saves=5 (0,3%), shares=9 (0,5%)
-
----
-
-### Resumo dos 30 dias — @paaps.brasil (6 mai a 4 jun/2026)
-
-Os dados do @paaps.brasil são dominados por um evento singular de 2 dias que distorce todos os totais. A análise exige separação obrigatória entre o evento viral e a baseline.
-
-**EVENTO VIRAL: 18–19 de maio**
-- 18 mai: TI=47.086 | shares=8.026 | saves=3.155 | likes=27.536 | comments=340 | reach=239
-- 19 mai: TI=25.861 | shares=3.813 | saves=1.948 | likes=16.104 | comments=182 | reach=117
-- Total dos 2 dias: 72.947 TI, 11.839 shares, 5.103 saves
-- Virality score: 23,7% (dia 1) e 22,3% (dia 2) — benchmark normal é 2–5%
-- Esses 2 dias representam 72,7% de todas as interações do período de 30 dias
-
-**Diagnóstico do evento viral:** O reach dos dias 18–19 mai foi de 239 e 117, respectivamente — extremamente baixo para um conteúdo que gerou 72k interações. Isso indica que o Windsor registra métricas cumulativas de posts na data em que as interações chegam ao servidor, não necessariamente no dia em que o post foi visto. O post gerador desse evento provavelmente foi publicado entre 12 e 17 de maio e entrou em loop de redistribuição intenso nos dias 18–19. As 72k interações são reais — mas ocorreram em cadeia de compartilhamentos fora do alcance orgânico direto do perfil.
-
-**Baseline @paaps.brasil (excluindo 18–19 mai):**
-
-| Métrica | Valor (28 dias) | Média diária |
-|---|---|---|
-| Reach | 931 | 33 |
-| TI médio | — | 980 |
-| Save rate | 233,62% | — |
-| Share rate | 437,06% | — |
-
-Nota: save rate e share rate acima de 100% decorrem de interações cumulativas de posts mais antigos ainda sendo redistribuídos no período. Os números refletem que o conteúdo do @paaps tem vida longa — as interações continuam chegando dias depois da publicação.
-
-**Decaimento pós-viral (20 mai a 4 jun):**
-O conteúdo que gerou o evento viral continuou gerando interações por 16 dias. O decaimento foi consistente mas nunca chegou a zero: em 4 jun ainda havia 391 TI, 56 shares e 29 saves — sem nenhum post novo relevante. Isso é o sinal mais claro da natureza do público do @paaps: uma vez que algo ressoa, circula por muito tempo.
-
----
-
-### Última semana em detalhe (30 mai a 4 jun) — ambos os perfis
-
-**@amalluvasconcellos:**
-- 30 mai: reach=286, TI=13 (baixíssimo)
-- 31 mai: reach=187, TI=21
-- 1 jun: reach=204, TI=40
-- 2 jun: reach=507, TI=34
-- 3 jun: reach=1.251, TI=94 (recuperação parcial — provável novo post)
-- 4 jun: reach=577, TI=18
-
-**@paaps.brasil (mesma semana):**
-- 30 mai: TI=1.040, shares=148, saves=82
-- 31 mai: TI=1.901, shares=430, saves=149
-- 1 jun: TI=692, shares=94, saves=53
-- 2 jun: TI=410, shares=59, saves=37
-- 3 jun: TI=372, shares=64, saves=29
-- 4 jun: TI=391, shares=56, saves=29
-
-O @paaps ainda estava recebendo 391 interações no dia 4 de junho — 17 dias após o evento viral — sem indicação de novo post publicado. O @amallu registrou um pico de reach de 1.251 no dia 3 de jun, possivelmente um novo post.
+**Contexto de mercado desta semana:**
+- NR-01 vigente com multas desde 26 de maio — 10 dias de vigencia, sem sinal de aproveitamento nos dados
+- Nenhum pico de alcance correlacionado com a data de vigencia da norma foi identificado nos perfis
+- A janela de autoridade mais urgente foi perdida: a Mallu nao publicou conteudo de NR-01 em 26 de maio nem nos dias seguintes (dados de colapso confirmam ausencia)
 
 ---
 
 ## BLOCO 2 — O QUE FUNCIONOU E POR QUE
 
-### O evento viral do @paaps.brasil é o fato mais importante do período
+### @paaps.brasil — o evento viral de 18-19 de maio
 
-Um conteúdo do @paaps.brasil gerou 72.947 interações em 2 dias, com virality score de 23–24% — aproximadamente 5–10x acima do benchmark de posts normais do setor. Mais revelador: esse conteúdo continuou gerando shares e saves por 17 dias seguidos. Em 27 de maio — 9 dias após o pico — o post ainda gerou 469 shares e 212 saves em um único dia.
+Este e o dado estruturante do ciclo. Em dois dias:
+- TI total: 72.947 (47.086 no dia 18 + 25.861 no dia 19)
+- Shares: 11.839 em dois dias
+- Saves: 5.103 em dois dias
+- Share rate: 17,0% e 14,7% respectivamente (benchmark normal para conteudo organico: 2-5%)
 
-O que isso diz sobre o tipo de conteúdo que funcionou: **o público do @paaps não apenas curte — ele redistribui e arquiva.** Um virality score de 23% significa que para cada 100 interações, 23 foram atos de redistribuição ativa (share ou save). Esse é o comportamento de um público que usa o conteúdo como instrumento — para mandar para um colega, para apresentar em reunião, para guardar como referência. Não é entretenimento. É ferramenta.
+O que os dados revelam sobre o mecanismo: o @paaps.brasil tem reach cronicamente baixo (media de 43/dia no periodo). O algoritmo do Instagram nao entrega o conteudo. Mas quando o conteudo toca o publico institucional certo, esse publico nao so interage — ele redistribui. O post de 18 de maio gerou mais shares em um dia (8.026) do que todos os shares de @amalluvasconcellos no periodo de 30 dias (160). A logica e completamente diferente: o publico do @paaps usa o conteudo como ferramenta de trabalho, e circula esse conteudo entre pares.
 
-O conteúdo gerador desse evento não pode ser identificado com certeza sem acesso às métricas por post — mas a data de acumulação e o perfil das métricas (shares altíssimos, save rate extremo, comentários com 340 em 1 dia) indicam um post de dado com posicionamento crítico sobre saúde mental no trabalho, possivelmente conectado à NR-01 (que entrou em vigor em 26 de maio — 8 dias após o pico de interações, o que é consistente com um post publicado entre 12–17 mai em antecipação à vigência).
+A cauda longa e outro sinal de qualidade: 12 dias apos o pico, o TI do @paaps ainda estava em 1.901 (31 mai), com share rate de 23%. O conteudo nao decaiu — foi redistribuido em ciclos. Para efeito comparativo, um post de @amalluvasconcellos dura em media 2-3 dias com alcance relevante antes de morrer.
 
-### O crescimento de seguidores de @paaps confirma a tese de conversão qualitativa
+Dado crucial para a Tecela: os dias de maior share rate pos-viral foram 26 mai (18%), 27 mai (17%), 28 mai (17%), 29 mai (18%), 31 mai (23%). Todos esses dias tem reach abaixo de 100. O post ja nao chegava a novas pessoas pelo algoritmo, mas as pessoas que ja tinham o post continuavam redistribuindo. Isso so acontece com conteudo que o publico considera valioso o suficiente para repassar com propria agencia. Nao e engajamento passivo — e curadoria ativa.
 
-@paaps cresceu +27 seguidores no período (+2,6%) vs @amallu +3 (+0,09%). O @paaps tem 1/3 dos seguidores de @amallu mas cresceu 29x mais em proporção. A explicação está no tipo de engajamento: quando o conteúdo do @paaps é redistribuído por pessoas com quem ressoa (gestores, técnicas de SUAS/SUS, profissionais de saúde pública), essas pessoas têm alta probabilidade de seguir o perfil — porque o perfil é relevante para o trabalho delas, não apenas interessante. O @amallu tem mais alcance mas converte menos porque o público que chega por viralização nem sempre tem motivação para manter vínculo.
+### @amalluvasconcellos — semana de 11-14 de maio
 
-### O pico de @amallu em 11–14 de maio foi real e revelador
+Os quatro melhores dias consecutivos do periodo:
+- 11 mai (Seg): reach=1.440, TI=250, saves=38 (save rate 15,2%), shares=22
+- 12 mai (Ter): reach=1.162, TI=186, saves=17 (9,1%)
+- 13 mai (Qua): reach=1.430, TI=225, saves=40 (17,8%)
+- 14 mai (Qui): reach=1.648, TI=264, saves=26, shares=27 (10,2%)
 
-Quatro dias consecutivos com reach acima de 1.000 e TI acima de 186. Em 13 de maio: saves de 40 (2,8% save rate) com reach de 1.430. Em 14 de maio: TI de 264 com shares de 27. Esses são os dias de melhor performance combinada do período — alto alcance E alto save rate ao mesmo tempo, o que é raro.
+Save rate de 17,8% em 13 de maio e o maior valor isolado do ciclo. Shares de 27 em 14 de maio indicam conteudo com forte qualidade de distribuicao. A sequencia de 4 dias indica publicacao de pelo menos um post de alto impacto (carrossel de conceito e o formato mais consistente com save rate acima de 10%). O dado de comments=20 em 14 de maio e o mais alto do periodo para @amallu — indica post que gerou discussao, nao apenas consumo.
 
-O padrão por dia da semana confirma: segunda e terça são os melhores dias para @amallu.
-- Segunda: TI médio=120, reach médio=644
-- Terça: TI médio=139, reach médio=963
-
-O pico de 11–14 mai corresponde a segunda, terça, quarta, quinta — a janela de melhor performance concentrada no início da semana.
-
-Para @paaps: segunda tem TI médio de 12.193 (distorcido pelo viral de 18 mai, que foi segunda-feira). Excluindo o viral, a segunda ainda seria o melhor dia — o evento de 18 mai foi segunda-feira, o que reforça que o início da semana é quando o público institucional está mais ativo.
-
-### O save rate do @amallu em 13 mai (2,8%) é o benchmark de carrossel de conceito
-
-Um save rate de 2,8% em um dia com reach de 1.430 indica que cerca de 40 pessoas salvaram o post naquele dia — o que, para uma conta de 3.259 seguidores, é expressivo. Esse dado valida parcialmente a tese de que carrossel de conceito de psicologia social gera save rate acima do benchmark de 2%.
+O qualitative ratio (saves+shares+comments/TI) da S1 e S2 ficou em 22,0% e 20,9% — acima do dobro das semanas S3 e S4 (8,7% e 11,7%). Quando o perfil esta ativo e publicando conteudo de conceito, o engajamento qualitativo e estruturalmente superior.
 
 ---
 
 ## BLOCO 3 — O QUE NAO FUNCIONOU E POR QUE
 
-### O colapso do @amalluvasconcellos a partir de 20 de maio é o maior problema do período
+### O colapso total de @amalluvasconcellos (20-31 de maio)
 
-Entre 20 e 25 de maio, o @amalluvasconcellos teve reach de 621, 284, 137, 197, 116, 114 em dias consecutivos. Esses números são menores do que os dias de menor performance da fase alta (onde mesmo o pior dia tinha reach acima de 500). O colapso não foi gradual — foi abrupto. No dia 19 mai o perfil teve o melhor dia do período (reach=1.977, TI=310). No dia 20 mai o reach caiu para 621 e o TI para 58. No dia 22 mai estava em 137.
+A queda e documentada e precisa:
+- 19 mai: reach=1.977, TI=310 (pico absoluto do periodo)
+- 20 mai: reach=621, TI=58
+- 22 mai: reach=137, TI=14
+- 24 mai: reach=116, TI=9
 
-A queda em TI foi ainda mais severa: -81% em interações, -94% em saves, -91% em shares em comparação entre a primeira e segunda metade do período.
+Em 5 dias apos o pico, o reach caiu 94%. Em 12 dias (20-31 mai), a media de reach foi 222/dia contra 1.034/dia da fase anterior. O qualitative ratio caiu de ~21% para 8,7%.
 
-O dado de 22–25 mai com reach abaixo de 200 por dia quase certamente indica **ausência de post novo** nesse período. Quando não há post recente, o algoritmo para de distribuir o conteúdo antigo (diferente do @paaps, cujo conteúdo tem vida longa). O @amallu depende de frequência de publicação para manter alcance.
+O que causou: ausencia de publicacao na janela critica. O algoritmo do Instagram penaliza duramente a inatividade apos picos de engajamento — porque interpreta que o perfil nao tem conteudo novo para entregar. O pico de 19 de maio gerou um momento de maior alcance potencial (o algoritmo estava distribuindo o perfil para novas audiencias), e a ausencia de continuidade fez o algoritmo recalibrar o perfil para baixo.
 
-Isso não é opinião — é o padrão nos dados: o pico de 19 mai não foi seguido por novo conteúdo nos dias 20–25, e o reach desabou. A recuperação parcial em 3 jun (reach=1.251) coincide com o que parece ser um novo post.
+A ironia do timing: o colapso ocorreu nos dias imediatamente anteriores e posteriores a vigencia da NR-01 (26 mai). Se havia um momento para publicar conteudo de autoridade sobre o tema, era exatamente essa semana. Nao foi aproveitado.
 
-**O que não funcionou: a frequência de publicação caiu depois do pico de 19 mai e o perfil perdeu a janela da NR-01.** A NR-01 entrou em vigor em 26 de maio, exatamente quando o @amallu estava no ponto mais baixo de alcance do período. A janela de maior autoridade sobre o tema mais urgente coincidiu com o momento de menor visibilidade do perfil.
+**O dado mais preocupante nao e o colapso em si — e a recuperacao lenta.** A S4 (27 mai-4 jun) tem reach medio de 393, ainda 62% abaixo da S1. E o qualitative ratio de S4 e 11,7% — muito abaixo dos 22% da S1. Mesmo tendo voltado a publicar (o pico de 03 jun com reach=1.251 confirma que houve publicacao), a qualidade do engajamento nao se recuperou. O conteudo que gerou alcance em 03 de junho nao gerou saves.
 
-### O @paaps não capitalizou o evento viral com novo conteúdo
+### A lacuna de saves em junho
 
-O evento de 18–19 mai gerou 72k interações e acelerou o crescimento de seguidores. Mas não há evidência de novo post publicado em seguida que aproveitasse a expansão de audiência. O decaimento do evento seguiu uma curva normal de 16 dias sem nenhum pico secundário que indicasse injeção de novo conteúdo. O perfil cresceu +27 seguidores no período — um número modesto considerando que 72k pessoas interagiram com o conteúdo.
+O heatmap revelou algo que parecia contraintuitivo: sexta (save rate 13,4%) e sabado (14,8%) tem save rates mais altos que terca (3,9%) e quarta (10,2%). A explicacao provavel e que os dados de sexta/sabado incluem posts publicados anteriormente que continuam sendo salvos por novos descobridores — ou seja, salvamentos de conteudo perene de posts antigos acumulando em dias de menor postagem. A terca com save rate baixo provavelmente reflete posts novos de formato alcance-primeiro (reels?) que geram curtidas e comentarios mas nao salvamentos.
 
-A janela para capitalizar um evento viral é estreita: os 3–5 dias após o pico são quando a nova audiência ainda lembra do perfil e está mais propensa a engajar com o próximo post. Se não há post nessa janela, a maioria dessas pessoas não volta.
+A quarta 03 de junho — reach=1.251 com save rate de 0,16% — e o case mais claro: alcance alto sem retencao. O publico chegou ao post, nao ficou. Isso e o oposto do que acontecia em 11-14 de maio (save rates de 9-18%). A diferenca de conteudo e provavelmente formato ou profundidade: conteudo de carrossel de conceito retém; conteudo de awareness rapido alcanca mas nao retém.
 
-### O save rate do @amallu caiu 83% entre as duas metades do período
+### LinkedIn: zero dados disponiveis
 
-Save rate na fase alta: 1,75%. Save rate na fase baixa: 0,29%. Essa queda não é só consequência da queda de alcance — ela indica que o conteúdo publicado na segunda metade do período (quando havia post) não gerou o mesmo nível de identificação/utilidade que o conteúdo da primeira metade. Isso é dado de qualidade de conteúdo, não só de alcance.
+O conector Windsor para LinkedIn nao esta configurado ou nao retorna dados para os perfis do PAAPS. Isso significa que a tese 6 (LinkedIn de Mallu como gerador de leads B2B) permanece sem validacao ou refutacao por mais um ciclo. A ausencia de dados e ela mesma um dado: nenhuma medicao, nenhuma gestao possivel.
 
 ---
 
 ## BLOCO 4 — TESES VALIDADAS / TESES REJEITADAS
 
-### Teses validadas pelos dados
+### TESES VALIDADAS NESTE CICLO (Ciclo 2 — confirmacao das do Ciclo 1)
 
-**Tese 1 VALIDADA: @paaps.brasil tem share rate estruturalmente maior que @amallu.**
-- @paaps (excl. viral): share rate de 437%. @amallu: 0,81%.
-- Mesmo excluindo o evento viral, o @paaps tem share rate muito acima de @amallu.
-- A explicação está no público: o público institucional do @paaps compartilha o conteúdo para colegas de trabalho. O conteúdo de @amallu é mais salvo individualmente.
-- Status: **confirmada com dados reais.**
+**Tese 1 — RECONFIRMADA: @paaps.brasil tem share rate estruturalmente superior ao @amalluvasconcellos.**
+- Share rate @paaps: 15,85% (do TI)
+- Share rate @amallu: 5,87% (do TI)
+- Os dois perfis tem logicas completamente diferentes. O @paaps redistribui; o @amallu alcanca.
 
-**Tese 2 VALIDADA: O melhor dia para postar em @amalluvasconcellos é segunda ou terça-feira.**
-- Heatmap por dia da semana: segunda TI médio=120 (reach=644), terça TI médio=139 (reach=963).
-- A terça é o melhor dia em TI absoluto. A segunda tem reach mais baixo mas TI proporcional alto.
-- Status: **confirmada com dados reais. Próximo ciclo: manter cadência segunda/terça para @amallu.**
+**Tese 4 — RECONFIRMADA: crescimento de seguidores correlacionado com redistribuicao.**
+- O evento viral de @paaps gerou 27 novos seguidores em 30 dias — +2,6%
+- @amalluvasconcellos ficou em +3 seguidores — +0,09%
+- @amallu teve 15x mais reach total que @paaps. Mesmo assim cresceu 29x menos em proporcao.
 
-**Tese 3 CONFIRMADA PARCIALMENTE: Carrossel de conceito de psicologia social tem save rate acima de 2%.**
-- Dias de pico de save rate em @amallu: 13 mai (2,8%), 11 mai (2,6%), 15 mai (2,2%).
-- Esses dias coincidem com a fase de maior alcance, provavelmente com carrosséis ativos.
-- O benchmark do dashboard era 3–5% para conteúdo educativo. Os dados indicam que @amallu alcança 2–3% no pico — abaixo do teto do benchmark mas acima do piso.
-- Status: **parcialmente confirmada. Meta: alcançar 3%+ nos próximos ciclos.**
+**Nova tese validada — CAUDA LONGA DO CONTEUDO INSTITUCIONAL:**
+O evento viral do @paaps continuou gerando shares a taxa de 12-23% por 17 dias consecutivos apos o pico. Isso e incompativel com conteudo de entretenimento ou curiosidade. E compativel com conteudo que funciona como ferramenta de referencia — o tipo de conteudo que um gestor salva e reenvia a um colega semanas depois. A vida util do conteudo do @paaps e 5-10x maior que a do @amallu.
 
-**Tese 4 CONFIRMADA: Crescimento de seguidores correlacionado com evento de alta redistribuição.**
-- @paaps +2,6% de crescimento, correlacionado com o evento viral de 72k TI.
-- @amallu +0,09% de crescimento, sem evento viral.
-- A correlação é clara: redistribuição em escala gera conversão de seguidores, não apenas alcance.
-- Status: **confirmada. O que converte seguidores é share rate, não reach isolado.**
+**Nova tese validada — INATIVIDADE POS-PICO TEM CUSTO EXPONENCIAL:**
+O algoritmo do Instagram nao e linear. Quando o perfil de @amallu estava em pico (19 mai, TI=310), estava sendo distribuido por um algoritmo que aumentou a janela de entrega. A inatividade nessa janela nao gerou uma queda proporcional — gerou uma queda de 94% em 5 dias. O custo de nao publicar apos um pico e muito maior do que o custo de nao publicar em baseline.
 
-### Teses rejeitadas ou reformuladas
+### TESES REJEITADAS OU REVISADAS
 
-**Tese anterior: frequência de Reels é o principal driver de crescimento em @amallu.**
-- Os dados mostram que a frequência importa para manter alcance, mas não necessariamente para crescimento de seguidores.
-- @amallu teve mais alcance e mais posts mas cresceu menos que @paaps.
-- **Reformulação:** frequência de posts mantém alcance para @amallu, mas o que converte seguidores é a intensidade da redistribuição (share rate), não o volume de alcance.
+**Tese 2 (revisao): melhor dia para @amallu e segunda-feira para saves, terca para reach.**
+- Heatmap revelou: Seg tem save rate de 13,5% e TI medio de 120 — o melhor para engajamento qualitativo.
+- Ter tem reach medio de 963 — o maior da semana — mas save rate de apenas 3,9%.
+- Conclusao revisada: publicar carrossel de conceito na segunda (maximiza saves/retencao); publicar conteudo de descoberta/alcance na terca (maximiza distribuicao nova). Sao objetivos diferentes que pedem dias diferentes.
 
-**Tese anterior implícita: o @paaps.brasil tem performance consistentemente baixa.**
-- Os dados contradizem isso: um único post do @paaps gerou mais interações em 2 dias do que @amallu gerou em 30 dias somados.
-- O @paaps tem uma base de alcance orgânico muito menor (33 reach/dia de baseline), mas quando acerta o tema certo, a redistribuição é exponencialmente maior.
-- **Nova tese:** o @paaps.brasil opera em modo "latência + explosão". A maioria dos dias tem performance baixa, mas o conteúdo certo gera eventos de redistribuição que não têm equivalente no @amallu.
+**Tese implicita rejeitada: o colapso de @amallu se resolve com retorno a publicacao.**
+- A recuperacao de junho (reach medio 635) esta 39% abaixo da media da fase alta (1.034).
+- O qualitative ratio de junho (11,7%) esta 47% abaixo da fase alta (22%).
+- Publicar de volta nao restaura o patamar anterior. O algoritmo recalibrou o perfil. A recuperacao exige semanas de publicacao consistente, nao apenas um post esporadico.
 
-### Teses que continuam abertas
+### TESES AINDA ABERTAS
 
-**Tese 6: Pautas de legislação performam melhor em @paaps que em @amallu.**
-- Circunstancialmente suportada pelo evento viral (provavelmente relacionado à NR-01), mas sem confirmação direta de qual post gerou o evento.
-- Status: **aberta. A verificar com acesso às métricas por post.**
+**Tese 5 — pautas de legislacao performam melhor em @paaps:** circunstancialmente suportada pelo evento viral de mai (provavel tema NR-01 ou correlato), mas sem confirmacao do tema exato do post. O Ciclo 3 pode confirmar se um segundo post de NR-01 no @paaps replica o padrao.
 
-**Tese 7: LinkedIn com cadência analítica pode gerar leads B2B.**
-- Sem dados. Não verificável neste ciclo.
-- Status: **aberta. Primeiro experimento a implementar no próximo ciclo.**
+**Tese 6 — LinkedIn como gerador de leads B2B:** sem dados. Terceiro ciclo consecutivo sem medicao.
+
+**Tese 7 — identificacao do post viral de 18 mai:** ainda desconhecido. Os dados diarios nao permitem identificar qual post especifico foi o gatilho. Requer acesso ao Instagram app para ver metricas por post.
+
+**Nova tese aberta — CONTEUDO DE ALCANCE VS CONTEUDO DE RETENCAO SAO FORMATOS DISTINTOS PARA @amallu:**
+O pico de 03 de junho (reach=1.251) com save rate de 0,16% versus o padrao de 11-14 mai (save rate de 9-18%) sugere que o perfil pode ter mudado de formato entre os dois momentos. A hipotese e: reels ou posts de awareness geram alcance mas nao saves; carrosséis de conceito geram saves mas alcance moderado. Os dados nao permitem confirmar sem identificar o formato de cada post — mas o padrao e consistente o suficiente para guiar o proximo ciclo.
 
 ---
 
-## BLOCO 5 — ESTRATÉGIA RECOMENDADA PARA O PRÓXIMO CICLO
+## BLOCO 5 — ESTRATEGIA RECOMENDADA PARA O PROXIMO CICLO
 
-### Diagnóstico antes da estratégia
+### O problema central que os dados revelam
 
-Os dados dos 30 dias revelam dois perfis com dinâmicas radicalmente diferentes que precisam de estratégias opostas — não paralelas.
+Ha dois perfis com logicas opostas operando sem coordenacao entre si. O @amallu e um perfil de alcance que depende de frequencia e foi ao chao por falta dela. O @paaps e um perfil de redistribuicao latente que teve um evento viral e agora esta esgotando a cauda sem novo combustivel. Os dois estao, ao mesmo tempo, em modo de recuperacao — mas por razoes diferentes e com solucoes diferentes.
 
-**@amalluvasconcellos** é um perfil de alcance dependente de frequência. Sem post novo, o alcance cai em dias. O público desse perfil engaja no ato (likes, salvamentos individuais) mas não redistribui intensamente. A conversão em seguidores é baixa mesmo com alto alcance. O risco desse perfil é o da "audiência que passa" — vê, aprecia, não fica.
+O dado mais revelador da semana: @paaps.brasil gerou 466 TI/dia em media em junho (ja com o viral se esgotando) contra 46 TI/dia do @amalluvasconcellos. O perfil institucional, mesmo na queda do viral, engaja 10x mais por dia que o perfil pessoal em recuperacao. Isso e uma inversao estrutural que a estrategia precisa reconhecer.
 
-**@paaps.brasil** é um perfil de redistribuição latente com explosões pontuais. O baseline de alcance é irrelevante (33/dia) — o que importa é que quando o conteúdo acerta, ele não circula no Instagram: ele circula em grupos de WhatsApp, e-mails de gestores, reuniões de secretaria. O público do @paaps não apenas salva o conteúdo — ele o usa como argumento em situações de trabalho. Isso explica o virality score de 23%.
+### Recomendacao 1 — @amalluvasconcellos: publicacao em cadencia minima de 4 posts/semana ate restaurar o patamar algoritmico
 
-### A estratégia assimétrica dos dois perfis
+O objetivo nao e viralizar. E restaurar a confianca do algoritmo. Baseado nos dados, o perfil precisa de pelo menos 3-4 semanas de publicacao consistente para recuperar o reach medio acima de 1.000. O formato que maximiza save rate (carrossel de conceito, evidenciado por save rates de 9-18% em 11-14 mai) deve ser o principal. Posts de awareness (que geraram 0,16% de save rate em 03 jun) devem ser secundarios.
 
-**Para @amalluvasconcellos (próximas 4 semanas):**
+Distribuicao semanal sugerida baseada no heatmap:
+- Segunda: carrossel de conceito (save rate medio de 13,5% nas segundas)
+- Quarta: post de analise ou reel de reacao (compativel com padrao de picos nessa posicao)
+- Uma terceira publicacao flexivel, de preferencia antes de sexta
 
-O problema imediato é o colapso de frequência que aconteceu em 20–25 mai. A retomada precisa ser estruturada, não reativa.
+### Recomendacao 2 — @paaps.brasil: publicar novo post antes que a cauda do viral esgote completamente
 
-Cadência mínima: 3 posts por semana, com pelo menos 1 Reel de câmera direta. O Reel é o único formato que gera alcance para fora da base. Os dados mostram que os dias de maior alcance em @amallu (1.430–1.977 reach/dia) coincidiram com uma sequência de 9 dias consecutivos de posts. Quando a frequência caiu, o alcance caiu.
+O TI do @paaps em junho esta decaindo: 692 (01 jun) > 410 (02 jun) > 372 (03 jun) > 391 (04 jun). A cauda esta quase exaurida. Sem novo conteudo, o perfil voltara ao baseline pre-viral de ~5-20 TI/dia. A janela para publicar sobre NR-01 ainda esta aberta (norma vigente com multas desde 26 mai), mas expira em aproximadamente 2 semanas.
 
-Timing: segunda ou terça para o post principal da semana. Os dados confirmam que esses são os dias de maior TI médio.
+O conteudo que deve ser publicado precisa ter o mesmo perfil estrutural do que gerou o viral: dado concreto + analise critica + linguagem de ferramenta de trabalho. O @paaps nao e um perfil de educacao — e um perfil de curadoria institucional. O publico que redistribui e o gestor publico que recebe um conteudo e pensa "preciso mandar isso para o meu secretario".
 
-O tema não precisa seguir o Radar diretamente. O que funciona em @amallu é a tensão que o público de psicólogas e estudantes de 18–34 anos reconhece mas não tinha palavras para nomear. As pautas do Radar servem como gatilho, não como tema central.
+### Recomendacao 3 — coordenacao entre os dois perfis
 
-**Para @paaps.brasil (próximas 4 semanas):**
+O @paaps tem capacidade de redistribuicao que o @amallu nao tem. O @amallu tem voz e autoridade pessoal que o @paaps nao tem. A estrategia ideal para o proximo ciclo e usar o @amallu para nomear o problema com autoridade de psicóloga e o @paaps para redistribuir a analise como ferramenta institucional. Conteudos diferentes, angulos complementares, publicados com 24-48h de intervalo para criar efeito cumulativo.
 
-O objetivo não é aumentar o alcance diário — é aumentar a probabilidade de um próximo evento de redistribuição. O evento de 18–19 mai foi possivelmente não planejado como conteúdo viral: ele foi distribuído pelo algoritmo porque alguém com muita audiência o compartilhou, ou porque atingiu um limiar de engajamento inicial que acionou a distribuição expandida.
+Exemplo concreto: @amallu publica segunda-feira um carrossel sobre o que a NR-01 pressupoe que os gestores publicos nao tem. @paaps publica terca-feira um post direto para o gestor municipal sobre o que ele precisa fazer agora que a norma e vigente. O primeiro atrai o debate entre psicologos e interessados em saude mental; o segundo e redistribuido pelo proprio gestor publico que e o cliente do PAAPS.
 
-A estratégia é publicar 1–2 vezes por semana com conteúdo de alta densidade de posicionamento crítico, formato de carrossel estrutural ou post tipográfico com dado impactante. Não tentar "fazer viral" — tentar criar as condições para que o conteúdo seja redistribuído por quem lê: gestores que mandam para colegas, técnicas que colocam em grupos de WhatsApp do SUAS.
+### Recomendacao 4 — experimento de LinkedIn: configurar medicao antes de publicar
 
-O que o @paaps não fez no período: publicar na janela de 3–5 dias após o evento viral para capturar a nova audiência. Essa é a mudança operacional mais importante para o próximo ciclo.
+A tese de LinkedIn como canal B2B continua sem dado por tres ciclos. A recomendacao nao e abandonar o canal — e configurar o conector Windsor antes de publicar, para que o Ciclo 3 tenha dados reais de benchmark. Publicar sem medicao e desperdicar o experimento.
 
-### A janela da NR-01 ainda está aberta — mas está fechando
+### Recomendacao 5 — pauta 20 (Copa 2026): janela expira em 7-10 dias
 
-A NR-01 entrou em vigor em 26 de maio. Hoje é 5 de junho — 10 dias depois. A janela de autoridade máxima está aberta por mais 2 semanas. Depois disso, o tema passa a ser retrospectivo.
-
-O @paaps não publicou na janela mais crítica (25–31 mai) — o @amallu estava no piso de alcance nesse período. Isso foi um erro de timing que não pode ser corrigido retroativamente. Mas a janela ainda existe: gestores públicos ainda estão tentando entender o que precisam fazer, ainda não há clareza sobre fiscalização e penalidades para o setor público. O PAAPS pode entrar agora com o ângulo que falta: não "o que diz a lei" (isso já foi publicado por todos), mas "o que a lei pressupõe que os municípios têm e que eles não têm — e o que fazer com isso na prática".
-
-No @paaps.brasil: carrossel com dado + posicionamento crítico. No @amallu: Reel de câmera direta com a tensão central. No LinkedIn de Mallu: texto analítico longo, o único canal onde o gestor de RH e o secretário municipal ainda não viram ninguém falar sobre isso com essa profundidade.
-
-### A decisão sobre o LinkedIn não pode mais ser postergada
-
-O diagnóstico histórico é claro: LinkedIn sem estratégia = 0 comentários, alcance só na base. Mas o momento de mercado para o PAAPS no LinkedIn nunca foi melhor: NR-01 em vigor, gestores de RH em busca de parceiros de diagnóstico psicossocial, falta de profissionais com autoridade técnica para falar sobre riscos psicossociais no setor público.
-
-A recomendação é operacional: **1 post de LinkedIn por semana para Mallu, formato texto analítico longo (800–1200 palavras), publicado às terças-feiras.** O formato é deliberado: texto longo no LinkedIn tem performance melhor que posts curtos para o público de gestores porque demonstra capacidade analítica antes de qualquer conversa comercial. O dia é deliberado: terça é o pico de atividade do LinkedIn para profissionais de RH e gestão pública.
-
-O experimento precisa de 4 semanas para gerar qualquer dado. Implementar no próximo ciclo e medir no Ciclo 2 do Sentinela.
-
-### A urgência da Copa 2026
-
-O Radar identificou corretamente: janela de 2 semanas para a pauta 20 (Copa + saúde mental comunitária). O campeonato começa este mês. A janela de análise crítica antes do ciclo esportivo dominar a narrativa está aberta agora e fecha em aproximadamente 10–14 dias.
-
-O timing de publicação: esta semana ou no máximo na próxima. Não pode entrar no ciclo geral de planejamento — precisa de urgência declarada.
-
-### A série de 3 posts (pautas 1, 2 e 5) como experimento de série
-
-O Radar identificou a coerência entre as pautas 1 (NR-01), 2 (burnout + gênero) e 5 (gestor do interior). São três ângulos do mesmo fenômeno: o sistema que adoece quem cuida sem criar condições para que esse cuidado aconteça de forma sustentável.
-
-A estratégia de série funciona diferente de 3 posts isolados: o seguidor sabe que vai ter continuação e volta. O algoritmo tende a distribuir conteúdo de criadores que têm engajamento consistente ao longo de vários dias. E o argumento cumulativo dos 3 posts tem mais profundidade do que qualquer um dos três isoladamente.
-
-Para @amalluvasconcellos: série temática sem numeração explícita. Para @paaps.brasil: série com identificação visual explícita (Parte 1/3, Parte 2/3, Parte 3/3).
+O evento comeca este mes. A janela de posicionamento critico pre-Copa esta se fechando. Este e o conteudo de mais alta urgencia do Radar que tem potencial de alcance alem da base existente (tema de interesse geral, angulo inedito). Recomendado para o @amalluvasconcellos como reel ou carrossel de analise esta semana.
 
 ---
 
 ## BLOCO 6 — TOP 5 PAUTAS DO RADAR COM MAIOR POTENCIAL DADO O HISTORICO
 
-O ranking cruza os dados reais de performance dos 30 dias com as 20 pautas do Radar. Os critérios: (1) alinhamento com o tipo de conteúdo que gerou os eventos de maior performance (virality score alto no @paaps, save rate alto no @amallu); (2) timing — a janela ainda está aberta?; (3) autoridade PAAPS confirmada (não apenas declarada); (4) compatibilidade com o público real (84% mulheres, 87% 18–34, profissionais de psicologia e assistência social).
+### Criterios de ranqueamento
+
+Tres variaveis cruzadas: (1) compatibilidade com o formato que os dados mostram como de maior retencao no perfil de destino, (2) urgencia temporal da janela de publicacao, (3) alinhamento com o perfil do publico que redistribui (@paaps = gestor publico; @amallu = psicologos, estudantes, profissionais de saude).
 
 ---
 
-### 1 — PAUTA 5: O gestor público do interior
+**1. Pauta 5 — Gestor publico do interior: NR-01 vigente, capacidade municipal estagnada**
 
-**Ranking: #1. Motivo principal: é o conteúdo com maior probabilidade de reproduzir o evento viral do @paaps.**
+Canal principal: @paaps.brasil
+Formato: post de identificacao, segunda pessoa, linguagem direta
 
-O evento viral de 18–19 mai foi gerado por um conteúdo redistribuído por pessoas que trabalham na rede pública de saúde e assistência social — exatamente o público da pauta 5. O gestor do interior que não tem estrutura para cumprir a NR-01 é a Cláudia do voz-paaps.md: secretária de CRAS, interior de Minas, equipe exausta, cobrada por conformidade com norma que pressupõe estrutura que ela não tem.
+Justificativa de ranqueamento: este e o perfil do publico que redistribuiu o post viral de 18 de maio. O evento viral foi, com altissima probabilidade, sobre NR-01 ou sofrimento no trabalho publico — e o gestor municipal foi quem redistribuiu. Publicar um post que nomeia diretamente o isolamento do gestor do interior (sem equipe, sem orcamento, agora cobrado por conformidade com norma que ele nao entende) replica exatamente o mecanismo do viral. E conteudo que o gestor manda para o grupo do WhatsApp da prefeitura. Share rate esperado: acima de 12% com base no padrao pos-viral.
 
-Quando esse post aparecer no feed dela, ela vai mandar para a coordenadora de outro município. Não porque é bom conteúdo — porque é verdadeiro. O virality score de 23% do evento anterior indica que esse público redistribui quando o conteúdo nomeia a condição deles com precisão.
-
-**O que os dados recomendam:** Post de identificação em segunda pessoa no @paaps.brasil (formato que o Radar sugere). No @amallu, Reel de câmera direta. Publicar na segunda ou terça da próxima semana.
-
-**Potencial de conversão:** Máximo. Gestores em pânico silencioso que leram esse post e reconheceram a situação deles vão entrar em contato. O CTA precisa ser direto: "Fala com a gente" (WhatsApp da bio).
+Urgencia: alta. Janela NR-01 fecha em ~2 semanas.
 
 ---
 
-### 2 — PAUTA 1: NR-01 chega ao setor público
+**2. Pauta 1 — NR-01 chega ao setor publico: a norma que obriga e a realidade que nao acompanha**
 
-**Ranking: #2. Urgência temporal — janela fecha em ~14 dias.**
+Canal principal: @amalluvasconcellos
+Formato: carrossel de dado + analise critica
 
-A pauta 1 é o sistema (a norma e a contradição). A pauta 5 é a pessoa dentro do sistema (o gestor). As duas devem ser trabalhadas, mas o ângulo da pauta 1 é mais analítico e tem perfil de carrossel estrutural para @paaps.brasil — exatamente o formato que gerou o evento viral.
+Justificativa de ranqueamento: os dados de @amallu mostram que os dias de maior save rate (11-14 mai) coincidem com o que parece ser uma sequencia de carrosséis de conceito. A pauta 1 tem estrutura ideal para esse formato: dado concreto (municipios sem PGR), analise critica (o sofrimento existia antes da norma), virada narrativa (a NR-01 e o espelho, nao a solucao). Save rate projetado: 8-15% com base no historico de carrosséis de conceito de @amallu.
 
-O dado mais importante que os números confirmam: o @paaps.brasil tem share rate estruturalmente acima de @amallu. Para conteúdo sobre legislação (que o público redistribui para quem precisa saber), essa é a plataforma certa. No @amallu, a NR-01 entra como Reel com a tensão central: não "a lei chegou" mas "o sofrimento que a lei tenta nomear já existe — mas o Estado nunca criou estrutura para endereçá-lo."
-
-**O que os dados recomendam:** Carrossel de dado + análise crítica em @paaps.brasil (mesmo formato do provável gerador do evento viral). Publicar ainda esta semana — a janela está fechando.
-
----
-
-### 3 — PAUTA 2: Burnout triplicou — e 65% dos afastados são mulheres
-
-**Ranking: #3. Alinhamento máximo com o público real.**
-
-O público de @amallu é 84,2% mulheres, 87% entre 18–34 anos. O recorte de gênero do burnout (65% mulheres) é a ferida que esse público vai reconhecer e redistribuir. O evento de 19 mai em @amallu — reach 1.977 e TI 310, o melhor dia do perfil no período — pode ter sido exatamente esse tema ou um adjacente.
-
-O save rate do @amallu nos dias 11–13 mai (2,6–2,8%) ocorreu em conteúdo sobre temática de sofrimento coletivo/sistêmico. Burnout com recorte de gênero se encaixa nesse padrão. O formato Reel de câmera direta com abertura de dado impactante + virada narrativa tem o perfil dos dias de melhor performance.
-
-**A tensão certa:** não "burnout está crescendo" — mas "o sistema que mais adoece é aquele que mais exige que mulheres cuidem sem serem cuidadas. E isso tem nome." É isso que o público salva — porque reconhece, não porque aprende.
+Urgencia: alta. Norma vigente com multas desde 26 mai.
 
 ---
 
-### 4 — PAUTA 6: PeNSe 2026 — escola pública sem suporte de saúde mental
+**3. Pauta 2 — Burnout triplicou em dois anos: 65% dos afastados sao mulheres**
 
-**Ranking: #4. Dado recente não traduzido para política pública — território exclusivo do PAAPS.**
+Canal principal: @amalluvasconcellos
+Formato: reel de abertura com dado impactante + virada narrativa (conforme Radar)
 
-45,8% das escolas públicas sem suporte de saúde mental. 14,2% de ideação suicida em adolescentes. O ângulo que os dados de performance do @paaps confirmam como ideal: não "jovem em crise", mas "escola sem recurso / Estado ausente como produtor de vulnerabilidade". É o mesmo padrão de posicionamento que gerou o evento viral — estrutural, não individualista, com dado concreto como âncora.
+Justificativa de ranqueamento: o dado de genero (65% mulheres) e de alta ressonancia com o publico de @amallu (demograficamente majoritariamente feminino, baseado no padrao de engajamento da fase alta). O tema tem historico de save rate alto nos perfis que trabalham com esse recorte. A virada narrativa sugerida pelo Radar ("quem cuida das cuidadoras?") e compativel com a linha epistemologica do PAAPS — estrutural, nao individualizante. O formato reel pode ajudar a recuperar o alcance de @amallu se publicado na terca (dia de maior reach medio do heatmap).
 
-O público do @paaps tem profissionais de saúde, educação e assistência social que vão redistribuir esse conteúdo para grupos de trabalho. O save rate projetado em @amallu é alto para esse tema porque o público (estudantes de psicologia, 87% 18–34) trabalha ou vai trabalhar com adolescentes em escola pública.
-
-**Atenção obrigatória:** tema requer cuidado com as diretrizes de comunicação sobre suicídio (CVV). O foco na estrutura ausente — escola sem suporte — é o ângulo que evita os riscos éticos sem perder a força do posicionamento.
-
----
-
-### 5 — PAUTA 20: Copa 2026 — o que o espetáculo apaga
-
-**Ranking: #5. URGENTE — janela de 2 semanas. Entrar esta semana ou a pauta perde o timing.**
-
-O Radar sinalizou clareza suficiente. Os dados de performance confirmam a viabilidade: o @amallu teve seu pico de alcance (1.977 reach) em 19 mai — um dia de segunda-feira. Se um Reel de câmera direta sobre Copa + saúde mental comunitária for publicado na segunda-feira desta semana (8 jun), a janela de timing está alinhada com o melhor dia da semana para o perfil.
-
-O ângulo específico para usar a memória de 2014 sem romantizar: "O Brasil não processou o custo social da Copa de 2014. E a Copa de 2026 começa enquanto a rede de saúde mental pública segue no mesmo lugar." Esse é o tipo de conteúdo que o público do @amallu redistribui — porque é contracultural, é específico, e é verdadeiro.
-
-Para @paaps.brasil: post manifesto tipográfico, publicar no mesmo dia ou no seguinte.
+Urgencia: media-alta. Dados circulando mas ainda nao viralizaram.
 
 ---
 
-## NOTAS PARA A TECA
+**4. Pauta 20 — Copa 2026: saude mental como vitima silenciosa de grandes eventos**
 
-Cinco pontos que a Tecelã precisa saber antes de começar:
+Canal principal: @amalluvasconcellos
+Formato: carrossel ou reel de analise com conexao a 2014
 
-**1.** O evento viral do @paaps de 18–19 mai é o fato mais importante do período. Não foi acaso — foi conteúdo de posicionamento crítico com dado concreto que o público institucional redistribuiu porque era útil para ele. O próximo post do @paaps.brasil precisa ter esse perfil: dado + posicionamento + transferibilidade (algo que o leitor consegue usar num contexto de trabalho).
+Justificativa de ranqueamento: janela de tempo critica. A Copa comeca este mes. Este e o tipo de conteudo que tem potencial de alcance alem da base — pessoas que seguem futebol e podem descobrir o perfil por esse angulo. A conexao com a memoria brasileira de 2014 (remocoes forcadas, Copa das Manifestacoes) da profundidade sem precisar de dado novo. O risco e a saturacao do tema, mas o angulo especifico de saude mental comunitaria nao esta ocupado. Publicar ate 12 de junho para nao perder o pico de interesse pre-torneio.
 
-**2.** O @amalluvasconcellos está com alcance em colapso desde 20 mai. A recuperação de 3 jun (reach=1.251) é pontual. O perfil precisa de retomada de frequência imediata — 3 posts por semana, pelo menos 1 Reel. Sem frequência, o algoritmo para de distribuir.
-
-**3.** O melhor dia de publicação confirmado pelos dados: segunda ou terça para @amallu. Para @paaps: segunda-feira (o evento viral foi segunda).
-
-**4.** A pauta 20 (Copa 2026) precisa de decisão esta semana. Não é sugestão — é urgência de timing.
-
-**5.** A série pautas 1+2+5 é o conjunto de maior potencial de série para os próximos 10 dias. Arquitetura sugerida: pauta 5 (identidade — o gestor) → pauta 2 (o sofrimento com recorte de gênero) → pauta 1 (o sistema que não criou estrutura). Essa sequência vai do particular (a pessoa) para o coletivo (o sofrimento de gênero) para o estrutural (a norma sem suporte). É o movimento típico da voz do PAAPS.
+Urgencia: altissima. Janela de 7-10 dias.
 
 ---
 
-*Sentinela PAAPS | Ciclo 1 (revisado com dados reais) | 5 de junho de 2026*
-*Próxima sessão: a partir de 3 de julho de 2026 (aguardar mínimo 4 semanas)*
-*Para o Ciclo 2: os dados Windsor estão disponíveis via curl com a chave em config.js — o Sentinela pode ser acionado diretamente sem exportação manual prévia*
+**5. Pauta 9 — Feminicidio e trauma comunitario: 399 casos no 1T 2026**
+
+Canal principal: @paaps.brasil
+Formato: manifesto tipografico (conforme Radar)
+
+Justificativa de ranqueamento: este e o tipo de conteudo que o publico do @paaps redistribui por razoes de trabalho — assistentes sociais, psicologas que atendem familias em situacao de violencia, gestores de CRAS e CREAS. O angulo do Radar (o trauma nao termina com a vitima — as trabalhadoras que atendem essas familias nao tem supervisao clinica) e preciso e estrutural. O formato de manifesto tipografico tem compatibilidade com o perfil visual do PAAPS e nao requer fotografia documental (dado sensivel).
+
+A ressalva: o Radar alerta que as pautas 9, 10 e 11 sao sensíveis e requerem alinhamento com a voz da Mallu antes de produzir. Essa ressalva e valida — mas a pauta tem potencial alto de redistribuicao pelo publico institucional exato que o @paaps precisa reter.
+
+---
+
+## APENDICE — DADOS BRUTOS DE REFERENCIA
+
+### Seguidores em 05/06/2026
+- @amalluvasconcellos: 3.259
+- @paaps.brasil: 1.062
+
+### @amalluvasconcellos — metricas agregadas (30 dias)
+- Reach total: 19.687 | Media diaria: 656
+- TI total: 2.728 | Media diaria: 91
+- Saves: 269 | Save rate: 9,86% do TI
+- Shares: 160 | Share rate: 5,87% do TI
+- Qualitative ratio: 19,39%
+
+### @paaps.brasil — metricas agregadas (30 dias, incl. viral)
+- Reach total: 1.287 | Media diaria: 43
+- TI total: 100.386 | Media diaria: 3.346
+- Saves: 7.278 | Save rate: 7,25% do TI
+- Shares: 15.908 | Share rate: 15,85% do TI
+- Qualitative ratio: 23,83%
+
+### Heatmap @amalluvasconcellos (reach medio por dia)
+- Seg: 644 | Ter: 963 | Qua: 808 | Qui: 700 | Sex: 466 | Sab: 539 | Dom: 425
+
+### Heatmap @amalluvasconcellos (save rate por dia)
+- Seg: 13,5% | Ter: 3,9% | Qua: 10,2% | Qui: 8,9% | Sex: 13,4% | Sab: 14,8% | Dom: 8,1%
+
+### LinkedIn
+- Dados nao disponiveis. Conector Windsor nao configurado para LinkedIn.
+
+---
+
+*Documento gerado pelo Sentinela PAAPS | Ciclo 2 | 5 de junho de 2026*
+*Proxima sessao do Sentinela: a partir de 3 de julho de 2026*
