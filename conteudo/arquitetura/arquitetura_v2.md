@@ -79,6 +79,9 @@ Cada canal recebe o briefing do Tradutor e aciona o time de apoio antes de fecha
 
 ---
 
-## Contexto de leitura por agente
+## Convenções de implementação
 
-Cada agente lê o que precisa do `nucleo-comum/`. O roteador completo está em `mapa-de-contexto.md` na raiz do projeto.
+- Subagentes definidos em **`.claude/agents/`** (raiz do projeto)
+- Skills do nucleo-comum pré-carregadas via campo `skills:` no frontmatter de cada subagente
+- Agent teams requerem `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1` em `settings.json`
+- Roteador de contexto: skill `/mapa-de-contexto` em `.claude/skills/`

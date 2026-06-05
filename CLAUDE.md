@@ -2,7 +2,7 @@
 
 Esta pasta contém três projetos distintos que compartilham insumos de marca. Cada projeto tem seu próprio `CLAUDE.md` interno.
 
-**Para agentes:** leia `mapa-de-contexto.md` para saber o que ler dado o que você está fazendo.
+**Para agentes:** invoque `/mapa-de-contexto` para saber o que ler dado o que você está fazendo.
 
 ---
 
@@ -85,9 +85,9 @@ A pasta ainda se chama `SITE PAAPS/` por limitação do ambiente. Para renomear 
 
 ---
 
-## Nota sobre skills do Claude Code
+## Convenções Claude Code
 
-As skills do Claude Code (`.claude/skills/`) precisam estar em pastas `.claude/` para serem descobertas automaticamente. Configuração atual:
-- `.claude/settings.json` e `.claude/settings.local.json` → permanecem na raiz (descobertos pelo Claude Code)
-- `site/.claude/skills/frontend-design.md` → skill do site (descoberta quando trabalhando dentro de `site/`)
-- Novas skills de agentes de conteúdo → serão criadas em `conteudo/agentes/` com formato próprio de CLAUDE.md
+- **Skills** → `.claude/skills/` (raiz) — descobertas automaticamente. Skill ativa: `mapa-de-contexto`
+- **Subagentes** → `.claude/agents/` (raiz) — localização padrão reconhecida pelo Claude Code
+- **Site** → `site/.claude/skills/frontend-design.md` — descoberta quando trabalhando em `site/`
+- **Agent teams** → requerem flag `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1` em settings.json
