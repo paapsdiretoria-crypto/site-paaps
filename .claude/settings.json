@@ -6,6 +6,10 @@
         "hooks": [
           {
             "type": "command",
+            "command": "cd \"/Users/mac/Desktop/SITE PAAPS\"; mkdir -p sessoes; D=$(date '+%Y-%m-%d'); T=$(date '+%H:%M'); F=\"sessoes/sessao-${D}.md\"; test -f \"$F\" || echo \"# Log de Sessão — ${D}\" > \"$F\"; C=$(git status --short 2>/dev/null); if [ -n \"$C\" ]; then echo \"\" >> \"$F\"; echo \"## ${T}\" >> \"$F\"; echo '```' >> \"$F\"; echo \"$C\" >> \"$F\"; echo '```' >> \"$F\"; echo \"\" >> \"$F\"; fi"
+          },
+          {
+            "type": "command",
             "command": "cd \"/Users/mac/Desktop/SITE PAAPS\" && git diff --quiet HEAD 2>/dev/null && git diff --staged --quiet 2>/dev/null || (git add -A && git commit -m \"auto: atualização do site $(date '+%Y-%m-%d %H:%M')\" && git push)"
           }
         ]
