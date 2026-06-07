@@ -195,6 +195,7 @@ A pasta ainda se chama `SITE PAAPS/` por limitação do ambiente. Para renomear 
 | `notion-knowledge-capture` | Capturar insights/decisões da conversa e salvar como página estruturada no Notion (usa MCP Notion) |
 | `notion-research-documentation` | Pesquisar no workspace Notion, sintetizar múltiplas páginas e criar relatório estruturado (usa MCP Notion) |
 | `find-skills` | Descobrir e instalar skills do ecossistema open agent via `npx skills find/add` (vercel-labs/skills) |
+| `paaps-pm-agil` | Gestão de projetos ágil para o PAAPS: ciclo de 8 fases, OKRs 4×3, roadmap, backlog INVEST+MoSCoW+Fibonacci, registro em tempo real no Notion |
 
 ### Hooks ativos (`.claude/settings.json` → evento `Stop`)
 
