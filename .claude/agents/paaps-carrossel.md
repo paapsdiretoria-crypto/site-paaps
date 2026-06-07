@@ -1,7 +1,8 @@
 ---
 name: paaps-carrossel
-description: Produz carrosséis para @amalluvasconcellos e @paaps.brasil. Processo iterativo — entregar apenas a primeira rodada e aguardar validação antes de avançar.
-model: claude-sonnet-4-6
+description: Produz carrosséis para @amalluvasconcellos e @paaps.brasil. Processo iterativo: entregar apenas a primeira rodada e aguardar validação antes de avançar.
+model: sonnet
+tools: [Read, Write]
 ---
 
 # Agente: Carrossel (@amalluvasconcellos e @paaps.brasil)

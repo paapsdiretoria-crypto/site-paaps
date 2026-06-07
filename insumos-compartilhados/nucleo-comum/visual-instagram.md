@@ -8,7 +8,7 @@ Este arquivo é lido pelos **subagentes de canal de Instagram** (Mallu LinkedIn 
 
 ## 1. O Princípio Central
 
-A relação entre fotografia e tipografia no Instagram PAAPS **não é hierárquica — é fusão**. Os dois criam sentido juntos. O *ponto de entrada* (o que o olho vê primeiro) muda por modo. Mas nenhum dos dois é decoração do outro.
+A relação entre fotografia e tipografia no Instagram PAAPS é fusão, não hierarquia. Os dois criam sentido juntos. O *ponto de entrada* (o que o olho vê primeiro) muda por modo. Mas nenhum dos dois é decoração do outro.
 
 ---
 

@@ -10,10 +10,9 @@
 ## Quem é a PAAPS
 
 Negócio social que cria e implementa projetos em psicologia, saúde mental e impacto
-social em rede, desenvolvendo sistemas humanos vivos capazes de sustentar cuidado,
-articulação e capacidade coletiva em contextos institucionais complexos. Atua por meio
-da construção de soluções situadas que fortalecem equipes, vínculos, lideranças e
-capacidades institucionais.
+social em rede. Constrói sistemas humanos vivos capazes de sustentar cuidado,
+articulação e capacidade coletiva em contextos institucionais complexos. Produz soluções
+situadas que fortalecem equipes, vínculos, lideranças e capacidades institucionais.
 
 Posicionamento público:
 "Somos a Rede da Saúde Mental Coletiva para as Prefeituras à prova de futuro.
@@ -23,8 +22,8 @@ Governos, ONGs, ESG e NR01. Gestor, cuide dos seus servidores aqui."
 
 ## Quem é Mallu Vasconcellos
 
-Porta-voz da Psicologia com Impacto Social real. CEO Founder da PAAPS — GovTech de
-Psicologia Social para gestão pública. Psicóloga Social com mais de 5 anos em projetos
+Porta-voz da Psicologia com Impacto Social real. CEO Founder da PAAPS (GovTech de
+Psicologia Social para gestão pública). Psicóloga Social com mais de 5 anos em projetos
 e políticas públicas. Linha de pensamento: psicologia além do consultório e do RH,
 psicologia suleada, impacto sistêmico.
 
@@ -36,7 +35,7 @@ Indo além do consultório ou RH no @paaps.brasil. Comunidade ECOA."
 
 ## Linha epistemológica (vale para TODO conteúdo e análise)
 
-Sempre estrutural e sistêmica — nunca individualista ou meritocrática. O conteúdo
+Estrutural e sistêmica. Nunca individualista ou meritocrática. O conteúdo
 não convence: nomeia. A ferida tocada é sempre coletiva e estrutural, nunca individual
 e de consumo.
 
@@ -51,7 +50,7 @@ e de consumo.
 | ECOA | Comunidade de aprendizagem e vivência prática em Psicologia Social Latina |
 | Periódico da Rede PAAPS | Publicação periódica |
 | Plantão Psicológico | Psicoterapia para servidores públicos |
-| Bela Vista de Minas | Prova de conceito — 5 meses com servidores (case de impacto) |
+| Bela Vista de Minas | Prova de conceito: 5 meses com servidores (case de impacto) |
 
 ---
 
@@ -72,9 +71,9 @@ e de consumo.
 ## Regras de execução por tipo de tarefa
 
 - **Carrossel:** processo minucioso e iterativo. Entregar apenas a primeira rodada e
-  aguardar validação antes de avançar — nunca oferecer o lote inteiro de uma vez.
+  aguardar validação antes de avançar. Nunca oferecer o lote inteiro de uma vez.
 - **Relatórios:** nunca produzir sem screenshots das seções analisadas como evidência.
-  Manter a qualidade analítica do início ao fim — não afrouxar no meio, não resumir
+  Manter a qualidade analítica do início ao fim. Não afrouxar no meio, não resumir
   apressado no final. Cada seção merece a mesma profundidade.
 - **Automação / HTML / código:** Mallu não programa. Nunca deixar entregas com
   placeholders vagos ou instruções que dependam de conhecimento técnico prévio.
@@ -91,7 +90,7 @@ e de consumo.
 
 Antes de gerar qualquer conteúdo ou análise, identificar internamente: canal de destino,
 tom adequado, proibições ativas, risco de desvio para psicoeducação genérica ou
-linguagem coachesca — e só avançar após esse raciocínio.
+linguagem coachesca. Só avançar após esse raciocínio.
 
 ---
 
@@ -161,13 +160,13 @@ git push
 
 ## Arquivos não commitados (ver .gitignore)
 
-- `insumos-compartilhados/fotos/` — acervo de campo (binários grandes)
-- `insumos-compartilhados/identidade-visual/` — assets originais de marca (binários)
-- `insumos-compartilhados/aplicacao-id-visual/` — exemplos de aplicação
+- `insumos-compartilhados/fotos/`: acervo de campo (binários grandes)
+- `insumos-compartilhados/identidade-visual/`: assets originais de marca (binários)
+- `insumos-compartilhados/aplicacao-id-visual/`: exemplos de aplicação
 - `insumos-compartilhados/nossa-camiseta-paaps/`
 - `insumos-compartilhados/nossos-clientes-e-parceiros/`
-- `insumos-compartilhados/docs/*-imagens/` — imagens extraídas dos DOCX
-- `conteudo/dashboard/js/config.js` — chave Windsor AI (nunca commitar)
+- `insumos-compartilhados/docs/*-imagens/`: imagens extraídas dos DOCX
+- `conteudo/dashboard/js/config.js`: chave Windsor AI (nunca commitar)
 
 ---
 
@@ -179,7 +178,7 @@ A pasta ainda se chama `SITE PAAPS/` por limitação do ambiente. Para renomear 
 
 ## Convenções Claude Code
 
-- **Subagentes** → `.claude/agents/` (raiz) — localização padrão reconhecida pelo Claude Code
+- **Subagentes** → `.claude/agents/` (raiz, localização padrão reconhecida pelo Claude Code)
 - **Agent teams** → requerem flag `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1` em settings.json
 
 ### Skills disponíveis (`.claude/skills/`)
@@ -190,7 +189,7 @@ A pasta ainda se chama `SITE PAAPS/` por limitação do ambiente. Para renomear 
 | `evita-padrao-ia-imersao-claude` | Auditar e reescrever texto removendo padrões de IA em PT-BR |
 | `copy-carrossel` | Escrever copy de carrossel para Instagram no tom de voz da Mallu, com revisão anti-IA embutida |
 | `legendas-otimizadas` | Transformar roteiro ou conteúdo pronto em legenda otimizada para Instagram ou TikTok (SEO + GEO + algoritmo) |
-| `frontend-design` *(em `site/`)* | Trabalhar no site — ativa automaticamente nessa pasta |
+| `frontend-design` *(em `site/`)* | Trabalhar no site: ativa automaticamente nessa pasta |
 
 ### Hooks ativos (`.claude/settings.json` → evento `Stop`)
 

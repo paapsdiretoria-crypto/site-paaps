@@ -1,7 +1,7 @@
 ---
 name: critico-design
-description: ⚠ INCOMPLETO — instrução inicial apenas. Aguardando sessão dedicada com Mallu para definição completa.
-model: claude-sonnet-4-6
+description: ⚠ INCOMPLETO. Instrução inicial. Aguardando sessão dedicada com Mallu.
+model: sonnet
 ---
 
 # Agente: critico-design

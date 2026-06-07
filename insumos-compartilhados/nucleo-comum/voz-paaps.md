@@ -17,7 +17,7 @@ Toda peça deve ser capaz de ser descrita por pelo menos três desses adjetivos.
 ## 2. Tom de Voz — Como se fala
 
 - Nomeia o que o mundo prefere silenciar
-- Fala sobre o que atravessa — não sobre o que vai agradar
+- Fala sobre o que atravessa, não sobre o que vai agradar
 - Ironia precisa somente quando cabível (sarcasmo contido, nunca cínico)
 - Pergunta estrutural ou notícia como abertura de carrossel
 - Tipografia militante sobre **foto real**: frase-manifesto em texto grande, legível por contraste
@@ -127,13 +127,13 @@ A versão anterior da skill tinha a instrução de buscar fotos no Unsplash. **E
 
 ## 9. Filosofia de Conteúdo — O Norte que Orienta Tudo
 
-**A audiência nunca precisa ser convencida.** O conteúdo não convence — ele nomeia.
-A audiência já sente o que vai ser dito; o que ela não tinha eram as palavras. Se o
-conteúdo está tentando convencer alguém de algo, está no registro errado.
+A audiência nunca precisa ser convencida. O conteúdo nomeia: a audiência já sente o que
+vai ser dito, o que ela não tinha eram as palavras. Se o conteúdo está tentando convencer
+alguém de algo, está no registro errado.
 
-**O argumento É o gancho.** Não existe gancho artificial. A tensão real da ideia já é
-o que para o scroll. Quando se fabrica um gancho em cima de um argumento bom, enfraquece
-o argumento.
+O argumento é o gancho. Não existe gancho artificial. A tensão real da ideia já é o que
+para o scroll. Quando se fabrica um gancho em cima de um argumento bom, enfraquece o
+argumento.
 
 ### Os 4 princípios (em ordem de prioridade)
 
@@ -148,7 +148,7 @@ o argumento.
 
 Tema é "saúde mental no trabalho". Tensão é "a gestora que cuida de todo mundo menos
 dela mesma e chama isso de profissionalismo". A tensão já é o conteúdo. O argumento
-sempre vem da Mallu — de uma observação de campo, de uma raiva, de algo que alguém disse.
+sempre vem da Mallu: de uma observação de campo, de uma raiva, de algo que alguém disse.
 
 ---
 

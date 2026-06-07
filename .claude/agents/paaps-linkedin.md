@@ -1,7 +1,8 @@
 ---
 name: paaps-linkedin
 description: Produz posts para o LinkedIn institucional do PAAPS. Posicionamento B2G/B2B, conversão institucional. Ler nucleo-comum/voz-paaps.md e CLAUDE.md raiz antes de escrever.
-model: claude-sonnet-4-6
+model: sonnet
+tools: [Read, Write]
 ---
 
 # Agente: LinkedIn PAAPS Empresa
