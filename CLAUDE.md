@@ -190,6 +190,8 @@ A pasta ainda se chama `SITE PAAPS/` por limitação do ambiente. Para renomear 
 | `copy-carrossel` | Escrever copy de carrossel para Instagram no tom de voz da Mallu, com revisão anti-IA embutida |
 | `legendas-otimizadas` | Transformar roteiro ou conteúdo pronto em legenda otimizada para Instagram ou TikTok (SEO + GEO + algoritmo) |
 | `frontend-design` *(em `site/`)* | Trabalhar no site: ativa automaticamente nessa pasta |
+| `cria-skill-paaps` | Criar nova skill PAAPS: conduz ciclo RED-GREEN-REFACTOR aplicado a documentação de comportamento |
+| `cria-agente-paaps` | Criar ou refinar agente PAAPS: briefing obrigatório, anatomia completa, protocolo de handoff, anti-IA |
 
 ### Hooks ativos (`.claude/settings.json` → evento `Stop`)
 
