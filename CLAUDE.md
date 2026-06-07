@@ -192,6 +192,8 @@ A pasta ainda se chama `SITE PAAPS/` por limitação do ambiente. Para renomear 
 | `frontend-design` *(em `site/`)* | Trabalhar no site: ativa automaticamente nessa pasta |
 | `cria-skill-paaps` | Criar nova skill PAAPS: conduz ciclo RED-GREEN-REFACTOR aplicado a documentação de comportamento |
 | `cria-agente-paaps` | Criar ou refinar agente PAAPS: briefing obrigatório, anatomia completa, protocolo de handoff, anti-IA |
+| `notion-knowledge-capture` | Capturar insights/decisões da conversa e salvar como página estruturada no Notion (usa MCP Notion) |
+| `notion-research-documentation` | Pesquisar no workspace Notion, sintetizar múltiplas páginas e criar relatório estruturado (usa MCP Notion) |
 
 ### Hooks ativos (`.claude/settings.json` → evento `Stop`)
 
