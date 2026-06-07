@@ -5,8 +5,6 @@
 > de uma frente (site, conteúdo, instagram) está documentado nos `CLAUDE.md` das
 > subpastas e nos arquivos de `insumos-compartilhados/nucleo-comum/`.
 
-**Para agentes:** invoque `/mapa-de-contexto` para saber o que ler dado o que você está fazendo.
-
 ---
 
 ## Quem é a PAAPS
@@ -188,7 +186,6 @@ A pasta ainda se chama `SITE PAAPS/` por limitação do ambiente. Para renomear 
 
 | Skill | Acionar quando |
 |---|---|
-| `mapa-de-contexto` | Precisar saber quais arquivos ler para uma tarefa |
 | `meta-architect` | Transformar briefing informal em prompt estruturado em XML |
 | `evita-padrao-ia-imersao-claude` | Auditar e reescrever texto removendo padrões de IA em PT-BR |
 | `frontend-design` *(em `site/`)* | Trabalhar no site — ativa automaticamente nessa pasta |
