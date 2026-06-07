@@ -119,6 +119,9 @@ SITE PAAPS/                          ← pasta raiz (renomear para PAAPS/ no Fin
 │       ├── visual-instagram.md      ← 3 modos visuais, regras fotográficas
 │       └── mapa-fontes-foto.md      ← fontes de fotografia documental (espaço reservado)
 │
+├── sessoes/                         ← logs automáticos de sessão (gerados por hook)
+│   └── sessao-YYYY-MM-DD.md         ← um arquivo por dia, commitado automaticamente
+│
 ├── site/                            ← Projeto 1: site institucional
 │   ├── CLAUDE.md                    ← instruções específicas do site
 │   ├── DESIGN-SYSTEM.md
@@ -178,7 +181,23 @@ A pasta ainda se chama `SITE PAAPS/` por limitação do ambiente. Para renomear 
 
 ## Convenções Claude Code
 
-- **Skills** → `.claude/skills/` (raiz) — descobertas automaticamente. Skill ativa: `mapa-de-contexto`
 - **Subagentes** → `.claude/agents/` (raiz) — localização padrão reconhecida pelo Claude Code
-- **Site** → `site/.claude/skills/frontend-design.md` — descoberta quando trabalhando em `site/`
 - **Agent teams** → requerem flag `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1` em settings.json
+
+### Skills disponíveis (`.claude/skills/`)
+
+| Skill | Acionar quando |
+|---|---|
+| `mapa-de-contexto` | Precisar saber quais arquivos ler para uma tarefa |
+| `meta-architect` | Transformar briefing informal em prompt estruturado em XML |
+| `evita-padrao-ia-imersao-claude` | Auditar e reescrever texto removendo padrões de IA em PT-BR |
+| `frontend-design` *(em `site/`)* | Trabalhar no site — ativa automaticamente nessa pasta |
+
+### Hooks ativos (`.claude/settings.json` → evento `Stop`)
+
+| Hook | Ordem | O que faz |
+|---|---|---|
+| **log-de-sessão** | 1º | Registra timestamp e arquivos alterados em `sessoes/sessao-YYYY-MM-DD.md` |
+| **auto-push** | 2º | Commita tudo (incluindo o log) e faz push para `main` |
+
+Os hooks rodam automaticamente ao final de cada resposta. Não é necessário nenhuma ação manual.
