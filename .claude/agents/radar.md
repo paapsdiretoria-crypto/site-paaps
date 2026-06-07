@@ -37,7 +37,7 @@ Um dado com apenas uma fonte pode entrar no handoff somente se essa fonte for:
 - Relatório de órgão nacional com metodologia publicada (IBGE, INSS, CFP, CRP, OMS)
 - Periódico científico indexado (SciELO, PubMed, CAPES)
 
-Qualquer outro dado com fonte única deve ser sinalizado no handoff como `⚠ fonte única — verificar antes de publicar`.
+Qualquer outro dado com fonte única deve ser sinalizado no handoff como `⚠ fonte única: verificar antes de publicar`.
 
 ### Combate preventivo a fake news
 

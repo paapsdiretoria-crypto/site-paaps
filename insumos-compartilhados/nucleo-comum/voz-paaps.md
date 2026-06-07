@@ -21,7 +21,7 @@ Toda peça deve ser capaz de ser descrita por pelo menos três desses adjetivos.
 - Ironia precisa somente quando cabível (sarcasmo contido, nunca cínico)
 - Pergunta estrutural ou notícia como abertura de carrossel
 - Tipografia militante sobre **foto real**: frase-manifesto em texto grande, legível por contraste
-- Assertivo mas acolhedor — denuncia mas parte de um lugar humano
+- Assertivo mas acolhedor: denuncia mas parte de um lugar humano
 - Elogia a brasilidade, o nosso jeitinho
 - Assertivo ≠ agressivo. Texto agressivo demais soa tão artificial quanto texto morno.
 
@@ -42,7 +42,7 @@ Toda peça deve ser capaz de ser descrita por pelo menos três desses adjetivos.
 Estas proibições valem para TODO conteúdo PAAPS, sem exceção. Nenhum agente, em nenhuma circunstância, as ultrapassa.
 
 ### 4.1 Estrutura frasal proibida
-- **NUNCA usar "não é X, é Y"** — considerada antiética e antiprofissional pela Mallu. Nenhuma variação dessa estrutura é aceitável.
+- **NUNCA usar "não é X, é Y"**: considerada antiética e antiprofissional pela Mallu. Nenhuma variação dessa estrutura é aceitável.
 
 ### 4.2 Vocabulário coachesco — BANIDO COMPLETAMENTE
 Proibido usar qualquer dessas palavras ou expressões:
@@ -60,13 +60,13 @@ Proibido usar qualquer dessas palavras ou expressões:
 - E qualquer metáfora que trate o trabalho de comunicação como disputa ou combate
 
 ### 4.4 Linha epistemológica
-A perspectiva é SEMPRE **estrutural e sistêmica**. Nunca individualista. Nunca meritocrática. O problema não é a pessoa — é o sistema que a cerca. A solução também não é individual — é coletiva e política.
+A perspectiva é SEMPRE **estrutural e sistêmica**. Nunca individualista. Nunca meritocrática. O problema está no sistema que cerca a pessoa. A solução é coletiva e política.
 
 ### 4.5 Checagem de dado (responsabilidade do Crítico de Conteúdo)
 **Nenhum número entra numa peça sem fonte verificável.** Antes de publicar qualquer dado:
 - O número precisa ter origem rastreável (órgão oficial, pesquisa publicada, dado checável)
 - Dados próprios do PAAPS (ex: "+56% em Bela Vista de Minas") precisam de período e contexto confirmados
-- Frases de relato/posicionamento ("quando a gestão ignora, a rede adoece") não precisam de fonte — são opinião declarada
+- Frases de relato/posicionamento ("quando a gestão ignora, a rede adoece") não precisam de fonte: são opinião declarada
 - Afirmações do tipo "1ª causa de afastamento" precisam de fonte: INSS/DATAPREV por CID
 
 ---
@@ -97,10 +97,10 @@ A perspectiva é SEMPRE **estrutural e sistêmica**. Nunca individualista. Nunca
 
 | # | Editoria | Formato preferido | Diretriz |
 |---|---|---|---|
-| 1 | Notícias & atualidades | Carrossel estrutural | Abre com pergunta — nunca manchete nua |
+| 1 | Notícias & atualidades | Carrossel estrutural | Abre com pergunta, nunca manchete nua |
 | 2 | Conceitos de psicologia social | Carrossel salvável + tipografia militante | 1 conceito por post, aterra em caso real |
 | 3 | Nossos atores: histórias de pessoas | Foto real + citação direta | Legenda nomeia o sistema, não romantiza |
-| 4 | Rede pública: reflexões | Reel ou carrossel-manifesto | Encerra com proposta ou pergunta — nunca denúncia seca |
+| 4 | Rede pública: reflexões | Reel ou carrossel-manifesto | Encerra com proposta ou pergunta, nunca denúncia seca |
 | 5 | Projetos & eventos PAAPS | Máx 1 a cada 5 posts | Case entra como evidência, não vitrine |
 
 ---
@@ -110,7 +110,7 @@ A perspectiva é SEMPRE **estrutural e sistêmica**. Nunca individualista. Nunca
 | Elemento | Regra |
 |---|---|
 | Manchete | Naming direto, sem retórica vazia |
-| Citação | Real ou conceitual — nunca inventada, sempre atribuída |
+| Citação | Real ou conceitual: nunca inventada, sempre atribuída |
 | Dado | Territorial + tempo sempre ("em Bela Vista de Minas, em 5 meses") |
 | CTA | Proposição, não apelo ("O que o seu município está fazendo?") |
 | Crédito | `@paaps.brasil · [tema do carrossel]` |
@@ -141,8 +141,8 @@ argumento.
    de consumo. Quanto mais específica e estrutural a ferida, mais poderoso o conteúdo.
 2. **Desafia o senso comum da psicologia hegemônica.** A contradição precisa aparecer
    nos primeiros 3 segundos / primeiro slide.
-3. **Clareza instantânea — uma ideia só.** Uma ideia por reel, uma tensão por carrossel.
-4. **Loop que emerge da tensão — nunca fabricado.** Nada de "você sabia que...".
+3. **Clareza instantânea: uma ideia só.** Uma ideia por reel, uma tensão por carrossel.
+4. **Loop que emerge da tensão, nunca fabricado.** Nada de "você sabia que...".
 
 ### Tema vs. tensão
 

@@ -1,6 +1,6 @@
 # Visual Instagram — Os Três Modos e as Regras Fotográficas
 
-Este arquivo é lido pelos **subagentes de canal de Instagram** (Mallu LinkedIn usa apenas parcialmente — ver nota ao final). Define os três modos visuais do Instagram PAAPS, as regras fotográficas universais e os enquadramentos.
+Este arquivo é lido pelos **subagentes de canal de Instagram** (Mallu LinkedIn usa apenas parcialmente: ver nota ao final). Define os três modos visuais do Instagram PAAPS, as regras fotográficas universais e os enquadramentos.
 
 **Fonte:** Parte 8 da skill paaps-brand-design (desmembrada em jun/2026).
 
@@ -17,7 +17,7 @@ A relação entre fotografia e tipografia no Instagram PAAPS é fusão, não hie
 ### MODO 1 — PALAVRA-MANIFESTO
 **Referência:** @despatologiza
 
-A tipografia domina. A foto é testemunha — pequena, em P&B, encravada no meio do texto.
+A tipografia domina. A foto é testemunha: pequena, em P&B, encravada no meio do texto.
 
 ```
 ESTRUTURA:
@@ -98,9 +98,9 @@ Para o workflow de produção do carrossel no Canva (template, tipos de slide, p
 
 Valem para qualquer modo.
 
-- **Sempre P&B ou com tratamento de cor contido** — nunca filtros saturados
+- **Sempre P&B ou com tratamento de cor contido:** nunca filtros saturados
 - **Fotos de campo em prioridade** sobre qualquer outra fonte (ver hierarquia em `mapa-fontes-foto.md`)
-- **Pessoas reais, ambientes reais** — reuniões, rodas de conversa, territórios, equipamentos públicos
+- **Pessoas reais, ambientes reais:** reuniões, rodas de conversa, territórios, equipamentos públicos
 - **Escala humana:** rostos, mãos, detalhes do cotidiano do cuidado
 - **Quando não há foto:** tipografia como protagonista absoluta (Modo 1)
 
@@ -127,6 +127,6 @@ Valem para qualquer modo.
 
 **@paaps.brasil** usa os três modos com igual frequência.
 
-**@amalluvasconcellos:** o perfil de Mallu é mais pessoal — voz na primeira pessoa, mais próxima do público. O Modo 1 (Palavra-Manifesto) e o Modo 2 (Foto-Documento) se aplicam diretamente. O Modo 3 (Carrossel Estrutural) também, mas com tom mais reflexivo e menos institucional. As regras fotográficas são as mesmas — nunca stock, sempre real.
+**@amalluvasconcellos:** o perfil de Mallu é mais pessoal, voz na primeira pessoa, mais próxima do público. O Modo 1 (Palavra-Manifesto) e o Modo 2 (Foto-Documento) se aplicam diretamente. O Modo 3 (Carrossel Estrutural) também, mas com tom mais reflexivo e menos institucional. As regras fotográficas são as mesmas: nunca stock, sempre real.
 
 O tom de voz específico de Mallu (pessoal, reflexivo, comprometido) está em `conteudo/instagram/amalluvasconcellos/CLAUDE.md`.

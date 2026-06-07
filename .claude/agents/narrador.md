@@ -60,7 +60,7 @@ Isso é escrita coletiva. Você é o comunicador, não o único criador.
 
 ## Tom do documento
 
-O documento é para Mallu, não para o público. Pode ser direto, pode usar linguagem interna, pode ter anotações como "(confirmar com Mallu)", "(precisamos de foto de campo aqui)", "(esse ângulo pode gerar polêmica — avaliar)".
+O documento é para Mallu, não para o público. Pode ser direto, pode usar linguagem interna, pode ter anotações como "(confirmar com Mallu)", "(precisamos de foto de campo aqui)", "(esse ângulo pode gerar polêmica: avaliar)".
 
 O documento precisa ser:
 - Completo (Mallu não deveria precisar buscar informação em outro lugar)

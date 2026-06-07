@@ -55,7 +55,7 @@ echo "30 dias:" && python3 -c "import json; d=json.load(open('/tmp/windsor_30d.j
 echo "7 dias:"  && python3 -c "import json; d=json.load(open('/tmp/windsor_7d.json')); print(len(d['data']), 'registros')"
 ```
 
-**Nota sobre total_interactions:** o Windsor agrega interações acumuladas de todos os posts ativos em cada dia — não apenas os publicados naquele dia. Use para detectar eventos de redistribuição e cauda longa. Para taxas, use likes + comments + saves + shares diretamente.
+**Nota sobre total_interactions:** o Windsor agrega interações acumuladas de todos os posts ativos em cada dia, não apenas os publicados naquele dia. Use para detectar eventos de redistribuição e cauda longa. Para taxas, use likes + comments + saves + shares diretamente.
 
 ### 1.2 — Análise estatística (Python)
 
@@ -148,7 +148,7 @@ curl -s "https://connectors.windsor.ai/linkedin?api_key=${API_KEY}&date_from=202
 python3 -m json.tool /tmp/windsor_linkedin.json | head -40
 ```
 
-Se contiver `"error"`, registre: *"LinkedIn não conectado — reconectar em https://onboard.windsor.ai?datasource=linkedin"* e verifique:
+Se contiver `"error"`, registre: *"LinkedIn não conectado. Reconectar em https://onboard.windsor.ai?datasource=linkedin"* e verifique:
 ```
 conteudo/instagram/amalluvasconcellos/analises/linkedin-*.md
 conteudo/instagram/paaps.brasil/analises/linkedin-*.md
@@ -162,7 +162,7 @@ conteudo/instagram/amalluvasconcellos/analises/posts-YYYY-WW.md
 conteudo/instagram/paaps.brasil/analises/posts-YYYY-WW.md
 ```
 
-Se ausentes, registre: *"Posts sem registro — cruzamento tema×métricas indisponível neste ciclo."*
+Se ausentes, registre: *"Posts sem registro. Cruzamento tema×métricas indisponível neste ciclo."*
 
 ### 1.5 — Ler output do Radar
 
@@ -200,26 +200,26 @@ Antes de mapear por canal, fixe o padrão absoluto de qualidade que guia tudo:
 
 ### Anatomia padrão de um carrossel PAAPS
 
-Esta estrutura pode e deve variar — mas qualquer variação precisa de razão explícita.
+Esta estrutura pode e deve variar, mas qualquer variação precisa de razão explícita.
 
 | Slide | Função | Regra |
 |---|---|---|
 | **Capa** | Para o scroll | Uma tensão, não uma informação. Uma frase que nomeia uma ferida coletiva ou desafia um senso comum. Nunca manchete nua. |
 | **Slides 2–N** | Desenvolve | Cada slide = uma ideia completa. Não tópicos. Não bullets. Uma ideia com argumento. Transição entre slides deve ser lógica e emocional ao mesmo tempo. |
-| **Penúltimo** | Virada | O ângulo específico do PAAPS — o que só quem esteve no campo, na política pública, na rede, pode dizer. |
+| **Penúltimo** | Virada | O ângulo específico do PAAPS: o que só quem esteve no campo, na política pública, na rede, pode dizer. |
 | **Último** | Proposição | Uma pergunta que abre, não fecha. Uma afirmação que convida à ação sem apelar. Nunca CTA de marketing ("clique aqui", "siga o perfil"). |
 
 ---
 
 ### Mapeamento por canal — o que os dados ensinam
 
-Para cada canal, responda com precisão — baseada nos dados desta sessão E no que já foi consolidado no MEMORY.md:
+Para cada canal, responda com precisão: baseada nos dados desta sessão e no que já foi consolidado no MEMORY.md.
 
 #### @amalluvasconcellos
 
 - **Número de slides que maximiza saves:** qual faixa (5, 7, 10, 12 slides) está correlacionada com save rate alto?
 - **Abertura que para o scroll:** questão estrutural, afirmação cortante, ou dado alarmante? O que os picos de reach têm em comum na capa?
-- **Tom que gera comments:** quando o público comenta, o que foi dito? Qual tom provocou resposta — crítico, didático, pessoal, político?
+- **Tom que gera comments:** quando o público comenta, o que foi dito? Qual tom provocou resposta (crítico, didático, pessoal, político)?
 - **O que mata o engajamento:** quais formatos ou tons aparecem nos vales de reach?
 - **Melhor dia e horário:** o heatmap confirma o padrão anterior ou há variação?
 - **Save rate vs. share rate:** este perfil salva mais (conteúdo de referência) ou compartilha mais (conteúdo de identidade)? Isso muda com o tema?
@@ -229,16 +229,16 @@ Para cada canal, responda com precisão — baseada nos dados desta sessão E no
 - **Diferença de formato em relação a @amallu:** o que funciona aqui que não funciona lá, e vice-versa?
 - **Cauda longa viral:** o pico de maio ainda está ativo? O piso subiu ou voltou ao nível anterior?
 - **Tema × alcance:** quais temas geraram picos? Há padrão de assunto (legislação, caso de campo, dado de pesquisa)?
-- **Engajamento qualitativo:** saves altos com reach baixo indicam público menor mas comprometido — isso está acontecendo?
+- **Engajamento qualitativo:** saves altos com reach baixo indicam público menor mas comprometido. Isso está acontecendo?
 - **Frequência ótima:** qual a frequência de publicação que mantém o baseline sem canibalizar posts anteriores?
 
 #### LinkedIn Mallu
 
 (Se dados disponíveis)
-- **Impressões × reações:** o LinkedIn tem leitura alta e reação baixa — isso é normal, mas há threshold de reação que indica que o post atingiu um tomador de decisão?
-- **Comments como sinal:** um comment no LinkedIn vale mais do que 10 likes — o que gerou comments? Qual posicionamento?
-- **Formato de carrossel no LinkedIn:** o LinkedIn exibe carrosséis como PDF. Quais ajustes são necessários — texto maior (legível em tela menor), slides mais enxutos, menos elementos por slide?
-- **Tom técnico vs. tom de campo:** qual ressoou mais — dado de pesquisa ou relato de implementação?
+- **Impressões × reações:** o LinkedIn tem leitura alta e reação baixa (isso é normal), mas há threshold de reação que indica que o post atingiu um tomador de decisão?
+- **Comments como sinal:** um comment no LinkedIn vale mais do que 10 likes. O que gerou comments? Qual posicionamento?
+- **Formato de carrossel no LinkedIn:** o LinkedIn exibe carrosséis como PDF. Quais ajustes são necessários: texto maior (legível em tela menor), slides mais enxutos, menos elementos por slide?
+- **Tom técnico vs. tom de campo:** qual ressoou mais, dado de pesquisa ou relato de implementação?
 
 #### LinkedIn PAAPS
 
@@ -269,9 +269,9 @@ Para cada uma das 5 pautas, entregue:
 **Arco emocional do carrossel:**
 - Slide 1 (capa): [tensão]
 - Slides 2–3: [o que o leitor já sente, nomeado com mais precisão do que ele conseguia nomear]
-- Slides 4–5: [o que o leitor ainda não sabe — a virada, o dado, o caso, o ângulo estrutural]
-- Slide N-1 (penúltimo): [o que só o PAAPS pode dizer — baseado em campo, em método, em teoria suleada]
-- Slide N (último): [a proposição — aberta, afirmativa, sem CTA genérico]
+- Slides 4–5: [o que o leitor ainda não sabe: a virada, o dado, o caso, o ângulo estrutural]
+- Slide N-1 (penúltimo): [o que só o PAAPS pode dizer: baseado em campo, em método, em teoria suleada]
+- Slide N (último): [a proposição: aberta, afirmativa, sem CTA genérico]
 
 **Instrução tipográfica:**
 - Capa: [tamanho do texto, peso, cor de fundo, presença ou ausência de foto]
@@ -306,7 +306,7 @@ O documento deve conter as 4 partes estruturadas: análise de dados + mapeamento
 Ao finalizar, atualize `.claude/agent-memory/sentinela/MEMORY.md` com:
 - Data da sessão
 - Baselines confirmados por perfil (reach médio, threshold viral, qualitative ratio)
-- Atualização do mapeamento de formato por canal — o que esta sessão confirmou, refutou ou descobriu de novo
+- Atualização do mapeamento de formato por canal: o que esta sessão confirmou, refutou ou descobriu de novo
 - Teses abertas que continuam sendo testadas
 - Padrões de dia e horário por perfil
 - O que mudou em relação ao ciclo anterior

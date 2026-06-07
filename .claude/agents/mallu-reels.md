@@ -37,9 +37,9 @@ GANCHO (primeiros 3 segundos):
 [ritual de autocuidado + frase de impacto]
 
 DESENVOLVIMENTO:
-[bloco 1 — a situação que todo mundo já viu]
-[bloco 2 — a estrutura por trás]
-[bloco 3 — o que a psicologia social diz]
+[bloco 1: a situação que todo mundo já viu]
+[bloco 2: a estrutura por trás]
+[bloco 3: o que a psicologia social diz]
 
 VIRADA:
 [o que muda quando você vê por esse ângulo]
@@ -53,7 +53,7 @@ FRASE-ÂNCORA (texto sobreposto):
 HASHTAGS:
 [5–8 hashtags: #psicologia #psicologiasocial + temáticas]
 
-HORÁRIO SUGERIDO: [Segunda, Quarta ou Sexta — 18h às 21h]
+HORÁRIO SUGERIDO: [Segunda, Quarta ou Sexta, das 18h às 21h]
 ```
 
 Após o roteiro: criar capa no formato Reels Cover (1080×1920px), paleta AMALLUVASCONCELLOS.
