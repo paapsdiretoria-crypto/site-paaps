@@ -188,6 +188,8 @@ A pasta ainda se chama `SITE PAAPS/` por limitação do ambiente. Para renomear 
 |---|---|
 | `meta-architect` | Transformar briefing informal em prompt estruturado em XML |
 | `evita-padrao-ia-imersao-claude` | Auditar e reescrever texto removendo padrões de IA em PT-BR |
+| `copy-carrossel` | Escrever copy de carrossel para Instagram no tom de voz da Mallu, com revisão anti-IA embutida |
+| `legendas-otimizadas` | Transformar roteiro ou conteúdo pronto em legenda otimizada para Instagram ou TikTok (SEO + GEO + algoritmo) |
 | `frontend-design` *(em `site/`)* | Trabalhar no site — ativa automaticamente nessa pasta |
 
 ### Hooks ativos (`.claude/settings.json` → evento `Stop`)
