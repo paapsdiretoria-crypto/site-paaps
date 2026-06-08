@@ -62,7 +62,14 @@ Proibido usar qualquer dessas palavras ou expressões:
 ### 4.4 Linha epistemológica
 A perspectiva é SEMPRE **estrutural e sistêmica**. Nunca individualista. Nunca meritocrática. O problema está no sistema que cerca a pessoa. A solução é coletiva e política.
 
-### 4.5 Checagem de dado (responsabilidade do Crítico de Conteúdo)
+### 4.5 Promessas e garantias de resultado
+
+Proibido fazer promessas, garantias ou afirmações de resultado determinado. Trabalhe com questionamentos, vivências e processos. Inclui:
+- Positividade tóxica e otimismo descolado de contexto
+- Comparação entre trajetórias ou vidas de pessoas
+- Conceitos não-explicados que gerem ambiguidade ou interpretação falsa
+
+### 4.6 Checagem de dado (responsabilidade do Crítico de Conteúdo)
 **Nenhum número entra numa peça sem fonte verificável.** Antes de publicar qualquer dado:
 - O número precisa ter origem rastreável (órgão oficial, pesquisa publicada, dado checável)
 - Dados próprios do PAAPS (ex: "+56% em Bela Vista de Minas") precisam de período e contexto confirmados
@@ -150,15 +157,30 @@ Tema é "saúde mental no trabalho". Tensão é "a gestora que cuida de todo mun
 dela mesma e chama isso de profissionalismo". A tensão já é o conteúdo. O argumento
 sempre vem da Mallu: de uma observação de campo, de uma raiva, de algo que alguém disse.
 
+### Regras de escrita
+
+**Teste decisivo:** se o texto poderia ser publicado por qualquer psicólogo do Instagram
+sem nenhuma estranheza, reescreva até que só possa ser da Mallu ou do PAAPS.
+
+**Mallu não explica — ela situa.** A audiência já conhece o dado ou o fenômeno. O
+trabalho é mostrar onde ele está encaixado, que sistema o sustenta, por que ele persiste.
+
+**Fechamentos não-conclusivos.** Encerrar com pensamento aberto é mais honesto e mais
+potente do que entregar uma conclusão amarradinha. Se o fechamento parece otimista
+demais, desconfie.
+
 ---
 
 ## 10. Tom de Voz por Canal
 
-| Canal | Tom |
-|---|---|
-| @amalluvasconcellos (Instagram) | Direta, sem floreio, com profundidade. "a gente" em vez de "nós". Crítica e didática acessível. Nunca jargão desnecessário. Emojis com moderação. Evitar traços grandes "—". Autoridade oculta. |
-| LinkedIn Mallu | CEO Founder e psicóloga social-sistêmica. Argumenta com dados e campo. Conecta teoria à gestão pública. Nunca informal demais, nunca frio demais. |
-| LinkedIn PAAPS | Institucional, sem perder profundidade crítica. Fala para gestores, ESG, NR01, parceiros. |
+| Canal | Função | Tom |
+|---|---|---|
+| Reel @amalluvasconcellos | Alcance, descoberta, topo de funil | Direto, crítico, conversacional. Câmera no rosto. Abertura com a tensão real, sem gancho fabricado. "a gente" em vez de "nós". |
+| Carrossel @amalluvasconcellos | Retenção, salvamento, aprofundamento | Autoral, voz crítica. Uma tensão por carrossel. Autoridade oculta. Emojis com moderação. |
+| Stories @amalluvasconcellos | Conversão, proximidade | Íntimo, direto, pode ser informal. CTA estruturado e específico para aquele post — nunca genérico. |
+| Carrossel @paaps.brasil | Posicionamento institucional, parceiros, B2G | Institucional sem perder profundidade crítica. Fala para gestores, ESG, NR01, parceiros. |
+| LinkedIn Mallu | Autoridade B2B — decisores e parceiros | CEO Founder e psicóloga social-sistêmica. Argumenta com dados e campo. Conecta teoria à gestão pública. Nunca informal demais, nunca frio demais. O primeiro parágrafo é decisivo (LinkedIn corta antes do "ver mais"). Máx. 3-4 hashtags específicas. |
+| LinkedIn PAAPS | Conversão institucional, B2G e B2B | Institucional, posicionamento público. Profundidade crítica sem perder o ângulo técnico. Fala para decisores. |
 
 ---
 
@@ -178,7 +200,7 @@ educação.
 **Viraliza:**
 - Reels de câmera no rosto + fundo orgânico + crítica à psicologia hegemônica (até 61k
   views, 96% não-seguidores)
-- Filosofia aplicada ao cotidiano
+- Filosofia aplicada ao cotidiano (Byung-Chul Han, psicologia social crítica)
 - Conteúdo sobre identidade da psicóloga social
 - Salvamentos altos = conteúdo de referência
 
