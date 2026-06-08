@@ -110,6 +110,8 @@ Verifique especificamente:
 9. Refine para fechar brechas. Não para adicionar escopo novo
 10. Passe pela auditoria anti-IA
 11. Salve em `.claude/skills/nome-da-skill.md`
+12. Adicione a skill na tabela do CLAUDE.md raiz
+13. Registre no Banco de Skills do Notion (ver Passo 12 abaixo)
 
 ---
 
@@ -120,6 +122,25 @@ Skills PAAPS ficam em `.claude/skills/` na raiz do projeto.
 Skills específicas para o site ficam em `site/.claude/skills/`.
 
 Após salvar, adicione a skill na tabela de skills disponíveis no CLAUDE.md raiz.
+
+---
+
+## Passo 12 — Registrar no Banco de Skills (Notion)
+
+Após salvar o arquivo, registrar a skill no Banco de Skills do Notion usando o MCP Notion (`notion-create-pages`):
+
+**Database:** `collection://9df44e0a-a9ea-4308-aad9-53f2416a8bb0`
+
+**Propriedades obrigatórias:**
+- `Nome`: nome da skill (kebab-case)
+- `Status`: "Ativa"
+- `Categoria`: "Voz e conteúdo" / "Construção de agentes" / "Gestão de projetos" / "Pesquisa e Notion" / "Infraestrutura" / "Ecossistema externo"
+- `Arquivo`: caminho relativo (ex: `.claude/skills/nome.md`)
+- `Quando acionar`: extraído da `description` do frontmatter
+
+**Conteúdo da página:** incluir o arquivo completo da skill.
+
+Este passo é obrigatório. Skill sem registro no Notion não é visível para Mallu revisar e aprovar.
 
 ---
 

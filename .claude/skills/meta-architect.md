@@ -24,3 +24,18 @@ estruturadas em XML, prontas para qualquer LLM (incluindo Claude no Chrome).
 
 As mesmas do `CLAUDE.md` raiz: nenhuma linguagem coachesca, nenhuma metáfora de guerra,
 nenhuma estrutura "não é X, é Y" embutida nos prompts gerados.
+
+## Registro no Banco de Prompts (obrigatório ao entregar prompt completo)
+
+Quando um prompt completo e elaborado for entregue (system prompt estruturado em XML, prompt de agente completo, prompt de análise, etc.), registrar no Banco de Prompts do Notion usando MCP Notion (`notion-create-pages`):
+
+**Database:** `collection://23944cb5-2e00-83dc-bb18-87a4f1a9aeb8`
+
+**Propriedades:**
+- `Nome`: título descritivo do prompt
+- `Status`: "Ativo"
+- `O que faz`: 1-2 frases descrevendo o objetivo e o resultado do prompt
+
+**Conteúdo da página:** incluir o prompt completo.
+
+Não registrar prompts curtos ou de uma linha. Registrar apenas prompts que têm estrutura completa e serão reutilizados.

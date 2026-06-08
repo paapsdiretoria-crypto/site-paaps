@@ -178,6 +178,29 @@ Se Mallu pedir revisão, refaça e reapresente. Não avance para o próximo agen
 
 ---
 
+## Passo 7 — Registrar no Banco de Agentes (Notion)
+
+Após aprovação explícita de Mallu, registrar o agente no Banco de Agentes do Notion usando o MCP Notion (`notion-create-pages`):
+
+**Database:** `collection://36ec6a72-659c-4353-ac2f-7a8d4f5192c6`
+
+**Propriedades obrigatórias:**
+- `Nome`: nome do agente (kebab-case)
+- `Status`: "Ativo" (se completo) ou "Incompleto"
+- `Camada`: "Inteligência" / "Produção" / "Apoio" / "Captação"
+- `Arquivo`: caminho relativo (ex: `.claude/agents/nome.md`)
+- `Tools`: lista das ferramentas declaradas no frontmatter
+- `Recebe de`: de qual agente ou fonte recebe input
+- `Passa para`: para qual agente ou destino passa o output
+- `Memory`: `__YES__` se `memory: project` no frontmatter
+- `Aprovado por Mallu`: `__YES__` após aprovação explícita
+
+**Conteúdo da página:** incluir o arquivo completo do agente.
+
+Este passo é obrigatório. Agente sem registro no Notion não é visível para Mallu aprovar.
+
+---
+
 ## Referência rápida: agentes da cadeia principal
 
 | Agente | Função | Recebe de | Passa para |
