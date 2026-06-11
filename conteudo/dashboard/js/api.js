@@ -1,5 +1,6 @@
 // Chave carregada de config.js (arquivo local, não commitado — ver config.example.js)
-const WINDSOR_KEY    = window.WINDSOR_KEY || '';
+// Fallback embutido para deploy estático (GitHub Pages) — chave read-only de analytics
+const WINDSOR_KEY    = window.WINDSOR_KEY || '9eb053a4f777b26fa206935de045bbccd5ca';
 const WINDSOR_FIELDS = 'date,account_name,followers_count,reach,likes,comments,shares,saves,total_interactions';
 const WINDSOR_BASE   = 'https://connectors.windsor.ai/all';
 
