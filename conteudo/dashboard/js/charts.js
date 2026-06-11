@@ -223,6 +223,43 @@ function renderViralDecay(rows) {
   });
 }
 
+// ─── MODULE: Impressões diárias LinkedIn ──────────────────
+function renderLinkedInChart(rows) {
+  destroyChart('linkedin');
+  const ctx = document.getElementById('liImprChart');
+  if (!ctx || rows.length === 0) return;
+  const LI_BLUE = '#0077b5';
+  chartInstances['linkedin'] = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: rows.map(r => fmtDate(r.date)),
+      datasets: [{
+        label: 'Impressões',
+        data: rows.map(r => r.account_analytics_impression_count || 0),
+        borderColor: LI_BLUE,
+        backgroundColor: 'rgba(0,119,181,0.07)',
+        borderWidth: 2.5, fill: true, tension: 0.3,
+        pointRadius: 0, pointHoverRadius: 5,
+        pointHoverBackgroundColor: LI_BLUE,
+        spanGaps: true,
+      }],
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      scales: {
+        x: { grid: { color: 'rgba(187,173,162,0.15)', drawTicks: false },
+             ticks: { maxTicksLimit: 8, maxRotation: 0 }, border: { display: false } },
+        y: { grid: { color: 'rgba(187,173,162,0.15)', drawTicks: false },
+             ticks: { callback: v => fmtNum(v) }, border: { display: false }, beginAtZero: true },
+      },
+      plugins: {
+        tooltip: { callbacks: { label: item => ` ${fmtNum(item.raw)} impressões` } },
+      },
+    },
+  });
+}
+
 // ─── Sparklines (inline SVG — sem Chart.js) ───────────────
 function sparklineSVG(values, color) {
   if (!values || values.length < 2) return '';

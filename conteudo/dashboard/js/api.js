@@ -1,15 +1,61 @@
 // Chave carregada de config.js (arquivo local, não commitado — ver config.example.js)
 // Fallback embutido para deploy estático (GitHub Pages) — chave read-only de analytics
 const WINDSOR_KEY    = window.WINDSOR_KEY || '9eb053a4f777b26fa206935de045bbccd5ca';
-const WINDSOR_FIELDS = 'date,account_name,followers_count,reach,likes,comments,shares,saves,total_interactions';
 const WINDSOR_BASE   = 'https://connectors.windsor.ai/all';
 
+const INSTAGRAM_FIELDS = 'date,account_name,followers_count,reach,likes,comments,shares,saves,total_interactions';
+const LINKEDIN_FIELDS  = 'date,account_name,organization_follower_count,account_analytics_impression_count,account_analytics_click_count,account_analytics_like_count,account_analytics_comment_count,account_analytics_share_count,account_analytics_engagement,followers_gain_organic';
+
 async function fetchInsights(datePreset = 'last_30d') {
-  const url = `${WINDSOR_BASE}?api_key=${WINDSOR_KEY}&date_preset=${datePreset}&fields=${WINDSOR_FIELDS}&datasource=instagram_insights`;
+  const url = `${WINDSOR_BASE}?api_key=${WINDSOR_KEY}&date_preset=${datePreset}&fields=${INSTAGRAM_FIELDS}&datasource=instagram_insights`;
   const res = await fetch(url);
   if (!res.ok) throw new Error(`Windsor API erro ${res.status}`);
   const json = await res.json();
   return json.data || [];
+}
+
+async function fetchLinkedIn(datePreset = 'last_30d') {
+  const url = `${WINDSOR_BASE}?api_key=${WINDSOR_KEY}&date_preset=${datePreset}&fields=${LINKEDIN_FIELDS}&datasource=linkedin_organic`;
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`Windsor API erro ${res.status}`);
+  const json = await res.json();
+  return json.data || [];
+}
+
+function processLinkedIn(rawData) {
+  const rows = rawData
+    .filter(r => r.date && r.account_analytics_impression_count !== null && r.account_analytics_impression_count !== undefined)
+    .sort((a, b) => a.date.localeCompare(b.date));
+
+  const latestFollowers = rawData.reduce((acc, r) =>
+    (r.organization_follower_count > 0 ? r.organization_follower_count : acc), 0);
+
+  const totals = {
+    impressions:     _sum(rows, 'account_analytics_impression_count'),
+    clicks:          _sum(rows, 'account_analytics_click_count'),
+    likes:           _sum(rows, 'account_analytics_like_count'),
+    comments:        _sum(rows, 'account_analytics_comment_count'),
+    shares:          _sum(rows, 'account_analytics_share_count'),
+    followers_gain:  _sum(rows, 'followers_gain_organic'),
+  };
+
+  const engValues = rows.map(r => r.account_analytics_engagement || 0).filter(v => v > 0);
+  const avgEngagement = engValues.length > 0
+    ? engValues.reduce((s, v) => s + v, 0) / engValues.length
+    : 0;
+
+  // Semana a semana (metade do período)
+  const half = Math.floor(rows.length / 2);
+  const cur  = rows.slice(half);
+  const prv  = rows.slice(0, half);
+  const wow  = {};
+  ['impressions','clicks'].forEach(m => {
+    const field = m === 'impressions' ? 'account_analytics_impression_count' : 'account_analytics_click_count';
+    const c = _sum(cur, field), p = _sum(prv, field);
+    wow[m] = { current: c, previous: p, pct: p > 0 ? (c - p) / p * 100 : 0 };
+  });
+
+  return { rows, totals, avgEngagement, latestFollowers, wow };
 }
 
 function processData(rawData) {
