@@ -182,6 +182,34 @@ function renderWoW() {
   }).join('');
 }
 
+// ─── Render LinkedIn ─────────────────────────────────────
+function renderLinkedIn() {
+  const li = dashState.linkedInProcessed;
+  if (!li) return;
+
+  const set = (id, v) => { const e = document.getElementById(id); if (e) e.textContent = v; };
+
+  set('li-followers',   fmtNum(li.latestFollowers));
+  set('li-impressions', fmtNum(li.totals.impressions));
+  set('li-clicks',      fmtNum(li.totals.clicks));
+  set('li-likes',       fmtNum(li.totals.likes));
+  set('li-comments',    fmtNum(li.totals.comments));
+  set('li-shares',      fmtNum(li.totals.shares));
+
+  const gain = li.totals.followers_gain;
+  set('li-growth', (gain >= 0 ? '+' : '') + fmtNum(gain));
+
+  // Engajamento: Windsor retorna PERCENT como decimal (0–1)
+  const engPct = li.avgEngagement > 1 ? li.avgEngagement : li.avgEngagement * 100;
+  set('li-engagement', fmtPct(engPct));
+
+  // WoW badges
+  const wowEl = document.getElementById('li-wow-impressions');
+  if (wowEl && li.wow.impressions) wowEl.innerHTML = badgeHtml(li.wow.impressions.pct);
+
+  renderLinkedInChart(li.rows);
+}
+
 // ─── Init ────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   wireFilters();

@@ -5,6 +5,7 @@ const dashState = {
   engagementAccount: 'paaps.brasil',
   rawData: null,
   processed: null,
+  linkedInProcessed: null,
   drillDate: null,
 };
 
@@ -27,8 +28,14 @@ function applyFilters() {
 async function loadData() {
   showLoading(true);
   try {
-    dashState.rawData = await fetchInsights(dashState.datePreset);
+    const [igData, liData] = await Promise.all([
+      fetchInsights(dashState.datePreset),
+      fetchLinkedIn(dashState.datePreset),
+    ]);
+    dashState.rawData = igData;
+    dashState.linkedInProcessed = processLinkedIn(liData);
     applyFilters();
+    renderLinkedIn();
     setLastUpdated();
   } catch (e) {
     console.error('Erro Windsor API:', e);
