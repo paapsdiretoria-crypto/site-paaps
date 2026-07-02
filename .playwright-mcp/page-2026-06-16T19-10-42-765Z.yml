@@ -1,0 +1,503 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - link [ref=e4] [cursor=pointer]:
+        - /url: "#search-lightbox"
+        - button [ref=e5]
+      - button [ref=e6] [cursor=pointer]
+    - navigation [ref=e8]:
+      - list [ref=e9]:
+        - listitem [ref=e10]:
+          - link "Home" [ref=e11] [cursor=pointer]:
+            - /url: https://ofuturodascoisas.com
+        - listitem [ref=e12]:
+          - link "Quem somos" [ref=e13] [cursor=pointer]:
+            - /url: https://ofuturodascoisas.com/quem-somos/
+        - listitem [ref=e14]:
+          - link "Conteúdos" [ref=e15] [cursor=pointer]:
+            - /url: https://ofuturodascoisas.com/conteudos/
+        - listitem [ref=e16]:
+          - link "Rotas & Mapas" [ref=e17] [cursor=pointer]:
+            - /url: https://assinatura.ofuturodascoisas.com/
+        - listitem [ref=e18]:
+          - link "Manifesto" [ref=e19] [cursor=pointer]:
+            - /url: https://ofuturodascoisas.com/manifesto/
+        - listitem [ref=e20]:
+          - link "Contato" [ref=e21] [cursor=pointer]:
+            - /url: https://ofuturodascoisas.com/contato/
+    - generic [ref=e22]:
+      - navigation [ref=e23]:
+        - list [ref=e24]:
+          - listitem [ref=e25]:
+            - link "Quem somos" [ref=e26] [cursor=pointer]:
+              - /url: https://ofuturodascoisas.com/quem-somos/
+          - listitem [ref=e27]:
+            - link "Para Empresas" [ref=e28] [cursor=pointer]:
+              - /url: https://ofuturodascoisas.com/para-empresas/
+          - listitem [ref=e29]:
+            - link "Manifesto" [ref=e30] [cursor=pointer]:
+              - /url: https://ofuturodascoisas.com/manifesto/
+          - listitem [ref=e31]:
+            - link "Conteúdos" [ref=e32] [cursor=pointer]:
+              - /url: https://ofuturodascoisas.com/conteudos/
+          - listitem [ref=e33]:
+            - link "Contato" [ref=e34] [cursor=pointer]:
+              - /url: https://ofuturodascoisas.com/contato/
+      - link [ref=e35] [cursor=pointer]:
+        - /url: https://ofuturodascoisas.com
+      - generic [ref=e39]:
+        - link "Facebook" [ref=e40] [cursor=pointer]:
+          - /url: https://www.facebook.com/ofuturodascoisas
+        - link "Twitter" [ref=e42] [cursor=pointer]:
+          - /url: https://twitter.com/futurodascoisas
+        - link "Linkedin" [ref=e44] [cursor=pointer]:
+          - /url: https://www.linkedin.com/company/ofuturodascoisas/
+        - link "Instagram" [ref=e46] [cursor=pointer]:
+          - /url: https://www.instagram.com/ofuturodascoisas/
+        - link "Youtube" [ref=e48] [cursor=pointer]:
+          - /url: https://www.youtube.com/ofuturodascoisas
+    - main [ref=e50]:
+      - generic [ref=e51]:
+        - button "Next" [ref=e52] [cursor=pointer]
+        - generic [ref=e54]:
+          - generic [ref=e57]:
+            - figure [ref=e59]
+            - generic [ref=e61]:
+              - heading [level=1] [ref=e62]: Futuros Possíveis
+              - paragraph [ref=e63]: O Futuro das Coisas tem como objetivo ser uma fonte de informações úteis para as pessoas saberem o que vem por aí e descobrirem novos interesses e oportunidades.
+              - paragraph [ref=e64]:
+                - link [ref=e65] [cursor=pointer]:
+                  - /url: https://home.manpowergroup.com.br/pt-br/ebook-futuro-do-trabalho-20-tendencias
+                  - text: Saiba mais
+          - generic [ref=e68]:
+            - figure [ref=e70]
+            - generic [ref=e72]:
+              - heading "Novas lentes para enxergar futuros possíveis e criar presentes desejáveis." [level=1] [ref=e73]
+              - paragraph [ref=e74]: Aportamos lentes futuristas e equitativas em tudo o que fazemos, para ajudar pessoas e empresas a protagonizar transformações no presente.
+              - paragraph [ref=e75]:
+                - link "Saiba mais" [ref=e76] [cursor=pointer]:
+                  - /url: https://ofuturodascoisas.com/manifesto/
+          - generic [ref=e79]:
+            - figure [ref=e81]
+            - generic [ref=e83]:
+              - heading [level=1] [ref=e84]: Conteúdos Acessíveis
+              - paragraph [ref=e85]: Novas lentes para enxergar futuros possíveis e criar presentes desejáveis.
+              - paragraph [ref=e86]:
+                - link [ref=e87] [cursor=pointer]:
+                  - /url: https://ofuturodascoisas.com/conteudos/
+                  - text: Saiba mais
+          - generic [ref=e90]:
+            - figure [ref=e92]
+            - generic [ref=e94]:
+              - heading [level=1] [ref=e95]: Rotas & Mapas
+              - paragraph [ref=e96]: Compreenda as forças que estão remodelando o mundo, os impactos no espaço-tempo e as direções mais favoráveis. Informações valiosas produzidas pelo nosso Centro de Inteligência Estratégica.
+              - paragraph [ref=e97]:
+                - link [ref=e98] [cursor=pointer]:
+                  - /url: https://assinatura.ofuturodascoisas.com/
+                  - text: Saiba mais
+          - generic [ref=e101]:
+            - figure [ref=e103]
+            - generic [ref=e105]:
+              - heading [level=1] [ref=e106]: Futuros Possíveis
+              - paragraph [ref=e107]: O Futuro das Coisas tem como objetivo ser uma fonte de informações úteis para as pessoas saberem o que vem por aí e descobrirem novos interesses e oportunidades.
+              - paragraph [ref=e108]:
+                - link [ref=e109] [cursor=pointer]:
+                  - /url: https://home.manpowergroup.com.br/pt-br/ebook-futuro-do-trabalho-20-tendencias
+                  - text: Saiba mais
+          - generic [ref=e112]:
+            - figure [ref=e114]
+            - generic [ref=e116]:
+              - heading [level=1] [ref=e117]: Novas lentes para enxergar futuros possíveis e criar presentes desejáveis.
+              - paragraph [ref=e118]: Aportamos lentes futuristas e equitativas em tudo o que fazemos, para ajudar pessoas e empresas a protagonizar transformações no presente.
+              - paragraph [ref=e119]:
+                - link [ref=e120] [cursor=pointer]:
+                  - /url: https://ofuturodascoisas.com/manifesto/
+                  - text: Saiba mais
+          - generic [ref=e123]:
+            - figure [ref=e125]
+            - generic [ref=e127]:
+              - heading [level=1] [ref=e128]: Conteúdos Acessíveis
+              - paragraph [ref=e129]: Novas lentes para enxergar futuros possíveis e criar presentes desejáveis.
+              - paragraph [ref=e130]:
+                - link [ref=e131] [cursor=pointer]:
+                  - /url: https://ofuturodascoisas.com/conteudos/
+                  - text: Saiba mais
+          - generic [ref=e134]:
+            - figure [ref=e136]
+            - generic [ref=e138]:
+              - heading [level=1] [ref=e139]: Rotas & Mapas
+              - paragraph [ref=e140]: Compreenda as forças que estão remodelando o mundo, os impactos no espaço-tempo e as direções mais favoráveis. Informações valiosas produzidas pelo nosso Centro de Inteligência Estratégica.
+              - paragraph [ref=e141]:
+                - link [ref=e142] [cursor=pointer]:
+                  - /url: https://assinatura.ofuturodascoisas.com/
+                  - text: Saiba mais
+          - generic [ref=e145]:
+            - figure [ref=e147]
+            - generic [ref=e149]:
+              - heading [level=1] [ref=e150]: Futuros Possíveis
+              - paragraph [ref=e151]: O Futuro das Coisas tem como objetivo ser uma fonte de informações úteis para as pessoas saberem o que vem por aí e descobrirem novos interesses e oportunidades.
+              - paragraph [ref=e152]:
+                - link [ref=e153] [cursor=pointer]:
+                  - /url: https://home.manpowergroup.com.br/pt-br/ebook-futuro-do-trabalho-20-tendencias
+                  - text: Saiba mais
+        - button "Next" [ref=e154] [cursor=pointer]
+      - generic [ref=e156]:
+        - generic [ref=e157]: Matérias recentes
+        - generic [ref=e158]:
+          - button "Next" [ref=e159] [cursor=pointer]
+          - generic [ref=e161]:
+            - generic [ref=e164]:
+              - link [ref=e165] [cursor=pointer]:
+                - /url: https://ofuturodascoisas.com/?post_type=post&p=24604
+                - figure [ref=e167]
+              - generic [ref=e168]:
+                - link [ref=e170] [cursor=pointer]:
+                  - /url: https://ofuturodascoisas.com/category/educacao/
+                  - text: Educação
+                - link [ref=e171] [cursor=pointer]:
+                  - /url: https://ofuturodascoisas.com/?post_type=post&p=24604
+                  - generic [ref=e172]: "Fique tranquilo: ninguém está aprendendo nada"
+                - generic [ref=e173]:
+                  - text: Por
+                  - link [ref=e174] [cursor=pointer]:
+                    - /url: https://ofuturodascoisas.com/author/alex-bretas/
+                    - text: Alex Bretas
+                  - text: ", 6 de abril de 2026"
+            - generic [ref=e177]:
+              - link [ref=e178] [cursor=pointer]:
+                - /url: https://ofuturodascoisas.com/?post_type=post&p=24676
+                - figure [ref=e180]
+              - generic [ref=e181]:
+                - link "Futuro do Trabalho" [ref=e183] [cursor=pointer]:
+                  - /url: https://ofuturodascoisas.com/category/futuro-do-trabalho/
+                - link "Ter muitas frentes de atuação é dispersão ou falta de narrativa? Reflexões sobre vida em portfólio." [ref=e184] [cursor=pointer]:
+                  - /url: https://ofuturodascoisas.com/?post_type=post&p=24676
+                  - generic [ref=e185]: Ter muitas frentes de atuação é dispersão ou falta de narrativa? Reflexões sobre vida em portfólio.
+                - generic [ref=e186]:
+                  - text: Por
+                  - link "Adriana Higino" [ref=e187] [cursor=pointer]:
+                    - /url: https://ofuturodascoisas.com/author/adriana-higino/
+                  - text: ", 20 de maio de 2026"
+            - generic [ref=e190]:
+              - link [ref=e191] [cursor=pointer]:
+                - /url: https://ofuturodascoisas.com/?post_type=post&p=24661
+                - figure [ref=e193]
+              - generic [ref=e194]:
+                - link [ref=e196] [cursor=pointer]:
+                  - /url: https://ofuturodascoisas.com/category/inovacao/
+                  - text: Inovação
+                - link [ref=e197] [cursor=pointer]:
+                  - /url: https://ofuturodascoisas.com/?post_type=post&p=24661
+                  - generic [ref=e198]: "Marcas passam, cidades ficam: a complexa relação entre marcas, lugares e a cidade que queremos"
+                - generic [ref=e199]:
+                  - text: Por
+                  - link [ref=e200] [cursor=pointer]:
+                    - /url: https://ofuturodascoisas.com/author/caio-esteves/
+                    - text: Caio Esteves
+                  - text: ", 4 de maio de 2026"
+            - generic [ref=e203]:
+              - link [ref=e204] [cursor=pointer]:
+                - /url: https://ofuturodascoisas.com/?post_type=post&p=24621
+                - figure [ref=e206]
+              - generic [ref=e207]:
+                - link [ref=e209] [cursor=pointer]:
+                  - /url: https://ofuturodascoisas.com/category/tecnologia/
+                  - text: Tecnologia
+                - link [ref=e210] [cursor=pointer]:
+                  - /url: https://ofuturodascoisas.com/?post_type=post&p=24621
+                  - generic [ref=e211]: "Fadiga Digital: O futuro das relações humanas está em risco. E os gestores de comunidade já sabem disso."
+                - generic [ref=e212]:
+                  - text: Por
+                  - link [ref=e213] [cursor=pointer]:
+                    - /url: https://ofuturodascoisas.com/author/gustavo-faria/
+                    - text: Gustavo Faria
+                  - text: ", 23 de abril de 2026"
+            - generic [ref=e216]:
+              - link [ref=e217] [cursor=pointer]:
+                - /url: https://ofuturodascoisas.com/?post_type=post&p=24613
+                - figure [ref=e219]
+              - generic [ref=e220]:
+                - link [ref=e222] [cursor=pointer]:
+                  - /url: https://ofuturodascoisas.com/category/educacao/
+                  - text: Educação
+                - link [ref=e223] [cursor=pointer]:
+                  - /url: https://ofuturodascoisas.com/?post_type=post&p=24613
+                  - generic [ref=e224]: A Neurociência da Descoberta
+                - generic [ref=e225]:
+                  - text: Por
+                  - link [ref=e226] [cursor=pointer]:
+                    - /url: https://ofuturodascoisas.com/author/alex-bretas/
+                    - text: Alex Bretas
+                  - text: ", 20 de abril de 2026"
+            - generic [ref=e229]:
+              - link [ref=e230] [cursor=pointer]:
+                - /url: https://ofuturodascoisas.com/?post_type=post&p=24604
+                - figure [ref=e232]
+              - generic [ref=e233]:
+                - link [ref=e235] [cursor=pointer]:
+                  - /url: https://ofuturodascoisas.com/category/educacao/
+                  - text: Educação
+                - link [ref=e236] [cursor=pointer]:
+                  - /url: https://ofuturodascoisas.com/?post_type=post&p=24604
+                  - generic [ref=e237]: "Fique tranquilo: ninguém está aprendendo nada"
+                - generic [ref=e238]:
+                  - text: Por
+                  - link [ref=e239] [cursor=pointer]:
+                    - /url: https://ofuturodascoisas.com/author/alex-bretas/
+                    - text: Alex Bretas
+                  - text: ", 6 de abril de 2026"
+            - generic [ref=e242]:
+              - link [ref=e243] [cursor=pointer]:
+                - /url: https://ofuturodascoisas.com/?post_type=post&p=24676
+                - figure [ref=e245]
+              - generic [ref=e246]:
+                - link [ref=e248] [cursor=pointer]:
+                  - /url: https://ofuturodascoisas.com/category/futuro-do-trabalho/
+                  - text: Futuro do Trabalho
+                - link [ref=e249] [cursor=pointer]:
+                  - /url: https://ofuturodascoisas.com/?post_type=post&p=24676
+                  - generic [ref=e250]: Ter muitas frentes de atuação é dispersão ou falta de narrativa? Reflexões sobre vida em portfólio.
+                - generic [ref=e251]:
+                  - text: Por
+                  - link [ref=e252] [cursor=pointer]:
+                    - /url: https://ofuturodascoisas.com/author/adriana-higino/
+                    - text: Adriana Higino
+                  - text: ", 20 de maio de 2026"
+            - generic [ref=e255]:
+              - link [ref=e256] [cursor=pointer]:
+                - /url: https://ofuturodascoisas.com/?post_type=post&p=24661
+                - figure [ref=e258]
+              - generic [ref=e259]:
+                - link [ref=e261] [cursor=pointer]:
+                  - /url: https://ofuturodascoisas.com/category/inovacao/
+                  - text: Inovação
+                - link [ref=e262] [cursor=pointer]:
+                  - /url: https://ofuturodascoisas.com/?post_type=post&p=24661
+                  - generic [ref=e263]: "Marcas passam, cidades ficam: a complexa relação entre marcas, lugares e a cidade que queremos"
+                - generic [ref=e264]:
+                  - text: Por
+                  - link [ref=e265] [cursor=pointer]:
+                    - /url: https://ofuturodascoisas.com/author/caio-esteves/
+                    - text: Caio Esteves
+                  - text: ", 4 de maio de 2026"
+            - generic [ref=e268]:
+              - link [ref=e269] [cursor=pointer]:
+                - /url: https://ofuturodascoisas.com/?post_type=post&p=24621
+                - figure [ref=e271]
+              - generic [ref=e272]:
+                - link [ref=e274] [cursor=pointer]:
+                  - /url: https://ofuturodascoisas.com/category/tecnologia/
+                  - text: Tecnologia
+                - link [ref=e275] [cursor=pointer]:
+                  - /url: https://ofuturodascoisas.com/?post_type=post&p=24621
+                  - generic [ref=e276]: "Fadiga Digital: O futuro das relações humanas está em risco. E os gestores de comunidade já sabem disso."
+                - generic [ref=e277]:
+                  - text: Por
+                  - link [ref=e278] [cursor=pointer]:
+                    - /url: https://ofuturodascoisas.com/author/gustavo-faria/
+                    - text: Gustavo Faria
+                  - text: ", 23 de abril de 2026"
+            - generic [ref=e281]:
+              - link [ref=e282] [cursor=pointer]:
+                - /url: https://ofuturodascoisas.com/?post_type=post&p=24613
+                - figure [ref=e284]
+              - generic [ref=e285]:
+                - link [ref=e287] [cursor=pointer]:
+                  - /url: https://ofuturodascoisas.com/category/educacao/
+                  - text: Educação
+                - link [ref=e288] [cursor=pointer]:
+                  - /url: https://ofuturodascoisas.com/?post_type=post&p=24613
+                  - generic [ref=e289]: A Neurociência da Descoberta
+                - generic [ref=e290]:
+                  - text: Por
+                  - link [ref=e291] [cursor=pointer]:
+                    - /url: https://ofuturodascoisas.com/author/alex-bretas/
+                    - text: Alex Bretas
+                  - text: ", 20 de abril de 2026"
+            - generic [ref=e294]:
+              - link [ref=e295] [cursor=pointer]:
+                - /url: https://ofuturodascoisas.com/?post_type=post&p=24604
+                - figure [ref=e297]
+              - generic [ref=e298]:
+                - link [ref=e300] [cursor=pointer]:
+                  - /url: https://ofuturodascoisas.com/category/educacao/
+                  - text: Educação
+                - link [ref=e301] [cursor=pointer]:
+                  - /url: https://ofuturodascoisas.com/?post_type=post&p=24604
+                  - generic [ref=e302]: "Fique tranquilo: ninguém está aprendendo nada"
+                - generic [ref=e303]:
+                  - text: Por
+                  - link [ref=e304] [cursor=pointer]:
+                    - /url: https://ofuturodascoisas.com/author/alex-bretas/
+                    - text: Alex Bretas
+                  - text: ", 6 de abril de 2026"
+          - button "Next" [ref=e305] [cursor=pointer]
+        - link "Confira nossos conteúdos" [ref=e306] [cursor=pointer]:
+          - /url: https://ofuturodascoisas.com/conteudos/
+      - generic [ref=e307]:
+        - generic [ref=e308]:
+          - generic [ref=e310]:
+            - tabpanel [ref=e311]:
+              - generic [ref=e313]:
+                - generic [ref=e314]:
+                  - heading "Estudos" [level=1] [ref=e316]
+                  - paragraph [ref=e318]: Delineamos o estado da arte, mapeando comportamentos emergentes, tendências em ascensão, sinais fracos e oportunidades.
+                - link "CONFIRA UM DE NOSSOS ESTUDOS" [ref=e319] [cursor=pointer]:
+                  - /url: https://home.manpowergroup.com.br/pt-br/ebook-futuro-do-trabalho-20-tendencias
+            - tabpanel [ref=e320]:
+              - generic [ref=e322]:
+                - generic [ref=e323]:
+                  - heading [level=1] [ref=e325]: Rotas & Mapas
+                  - paragraph [ref=e327]: Decodificamos as forças que estão remodelando o mundo e os novos comportamentos, traduzindo em oportunidades de negócios. Conteúdo por assinatura.
+                - link [ref=e328] [cursor=pointer]:
+                  - /url: https://assinatura.ofuturodascoisas.com/
+                  - text: COMECE O TESTE GRÁTIS
+            - tabpanel [ref=e329]:
+              - generic [ref=e331]:
+                - generic [ref=e332]:
+                  - heading [level=1] [ref=e334]: Aprendizagem
+                  - paragraph [ref=e336]: Criamos a primeira E-Formação em Futuro do Trabalho no Brasil. Em todos os nossos cursos, buscamos traduzir forças e os recentes avanços, utilizando uma metodologia de aprendizagem interativa e dialógica.
+                - link [ref=e337] [cursor=pointer]:
+                  - /url: https://cursos.ofuturodascoisas.com/aplicacao-e-formacao/
+                  - text: FAÇA SUA APLICAÇÃO
+            - tabpanel [ref=e338]:
+              - generic [ref=e340]:
+                - generic [ref=e341]:
+                  - heading [level=1] [ref=e343]: Conteúdos
+                  - paragraph [ref=e345]: Buscamos encurtar a distância entre as pessoas e o conhecimento que pode transformá-las.
+                - link [ref=e346] [cursor=pointer]:
+                  - /url: https://ofuturodascoisas.com/conteudos/
+                  - text: Leia nossos artigos
+          - tablist [ref=e347]:
+            - tab "1 of 4" [selected] [ref=e348] [cursor=pointer]: "1"
+            - tab "2 of 4" [ref=e349] [cursor=pointer]: "2"
+            - tab "3 of 4" [ref=e350] [cursor=pointer]: "3"
+            - tab "4 of 4" [ref=e351] [cursor=pointer]: "4"
+        - generic:
+          - list:
+            - listitem:
+              - link:
+                - /url: "#"
+            - listitem:
+              - link:
+                - /url: "#"
+            - listitem:
+              - link:
+                - /url: "#"
+      - generic [ref=e354]:
+        - generic [ref=e355]:
+          - heading "Receba nossa newsletter" [level=3] [ref=e356]
+          - paragraph [ref=e357]: Fique por dentro de todas as novidades
+          - generic [ref=e359]:
+            - link "Facebook" [ref=e360] [cursor=pointer]:
+              - /url: https://www.facebook.com/ofuturodascoisas
+            - link "Twitter" [ref=e362] [cursor=pointer]:
+              - /url: https://twitter.com/futurodascoisas
+            - link "Linkedin" [ref=e364] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/ofuturodascoisas/
+            - link "Instagram" [ref=e366] [cursor=pointer]:
+              - /url: https://www.instagram.com/ofuturodascoisas/
+            - link "Youtube" [ref=e368] [cursor=pointer]:
+              - /url: https://www.youtube.com/ofuturodascoisas
+        - generic [ref=e372]:
+          - textbox [ref=e374]:
+            - /placeholder: Nome
+          - textbox [ref=e376]:
+            - /placeholder: E-mail
+          - button "QUERO ME INSCREVER" [ref=e377] [cursor=pointer]
+      - generic [ref=e379]:
+        - generic [ref=e380]: Clientes
+        - list [ref=e381]:
+          - listitem [ref=e382]:
+            - img "AgendaEdu" [ref=e383]
+          - listitem [ref=e384]:
+            - img "Globo" [ref=e385]
+          - listitem [ref=e386]:
+            - img "Afferolab" [ref=e387]
+          - listitem [ref=e388]:
+            - img "BV" [ref=e389]
+          - listitem [ref=e390]:
+            - img "SPFW" [ref=e391]
+          - listitem [ref=e392]:
+            - img "Ibero" [ref=e393]
+          - listitem [ref=e394]:
+            - img "NIVEA" [ref=e395]
+          - listitem [ref=e396]:
+            - img "SFB" [ref=e397]
+          - listitem [ref=e398]:
+            - img "IN" [ref=e399]
+          - listitem [ref=e400]:
+            - img "MANPOWERGROUP" [ref=e401]
+          - listitem [ref=e402]:
+            - img "MANPOWERGROUP" [ref=e403]
+          - listitem [ref=e404]:
+            - img "MANPOWERGROUP" [ref=e405]
+          - listitem [ref=e406]:
+            - img "MANPOWERGROUP" [ref=e407]
+          - listitem [ref=e408]:
+            - img "MANPOWERGROUP" [ref=e409]
+    - generic [ref=e410]:
+      - generic [ref=e412]:
+        - link [ref=e414] [cursor=pointer]:
+          - /url: https://ofuturodascoisas.com
+        - generic [ref=e416]:
+          - link "Conteúdos" [ref=e417] [cursor=pointer]:
+            - /url: https://ofuturodascoisas.com/conteudos/
+          - list [ref=e418]:
+            - listitem [ref=e419]:
+              - link "Inovação" [ref=e420] [cursor=pointer]:
+                - /url: https://ofuturodascoisas.com/category/inovacao/
+            - listitem [ref=e421]:
+              - link "Medicina" [ref=e422] [cursor=pointer]:
+                - /url: https://ofuturodascoisas.com/category/medicina/
+            - listitem [ref=e423]:
+              - link "Futuro do Trabalho" [ref=e424] [cursor=pointer]:
+                - /url: https://ofuturodascoisas.com/category/futuro-do-trabalho/
+            - listitem [ref=e425]:
+              - link "Inteligência Artificial" [ref=e426] [cursor=pointer]:
+                - /url: https://ofuturodascoisas.com/category/inteligencia-artificial/
+        - generic [ref=e427]:
+          - link "Se inscreva na nossa newsletter" [ref=e428] [cursor=pointer]:
+            - /url: "#"
+          - generic [ref=e430]:
+            - textbox [ref=e432]:
+              - /placeholder: E-mail
+            - button "enviar" [ref=e433] [cursor=pointer]
+          - listitem [ref=e435]:
+            - link "Contato" [ref=e436] [cursor=pointer]:
+              - /url: https://ofuturodascoisas.com/contato/
+          - listitem [ref=e437]:
+            - link "Quem somos" [ref=e438] [cursor=pointer]:
+              - /url: https://ofuturodascoisas.com/quem-somos/
+          - listitem [ref=e439]:
+            - link "Para Empresas" [ref=e440] [cursor=pointer]:
+              - /url: https://ofuturodascoisas.com/para-empresas/
+          - listitem [ref=e441]:
+            - link "Manifesto" [ref=e442] [cursor=pointer]:
+              - /url: https://ofuturodascoisas.com/manifesto/
+          - listitem [ref=e443]:
+            - link "Políticas de Privacidade" [ref=e444] [cursor=pointer]:
+              - /url: https://ofuturodascoisas.com/lgpd/
+        - generic [ref=e447]:
+          - link "Facebook" [ref=e448] [cursor=pointer]:
+            - /url: https://www.facebook.com/ofuturodascoisas
+          - link "Twitter" [ref=e450] [cursor=pointer]:
+            - /url: https://twitter.com/futurodascoisas
+          - link "Linkedin" [ref=e452] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/ofuturodascoisas/
+          - link "Instagram" [ref=e454] [cursor=pointer]:
+            - /url: https://www.instagram.com/ofuturodascoisas/
+          - link "Youtube" [ref=e456] [cursor=pointer]:
+            - /url: https://www.youtube.com/ofuturodascoisas
+      - link "Desenvolvido por" [ref=e460] [cursor=pointer]:
+        - /url: "#"
+        - text: Desenvolvido por
+  - generic [ref=e464]:
+    - generic [ref=e465]:
+      - text: Usamos cookies em nosso site para fornecer a experiência mais relevante, lembrando suas preferências e visitas repetidas. Ao clicar em “Aceitar todos”, você concorda com o uso de TODOS os cookies. No entanto, você pode visitar "Configurações de cookies" para fornecer um consentimento controlado.
+      - link "Leia mais" [ref=e466] [cursor=pointer]:
+        - /url: https://ofuturodascoisas.com/lgpd/
+    - generic [ref=e467]:
+      - button "Configurações de cookies" [ref=e468] [cursor=pointer]
+      - button "Aceito todos" [ref=e469] [cursor=pointer]
+  - text: Mostrar mais Desativado Desativado Desativado Desativado Desativado

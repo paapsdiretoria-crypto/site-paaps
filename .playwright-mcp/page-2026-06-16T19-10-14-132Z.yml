@@ -1,0 +1,441 @@
+- generic [active] [ref=e1]:
+  - link "Ir para o conteúdo" [ref=e2] [cursor=pointer]:
+    - /url: "#content"
+  - banner [ref=e3]:
+    - generic [ref=e5]:
+      - link [ref=e9] [cursor=pointer]:
+        - /url: https://yunusns.com
+      - navigation "Menu" [ref=e13]:
+        - list [ref=e14]:
+          - listitem [ref=e15]:
+            - link "Quem Somos" [ref=e16] [cursor=pointer]:
+              - /url: https://yunusns.com/quem-somos/
+          - listitem [ref=e17]:
+            - link "Produtos e Serviços" [ref=e18] [cursor=pointer]:
+              - /url: https://yunusns.com/produtos-e-servicos/
+              - text: Produtos e Serviços
+              - img [ref=e20]
+          - listitem [ref=e22]:
+            - generic [ref=e23]:
+              - text: Portfólios
+              - img [ref=e25]
+          - listitem [ref=e27]:
+            - link "Novidades" [ref=e28] [cursor=pointer]:
+              - /url: https://yunusns.com/novidades/
+          - listitem [ref=e29]:
+            - link "Trabalhe Conosco" [ref=e30] [cursor=pointer]:
+              - /url: https://yunusns.com/trabalhe-conosco/
+          - listitem [ref=e31]:
+            - link "Contato" [ref=e32] [cursor=pointer]:
+              - /url: https://yunusns.com/fale-conosco/
+    - text: 
+    - generic [ref=e34]:
+      - link "Logo Yunus negócios sociais." [ref=e38] [cursor=pointer]:
+        - /url: https://yunusns.com
+        - img "Logo Yunus negócios sociais." [ref=e39]
+      - navigation "Menu" [ref=e43]:
+        - list [ref=e44]:
+          - listitem [ref=e45]:
+            - link "Quem Somos" [ref=e46] [cursor=pointer]:
+              - /url: https://yunusns.com/quem-somos/
+          - listitem [ref=e47]:
+            - link "Produtos e Serviços" [ref=e48] [cursor=pointer]:
+              - /url: https://yunusns.com/produtos-e-servicos/
+              - text: Produtos e Serviços
+              - img [ref=e50]
+          - listitem [ref=e52]:
+            - generic [ref=e53]:
+              - text: Portfólios
+              - img [ref=e55]
+          - listitem [ref=e57]:
+            - link "Novidades" [ref=e58] [cursor=pointer]:
+              - /url: https://yunusns.com/novidades/
+          - listitem [ref=e59]:
+            - link "Trabalhe Conosco" [ref=e60] [cursor=pointer]:
+              - /url: https://yunusns.com/trabalhe-conosco/
+          - listitem [ref=e61]:
+            - link "Contato" [ref=e62] [cursor=pointer]:
+              - /url: https://yunusns.com/fale-conosco/
+  - generic [ref=e63]:
+    - generic [ref=e65]:
+      - heading "YUNUS NEGÓCIOS SOCIAIS" [level=1] [ref=e68]
+      - heading "Usamos o poder dos negócios para erradicar a pobreza e combater a crise climática" [level=1] [ref=e71]
+      - heading "Desenvolvemos e apoiamos negócios para resolverem os problemas mais urgentes do mundo." [level=3] [ref=e74]
+      - link "SAIBA MAIS" [ref=e78] [cursor=pointer]:
+        - /url: "#sobre"
+        - generic [ref=e80]: SAIBA MAIS
+    - generic [ref=e86]:
+      - heading "SOBRE A YUNUS" [level=1] [ref=e89]
+      - heading "Transformar o incômodo em ação" [level=2] [ref=e92]
+      - generic [ref=e94]:
+        - paragraph [ref=e95]: Desafiamos a lógica do sistema econômico de dentro para fora, reimaginando a forma como fazemos negócios, catalisando novas oportunidades, transpondo fronteiras e integrando setores como um resposta concreta à urgência dos desafios socioambientais.
+        - paragraph [ref=e96]:
+          - strong [ref=e97]: Juntos, construímos um futuro onde a pobreza é lembrança histórica, a dignidade é inegociável e as economias funcionam à serviço da vida.
+    - generic [ref=e99]:
+      - heading "Uma abordagem integrada em prol da geração impacto" [level=2] [ref=e102]
+      - heading "A Yunus Negócios Sociais no Brasil atua em diferentes frentes que se complementam, fortalecendo uma visão sistêmica de impacto." [level=3] [ref=e105]
+      - generic [ref=e106]:
+        - generic [ref=e107]:
+          - generic [ref=e112]: 
+          - paragraph [ref=e115]:
+            - strong [ref=e116]: Articulação de ecossistemas
+            - text: ", reunindo coalizões, comunidades e centros de inovação para promover soluções coletivas."
+          - link "Saiba Mais" [ref=e120] [cursor=pointer]:
+            - /url: https://yunusns.com/produtos-e-servicos/#ecossistemas
+            - generic [ref=e122]: Saiba Mais
+        - generic [ref=e123]:
+          - generic [ref=e128]: 
+          - paragraph [ref=e131]:
+            - strong [ref=e132]: Finanças de impacto
+            - text: ", direcionando capital para negócios comprometidos com a transformação social e ambiental."
+          - link "Saiba Mais" [ref=e136] [cursor=pointer]:
+            - /url: https://yunusns.com/produtos-e-servicos/#financas
+            - generic [ref=e138]: Saiba Mais
+        - generic [ref=e139]:
+          - generic [ref=e144]: 
+          - paragraph [ref=e147]:
+            - strong [ref=e148]: Inovação socioambiental corporativa
+            - text: ", conectando propósito e estratégia no centro das decisões empresariais."
+          - link "Saiba Mais" [ref=e152] [cursor=pointer]:
+            - /url: https://yunusns.com/produtos-e-servicos/#inovacao
+            - generic [ref=e154]: Saiba Mais
+        - generic [ref=e155]:
+          - generic [ref=e160]: 
+          - paragraph [ref=e163]:
+            - strong [ref=e164]: Desenvolvimento de negócios sociais
+            - text: ", apoiando empreendedores ao longo de sua jornada, da aceleração à consolidação."
+          - link "Saiba Mais" [ref=e168] [cursor=pointer]:
+            - /url: https://yunusns.com/produtos-e-servicos/#desenvolvimento
+            - generic [ref=e170]: Saiba Mais
+    - generic [ref=e176]:
+      - heading "OPORTUNIDADE" [level=4] [ref=e179]
+      - heading "Investimento com propósito" [level=2] [ref=e182]
+      - paragraph [ref=e185]: Investimos em empreendimentos inovadores que tem por objetivo central solucionar os principais desafios socioambientais dos nossos tempos. Ofertamos empréstimos com condições acessíveis e apoio técnico aos empreendedores sociais, visando gerar impacto positivo para o planeta e para as pessoas.
+      - link "Cadastre o seu negócio social" [ref=e189] [cursor=pointer]:
+        - /url: https://app.pipefy.com/public/form/RlNklPUd
+        - generic [ref=e191]: Cadastre o seu negócio social
+    - generic [ref=e193]:
+      - heading "Nossos Parceiros" [level=2] [ref=e196]
+      - heading "Diversas instituições fazem parte do nascimento e consolidação da Yunus Negócios Sociais no Brasil e o apoio delas tem sido fundamental para a manutenção do nosso sonho de fazer a diferença para milhares de negócios e pessoas." [level=3] [ref=e199]
+      - generic [ref=e201]:
+        - region "Carousel" [ref=e202]:
+          - generic [ref=e203]:
+            - group [ref=e204]
+            - group [ref=e209]
+            - group [ref=e214]
+            - group [ref=e219]
+            - group [ref=e224]
+            - group [ref=e229]
+            - group "1 / 13" [ref=e234]
+            - group "2 / 13" [ref=e239]
+            - group "3 / 13" [ref=e244]
+            - group "4 / 13" [ref=e249]
+            - group "5 / 13" [ref=e254]
+            - group "6 / 13" [ref=e259]
+            - group [ref=e264]
+            - group [ref=e269]
+            - group [ref=e274]
+            - group [ref=e279]
+            - group [ref=e284]
+            - group [ref=e289]
+            - group [ref=e294]
+            - group [ref=e299]
+            - group [ref=e304]
+            - group [ref=e309]
+            - group [ref=e314]
+            - group [ref=e319]
+            - group [ref=e324]
+        - button "Slide anterior" [ref=e329] [cursor=pointer]:
+          - img [ref=e330]
+        - button "Próximo slide" [ref=e332] [cursor=pointer]:
+          - img [ref=e333]
+    - generic [ref=e336]:
+      - generic [ref=e337]:
+        - generic [ref=e338]:
+          - heading "BLOG" [level=1] [ref=e341]
+          - heading "Novidades" [level=2] [ref=e344]
+          - heading "Saiba mais sobre nós, nossos projetos e nossas ideias em movimento." [level=3] [ref=e347]
+        - link "Ver todas as novidades" [ref=e352] [cursor=pointer]:
+          - /url: https://yunusns.com/novidades/
+          - generic [ref=e354]: Ver todas as novidades
+      - generic [ref=e358]:
+        - list [ref=e359]:
+          - generic [ref=e360]:
+            - group [ref=e361]:
+              - generic [ref=e363]:
+                - link [ref=e367] [cursor=pointer]:
+                  - /url: https://yunusns.com/blog/quando-a-mudanca-acontece-no-discurso-mas-o-modelo-permanece-o-mesmo/
+                - generic [ref=e368]:
+                  - heading [level=3] [ref=e371]:
+                    - link [ref=e372] [cursor=pointer]:
+                      - /url: https://yunusns.com/blog/quando-a-mudanca-acontece-no-discurso-mas-o-modelo-permanece-o-mesmo/
+                      - text: Quando a mudança acontece no discurso, mas o modelo permanece o mesmo
+                  - list [ref=e375]:
+                    - listitem [ref=e376]:
+                      - link [ref=e377] [cursor=pointer]:
+                        - /url: https://yunusns.com/blog/2026/04/23/
+                        - time [ref=e379]: 23 de abril de 2026
+                  - link [ref=e383] [cursor=pointer]:
+                    - /url: https://yunusns.com/blog/quando-a-mudanca-acontece-no-discurso-mas-o-modelo-permanece-o-mesmo/
+                    - generic [ref=e385]: Leia Mais
+            - group [ref=e386]:
+              - generic [ref=e388]:
+                - link [ref=e392] [cursor=pointer]:
+                  - /url: https://yunusns.com/blog/mulheres-protagonistas-de-solucoes-e-nao-apenas-publico-alvo/
+                - generic [ref=e393]:
+                  - heading [level=3] [ref=e396]:
+                    - link [ref=e397] [cursor=pointer]:
+                      - /url: https://yunusns.com/blog/mulheres-protagonistas-de-solucoes-e-nao-apenas-publico-alvo/
+                      - text: Mulheres protagonistas de soluções, e não apenas público-alvo
+                  - list [ref=e400]:
+                    - listitem [ref=e401]:
+                      - link [ref=e402] [cursor=pointer]:
+                        - /url: https://yunusns.com/blog/2026/04/06/
+                        - time [ref=e404]: 6 de abril de 2026
+                  - link [ref=e408] [cursor=pointer]:
+                    - /url: https://yunusns.com/blog/mulheres-protagonistas-de-solucoes-e-nao-apenas-publico-alvo/
+                    - generic [ref=e410]: Leia Mais
+            - group [ref=e411]:
+              - generic [ref=e413]:
+                - link [ref=e417] [cursor=pointer]:
+                  - /url: https://yunusns.com/blog/mulheres-no-centro-das-solucoes-de-impacto/
+                - generic [ref=e418]:
+                  - heading [level=3] [ref=e421]:
+                    - link [ref=e422] [cursor=pointer]:
+                      - /url: https://yunusns.com/blog/mulheres-no-centro-das-solucoes-de-impacto/
+                      - text: Mulheres no centro das soluções de impacto
+                  - list [ref=e425]:
+                    - listitem [ref=e426]:
+                      - link [ref=e427] [cursor=pointer]:
+                        - /url: https://yunusns.com/blog/2026/03/23/
+                        - time [ref=e429]: 23 de março de 2026
+                  - link [ref=e433] [cursor=pointer]:
+                    - /url: https://yunusns.com/blog/mulheres-no-centro-das-solucoes-de-impacto/
+                    - generic [ref=e435]: Leia Mais
+            - group "1 / 6" [ref=e436]:
+              - generic [ref=e438]:
+                - link [ref=e442] [cursor=pointer]:
+                  - /url: https://yunusns.com/blog/o-custo-de-continuar-adiando-mudancas-ja-esta-sendo-pago-no-presente/
+                - generic [ref=e443]:
+                  - heading "O custo de continuar adiando mudanças já está sendo pago no presente" [level=3] [ref=e446]:
+                    - link "O custo de continuar adiando mudanças já está sendo pago no presente" [ref=e447] [cursor=pointer]:
+                      - /url: https://yunusns.com/blog/o-custo-de-continuar-adiando-mudancas-ja-esta-sendo-pago-no-presente/
+                  - list [ref=e450]:
+                    - listitem [ref=e451]:
+                      - link "5 de junho de 2026" [ref=e452] [cursor=pointer]:
+                        - /url: https://yunusns.com/blog/2026/06/05/
+                        - time [ref=e454]: 5 de junho de 2026
+                  - link "Leia Mais" [ref=e458] [cursor=pointer]:
+                    - /url: https://yunusns.com/blog/o-custo-de-continuar-adiando-mudancas-ja-esta-sendo-pago-no-presente/
+                    - generic [ref=e460]: Leia Mais
+            - group "2 / 6" [ref=e461]:
+              - generic [ref=e463]:
+                - link [ref=e467] [cursor=pointer]:
+                  - /url: https://yunusns.com/blog/como-saber-se-uma-solucao-social-e-realmente-inovadora-e-nao-so-bonita-no-papel/
+                - generic [ref=e468]:
+                  - heading "Como saber se uma solução social é realmente inovadora (e não só bonita no papel)" [level=3] [ref=e471]:
+                    - link "Como saber se uma solução social é realmente inovadora (e não só bonita no papel)" [ref=e472] [cursor=pointer]:
+                      - /url: https://yunusns.com/blog/como-saber-se-uma-solucao-social-e-realmente-inovadora-e-nao-so-bonita-no-papel/
+                  - list [ref=e475]:
+                    - listitem [ref=e476]:
+                      - link "13 de maio de 2026" [ref=e477] [cursor=pointer]:
+                        - /url: https://yunusns.com/blog/2026/05/13/
+                        - time [ref=e479]: 13 de maio de 2026
+                  - link "Leia Mais" [ref=e483] [cursor=pointer]:
+                    - /url: https://yunusns.com/blog/como-saber-se-uma-solucao-social-e-realmente-inovadora-e-nao-so-bonita-no-papel/
+                    - generic [ref=e485]: Leia Mais
+            - group "3 / 6" [ref=e486]:
+              - generic [ref=e488]:
+                - link [ref=e492] [cursor=pointer]:
+                  - /url: https://yunusns.com/blog/prosperidade-economica-tambem-se-mede-pela-dignidade-do-trabalho/
+                - generic [ref=e493]:
+                  - heading "Prosperidade econômica também se mede pela dignidade do trabalho" [level=3] [ref=e496]:
+                    - link "Prosperidade econômica também se mede pela dignidade do trabalho" [ref=e497] [cursor=pointer]:
+                      - /url: https://yunusns.com/blog/prosperidade-economica-tambem-se-mede-pela-dignidade-do-trabalho/
+                  - list [ref=e500]:
+                    - listitem [ref=e501]:
+                      - link "1 de maio de 2026" [ref=e502] [cursor=pointer]:
+                        - /url: https://yunusns.com/blog/2026/05/01/
+                        - time [ref=e504]: 1 de maio de 2026
+                  - link "Leia Mais" [ref=e508] [cursor=pointer]:
+                    - /url: https://yunusns.com/blog/prosperidade-economica-tambem-se-mede-pela-dignidade-do-trabalho/
+                    - generic [ref=e510]: Leia Mais
+            - group "4 / 6" [ref=e511]:
+              - generic [ref=e513]:
+                - link [ref=e517] [cursor=pointer]:
+                  - /url: https://yunusns.com/blog/quando-a-mudanca-acontece-no-discurso-mas-o-modelo-permanece-o-mesmo/
+                - generic [ref=e518]:
+                  - heading "Quando a mudança acontece no discurso, mas o modelo permanece o mesmo" [level=3] [ref=e521]:
+                    - link "Quando a mudança acontece no discurso, mas o modelo permanece o mesmo" [ref=e522] [cursor=pointer]:
+                      - /url: https://yunusns.com/blog/quando-a-mudanca-acontece-no-discurso-mas-o-modelo-permanece-o-mesmo/
+                  - list [ref=e525]:
+                    - listitem [ref=e526]:
+                      - link "23 de abril de 2026" [ref=e527] [cursor=pointer]:
+                        - /url: https://yunusns.com/blog/2026/04/23/
+                        - time [ref=e529]: 23 de abril de 2026
+                  - link "Leia Mais" [ref=e533] [cursor=pointer]:
+                    - /url: https://yunusns.com/blog/quando-a-mudanca-acontece-no-discurso-mas-o-modelo-permanece-o-mesmo/
+                    - generic [ref=e535]: Leia Mais
+            - group "5 / 6" [ref=e536]:
+              - generic [ref=e538]:
+                - link [ref=e542] [cursor=pointer]:
+                  - /url: https://yunusns.com/blog/mulheres-protagonistas-de-solucoes-e-nao-apenas-publico-alvo/
+                - generic [ref=e543]:
+                  - heading "Mulheres protagonistas de soluções, e não apenas público-alvo" [level=3] [ref=e546]:
+                    - link "Mulheres protagonistas de soluções, e não apenas público-alvo" [ref=e547] [cursor=pointer]:
+                      - /url: https://yunusns.com/blog/mulheres-protagonistas-de-solucoes-e-nao-apenas-publico-alvo/
+                  - list [ref=e550]:
+                    - listitem [ref=e551]:
+                      - link "6 de abril de 2026" [ref=e552] [cursor=pointer]:
+                        - /url: https://yunusns.com/blog/2026/04/06/
+                        - time [ref=e554]: 6 de abril de 2026
+                  - link "Leia Mais" [ref=e558] [cursor=pointer]:
+                    - /url: https://yunusns.com/blog/mulheres-protagonistas-de-solucoes-e-nao-apenas-publico-alvo/
+                    - generic [ref=e560]: Leia Mais
+            - group "6 / 6" [ref=e561]:
+              - generic [ref=e563]:
+                - link [ref=e567] [cursor=pointer]:
+                  - /url: https://yunusns.com/blog/mulheres-no-centro-das-solucoes-de-impacto/
+                - generic [ref=e568]:
+                  - heading "Mulheres no centro das soluções de impacto" [level=3] [ref=e571]:
+                    - link "Mulheres no centro das soluções de impacto" [ref=e572] [cursor=pointer]:
+                      - /url: https://yunusns.com/blog/mulheres-no-centro-das-solucoes-de-impacto/
+                  - list [ref=e575]:
+                    - listitem [ref=e576]:
+                      - link "23 de março de 2026" [ref=e577] [cursor=pointer]:
+                        - /url: https://yunusns.com/blog/2026/03/23/
+                        - time [ref=e579]: 23 de março de 2026
+                  - link "Leia Mais" [ref=e583] [cursor=pointer]:
+                    - /url: https://yunusns.com/blog/mulheres-no-centro-das-solucoes-de-impacto/
+                    - generic [ref=e585]: Leia Mais
+            - group "1 / 6" [ref=e586]:
+              - generic [ref=e588]:
+                - link [ref=e592] [cursor=pointer]:
+                  - /url: https://yunusns.com/blog/o-custo-de-continuar-adiando-mudancas-ja-esta-sendo-pago-no-presente/
+                - generic [ref=e593]:
+                  - heading "O custo de continuar adiando mudanças já está sendo pago no presente" [level=3] [ref=e596]:
+                    - link "O custo de continuar adiando mudanças já está sendo pago no presente" [ref=e597] [cursor=pointer]:
+                      - /url: https://yunusns.com/blog/o-custo-de-continuar-adiando-mudancas-ja-esta-sendo-pago-no-presente/
+                  - list [ref=e600]:
+                    - listitem [ref=e601]:
+                      - link "5 de junho de 2026" [ref=e602] [cursor=pointer]:
+                        - /url: https://yunusns.com/blog/2026/06/05/
+                        - time [ref=e604]: 5 de junho de 2026
+                  - link "Leia Mais" [ref=e608] [cursor=pointer]:
+                    - /url: https://yunusns.com/blog/o-custo-de-continuar-adiando-mudancas-ja-esta-sendo-pago-no-presente/
+                    - generic [ref=e610]: Leia Mais
+            - group "2 / 6" [ref=e611]:
+              - generic [ref=e613]:
+                - link [ref=e617] [cursor=pointer]:
+                  - /url: https://yunusns.com/blog/como-saber-se-uma-solucao-social-e-realmente-inovadora-e-nao-so-bonita-no-papel/
+                - generic [ref=e618]:
+                  - heading "Como saber se uma solução social é realmente inovadora (e não só bonita no papel)" [level=3] [ref=e621]:
+                    - link "Como saber se uma solução social é realmente inovadora (e não só bonita no papel)" [ref=e622] [cursor=pointer]:
+                      - /url: https://yunusns.com/blog/como-saber-se-uma-solucao-social-e-realmente-inovadora-e-nao-so-bonita-no-papel/
+                  - list [ref=e625]:
+                    - listitem [ref=e626]:
+                      - link "13 de maio de 2026" [ref=e627] [cursor=pointer]:
+                        - /url: https://yunusns.com/blog/2026/05/13/
+                        - time [ref=e629]: 13 de maio de 2026
+                  - link "Leia Mais" [ref=e633] [cursor=pointer]:
+                    - /url: https://yunusns.com/blog/como-saber-se-uma-solucao-social-e-realmente-inovadora-e-nao-so-bonita-no-papel/
+                    - generic [ref=e635]: Leia Mais
+            - group "3 / 6" [ref=e636]:
+              - generic [ref=e638]:
+                - link [ref=e642] [cursor=pointer]:
+                  - /url: https://yunusns.com/blog/prosperidade-economica-tambem-se-mede-pela-dignidade-do-trabalho/
+                - generic [ref=e643]:
+                  - heading "Prosperidade econômica também se mede pela dignidade do trabalho" [level=3] [ref=e646]:
+                    - link "Prosperidade econômica também se mede pela dignidade do trabalho" [ref=e647] [cursor=pointer]:
+                      - /url: https://yunusns.com/blog/prosperidade-economica-tambem-se-mede-pela-dignidade-do-trabalho/
+                  - list [ref=e650]:
+                    - listitem [ref=e651]:
+                      - link "1 de maio de 2026" [ref=e652] [cursor=pointer]:
+                        - /url: https://yunusns.com/blog/2026/05/01/
+                        - time [ref=e654]: 1 de maio de 2026
+                  - link "Leia Mais" [ref=e658] [cursor=pointer]:
+                    - /url: https://yunusns.com/blog/prosperidade-economica-tambem-se-mede-pela-dignidade-do-trabalho/
+                    - generic [ref=e660]: Leia Mais
+        - button "Slide anterior" [ref=e661] [cursor=pointer]:
+          - generic [ref=e662]: "4"
+        - button "Próximo slide" [ref=e663] [cursor=pointer]:
+          - generic [ref=e664]: "5"
+    - generic [ref=e666]:
+      - generic [ref=e667]:
+        - heading "Newsletter" [level=1] [ref=e670]
+        - heading "Fique por dentro" [level=2] [ref=e673]
+        - heading "Receba nossos conteúdos e atualizações sobre impacto social e transformação sistêmica." [level=3] [ref=e676]
+      - form "New Form" [ref=e680]:
+        - generic [ref=e681]:
+          - generic [ref=e682]:
+            - generic [ref=e683] [cursor=pointer]: E-mail
+            - textbox "E-mail" [ref=e684]
+          - button "Enviar" [ref=e686] [cursor=pointer]:
+            - generic [ref=e688]: Enviar
+  - contentinfo [ref=e689]:
+    - generic [ref=e691]:
+      - generic [ref=e692]:
+        - link "Logo Yunus negócios sociais." [ref=e695] [cursor=pointer]:
+          - /url: https://yunusns.com
+          - img "Logo Yunus negócios sociais." [ref=e696]
+        - paragraph [ref=e699]: Yunus Negócios Sociais no Brasil. Conectamos pessoas, ideias e recursos para transformar realidades com impacto positivo.
+      - generic [ref=e700]:
+        - list [ref=e703]:
+          - listitem [ref=e704]:
+            - link "Home" [ref=e705] [cursor=pointer]:
+              - /url: https://yunusns.com
+              - generic [ref=e706]: Home
+          - listitem [ref=e707]:
+            - link "Quem Somos" [ref=e708] [cursor=pointer]:
+              - /url: https://yunusns.com/quem-somos/
+              - generic [ref=e709]: Quem Somos
+          - listitem [ref=e710]:
+            - link "Produtos e Serviços" [ref=e711] [cursor=pointer]:
+              - /url: https://yunusns.com/produtos-e-servicos/
+              - generic [ref=e712]: Produtos e Serviços
+          - listitem [ref=e713]:
+            - link "Novidades" [ref=e714] [cursor=pointer]:
+              - /url: https://yunusns.com/novidades/
+              - generic [ref=e715]: Novidades
+          - listitem [ref=e716]:
+            - link "Trabalhe Conosco" [ref=e717] [cursor=pointer]:
+              - /url: https://yunusns.com/trabalhe-conosco/
+              - generic [ref=e718]: Trabalhe Conosco
+          - listitem [ref=e719]:
+            - link "Contato" [ref=e720] [cursor=pointer]:
+              - /url: https://yunusns.com/fale-conosco/
+              - generic [ref=e721]: Contato
+        - list [ref=e724]:
+          - listitem [ref=e725]:
+            - link "Política de Privacidade" [ref=e726] [cursor=pointer]:
+              - /url: https://yunusns.com/wp-content/uploads/2025/06/Politicas-de-Privacidade-Yunus-Negocios-Sociais-Site-Institucional-1.0.docx.pdf
+              - generic [ref=e727]: Política de Privacidade
+          - listitem [ref=e728]:
+            - link "contato@yunusnegociossociais.com" [ref=e729] [cursor=pointer]:
+              - /url: mailto:contato@yunusnegociossociais.com
+              - generic [ref=e731]: 
+              - generic [ref=e732]: contato@yunusnegociossociais.com
+        - list [ref=e735]:
+          - listitem [ref=e736]:
+            - link "Instagram" [ref=e737] [cursor=pointer]:
+              - /url: https://www.instagram.com/yunusnegociossociaisbr/
+              - generic [ref=e738]: Instagram
+              - img [ref=e739]
+          - listitem [ref=e741]:
+            - link "Linkedin" [ref=e742] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/yunus-negocios-sociais/
+              - generic [ref=e743]: Linkedin
+              - img [ref=e744]
+          - listitem [ref=e746]:
+            - link "Youtube" [ref=e747] [cursor=pointer]:
+              - /url: https://www.youtube.com/c/YunusNeg%C3%B3ciosSociaisBrasil
+              - generic [ref=e748]: Youtube
+              - img [ref=e749]
+    - generic [ref=e752]:
+      - list [ref=e755]:
+        - listitem [ref=e756]:
+          - link "Política de Privacidade" [ref=e757] [cursor=pointer]:
+            - /url: https://yunusns.com/wp-content/uploads/2025/06/Politicas-de-Privacidade-Yunus-Negocios-Sociais-Site-Institucional-1.0.docx.pdf
+            - generic [ref=e758]: Política de Privacidade
+      - paragraph [ref=e761]: © 2025 Yunus Social Business.
+  - generic [ref=e762]: desktop

@@ -1,0 +1,124 @@
+- generic [active] [ref=e1]:
+  - link "Ir para o conteúdo" [ref=e2] [cursor=pointer]:
+    - /url: "#content"
+  - generic [ref=e4]:
+    - generic [ref=e6]:
+      - img "territorio img3 Soluções" [ref=e10]
+      - paragraph [ref=e14]: Solução
+    - generic [ref=e27]:
+      - link "valor publico Soluções" [ref=e30] [cursor=pointer]:
+        - /url: https://agendapublica.org.br/wp-content/uploads/2025/10/tese-impacto-Valor-publico.pdf
+        - img "valor publico Soluções" [ref=e31]
+      - link "territorios Soluções" [ref=e34] [cursor=pointer]:
+        - /url: https://agendapublica.org.br/wp-content/uploads/2025/10/tese-impacto-Territorios-Resilientes.pdf
+        - img "territorios Soluções" [ref=e35]
+  - generic [ref=e36]:
+    - generic [ref=e39]:
+      - generic [ref=e40]:
+        - link [ref=e43] [cursor=pointer]:
+          - /url: https://agendapublica.org.br
+        - generic [ref=e45]: Fortalecemos e qualificamos a atuação de governos e empresas para promover o desenvolvimento local e regional sustentável e resiliente
+        - list [ref=e48]:
+          - listitem [ref=e49]:
+            - link "Home" [ref=e50] [cursor=pointer]:
+              - /url: https://agendapublica.org.br
+              - generic [ref=e51]: Home
+          - listitem [ref=e52]:
+            - link "Sobre" [ref=e53] [cursor=pointer]:
+              - /url: https://agendapublica.org.br/quem-somos/
+              - generic [ref=e54]: Sobre
+          - listitem [ref=e55]:
+            - link "Soluções" [ref=e56] [cursor=pointer]:
+              - /url: https://agendapublica.org.br/nossas-solucoes/
+              - generic [ref=e57]: Soluções
+          - listitem [ref=e58]:
+            - link "Publicações" [ref=e59] [cursor=pointer]:
+              - /url: https://agendapublica.org.br/publicacoes/
+              - generic [ref=e60]: Publicações
+          - listitem [ref=e61]:
+            - link "Conteúdos" [ref=e62] [cursor=pointer]:
+              - /url: https://agendapublica.org.br/conteudos/
+              - generic [ref=e63]: Conteúdos
+          - listitem [ref=e64]:
+            - link "Contato" [ref=e65] [cursor=pointer]:
+              - /url: https://agendapublica.org.br/contato/
+              - generic [ref=e66]: Contato
+      - generic [ref=e67]:
+        - generic [ref=e68]:
+          - heading "Localização" [level=4] [ref=e71]
+          - list [ref=e74]:
+            - listitem [ref=e75]:
+              - link "R. Dr. Virgílio de Carvalho Pinto, 445, Pinheiros, São Paulo - SP, 05415-030" [ref=e76] [cursor=pointer]:
+                - /url: "#"
+                - generic [ref=e77]:
+                  - text: R. Dr. Virgílio de Carvalho Pinto, 445,
+                  - text: Pinheiros, São Paulo - SP, 05415-030
+        - generic [ref=e78]:
+          - heading "Expediente" [level=4] [ref=e81]
+          - list [ref=e84]:
+            - listitem [ref=e85]:
+              - link "Seg. a Sex. de 9h às 18h" [ref=e86] [cursor=pointer]:
+                - /url: "#"
+                - generic [ref=e87]: Seg. a Sex. de 9h às 18h
+          - list [ref=e90]:
+            - listitem [ref=e91]:
+              - link "contato@agendapublica.org.br" [ref=e92] [cursor=pointer]:
+                - /url: "#"
+                - generic [ref=e93]: contato@agendapublica.org.br
+        - generic [ref=e94]:
+          - heading "Assessoria de Imprensa" [level=4] [ref=e97]
+          - list [ref=e100]:
+            - listitem [ref=e101]:
+              - strong [ref=e103]: Flavia Denone
+            - listitem [ref=e104]:
+              - link "fdenone@tramaweb.com.br" [ref=e105] [cursor=pointer]:
+                - /url: mailto:fdenone@tramaweb.com.br
+                - generic [ref=e106]: fdenone@tramaweb.com.br
+          - list [ref=e109]:
+            - listitem [ref=e110]:
+              - strong [ref=e112]: João Zotini
+            - listitem [ref=e113]:
+              - link "jzotini@tramaweb.com.br" [ref=e114] [cursor=pointer]:
+                - /url: mailto:jzotini@tramaweb.com.br
+                - generic [ref=e115]: jzotini@tramaweb.com.br
+          - list [ref=e118]:
+            - listitem [ref=e119]:
+              - link "(11) 93208-1211" [ref=e120] [cursor=pointer]:
+                - /url: "#"
+                - generic [ref=e121]: (11) 93208-1211
+            - listitem [ref=e122]:
+              - link "(11) 99813-0151" [ref=e123] [cursor=pointer]:
+                - /url: "#"
+                - generic [ref=e124]: (11) 99813-0151
+        - generic [ref=e125]:
+          - heading "Redes Sociais" [level=4] [ref=e128]
+          - paragraph [ref=e131]: Acompanhe a Agenda Pública nas redes sociais. Curta, siga e compartilhe!
+          - generic [ref=e134]:
+            - link "Linkedin" [ref=e136] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/agenda-publica/
+              - generic [ref=e137]: Linkedin
+              - img [ref=e138]
+            - link "Youtube" [ref=e141] [cursor=pointer]:
+              - /url: https://www.youtube.com/user/agendapublicacomunic
+              - generic [ref=e142]: Youtube
+              - img [ref=e143]
+            - link "Icon-instagram-1 " [ref=e146] [cursor=pointer]:
+              - /url: https://www.instagram.com/agenda.publica/
+              - generic [ref=e147]: Icon-instagram-1
+              - generic [ref=e148]: 
+    - generic [ref=e151]:
+      - paragraph [ref=e154]: Copyright © 2025 Agenda Pública
+      - list [ref=e157]:
+        - listitem [ref=e158]:
+          - link "Termos de Uso" [ref=e159] [cursor=pointer]:
+            - /url: "#"
+            - generic [ref=e160]: Termos de Uso
+        - listitem [ref=e161]:
+          - link "Política de Privacidade" [ref=e162] [cursor=pointer]:
+            - /url: https://agendapublica.org.br/politica-de-privacidade/
+            - generic [ref=e163]: Política de Privacidade
+      - list [ref=e166]:
+        - listitem [ref=e167]:
+          - 'link "Desenvido por: Marcos Chagas" [ref=e168] [cursor=pointer]':
+            - /url: https://marcoschagas.com.br/
+            - generic [ref=e169]: "Desenvido por: Marcos Chagas"

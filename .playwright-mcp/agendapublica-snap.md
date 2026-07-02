@@ -1,0 +1,154 @@
+- generic [active] [ref=e1]:
+  - link "Ir para o conteúdo" [ref=e2] [cursor=pointer]:
+    - /url: "#content"
+  - generic [ref=e3]:
+    - generic [ref=e157]:
+      - navigation [ref=e161]:
+        - text: 
+        - list [ref=e163]:
+          - listitem [ref=e164]:
+            - link "Home" [ref=e165] [cursor=pointer]:
+              - /url: https://agendapublica.org.br/
+          - listitem [ref=e166]:
+            - link "Sobre" [ref=e167] [cursor=pointer]:
+              - /url: "#"
+              - text: Sobre
+              - generic [ref=e168]: 
+          - listitem [ref=e169]:
+            - link "Soluções" [ref=e170] [cursor=pointer]:
+              - /url: https://agendapublica.org.br/nossas-solucoes/
+              - text: Soluções
+              - generic [ref=e171]: 
+          - listitem [ref=e172]:
+            - link "Publicações" [ref=e173] [cursor=pointer]:
+              - /url: https://agendapublica.org.br/publicacoes/
+          - listitem [ref=e174]:
+            - link "Conteúdos" [ref=e175] [cursor=pointer]:
+              - /url: https://agendapublica.org.br/conteudos/
+      - link [ref=e179] [cursor=pointer]:
+        - /url: https://agendapublica.org.br
+      - generic [ref=e180]:
+        - link "Trabalhe Conosco" [ref=e184] [cursor=pointer]:
+          - /url: https://agendapublica.org.br/oportunidades/
+          - generic [ref=e186]: Trabalhe Conosco
+        - link "Fale com a Agenda Pública" [ref=e190] [cursor=pointer]:
+          - /url: https://agendapublica.org.br/contato/
+          - generic [ref=e192]: Fale com a Agenda Pública
+    - text:   
+  - generic [ref=e201]:
+    - generic [ref=e203]: Nova Pesquisa
+    - heading "Pesquisa Petróleo & Condições de Vida" [level=1] [ref=e206]
+    - generic [ref=e208]: Dados e análises do desenvolvimento dos 50 maiores municípios com atividades de petróleo e gás do Brasil
+    - link "Conheça mais" [ref=e213] [cursor=pointer]:
+      - /url: https://petroleo.agendapublica.org.br/
+      - generic [ref=e215]: Conheça mais
+  - generic [ref=e22]:
+    - generic [ref=e25]:
+      - generic [ref=e26]:
+        - link [ref=e29] [cursor=pointer]:
+          - /url: https://agendapublica.org.br
+        - generic [ref=e31]: Fortalecemos e qualificamos a atuação de governos e empresas para promover o desenvolvimento local e regional sustentável e resiliente
+        - list [ref=e34]:
+          - listitem [ref=e35]:
+            - link "Home" [ref=e36] [cursor=pointer]:
+              - /url: https://agendapublica.org.br
+              - generic [ref=e37]: Home
+          - listitem [ref=e38]:
+            - link "Sobre" [ref=e39] [cursor=pointer]:
+              - /url: https://agendapublica.org.br/quem-somos/
+              - generic [ref=e40]: Sobre
+          - listitem [ref=e41]:
+            - link "Soluções" [ref=e42] [cursor=pointer]:
+              - /url: https://agendapublica.org.br/nossas-solucoes/
+              - generic [ref=e43]: Soluções
+          - listitem [ref=e44]:
+            - link "Publicações" [ref=e45] [cursor=pointer]:
+              - /url: https://agendapublica.org.br/publicacoes/
+              - generic [ref=e46]: Publicações
+          - listitem [ref=e47]:
+            - link "Conteúdos" [ref=e48] [cursor=pointer]:
+              - /url: https://agendapublica.org.br/conteudos/
+              - generic [ref=e49]: Conteúdos
+          - listitem [ref=e50]:
+            - link "Contato" [ref=e51] [cursor=pointer]:
+              - /url: https://agendapublica.org.br/contato/
+              - generic [ref=e52]: Contato
+      - generic [ref=e53]:
+        - generic [ref=e54]:
+          - heading "Localização" [level=4] [ref=e57]
+          - list [ref=e60]:
+            - listitem [ref=e61]:
+              - link "R. Dr. Virgílio de Carvalho Pinto, 445, Pinheiros, São Paulo - SP, 05415-030" [ref=e62] [cursor=pointer]:
+                - /url: "#"
+                - generic [ref=e63]:
+                  - text: R. Dr. Virgílio de Carvalho Pinto, 445,
+                  - text: Pinheiros, São Paulo - SP, 05415-030
+        - generic [ref=e64]:
+          - heading "Expediente" [level=4] [ref=e67]
+          - list [ref=e70]:
+            - listitem [ref=e71]:
+              - link "Seg. a Sex. de 9h às 18h" [ref=e72] [cursor=pointer]:
+                - /url: "#"
+                - generic [ref=e73]: Seg. a Sex. de 9h às 18h
+          - list [ref=e76]:
+            - listitem [ref=e77]:
+              - link "contato@agendapublica.org.br" [ref=e78] [cursor=pointer]:
+                - /url: "#"
+                - generic [ref=e79]: contato@agendapublica.org.br
+        - generic [ref=e80]:
+          - heading "Assessoria de Imprensa" [level=4] [ref=e83]
+          - list [ref=e86]:
+            - listitem [ref=e87]:
+              - strong [ref=e89]: Flavia Denone
+            - listitem [ref=e90]:
+              - link "fdenone@tramaweb.com.br" [ref=e91] [cursor=pointer]:
+                - /url: mailto:fdenone@tramaweb.com.br
+                - generic [ref=e92]: fdenone@tramaweb.com.br
+          - list [ref=e95]:
+            - listitem [ref=e96]:
+              - strong [ref=e98]: João Zotini
+            - listitem [ref=e99]:
+              - link "jzotini@tramaweb.com.br" [ref=e100] [cursor=pointer]:
+                - /url: mailto:jzotini@tramaweb.com.br
+                - generic [ref=e101]: jzotini@tramaweb.com.br
+          - list [ref=e104]:
+            - listitem [ref=e105]:
+              - link "(11) 93208-1211" [ref=e106] [cursor=pointer]:
+                - /url: "#"
+                - generic [ref=e107]: (11) 93208-1211
+            - listitem [ref=e108]:
+              - link "(11) 99813-0151" [ref=e109] [cursor=pointer]:
+                - /url: "#"
+                - generic [ref=e110]: (11) 99813-0151
+        - generic [ref=e111]:
+          - heading "Redes Sociais" [level=4] [ref=e114]
+          - paragraph [ref=e117]: Acompanhe a Agenda Pública nas redes sociais. Curta, siga e compartilhe!
+          - generic [ref=e120]:
+            - link "Linkedin" [ref=e122] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/agenda-publica/
+              - generic [ref=e123]: Linkedin
+              - img [ref=e124]
+            - link "Youtube" [ref=e127] [cursor=pointer]:
+              - /url: https://www.youtube.com/user/agendapublicacomunic
+              - generic [ref=e128]: Youtube
+              - img [ref=e129]
+            - link "Icon-instagram-1 " [ref=e132] [cursor=pointer]:
+              - /url: https://www.instagram.com/agenda.publica/
+              - generic [ref=e133]: Icon-instagram-1
+              - generic [ref=e134]: 
+    - generic [ref=e137]:
+      - paragraph [ref=e140]: Copyright © 2025 Agenda Pública
+      - list [ref=e143]:
+        - listitem [ref=e144]:
+          - link "Termos de Uso" [ref=e145] [cursor=pointer]:
+            - /url: "#"
+            - generic [ref=e146]: Termos de Uso
+        - listitem [ref=e147]:
+          - link "Política de Privacidade" [ref=e148] [cursor=pointer]:
+            - /url: https://agendapublica.org.br/politica-de-privacidade/
+            - generic [ref=e149]: Política de Privacidade
+      - list [ref=e152]:
+        - listitem [ref=e153]:
+          - 'link "Desenvido por: Marcos Chagas" [ref=e154] [cursor=pointer]':
+            - /url: https://marcoschagas.com.br/
+            - generic [ref=e155]: "Desenvido por: Marcos Chagas"

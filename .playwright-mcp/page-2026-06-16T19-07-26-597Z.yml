@@ -1,0 +1,561 @@
+- generic [active] [ref=e1]:
+  - generic:
+    - generic:
+      - link "Ir para o conteúdo principal" [ref=e2] [cursor=pointer]
+      - link "Ajuda sobre acessibilidade" [ref=e3] [cursor=pointer]:
+        - /url: https://support.google.com/websearch/answer/181196?hl=pt-BR
+  - generic [ref=e8]:
+    - search [ref=e9]:
+      - generic [ref=e11]:
+        - generic:
+          - generic:
+            - generic:
+              - img
+        - 'link "Copa do Mundo 2026: a arte da cobrança de pênalti" [ref=e13] [cursor=pointer]':
+          - /url: https://www.google.com/webhp?hl=pt-BR&ictx=2&sa=X&ved=0ahUKEwit8om5uoyVAxXxWOsIHRIhJDYQPQgK
+          - 'img "Copa do Mundo 2026: a arte da cobrança de pênalti" [ref=e14]'
+        - generic [ref=e15]:
+          - generic [ref=e16]:
+            - combobox "Pesquisar" [ref=e19]: PAAPS Brasil PAAPS Brasil
+            - generic [ref=e20]:
+              - button "Limpar" [ref=e22] [cursor=pointer]:
+                - img [ref=e24]
+              - generic [ref=e27]:
+                - button "Ferramentas de inserção de texto" [ref=e28] [cursor=pointer]:
+                  - img [ref=e30]
+                - button "Pesquisar por voz" [ref=e32] [cursor=pointer]:
+                  - img [ref=e33]
+                - button "Pesquisa por imagem" [ref=e35] [cursor=pointer]:
+                  - img [ref=e36]
+          - button "Pesquisar" [ref=e38] [cursor=pointer]:
+            - img [ref=e41]
+    - generic [ref=e43]:
+      - button "Configurações" [ref=e45] [cursor=pointer]:
+        - img [ref=e48]
+      - generic [ref=e51]:
+        - button "Google Apps" [ref=e53] [cursor=pointer]:
+          - img [ref=e54]
+        - link "Fazer login" [ref=e58] [cursor=pointer]:
+          - /url: https://accounts.google.com/ServiceLogin?hl=pt-BR&passive=true&continue=https://www.google.com/search%3Fq%3DPAAPS%2BBrasil%26sei%3D6p4xauLsCMq5rfcP5bm4oA4&ec=futura_srp_og_si_72236_p
+  - generic [ref=e60]:
+    - navigation [ref=e66]:
+      - generic [ref=e72]:
+        - list [ref=e73]:
+          - listitem [ref=e74]:
+            - link "Modo IA" [ref=e77] [cursor=pointer]:
+              - /url: /search?q=PAPAS+Brasil&sca_esv=ec2bff8bd1e2ef21&udm=50&fbs=ADc_l-acAb_3MMOAUx0zmbUpgBqRiigBgL2I_pgQa-94zvB054Dys3s2x_Qm_GJcU2DlSXgs4i471_5vbbrE24Q_ZqrCyhilsPNhxfAu1wD3b9jpYaHSEsMFBeN7dRLdlHH4lETrCM3JfSBs9nWe4SCMLaY4yU-MIU9dW9s-zhp_gTyxe91iMuLmGi8zKesnqiV9JjPbeEZZR8uWlHreECXhq5X4HHPqaA&aep=1&ntc=1&sa=X&ved=2ahUKEwit8om5uoyVAxXxWOsIHRIhJDYQ2J8OegQIERAD
+              - generic [ref=e80]: Modo IA
+          - listitem [ref=e81]:
+            - link "Tudo" [disabled] [ref=e82]:
+              - generic [ref=e84]: Tudo
+          - listitem [ref=e85]:
+            - link "Imagens" [ref=e86] [cursor=pointer]:
+              - /url: /search?sca_esv=ec2bff8bd1e2ef21&udm=2&fbs=ADc_l-acAb_3MMOAUx0zmbUpgBqRiigBgL2I_pgQa-94zvB054Dys3s2x_Qm_GJcU2DlSXgs4i471_5vbbrE24Q_ZqrCyhilsPNhxfAu1wD3b9jpYaHSEsMFBeN7dRLdlHH4lETrCM3JfSBs9nWe4SCMLaY4yU-MIU9dW9s-zhp_gTyxe91iMuLmGi8zKesnqiV9JjPbeEZZR8uWlHreECXhq5X4HHPqaA&q=PAPAS+Brasil&sa=X&ved=2ahUKEwit8om5uoyVAxXxWOsIHRIhJDYQtKgLegQIGRAB
+              - generic [ref=e88]: Imagens
+          - listitem [ref=e89]:
+            - link "Vídeos" [ref=e90] [cursor=pointer]:
+              - /url: /search?sca_esv=ec2bff8bd1e2ef21&udm=7&fbs=ADc_l-acAb_3MMOAUx0zmbUpgBqRiigBgL2I_pgQa-94zvB054Dys3s2x_Qm_GJcU2DlSXgs4i471_5vbbrE24Q_ZqrCyhilsPNhxfAu1wD3b9jpYaHSEsMFBeN7dRLdlHH4lETrCM3JfSBs9nWe4SCMLaY4yU-MIU9dW9s-zhp_gTyxe91iMuLmGi8zKesnqiV9JjPbeEZZR8uWlHreECXhq5X4HHPqaA&q=PAPAS+Brasil&sa=X&ved=2ahUKEwit8om5uoyVAxXxWOsIHRIhJDYQtKgLegQIGBAB
+              - generic [ref=e92]: Vídeos
+          - listitem [ref=e93]:
+            - link "Notícias" [ref=e94] [cursor=pointer]:
+              - /url: /search?sca_esv=ec2bff8bd1e2ef21&q=PAPAS+Brasil&tbm=nws&source=lnms&fbs=ADc_l-acAb_3MMOAUx0zmbUpgBqRiigBgL2I_pgQa-94zvB054Dys3s2x_Qm_GJcU2DlSXgs4i471_5vbbrE24Q_ZqrCyhilsPNhxfAu1wD3b9jpYaHSEsMFBeN7dRLdlHH4lETrCM3JfSBs9nWe4SCMLaY4yU-MIU9dW9s-zhp_gTyxe91iMuLmGi8zKesnqiV9JjPbeEZZR8uWlHreECXhq5X4HHPqaA&sa=X&ved=2ahUKEwit8om5uoyVAxXxWOsIHRIhJDYQ0pQJegQIFxAB
+              - generic [ref=e96]: Notícias
+          - listitem [ref=e97]:
+            - link "Vídeos curtos" [ref=e98] [cursor=pointer]:
+              - /url: /search?sca_esv=ec2bff8bd1e2ef21&udm=39&fbs=ADc_l-acAb_3MMOAUx0zmbUpgBqRiigBgL2I_pgQa-94zvB054Dys3s2x_Qm_GJcU2DlSXgs4i471_5vbbrE24Q_ZqrCyhilsPNhxfAu1wD3b9jpYaHSEsMFBeN7dRLdlHH4lETrCM3JfSBs9nWe4SCMLaY4yU-MIU9dW9s-zhp_gTyxe91iMuLmGi8zKesnqiV9JjPbeEZZR8uWlHreECXhq5X4HHPqaA&q=PAPAS+Brasil&sa=X&ved=2ahUKEwit8om5uoyVAxXxWOsIHRIhJDYQs6gLegQIFhAB
+              - generic [ref=e100]: Vídeos curtos
+          - listitem [ref=e101]:
+            - link "Shopping" [ref=e102] [cursor=pointer]:
+              - /url: /search?sca_esv=ec2bff8bd1e2ef21&udm=28&fbs=ADc_l-acAb_3MMOAUx0zmbUpgBqRiigBgL2I_pgQa-94zvB054Dys3s2x_Qm_GJcU2DlSXgs4i471_5vbbrE24Q_ZqrCyhilsPNhxfAu1wD3b9jpYaHSEsMFBeN7dRLdlHH4lETrCM3JfSBs9nWe4SCMLaY4yU-MIU9dW9s-zhp_gTyxe91iMuLmGi8zKesnqiV9JjPbeEZZR8uWlHreECXhq5X4HHPqaA&q=PAPAS+Brasil&ved=1t:220175&ictx=111
+              - generic [ref=e104]: Shopping
+          - listitem [ref=e105]:
+            - button "Mais filtros" [ref=e106] [cursor=pointer]:
+              - generic "Mais filtros" [ref=e107]:
+                - generic [ref=e108]:
+                  - generic [ref=e109]: Mais
+                  - img [ref=e111]
+        - button "Ferramentas" [ref=e114] [cursor=pointer]:
+          - generic [ref=e116]:
+            - generic [ref=e117]: Ferramentas
+            - img [ref=e119]
+    - heading "Resultados da pesquisa" [level=1] [ref=e121]
+    - generic [ref=e126]:
+      - generic [ref=e127]:
+        - heading "Exibindo resultados para PAPAS Brasil Em vez disso, pesquisar por PAAPS Brasil" [level=2] [ref=e132]:
+          - text: Exibindo resultados para
+          - button "PAPAS Brasil" [ref=e133] [cursor=pointer]:
+            - generic [ref=e134]: PAPAS
+            - text: Brasil
+          - generic [ref=e135]:
+            - text: Em vez disso, pesquisar por
+            - button "PAAPS Brasil" [ref=e136] [cursor=pointer]
+        - generic [ref=e149]:
+          - generic [ref=e151]:
+            - generic [ref=e153]:
+              - generic [ref=e154]:
+                - img [ref=e155]
+                - heading "Visão geral criada por IA" [level=2] [ref=e157]
+              - button "Ouvir" [ref=e161]:
+                - img [ref=e166] [cursor=pointer]
+              - button "Sobre este resultado" [ref=e171]:
+                - img [ref=e173]
+            - generic [ref=e191]:
+              - generic [ref=e193]:
+                - generic [ref=e194]:
+                  - text: Três
+                  - strong [ref=e195]: papas
+                  - text: já visitaram o Brasil ao longo da história.
+                  - mark [ref=e196]: O país nunca teve um papa brasileiro
+                  - text: ", mas tem forte ligação com a Santa Sé. As visitas apostólicas incluem:"
+                  - generic [ref=e198]:
+                    - link "Wikipedia (+2) – Mostrar links relacionados" [ref=e199] [cursor=pointer]:
+                      - /url: https://pt.wikipedia.org/wiki/Visitas_papais_ao_Brasil
+                    - button "Wikipedia (+2) – Mostrar links relacionados" [ref=e200] [cursor=pointer]:
+                      - generic [ref=e202]:
+                        - generic [ref=e203]: Wikipedia
+                        - generic [ref=e204]: "+2"
+                - list [ref=e205]:
+                  - listitem [ref=e206]:
+                    - generic [ref=e207]:
+                      - strong [ref=e208]: "São João Paulo II:"
+                      - text: Primeiro papa a pisar no país (em 1980). Retornou em 1991 e 1997, e fez uma rápida escala no Rio de Janeiro em 1982. Visitou dezenas de capitais e marcou a história ao beijar o solo em Brasília.
+                    - generic [ref=e210]:
+                      - link "Wikipedia (+2) – Mostrar links relacionados" [ref=e211] [cursor=pointer]:
+                        - /url: https://pt.wikipedia.org/wiki/Visitas_papais_ao_Brasil
+                      - button "Wikipedia (+2) – Mostrar links relacionados" [ref=e212] [cursor=pointer]:
+                        - generic [ref=e214]:
+                          - generic [ref=e215]: Wikipedia
+                          - generic [ref=e216]: "+2"
+                  - listitem [ref=e217]:
+                    - generic [ref=e218]:
+                      - strong [ref=e219]: "Papa Bento XVI:"
+                      - text: Visitou o Brasil em 2007 para abrir a 5ª Conferência Geral do Episcopado Latino-Americano e do Caribe (CELAM) em Aparecida (SP) e canonizar Frei Galvão.
+                    - generic [ref=e221]:
+                      - link [ref=e222] [cursor=pointer]:
+                        - /url: https://oglobo.globo.com/mundo/noticia/2023/06/do-beijo-no-chao-a-santo-brasileiro-saiba-como-foram-as-visitas-de-papas-ao-brasil.ghtml
+                      - button [ref=e223] [cursor=pointer]:
+                        - generic [ref=e226]: O GLOBO
+                  - listitem [ref=e227]:
+                    - generic [ref=e228]:
+                      - strong [ref=e229]: "Papa Francisco:"
+                      - text: Desembarcou no Rio de Janeiro em 2013. Foi sua primeira viagem internacional como pontífice, realizada para a Jornada Mundial da Juventude (JMJ).
+                    - generic [ref=e231]:
+                      - link [ref=e232] [cursor=pointer]:
+                        - /url: https://pt.wikipedia.org/wiki/Visitas_papais_ao_Brasil
+                      - button [ref=e233] [cursor=pointer]:
+                        - generic [ref=e235]:
+                          - generic [ref=e236]: Wikipedia
+                          - generic [ref=e237]: "+1"
+                - generic [ref=e239]:
+                  - text: Você pode acompanhar notícias e registros históricos oficiais sobre essas passagens no site do
+                  - generic [ref=e240]:
+                    - link [ref=e242] [cursor=pointer]:
+                      - /url: https://www.vatican.va/
+                      - text: Vaticano
+                    - text: .
+                    - button [ref=e245] [cursor=pointer]:
+                      - img [ref=e248]
+              - generic [ref=e253]:
+                - generic [ref=e255]:
+                  - button "7 sites" [ref=e256] [cursor=pointer]:
+                    - generic [ref=e265]: 7 sites
+                  - button "Sobre este resultado" [ref=e270] [cursor=pointer]:
+                    - img [ref=e272]
+                - list [ref=e275]:
+                  - listitem [ref=e276]:
+                    - generic [ref=e277]:
+                      - link "Visitas papais ao Brasil – Wikipédia, a enciclopédia livre. Abre em uma nova guia." [ref=e278] [cursor=pointer]:
+                        - /url: https://pt.wikipedia.org/wiki/Visitas_papais_ao_Brasil
+                      - generic [ref=e279]:
+                        - generic [ref=e281]:
+                          - generic [ref=e282]: Visitas papais ao Brasil – Wikipédia, a enciclopédia livre
+                          - generic [ref=e283]: Visitas papais ao Brasil. ... Três papas já visitaram o Brasil — João Paulo II, Bento XVI e Francisco. A primeira viagem foi em 19...
+                        - generic [ref=e285]:
+                          - generic [ref=e290]: Wikipedia
+                          - button "Sobre este resultado" [ref=e294] [cursor=pointer]:
+                            - img [ref=e296]
+                  - listitem [ref=e300]:
+                    - generic [ref=e301]:
+                      - 'link "Do beijo no chão a santo brasileiro: saiba como foram as visitas de .... Abre em uma nova guia." [ref=e302] [cursor=pointer]':
+                        - /url: https://oglobo.globo.com/mundo/noticia/2023/06/do-beijo-no-chao-a-santo-brasileiro-saiba-como-foram-as-visitas-de-papas-ao-brasil.ghtml
+                      - generic [ref=e303]:
+                        - generic [ref=e305]:
+                          - generic [ref=e306]: "Do beijo no chão a santo brasileiro: saiba como foram as visitas de ..."
+                          - generic [ref=e307]: "Em 1991, João Paulo II voltou ao Brasil e passou por dez capitais: Natal, São Luís, Brasília, Goiânia, Cuiabá, Campo Grande, Flori..."
+                        - generic [ref=e309]:
+                          - generic [ref=e314]: O GLOBO
+                          - button [ref=e318] [cursor=pointer]:
+                            - img [ref=e320]
+                  - listitem [ref=e324]:
+                    - generic [ref=e325]:
+                      - link [ref=e326] [cursor=pointer]:
+                        - /url: https://www.brasilparalelo.com.br/noticias/de-leao-xiv-a-joao-paulo-ii-saiba-como-foram-as-visitas-dos-papas-ao-brasil
+                      - generic [ref=e327]:
+                        - generic [ref=e329]:
+                          - generic [ref=e330]: "Os papas no Brasil: de Leão XIV a João Paulo II"
+                          - generic [ref=e331]: A trajetória das visitas papais ao Brasil começou com São João Paulo II, o primeiro papa a visitar o país. Em 1980, ainda em plena...
+                        - generic [ref=e333]:
+                          - generic [ref=e338]: Brasil Paralelo
+                          - button [ref=e342] [cursor=pointer]:
+                            - img [ref=e344]
+                - button [ref=e348] [cursor=pointer]:
+                  - generic [ref=e349]: Mostrar tudo
+          - button "Mostrar mais Visões Gerais Criadas por IA" [ref=e353]:
+            - generic [ref=e355] [cursor=pointer]:
+              - generic [ref=e356]: Mostrar mais
+              - img [ref=e358]
+      - main [ref=e361]:
+        - generic [ref=e365]:
+          - generic [ref=e368]:
+            - heading "Resultados da Web" [level=2] [ref=e369]
+            - generic [ref=e370]:
+              - generic [ref=e373]:
+                - link "Conheça os 8 cardeais brasileiros que podem suceder ao ... Poder360 https://www.poder360.com.br › poder-brasil › conheca..." [ref=e375] [cursor=pointer]:
+                  - /url: https://www.poder360.com.br/poder-brasil/conheca-os-8-cardeais-brasileiros-que-podem-suceder-o-papa-francisco/
+                  - heading "Conheça os 8 cardeais brasileiros que podem suceder ao ..." [level=3] [ref=e376]
+                  - generic [ref=e382]:
+                    - generic [ref=e384]: Poder360
+                    - generic [ref=e386]: https://www.poder360.com.br › poder-brasil › conheca...
+                - button "Sobre este resultado" [ref=e387] [cursor=pointer]:
+                  - img [ref=e390]
+              - generic [ref=e393]:
+                - generic [ref=e394]: 21 de abr. de 2025 —
+                - text: Entre os brasileiros, apenas 1 tem mais de 80 anos, 5 foram nomeados por Francisco e 3 participaram do último conclave. Leia no Poder360.
+          - generic [ref=e399]:
+            - heading "As pessoas também perguntam" [level=2] [ref=e401]
+            - generic [ref=e402]:
+              - button "Quais foram os papas brasileiros?" [ref=e408] [cursor=pointer]:
+                - generic [ref=e410]: Quais foram os papas brasileiros?
+                - img [ref=e413]
+              - button "Quantos papas já houve no Brasil?" [ref=e422] [cursor=pointer]:
+                - generic [ref=e424]: Quantos papas já houve no Brasil?
+                - img [ref=e427]
+              - button "Já teve algum papa brasileiro?" [ref=e436] [cursor=pointer]:
+                - generic [ref=e438]: Já teve algum papa brasileiro?
+                - img [ref=e441]
+              - button "Quantos papas teve o Brasil?" [ref=e450] [cursor=pointer]:
+                - generic [ref=e452]: Quantos papas teve o Brasil?
+                - img [ref=e455]
+          - generic [ref=e460]:
+            - heading "Resultados da Web" [level=2] [ref=e461]
+            - generic [ref=e462]:
+              - generic [ref=e465]:
+                - link "Visitas papais ao Brasil – Wikipédia, a enciclopédia livre Wikipedia https://pt.wikipedia.org › wiki › Visitas_papais_ao_Brasil" [ref=e467] [cursor=pointer]:
+                  - /url: https://pt.wikipedia.org/wiki/Visitas_papais_ao_Brasil
+                  - heading "Visitas papais ao Brasil – Wikipédia, a enciclopédia livre" [level=3] [ref=e468]
+                  - generic [ref=e474]:
+                    - generic [ref=e476]: Wikipedia
+                    - generic [ref=e478]: https://pt.wikipedia.org › wiki › Visitas_papais_ao_Brasil
+                - button "Sobre este resultado" [ref=e479] [cursor=pointer]:
+                  - img [ref=e482]
+              - generic [ref=e486]:
+                - text: Três
+                - emphasis [ref=e487]: papas
+                - text: já visitaram o
+                - emphasis [ref=e488]: Brasil
+                - text: — João Paulo II, Bento XVI e Francisco. A primeira viagem foi em 1980 e a mais recente em 2013. Foram seis viagens no total ...
+          - generic [ref=e492]:
+            - generic [ref=e495]:
+              - link "Saiba quem são os sete cardeais brasileiros aptos a eleger o ... Agência Brasil https://agenciabrasil.ebc.com.br › geral › noticia › saiba-..." [ref=e497] [cursor=pointer]:
+                - /url: https://agenciabrasil.ebc.com.br/geral/noticia/2025-04/saiba-quem-sao-os-sete-cardeais-brasileiros-aptos-eleger-o-novo-papa
+                - heading "Saiba quem são os sete cardeais brasileiros aptos a eleger o ..." [level=3] [ref=e498]
+                - generic [ref=e504]:
+                  - generic [ref=e506]: Agência Brasil
+                  - generic [ref=e508]: https://agenciabrasil.ebc.com.br › geral › noticia › saiba-...
+              - button "Sobre este resultado" [ref=e509] [cursor=pointer]:
+                - img [ref=e512]
+            - generic [ref=e515]:
+              - generic [ref=e516]: 22 de abr. de 2025 —
+              - generic [ref=e517]:
+                - text: Saiba quem são os sete cardeais brasileiros aptos a eleger o novo papa ·
+                - emphasis [ref=e518]: Cardeal João Braz de Aviz
+                - text: "- CNBB/Divulgação · Cardeal Paulo Cezar Costa - ..."
+          - generic [ref=e522]:
+            - generic [ref=e525]:
+              - link "quem são os cardeais brasileiros que podem votar para ... BBC https://www.bbc.com › portuguese › articles" [ref=e527] [cursor=pointer]:
+                - /url: https://www.bbc.com/portuguese/articles/c78e7y424gzo
+                - heading "quem são os cardeais brasileiros que podem votar para ..." [level=3] [ref=e528]
+                - generic [ref=e534]:
+                  - generic [ref=e536]: BBC
+                  - generic [ref=e538]: https://www.bbc.com › portuguese › articles
+              - button "Sobre este resultado" [ref=e539] [cursor=pointer]:
+                - img [ref=e542]
+            - generic [ref=e545]:
+              - generic [ref=e546]: 21 de abr. de 2025 —
+              - generic [ref=e547]:
+                - text: Atualmente, sete cardeais brasileiros podem participar e votar no conclave para escolher o novo
+                - emphasis [ref=e548]: papa
+                - text: . O
+                - emphasis [ref=e549]: Brasil
+                - text: tem um oitavo cardeal, o ...
+          - generic [ref=e553]:
+            - generic [ref=e556]:
+              - 'link "Além de Francisco: quais Papas também visitaram o Brasil? iG Turismo https://turismo.ig.com.br › alem-de-francisco-quais-pap..." [ref=e558] [cursor=pointer]':
+                - /url: https://turismo.ig.com.br/2025-04-21/alem-de-francisco-quais-papas-tambem-visitaram-o-brasil.html
+                - 'heading "Além de Francisco: quais Papas também visitaram o Brasil?" [level=3] [ref=e559]'
+                - generic [ref=e565]:
+                  - generic [ref=e567]: iG Turismo
+                  - generic [ref=e569]: https://turismo.ig.com.br › alem-de-francisco-quais-pap...
+              - button "Sobre este resultado" [ref=e570] [cursor=pointer]:
+                - img [ref=e573]
+            - generic [ref=e576]:
+              - generic [ref=e577]: 22 de abr. de 2025 —
+              - generic [ref=e578]:
+                - emphasis [ref=e579]: João Paulo II foi o primeiro Papa a visitar o Brasil
+                - text: — e até aqui, o único a retornar. Em 1980, o então líder da Igreja Católica há pouco menos ...
+          - generic [ref=e583]:
+            - generic [ref=e586]:
+              - link "Relembre quando Brasil quase teve um papa; cardeal ... - CBN CBN https://cbn.globo.com › noticia › 2025/05/07 › cardeal-..." [ref=e588] [cursor=pointer]:
+                - /url: https://cbn.globo.com/curiosidades/noticia/2025/05/07/cardeal-brasileiro-aparece-entre-cotados-como-novo-papa-brasil-ja-quase-teve-pontifice-uma-vez.ghtml
+                - heading "Relembre quando Brasil quase teve um papa; cardeal ... - CBN" [level=3] [ref=e589]
+                - generic [ref=e595]:
+                  - generic [ref=e597]: CBN
+                  - generic [ref=e599]: https://cbn.globo.com › noticia › 2025/05/07 › cardeal-...
+              - button "Sobre este resultado" [ref=e600] [cursor=pointer]:
+                - img [ref=e603]
+            - generic [ref=e606]:
+              - generic [ref=e607]: 7 de mai. de 2025 —
+              - text: Aloísio Lorscheider chegou a ter dois terços dos votos para ser pontífice no lugar de João Paulo II, mas desistiu por uma questão de saúde.
+          - generic [ref=e611]:
+            - generic [ref=e614]:
+              - 'link "Lista de papas: quais foram e curiosidades - Brasil Escola Brasil Escola https://brasilescola.uol.com.br › Religião › Cristianismo" [ref=e616] [cursor=pointer]':
+                - /url: https://brasilescola.uol.com.br/religiao/lista-de-papas.htm
+                - 'heading "Lista de papas: quais foram e curiosidades - Brasil Escola" [level=3] [ref=e617]'
+                - generic [ref=e623]:
+                  - generic [ref=e625]: Brasil Escola
+                  - generic [ref=e627]: https://brasilescola.uol.com.br › Religião › Cristianismo
+              - button "Sobre este resultado" [ref=e628] [cursor=pointer]:
+                - img [ref=e631]
+            - generic [ref=e635]:
+              - text: O nome de
+              - emphasis [ref=e636]: papa
+              - text: mais escolhido foi João, repetido 21 vezes, seguido por Gregório, 16 vezes; Clemente e Bento, ambos 15 vezes; Leão e Inocêncio, ambos 13 vezes, e ...
+          - generic [ref=e643]:
+            - generic [ref=e646]:
+              - 'link "Conclave: até 22 cardeais são \"papáveis\" para substituir ... YouTube · CNN Brasil Mais de 113,4 mil visualizações · há 1 ano" [ref=e648] [cursor=pointer]':
+                - /url: https://www.youtube.com/shorts/fdQ_Rla3l8U
+                - 'heading "Conclave: até 22 cardeais são \"papáveis\" para substituir ..." [level=3] [ref=e649]'
+                - generic [ref=e655]:
+                  - generic [ref=e657]: YouTube · CNN Brasil
+                  - generic [ref=e659]: Mais de 113,4 mil visualizações · há 1 ano
+              - button "Sobre este resultado" [ref=e660] [cursor=pointer]:
+                - img [ref=e663]
+            - generic [ref=e665]:
+              - 'button "Conclave: até 22 cardeais são \"papáveis\" para substituir ... enviado por CNN Brasil em YouTube. Assistir no Google. 1:29" [ref=e666] [cursor=pointer]':
+                - generic [ref=e668]:
+                  - img [ref=e674]
+                  - generic [ref=e677]:
+                    - generic [ref=e678]: 1:29
+                    - img [ref=e681]
+              - generic [ref=e684]: "... Papa #Vaticano #Conclave #Cardeal #shorts Inscreva-se no canal da CNN Brasil no YouTube. ACOMPANHE A CNN BRASIL TAMBÉM NAS OUTRAS ..."
+          - generic [ref=e688]:
+            - generic [ref=e690]:
+              - heading "Vídeos" [level=2] [ref=e691]
+              - button "Sobre este resultado" [ref=e692] [cursor=pointer]:
+                - img [ref=e695]
+            - generic [ref=e698]:
+              - generic [ref=e705]:
+                - generic [ref=e706]:
+                  - 'link "Conclave: quem são os cardeais brasileiros que votam e ... YouTube UOL 21 de abr. de 2025" [ref=e708] [cursor=pointer]':
+                    - /url: https://www.youtube.com/watch?v=GqPnPckBjxA
+                    - 'heading "Conclave: quem são os cardeais brasileiros que votam e ... YouTube UOL 21 de abr. de 2025" [level=3] [ref=e709]':
+                      - generic [ref=e712]: "Conclave: quem são os cardeais brasileiros que votam e ..."
+                      - generic [ref=e714]:
+                        - generic [ref=e715]:
+                          - text: YouTube
+                          - generic [ref=e716]: · UOL
+                        - generic [ref=e717]: 21 de abr. de 2025
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - text: YouTube
+                            - generic: · UOL
+                      - button "Sobre este resultado" [ref=e718] [cursor=pointer]:
+                        - img [ref=e721]
+                - 'button "Conclave: quem são os cardeais brasileiros que votam e ... enviado por UOL em YouTube. Assistir no Google. 6:56" [ref=e723] [cursor=pointer]':
+                  - generic [ref=e724]:
+                    - img [ref=e730]
+                    - generic [ref=e733]:
+                      - generic [ref=e734]: 6:56
+                      - img [ref=e737]
+              - generic [ref=e745]:
+                - generic [ref=e746]:
+                  - 'link "Eleição do novo papa: quais países têm mais cardeais – e ... YouTube BBC News Brasil 24 de abr. de 2025" [ref=e748] [cursor=pointer]':
+                    - /url: https://www.youtube.com/watch?v=T8w3_3cdzoI
+                    - 'heading "Eleição do novo papa: quais países têm mais cardeais – e ... YouTube BBC News Brasil 24 de abr. de 2025" [level=3] [ref=e749]':
+                      - generic [ref=e752]: "Eleição do novo papa: quais países têm mais cardeais – e ..."
+                      - generic [ref=e754]:
+                        - generic [ref=e755]:
+                          - text: YouTube
+                          - generic [ref=e756]: · BBC News Brasil
+                        - generic [ref=e757]: 24 de abr. de 2025
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - text: YouTube
+                            - generic: · BBC News Brasil
+                      - button "Sobre este resultado" [ref=e758] [cursor=pointer]:
+                        - img [ref=e761]
+                - 'button "Eleição do novo papa: quais países têm mais cardeais – e ... enviado por BBC News Brasil em YouTube. Assistir no Google. 4:16" [ref=e763] [cursor=pointer]':
+                  - generic [ref=e764]:
+                    - img [ref=e770]
+                    - generic [ref=e773]:
+                      - generic [ref=e774]: 4:16
+                      - img [ref=e777]
+              - generic [ref=e785]:
+                - generic [ref=e786]:
+                  - 'link "Conclave: Quem será o próximo papa? Veja alguns dos ... YouTube BBC News Brasil 1 de mai. de 2025" [ref=e788] [cursor=pointer]':
+                    - /url: https://www.youtube.com/watch?v=sr2kF-AXHbQ
+                    - 'heading "Conclave: Quem será o próximo papa? Veja alguns dos ... YouTube BBC News Brasil 1 de mai. de 2025" [level=3] [ref=e789]':
+                      - generic [ref=e792]: "Conclave: Quem será o próximo papa? Veja alguns dos ..."
+                      - generic [ref=e794]:
+                        - generic [ref=e795]:
+                          - text: YouTube
+                          - generic [ref=e796]: · BBC News Brasil
+                        - generic [ref=e797]: 1 de mai. de 2025
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - text: YouTube
+                            - generic: · BBC News Brasil
+                      - button "Sobre este resultado" [ref=e798] [cursor=pointer]:
+                        - img [ref=e801]
+                - 'button "Conclave: Quem será o próximo papa? Veja alguns dos ... enviado por BBC News Brasil em YouTube. Assistir no Google. 6:53" [ref=e803] [cursor=pointer]':
+                  - generic [ref=e804]:
+                    - img [ref=e810]
+                    - generic [ref=e813]:
+                      - generic [ref=e814]: 6:53
+                      - img [ref=e817]
+            - link "Ver todos os vídeos" [ref=e821] [cursor=pointer]:
+              - /url: /search?sca_esv=ec2bff8bd1e2ef21&udm=7&q=PAPAS+Brasil&sa=X&ved=2ahUKEwit8om5uoyVAxXxWOsIHRIhJDYQ8ccDKAJ6BAhfEAQ
+              - separator [ref=e822]
+              - generic [ref=e823]:
+                - generic [ref=e824]: Ver tudo
+                - img [ref=e826]
+          - generic [ref=e830]:
+            - heading "Resultados da Web" [level=2] [ref=e831]
+            - generic [ref=e832]:
+              - generic [ref=e835]:
+                - link "Quem são os 7 brasileiros que participarão da eleição do ... CartaCapital https://www.cartacapital.com.br › Mundo" [ref=e837] [cursor=pointer]:
+                  - /url: https://www.cartacapital.com.br/mundo/quem-sao-os-sete-brasileiros-que-participarao-da-eleicao-do-novo-papa/
+                  - heading "Quem são os 7 brasileiros que participarão da eleição do ..." [level=3] [ref=e838]
+                  - generic [ref=e844]:
+                    - generic [ref=e846]: CartaCapital
+                    - generic [ref=e848]: https://www.cartacapital.com.br › Mundo
+                - button "Sobre este resultado" [ref=e849] [cursor=pointer]:
+                  - img [ref=e852]
+              - generic [ref=e855]:
+                - generic [ref=e856]: 21 de abr. de 2025 —
+                - generic [ref=e857]:
+                  - text: Quem são os 7 brasileiros que participarão da eleição do novo
+                  - emphasis [ref=e858]: papa
+                  - text: . O país tem, no total, oito cardeais, mas um deles não participa da eleição.
+        - generic [ref=e860]:
+          - generic [ref=e865]:
+            - heading "Outras pessoas pesquisaram" [level=2] [ref=e867]
+            - generic [ref=e869]:
+              - generic [ref=e870]:
+                - link "Visita do papa ao brasil 1997" [ref=e874] [cursor=pointer]:
+                  - /url: /search?sca_esv=ec2bff8bd1e2ef21&q=Visita+do+papa+ao+brasil+1997&sa=X&ved=2ahUKEwit8om5uoyVAxXxWOsIHRIhJDYQ1QJ6BAhBEAE
+                  - generic [ref=e875]:
+                    - generic [ref=e880]: Visita do papa ao brasil 1997
+                    - img [ref=e884]
+                - link "Qual papa veio ao brasil em 2013" [ref=e889] [cursor=pointer]:
+                  - /url: /search?sca_esv=ec2bff8bd1e2ef21&q=Qual+papa+veio+ao+brasil+em+2013&sa=X&ved=2ahUKEwit8om5uoyVAxXxWOsIHRIhJDYQ1QJ6BAhaEAE
+                  - generic [ref=e890]:
+                    - generic [ref=e895]: Qual papa veio ao brasil em 2013
+                    - img [ref=e899]
+                - link "Visita do papa ao brasil em 1991" [ref=e904] [cursor=pointer]:
+                  - /url: /search?sca_esv=ec2bff8bd1e2ef21&q=Visita+do+papa+ao+brasil+em+1991&sa=X&ved=2ahUKEwit8om5uoyVAxXxWOsIHRIhJDYQ1QJ6BAhZEAE
+                  - generic [ref=e905]:
+                    - generic [ref=e910]: Visita do papa ao brasil em 1991
+                    - img [ref=e914]
+                - link "Visita do papa ao brasil 1997 favela" [ref=e919] [cursor=pointer]:
+                  - /url: /search?sca_esv=ec2bff8bd1e2ef21&q=Visita+do+papa+ao+brasil+1997+favela&sa=X&ved=2ahUKEwit8om5uoyVAxXxWOsIHRIhJDYQ1QJ6BAhYEAE
+                  - generic [ref=e920]:
+                    - generic [ref=e925]: Visita do papa ao brasil 1997 favela
+                    - img [ref=e929]
+              - generic [ref=e931]:
+                - link "Papa veio ao brasil em 2006" [ref=e935] [cursor=pointer]:
+                  - /url: /search?sca_esv=ec2bff8bd1e2ef21&q=Papa+veio+ao+brasil+em+2006&sa=X&ved=2ahUKEwit8om5uoyVAxXxWOsIHRIhJDYQ1QJ6BAhLEAE
+                  - generic [ref=e936]:
+                    - generic [ref=e941]: Papa veio ao brasil em 2006
+                    - img [ref=e945]
+                - link "Qual foi o primeiro papa a visitar o brasil" [ref=e950] [cursor=pointer]:
+                  - /url: /search?sca_esv=ec2bff8bd1e2ef21&q=Qual+foi+o+primeiro+papa+a+visitar+o+brasil&sa=X&ved=2ahUKEwit8om5uoyVAxXxWOsIHRIhJDYQ1QJ6BAhKEAE
+                  - generic [ref=e951]:
+                    - generic [ref=e956]: Qual foi o primeiro papa a visitar o brasil
+                    - img [ref=e960]
+                - link "Visita do papa ao brasil 1980" [ref=e965] [cursor=pointer]:
+                  - /url: /search?sca_esv=ec2bff8bd1e2ef21&q=Visita+do+papa+ao+brasil+1980&sa=X&ved=2ahUKEwit8om5uoyVAxXxWOsIHRIhJDYQ1QJ6BAhJEAE
+                  - generic [ref=e966]:
+                    - generic [ref=e971]: Visita do papa ao brasil 1980
+                    - img [ref=e975]
+                - link "Quantas vezes o papa joão paulo ii veio ao brasil" [ref=e980] [cursor=pointer]:
+                  - /url: /search?sca_esv=ec2bff8bd1e2ef21&q=Quantas+vezes+o+papa+jo%C3%A3o+paulo+ii+veio+ao+brasil&sa=X&ved=2ahUKEwit8om5uoyVAxXxWOsIHRIhJDYQ1QJ6BAhCEAE
+                  - generic [ref=e981]:
+                    - generic [ref=e986]: Quantas vezes o papa joão paulo ii veio ao brasil
+                    - img [ref=e990]
+          - navigation [ref=e992]:
+            - heading "Navegação nas páginas" [level=1] [ref=e993]
+            - text: "1"
+            - link "Page 2" [ref=e996] [cursor=pointer]:
+              - /url: /search?q=PAPAS+Brasil&sca_esv=ec2bff8bd1e2ef21&ei=6p4xaq3VMfGxrfcPksKQsQM&start=10&sa=N&sstk=AU9db-CGTrwuhQM7h7O-dQlYp1d_XY7q7EYUh7ci6b0AIyC99uxwWVcJpRDuT49wGue1HGwBniM8NXrSpgbQJ-6pMP_JTD1nCPvrJg&ved=2ahUKEwit8om5uoyVAxXxWOsIHRIhJDYQ8tMDegQIWxAE
+              - text: "2"
+            - link "Page 3" [ref=e998] [cursor=pointer]:
+              - /url: /search?q=PAPAS+Brasil&sca_esv=ec2bff8bd1e2ef21&ei=6p4xaq3VMfGxrfcPksKQsQM&start=20&sa=N&sstk=AU9db-CGTrwuhQM7h7O-dQlYp1d_XY7q7EYUh7ci6b0AIyC99uxwWVcJpRDuT49wGue1HGwBniM8NXrSpgbQJ-6pMP_JTD1nCPvrJg&ved=2ahUKEwit8om5uoyVAxXxWOsIHRIhJDYQ8tMDegQIWxAG
+              - text: "3"
+            - link "Page 4" [ref=e1000] [cursor=pointer]:
+              - /url: /search?q=PAPAS+Brasil&sca_esv=ec2bff8bd1e2ef21&ei=6p4xaq3VMfGxrfcPksKQsQM&start=30&sa=N&sstk=AU9db-CGTrwuhQM7h7O-dQlYp1d_XY7q7EYUh7ci6b0AIyC99uxwWVcJpRDuT49wGue1HGwBniM8NXrSpgbQJ-6pMP_JTD1nCPvrJg&ved=2ahUKEwit8om5uoyVAxXxWOsIHRIhJDYQ8tMDegQIWxAI
+              - text: "4"
+            - link "Page 5" [ref=e1002] [cursor=pointer]:
+              - /url: /search?q=PAPAS+Brasil&sca_esv=ec2bff8bd1e2ef21&ei=6p4xaq3VMfGxrfcPksKQsQM&start=40&sa=N&sstk=AU9db-CGTrwuhQM7h7O-dQlYp1d_XY7q7EYUh7ci6b0AIyC99uxwWVcJpRDuT49wGue1HGwBniM8NXrSpgbQJ-6pMP_JTD1nCPvrJg&ved=2ahUKEwit8om5uoyVAxXxWOsIHRIhJDYQ8tMDegQIWxAK
+              - text: "5"
+            - link "Page 6" [ref=e1004] [cursor=pointer]:
+              - /url: /search?q=PAPAS+Brasil&sca_esv=ec2bff8bd1e2ef21&ei=6p4xaq3VMfGxrfcPksKQsQM&start=50&sa=N&sstk=AU9db-CGTrwuhQM7h7O-dQlYp1d_XY7q7EYUh7ci6b0AIyC99uxwWVcJpRDuT49wGue1HGwBniM8NXrSpgbQJ-6pMP_JTD1nCPvrJg&ved=2ahUKEwit8om5uoyVAxXxWOsIHRIhJDYQ8tMDegQIWxAM
+              - text: "6"
+            - link "Page 7" [ref=e1006] [cursor=pointer]:
+              - /url: /search?q=PAPAS+Brasil&sca_esv=ec2bff8bd1e2ef21&ei=6p4xaq3VMfGxrfcPksKQsQM&start=60&sa=N&sstk=AU9db-CGTrwuhQM7h7O-dQlYp1d_XY7q7EYUh7ci6b0AIyC99uxwWVcJpRDuT49wGue1HGwBniM8NXrSpgbQJ-6pMP_JTD1nCPvrJg&ved=2ahUKEwit8om5uoyVAxXxWOsIHRIhJDYQ8tMDegQIWxAO
+              - text: "7"
+            - link "Page 8" [ref=e1008] [cursor=pointer]:
+              - /url: /search?q=PAPAS+Brasil&sca_esv=ec2bff8bd1e2ef21&ei=6p4xaq3VMfGxrfcPksKQsQM&start=70&sa=N&sstk=AU9db-CGTrwuhQM7h7O-dQlYp1d_XY7q7EYUh7ci6b0AIyC99uxwWVcJpRDuT49wGue1HGwBniM8NXrSpgbQJ-6pMP_JTD1nCPvrJg&ved=2ahUKEwit8om5uoyVAxXxWOsIHRIhJDYQ8tMDegQIWxAQ
+              - text: "8"
+            - link "Page 9" [ref=e1010] [cursor=pointer]:
+              - /url: /search?q=PAPAS+Brasil&sca_esv=ec2bff8bd1e2ef21&ei=6p4xaq3VMfGxrfcPksKQsQM&start=80&sa=N&sstk=AU9db-CGTrwuhQM7h7O-dQlYp1d_XY7q7EYUh7ci6b0AIyC99uxwWVcJpRDuT49wGue1HGwBniM8NXrSpgbQJ-6pMP_JTD1nCPvrJg&ved=2ahUKEwit8om5uoyVAxXxWOsIHRIhJDYQ8tMDegQIWxAS
+              - text: "9"
+            - link "Page 10" [ref=e1012] [cursor=pointer]:
+              - /url: /search?q=PAPAS+Brasil&sca_esv=ec2bff8bd1e2ef21&ei=6p4xaq3VMfGxrfcPksKQsQM&start=90&sa=N&sstk=AU9db-CGTrwuhQM7h7O-dQlYp1d_XY7q7EYUh7ci6b0AIyC99uxwWVcJpRDuT49wGue1HGwBniM8NXrSpgbQJ-6pMP_JTD1nCPvrJg&ved=2ahUKEwit8om5uoyVAxXxWOsIHRIhJDYQ8tMDegQIWxAU
+              - text: "10"
+            - heading "Mais" [level=2] [ref=e1014]:
+              - link "Mais" [ref=e1015] [cursor=pointer]:
+                - /url: /search?q=PAPAS+Brasil&sca_esv=ec2bff8bd1e2ef21&ei=6p4xaq3VMfGxrfcPksKQsQM&start=10&sa=N&sstk=AU9db-CGTrwuhQM7h7O-dQlYp1d_XY7q7EYUh7ci6b0AIyC99uxwWVcJpRDuT49wGue1HGwBniM8NXrSpgbQJ-6pMP_JTD1nCPvrJg&ved=2ahUKEwit8om5uoyVAxXxWOsIHRIhJDYQ8NMDegQIWxAW
+                - generic [ref=e1017]: Mais
+        - navigation
+    - contentinfo [ref=e1018]:
+      - heading "Links do rodapé" [level=1] [ref=e1019]
+      - generic [ref=e1023]:
+        - generic [ref=e1025]:
+          - text: Brasil
+          - generic [ref=e1027]:
+            - button "Califórnia, Belo Horizonte - MG - Do seu endereço IP" [ref=e1029] [cursor=pointer]:
+              - generic [ref=e1030]: Califórnia, Belo Horizonte - MG
+              - generic [ref=e1032]:
+                - text: "-"
+                - generic [ref=e1033]: Do seu endereço IP
+            - text: "-"
+            - button "Atualizar local" [ref=e1035] [cursor=pointer]: Atualizar local
+        - generic [ref=e1038]:
+          - link "Ajuda" [ref=e1039] [cursor=pointer]:
+            - /url: https://support.google.com/websearch/?p=ws_results_help&hl=pt-BR&fg=1
+          - link "Enviar feedback" [ref=e1040] [cursor=pointer]:
+            - /url: "#"
+          - link "Privacidade" [ref=e1041] [cursor=pointer]:
+            - /url: https://policies.google.com/privacy?hl=pt-BR&fg=1
+          - link "Termos" [ref=e1042] [cursor=pointer]:
+            - /url: https://policies.google.com/terms?hl=pt-BR&fg=1
