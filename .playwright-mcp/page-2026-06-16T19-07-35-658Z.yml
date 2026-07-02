@@ -1,0 +1,294 @@
+- generic [active] [ref=e1]:
+  - generic:
+    - generic:
+      - link "Ir para o conteúdo principal" [ref=e2] [cursor=pointer]
+      - link "Ajuda sobre acessibilidade" [ref=e3] [cursor=pointer]:
+        - /url: https://support.google.com/websearch/answer/181196?hl=pt-BR
+  - generic [ref=e8]:
+    - search [ref=e9]:
+      - generic [ref=e11]:
+        - generic:
+          - generic:
+            - generic:
+              - img
+        - 'link "Copa do Mundo 2026: a arte da cobrança de pênalti" [ref=e13] [cursor=pointer]':
+          - /url: https://www.google.com/webhp?hl=pt-BR&ictx=2&sa=X&ved=0ahUKEwiDtN2-uoyVAxXQq5UCHXRoFo0QPQgK
+          - 'img "Copa do Mundo 2026: a arte da cobrança de pênalti" [ref=e14]'
+        - generic [ref=e15]:
+          - generic [ref=e16]:
+            - combobox "Pesquisar" [ref=e19]: PAAPS Brasil PAAPS Brasil
+            - generic [ref=e20]:
+              - button "Limpar" [ref=e22] [cursor=pointer]:
+                - img [ref=e24]
+              - generic [ref=e27]:
+                - button "Ferramentas de inserção de texto" [ref=e28] [cursor=pointer]:
+                  - img [ref=e30]
+                - button "Pesquisar por voz" [ref=e32] [cursor=pointer]:
+                  - img [ref=e33]
+                - button "Pesquisa por imagem" [ref=e35] [cursor=pointer]:
+                  - img [ref=e36]
+          - button "Pesquisar" [ref=e38] [cursor=pointer]:
+            - img [ref=e41]
+    - generic [ref=e43]:
+      - button "Configurações" [ref=e45] [cursor=pointer]:
+        - img [ref=e48]
+      - button "Compartilhar" [ref=e51] [cursor=pointer]:
+        - img [ref=e55]
+      - generic [ref=e57]:
+        - button "Google Apps" [ref=e59] [cursor=pointer]:
+          - img [ref=e60]
+        - link "Fazer login" [ref=e64] [cursor=pointer]:
+          - /url: https://accounts.google.com/ServiceLogin?hl=pt-BR&passive=true&continue=https://www.google.com/search%3Fsca_esv%3Dec2bff8bd1e2ef21%26q%3DPAAPS%2BBrasil%26nfpr%3D1%26sa%3DX%26ved%3D2ahUKEwit8om5uoyVAxXxWOsIHRIhJDYQvgUoAXoECBAQAg%26biw%3D1204%26bih%3D655%26dpr%3D2&ec=futura_srp_og_si_72236_p
+  - generic [ref=e66]:
+    - navigation [ref=e72]:
+      - generic [ref=e78]:
+        - list [ref=e79]:
+          - listitem [ref=e80]:
+            - link "Modo IA" [ref=e83] [cursor=pointer]:
+              - /url: /search?q=PAAPS+Brasil&sa=X&sca_esv=ec2bff8bd1e2ef21&nfpr=1&biw=1204&bih=655&udm=50&fbs=ADc_l-acAb_3MMOAUx0zmbUpgBqRiigBgL2I_pgQa-94zvB054Dys3s2x_Qm_GJcU2DlSXgs4i471_5vbbrE24Q_ZqrCatB7YnmDqpjaDf_BPVQIpjf978k-6sXBMDIlmbTUDepN0rz_fyjIdZ0H5lY98CePJJpopoUX8eUW2M-HQQOsJv6AyXUv5dVeCWH_22FlERo1_MPpA2hxk3hDau3kjJExOz0ywA&aep=1&ntc=1&ved=2ahUKEwiDtN2-uoyVAxXQq5UCHXRoFo0Q2J8OegQIERAD
+              - generic [ref=e86]: Modo IA
+          - listitem [ref=e87]:
+            - link "Tudo" [disabled] [ref=e88]:
+              - generic [ref=e90]: Tudo
+          - listitem [ref=e91]:
+            - link "Imagens" [ref=e92] [cursor=pointer]:
+              - /url: /search?sa=X&sca_esv=ec2bff8bd1e2ef21&nfpr=1&biw=1204&bih=655&udm=2&fbs=ADc_l-acAb_3MMOAUx0zmbUpgBqRiigBgL2I_pgQa-94zvB054Dys3s2x_Qm_GJcU2DlSXgs4i471_5vbbrE24Q_ZqrCatB7YnmDqpjaDf_BPVQIpjf978k-6sXBMDIlmbTUDepN0rz_fyjIdZ0H5lY98CePJJpopoUX8eUW2M-HQQOsJv6AyXUv5dVeCWH_22FlERo1_MPpA2hxk3hDau3kjJExOz0ywA&q=PAAPS+Brasil&ved=2ahUKEwiDtN2-uoyVAxXQq5UCHXRoFo0QtKgLegQIFRAB
+              - generic [ref=e94]: Imagens
+          - listitem [ref=e95]:
+            - link "Vídeos" [ref=e96] [cursor=pointer]:
+              - /url: /search?sa=X&sca_esv=ec2bff8bd1e2ef21&nfpr=1&biw=1204&bih=655&udm=7&fbs=ADc_l-acAb_3MMOAUx0zmbUpgBqRiigBgL2I_pgQa-94zvB054Dys3s2x_Qm_GJcU2DlSXgs4i471_5vbbrE24Q_ZqrCatB7YnmDqpjaDf_BPVQIpjf978k-6sXBMDIlmbTUDepN0rz_fyjIdZ0H5lY98CePJJpopoUX8eUW2M-HQQOsJv6AyXUv5dVeCWH_22FlERo1_MPpA2hxk3hDau3kjJExOz0ywA&q=PAAPS+Brasil&ved=2ahUKEwiDtN2-uoyVAxXQq5UCHXRoFo0QtKgLegQIFBAB
+              - generic [ref=e98]: Vídeos
+          - listitem [ref=e99]:
+            - link "Notícias" [ref=e100] [cursor=pointer]:
+              - /url: /search?sca_esv=ec2bff8bd1e2ef21&nfpr=1&biw=1204&bih=655&q=PAAPS+Brasil&tbm=nws&source=lnms&fbs=ADc_l-acAb_3MMOAUx0zmbUpgBqRiigBgL2I_pgQa-94zvB054Dys3s2x_Qm_GJcU2DlSXgs4i471_5vbbrE24Q_ZqrCatB7YnmDqpjaDf_BPVQIpjf978k-6sXBMDIlmbTUDepN0rz_fyjIdZ0H5lY98CePJJpopoUX8eUW2M-HQQOsJv6AyXUv5dVeCWH_22FlERo1_MPpA2hxk3hDau3kjJExOz0ywA&sa=X&ved=2ahUKEwiDtN2-uoyVAxXQq5UCHXRoFo0Q0pQJegQIExAB
+              - generic [ref=e102]: Notícias
+          - listitem [ref=e103]:
+            - link "Shopping" [ref=e104] [cursor=pointer]:
+              - /url: /search?sa=X&sca_esv=ec2bff8bd1e2ef21&nfpr=1&biw=1204&bih=655&udm=28&fbs=ADc_l-acAb_3MMOAUx0zmbUpgBqRiigBgL2I_pgQa-94zvB054Dys3s2x_Qm_GJcU2DlSXgs4i471_5vbbrE24Q_ZqrCatB7YnmDqpjaDf_BPVQIpjf978k-6sXBMDIlmbTUDepN0rz_fyjIdZ0H5lY98CePJJpopoUX8eUW2M-HQQOsJv6AyXUv5dVeCWH_22FlERo1_MPpA2hxk3hDau3kjJExOz0ywA&q=PAAPS+Brasil&ved=1t:220175&ictx=111
+              - generic [ref=e106]: Shopping
+          - listitem [ref=e107]:
+            - link "Vídeos curtos" [ref=e108] [cursor=pointer]:
+              - /url: /search?sa=X&sca_esv=ec2bff8bd1e2ef21&nfpr=1&biw=1204&bih=655&udm=39&fbs=ADc_l-acAb_3MMOAUx0zmbUpgBqRiigBgL2I_pgQa-94zvB054Dys3s2x_Qm_GJcU2DlSXgs4i471_5vbbrE24Q_ZqrCatB7YnmDqpjaDf_BPVQIpjf978k-6sXBMDIlmbTUDepN0rz_fyjIdZ0H5lY98CePJJpopoUX8eUW2M-HQQOsJv6AyXUv5dVeCWH_22FlERo1_MPpA2hxk3hDau3kjJExOz0ywA&q=PAAPS+Brasil&ved=2ahUKEwiDtN2-uoyVAxXQq5UCHXRoFo0Qs6gLegQIFhAB
+              - generic [ref=e110]: Vídeos curtos
+          - listitem [ref=e111]:
+            - button "Mais filtros" [ref=e112] [cursor=pointer]:
+              - generic "Mais filtros" [ref=e113]:
+                - generic [ref=e114]:
+                  - generic [ref=e115]: Mais
+                  - img [ref=e117]
+        - button "Ferramentas" [ref=e120] [cursor=pointer]:
+          - generic [ref=e122]:
+            - generic [ref=e123]: Ferramentas
+            - img [ref=e125]
+    - heading "Resultados da pesquisa" [level=1] [ref=e127]
+    - main [ref=e133]:
+      - 'heading "Você quis dizer: PAPAS Brasil" [level=2] [ref=e137]':
+        - text: "Você quis dizer:"
+        - link "PAPAS Brasil" [ref=e138] [cursor=pointer]:
+          - /url: /search?sca_esv=ec2bff8bd1e2ef21&biw=1204&bih=655&q=PAPAS+Brasil&spell=1&sa=X&ved=2ahUKEwiDtN2-uoyVAxXQq5UCHXRoFo0QBSgAegQIDxAB
+          - generic [ref=e139]: PAPAS
+          - text: Brasil
+      - generic [ref=e143]:
+        - generic [ref=e146]:
+          - heading "Resultados da Web" [level=2] [ref=e147]
+          - generic [ref=e148]:
+            - generic [ref=e151]:
+              - link "Paaps – Programa de Aceleração Ativa de Projetos Sociais paaps.com.br https://paaps.com.br" [ref=e153] [cursor=pointer]:
+                - /url: https://paaps.com.br/
+                - heading "Paaps – Programa de Aceleração Ativa de Projetos Sociais" [level=3] [ref=e154]
+                - generic [ref=e160]:
+                  - generic [ref=e162]: paaps.com.br
+                  - generic [ref=e164]: https://paaps.com.br
+              - button "Sobre este resultado" [ref=e165] [cursor=pointer]:
+                - img [ref=e168]
+            - generic [ref=e171]:
+              - generic [ref=e172]: 31 de mar. de 2026 —
+              - generic [ref=e173]:
+                - emphasis [ref=e174]: Programa de Aceleração Ativa de Projetos Sociais
+                - text: ; uma Startup GovTech especializada em Psicologia Social do Trabalho.
+        - generic [ref=e185]:
+          - heading "Pensando" [level=2] [ref=e189]:
+            - generic [ref=e190]: Pensando
+          - progressbar "Gerando" [ref=e191]
+        - generic [ref=e195]:
+          - heading "Resultados da Web" [level=2] [ref=e196]
+          - generic [ref=e197]:
+            - generic [ref=e200]:
+              - link "paaps.brasil - Instagram Instagram · paaps.brasil Mais de 1,1 mil seguidores" [ref=e202] [cursor=pointer]:
+                - /url: https://www.instagram.com/paaps.brasil/
+                - heading "paaps.brasil - Instagram" [level=3] [ref=e203]
+                - generic [ref=e209]:
+                  - generic [ref=e211]: Instagram · paaps.brasil
+                  - generic [ref=e213]: Mais de 1,1 mil seguidores
+              - button "Sobre este resultado" [ref=e214] [cursor=pointer]:
+                - img [ref=e217]
+            - generic [ref=e221]:
+              - emphasis [ref=e222]: A Rede de Saúde Mental para as Políticas Públicas do futuro
+              - text: Para municípios, ONGs, ESG e NR01 Gestor, cuide dos seus servidores, aqui⤵️ ...
+            - link "PAAPS Brasil de www.instagram.com" [ref=e225] [cursor=pointer]:
+              - /url: https://www.instagram.com/paaps.brasil/
+              - img "PAAPS Brasil de www.instagram.com" [ref=e227]
+        - generic [ref=e231]:
+          - generic [ref=e234]:
+            - link "Sobre – Paaps paaps.com.br https://paaps.com.br › sobre" [ref=e236] [cursor=pointer]:
+              - /url: https://paaps.com.br/sobre/
+              - heading "Sobre – Paaps" [level=3] [ref=e237]
+              - generic [ref=e243]:
+                - generic [ref=e245]: paaps.com.br
+                - generic [ref=e247]: https://paaps.com.br › sobre
+            - button "Sobre este resultado" [ref=e248] [cursor=pointer]:
+              - img [ref=e251]
+          - generic [ref=e254]:
+            - generic [ref=e255]: 17 de abr. de 2026 —
+            - generic [ref=e256]:
+              - text: E o
+              - emphasis [ref=e257]: PAAPS é o Programa onde nós ativamente aceleramos Projetos de impacto na sociedade
+              - text: ", através do cuidado territorializado com quem cuida."
+        - generic [ref=e261]:
+          - generic [ref=e264]:
+            - link "Mallu Vasconcellos - fundadora programa PAAPS LinkedIn · Mallu Vasconcellos Mais de 230 seguidores" [ref=e266] [cursor=pointer]:
+              - /url: https://br.linkedin.com/in/malluvasconcellos
+              - heading "Mallu Vasconcellos - fundadora programa PAAPS" [level=3] [ref=e267]
+              - generic [ref=e273]:
+                - generic [ref=e275]: LinkedIn · Mallu Vasconcellos
+                - generic [ref=e277]: Mais de 230 seguidores
+            - button "Sobre este resultado" [ref=e278] [cursor=pointer]:
+              - img [ref=e281]
+          - generic [ref=e284]: "fundadora programa PAAPS | projetos de impacto: criação, implementação e sustent(ação) | +5 anos em projetos e políticas públicas · Psicossocióloga."
+        - generic [ref=e290]:
+          - generic [ref=e293]:
+            - link "então eu fundei o paaps, tendeu?📖🥹 a rede pública de saúde ... Instagram · amalluvasconcellos Mais de 30 marcações \"Gostei\" · há 4 meses" [ref=e295] [cursor=pointer]:
+              - /url: https://www.instagram.com/reel/DT069vXEpQQ/
+              - heading "então eu fundei o paaps, tendeu?📖🥹 a rede pública de saúde ..." [level=3] [ref=e296]
+              - generic [ref=e302]:
+                - generic [ref=e304]: Instagram · amalluvasconcellos
+                - generic [ref=e306]: Mais de 30 marcações "Gostei" · há 4 meses
+            - button "Sobre este resultado" [ref=e307] [cursor=pointer]:
+              - img [ref=e310]
+          - generic [ref=e312]:
+            - link "então eu fundei o paaps, tendeu?📖🥹 a rede pública de saúde ... enviado por Mallu Vasconcellos • Psicologia e Impacto Social em Instagram. Assistir em Instagram. 1:37" [ref=e313] [cursor=pointer]:
+              - /url: https://www.instagram.com/reel/DT069vXEpQQ/
+              - generic [ref=e315]:
+                - img [ref=e321]
+                - generic [ref=e325]: 1:37
+            - generic [ref=e327]: "32 likes, 5 comments - amalluvasconcellos on January 22, 2026: \"então eu fundei o paaps, tendeu? a rede pública de saúde mental no Brasil ..."
+        - generic [ref=e331]:
+          - generic [ref=e334]:
+            - link "Programa de Aperfeiçoamento em Atributos da Atenção ... UNA-SUS https://www.unasus.gov.br › programa_modular" [ref=e336] [cursor=pointer]:
+              - /url: https://www.unasus.gov.br/programa_modular/4
+              - heading "Programa de Aperfeiçoamento em Atributos da Atenção ..." [level=3] [ref=e337]
+              - generic [ref=e343]:
+                - generic [ref=e345]: UNA-SUS
+                - generic [ref=e347]: https://www.unasus.gov.br › programa_modular
+            - button "Sobre este resultado" [ref=e348] [cursor=pointer]:
+              - img [ref=e351]
+          - generic [ref=e355]:
+            - text: O curso visa fortalecer a Atenção Primária à Saúde (
+            - emphasis [ref=e356]: APS
+            - text: ) como base do Sistema Único de Saúde (SUS), capacitando profissionais para aplicar os atributos ...
+        - generic [ref=e360]:
+          - generic [ref=e363]:
+            - link "ECOA Psicologia Social Latina - Paaps paaps.com.br https://paaps.com.br › ecoa-psicologia-social-latina" [ref=e365] [cursor=pointer]:
+              - /url: https://paaps.com.br/ecoa-psicologia-social-latina/
+              - heading "ECOA Psicologia Social Latina - Paaps" [level=3] [ref=e366]
+              - generic [ref=e372]:
+                - generic [ref=e374]: paaps.com.br
+                - generic [ref=e376]: https://paaps.com.br › ecoa-psicologia-social-latina
+            - button "Sobre este resultado" [ref=e377] [cursor=pointer]:
+              - img [ref=e380]
+          - generic [ref=e383]:
+            - generic [ref=e384]: 17 de abr. de 2026 —
+            - generic [ref=e385]:
+              - emphasis [ref=e386]: Notícias comentadas na interseção Psicologia Social + Estado + Brasil real
+              - text: ; sem perder a densidade e com linguagem acessível. ... O PAAPS e ...
+        - generic [ref=e392]:
+          - generic [ref=e395]:
+            - 'link "Qualifica Redes on Instagram: \"Conhecimento que se ... Instagram · qualificaredes.serro Mais de 30 marcações \"Gostei\" · há 3 semanas" [ref=e397] [cursor=pointer]':
+              - /url: https://www.instagram.com/reel/DYkEoTWkjgu/
+              - 'heading "Qualifica Redes on Instagram: \"Conhecimento que se ..." [level=3] [ref=e398]'
+              - generic [ref=e404]:
+                - generic [ref=e406]: Instagram · qualificaredes.serro
+                - generic [ref=e408]: Mais de 30 marcações "Gostei" · há 3 semanas
+            - button "Sobre este resultado" [ref=e409] [cursor=pointer]:
+              - img [ref=e412]
+          - generic [ref=e414]:
+            - 'link "Qualifica Redes on Instagram: \"Conhecimento que se ... enviado por Qualifica Redes em Instagram. Assistir em Instagram. 1:25" [ref=e415] [cursor=pointer]':
+              - /url: https://www.instagram.com/reel/DYkEoTWkjgu/
+              - generic [ref=e417]:
+                - img [ref=e420]
+                - generic [ref=e424]: 1:25
+            - generic [ref=e426]: ... PAAPS com médicos, seguimos construindo caminhos para uma atenção ... Brasil 360. Mais do que atender indicadores, o foco está em ...
+        - generic [ref=e432]:
+          - generic [ref=e435]:
+            - link "“Papo cabeça” é um projeto que atua na prevenção de ... Instagram · republica_org Mais de 100 marcações \"Gostei\" · há 1 ano" [ref=e437] [cursor=pointer]:
+              - /url: https://www.instagram.com/reel/C8c7EPNpf64/
+              - heading "“Papo cabeça” é um projeto que atua na prevenção de ..." [level=3] [ref=e438]
+              - generic [ref=e444]:
+                - generic [ref=e446]: Instagram · republica_org
+                - generic [ref=e448]: Mais de 100 marcações "Gostei" · há 1 ano
+            - button "Sobre este resultado" [ref=e449] [cursor=pointer]:
+              - img [ref=e452]
+          - generic [ref=e454]:
+            - link "“Papo cabeça” é um projeto que atua na prevenção de ... enviado por República.org em Instagram. Assistir em Instagram. 1:30" [ref=e455] [cursor=pointer]:
+              - /url: https://www.instagram.com/reel/C8c7EPNpf64/
+              - generic [ref=e457]:
+                - img [ref=e463]
+                - generic [ref=e467]: 1:30
+            - generic [ref=e469]: ... paaps.brasil o link para contato está na biografia do perfil. View 1 comment · _gabidangelo. Amei ❤️❤️❤️. May 25. OCR. @PAAPS.BRASIL paaps ...
+      - navigation [ref=e472]:
+        - heading "Navegação nas páginas" [level=1] [ref=e473]
+        - text: "1"
+        - link "Page 2" [ref=e476] [cursor=pointer]:
+          - /url: /search?q=PAAPS+Brasil&sca_esv=ec2bff8bd1e2ef21&nfpr=1&biw=1204&bih=655&ei=9p4xaoPhKNDX1sQP9NDZ6Ag&start=10&sa=N&sstk=AU9db-DlRVamQbMy0hQAadCaGEbcgdtySoAeCenBoEB7hSSj0Fo9h4Pvlul-T9Iw5hpn2gxISYuJ2c8aveal3qsEHAw1dBeeliL8xw&ved=2ahUKEwiDtN2-uoyVAxXQq5UCHXRoFo0Q8tMDegQIGxAE
+          - text: "2"
+        - link "Page 3" [ref=e478] [cursor=pointer]:
+          - /url: /search?q=PAAPS+Brasil&sca_esv=ec2bff8bd1e2ef21&nfpr=1&biw=1204&bih=655&ei=9p4xaoPhKNDX1sQP9NDZ6Ag&start=20&sa=N&sstk=AU9db-DlRVamQbMy0hQAadCaGEbcgdtySoAeCenBoEB7hSSj0Fo9h4Pvlul-T9Iw5hpn2gxISYuJ2c8aveal3qsEHAw1dBeeliL8xw&ved=2ahUKEwiDtN2-uoyVAxXQq5UCHXRoFo0Q8tMDegQIGxAG
+          - text: "3"
+        - link "Page 4" [ref=e480] [cursor=pointer]:
+          - /url: /search?q=PAAPS+Brasil&sca_esv=ec2bff8bd1e2ef21&nfpr=1&biw=1204&bih=655&ei=9p4xaoPhKNDX1sQP9NDZ6Ag&start=30&sa=N&sstk=AU9db-DlRVamQbMy0hQAadCaGEbcgdtySoAeCenBoEB7hSSj0Fo9h4Pvlul-T9Iw5hpn2gxISYuJ2c8aveal3qsEHAw1dBeeliL8xw&ved=2ahUKEwiDtN2-uoyVAxXQq5UCHXRoFo0Q8tMDegQIGxAI
+          - text: "4"
+        - link "Page 5" [ref=e482] [cursor=pointer]:
+          - /url: /search?q=PAAPS+Brasil&sca_esv=ec2bff8bd1e2ef21&nfpr=1&biw=1204&bih=655&ei=9p4xaoPhKNDX1sQP9NDZ6Ag&start=40&sa=N&sstk=AU9db-DlRVamQbMy0hQAadCaGEbcgdtySoAeCenBoEB7hSSj0Fo9h4Pvlul-T9Iw5hpn2gxISYuJ2c8aveal3qsEHAw1dBeeliL8xw&ved=2ahUKEwiDtN2-uoyVAxXQq5UCHXRoFo0Q8tMDegQIGxAK
+          - text: "5"
+        - link "Page 6" [ref=e484] [cursor=pointer]:
+          - /url: /search?q=PAAPS+Brasil&sca_esv=ec2bff8bd1e2ef21&nfpr=1&biw=1204&bih=655&ei=9p4xaoPhKNDX1sQP9NDZ6Ag&start=50&sa=N&sstk=AU9db-DlRVamQbMy0hQAadCaGEbcgdtySoAeCenBoEB7hSSj0Fo9h4Pvlul-T9Iw5hpn2gxISYuJ2c8aveal3qsEHAw1dBeeliL8xw&ved=2ahUKEwiDtN2-uoyVAxXQq5UCHXRoFo0Q8tMDegQIGxAM
+          - text: "6"
+        - link "Page 7" [ref=e486] [cursor=pointer]:
+          - /url: /search?q=PAAPS+Brasil&sca_esv=ec2bff8bd1e2ef21&nfpr=1&biw=1204&bih=655&ei=9p4xaoPhKNDX1sQP9NDZ6Ag&start=60&sa=N&sstk=AU9db-DlRVamQbMy0hQAadCaGEbcgdtySoAeCenBoEB7hSSj0Fo9h4Pvlul-T9Iw5hpn2gxISYuJ2c8aveal3qsEHAw1dBeeliL8xw&ved=2ahUKEwiDtN2-uoyVAxXQq5UCHXRoFo0Q8tMDegQIGxAO
+          - text: "7"
+        - link "Page 8" [ref=e488] [cursor=pointer]:
+          - /url: /search?q=PAAPS+Brasil&sca_esv=ec2bff8bd1e2ef21&nfpr=1&biw=1204&bih=655&ei=9p4xaoPhKNDX1sQP9NDZ6Ag&start=70&sa=N&sstk=AU9db-DlRVamQbMy0hQAadCaGEbcgdtySoAeCenBoEB7hSSj0Fo9h4Pvlul-T9Iw5hpn2gxISYuJ2c8aveal3qsEHAw1dBeeliL8xw&ved=2ahUKEwiDtN2-uoyVAxXQq5UCHXRoFo0Q8tMDegQIGxAQ
+          - text: "8"
+        - link "Page 9" [ref=e490] [cursor=pointer]:
+          - /url: /search?q=PAAPS+Brasil&sca_esv=ec2bff8bd1e2ef21&nfpr=1&biw=1204&bih=655&ei=9p4xaoPhKNDX1sQP9NDZ6Ag&start=80&sa=N&sstk=AU9db-DlRVamQbMy0hQAadCaGEbcgdtySoAeCenBoEB7hSSj0Fo9h4Pvlul-T9Iw5hpn2gxISYuJ2c8aveal3qsEHAw1dBeeliL8xw&ved=2ahUKEwiDtN2-uoyVAxXQq5UCHXRoFo0Q8tMDegQIGxAS
+          - text: "9"
+        - link "Page 10" [ref=e492] [cursor=pointer]:
+          - /url: /search?q=PAAPS+Brasil&sca_esv=ec2bff8bd1e2ef21&nfpr=1&biw=1204&bih=655&ei=9p4xaoPhKNDX1sQP9NDZ6Ag&start=90&sa=N&sstk=AU9db-DlRVamQbMy0hQAadCaGEbcgdtySoAeCenBoEB7hSSj0Fo9h4Pvlul-T9Iw5hpn2gxISYuJ2c8aveal3qsEHAw1dBeeliL8xw&ved=2ahUKEwiDtN2-uoyVAxXQq5UCHXRoFo0Q8tMDegQIGxAU
+          - text: "10"
+        - heading "Mais" [level=2] [ref=e494]:
+          - link "Mais" [ref=e495] [cursor=pointer]:
+            - /url: /search?q=PAAPS+Brasil&sca_esv=ec2bff8bd1e2ef21&nfpr=1&biw=1204&bih=655&ei=9p4xaoPhKNDX1sQP9NDZ6Ag&start=10&sa=N&sstk=AU9db-DlRVamQbMy0hQAadCaGEbcgdtySoAeCenBoEB7hSSj0Fo9h4Pvlul-T9Iw5hpn2gxISYuJ2c8aveal3qsEHAw1dBeeliL8xw&ved=2ahUKEwiDtN2-uoyVAxXQq5UCHXRoFo0Q8NMDegQIGxAW
+            - generic [ref=e497]: Mais
+      - navigation
+    - contentinfo [ref=e498]:
+      - heading "Links do rodapé" [level=1] [ref=e499]
+      - generic [ref=e503]:
+        - generic [ref=e505]:
+          - text: Brasil
+          - generic [ref=e507]:
+            - button "Califórnia, Belo Horizonte - MG - Do seu endereço IP" [ref=e509] [cursor=pointer]:
+              - generic [ref=e510]: Califórnia, Belo Horizonte - MG
+              - generic [ref=e512]:
+                - text: "-"
+                - generic [ref=e513]: Do seu endereço IP
+            - text: "-"
+            - button "Atualizar local" [ref=e515] [cursor=pointer]: Atualizar local
+        - generic [ref=e518]:
+          - link "Ajuda" [ref=e519] [cursor=pointer]:
+            - /url: https://support.google.com/websearch/?p=ws_results_help&hl=pt-BR&fg=1
+          - link "Enviar feedback" [ref=e520] [cursor=pointer]:
+            - /url: "#"
+          - link "Privacidade" [ref=e521] [cursor=pointer]:
+            - /url: https://policies.google.com/privacy?hl=pt-BR&fg=1
+          - link "Termos" [ref=e522] [cursor=pointer]:
+            - /url: https://policies.google.com/terms?hl=pt-BR&fg=1

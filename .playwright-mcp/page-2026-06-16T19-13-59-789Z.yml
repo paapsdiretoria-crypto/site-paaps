@@ -1,0 +1,433 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=e4]:
+    - link "Malala Fund" [ref=e6] [cursor=pointer]:
+      - /url: /
+      - img "Malala Fund" [ref=e7]
+    - navigation [ref=e8]:
+      - list [ref=e11]:
+        - listitem [ref=e12]:
+          - link "About" [ref=e13] [cursor=pointer]:
+            - /url: /about?sc=header
+          - text: 
+        - listitem [ref=e14]:
+          - link "Why Girls’ Education" [ref=e15] [cursor=pointer]:
+            - /url: /girls-education?sc=header
+        - listitem [ref=e16]:
+          - link "Our work" [ref=e17] [cursor=pointer]:
+            - /url: /our-work?sc=header
+          - text:  
+        - listitem [ref=e18]:
+          - link "News & Resources" [ref=e19] [cursor=pointer]:
+            - /url: /newsroom?sc=header
+          - text:   
+        - listitem [ref=e20]:
+          - generic [ref=e21]:
+            - generic:
+              - search:
+                - generic:
+                  - generic: Search
+                - textbox:
+                  - /placeholder: Search
+                - button
+            - button "Toggle Search" [ref=e23] [cursor=pointer]
+      - link "Donate" [ref=e25] [cursor=pointer]:
+        - /url: /donate?sc=header
+  - heading "Malala Fund" [level=1] [ref=e26]
+  - generic [ref=e29]:
+    - generic:
+      - figure
+    - generic [ref=e31]:
+      - generic:
+        - generic:
+          - img
+        - text: 
+  - paragraph [ref=e41]: Malala Fund is working for a world where every girl can learn and choose her own future.
+  - main [ref=e42]:
+    - generic [ref=e45]:
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - img
+            - img
+            - img
+      - generic [ref=e48]:
+        - generic [ref=e51]:
+          - generic [ref=e52]:
+            - generic [ref=e54]:
+              - heading "More than 122 million girls are out of school today." [level=2] [ref=e55]
+              - heading "Donate today to keep girls learning." [level=3] [ref=e56]
+              - link "Learn More" [ref=e58] [cursor=pointer]:
+                - /url: /girls-education
+              - paragraph
+            - paragraph [ref=e61]
+          - paragraph
+        - generic:
+          - img
+        - img
+    - generic [ref=e69]:
+      - generic [ref=e70]:
+        - heading "Where we work" [level=2] [ref=e71]
+        - paragraph [ref=e74]: We focus on countries where adolescent girls face the biggest barriers to education.
+      - generic [ref=e75]:
+        - generic [ref=e77]:
+          - link [ref=e79] [cursor=pointer]:
+            - /url: /countries/afghanistan
+            - img [ref=e81]
+          - link "Afghanistan" [ref=e83] [cursor=pointer]:
+            - /url: /countries/afghanistan
+            - text: Afghanistan
+            - generic [ref=e84]: 
+        - generic [ref=e88]:
+          - link [ref=e90] [cursor=pointer]:
+            - /url: /countries/brazil
+            - img [ref=e92]
+          - link "Brazil" [ref=e94] [cursor=pointer]:
+            - /url: /countries/brazil
+            - text: Brazil
+            - generic [ref=e95]: 
+        - generic [ref=e99]:
+          - link [ref=e101] [cursor=pointer]:
+            - /url: /countries/ethiopia
+            - img [ref=e103]
+          - link "Ethiopia" [ref=e105] [cursor=pointer]:
+            - /url: /countries/ethiopia
+            - text: Ethiopia
+            - generic [ref=e106]: 
+        - generic [ref=e110]:
+          - link [ref=e112] [cursor=pointer]:
+            - /url: /countries/nigeria
+            - img [ref=e114]
+          - link "Nigeria" [ref=e116] [cursor=pointer]:
+            - /url: /countries/nigeria
+            - text: Nigeria
+            - generic [ref=e117]: 
+        - generic [ref=e121]:
+          - link [ref=e123] [cursor=pointer]:
+            - /url: /countries/pakistan
+            - img [ref=e125]
+          - link "Pakistan" [ref=e127] [cursor=pointer]:
+            - /url: /countries/pakistan
+            - text: Pakistan
+            - generic [ref=e128]: 
+        - generic [ref=e132]:
+          - link [ref=e134] [cursor=pointer]:
+            - /url: /countries/tanzania
+            - img [ref=e136]
+          - link "Tanzania" [ref=e138] [cursor=pointer]:
+            - /url: /countries/tanzania
+            - text: Tanzania
+            - generic [ref=e139]: 
+    - generic:      
+    - generic [ref=e144]:
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - img
+      - generic:
+        - generic:
+          - img
+      - blockquote [ref=e151]:
+        - generic [ref=e152]:
+          - generic [ref=e153]:
+            - paragraph [ref=e154]: We need to encourage girls that their voice matters. I think there are hundreds and thousands of Malalas out there.
+            - generic [ref=e155]: — MALALA
+          - generic [ref=e156]:
+            - paragraph [ref=e157]: We need to encourage girls that their voice matters. I think there are hundreds and thousands of Malalas out there.
+            - generic [ref=e158]: — MALALA
+    - generic [ref=e164]:
+      - generic [ref=e165]:
+        - heading "Hear from girls" [level=2] [ref=e166]
+        - paragraph [ref=e169]: The young women we work with share their challenges, aspirations and how they're fighting for girls’ education.
+        - link "Girls' Stories" [ref=e173] [cursor=pointer]:
+          - /url: /news-and-voices?type=Girl+Story
+          - text: Girls' Stories
+          - generic [ref=e174]: 
+      - generic [ref=e175]:
+        - generic:
+          - img
+        - generic [ref=e178]:
+          - generic [ref=e181]:
+            - link [ref=e183] [cursor=pointer]:
+              - /url: /news-and-voices/built-with-youth-how-young-women-are-transforming-education
+              - img [ref=e185]
+            - generic [ref=e187]:
+              - generic [ref=e189]:
+                - generic [ref=e190]: January 21, 2026
+                - generic [ref=e191]: Partner Story
+              - 'link "View Built with youth: How young women are transforming education" [ref=e193] [cursor=pointer]':
+                - /url: /news-and-voices/built-with-youth-how-young-women-are-transforming-education
+                - 'heading "Built with youth: How young women are transforming education" [level=3] [ref=e194]'
+            - link "Read More" [ref=e197] [cursor=pointer]:
+              - /url: /news-and-voices/built-with-youth-how-young-women-are-transforming-education
+              - text: Read More
+              - generic [ref=e198]: 
+          - generic [ref=e202]:
+            - link [ref=e204] [cursor=pointer]:
+              - /url: /news-and-voices/how-reusable-pads-are-helping-girls-stay-in-nigeria-stay-in-school
+              - img [ref=e206]
+            - generic [ref=e208]:
+              - generic [ref=e210]:
+                - generic [ref=e211]: November 5, 2025
+                - generic [ref=e212]: Girl Story
+              - link "View How reusable pads are helping girls in Nigeria stay in school" [ref=e214] [cursor=pointer]:
+                - /url: /news-and-voices/how-reusable-pads-are-helping-girls-stay-in-nigeria-stay-in-school
+                - heading "How reusable pads are helping girls in Nigeria stay in school" [level=3] [ref=e215]
+            - link "Read More" [ref=e218] [cursor=pointer]:
+              - /url: /news-and-voices/how-reusable-pads-are-helping-girls-stay-in-nigeria-stay-in-school
+              - text: Read More
+              - generic [ref=e219]: 
+          - generic [ref=e223]:
+            - link [ref=e225] [cursor=pointer]:
+              - /url: /news-and-voices/why-pakistans-debt-story-matters-for-girls
+              - img [ref=e227]
+            - generic [ref=e229]:
+              - generic [ref=e231]:
+                - generic [ref=e232]: November 5, 2025
+                - generic [ref=e233]: Girl Story
+              - link "View Why Pakistan’s debt story matters for girls" [ref=e235] [cursor=pointer]:
+                - /url: /news-and-voices/why-pakistans-debt-story-matters-for-girls
+                - heading "Why Pakistan’s debt story matters for girls" [level=3] [ref=e236]
+            - link "Read More" [ref=e239] [cursor=pointer]:
+              - /url: /news-and-voices/why-pakistans-debt-story-matters-for-girls
+              - text: Read More
+              - generic [ref=e240]: 
+          - generic [ref=e244]:
+            - link [ref=e246] [cursor=pointer]:
+              - /url: /news-and-voices/afghan-girls-are-seeds
+              - img [ref=e248]
+            - generic [ref=e250]:
+              - generic [ref=e252]:
+                - generic [ref=e253]: September 16, 2025
+                - generic [ref=e254]: Girl Story
+              - link "View Afghan girls are seeds" [ref=e256] [cursor=pointer]:
+                - /url: /news-and-voices/afghan-girls-are-seeds
+                - heading "Afghan girls are seeds" [level=3] [ref=e257]
+            - link "Read More" [ref=e260] [cursor=pointer]:
+              - /url: /news-and-voices/afghan-girls-are-seeds
+              - text: Read More
+              - generic [ref=e261]: 
+          - generic [ref=e265]:
+            - link [ref=e267] [cursor=pointer]:
+              - /url: /news-and-voices/nigerian-girls-are-bearing-the-impacts-of-national-debt
+              - img [ref=e269]
+            - generic [ref=e271]:
+              - generic [ref=e273]:
+                - generic [ref=e274]: August 3, 2025
+                - generic [ref=e275]: Girl Story
+              - link "View Nigerian girls are bearing the impacts of national debt" [ref=e277] [cursor=pointer]:
+                - /url: /news-and-voices/nigerian-girls-are-bearing-the-impacts-of-national-debt
+                - heading "Nigerian girls are bearing the impacts of national debt" [level=3] [ref=e278]
+            - link "Read More" [ref=e281] [cursor=pointer]:
+              - /url: /news-and-voices/nigerian-girls-are-bearing-the-impacts-of-national-debt
+              - text: Read More
+              - generic [ref=e282]: 
+          - generic [ref=e286]:
+            - link [ref=e288] [cursor=pointer]:
+              - /url: /news-and-voices/even-without-a-classroom-i-still-dream
+              - img [ref=e290]
+            - generic [ref=e292]:
+              - generic [ref=e294]:
+                - generic [ref=e295]: June 23, 2025
+                - generic [ref=e296]: Girl Story
+              - link "View Even without a classroom, I still dream" [ref=e298] [cursor=pointer]:
+                - /url: /news-and-voices/even-without-a-classroom-i-still-dream
+                - heading "Even without a classroom, I still dream" [level=3] [ref=e299]
+            - link "Read More" [ref=e302] [cursor=pointer]:
+              - /url: /news-and-voices/even-without-a-classroom-i-still-dream
+              - text: Read More
+              - generic [ref=e303]: 
+          - generic [ref=e307]:
+            - link [ref=e309] [cursor=pointer]:
+              - /url: /news-and-voices/leading-the-charge-for-girls-rights-in-ethiopia
+              - img [ref=e311]
+            - generic [ref=e313]:
+              - generic [ref=e315]:
+                - generic [ref=e316]: March 25, 2025
+                - generic [ref=e317]: Girl Story
+              - link "View Leading the charge for girls’ rights in Ethiopia" [ref=e319] [cursor=pointer]:
+                - /url: /news-and-voices/leading-the-charge-for-girls-rights-in-ethiopia
+                - heading "Leading the charge for girls’ rights in Ethiopia" [level=3] [ref=e320]
+            - link "Read More" [ref=e323] [cursor=pointer]:
+              - /url: /news-and-voices/leading-the-charge-for-girls-rights-in-ethiopia
+              - text: Read More
+              - generic [ref=e324]: 
+          - generic [ref=e328]:
+            - link [ref=e330] [cursor=pointer]:
+              - /url: /news-and-voices/how-girls-in-tanzania-are-using-film-to-fight-for-their-rights
+              - img [ref=e332]
+            - generic [ref=e334]:
+              - generic [ref=e336]:
+                - generic [ref=e337]: March 6, 2025
+                - generic [ref=e338]: Girl Story
+              - link "View How girls in Tanzania are using film to fight for their rights" [ref=e340] [cursor=pointer]:
+                - /url: /news-and-voices/how-girls-in-tanzania-are-using-film-to-fight-for-their-rights
+                - heading "How girls in Tanzania are using film to fight for their rights" [level=3] [ref=e341]
+            - link "Read More" [ref=e344] [cursor=pointer]:
+              - /url: /news-and-voices/how-girls-in-tanzania-are-using-film-to-fight-for-their-rights
+              - text: Read More
+              - generic [ref=e345]: 
+          - generic [ref=e349]:
+            - link [ref=e351] [cursor=pointer]:
+              - /url: /news-and-voices/my-advocacy-helped-girls-and-their-families-recognise-their-right-to
+              - img [ref=e353]
+            - generic [ref=e355]:
+              - generic [ref=e357]:
+                - generic [ref=e358]: February 18, 2025
+                - generic [ref=e359]: Girl Story
+              - link "View My advocacy helped girls and their families recognise their right to education in Nigeria" [ref=e361] [cursor=pointer]:
+                - /url: /news-and-voices/my-advocacy-helped-girls-and-their-families-recognise-their-right-to
+                - heading "My advocacy helped girls and their families recognise their right to education in Nigeria" [level=3] [ref=e362]
+            - link "Read More" [ref=e365] [cursor=pointer]:
+              - /url: /news-and-voices/my-advocacy-helped-girls-and-their-families-recognise-their-right-to
+              - text: Read More
+              - generic [ref=e366]: 
+          - generic [ref=e370]:
+            - link [ref=e372] [cursor=pointer]:
+              - /url: /news-and-voices/what-would-the-government-look-like-if-girls-took-over
+              - img [ref=e374]
+            - generic [ref=e376]:
+              - generic [ref=e378]:
+                - generic [ref=e379]: February 2, 2025
+                - generic [ref=e380]: Girl Story
+              - link "View What would the government look like if girls took over?" [ref=e382] [cursor=pointer]:
+                - /url: /news-and-voices/what-would-the-government-look-like-if-girls-took-over
+                - heading "What would the government look like if girls took over?" [level=3] [ref=e383]
+            - link "Read More" [ref=e386] [cursor=pointer]:
+              - /url: /news-and-voices/what-would-the-government-look-like-if-girls-took-over
+              - text: Read More
+              - generic [ref=e387]: 
+    - generic [ref=e392]:
+      - generic:
+        - generic:
+          - img
+    - generic [ref=e399]:
+      - generic [ref=e404]:
+        - heading "The fight for girls’ education won’t be won by girls alone." [level=2] [ref=e405]
+        - generic [ref=e408]:
+          - paragraph [ref=e411]: Sign up to learn how you can help support Malala Fund and receive the latest updates on our work.
+          - paragraph [ref=e414]:
+            - generic [ref=e417]:
+              - generic [ref=e418]:
+                - generic [ref=e419]:
+                  - textbox "First name" [ref=e420]
+                  - textbox "Last name" [ref=e421]
+                - textbox "Email" [ref=e423]
+                - button "Join" [ref=e424] [cursor=pointer]
+              - textbox [ref=e426]
+              - status
+      - img
+  - contentinfo [ref=e428]:
+    - generic [ref=e430]:
+      - generic [ref=e431]:
+        - img "Malala Fund" [ref=e432]
+        - paragraph [ref=e433]:
+          - text: Malala Fund is working for a world where every girl can learn and choose her own future.
+          - text: malala.org
+      - generic [ref=e434]:
+        - text: 
+        - generic [ref=e435]:
+          - generic [ref=e436]:
+            - heading "Take action" [level=4] [ref=e437]
+            - list [ref=e438]:
+              - listitem [ref=e439]:
+                - link "Donate" [ref=e440] [cursor=pointer]:
+                  - /url: /donate?sc=footer
+              - listitem [ref=e441]:
+                - link "Start a fundraiser" [ref=e442] [cursor=pointer]:
+                  - /url: /fundraise?sc=footer
+              - listitem [ref=e443]:
+                - link "Ways to support" [ref=e444] [cursor=pointer]:
+                  - /url: /ways-to-support?sc=footer
+              - listitem [ref=e445]:
+                - link "Store (opens in a new tab)" [ref=e446] [cursor=pointer]:
+                  - /url: https://store.malala.org/?sc=footer
+                  - text: Store
+                  - generic [ref=e447]: 
+          - generic [ref=e448]:
+            - heading "About Us" [level=4] [ref=e449]
+            - list [ref=e450]:
+              - listitem [ref=e451]:
+                - link "Malala's story" [ref=e452] [cursor=pointer]:
+                  - /url: /malalas-story?sc=footer
+              - listitem [ref=e453]:
+                - link "Our partners" [ref=e454] [cursor=pointer]:
+                  - /url: /partners?sc=footer
+              - listitem [ref=e455]:
+                - link "Meet our team" [ref=e456] [cursor=pointer]:
+                  - /url: /staff?sc=footer
+              - listitem [ref=e457]:
+                - link "Contact us" [ref=e458] [cursor=pointer]:
+                  - /url: /contact?sc=footer
+          - generic [ref=e459]:
+            - heading "Learn more" [level=4] [ref=e460]
+            - list [ref=e461]:
+              - listitem [ref=e462]:
+                - link "News & Voices" [ref=e463] [cursor=pointer]:
+                  - /url: /newsroom?sc=footer
+              - listitem [ref=e464]:
+                - link "U.S. financials" [ref=e465] [cursor=pointer]:
+                  - /url: /financial-information-us?sc=footer
+              - listitem [ref=e466]:
+                - link "U.K. financials" [ref=e467] [cursor=pointer]:
+                  - /url: /financial-information-uk?sc=footer
+              - listitem [ref=e468]:
+                - link "PK financials" [ref=e469] [cursor=pointer]:
+                  - /url: /financial-information-pk?sc=footer
+              - listitem [ref=e470]:
+                - link "Resources" [ref=e471] [cursor=pointer]:
+                  - /url: /resources?sc=footer
+        - generic [ref=e472]:
+          - generic [ref=e473]:
+            - generic [ref=e474] [cursor=pointer]: Join our Mailing List
+            - article:
+              - generic:
+                - generic:
+                  - img "Close"
+                - generic:
+                  - generic:
+                    - heading "Join our Mailing List" [level=1]
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - textbox "First name"
+                              - textbox "Last name"
+                            - generic:
+                              - textbox "Email"
+                            - button "Join"
+                          - generic:
+                            - generic:
+                              - textbox
+                          - status
+          - generic [ref=e475]:
+            - heading "Follow Us" [level=4] [ref=e476]
+            - generic [ref=e477]:
+              - link "undefined (opens in a new tab)" [ref=e478] [cursor=pointer]:
+                - /url: https://www.tiktok.com/@malalafund
+                - generic [ref=e479]: 
+              - link [ref=e480] [cursor=pointer]:
+                - /url: //instagram.com/malalafund
+                - generic [ref=e481]: 
+              - link [ref=e482] [cursor=pointer]:
+                - /url: //x.com/MalalaFund
+                - generic [ref=e483]: 
+              - link [ref=e484] [cursor=pointer]:
+                - /url: //www.facebook.com/MalalaFund
+                - generic [ref=e485]: 
+              - link [ref=e486] [cursor=pointer]:
+                - /url: //www.youtube.com/user/MalalaFund
+                - generic [ref=e487]: 
+    - generic [ref=e489]:
+      - generic [ref=e491]:
+        - link "Terms and Conditions" [ref=e492] [cursor=pointer]:
+          - /url: /terms-and-conditions
+        - link "Privacy Policy" [ref=e494] [cursor=pointer]:
+          - /url: /privacy-policy
+        - link "Hiring" [ref=e496] [cursor=pointer]:
+          - /url: /hiring
+      - paragraph [ref=e497]: © 2026 All Rights Reserved

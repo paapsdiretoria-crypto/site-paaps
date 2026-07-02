@@ -1,0 +1,334 @@
+- generic [ref=e3]:
+  - region "top of page" [active]
+  - button "Ir para o conteúdo principal"
+  - generic [ref=e9]:
+    - banner [ref=e10]:
+      - generic [ref=e13]:
+        - generic:
+          - generic:
+            - link "Logo_amuta_site.png" [ref=e15] [cursor=pointer]:
+              - /url: https://www.institutoamuta.com.br
+              - img "Logo_amuta_site.png" [ref=e16]
+            - navigation "Site" [ref=e18]:
+              - list [ref=e19]:
+                - listitem [ref=e20]:
+                  - link "Home" [ref=e21] [cursor=pointer]:
+                    - /url: https://www.institutoamuta.com.br
+                    - paragraph [ref=e25]: Home
+                - listitem [ref=e26]:
+                  - link "serviços" [ref=e27] [cursor=pointer]:
+                    - /url: https://www.institutoamuta.com.br/serviços
+                    - paragraph [ref=e31]: serviços
+                  - button "Mais páginas de serviços" [ref=e32]:
+                    - img [ref=e33]
+                - listitem [ref=e35]:
+                  - link "Cursos e Formações" [ref=e36] [cursor=pointer]:
+                    - /url: https://www.institutoamuta.com.br/cópia-formação-dc
+                    - paragraph [ref=e40]: Cursos e Formações
+                - listitem [ref=e41]:
+                  - link "Conteúdos ricos" [ref=e42] [cursor=pointer]:
+                    - /url: https://www.institutoamuta.com.br/conteudos-ricos
+                    - paragraph [ref=e46]: Conteúdos ricos
+    - main [ref=e47]:
+      - generic [ref=e51]:
+        - generic:
+          - generic:
+            - generic:
+              - region "Slideshow" [ref=e56]:
+                - button "Anterior" [ref=e57] [cursor=pointer]:
+                  - img [ref=e58]
+                - button "Próximo" [ref=e60] [cursor=pointer]:
+                  - img [ref=e61]
+                - generic [ref=e64]:
+                  - img "AMUTA_AMORES PASSAGEIROS_150723-045.jpg" [ref=e69]
+                  - generic [ref=e70]:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - paragraph [ref=e72]:
+                            - generic [ref=e75]: Não é acaso,
+                          - paragraph [ref=e76]:
+                            - generic [ref=e79]: é design
+                        - paragraph [ref=e80]:
+                          - generic [ref=e83]: Colocamos os relacionamentos no centro da estratégia de transformação de pessoas, de negócios e da sociedade. Conheça o Design de Conexões, nossa abordagem autoral.
+              - heading "Um jeito de potencializar as relações diferente de tudo que você já viu" [level=2] [ref=e88]:
+                - generic [ref=e90]: Um jeito de potencializar as relações diferente de tudo que você já viu
+              - generic "Video Player" [ref=e95]
+              - heading "Como desbloquear o potencial da saúde social dentro das organizações?" [level=2] [ref=e100]:
+                - generic [ref=e102]: Como desbloquear o potencial da saúde social dentro das organizações?
+              - generic [ref=e111]:
+                - img "IMG_6342-Enhanced-NR.jpg" [ref=e117]
+                - generic [ref=e118]:
+                  - generic:
+                    - generic:
+                      - paragraph [ref=e122]:
+                        - generic [ref=e126]: Design de
+                        - generic [ref=e130]: experiências
+                      - paragraph [ref=e131]:
+                        - generic [ref=e134]: experiências de conexão como teambuilding, offsite, encontros e imersões
+                      - paragraph [ref=e135]:
+                        - generic [ref=e137]: "NECESSIDADE:"
+                      - paragraph [ref=e138]:
+                        - generic [ref=e139]: Equipes imersas em rotinas de alta pressão e interações puramente transacionais, com os vínculos enfraquecidos, a segurança abalada e a saúde social prejudicada.
+                      - paragraph [ref=e140]:
+                        - generic [ref=e142]: INTERVENÇÃO
+                      - paragraph [ref=e143]:
+                        - generic [ref=e144]: Desenhamos e facilitamos experiências intencionais que aceleram a criação de vínculos e a resolução de conflitos. Guiados por facilitadoras experientes, criamos espaços seguros que criam memória, desbloqueiam relações, movimentam grupos e transformam indivíduos.
+                      - link "Saber mais" [ref=e146] [cursor=pointer]:
+                        - /url: https://www.institutoamuta.com.br/design-experiencia-conexao
+                        - generic [ref=e147]: Saber mais
+              - generic [ref=e156]:
+                - generic [ref=e157]:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - paragraph [ref=e161]:
+                          - generic [ref=e165]: Design de
+                        - paragraph [ref=e166]:
+                          - generic [ref=e170]: comunidades
+                      - paragraph [ref=e171]:
+                        - generic [ref=e174]: desenho das estruturas da comunidade (MCV) e implementação da comunidade semente
+                      - paragraph [ref=e175]:
+                        - generic [ref=e177]: "NECESSIDADE:"
+                      - paragraph [ref=e178]:
+                        - generic [ref=e179]: Baixa adesão, conclusão e retenção em jornadas de desenvolvimento. Lideranças, grupos de afinidade e times isolados e solitários. Dificuldade de continuidade de relacionamento com clientes e diminuição do impacto da marca.
+                      - paragraph [ref=e180]:
+                        - generic [ref=e182]: INTERVENÇÃO
+                      - paragraph [ref=e183]:
+                        - generic [ref=e185]: A MCV (mínima comunidade viável) é uma abordagem adaptativa para criar estruturas de pertencimento e desenhar comunidades relevantes, estratégicas e sustentáveis desde a sua fase semente. Pertencimento não é sorte, é construção.
+                      - link "Saber mais" [ref=e187] [cursor=pointer]:
+                        - /url: https://www.institutoamuta.com.br/landing-pages-mcv-organizacao
+                        - generic [ref=e188]: Saber mais
+                - img "2S4A3797_edited_edited_edited_edited.jpg" [ref=e194]
+              - generic [ref=e203]:
+                - img "Roche C-Level-163_websize.jpg" [ref=e209]
+                - generic [ref=e210]:
+                  - generic:
+                    - generic:
+                      - paragraph [ref=e214]:
+                        - generic [ref=e218]: Capacitação e desenvolvimento
+                      - paragraph [ref=e219]:
+                        - generic [ref=e222]: palestra, workshop, curso imersivo ou jornadas de desenvolvimento
+                      - paragraph [ref=e223]:
+                        - generic [ref=e225]: "NECESSIDADE:"
+                      - paragraph [ref=e226]:
+                        - generic [ref=e227]: Lideranças e profissionais de RH são constantemente cobrados para engajar times e mediar conflitos, mas frequentemente carecem da inteligência relacional e de embasamento para sustentar interações de qualidade diante da complexidade das relações no cenário atual.
+                      - paragraph [ref=e228]:
+                        - generic [ref=e230]: INTERVENÇÃO
+                      - paragraph [ref=e231]:
+                        - generic [ref=e232]: Inteligência relacional é a capacidade de sustentar as qualidades que ajudam na manutenção e adaptação de relacionamentos e interações de qualidade. Nossas capacitações oferecem um conhecimento científico e sensível das relações humanas entregando linguagem e ferramentas para que lideranças saibam cultivar e proteger a saúde social nos seus contextos de atuação.
+                      - link "Saber mais" [ref=e234] [cursor=pointer]:
+                        - /url: https://www.institutoamuta.com.br
+                        - generic [ref=e235]: Saber mais
+              - generic [ref=e244]:
+                - generic [ref=e245]:
+                  - generic:
+                    - generic:
+                      - paragraph [ref=e249]:
+                        - generic [ref=e253]: Campanhas e conscientização
+                      - paragraph [ref=e254]:
+                        - generic [ref=e257]: rodas de conversa, pílulas de conteúdo, cartilhas técnicas e práticas
+                      - paragraph [ref=e258]:
+                        - generic [ref=e260]: "NECESSIDADE:"
+                      - paragraph [ref=e261]:
+                        - generic [ref=e263]: Solidão, esgotamento relacional e relacionamentos tóxicos ainda são tratados como grandes tabus nas organizações. A falta de linguagem para abordar o tema funciona como um fator de risco invisível para o aumento do turnover e a baixa performance e para a dificuldade de posicionar saúde social como uma questão estratégica nas empresas.
+                      - paragraph [ref=e264]:
+                        - generic [ref=e266]: INTERVENÇÃO
+                      - paragraph [ref=e267]:
+                        - generic [ref=e268]: Campanhas aumentam a conscientização individual aumentando a capacidade das pessoas de identificar, comunicar, procurar ajuda e adotar ações práticas de fomento a saúde social. Campanhas também geram mobilização coletiva e influenciam políticas e transformações mais estruturais nas organizações.
+                      - link "Saber mais" [ref=e270] [cursor=pointer]:
+                        - /url: https://www.institutoamuta.com.br
+                        - generic [ref=e271]: Saber mais
+                - img "Jantar Pretexto-1.jpg" [ref=e277]
+              - generic [ref=e286]:
+                - img "_MG_6849_edited.jpg" [ref=e292]
+                - generic [ref=e293]:
+                  - generic:
+                    - generic:
+                      - paragraph [ref=e297]:
+                        - generic [ref=e301]: Monitoramento e estratégia
+                      - paragraph [ref=e302]:
+                        - generic [ref=e305]: pesquisa, monitoramento e planejamento estratégico de saúde social
+                      - paragraph [ref=e306]:
+                        - generic [ref=e308]: "NECESSIDADE:"
+                      - paragraph [ref=e309]:
+                        - generic [ref=e310]: A maioria das empresas investe em ações pontuais de bem estar social, mas a falta de métricas claras e de um diagnóstico preciso sobre as dinâmicas sociais impede a comprovação de ROI e o impacto sustentável a longo prazo de ações que promovem real impacto organizacional.
+                      - paragraph [ref=e311]:
+                        - generic [ref=e313]: INTERVENÇÃO
+                      - paragraph [ref=e314]:
+                        - generic [ref=e315]: Em alinhamento com às recomendações da OMS, aplicamos uma abordagem robusta de pesquisa e monitoramento para mapear a saúde social da sua empresa, ajudando sua organização a compreender o cenário real e a articular uma estratégia baseada em dados, com um plano de ação consistente e focado em resultados de impacto profundo.
+                      - link "Saber mais" [ref=e317] [cursor=pointer]:
+                        - /url: https://www.institutoamuta.com.br
+                        - generic [ref=e318]: Saber mais
+              - heading "Não precisamos deixar ao acaso algo tão importante para a saúde de pessoas e da sociedade" [level=2] [ref=e323]:
+                - generic [ref=e325]: Não precisamos deixar ao acaso algo tão importante para a saúde de pessoas e da sociedade
+              - generic [ref=e334]:
+                - generic [ref=e335]:
+                  - generic:
+                    - generic:
+                      - heading "Uma abordagem de Design centrada nas relações" [level=2] [ref=e339]:
+                        - generic [ref=e341]: Uma abordagem de Design centrada nas relações
+                      - generic:
+                        - paragraph [ref=e342]:
+                          - generic [ref=e346]: O Instituto Amuta é uma plataforma para transformar as relações a partir de uma abordagem de Design. Desde 2020 promovemos diálogos, pesquisas, espaços e experiências que contribuem para a promoção da saúde social no Brasil. de Conexões é uma abordagem adaptativa baseada em 5 pilares que sustentam relações e comunidades.
+                        - paragraph [ref=e347]
+                        - paragraph [ref=e348]:
+                          - generic [ref=e352]: Desbloqueie o poder transformador da saúde social na sua organização com o Design de Conexões e atue dentro dos eixos estratégicos propostos pela Organização Mundial de Saúde com a nossa abordagem.
+                - generic [ref=e353]:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic:
+                            - img "5.png" [ref=e359]
+                            - img "4.png" [ref=e362]
+                            - img "7.png" [ref=e365]
+                            - img "2.png" [ref=e368]
+                            - img "1.png" [ref=e371]
+                            - img "8.png" [ref=e374]
+                            - img "6.png" [ref=e377]
+                            - img "Design sem nome-57.png" [ref=e380]
+                      - img "Apresentação sem título.jpg" [ref=e383]
+                      - img "Logos clientes (1).jpg" [ref=e386]
+                      - img "Logos clientes.jpg" [ref=e389]
+                      - img "Logos clientes (2).jpg" [ref=e392]
+              - generic [ref=e401]:
+                - generic [ref=e402]:
+                  - generic:
+                    - generic:
+                      - heading "Marcelle Xavier" [level=2] [ref=e406]:
+                        - generic [ref=e408]: Marcelle Xavier
+                      - paragraph [ref=e409]:
+                        - generic [ref=e411]: Iniciadora do Instituto Amuta
+                      - generic:
+                        - paragraph [ref=e412]:
+                          - generic [ref=e413]: Ei tá boa? Que bom que você chegou aqui. Eu sou
+                          - generic [ref=e414]: iniciadora do Instituto Amuta. Há 10 anos
+                          - generic [ref=e415]: pesquiso sobre relações, conexões e comunidade; e desenho experiências que
+                          - generic [ref=e416]: permitem que relacionamentos se desenvolvam em sua
+                          - generic [ref=e417]: potência. Criei a abordagem Design de Conexões a partir
+                          - generic [ref=e418]: da convergência do meu olhar como designer de
+                          - generic [ref=e419]: experiências e dos meus aprendizados sobre o que
+                          - generic [ref=e420]: constitui relacionamentos saudáveis e comunidades.
+                        - paragraph [ref=e421]
+                        - paragraph [ref=e422]:
+                          - generic [ref=e423]: Hoje atuo como designer de conexões, o que na prática
+                          - generic [ref=e424]: significa que desenho experiências e rituais de conexão,
+                          - generic [ref=e425]: facilito conversas significativas, crio estratégias de
+                          - generic [ref=e426]: comunidade, pesquiso e escrevo sobre relacionamentos
+                          - generic [ref=e427]: e comunidades. Meu objetivo é apoiar pessoas e grupos
+                          - generic [ref=e428]: a desbloquear o fluxo do amor e criar relacionamentos
+                          - generic [ref=e429]: profundos e significativos.
+                - img "IMG-47 (1)_edited.jpg" [ref=e435]
+              - generic [ref=e436]:
+                - generic:
+                  - generic:
+                    - heading "Rede Amuta" [level=2] [ref=e440]:
+                      - generic [ref=e443]: Rede Amuta
+                    - generic [ref=e449]:
+                      - generic:
+                        - generic:
+                          - list [ref=e454]:
+                            - listitem [ref=e455]:
+                              - generic:
+                                - generic:
+                                  - img "Roche Plus-10.jpg" [ref=e461]
+                                  - paragraph [ref=e462]:
+                                    - generic [ref=e463]: Marina Galvão
+                            - listitem [ref=e464]:
+                              - generic:
+                                - generic:
+                                  - img "WhatsApp Image 2023-01-19 at 11.12.19.jpeg" [ref=e470]
+                                  - paragraph [ref=e471]:
+                                    - generic [ref=e472]: Moara Souto
+                            - listitem [ref=e473]:
+                              - generic:
+                                - generic:
+                                  - img "IMG_1066.HEIC" [ref=e479]
+                                  - paragraph [ref=e480]:
+                                    - generic [ref=e482]: Henry Goldsmid
+                          - img "Bruna_edited.jpg" [ref=e485]
+                          - paragraph [ref=e486]:
+                            - generic [ref=e488]: Bruna Jatobá
+                          - img "Raíssa Kill.png" [ref=e491]
+                          - paragraph [ref=e492]:
+                            - generic [ref=e495]: Raíssa Kill
+                          - img "COMPOSITE00741.jpg" [ref=e498]
+                          - paragraph [ref=e499]:
+                            - generic [ref=e502]: Bruna Riedel
+              - generic [ref=e503]:
+                - img "Fundo-forms.png" [ref=e508]
+                - form "Contato Amuta Geral" [ref=e515]:
+                  - group [ref=e516]:
+                    - generic [ref=e517]:
+                      - generic [ref=e518]:
+                        - heading "O que você está buscando?" [level=2] [ref=e526]:
+                          - strong [ref=e528]: O que você está buscando?
+                        - generic [ref=e530]:
+                          - generic [ref=e532]:
+                            - text: Nome
+                            - generic [ref=e533]: "*"
+                          - textbox "Nome" [ref=e538]
+                        - generic [ref=e540]:
+                          - generic [ref=e542]:
+                            - text: Email
+                            - generic [ref=e543]: "*"
+                          - textbox "Email" [ref=e548]
+                        - generic [ref=e550]:
+                          - generic [ref=e552]:
+                            - text: Whatsapp
+                            - generic [ref=e553]: "*"
+                          - generic [ref=e558]:
+                            - button "Whatsapp. Telefone. Selecione o código do país" [ref=e562] [cursor=pointer]:
+                              - generic [ref=e565]:
+                                - img [ref=e567]
+                                - img [ref=e570]
+                            - textbox "Whatsapp. Telefone" [ref=e572]
+                        - generic [ref=e574]:
+                          - generic [ref=e576]:
+                            - text: Nome da empresa
+                            - generic [ref=e577]: "*"
+                          - textbox "Nome da empresa" [ref=e582]
+                        - generic [ref=e584]:
+                          - generic [ref=e586]: Como soube do amuta
+                          - combobox "Como soube do amuta" [ref=e593] [cursor=pointer]:
+                            - img [ref=e597]
+                        - generic [ref=e600]:
+                          - generic [ref=e602]: Como o amuta pode te ajudar?
+                          - textbox "Como o amuta pode te ajudar?" [ref=e607]:
+                            - /placeholder: ""
+                        - generic [ref=e614] [cursor=pointer]:
+                          - checkbox "Desejo receber conteúdos do amuta" [checked]
+                          - img [ref=e617]
+                          - paragraph [ref=e625]:
+                            - generic [ref=e626]: Desejo receber conteúdos do amuta
+                        - button "Enviar" [ref=e631] [cursor=pointer]:
+                          - generic [ref=e632]: Enviar
+                      - region
+    - contentinfo [ref=e633]:
+      - generic [ref=e639]:
+        - generic:
+          - generic:
+            - paragraph [ref=e640]:
+              - generic [ref=e644]: Quer falar com a gente?
+            - paragraph [ref=e645]:
+              - link "relacionamentoamuta@gmail.com" [ref=e650] [cursor=pointer]:
+                - /url: mailto:relacionamentoamuta@gmail.com
+            - list "Redes sociais" [ref=e652]:
+              - listitem [ref=e653]:
+                - link "Whatsapp" [ref=e654] [cursor=pointer]:
+                  - /url: https://api.whatsapp.com/send?phone=5531981047745
+                  - img "Whatsapp" [ref=e655]
+              - listitem [ref=e656]:
+                - link "Branca Ícone Instagram" [ref=e657] [cursor=pointer]:
+                  - /url: https://www.instagram.com/instituto_amuta/
+                  - img "Branca Ícone Instagram" [ref=e658]
+            - paragraph [ref=e659]:
+              - link "31 98104-7745" [ref=e661] [cursor=pointer]:
+                - /url: https://wa.me/5531981047745
+                - generic [ref=e664]: 31 98104-7745
+            - paragraph [ref=e665]:
+              - generic [ref=e669]: "@instituto_amuta"
+            - paragraph [ref=e670]:
+              - generic [ref=e673]: Copyright © 2021 Instituto Amuta
+  - region "bottom of page"
