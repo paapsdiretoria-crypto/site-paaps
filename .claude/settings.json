@@ -1,4 +1,8 @@
 {
+  "env": {
+    "HYPERFRAMES_FFMPEG_PATH": "/Users/mac/bin/ffmpeg",
+    "HYPERFRAMES_FFPROBE_PATH": "/Users/mac/bin/ffprobe"
+  },
   "hooks": {
     "Stop": [
       {
