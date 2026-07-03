@@ -26,3 +26,7 @@ conteudo/dashboard/js/config.js
 
 # Configurações locais do Claude Code (podem conter credenciais ou paths pessoais)
 .claude/settings.local.json
+
+# HyperFrames: repositório clonado (reprodutível via git clone) e skills instaladas (via npx skills add)
+/hyperframes/
+/.agents/
