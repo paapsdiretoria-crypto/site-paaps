@@ -42,21 +42,19 @@ commit passa a listar as áreas alteradas em vez do genérico "auto: atualizaç�
 (84% do histórico atual é essa mensagem, que já escondeu até uma remoção de 22 arquivos).
 Log de sessão passa a excluir a própria pasta `sessoes/` do status.
 
-## 3. Segredos expostos em repositório PÚBLICO (CORREÇÃO de segurança) ⚠️ parcial
+## 3. Segredos expostos em repositório PÚBLICO (CORREÇÃO de segurança) ✅ executado
 
-O repo `paapsdiretoria-crypto/site-paaps` é público. Encontrado:
+O repo `paapsdiretoria-crypto/site-paaps` é público. Encontrado e resolvido:
 
-1. **Token da extensão Playwright commitado** em `.mcp.json` (raiz) —
-   `PLAYWRIGHT_MCP_EXTENSION_TOKEN` em texto claro. ✅ removido do arquivo (agora lê de
-   variável de ambiente definida em `.claude/settings.local.json`, que não é commitado).
-   ➜ **Pendente seu:** gerar token novo na extensão (o antigo está publicado no histórico).
-2. **PDF de 59 MB no histórico do repo** (`02 CARROSSEIS - NOVA ESTÉTICA PAAPS.pdf`,
-   commitado 08/jun, deletado 03/jul, mas segue no histórico — o `.git` pesa 86 MB).
-   ➜ **Pendente decisão sua:** limpar exige reescrever o histórico e force-push
-   (`git filter-repo`) — reversível só com backup; não executei sem confirmação.
-3. **Chave Windsor dentro da allowlist** de `.claude/settings.local.json` (entrada de
-   permissão `curl ... api_key=9dee...`). Arquivo é local (não commitado), mas é chave em
-   claro desnecessária. ✅ entrada removida.
+1. **Token da extensão Playwright commitado** em `.mcp.json` (raiz). ✅ removido do
+   arquivo (agora lê de variável de ambiente em `.claude/settings.local.json`) **e
+   apagado de todo o histórico do GitHub** (reescrita + force-push em 06/07).
+   ➜ Ainda recomendo gerar token novo na extensão por precaução.
+2. **PDF de 59 MB no histórico do repo**. ✅ removido com `git filter-repo` +
+   force-push — o `.git` caiu de 86 MB para 29 MB. Backup completo do histórico
+   antigo salvo em `~/Desktop/backup-site-paaps-2026-07-06.git` (pode apagar depois
+   de alguns dias, quando confirmar que está tudo bem).
+3. **Chave Windsor dentro da allowlist** de `.claude/settings.local.json`. ✅ removida.
 4. **Chaves em texto puro no `~/.claude/settings.json` global** (Notion, Pluggy) e o
    token Notion colado no chat em 15/jun. Local-only, risco menor. ➜ recomendação:
    rotacionar a chave Notion quando puder (ficou registrada em transcrição).
@@ -131,10 +129,10 @@ hooks de auto-push — nada é commitado lá):
 
 **Custo real:** nessas sessões o Claude não sabe quem é a PAAPS, não tem proibições de
 voz, não tem auto-push. É onde apareceram as maiores frustrações.
-**Ação:** regra nova no CLAUDE.md raiz ("abra sempre o Claude na raiz SITE PAAPS; para
-projetos novos, crie subpasta aqui"). ➜ **Pendente seu (2 min no Finder):** mover
-`Projeto Minerva` para dentro de `SITE PAAPS/` e a pasta `Claude Portfólio Lucia` para
-fora do `dashboard/js/` (sugestão: `SITE PAAPS/projetos-externos/portfolio-lucia/`).
+**Ação:** ✅ regra nova no CLAUDE.md raiz ("abra sempre o Claude na raiz SITE PAAPS");
+✅ criada `SITE PAAPS/projetos/` (fora do git — o repo é público) e o **Projeto Minerva
+(223 MB) já foi movido** para `projetos/minerva/`. A pasta "Claude Portfólio Lucia" não
+existe mais no disco (só restou a transcrição da sessão) — nada a mover.
 
 ## 9. Saga MCP de navegação — runbook para não repetir (CORREÇÃO) ✅ executado
 
@@ -179,13 +177,16 @@ erro, só ruído. Candidato futuro: rodar `/fewer-permission-prompts` numa sess�
 
 ---
 
-## Pendências que ficaram com você (resumo)
+## Pendências que ficaram com você (resumo — atualizado após execução total)
 
-1. **Rotacionar o token da extensão Playwright** (o antigo está público no GitHub) e,
-   quando puder, a chave Notion.
-2. **Decidir sobre a limpeza do histórico git** (PDF de 59 MB em repo público) — posso
-   executar com `git filter-repo` + force-push quando autorizar.
-3. **Mover 2 pastas no Finder** (Projeto Minerva → SITE PAAPS/; Portfólio Lúcia → fora
-   do dashboard/js/). Depois me peça para atualizar as referências.
-4. **Escolher a opção do dashboard público** (item 11).
-5. Reiniciar o Claude Code após esta sessão, para as skills convertidas carregarem.
+1. **Rotacionar o token da extensão Playwright e a chave Notion** por precaução (os
+   antigos circularam em histórico público/transcrições; o novo token vai só no
+   `.claude/settings.local.json`, campo `env`).
+2. **Escolher a opção do dashboard público** (item 11) — única decisão de produto aberta.
+3. Reiniciar o Claude Code após esta sessão, para skills e configurações carregarem limpas.
+4. Quando confirmar que o repo está saudável, apagar o backup
+   `~/Desktop/backup-site-paaps-2026-07-06.git`.
+
+Executados automaticamente em 06/07 com sua autorização: conversão das skills, hooks,
+limpeza do histórico (PDF + token), consolidação de pastas em `projetos/`, novas skills,
+runbook, documentação e modo `dontAsk` de permissões neste projeto.
