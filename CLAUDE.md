@@ -141,6 +141,7 @@ SITE PAAPS/                          ← pasta raiz (renomear para PAAPS/ no Fin
 │       └── paaps.brasil/            ← workspace do perfil institucional
 │
 ├── hyperframes/                     ← projeto de vídeo HyperFrames (render HTML→MP4)
+├── projetos/                        ← projetos avulsos (Minerva, portfólios…) — não commitado
 ├── .claude/                         ← agents/, skills/ (formato pasta/SKILL.md), settings
 └── .agents/                         ← skills instaladas via npx skills (não commitado)
 ```
@@ -180,6 +181,7 @@ git push
 - `insumos-compartilhados/nossos-clientes-e-parceiros/`
 - `insumos-compartilhados/docs/*-imagens/`: imagens extraídas dos DOCX
 - `conteudo/dashboard/js/config.js`: chave Windsor AI (nunca commitar)
+- `projetos/`: projetos avulsos com conteúdo interno (o repo é PÚBLICO)
 
 ---
 
