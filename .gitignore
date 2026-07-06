@@ -30,3 +30,4 @@ conteudo/dashboard/js/config.js
 # HyperFrames: repositório clonado (reprodutível via git clone) e skills instaladas (via npx skills add)
 /hyperframes/
 /.agents/
+.claude/.ultimo-status-logado

@@ -81,7 +81,6 @@ Nucleo comum: `../insumos-compartilhados/nucleo-comum/`
 ## Convenções Técnicas
 
 - Agentes ficam em **`.claude/agents/`** (raiz do projeto)
-- Skills em **`.claude/skills/`** — skill ativa: `/mapa-de-contexto`
+- Skills em **`.claude/skills/`**, formato pasta + `SKILL.md` (ver tabela no CLAUDE.md raiz)
 - Briefings salvos em `conteudo/briefings/` com nome `briefing-YYYY-MM-DD.md`
 - Agent teams requerem `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1` em settings.json
-- `/mapa-de-contexto` — skill de roteamento de contexto

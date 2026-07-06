@@ -8,7 +8,7 @@
         "--extension"
       ],
       "env": {
-        "PLAYWRIGHT_MCP_EXTENSION_TOKEN": "TOKEN_REMOVIDO"
+        "PLAYWRIGHT_MCP_EXTENSION_TOKEN": "${PLAYWRIGHT_MCP_EXTENSION_TOKEN}"
       }
     }
   }

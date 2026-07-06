@@ -10,11 +10,11 @@
         "hooks": [
           {
             "type": "command",
-            "command": "cd \"/Users/mac/Desktop/SITE PAAPS\"; mkdir -p sessoes; D=$(date '+%Y-%m-%d'); T=$(date '+%H:%M'); F=\"sessoes/sessao-${D}.md\"; test -f \"$F\" || echo \"# Log de Sessão — ${D}\" > \"$F\"; C=$(git status --short 2>/dev/null); if [ -n \"$C\" ]; then echo \"\" >> \"$F\"; echo \"## ${T}\" >> \"$F\"; echo '```' >> \"$F\"; echo \"$C\" >> \"$F\"; echo '```' >> \"$F\"; echo \"\" >> \"$F\"; fi"
+            "command": "cd \"/Users/mac/Desktop/SITE PAAPS\"; mkdir -p sessoes; D=$(date '+%Y-%m-%d'); T=$(date '+%H:%M'); F=\"sessoes/sessao-${D}.md\"; L=\".claude/.ultimo-status-logado\"; test -f \"$F\" || echo \"# Log de Sessão — ${D}\" > \"$F\"; C=$(git status --short 2>/dev/null | grep -v 'sessoes/'); if [ -n \"$C\" ] && [ \"$C\" != \"$(cat \"$L\" 2>/dev/null)\" ]; then echo \"\" >> \"$F\"; echo \"## ${T}\" >> \"$F\"; echo '```' >> \"$F\"; echo \"$C\" >> \"$F\"; echo '```' >> \"$F\"; echo \"\" >> \"$F\"; echo \"$C\" > \"$L\"; fi"
           },
           {
             "type": "command",
-            "command": "cd \"/Users/mac/Desktop/SITE PAAPS\" && git diff --quiet HEAD 2>/dev/null && git diff --staged --quiet 2>/dev/null || (git add -A && git commit -m \"auto: atualização do site $(date '+%Y-%m-%d %H:%M')\" && git push)"
+            "command": "cd \"/Users/mac/Desktop/SITE PAAPS\" && if [ -n \"$(git status --porcelain 2>/dev/null)\" ]; then A=$(git status --porcelain | sed 's/^...//' | cut -d/ -f1 | sort -u | head -6 | paste -s -d ',' - | sed 's/,/, /g'); git add -A && git commit -m \"auto: ${A} — $(date '+%Y-%m-%d %H:%M')\" && git push; fi"
           }
         ]
       }
