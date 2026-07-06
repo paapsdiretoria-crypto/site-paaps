@@ -123,20 +123,33 @@ SITE PAAPS/                          ← pasta raiz (renomear para PAAPS/ no Fin
 │   ├── CLAUDE.md                    ← instruções específicas do site
 │   ├── DESIGN-SYSTEM.md
 │   ├── PROMPT_CLAUDE_CODE_SITE_PAAPS.md
-│   ├── .claude/skills/frontend-design.md
+│   ├── .claude/skills/frontend-design/SKILL.md
+│   ├── Sites - referências e analise/  ← screenshots de benchmark
 │   └── paaps-site/                  ← HTML/CSS/JS do site
 │
-└── conteudo/                        ← Projeto 2: equipe de agentes de conteúdo
-    ├── CLAUDE.md                    ← orquestrador (esboço)
-    ├── .mcp.json                    ← conectores MCP (Canva etc.)
-    ├── _skill-original-para-desmembrar.md  ← skill antiga, guardada como referência
-    ├── agentes/                     ← skills dos agentes (a construir)
-    ├── arquitetura/                 ← diagramas SVG da arquitetura de agentes
-    ├── dashboard/                   ← analytics Windsor AI (lê @amalluvasconcellos e @paaps.brasil)
-    └── instagram/
-        ├── amalluvasconcellos/      ← workspace do perfil pessoal de Mallu
-        └── paaps.brasil/            ← workspace do perfil institucional
+├── conteudo/                        ← Projeto 2: equipe de agentes de conteúdo
+│   ├── CLAUDE.md                    ← arquitetura da equipe de agentes (doc principal)
+│   ├── .mcp.json                    ← conectores MCP (Excalidraw, Miro)
+│   ├── _skill-original-para-desmembrar.md  ← skill antiga, guardada como referência
+│   ├── arquitetura/                 ← diagramas SVG da arquitetura + workflow-paaps.html
+│   ├── ciclos/                      ← outputs do Radar e Sentinela por data
+│   ├── eventos/                     ← produção de conteúdo por evento (ex.: Caratinga)
+│   ├── briefings/                   ← briefings consolidados do Narrador
+│   ├── dashboard/                   ← analytics Windsor AI (lê @amalluvasconcellos e @paaps.brasil)
+│   └── instagram/
+│       ├── amalluvasconcellos/      ← workspace do perfil pessoal de Mallu
+│       └── paaps.brasil/            ← workspace do perfil institucional
+│
+├── hyperframes/                     ← projeto de vídeo HyperFrames (render HTML→MP4)
+├── .claude/                         ← agents/, skills/ (formato pasta/SKILL.md), settings
+└── .agents/                         ← skills instaladas via npx skills (não commitado)
 ```
+
+> **Regra de workspace:** abrir o Claude Code SEMPRE na raiz `SITE PAAPS/`. Projetos
+> novos (eventos, pitches, portfólios, provas de conceito) nascem como subpasta daqui —
+> nunca em `~/Documents`, na home ou dentro de pastas técnicas como `dashboard/js/`.
+> Fora da raiz não existem CLAUDE.md, skills, memória nem auto-push: o trabalho fica
+> sem contexto e sem backup.
 
 ---
 
@@ -183,6 +196,10 @@ A pasta ainda se chama `SITE PAAPS/` por limitação do ambiente. Para renomear 
 
 ### Skills disponíveis (`.claude/skills/`)
 
+> Formato obrigatório: cada skill é uma **pasta** com `SKILL.md` dentro
+> (`.claude/skills/nome-da-skill/SKILL.md`). Arquivo `.md` solto não é carregado
+> pelo Claude Code — foi a causa de um mês de erros "Unknown skill" (corrigido em 06/07).
+
 | Skill | Acionar quando |
 |---|---|
 | `meta-architect` | Transformar briefing informal em prompt estruturado em XML |
@@ -196,12 +213,26 @@ A pasta ainda se chama `SITE PAAPS/` por limitação do ambiente. Para renomear 
 | `notion-research-documentation` | Pesquisar no workspace Notion, sintetizar múltiplas páginas e criar relatório estruturado (usa MCP Notion) |
 | `find-skills` | Descobrir e instalar skills do ecossistema open agent via `npx skills find/add` (vercel-labs/skills) |
 | `paaps-pm-agil` | Gestão de projetos ágil para o PAAPS: ciclo de 8 fases, OKRs 4×3, roadmap, backlog INVEST+MoSCoW+Fibonacci, registro em tempo real no Notion |
+| `design-parceiro` | Construir/revisar componente visual PAAPS: modo AUDITOR (anti-padrão de IA em design) + modo PARCEIRO (cocriação editorial) |
+| `simulacao-ux` | Simular a experiência de personas navegando em sites (framework das 3 personas × sites de referência, saída para o Notion) |
+| `benchmark-visual` | Benchmark visual comparativo de UI/UX a partir de uma referência (3–5 concorrentes, padrões, diferenciais) |
+| `instala-skill-segura` | Instalar skill externa com auditoria de segurança prévia (código malicioso, exfiltração, escopo de permissões) |
+| `espelho-notion` | Sincronizar agentes, skills e hooks COMPLETOS (nunca resumo) para as databases do Notion |
+
+### Notion — página de operações
+
+Página central de operações do Claude no Notion (relatórios, análises, espelho do projeto):
+`https://app.notion.com/p/SITE-INSTITUCIONAL-38044cb52e0080b1a07de17b31d00cd2`
+Novas respostas longas pedidas "para ler no Notion" viram subpáginas dela, no formato das existentes.
 
 ### Hooks ativos (`.claude/settings.json` → evento `Stop`)
 
 | Hook | Ordem | O que faz |
 |---|---|---|
-| **log-de-sessão** | 1º | Registra timestamp e arquivos alterados em `sessoes/sessao-YYYY-MM-DD.md` |
-| **auto-push** | 2º | Commita tudo (incluindo o log) e faz push para `main` |
+| **log-de-sessão** | 1º | Registra timestamp e arquivos alterados em `sessoes/sessao-YYYY-MM-DD.md` (deduplicado, ignora a própria pasta sessoes/) |
+| **auto-push** | 2º | Detecta qualquer mudança (inclusive arquivos novos), commita com mensagem `auto: <áreas alteradas> — <data>` e faz push para `main` |
+
+Ao encerrar uma tarefa relevante, registrar em 1–3 linhas no log do dia **o que foi
+decidido/entregue** (não só o status do git) — é o handoff para a próxima sessão.
 
 Os hooks rodam automaticamente ao final de cada resposta. Não é necessário nenhuma ação manual.

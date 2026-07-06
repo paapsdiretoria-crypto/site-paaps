@@ -1,6 +1,6 @@
 # CLAUDE.md — Projeto Site PAAPS
 
-Site institucional estático do **PAAPS** (Programa de Aceleração Ativa de Projetos Sociais) — coletivo de psicólogas sociais especializado em saúde mental como política pública. Construído em HTML/CSS/JS puro, sem framework ou bundler.
+Site institucional estático da **PAAPS** — negócio social / GovTech de Psicologia Social para gestão pública ("Rede da Saúde Mental Coletiva para as Prefeituras à prova de futuro" — ver posicionamento completo no CLAUDE.md raiz). Construído em HTML/CSS/JS puro, sem framework ou bundler.
 
 ---
 
