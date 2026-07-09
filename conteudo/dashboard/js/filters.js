@@ -26,6 +26,14 @@ function applyFilters() {
 
 // ─── Carrega dados da API (com loading state) ─────────────
 async function loadData() {
+  // Sem chave configurada (config.js ausente ou ainda com o texto de exemplo):
+  // avisa de forma amigável em vez de falhar em silêncio.
+  const chave = (typeof WINDSOR_KEY !== 'undefined' && WINDSOR_KEY) ? WINDSOR_KEY : '';
+  if (!chave || chave === 'SUA_API_KEY_WINDSOR_AQUI') {
+    showLoading(false);
+    showApiError('chave da Windsor AI ausente. Copie js/config.example.js para js/config.js e cole a sua chave dentro dele.');
+    return;
+  }
   showLoading(true);
   try {
     const [igData, liData] = await Promise.all([

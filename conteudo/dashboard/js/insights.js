@@ -1,7 +1,7 @@
 function generateInsights(processed) {
   const { byAccount, totals, viralEvents, weekdays } = processed;
   const insights = [];
-  const DAYS_PT = ['Seg','Ter','Qua','Qui','Sex','Sáb','Dom'];
+  const DAYS_PT = ['Segunda-feira','Terça-feira','Quarta-feira','Quinta-feira','Sexta-feira','Sábado','Domingo'];
   const ACCT_LABELS = { amalluvasconcellos: '@amalluvasconcellos', 'paaps.brasil': '@paaps.brasil' };
 
   // ─── Viral event ──────────────────────────────────────────
@@ -44,7 +44,7 @@ function generateInsights(processed) {
     insights.push({
       color: '#cb4710',
       title: `Melhor dia · ${ACCT_LABELS[acct]}`,
-      text: `<strong>${DAYS_PT[bestIdx]}-feira</strong> gera em média <strong>${fmtNum(max)} interações/dia</strong> — melhor resultado da semana. ${DAYS_PT[secondIdx]}-feira é o segundo melhor (${fmtNum(avgs[secondIdx])}). Concentrar posts de maior impacto nestes dias.`,
+      text: `<strong>${DAYS_PT[bestIdx]}</strong> gera em média <strong>${fmtNum(max)} interações/dia</strong>, melhor resultado da semana. ${DAYS_PT[secondIdx]} é o segundo melhor (${fmtNum(avgs[secondIdx])}). Concentrar posts de maior impacto nestes dias.`,
     });
   });
 

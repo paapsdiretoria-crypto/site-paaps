@@ -55,7 +55,7 @@ Cada canal tem um papel distinto no ecossistema. Você nunca os trata como equiv
 **Datas dinâmicas:** calcule as datas com base no dia da sessão. Use `python3 -c "from datetime import date, timedelta; hoje=date.today(); print(hoje-timedelta(30), hoje-timedelta(7), hoje)"` para obter as três datas (30d_inicio, 7d_inicio, hoje) e substitua nos campos `date_from` / `date_to` abaixo.
 
 ```bash
-API_KEY=$(grep -oP "(?<=')[A-Za-z0-9_\-]+" "/Users/mac/Desktop/SITE PAAPS/conteudo/dashboard/js/config.js" | head -1)
+API_KEY=$(sed -n "s/.*'\([A-Za-z0-9_-]*\)'.*/\1/p" "/Users/mac/Documents/SITE PAAPS/conteudo/dashboard/js/config.js" | head -1)
 
 # 30 dias completos — substituir datas pela sessão atual
 curl -s "https://connectors.windsor.ai/all?api_key=${API_KEY}&date_from=YYYY-MM-DD&date_to=YYYY-MM-DD&fields=date,account_name,followers_count,reach,likes,comments,shares,saves,total_interactions&datasource=instagram_insights" > /tmp/windsor_30d.json
@@ -154,7 +154,7 @@ for acc, rows in accounts.items():
 ### 1.3 — LinkedIn via Windsor AI
 
 ```bash
-API_KEY=$(grep -oP "(?<=')[A-Za-z0-9_\-]+" "/Users/mac/Desktop/SITE PAAPS/conteudo/dashboard/js/config.js" | head -1)
+API_KEY=$(sed -n "s/.*'\([A-Za-z0-9_-]*\)'.*/\1/p" "/Users/mac/Documents/SITE PAAPS/conteudo/dashboard/js/config.js" | head -1)
 
 curl -s "https://connectors.windsor.ai/linkedin?api_key=${API_KEY}&date_from=2026-05-07&date_to=2026-06-06&fields=date,account_name,profile_name,followers_count,impressions,reactions,comments,shares,clicks" > /tmp/windsor_linkedin.json
 python3 -m json.tool /tmp/windsor_linkedin.json | head -40
