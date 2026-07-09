@@ -56,6 +56,9 @@ e de consumo.
 
 ## Proibições ativas — NUNCA, em nenhum output
 
+- **Travessão grande "—" (em dash): PROIBIDO em qualquer entrega, em qualquer contexto.**
+  Usar `:`, `;` ou `-` no lugar. Vale para textos, legendas, commits, logs, relatórios,
+  Notion, código e respostas no chat.
 - Estrutura frasal "não é X, é Y" (considerada antiética e antiprofissional).
 - Linguagem coachesca: "mindset", "gatilhos mentais", "alta performance", "virada de
   chave", "fórmula do sucesso", "escala", "leads qualificados", "dores da persona",
@@ -164,11 +167,15 @@ GitHub CLI: `~/bin/gh`
 
 ```bash
 # Commit manual, se necessário:
-cd "/Users/mac/Desktop/SITE PAAPS"
+cd "/Users/mac/Documents/SITE PAAPS"
 git add -A
 git commit -m "descrição da alteração"
 git push
 ```
+
+> Os hooks usam `$CLAUDE_PROJECT_DIR` (nunca caminho fixo): a pasta pode ser movida ou
+> renomeada sem quebrar o auto-push. Em 07/07 a pasta migrou de `~/Desktop` para
+> `~/Documents` e o caminho fixo antigo deixou 2 dias sem commit (corrigido em 09/07).
 
 ---
 
@@ -220,6 +227,7 @@ A pasta ainda se chama `SITE PAAPS/` por limitação do ambiente. Para renomear 
 | `benchmark-visual` | Benchmark visual comparativo de UI/UX a partir de uma referência (3–5 concorrentes, padrões, diferenciais) |
 | `instala-skill-segura` | Instalar skill externa com auditoria de segurança prévia (código malicioso, exfiltração, escopo de permissões) |
 | `espelho-notion` | Sincronizar agentes, skills e hooks COMPLETOS (nunca resumo) para as databases do Notion |
+| `edicao-reel-paaps` | Editar vídeo JÁ GRAVADO da Mallu (talking-head) em Reel PAAPS: legendas em cadência, cards de dados, b-roll, trilha do HeyGen, SFX — com as regras duras dela (nunca escurecer, texto fora do rosto, só League Spartan + Evermore, imagem congelada + áudio por re-mux) |
 
 ### Notion — página de operações
 
