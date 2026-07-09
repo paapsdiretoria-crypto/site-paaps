@@ -141,8 +141,11 @@ document.addEventListener('DOMContentLoaded', function () {
   // ── 7. ACTIVE STATE no nav ─────────────────────────────────────────
   const pagina = window.location.pathname;
   document.querySelectorAll('.header__nav a, .header__drawer a').forEach(function (link) {
-    const href = link.getAttribute('href');
-    if (href && pagina.includes(href) && href !== '/') {
+    const href = link.getAttribute('href') || '';
+    if (!href || href === '/' || href.indexOf('http') === 0 || href.indexOf('#') === 0) return;
+    // Normaliza links relativos das subpáginas ("../sobre/" vira "/sobre/")
+    const caminho = '/' + href.replace(/^(\.\.\/)+/, '');
+    if (pagina.indexOf(caminho) !== -1) {
       link.style.color = 'var(--cor-terracota)';
     }
   });
