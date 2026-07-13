@@ -33,17 +33,24 @@
    DKIM e um de DMARC. Cada um tem três campos: **Type** (tipo), **Name/Host** (nome) e
    **Value** (valor).
 
-## Passo 3: colar os registros no painel do domínio
+## Passo 3: colar os registros no painel do domínio (DNS na Cloudflare)
 
-Aqui é onde você entra no painel de quem administra o DNS do `paaps.com.br` (o registrador
-ou serviço de DNS). Para cada registro que o Resend mostrou:
+O DNS do `paaps.com.br` está na **Cloudflare** (nameservers `nena` e `derek` .ns.cloudflare.com).
+Hoje o domínio não tem SPF nem DMARC, então começamos do zero, sem risco de conflito.
 
-1. Crie um novo registro no painel do domínio.
-2. Copie **Type**, **Name/Host** e **Value** exatamente como o Resend mostra.
-3. Salve.
+Há dois caminhos:
 
-> Cuidado comum: alguns painéis já acrescentam o `paaps.com.br` no fim do nome sozinhos. Se
-> o registro não validar, é quase sempre isso: nome duplicado ou um espaço a mais.
+- **Caminho automático (recomendado):** na tela do domínio no Resend, clique em
+  **Connect to Cloudflare** (ou "Add records automatically"), autorize com o login da
+  Cloudflare, e o Resend cria os registros sozinho.
+- **Caminho manual:** entre em `dash.cloudflare.com` > domínio `paaps.com.br` > **DNS** >
+  **Add record**. Para cada registro que o Resend mostrou, copie **Type**, **Name** e
+  **Value** exatamente. Deixe o Proxy como **DNS only** (nuvem cinza), nunca laranja, para
+  registros de e-mail.
+
+> Cuidado comum na Cloudflare: no campo **Name**, se o Resend pede algo como
+> `resend._domainkey`, digite só isso; a Cloudflare completa o `paaps.com.br` sozinha. Se
+> você digitar o nome inteiro, vira duplicado e não valida.
 
 ## Passo 4: verificar
 
@@ -60,13 +67,31 @@ ou serviço de DNS). Para cada registro que o Resend mostrou:
 
 ---
 
+## Passo 6: receber as respostas (caixa de entrada do remetente)
+
+Hoje o `paaps.com.br` não recebe e-mail (sem registro MX). Enviar pelo Resend não depende
+disso, mas as **respostas dos leads precisam cair numa caixa que a Mallu leia**, senão o
+retorno se perde e o Hermes não aprende com quem respondeu.
+
+Opção recomendada, gratuita e simples, já que o DNS está na Cloudflare:
+
+- **Cloudflare Email Routing:** em `dash.cloudflare.com` > `paaps.com.br` > **Email** >
+  **Email Routing**, crie o endereço `relacionamento@paaps.com.br` e aponte para um Gmail que
+  a Mallu já usa. A Cloudflare adiciona os registros MX sozinha. Assim: o Resend **envia**, a
+  Cloudflare **recebe** e encaminha as respostas para o Gmail dela.
+
+Alternativas, se um dia quiser caixa própria com envio manual também: Zoho Mail (tem plano
+gratuito) ou Google Workspace (pago).
+
+---
+
 ## O que ainda falta decidir aqui
 
-- Onde o DNS do `paaps.com.br` é administrado (registrador ou serviço de DNS), para o Passo 3
-  ficar exato.
+- Para qual Gmail as respostas de `relacionamento@paaps.com.br` devem ser encaminhadas.
 - Confirmar `relacionamento@paaps.com.br` como remetente verificado no Resend.
 
 ## Status
 
-Em andamento. Repositório preparado (`RESEND_API_KEY` no `.env.example`). Próximo movimento:
-Mallu cria a conta e informa o administrador de DNS do domínio.
+Em andamento. Repositório preparado (`RESEND_API_KEY` no `.env.example`); DNS identificado
+(Cloudflare, sem SPF/DMARC/MX hoje). Próximo movimento: Mallu cria a conta Resend, conecta à
+Cloudflare e liga o Email Routing para receber as respostas.
