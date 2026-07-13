@@ -68,6 +68,12 @@ e de consumo.
 - Texto com aparência de IA, autoajuda, militância vazia ou venda explícita.
 - Linguagem clínica/patologizante sem contexto relacional e sistêmico.
 - Conteúdo pejorativo sobre o sistema político vigente (Mallu critica veladamente).
+- **Escrever valor real de segredo em qualquer arquivo commitado: PROIBIDO.** Nunca
+  colar token, chave de API, senha, `client_secret` ou dado pessoal (e-mail/CPF de
+  lead ou servidor) em logs de sessão, notas de handoff, README, código ou qualquer
+  arquivo do repo. Ao registrar configuração que contenha segredo, mascarar como
+  `[removido]`. Chaves reais vivem só no `.env` (ignorado pelo git); dados de pessoas,
+  no CRM ou planilha privada. Ver `automacoes/.env.example` e `PLANO-DE-ACAO.md`.
 
 ---
 

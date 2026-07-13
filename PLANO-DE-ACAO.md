@@ -19,8 +19,11 @@ frentes de automação. Legenda de responsável:
    e o `.env.example`.
 4. **[FEITO]** Adicionar `.env` ao `.gitignore` para as chaves reais nunca subirem.
 5. **[FEITO]** Remover o token de baixo risco vazado em `sessoes/sessao-2026-06-16.md`.
-6. **[FEITO]** Vacinar o hook de log de sessão para mascarar valores que pareçam
-   token ou chave antes de gravar no log.
+6. **[FEITO]** Vacinar contra novos vazamentos em log. O token de junho não veio do
+   hook (que grava só nomes de arquivos), e sim das notas de handoff escritas no log do
+   dia. A vacina certa foi uma regra nas proibições do `CLAUDE.md`, que o Claude lê toda
+   sessão: nunca escrever valor de token, chave ou senha em nenhum arquivo commitado;
+   mascarar como `[removido]`.
 
 ## Fase 1: decisões de negócio (destravam a construção)
 
