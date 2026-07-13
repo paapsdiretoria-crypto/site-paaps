@@ -2,13 +2,20 @@
 
 E-mails personalizados para prefeituras do Brasil inteiro.
 
-## O que precisa existir aqui
+## Estrutura desta pasta
 
-- `moldes/` : os moldes de e-mail com lacunas, tipo `{cidade}`,
-  `{nome_da_secretaria}`, `{nome_do_gestor}`.
-- `fluxos/` : o JSON do n8n que preenche as lacunas e envia.
-- `cadencia.md` : quantos e-mails por dia, intervalo entre eles, quando parar a
-  sequência, texto de descadastro.
+- `icp/` : o perfil ideal de cliente (prefeituras, secretarias, personas Cláudia Martins
+  e RH Genuíno) e os critérios de qualificação. Sem dados reais de leads.
+- `moldes/` : os moldes de e-mail com lacunas, tipo `{cidade}`, `{nome_da_secretaria}`,
+  `{nome_do_gestor}`. Contém o placeholder da Carta-Mallu (molde-âncora).
+- `hermes/` : o papel do Hermes como personalizador, o prompt de personalização e a
+  rubrica de score 0 a 100.
+- `fluxos/` : o JSON do n8n que preenche as lacunas e envia, sem credenciais.
+- `cadencia.md` : quantos e-mails por dia, intervalo entre eles, warm-up de volume,
+  quando parar a sequência, texto de descadastro.
+- `metricas.md` : o que o dashboard de controle acompanha e de onde vêm os números.
+
+> Os arquivos das subpastas são rascunhos de trabalho, a co-construir com a fundadora.
 
 ## Onde ficam os dados
 
