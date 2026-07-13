@@ -168,6 +168,9 @@ SITE PAAPS/                          ← pasta raiz (renomear para PAAPS/ no Fin
 Repositório: https://github.com/paapsdiretoria-crypto/site-paaps
 Branch principal: `main`
 GitHub CLI: `~/bin/gh`
+Visibilidade: **PRIVADO** desde jul/2026 (passou a conter orquestração de automações com
+segredos e dados de pessoas). GitHub Pages gratuito não serve repo privado: dashboard
+depende da decisão B do `PLANO-DE-ACAO.md`.
 
 **Auto-push ativo:** ao final de cada conversa, um hook automático detecta alterações, faz commit e push. Não é necessário commitar manualmente.
 
@@ -194,7 +197,7 @@ git push
 - `insumos-compartilhados/nossos-clientes-e-parceiros/`
 - `insumos-compartilhados/docs/*-imagens/`: imagens extraídas dos DOCX
 - `conteudo/dashboard/js/config.js`: chave Windsor AI (nunca commitar)
-- `projetos/`: projetos avulsos com conteúdo interno (o repo é PÚBLICO)
+- `projetos/`: projetos avulsos com conteúdo interno (mantido fora do repo por precaução)
 
 ---
 
