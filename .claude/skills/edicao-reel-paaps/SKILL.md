@@ -121,6 +121,27 @@ Quando a Mallu pede para cortar um trecho (ex.: a ilha na Bahia): crie `input-vi
 ### Cenário misto no mesmo vídeo
 Um vídeo da Mallu pode trocar de cenário/figurino no meio (madeira escura → área externa clara; cozinha → rua). A **cor por backdrop vale por TRECHO**, não pelo vídeo todo. Solução robusta: halo escuro reforçado (`0 0 4-5px rgba(0,0,0,0.9)` + camadas) faz creme/amarelo ler tanto no escuro quanto no céu claro sem trocar a cor.
 
+## Regras aprendidas (v4 — @psimalluvasconcellos, corte de silêncios, jul/2026)
+
+Perfil **@psimalluvasconcellos** (persona Mallu Vasconcellos Psicóloga, autoridade) tem
+identidade PRÓPRIA (ver memória `psimallu-identidade-legenda` e o doc do projeto). Regra
+dura que custou uma rodada rejeitada:
+
+- **Cortar silêncios/pausas/respirações em TODO o vídeo** (passada global), não só as
+  frases de concisão. Silêncio de emenda entre clipes (clicar gravar, voltar o olho ao
+  livro) sai. A 1ª versão foi rejeitada por deixar silêncios E por cortes bruscos.
+- **Cortar os "É..." de pensamento/hesitação**, principalmente quando ela NÃO olha para a
+  câmera (olha para o lado). E gaguejos/falsos-inícios reais (1ª tentativa fora, mantém a
+  completa).
+- **Precisão de milissegundos**: corte cai no início exato da palavra-alvo, sem pegar
+  metade da palavra anterior nem cortar a cauda da que fica. Use `silencedetect` (energia
+  real) + transcrição em janelas curtas. NUNCA timestamp de whisper de arquivo longo
+  (drift/alucinação — confirmado no vídeo 01-série02).
+- **Vocabulário dela:** "PULE/CORTE PARA X" = remover todo o meio até X. "CORTE A frase X"
+  = excluir aquela frase. "não corte essa frase" = manter (só silêncios). Aspas pedidas =
+  renderizar com aspas.
+- Verificar CADA corte re-transcrevendo a janela do resultado antes de entregar.
+
 ## Racionalizações que sinalizam desvio
 
 | Pensamento | O que está acontecendo |
