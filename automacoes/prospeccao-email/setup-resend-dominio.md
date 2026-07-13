@@ -76,9 +76,10 @@ retorno se perde e o Hermes não aprende com quem respondeu.
 Opção recomendada, gratuita e simples, já que o DNS está na Cloudflare:
 
 - **Cloudflare Email Routing:** em `dash.cloudflare.com` > `paaps.com.br` > **Email** >
-  **Email Routing**, crie o endereço `relacionamento@paaps.com.br` e aponte para um Gmail que
-  a Mallu já usa. A Cloudflare adiciona os registros MX sozinha. Assim: o Resend **envia**, a
-  Cloudflare **recebe** e encaminha as respostas para o Gmail dela.
+  **Email Routing**, crie o endereço `relacionamento@paaps.com.br` e aponte para
+  **paapsdiretoria@gmail.com** (Gmail que a Mallu abre todo dia). A Cloudflare adiciona os
+  registros MX sozinha. Assim: o Resend **envia**, a Cloudflare **recebe** e encaminha as
+  respostas para o Gmail dela.
 
 Alternativas, se um dia quiser caixa própria com envio manual também: Zoho Mail (tem plano
 gratuito) ou Google Workspace (pago).
@@ -87,7 +88,7 @@ gratuito) ou Google Workspace (pago).
 
 ## O que ainda falta decidir aqui
 
-- Para qual Gmail as respostas de `relacionamento@paaps.com.br` devem ser encaminhadas.
+- Respostas de `relacionamento@paaps.com.br` vão para **paapsdiretoria@gmail.com** (definido).
 - Confirmar `relacionamento@paaps.com.br` como remetente verificado no Resend.
 
 ## Status
