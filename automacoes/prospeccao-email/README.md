@@ -15,18 +15,24 @@ E-mails personalizados para prefeituras do Brasil inteiro.
 A lista de prefeituras com nomes e e-mails de servidores é dado pessoal sob LGPD: fica em
 planilha privada, nunca no repositório. O repo guarda só os moldes e os fluxos.
 
+## Remetente decidido: relacionamento@paaps.com.br
+
+E os moldes de e-mail saem da página do Notion **MENSAGENS DE PROSPECÇÃO**
+(`https://app.notion.com/p/33c44cb52e00807185c6e7b3e7da5577`), já ligada ao CRM. A
+Carta-Mallu (TCC PUC-Minas) é o molde-âncora, usada sempre com indicação nomeada, nunca
+massificada.
+
 ## Cuidados grandes
 
-1. **Domínio.** E-mail em massa sem preparo cai em spam e queima o domínio da PAAPS.
-   Antes do primeiro envio, o domínio precisa de autenticação: SPF, DKIM e DMARC (três
-   selos técnicos que provam ao Gmail que o e-mail é seu mesmo, configurados uma vez no
-   painel do domínio). O volume cresce devagar, e todo envio leva link de descadastro.
-2. **Domínio irmão.** O ideal é enviar por um subdomínio ou domínio irmão, para que, se
-   algo der errado, o e-mail principal da PAAPS não seja punido junto.
+1. **Autenticação de domínio (obrigatória antes do primeiro envio).** SPF, DKIM e DMARC
+   são três selos técnicos que provam ao Gmail que o e-mail é seu mesmo. Configurados uma
+   vez no painel do domínio paaps.com.br. Sem eles, mesmo e-mail bom cai em spam.
+2. **Domínio principal está OK aqui, por causa da estratégia.** O CRM deixa explícito:
+   este funil não é disparo em massa, é originação qualificada, poucas conversas, muitas
+   por indicação. Volume baixo e altamente personalizado protege a reputação do domínio,
+   então usar relacionamento@paaps.com.br é seguro. Se um dia o volume crescer para
+   centenas de e-mails frios por dia, aí sim vale um subdomínio irmão; hoje não precisa.
+3. **Link de descadastro** em todo envio, e volume subindo devagar no começo.
 
-## Decisão pendente
-
-Ferramenta de disparo (Gmail atual, serviço de envio dedicado) e qual domínio ou
-subdomínio usar. Envolve custo mensal e marca.
-
-Status: a construir.
+Status: a construir. Pendente: escolher a ferramenta de disparo (Gmail via API, ou um
+serviço dedicado tipo Resend/Brevo) quando formos montar o fluxo.

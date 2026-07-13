@@ -32,12 +32,16 @@ frentes de automação. Legenda de responsável:
    assinar GitHub Pro (cerca de US$ 4/mês), mover só a pasta do dashboard para um repo
    público separado, ou hospedar em outro serviço gratuito (Netlify). Qualquer uma
    funciona.
-8. **[DECISÃO SUA]** Onde os leads moram (frente 4): planilha Google, Notion ou CRM.
-9. **[DECISÃO SUA]** Ferramenta de disparo e domínio de e-mail (frente 5): Gmail atual ou
-   serviço dedicado; domínio principal ou subdomínio irmão.
-10. **[DECISÃO SUA]** Confirmar OpenClaw e Hermes Agent. Mandar o link de cada um para o
-    Claude Code checar documentação e tratamento de credenciais antes de apostar neles.
-    O n8n é a base sólida enquanto isso.
+8. **[DECIDIDO]** Onde os leads moram: **Notion**, no CRM que já existe (página Leads &
+   Clientes, base Leads). Fonte única de verdade. **Supabase fica para depois**, só quando
+   o app Next.js precisar de banco de verdade. Sem espelho Supabase para Notion agora.
+9. **[DECIDIDO / PARCIAL]** Remetente da prospecção: **relacionamento@paaps.com.br**
+   (criado). Domínio principal é seguro dado o funil qualificado e de baixo volume. Falta:
+   configurar SPF/DKIM/DMARC no domínio e escolher a ferramenta de disparo.
+10. **[EM ABERTO]** OpenClaw descartado. **Hermes Agent** (Nous Research) está instalado
+    mas sem ativação e sem tarefa definida. Antes de ativar, definir que trabalho ele fará
+    (candidato natural: cérebro de personalização dos e-mails da frente 5). O n8n é a base
+    de orquestração; os agentes Claude já existentes são o cérebro de conteúdo.
 
 ## Fase 2: primeira automação (sugestão: frente 4, a mais simples)
 
