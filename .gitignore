@@ -24,6 +24,10 @@ insumos-compartilhados/docs/*-imagens/
 # Configurações com credenciais (nunca commitar)
 conteudo/dashboard/js/config.js
 
+# Chaves reais das automações (só o .env.example vai para o repo)
+.env
+**/.env
+
 # Configurações locais do Claude Code (podem conter credenciais ou paths pessoais)
 .claude/settings.local.json
 
