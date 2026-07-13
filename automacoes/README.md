@@ -18,11 +18,21 @@ O que NUNCA entra aqui:
   um arquivo JSON e commitado na subpasta da frente correspondente. Antes de commitar,
   conferir que o JSON saiu sem credenciais (o n8n separa credenciais do fluxo por
   padrão, mas a conferência é obrigatória).
-- **OpenClaw / Hermes Agent**: frameworks de agentes em avaliação. Antes de apostar em
-  qualquer um, confirmar documentação e como cada um trata credenciais. O padrão de
-  segredos acima vale para todos.
+- **Hermes Agent** (Nous Research): instalado, ainda sem ativação nem tarefa definida.
+  OpenClaw foi descartado. Antes de ativar o Hermes, definir o trabalho dele (candidato:
+  personalização dos e-mails da frente 5). O padrão de segredos acima vale para ele.
+- **Agentes Claude** (`.claude/agents/`): o cérebro de conteúdo, já construído.
 - **Windsor AI**: já em uso no dashboard; tem escrita em Meta, Google, LinkedIn e TikTok
   Ads, então parte da frente 1 pode nem precisar de ferramenta nova.
+- **Site**: Next.js + Vercel + shadcn (stack em adoção). O formulário de lead da frente 4
+  nasce aqui e conversa com o n8n.
+
+## CRM já existe no Notion
+
+O funil comercial não começa do zero: a base **Leads & Clientes** no Notion
+(`https://app.notion.com/p/22244cb52e008124b5d6ce15f650eced`) já modela 9 etapas de funil,
+status, personas, ofertas e as bases Leads, Clientes, Propostas e Lista de Contatos. As
+automações alimentam e leem esse CRM; não o substituem.
 
 ## As 5 frentes
 
