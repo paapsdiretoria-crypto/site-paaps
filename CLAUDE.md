@@ -128,13 +128,17 @@ SITE PAAPS/                          ← pasta raiz (renomear para PAAPS/ no Fin
 ├── sessoes/                         ← logs automáticos de sessão (gerados por hook)
 │   └── sessao-YYYY-MM-DD.md         ← um arquivo por dia, commitado automaticamente
 │
-├── site/                            ← Projeto 1: site institucional
-│   ├── CLAUDE.md                    ← instruções específicas do site
-│   ├── DESIGN-SYSTEM.md
-│   ├── PROMPT_CLAUDE_CODE_SITE_PAAPS.md
-│   ├── .claude/skills/frontend-design/SKILL.md
-│   ├── Sites - referências e analise/  ← screenshots de benchmark
-│   └── paaps-site/                  ← HTML/CSS/JS do site
+├── codigo/                          ← TODO o código do ecossistema, indexado pelo CodeGraph
+│   ├── .codegraph/                  ← índice/grafo de código (SQLite local, não commitado)
+│   ├── site/                        ← Projeto 1: site institucional
+│   │   ├── CLAUDE.md                ← instruções específicas do site
+│   │   ├── DESIGN-SYSTEM.md
+│   │   ├── PROMPT_CLAUDE_CODE_SITE_PAAPS.md
+│   │   ├── .claude/skills/frontend-design/SKILL.md
+│   │   ├── Sites - referências e analise/  ← screenshots de benchmark
+│   │   └── paaps-site/              ← HTML/CSS/JS do site
+│   ├── agente-whatsapp/             ← app Python do agente WhatsApp (deploy Railway)
+│   └── dashboard/                   ← analytics Windsor AI (lê @amalluvasconcellos e @paaps.brasil)
 │
 ├── conteudo/                        ← Projeto 2: equipe de agentes de conteúdo
 │   ├── CLAUDE.md                    ← arquitetura da equipe de agentes (doc principal)
@@ -144,7 +148,6 @@ SITE PAAPS/                          ← pasta raiz (renomear para PAAPS/ no Fin
 │   ├── ciclos/                      ← outputs do Radar e Sentinela por data
 │   ├── eventos/                     ← produção de conteúdo por evento (ex.: Caratinga)
 │   ├── briefings/                   ← briefings consolidados do Narrador
-│   ├── dashboard/                   ← analytics Windsor AI (lê @amalluvasconcellos e @paaps.brasil)
 │   └── instagram/
 │       ├── amalluvasconcellos/      ← workspace do perfil pessoal de Mallu
 │       └── paaps.brasil/            ← workspace do perfil institucional
@@ -160,6 +163,15 @@ SITE PAAPS/                          ← pasta raiz (renomear para PAAPS/ no Fin
 > nunca em `~/Documents`, na home ou dentro de pastas técnicas como `dashboard/js/`.
 > Fora da raiz não existem CLAUDE.md, skills, memória nem auto-push: o trabalho fica
 > sem contexto e sem backup.
+
+> **Pasta `codigo/` + CodeGraph (jul/2026):** todo código executável do ecossistema
+> (`site/`, `agente-whatsapp/`, `dashboard/`) foi consolidado em `codigo/`. O CodeGraph
+> indexa essa pasta e mantém um grafo de código local (SQLite em `codigo/.codegraph/`,
+> não commitado). Antes de fazer grep/find ou abrir arquivos para entender ou localizar
+> código, use o CodeGraph: MCP `codegraph_explore` (após reiniciar o Claude Code) ou o
+> shell `codegraph explore "<símbolos ou pergunta>" --path codigo`. O servidor MCP está
+> apontado para `codigo/` no `.mcp.json` (`serve --mcp --path codigo`). Código novo nasce
+> dentro de `codigo/`; conteúdo, briefings e assets de marca continuam fora dela.
 
 ---
 
@@ -196,7 +208,7 @@ git push
 - `insumos-compartilhados/nossa-camiseta-paaps/`
 - `insumos-compartilhados/nossos-clientes-e-parceiros/`
 - `insumos-compartilhados/docs/*-imagens/`: imagens extraídas dos DOCX
-- `conteudo/dashboard/js/config.js`: chave Windsor AI (nunca commitar)
+- `codigo/dashboard/js/config.js`: chave Windsor AI (nunca commitar)
 - `projetos/`: projetos avulsos com conteúdo interno (mantido fora do repo por precaução)
 
 ---
@@ -224,7 +236,7 @@ A pasta ainda se chama `SITE PAAPS/` por limitação do ambiente. Para renomear 
 | `evita-padrao-ia-imersao-claude` | Auditar e reescrever texto removendo padrões de IA em PT-BR |
 | `copy-carrossel` | Escrever copy de carrossel para Instagram no tom de voz da Mallu, com revisão anti-IA embutida |
 | `legendas-otimizadas` | Transformar roteiro ou conteúdo pronto em legenda otimizada para Instagram ou TikTok (SEO + GEO + algoritmo) |
-| `frontend-design` *(em `site/`)* | Trabalhar no site: ativa automaticamente nessa pasta |
+| `frontend-design` *(em `codigo/site/`)* | Trabalhar no site: ativa automaticamente nessa pasta |
 | `cria-skill-paaps` | Criar nova skill PAAPS: conduz ciclo RED-GREEN-REFACTOR aplicado a documentação de comportamento |
 | `cria-agente-paaps` | Criar ou refinar agente PAAPS: briefing obrigatório, anatomia completa, protocolo de handoff, anti-IA |
 | `notion-knowledge-capture` | Capturar insights/decisões da conversa e salvar como página estruturada no Notion (usa MCP Notion) |

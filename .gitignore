@@ -22,7 +22,7 @@ insumos-compartilhados/docs/*-imagens/
 *.log
 
 # Configurações com credenciais (nunca commitar)
-conteudo/dashboard/js/config.js
+codigo/dashboard/js/config.js
 
 # Chaves reais das automações (só o .env.example vai para o repo)
 .env
@@ -36,3 +36,8 @@ conteudo/dashboard/js/config.js
 /.agents/
 .claude/.ultimo-status-logado
 /projetos/
+
+# Instaladores e binários grandes baixados localmente (Ollama, Hermes Agent, apps .dmg/.app)
+/Modelos/
+*.dmg
+*.app/
