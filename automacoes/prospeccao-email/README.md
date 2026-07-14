@@ -8,12 +8,16 @@ E-mails personalizados para prefeituras do Brasil inteiro.
   e RH Genuíno) e os critérios de qualificação. Sem dados reais de leads.
 - `moldes/` : os moldes de e-mail com lacunas, tipo `{cidade}`, `{nome_da_secretaria}`,
   `{nome_do_gestor}`. Contém o placeholder da Carta-Mallu (molde-âncora).
-- `hermes/` : o papel do Hermes como personalizador, o prompt de personalização e a
-  rubrica de score 0 a 100.
-- `fluxos/` : o JSON do n8n que preenche as lacunas e envia, sem credenciais.
+- `personalizacao/` : o papel do Claude Code como personalizador, o prompt de
+  personalização e a rubrica de score 0 a 100.
+- `fluxos/` : o JSON do n8n que dispara e devolve os eventos ao CRM, sem credenciais.
+  A personalização é feita pelo Claude Code em sessão, fora do n8n.
 - `cadencia.md` : quantos e-mails por dia, intervalo entre eles, warm-up de volume,
   quando parar a sequência, texto de descadastro.
 - `metricas.md` : o que o dashboard de controle acompanha e de onde vêm os números.
+- `regras-prospeccao.md` : o runbook que o Claude Code segue ao receber o toque do n8n:
+  quem contatar, a regra dos 2 meses (via Atividade `PROSPECÇÃO`), busca ativa e cadastro
+  dos novos leads, revisão dos já contatados. Espelhado no Notion sob Leads & Clientes.
 
 > Os arquivos das subpastas são rascunhos de trabalho, a co-construir com a fundadora.
 

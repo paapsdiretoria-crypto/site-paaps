@@ -9,8 +9,8 @@
 
 O ICP descreve a organização e a pessoa que a PAAPS quer alcançar com a Carta-Mallu e os
 demais moldes. Ele orienta a captura das 100 organizações por semana (segunda 8h) e a
-pontuação de personalização feita pelo Hermes. Um lead que não encaixa no ICP não entra
-na fila, mesmo que o e-mail seja fácil de achar.
+pontuação de personalização feita pelo Claude Code. Um lead que não encaixa no ICP não
+entra na fila, mesmo que o e-mail seja fácil de achar.
 
 ## Organização-alvo
 
@@ -59,4 +59,5 @@ Um lead avança quando reúne sinais de:
    raspagem de dado pessoal sensível.
 
 Faltam definir: pesos, cortes mínimos e sinais de desqualificação (quando NÃO prospectar).
-Isso entra junto com a rubrica 0 a 100 do Hermes (`../hermes/rubrica-score-0-100.md`).
+Isso entra junto com a rubrica 0 a 100 do Claude Code
+(`../personalizacao/rubrica-score-0-100.md`).

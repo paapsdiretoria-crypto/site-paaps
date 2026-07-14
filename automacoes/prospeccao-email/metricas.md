@@ -15,7 +15,7 @@
 | Descadastros | Pediram remoção | Sinal de ajuste de ICP ou de tom |
 
 Taxas derivadas (entrega, abertura, resposta, reunião por enviado) e a relação com a nota
-de personalização do Hermes entram na segunda rodada de definição.
+de personalização do Claude Code entram na segunda rodada de definição.
 
 ## De onde vêm os dados
 

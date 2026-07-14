@@ -14,19 +14,20 @@ O que NUNCA entra aqui:
 
 ## Ferramentas
 
-- **Hermes Agent** (Nous Research): decidido em 14/07 como o **cérebro geral das
-  automações**, rodando local via Ollama (sem internet, sem chave de API), com memória
-  entre sessões e criação própria de skills. O padrão de segredos acima vale para ele.
-  Pendente: definir onde ele roda de forma realmente contínua (rodando só no Mac dela,
-  a automação para quando o Mac dorme ou desliga).
-- **n8n**: plataforma de automação de fluxos, agora como caixa de ferramentas de
-  integração que o Hermes aciona (via MCP/webhook), não mais o orquestrador central.
+- **Claude Code**: o **cérebro de personalização** da prospecção fria. Em sessão, faz a
+  pesquisa individual de cada lead (gancho local honesto), escreve o e-mail a partir do
+  molde-âncora Carta-Mallu na voz PAAPS e dá a nota 0 a 100. É a fonte da qualidade
+  personalizada; não é serviço que roda sozinho, personaliza quando a fundadora abre a
+  sessão.
+- **n8n**: o **orquestrador da parte mecânica**. Recebe os e-mails já personalizados,
+  dispara via Resend com cadência e warm-up, e recebe de volta os webhooks (entregue,
+  aberto, respondido) para atualizar o CRM e avisar a fundadora quando um lead responde.
   Cada fluxo é exportado como um arquivo JSON e commitado na subpasta da frente
   correspondente. Antes de commitar, conferir que o JSON saiu sem credenciais (o n8n
   separa credenciais do fluxo por padrão, mas a conferência é obrigatória).
 - **CodeGraph** (github.com/colbymchenry/codegraph): grafo de código local e
-  pré-indexado (SQLite), instalado em 14/07. Dá ao Hermes (e a outros agentes, incluindo
-  Claude Code) um mapa do repositório via MCP em vez de ler arquivo por arquivo. 100%
+  pré-indexado (SQLite), instalado em 14/07. Dá ao Claude Code (e a outros agentes) um
+  mapa do repositório via MCP em vez de ler arquivo por arquivo. 100%
   local, sem chave de API. Em 14/07 todo o código do ecossistema foi consolidado na pasta
   `codigo/` (fora dela ficam conteúdo, briefings e assets de marca), e o CodeGraph indexa
   só essa pasta: `codegraph install` e depois `codegraph init codigo`. O servidor MCP já

@@ -71,7 +71,7 @@ Há dois caminhos:
 
 Hoje o `paaps.com.br` não recebe e-mail (sem registro MX). Enviar pelo Resend não depende
 disso, mas as **respostas dos leads precisam cair numa caixa que a Mallu leia**, senão o
-retorno se perde e o Hermes não aprende com quem respondeu.
+retorno se perde e o CRM não registra quem respondeu.
 
 Opção recomendada, gratuita e simples, já que o DNS está na Cloudflare:
 

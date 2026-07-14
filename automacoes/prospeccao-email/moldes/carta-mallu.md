@@ -13,7 +13,8 @@ for necessário versioná-la para um fluxo.
 - Voz PAAPS: estrutural e sistêmica, nomeia a ferida coletiva, sem linguagem coachesca,
   sem a estrutura "não é X, é Y", sem travessão grande.
 - Personalização entra pelas lacunas (`{cidade}`, `{nome_da_secretaria}`,
-  `{nome_do_gestor}`, `{gancho_local}`), preenchidas pelo Hermes no fluxo n8n.
+  `{nome_do_gestor}`, `{gancho_local}`), preenchidas pelo Claude Code em sessão, antes de
+  o n8n disparar.
 
 ## Lacunas previstas
 
