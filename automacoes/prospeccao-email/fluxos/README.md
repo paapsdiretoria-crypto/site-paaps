@@ -11,10 +11,14 @@ os dados das pessoas.
 1. Início segunda-feira 8h.
 2. Captura de 100 organizações com base no ICP.
 3. Escolha do molde e da estratégia de personalização.
-4. Pesquisa individual de cada lead pelo Hermes, com nota 0 a 100.
+4. Pesquisa individual de cada lead pelo Claude Code, com nota 0 a 100.
 5. Montagem estética do e-mail personalizado.
 6. Envio dos 100 e-mails ao longo do dia (ver `../cadencia.md`).
 7. Retorno de eventos (entregue, aberto, respondido) para o CRM (ver `../metricas.md`).
+
+> Divisão de trabalho: o Claude Code faz os passos 3 a 5 (personalização, em sessão) e
+> o n8n faz os passos 2, 6 e 7 (captura, disparo via Resend e retorno de eventos). O
+> Claude Code entrega os e-mails prontos; o n8n dispara e devolve os eventos ao CRM.
 
 ## Regra de segredos (obrigatória antes de commitar)
 
@@ -22,13 +26,13 @@ os dados das pessoas.
   antes do commit é obrigatória.
 - Nenhum dado pessoal embutido: listas de leads, e-mails de servidores e respostas ficam
   no CRM e em planilha privada, nunca no JSON.
-- Chave de API da ferramenta de disparo (Resend provável) e do Hermes vivem só no `.env`
-  local.
+- Chave de API da ferramenta de disparo (Resend provável) vive só no `.env` local.
 
 ## Convenção
 
 - Um arquivo JSON por fluxo, com nome descritivo (ex.: `captura-semanal.json`,
-  `personalizacao-hermes.json`, `envio-resend.json`).
+  `envio-resend.json`, `retorno-eventos.json`). A personalização (passos 3 a 5) é feita
+  pelo Claude Code em sessão, fora do n8n, então não vira arquivo de fluxo.
 - Ao exportar, conferir o JSON e mascarar qualquer valor sensível remanescente como
   `[removido]`.
 

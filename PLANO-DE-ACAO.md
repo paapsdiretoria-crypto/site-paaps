@@ -38,21 +38,19 @@ frentes de automação. Legenda de responsável:
 9. **[DECIDIDO / PARCIAL]** Remetente da prospecção: **relacionamento@paaps.com.br**
    (criado). Domínio principal é seguro dado o funil qualificado e de baixo volume. Falta:
    configurar SPF/DKIM/DMARC no domínio e escolher a ferramenta de disparo.
-10. **[DECIDIDO / EM ABERTO]** OpenClaw descartado. Decisão de 14/07: **Hermes Agent**
-    (Nous Research), rodando local via Ollama, passa a ser o **cérebro geral das
-    automações** (não mais só a personalização de e-mails da frente 5), com aprendizado
-    entre sessões e criação própria de skills. Isso muda o papel do n8n: deixa de ser o
-    orquestrador central e passa a ser a caixa de ferramentas de integração (e-mail,
-    formulário, CRM, ads) que o Hermes aciona via MCP/webhook. Os agentes Claude
-    continuam como o cérebro de conteúdo. **Em aberto:** rodar 100% local (sem internet)
-    significa que o Hermes só automatiza enquanto o Mac dela estiver ligado e acordado;
-    "automação 24 horas, a qualquer momento do dia" exige decidir se algum passo roda
-    num serviço sempre ligado (o próprio n8n hospedado, por exemplo) ou se o objetivo real
-    é "roda sempre que o Mac estiver ligado", que é mais modesto. Definir isso antes da
-    imersão de n8n da semana que vem, para desenhá-la já em torno da arquitetura real.
+10. **[DECIDIDO]** OpenClaw e Hermes Agent descartados. Revisão de 14/07: a prospecção
+    fria (frente 5) roda com **Claude Code + n8n, só isso**, do jeito mais personalizado e
+    simples possível. Divisão de trabalho: o **Claude Code** é o cérebro de personalização
+    (pesquisa cada lead em sessão, escreve o e-mail na voz PAAPS a partir da Carta-Mallu, dá
+    a nota 0 a 100); o **n8n** é o orquestrador da parte mecânica (dispara via Resend com
+    cadência e warm-up, recebe os webhooks de entregue/aberto/respondido, atualiza o CRM no
+    Notion e avisa quando um lead responde). Os agentes Claude continuam como o cérebro de
+    conteúdo. **Consequência prática:** a personalização acontece quando a fundadora abre a
+    sessão do Claude Code, não é serviço 24 horas; o n8n cuida do disparo e do retorno de
+    respostas. Sem cérebro local via Ollama, sem chave de API de LLM nova.
     Ferramenta de apoio instalada em 14/07: **CodeGraph**
     (github.com/colbymchenry/codegraph), grafo de código local e pré-indexado que dá ao
-    Hermes (e a outros agentes) um mapa do repositório sem precisar ler arquivo por
+    Claude Code (e a outros agentes) um mapa do repositório sem precisar ler arquivo por
     arquivo. Ver `automacoes/README.md`.
 
 ## Fase 2: primeira automação (sugestão: frente 4, a mais simples)
