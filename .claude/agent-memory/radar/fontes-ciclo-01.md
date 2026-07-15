@@ -27,6 +27,21 @@ metadata:
 - **Portal do Trabalhador** — alertas do terceiro setor sobre reforma tributária
 - **FENAJUFE / sindicatos do serviço público** — dados de adoecimento de servidores
 
+## Fontes que renderam no ciclo 2 (15/jul/2026)
+
+- **COSEMS/SP** (cosemssp.org.br): web debates sobre trabalhadores da RAPS; fonte de pauta proprietária do PAAPS
+- **Senado Notícias + Portal da Câmara**: tramitação da PEC 221/2019 (6x1); fichas de tramitação são fonte primária confiável
+- **Extra Classe + Metrópoles**: leitura de conjuntura sobre engavetamento no Senado
+- **Brasil de Fato + Sul 21**: denúncias sobre população de rua em Porto Alegre (atenção: republicações do mesmo texto contam como 1 fonte)
+- **gov.br/gestao (MGI)**: Portaria 3.410/2026 (CISSP); MGI virou fonte recorrente para saúde do servidor federal
+- **site.cfp.org.br**: posicionamento e cartilhas sobre IA na psicologia (PDFs oficiais disponíveis)
+- **TJMT e AL-MT**: fontes oficiais regionais renderam bem para o Centro-Oeste; replicar busca em tribunais/assembleias de outros estados N/NE/CO
+- **Fenasps, CSB, sindicatos**: bons termômetros de posição, sempre triangular dados com fonte oficial
+
+## Fontes bloqueadas no ciclo 2
+
+- Instagram (todos os perfis) e outraspalavras.net: bloqueio de acesso automatizado (403/página vazia). Compensar via WebSearch ou varredura manual.
+
 ## Fontes que não renderam
 
 - Buscas diretas por "psicóloga viraliza crítica psicologia hegemônica" — sem resultado concreto verificável. Melhor monitorar via Instagram diretamente.

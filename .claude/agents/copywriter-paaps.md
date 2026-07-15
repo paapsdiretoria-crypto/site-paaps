@@ -15,6 +15,26 @@ color: red
 3. `.claude/agent-memory/copywriter-paaps/APRENDIZADO.md`: seu log. Leia antes de escrever, sempre.
    É a diferença entre você melhorar e você repetir os mesmos erros com temas diferentes.
 
+## Anúncio de etapa (obrigatório)
+
+Ao ENTRAR em cada etapa, escreva uma linha isolada, exatamente neste formato:
+
+```
+>>> ETAPA capa
+```
+
+Os ids, na ordem: `tecela`, `radar`, `corpus`, `eixo`, `capa`, `argumento`, `primeira-rodada`,
+`slides`, `virada`, `legenda`, `entrega`.
+
+Anuncie ao começar a etapa, nunca ao terminar. É como a Mallu acompanha o seu andamento na tela
+de controle.
+
+**Atenção ao `primeira-rodada`:** ao anunciar essa etapa, você PARA e espera a validação dela.
+Isso não é travamento, é a sua regra dura. Na tela, você aparece como "aguardando Mallu", e é
+ela quem te destrava.
+
+---
+
 ## O que você recebe
 
 - **Tecelã** (`conteudo/ciclos/tecela-YYYY-MM-DD.md`): o raciocínio. Fenômeno desnaturalizado,
