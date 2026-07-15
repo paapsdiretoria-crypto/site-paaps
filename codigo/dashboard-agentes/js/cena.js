@@ -17,6 +17,23 @@ const COR = {
 };
 
 export class Cena {
+  /** Gradiente radial branco→transparente, gerado uma vez e reusado por todos. */
+  static texturaHalo() {
+    if (Cena._halo) return Cena._halo;
+    const c = document.createElement('canvas');
+    c.width = c.height = 256;
+    const ctx = c.getContext('2d');
+    const g = ctx.createRadialGradient(128, 128, 0, 128, 128, 128);
+    g.addColorStop(0, 'rgba(255,255,255,0.95)');
+    g.addColorStop(0.25, 'rgba(255,255,255,0.35)');
+    g.addColorStop(0.55, 'rgba(255,255,255,0.09)');
+    g.addColorStop(1, 'rgba(255,255,255,0)');
+    ctx.fillStyle = g;
+    ctx.fillRect(0, 0, 256, 256);
+    Cena._halo = new THREE.CanvasTexture(c);
+    return Cena._halo;
+  }
+
   constructor(canvas) {
     this.canvas = canvas;
     this.astronautas = new Map();
@@ -42,10 +59,12 @@ export class Cena {
     this.scene.background = new THREE.Color(COR.fundo);
     // A névoa é o que dá a sensação de distância: o agente do fim da fila
     // literalmente se perde no escuro.
-    this.scene.fog = new THREE.FogExp2(COR.fundo, 0.028);
+    this.scene.fog = new THREE.FogExp2(COR.fundo, 0.019);
 
-    this.camera = new THREE.PerspectiveCamera(42, 1, 0.1, 400);
-    this.camera.position.set(0, 3.2, 26);
+    this.camera = new THREE.PerspectiveCamera(46, 1, 0.1, 400);
+    // Abre mostrando a constelação inteira; ao acionar o fluxo, a câmera fecha
+    // sozinha no agente que estiver trabalhando.
+    this.camera.position.set(4, 2.2, 25);
 
     this.renderer = new THREE.WebGLRenderer({
       canvas: this.canvas,
@@ -60,9 +79,11 @@ export class Cena {
     this.controls = new OrbitControls(this.camera, this.canvas);
     this.controls.enableDamping = true;
     this.controls.dampingFactor = 0.06;
-    this.controls.minDistance = 8;
+    this.controls.minDistance = 4;
     this.controls.maxDistance = 60;
-    this.controls.target.set(0, 1, 0);
+    this.controls.target.set(4, 0.4, 0);
+    // Recuo inicial no eixo X, até a Mallu mexer na câmera.
+    this._recuoX = 0;
 
     // Luz ambiente baixa: no espaço, o que não é iluminado some.
     this.scene.add(new THREE.AmbientLight(0xf5f1e1, 0.18));
@@ -258,6 +279,23 @@ export class Cena {
     faixa.position.y = -0.5;
     bracoD.add(faixa);
 
+    // Halo: brilho atrás do astronauta, sempre virado para a câmera. Precisa de
+    // queda suave nas bordas, senão vira um disco chapado com cara de planeta.
+    const halo = new THREE.Mesh(
+      new THREE.PlaneGeometry(5.4, 5.4),
+      new THREE.MeshBasicMaterial({
+        map: Cena.texturaHalo(),
+        color: COR.amarelo,
+        transparent: true,
+        opacity: 0,
+        depthWrite: false,
+        blending: THREE.AdditiveBlending,
+        fog: false
+      })
+    );
+    halo.position.set(0, 0.4, -1.4);
+    g.add(halo);
+
     g.userData = {
       agente,
       capacete,
@@ -265,6 +303,7 @@ export class Cena {
       lampada,
       anel,
       led,
+      halo,
       membros: { bracoE, bracoD, pernaE, pernaD },
       fase: Math.random() * Math.PI * 2,
       acordado: 0, // 0 = dormindo, 1 = desperto (interpolado)
@@ -274,8 +313,9 @@ export class Cena {
   }
 
   _montarTripulacao() {
-    const passo = 7.4;
-    const inicio = (-(AGENTES.length - 1) * passo) / 2;
+    const passo = 6.2;
+    // O +4 tira o primeiro astronauta de trás da coluna da tripulação.
+    const inicio = 4 - ((AGENTES.length - 1) * passo) / 2;
 
     AGENTES.forEach((agente, i) => {
       const a = this._construirAstronauta(agente);
@@ -404,10 +444,17 @@ export class Cena {
     this.tubos.forEach((t) => (t.ativo = false));
   }
 
-  /** Aproxima a câmera do agente em foco, sem tirar o controle da mão da Mallu. */
-  olharPara(id) {
+  /**
+   * Move o foco para um agente. `aproximar` fecha a câmera nele (usado quando o
+   * agente acorda); sem isso, só desliza o alvo e preserva o enquadramento que a
+   * Mallu escolheu na mão.
+   */
+  olharPara(id, aproximar = false) {
     const a = this.astronautas.get(id);
-    if (a) this.alvoCamera = a.position.clone();
+    if (!a) return;
+    this._recuoX = this.camera.position.x - this.controls.target.x;
+    this.alvoCamera = new THREE.Vector3(a.position.x, a.userData.baseY ?? a.position.y, a.position.z);
+    if (aproximar) this._alvoZ = a.position.z + 12;
   }
 
   // ------------------------------------------------------------------- quadro
@@ -449,10 +496,14 @@ export class Cena {
 
       // A luz do trabalho, com uma pulsação sutil para não parecer estática.
       const pulsa = 0.75 + Math.sin(t * 3 + d.fase) * 0.25;
-      d.lampada.intensity = d.acordado * 3.4 * pulsa;
-      d.visor.material.emissiveIntensity = d.acordado * 0.55 * pulsa;
-      d.anel.material.emissiveIntensity = d.acordado * 1.2 * pulsa;
-      d.led.material.emissiveIntensity = 0.2 + d.acordado * 1.6 * pulsa;
+      d.lampada.intensity = d.acordado * 9 * pulsa;
+      d.visor.material.emissiveIntensity = d.acordado * 1.5 * pulsa;
+      d.anel.material.emissiveIntensity = d.acordado * 2.6 * pulsa;
+      d.led.material.emissiveIntensity = 0.2 + d.acordado * 2.4 * pulsa;
+      // O halo é o que faz "acordado" ser legível de longe, mesmo com o
+      // astronauta pequeno na tela.
+      d.halo.material.opacity = d.acordado * 0.5 * pulsa;
+      d.halo.lookAt(this.camera.position);
     });
 
     // Pulsos percorrendo os tubos, ida e volta.
@@ -469,7 +520,17 @@ export class Cena {
     });
 
     if (this.alvoCamera) {
-      this.controls.target.lerp(this.alvoCamera, 0.05);
+      // A câmera desliza junto com o alvo, mantendo a distância que a Mallu
+      // escolheu no scroll. Só o eixo X acompanha: girar continua sendo dela.
+      this.controls.target.lerp(this.alvoCamera, 0.045);
+      const desejadoX = this.alvoCamera.x + this._recuoX;
+      this.camera.position.x += (desejadoX - this.camera.position.x) * 0.045;
+    }
+
+    // Aproximação: age uma vez e se desliga, devolvendo o zoom para o scroll.
+    if (this._alvoZ != null) {
+      this.camera.position.z += (this._alvoZ - this.camera.position.z) * 0.04;
+      if (Math.abs(this._alvoZ - this.camera.position.z) < 0.3) this._alvoZ = null;
     }
 
     this.controls.update();

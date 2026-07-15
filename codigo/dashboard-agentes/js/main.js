@@ -162,14 +162,13 @@ cena.aoClicar = (agente) => abrirFicha(agente);
 
 fluxo.aoMudar = renderizar;
 fluxo.aoRegistrar = registrar;
-fluxo.aoAcordar = (id) => cena.definirDesperto(id, true);
 fluxo.aoDormir = (id) => cena.definirDesperto(id, false);
 fluxo.aoConversar = (a, b, ligado) => cena.definirTuboAtivo(a, b, ligado);
 fluxo.aoTerminar = () => cena.apagarTudo();
 
 fluxo.aoAcordar = (id) => {
   cena.definirDesperto(id, true);
-  cena.olharPara(id);
+  cena.olharPara(id, true);
 };
 
 el.botao.addEventListener('click', () => {
