@@ -41,3 +41,4 @@ codigo/dashboard/js/config.js
 /Modelos/
 *.dmg
 *.app/
+.playwright-mcp/
