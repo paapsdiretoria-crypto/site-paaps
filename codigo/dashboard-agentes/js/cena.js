@@ -3,7 +3,6 @@
 
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { AGENTES, TUBOS } from './agentes.js';
 import { Visor } from './visor.js';
 
 const COR = {
@@ -35,8 +34,12 @@ export class Cena {
     return Cena._halo;
   }
 
-  constructor(canvas) {
+  constructor(canvas, dados) {
     this.canvas = canvas;
+    // A constelação vem do Notion, via dados/constelacao.json. Nenhum agente é
+    // escrito à mão aqui: foi assim que a primeira versão virou ficção quando
+    // dois agentes foram renomeados.
+    this.dados = dados;
     this.astronautas = new Map();
     this.tubos = [];
     this.relogio = new THREE.Clock();
@@ -322,20 +325,13 @@ export class Cena {
   }
 
   _montarTripulacao() {
-    const passo = 6.2;
-    // O +4 tira o primeiro astronauta de trás da coluna da tripulação.
-    const inicio = 4 - ((AGENTES.length - 1) * passo) / 2;
-
-    AGENTES.forEach((agente, i) => {
+    this.dados.agentes.forEach((agente, i) => {
       const a = this._construirAstronauta(agente);
-      // Espalha em X, com variação de altura e profundidade para que a fila
-      // não pareça um desfile plano.
-      a.position.set(
-        inicio + i * passo,
-        Math.sin(i * 1.7) * 1.1,
-        Math.cos(i * 0.9) * 2.6 - i * 0.6
-      );
-      a.rotation.y = Math.sin(i * 2.1) * 0.35;
+      // A posição vem do grafo (coluna = profundidade), calculada em dados.js.
+      // Quem não depende de ninguém fica na mesma coluna, lado a lado: é assim
+      // que Radar e @paaps.brasil aparecem como paralelos, e não enfileirados.
+      a.position.set(agente.pos.x, agente.pos.y, agente.pos.z);
+      a.rotation.y = Math.sin(i * 2.1) * 0.22;
       this.scene.add(a);
       this.astronautas.set(agente.id, a);
     });
@@ -344,7 +340,7 @@ export class Cena {
   // --------------------------------------------------------------------- tubos
 
   _montarTubos() {
-    TUBOS.forEach(([origemId, destinoId]) => {
+    this.dados.tubos.forEach(({ de: origemId, para: destinoId }) => {
       const a = this.astronautas.get(origemId);
       const b = this.astronautas.get(destinoId);
       if (!a || !b) return;
@@ -353,11 +349,16 @@ export class Cena {
       const p0 = a.position.clone().add(new THREE.Vector3(0.5, -0.1, 0.4));
       const p3 = b.position.clone().add(new THREE.Vector3(-0.5, -0.1, 0.4));
       const meio = p0.clone().lerp(p3, 0.5);
+      // A barriga é proporcional ao vão: com os agentes em colunas, distâncias
+      // diferentes precisam de sobras diferentes, senão o tubo curto vira laço e
+      // o tubo longo vira corda esticada.
+      const vao = p0.distanceTo(p3);
+      const barriga = Math.min(2.1, vao * 0.26);
       const curva = new THREE.CatmullRomCurve3([
         p0,
-        p0.clone().lerp(meio, 0.5).add(new THREE.Vector3(0, -1.5, 1.2)),
-        meio.clone().add(new THREE.Vector3(0, -2.1, 1.6)),
-        p3.clone().lerp(meio, 0.5).add(new THREE.Vector3(0, -1.5, 1.2)),
+        p0.clone().lerp(meio, 0.5).add(new THREE.Vector3(0, -barriga * 0.72, 1.2)),
+        meio.clone().add(new THREE.Vector3(0, -barriga, 1.6)),
+        p3.clone().lerp(meio, 0.5).add(new THREE.Vector3(0, -barriga * 0.72, 1.2)),
         p3
       ]);
 

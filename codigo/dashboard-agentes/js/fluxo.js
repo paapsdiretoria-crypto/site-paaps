@@ -1,37 +1,45 @@
-// Motor do fluxo agêntico de produção de conteúdo.
+// Motor do fluxo agêntico.
 //
-// Estado de hoje: o dashboard existe, mas os agentes ainda não são disparados de
-// verdade a partir do navegador. Um HTML estático não tem como executar o Claude
-// Code. Por isso este motor roda em MODO SIMULAÇÃO: ele percorre as trilhas reais
-// de cada agente, no tempo, para que o controle visual já esteja de pé e validado.
+// Executa um GRAFO, não uma fila: acorda de uma vez todo agente cujas
+// dependências já terminaram. É por isso que o Radar e o @paaps.brasil sobem
+// juntos, e a Tecelã só acorda quando os DOIS entregarem.
 //
-// Quando a ponte de execução real existir, só uma coisa muda aqui: `_avancar`
-// passa a ler o progresso de um arquivo de estado em vez de inventá-lo. A
-// interface inteira continua igual. É por isso que o motor é separado da cena.
-
-import { AGENTES, TUBOS } from './agentes.js';
+// Estado de hoje: MODO.SIMULACAO. As trilhas são as etapas reais de cada agente
+// (derivadas dos .md), mas nada está sendo executado. Quando o servidor-ponte
+// existir, `_rodarAgente` deixa de percorrer a trilha no relógio e passa a
+// escutar os anúncios `>>> ETAPA <id>` que os agentes emitem. A interface toda
+// continua igual: é por isso que o motor é separado da cena.
 
 export const MODO = {
   SIMULACAO: 'simulacao',
   REAL: 'real'
 };
 
+export const ESTADO = {
+  REPOUSO: 'repouso',
+  TRABALHANDO: 'trabalhando',
+  AGUARDANDO_MALLU: 'aguardando-mallu',
+  CONCLUIDO: 'concluido',
+  ABORTADO: 'abortado'
+};
+
 export class Fluxo {
-  constructor() {
+  constructor(dados) {
+    this.dados = dados;
     this.modo = MODO.SIMULACAO;
     this.rodando = false;
-    this.indiceAtual = -1;
-    this.progresso = new Map(); // id -> 0..1
-    this.etapa = new Map(); // id -> texto da etapa corrente
-    this.concluidos = new Set();
-    this.pausado = false;
-    // Mensagens da Mallu para cada agente. Em simulação elas NÃO são entregues:
-    // ficam aqui, marcadas como não entregues, para a ponte de execução real
-    // despejá-las no contexto do agente quando existir. Enfileirar de verdade e
-    // fingir entrega são coisas diferentes; esta é a primeira.
+    this.pausarNoHandoff = false;
+
+    this.estado = new Map();
+    this.progresso = new Map();
+    this.etapa = new Map();
+    this.passo = new Map();
+    // Mensagens da Mallu por agente. Em simulação elas NÃO são entregues: ficam
+    // aqui marcadas como não entregues, para a ponte despejá-las no contexto do
+    // agente quando existir. Enfileirar de verdade e fingir entrega são coisas
+    // diferentes; esta é a primeira.
     this.mensagens = new Map();
 
-    // Ganchos que a interface preenche.
     this.aoMudar = () => {};
     this.aoAcordar = () => {};
     this.aoDormir = () => {};
@@ -42,55 +50,20 @@ export class Fluxo {
     this.reiniciar();
   }
 
-  /** Congela o agente sem perder nada: a etapa corrente continua de onde parou. */
-  pausar() {
-    if (!this.rodando || this.pausado) return;
-    this.pausado = true;
-    this._pausadoEm = performance.now();
-    this.aoRegistrar(`${this.agenteAtual?.nome} pausado.`, 'aviso');
-    this.aoMudar();
-  }
-
-  retomar() {
-    if (!this.pausado) return;
-    // Empurra o relógio da etapa para frente pelo tempo parado, senão a etapa
-    // salta o progresso todo de uma vez ao voltar.
-    this._inicioEtapa += performance.now() - this._pausadoEm;
-    this.pausado = false;
-    this.aoRegistrar(`${this.agenteAtual?.nome} retomado.`, 'acorda');
-    this.aoMudar();
-  }
-
-  /**
-   * Guarda uma mensagem da Mallu para um agente.
-   * `modo`: 'interromper' (para a etapa agora) ou 'enfileirar' (espera a etapa).
-   */
-  enviarMensagem(id, texto, modo) {
-    if (!this.mensagens.has(id)) this.mensagens.set(id, []);
-    const msg = { texto, modo, hora: new Date().toISOString(), entregue: false };
-    this.mensagens.get(id).push(msg);
-
-    const agente = AGENTES.find((a) => a.id === id);
-    this.aoRegistrar(`Mallu → ${agente?.nome}: "${texto}"`, 'mensagem');
-
-    if (this.modo === MODO.SIMULACAO) {
-      this.aoRegistrar(
-        'Mensagem guardada, não entregue: em simulação não há agente rodando para receber.',
-        'aviso'
-      );
-    }
-    this.aoMudar();
-    return msg;
+  get agentes() {
+    return this.dados.agentes;
   }
 
   reiniciar() {
     this.rodando = false;
-    this.pausado = false;
-    this.indiceAtual = -1;
-    this.concluidos.clear();
-    AGENTES.forEach((a) => {
+    this.pausarNoHandoff = false;
+    this._timers?.forEach((t) => clearTimeout(t));
+    this._timers = [];
+    this.agentes.forEach((a) => {
+      this.estado.set(a.id, ESTADO.REPOUSO);
       this.progresso.set(a.id, 0);
       this.etapa.set(a.id, 'Em repouso');
+      this.passo.set(a.id, 0);
       a.tokens = 0;
     });
     this.aoMudar();
@@ -103,113 +76,193 @@ export class Fluxo {
     this.aoRegistrar('Fluxo de produção de conteúdo iniciado.', 'marco');
     if (this.modo === MODO.SIMULACAO) {
       this.aoRegistrar(
-        'Modo simulação: as trilhas são reais, a execução dos agentes ainda não.',
+        'Modo simulação: as trilhas são as etapas reais dos agentes, a execução não.',
         'aviso'
       );
     }
-    this._proximoAgente();
+    this._acordarProntos();
   }
 
   parar() {
     this.rodando = false;
-    clearTimeout(this._timer);
+    this._timers.forEach((t) => clearTimeout(t));
+    this._timers = [];
+    this.agentes.forEach((a) => {
+      if (this.estado.get(a.id) === ESTADO.TRABALHANDO) {
+        this.estado.set(a.id, ESTADO.REPOUSO);
+        this.aoDormir(a.id);
+      }
+    });
     this.aoRegistrar('Fluxo interrompido pela Mallu.', 'aviso');
     this.aoMudar();
   }
 
-  get agenteAtual() {
-    return this.indiceAtual >= 0 ? AGENTES[this.indiceAtual] : null;
-  }
-
-  /** Progresso do ciclo inteiro, 0..1: a bateria geral da missão. */
+  /** Progresso do ciclo inteiro: a bateria da missão. */
   get progressoGeral() {
-    const total = AGENTES.reduce((s, a) => s + (this.progresso.get(a.id) || 0), 0);
-    return total / AGENTES.length;
+    const total = this.agentes.reduce((s, a) => s + (this.progresso.get(a.id) || 0), 0);
+    return this.agentes.length ? total / this.agentes.length : 0;
   }
 
-  _proximoAgente() {
+  get trabalhando() {
+    return this.agentes.filter((a) => this.estado.get(a.id) === ESTADO.TRABALHANDO);
+  }
+
+  /** Um agente está pronto quando todo mundo de quem ele recebe já concluiu. */
+  _pronto(a) {
+    if (this.estado.get(a.id) !== ESTADO.REPOUSO) return false;
+    return (a.recebe_de ?? []).every((dep) => this.estado.get(dep) === ESTADO.CONCLUIDO);
+  }
+
+  _acordarProntos() {
     if (!this.rodando) return;
 
-    const anterior = this.agenteAtual;
-    this.indiceAtual++;
+    const prontos = this.agentes.filter((a) => this._pronto(a));
 
-    if (this.indiceAtual >= AGENTES.length) {
-      this.rodando = false;
-      if (anterior) this.aoDormir(anterior.id);
-      this.aoRegistrar('Ciclo completo: briefing de conteúdo pronto.', 'marco');
-      this.aoTerminar();
+    if (!prontos.length) {
+      const restam = this.agentes.some((a) =>
+        [ESTADO.TRABALHANDO, ESTADO.AGUARDANDO_MALLU].includes(this.estado.get(a.id))
+      );
+      if (!restam) this._encerrar();
+      return;
+    }
+
+    if (this.pausarNoHandoff) {
+      this.aoRegistrar(
+        `Pausado antes de acordar: ${prontos.map((a) => a.nome).join(', ')}.`,
+        'aviso'
+      );
       this.aoMudar();
       return;
     }
 
-    const atual = this.agenteAtual;
-
-    if (anterior) {
-      // Handoff: os dois ficam acesos e o tubo pulsa enquanto passam o bastão.
-      this.concluidos.add(anterior.id);
-      this.aoConversar(anterior.id, atual.id, true);
-      this.aoRegistrar(`${anterior.nome} passa o parecer para ${atual.nome}.`, 'handoff');
-      this._timer = setTimeout(() => {
-        this.aoConversar(anterior.id, atual.id, false);
-        this.aoDormir(anterior.id);
-      }, 3200);
-    }
-
-    this.aoAcordar(atual.id);
-    this.aoRegistrar(`${atual.nome} acordou. ${atual.cargo}.`, 'acorda');
-    if (atual.alerta) this.aoRegistrar(atual.alerta, 'aviso');
-
-    this.passoAtual = 0;
+    prontos.forEach((a) => this._rodarAgente(a));
     this.aoMudar();
-    this._avancar();
   }
 
-  _avancar() {
-    if (!this.rodando) return;
-    const a = this.agenteAtual;
-    if (!a) return;
+  _rodarAgente(a) {
+    this.estado.set(a.id, ESTADO.TRABALHANDO);
+    this.passo.set(a.id, 0);
 
-    const totalPassos = a.trilha.length;
-    if (this.passoAtual >= totalPassos) {
-      this.progresso.set(a.id, 1);
-      this.etapa.set(a.id, 'Entrega concluída');
+    // Acende os tubos de quem alimenta este agente: o parecer chegando.
+    (a.recebe_de ?? []).forEach((dep) => {
+      this.aoConversar(dep, a.id, true);
+      this._timers.push(
+        setTimeout(() => {
+          this.aoConversar(dep, a.id, false);
+          // O anterior só dorme depois de entregar de fato.
+          if (!this._alimentaAlguemAtivo(dep)) this.aoDormir(dep);
+        }, 3200)
+      );
+    });
+
+    this.aoAcordar(a.id);
+    this.aoRegistrar(`${a.nome} acordou. ${a.camada}.`, 'acorda');
+    if (a.alerta) this.aoRegistrar(a.alerta, 'aviso');
+
+    this._avancar(a);
+  }
+
+  /** Evita apagar um agente que ainda está passando parecer para outro. */
+  _alimentaAlguemAtivo(id) {
+    return this.agentes.some(
+      (o) =>
+        (o.recebe_de ?? []).includes(id) && this.estado.get(o.id) === ESTADO.TRABALHANDO
+    );
+  }
+
+  _avancar(a) {
+    if (!this.rodando) return;
+
+    const trilha = a.trilha ?? [];
+    const i = this.passo.get(a.id);
+
+    if (!trilha.length) {
+      // Sem trilha declarada não existe porcentagem honesta. Segue o mesmo
+      // princípio do próprio @paaps.brasil com os Reels: não mensurável nunca
+      // vira zero, e nunca vira um número inventado.
+      this.etapa.set(a.id, 'Trabalhando (progresso não mensurável)');
+      this.progresso.set(a.id, 0);
       this.aoMudar();
-      this._timer = setTimeout(() => this._proximoAgente(), 900);
+      this._timers.push(setTimeout(() => this._concluir(a), 6000));
       return;
     }
 
-    this.etapa.set(a.id, a.trilha[this.passoAtual]);
-    this.progresso.set(a.id, this.passoAtual / totalPassos);
-    this.aoRegistrar(`${a.nome}: ${a.trilha[this.passoAtual]}`, 'passo');
+    if (i >= trilha.length) return this._concluir(a);
+
+    const etapa = trilha[i];
+    this.etapa.set(a.id, etapa.texto);
+    this.progresso.set(a.id, i / trilha.length);
+    this.aoRegistrar(`${a.nome}: ${etapa.texto}`, 'passo');
     this.aoMudar();
 
-    // Cada etapa tem duração própria: coleta e pesquisa demoram mais que um
-    // fechamento. Números só valem para a simulação.
+    // Portão: o agente para e espera a Mallu. É regra dele, não travamento.
+    if (etapa.portao) {
+      this.estado.set(a.id, ESTADO.AGUARDANDO_MALLU);
+      this.aoRegistrar(`${a.nome} aguarda a validação da Mallu.`, 'marco');
+      this.aoMudar();
+      return;
+    }
+
     const duracao = 1800 + Math.random() * 2200;
-    this._inicioEtapa = performance.now();
-    const base = this.passoAtual / totalPassos;
-    const fatia = 1 / totalPassos;
+    const inicio = performance.now();
+    const base = i / trilha.length;
+    const fatia = 1 / trilha.length;
 
     const tick = () => {
-      if (!this.rodando) return;
-      if (this.pausado) {
-        this._raf = requestAnimationFrame(tick);
-        return;
-      }
-      const decorrido = performance.now() - this._inicioEtapa;
-      const frac = Math.min(decorrido / duracao, 1);
+      if (!this.rodando || this.estado.get(a.id) !== ESTADO.TRABALHANDO) return;
+      const frac = Math.min((performance.now() - inicio) / duracao, 1);
       this.progresso.set(a.id, base + fatia * frac);
       a.tokens += Math.round(40 + Math.random() * 90);
       this.aoMudar();
-      if (frac < 1) {
-        this._raf = requestAnimationFrame(tick);
-      } else {
-        this.passoAtual++;
-        this._avancar();
+      if (frac < 1) requestAnimationFrame(tick);
+      else {
+        this.passo.set(a.id, i + 1);
+        this._avancar(a);
       }
     };
     tick();
   }
-}
 
-export { AGENTES, TUBOS };
+  /** Destrava um agente parado num portão (a Mallu validou a primeira rodada). */
+  liberar(id) {
+    const a = this.dados.porId.get(id);
+    if (!a || this.estado.get(id) !== ESTADO.AGUARDANDO_MALLU) return;
+    this.estado.set(id, ESTADO.TRABALHANDO);
+    this.passo.set(id, this.passo.get(id) + 1);
+    this.aoRegistrar(`Mallu validou. ${a.nome} seguiu.`, 'marco');
+    this._avancar(a);
+  }
+
+  _concluir(a) {
+    this.estado.set(a.id, ESTADO.CONCLUIDO);
+    this.progresso.set(a.id, 1);
+    this.etapa.set(a.id, 'Entrega concluída');
+    this.aoRegistrar(`${a.nome} entregou.`, 'marco');
+    this.aoMudar();
+    if (!(a.passa_para ?? []).length) this.aoDormir(a.id);
+    this._timers.push(setTimeout(() => this._acordarProntos(), 700));
+  }
+
+  _encerrar() {
+    this.rodando = false;
+    this.aoRegistrar('Ciclo completo.', 'marco');
+    this.aoTerminar();
+    this.aoMudar();
+  }
+
+  enviarMensagem(id, texto, modo) {
+    if (!this.mensagens.has(id)) this.mensagens.set(id, []);
+    this.mensagens.get(id).push({ texto, modo, hora: new Date().toISOString(), entregue: false });
+
+    const a = this.dados.porId.get(id);
+    this.aoRegistrar(`Mallu → ${a?.nome}: "${texto}"`, 'mensagem');
+
+    if (this.modo === MODO.SIMULACAO) {
+      this.aoRegistrar(
+        'Mensagem guardada, não entregue: em simulação não há agente rodando para receber.',
+        'aviso'
+      );
+    }
+    this.aoMudar();
+  }
+}
