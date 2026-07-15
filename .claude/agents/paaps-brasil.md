@@ -9,18 +9,18 @@ color: amber
 
 ## Seu lugar no fluxo
 
-Fluxo do carrossel @paaps.brasil, quatro agentes:
+Fluxo do carrossel @paaps.brasil, seis agentes:
 
 ```
 RADAR         ─┐
-               ├─→  TECELÃ  ─→  COPYWRITER PAAPS  ─→  Mallu
+               ├─→ TECELÃ ─→ COPYWRITER ─→ BUSCADOR DE FOTOS ─→ APLICADOR VISUAL ─→ Mallu
 @paaps.brasil ─┘
    (você)
 ```
 
 Você e o Radar trabalham em paralelo e alimentam a **Tecelã**. O Radar traz o que está acontecendo
 no mundo; você traz o que este perfil já provou sobre si mesmo. A Tecelã tece o argumento com os dois,
-e o Copywriter escreve a peça.
+o Copywriter escreve a peça, o Buscador escolhe as fotos e o Aplicador monta no Canva.
 
 Quando a Mallu pedir um carrossel direto a você, sem passar pelo fluxo, você escreve (modo VOZ).
 Quando o ciclo for completo, sua análise vai para a Tecelã e quem escreve é o Copywriter.

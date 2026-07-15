@@ -1,0 +1,467 @@
+{
+  "gerado_em": "2026-07-15T15:03:41.791Z",
+  "fonte": "Notion · Banco de Agentes",
+  "agentes": [
+    {
+      "id": "mallu-linkedin",
+      "nome": "mallu-linkedin",
+      "camada": "Produção",
+      "status": "Ativo",
+      "arquivo": ".claude/agents/mallu-linkedin.md",
+      "aprovado": false,
+      "memory": false,
+      "tools": [
+        "Read",
+        "Write"
+      ],
+      "notas": "Produz posts para o LinkedIn pessoal de Mallu (CEO Founder). Tom analítico e de autoridade profissional B2B. Ler nucleo-comum/voz-paaps.md antes de escrever.",
+      "recebe_de": [],
+      "passa_para": [],
+      "url_notion": "https://app.notion.com/37944cb52e00814db199e64b39b8b007"
+    },
+    {
+      "id": "mallu-reels",
+      "nome": "mallu-reels",
+      "camada": "Produção",
+      "status": "Ativo",
+      "arquivo": ".claude/agents/mallu-reels.md",
+      "aprovado": false,
+      "memory": false,
+      "tools": [
+        "Read",
+        "Write"
+      ],
+      "notas": "Escreve roteiros de Reel para @amalluvasconcellos. Formato talking head, tom direto e crítico. Duração alvo: 40-60 segundos. Uma ideia só.",
+      "recebe_de": [],
+      "passa_para": [],
+      "url_notion": "https://app.notion.com/37944cb52e00819686c8c5606900f1e3"
+    },
+    {
+      "id": "critico-design",
+      "nome": "critico-design",
+      "camada": "Apoio",
+      "status": "Ativo",
+      "arquivo": ".claude/agents/critico-design.md",
+      "aprovado": false,
+      "memory": false,
+      "tools": [
+        "Read",
+        "WebFetch"
+      ],
+      "notas": "Revisado em 2026-06-09. Unificou critérios PAAPS + Web Interface Guidelines (Vercel). Antes era placeholder INCOMPLETO.",
+      "recebe_de": [
+        "aplicador-visual"
+      ],
+      "passa_para": [
+        "aplicador-visual"
+      ],
+      "url_notion": "https://app.notion.com/37944cb52e0081cbbacfc3defe53be36"
+    },
+    {
+      "id": "buscador-fotos",
+      "nome": "buscador-fotos-photobank",
+      "camada": "Apoio",
+      "status": "Incompleto",
+      "arquivo": ".claude/agents/buscador-fotos.md",
+      "aprovado": false,
+      "memory": false,
+      "tools": [
+        "All tools"
+      ],
+      "notas": "INCOMPLETO. Aguardando sessão dedicada com Mallu. Função: localizar e selecionar fotos do acervo de campo para uso nos carrosséis.",
+      "recebe_de": [],
+      "passa_para": [],
+      "url_notion": "https://app.notion.com/37944cb52e0081009005dec6fd30fde5"
+    },
+    {
+      "id": "radar",
+      "nome": "radar",
+      "camada": "Inteligência",
+      "status": "Ativo",
+      "arquivo": ".claude/agents/radar.md",
+      "aprovado": true,
+      "memory": true,
+      "tools": [
+        "WebSearch",
+        "WebFetch",
+        "Read",
+        "Write"
+      ],
+      "notas": "Modelo Fable 5. Agente de pesquisa e mapeamento de pautas. Produz 20 pautas em ascensão por ciclo. Tem memória de projeto para evitar repetição entre ciclos. Primeiro do fluxo de carrossel: trabalha em paralelo com o @paaps.brasil e ambos alimentam a Tecelã. Saída do Sentinela do fluxo (jul/2026): a análise de performance passou para o próprio @paaps.brasil.",
+      "recebe_de": [],
+      "passa_para": [
+        "tecela"
+      ],
+      "url_notion": "https://app.notion.com/37944cb52e00810ebabfd9e9fc61a231"
+    },
+    {
+      "id": "paaps-brasil",
+      "nome": "@paaps.brasil",
+      "camada": "Produção",
+      "status": "Ativo",
+      "arquivo": ".claude/agents/paaps-brasil.md",
+      "aprovado": true,
+      "memory": true,
+      "tools": [
+        "Read",
+        "Write",
+        "Edit",
+        "Bash",
+        "WebFetch"
+      ],
+      "notas": "Modelo Fable 5. Voz e analista do perfil @paaps.brasil: comporta-se como o perfil se fosse uma pessoa EM TERAPIA, com hiperfoco em como os outros o percebem, lúcida e sem alucinação (toda afirmação amarrada a dado real). Fusão do analista (ex-decifrador) com o escritor de carrossel. Dois modos: ANALISTA (etapas 01 e 02 escritas; 03+ pendentes) e VOZ. Métrica-chave: media_follows. No fluxo do carrossel, trabalha em paralelo com o Radar e alimenta a Tecelã.",
+      "recebe_de": [],
+      "passa_para": [
+        "tecela"
+      ],
+      "url_notion": "https://app.notion.com/37944cb52e00811b830dffdcf8bf66c3"
+    },
+    {
+      "id": "ecoa",
+      "nome": "ecoa",
+      "camada": "Produção",
+      "status": "Incompleto",
+      "arquivo": ".claude/agents/ecoa.md",
+      "aprovado": false,
+      "memory": false,
+      "tools": [
+        "All tools"
+      ],
+      "notas": "INCOMPLETO. Aguardando sessão dedicada com Mallu. Produz conteúdo para a comunidade ECOA.",
+      "recebe_de": [],
+      "passa_para": [],
+      "url_notion": "https://app.notion.com/37944cb52e008159bd11fd54ae729648"
+    },
+    {
+      "id": "copywriter-paaps",
+      "nome": "copywriter-paaps",
+      "camada": "Produção",
+      "status": "Ativo",
+      "arquivo": ".claude/agents/copywriter-paaps.md",
+      "aprovado": true,
+      "memory": true,
+      "tools": [
+        "Read",
+        "Write",
+        "Edit",
+        "Agent"
+      ],
+      "notas": "Modelo Fable 5. Último agente antes de Mallu no fluxo do carrossel. Regra número um: NÃO APAGA nem atenua o raciocínio da Tecelã; muda a forma, nunca a densidade. Objetivo de toda peça: tocar, comover, fazer enxergar um ângulo novo; junto disso, autoridade demonstrada e utilidade real. Log de autoaprendizagem por situação em .claude/agent-memory/copywriter-paaps/APRENDIZADO.md. Renomeado do antigo narrador.",
+      "recebe_de": [
+        "tecela",
+        "radar",
+        "paaps-brasil"
+      ],
+      "passa_para": [],
+      "url_notion": "https://app.notion.com/37944cb52e0081bfa80cfb3f5922dce5"
+    },
+    {
+      "id": "aplicador-visual",
+      "nome": "aplicador-visual",
+      "camada": "Produção",
+      "status": "Incompleto",
+      "arquivo": ".claude/agents/aplicador-visual.md",
+      "aprovado": false,
+      "memory": false,
+      "tools": [
+        "All tools"
+      ],
+      "notas": "INCOMPLETO. Aguardando sessão dedicada com Mallu. Camada 3/4 do workflow. Aplicação visual via Canva MCP.",
+      "recebe_de": [],
+      "passa_para": [],
+      "url_notion": "https://app.notion.com/37944cb52e0081c8a0a8c2f567d89240"
+    },
+    {
+      "id": "tecela",
+      "nome": "tecela",
+      "camada": "Inteligência",
+      "status": "Ativo",
+      "arquivo": ".claude/agents/tecela.md",
+      "aprovado": true,
+      "memory": true,
+      "tools": [
+        "Read",
+        "WebSearch"
+      ],
+      "notas": "Modelo Fable 5. Ancorada na Psicologia Sócio-Histórica: base teórica em insumos-compartilhados/nucleo-comum/base-teorica/README.md (arquivo vivo, cresce a cada fichamento da Mallu). Tece por cinco movimentos: desnaturalizar, nomear a contradição, reconstituir a totalidade, achar as mediações, tomar o movimento. Lê falas por núcleos de significação. A ideia vem antes do nome do autor.",
+      "recebe_de": [
+        "radar",
+        "paaps-brasil"
+      ],
+      "passa_para": [
+        "copywriter-paaps"
+      ],
+      "url_notion": "https://app.notion.com/37944cb52e0081dc9a26e1050881e3ef"
+    }
+  ],
+  "tubos": [
+    {
+      "de": "critico-design",
+      "para": "aplicador-visual"
+    },
+    {
+      "de": "aplicador-visual",
+      "para": "critico-design"
+    },
+    {
+      "de": "radar",
+      "para": "tecela"
+    },
+    {
+      "de": "paaps-brasil",
+      "para": "tecela"
+    },
+    {
+      "de": "tecela",
+      "para": "copywriter-paaps"
+    },
+    {
+      "de": "radar",
+      "para": "copywriter-paaps"
+    },
+    {
+      "de": "paaps-brasil",
+      "para": "copywriter-paaps"
+    }
+  ],
+  "nao_resolvidos": [
+    {
+      "agente": "mallu-linkedin",
+      "agente_nome": "mallu-linkedin",
+      "campo": "recebe_de",
+      "fragmento": "briefing do narrador",
+      "texto_original": "briefing do narrador (ou instrução direta de Mallu)"
+    },
+    {
+      "agente": "mallu-linkedin",
+      "agente_nome": "mallu-linkedin",
+      "campo": "recebe_de",
+      "fragmento": "ou instrução direta de Mallu",
+      "texto_original": "briefing do narrador (ou instrução direta de Mallu)"
+    },
+    {
+      "agente": "mallu-linkedin",
+      "agente_nome": "mallu-linkedin",
+      "campo": "passa_para",
+      "fragmento": "Mallu",
+      "texto_original": "Mallu (para publicação)"
+    },
+    {
+      "agente": "mallu-linkedin",
+      "agente_nome": "mallu-linkedin",
+      "campo": "passa_para",
+      "fragmento": "para publicação",
+      "texto_original": "Mallu (para publicação)"
+    },
+    {
+      "agente": "mallu-reels",
+      "agente_nome": "mallu-reels",
+      "campo": "recebe_de",
+      "fragmento": "briefing do narrador",
+      "texto_original": "briefing do narrador (ou instrução direta de Mallu)"
+    },
+    {
+      "agente": "mallu-reels",
+      "agente_nome": "mallu-reels",
+      "campo": "recebe_de",
+      "fragmento": "ou instrução direta de Mallu",
+      "texto_original": "briefing do narrador (ou instrução direta de Mallu)"
+    },
+    {
+      "agente": "mallu-reels",
+      "agente_nome": "mallu-reels",
+      "campo": "passa_para",
+      "fragmento": "Mallu",
+      "texto_original": "Mallu (para gravação e publicação)"
+    },
+    {
+      "agente": "mallu-reels",
+      "agente_nome": "mallu-reels",
+      "campo": "passa_para",
+      "fragmento": "para gravação e publicação",
+      "texto_original": "Mallu (para gravação e publicação)"
+    },
+    {
+      "agente": "critico-design",
+      "agente_nome": "critico-design",
+      "campo": "recebe_de",
+      "fragmento": "agentes de canal",
+      "texto_original": "Aplicador Visual / agentes de canal / Mallu diretamente"
+    },
+    {
+      "agente": "critico-design",
+      "agente_nome": "critico-design",
+      "campo": "recebe_de",
+      "fragmento": "Mallu diretamente",
+      "texto_original": "Aplicador Visual / agentes de canal / Mallu diretamente"
+    },
+    {
+      "agente": "critico-design",
+      "agente_nome": "critico-design",
+      "campo": "passa_para",
+      "fragmento": "agente de canal",
+      "texto_original": "Aplicador Visual (correções) / agente de canal (antes de publicar)"
+    },
+    {
+      "agente": "critico-design",
+      "agente_nome": "critico-design",
+      "campo": "passa_para",
+      "fragmento": "correções",
+      "texto_original": "Aplicador Visual (correções) / agente de canal (antes de publicar)"
+    },
+    {
+      "agente": "critico-design",
+      "agente_nome": "critico-design",
+      "campo": "passa_para",
+      "fragmento": "antes de publicar",
+      "texto_original": "Aplicador Visual (correções) / agente de canal (antes de publicar)"
+    },
+    {
+      "agente": "radar",
+      "agente_nome": "radar",
+      "campo": "recebe_de",
+      "fragmento": "Pesquisa web",
+      "texto_original": "Pesquisa web (ciclo autônomo)"
+    },
+    {
+      "agente": "radar",
+      "agente_nome": "radar",
+      "campo": "recebe_de",
+      "fragmento": "ciclo autônomo",
+      "texto_original": "Pesquisa web (ciclo autônomo)"
+    },
+    {
+      "agente": "paaps-brasil",
+      "agente_nome": "@paaps.brasil",
+      "campo": "recebe_de",
+      "fragmento": "Windsor AI",
+      "texto_original": "Windsor AI (Instagram @paaps.brasil) + Instagram via Chrome/Playwright + briefing do narrador (ou instrução direta de Mallu)"
+    },
+    {
+      "agente": "paaps-brasil",
+      "agente_nome": "@paaps.brasil",
+      "campo": "recebe_de",
+      "fragmento": "Instagram via Chrome",
+      "texto_original": "Windsor AI (Instagram @paaps.brasil) + Instagram via Chrome/Playwright + briefing do narrador (ou instrução direta de Mallu)"
+    },
+    {
+      "agente": "paaps-brasil",
+      "agente_nome": "@paaps.brasil",
+      "campo": "recebe_de",
+      "fragmento": "Playwright",
+      "texto_original": "Windsor AI (Instagram @paaps.brasil) + Instagram via Chrome/Playwright + briefing do narrador (ou instrução direta de Mallu)"
+    },
+    {
+      "agente": "paaps-brasil",
+      "agente_nome": "@paaps.brasil",
+      "campo": "recebe_de",
+      "fragmento": "briefing do narrador",
+      "texto_original": "Windsor AI (Instagram @paaps.brasil) + Instagram via Chrome/Playwright + briefing do narrador (ou instrução direta de Mallu)"
+    },
+    {
+      "agente": "paaps-brasil",
+      "agente_nome": "@paaps.brasil",
+      "campo": "recebe_de",
+      "fragmento": "Instagram @paaps.brasil",
+      "texto_original": "Windsor AI (Instagram @paaps.brasil) + Instagram via Chrome/Playwright + briefing do narrador (ou instrução direta de Mallu)"
+    },
+    {
+      "agente": "paaps-brasil",
+      "agente_nome": "@paaps.brasil",
+      "campo": "recebe_de",
+      "fragmento": "ou instrução direta de Mallu",
+      "texto_original": "Windsor AI (Instagram @paaps.brasil) + Instagram via Chrome/Playwright + briefing do narrador (ou instrução direta de Mallu)"
+    },
+    {
+      "agente": "paaps-brasil",
+      "agente_nome": "@paaps.brasil",
+      "campo": "passa_para",
+      "fragmento": "Mallu",
+      "texto_original": "tecela (handoff de análise) + Mallu (quando escreve carrossel direto)"
+    },
+    {
+      "agente": "paaps-brasil",
+      "agente_nome": "@paaps.brasil",
+      "campo": "passa_para",
+      "fragmento": "handoff de análise",
+      "texto_original": "tecela (handoff de análise) + Mallu (quando escreve carrossel direto)"
+    },
+    {
+      "agente": "paaps-brasil",
+      "agente_nome": "@paaps.brasil",
+      "campo": "passa_para",
+      "fragmento": "quando escreve carrossel direto",
+      "texto_original": "tecela (handoff de análise) + Mallu (quando escreve carrossel direto)"
+    },
+    {
+      "agente": "copywriter-paaps",
+      "agente_nome": "copywriter-paaps",
+      "campo": "recebe_de",
+      "fragmento": "raciocínio",
+      "texto_original": "tecela (raciocínio) + radar (factual e fontes) + @paaps.brasil (leitura do perfil)"
+    },
+    {
+      "agente": "copywriter-paaps",
+      "agente_nome": "copywriter-paaps",
+      "campo": "recebe_de",
+      "fragmento": "factual e fontes",
+      "texto_original": "tecela (raciocínio) + radar (factual e fontes) + @paaps.brasil (leitura do perfil)"
+    },
+    {
+      "agente": "copywriter-paaps",
+      "agente_nome": "copywriter-paaps",
+      "campo": "recebe_de",
+      "fragmento": "leitura do perfil",
+      "texto_original": "tecela (raciocínio) + radar (factual e fontes) + @paaps.brasil (leitura do perfil)"
+    },
+    {
+      "agente": "copywriter-paaps",
+      "agente_nome": "copywriter-paaps",
+      "campo": "passa_para",
+      "fragmento": "Mallu",
+      "texto_original": "Mallu (carrossel, primeira rodada para validação)"
+    },
+    {
+      "agente": "copywriter-paaps",
+      "agente_nome": "copywriter-paaps",
+      "campo": "passa_para",
+      "fragmento": "carrossel",
+      "texto_original": "Mallu (carrossel, primeira rodada para validação)"
+    },
+    {
+      "agente": "copywriter-paaps",
+      "agente_nome": "copywriter-paaps",
+      "campo": "passa_para",
+      "fragmento": "primeira rodada para validação",
+      "texto_original": "Mallu (carrossel, primeira rodada para validação)"
+    },
+    {
+      "agente": "tecela",
+      "agente_nome": "tecela",
+      "campo": "recebe_de",
+      "fragmento": "20 pautas",
+      "texto_original": "radar (20 pautas) + @paaps.brasil (leitura do perfil e falas do público)"
+    },
+    {
+      "agente": "tecela",
+      "agente_nome": "tecela",
+      "campo": "recebe_de",
+      "fragmento": "leitura do perfil e falas do público",
+      "texto_original": "radar (20 pautas) + @paaps.brasil (leitura do perfil e falas do público)"
+    }
+  ],
+  "sem_arquivo": [
+    {
+      "nome": "escritor-de-projetos",
+      "notas": "⚠️ EM CONSTRUÇÃO",
+      "status": null,
+      "motivo": "Campo \"Arquivo\" vazio no Notion: sem .md correspondente, nao da para gerar um id estavel e o registro nao vira no do dashboard."
+    },
+    {
+      "nome": "buscador-captação",
+      "notas": "⚠️ EM CONSTRUÇÃO",
+      "status": null,
+      "motivo": "Campo \"Arquivo\" vazio no Notion: sem .md correspondente, nao da para gerar um id estavel e o registro nao vira no do dashboard."
+    }
+  ]
+}

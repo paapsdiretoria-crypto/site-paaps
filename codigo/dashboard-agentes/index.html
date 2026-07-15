@@ -54,6 +54,28 @@
 
   <div class="dica" id="dica"></div>
 
+  <!-- Console de comando: aparece ancorado abaixo do capacete quando a câmera
+       atraca num agente. O visor mostra; aqui é onde a Mallu fala. -->
+  <div class="console" id="console">
+    <div class="console-topo">
+      <span class="rotulo" id="console-nome">Agente</span>
+      <button class="console-sair" id="console-sair" aria-label="Soltar câmera">soltar ✕</button>
+    </div>
+    <div class="console-campo">
+      <input
+        type="text"
+        id="console-msg"
+        placeholder="falar com o agente…"
+        autocomplete="off">
+      <button class="console-enviar" id="console-enviar">↵</button>
+    </div>
+    <div class="console-botoes">
+      <button data-acao="interromper" class="acao interromper">Interromper e redirecionar</button>
+      <button data-acao="pausar" class="acao pausar" id="botao-pausar">Pausar</button>
+    </div>
+    <p class="console-nota" id="console-nota"></p>
+  </div>
+
   <div class="ficha" id="ficha">
     <button class="fechar" id="fechar-ficha" aria-label="Fechar ficha">✕</button>
     <div id="ficha-conteudo"></div>

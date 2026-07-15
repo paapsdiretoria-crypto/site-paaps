@@ -1,7 +1,7 @@
 // Costura: liga o motor do fluxo à cena 3D e à interface.
 
 import { Cena } from './cena.js';
-import { Fluxo, AGENTES } from './fluxo.js';
+import { Fluxo, MODO, AGENTES } from './fluxo.js';
 
 const cena = new Cena(document.getElementById('cena'));
 const fluxo = new Fluxo();
@@ -15,7 +15,14 @@ const el = {
   dica: document.getElementById('dica'),
   ficha: document.getElementById('ficha'),
   fichaConteudo: document.getElementById('ficha-conteudo'),
-  fecharFicha: document.getElementById('fechar-ficha')
+  fecharFicha: document.getElementById('fechar-ficha'),
+  consoleEl: document.getElementById('console'),
+  consoleNome: document.getElementById('console-nome'),
+  consoleMsg: document.getElementById('console-msg'),
+  consoleEnviar: document.getElementById('console-enviar'),
+  consoleSair: document.getElementById('console-sair'),
+  consoleNota: document.getElementById('console-nota'),
+  botaoPausar: document.getElementById('botao-pausar')
 };
 
 const pct = (n) => Math.round(n * 100) + '%';
@@ -54,6 +61,7 @@ AGENTES.forEach((a) => {
 // ------------------------------------------------------------------ renderiza
 
 function renderizar() {
+  const simulando = fluxo.modo === MODO.SIMULACAO;
   const geral = fluxo.progressoGeral;
   el.valorGeral.textContent = pct(geral);
   el.barraGeral.querySelector('i').style.width = pct(geral);
@@ -73,7 +81,25 @@ function renderizar() {
     card.querySelector('[data-barra]').classList.toggle('carregando', ativo);
     card.querySelector('[data-barra] i').style.width = pct(p);
     card.querySelector('[data-pct]').textContent = pct(p);
+
+    // A televisão do capacete. Em simulação, PENSANDO mostra a etapa real da
+    // trilha, e as outras duas faixas dizem a verdade: não há execução por trás.
+    cena.atualizarVisor(a.id, {
+      nome: a.nome,
+      acordado: ativo,
+      etapa: fluxo.etapa.get(a.id),
+      pensando: fluxo.etapa.get(a.id),
+      fazendo: simulando ? 'sem execução real: aguardando o servidor-ponte' : '',
+      achando: simulando ? 'nenhum dado colhido nesta simulação' : '',
+      progresso: p,
+      pausado: fluxo.pausado && ativo,
+      simulacao: simulando
+    });
   });
+
+  el.botaoPausar.textContent = fluxo.pausado ? 'Retomar' : 'Pausar';
+  el.botaoPausar.classList.toggle('ativa', fluxo.pausado);
+  el.botaoPausar.disabled = !fluxo.rodando;
 
   if (el.ficha.classList.contains('aberta') && fichaAberta) abrirFicha(fichaAberta, true);
 }
@@ -156,7 +182,76 @@ cena.aoPassarMouse = (agente, x, y) => {
   el.dica.classList.add('visivel');
 };
 
-cena.aoClicar = (agente) => abrirFicha(agente);
+// ------------------------------------------------------------------ console
+
+let atracado = null;
+
+function atracar(agente) {
+  atracado = agente;
+  cena.atracar(agente.id);
+  el.consoleNome.textContent = agente.nome;
+  el.consoleEl.classList.add('aberto');
+  renderizar();
+}
+
+function soltar() {
+  atracado = null;
+  cena.desatracar();
+  el.consoleEl.classList.remove('aberto');
+}
+
+// O console é HTML e a âncora é 3D, então ele precisa perseguir o capacete a
+// cada quadro. Some quando o astronauta sai de quadro ou vai para trás da câmera.
+function seguirCapacete() {
+  requestAnimationFrame(seguirCapacete);
+  if (!atracado) return;
+  const p = cena.posicaoTela(atracado.id);
+  if (!p) {
+    el.consoleEl.style.opacity = '0';
+    return;
+  }
+  el.consoleEl.style.opacity = '';
+  // Preso dentro da janela: atracado no capacete, a âncora sai do quadro e o
+  // console sumia junto justo quando ele é mais necessário.
+  const larg = el.consoleEl.offsetWidth;
+  const alt = el.consoleEl.offsetHeight;
+  const x = Math.min(Math.max(p.x, larg / 2 + 12), window.innerWidth - larg / 2 - 12);
+  const y = Math.min(Math.max(p.y, 70), window.innerHeight - alt - 16);
+  el.consoleEl.style.left = x + 'px';
+  el.consoleEl.style.top = y + 'px';
+}
+seguirCapacete();
+
+function enviar(modo) {
+  const texto = el.consoleMsg.value.trim();
+  if (!texto || !atracado) return;
+  fluxo.enviarMensagem(atracado.id, texto, modo);
+  el.consoleMsg.value = '';
+  el.consoleNota.textContent =
+    'Guardada na fila deste agente. Entrega real depende do servidor-ponte.';
+}
+
+el.consoleEnviar.addEventListener('click', () => enviar('enfileirar'));
+el.consoleMsg.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') enviar('enfileirar');
+  e.stopPropagation();
+});
+el.consoleSair.addEventListener('click', soltar);
+
+el.consoleEl.querySelector('[data-acao="interromper"]').addEventListener('click', () => {
+  if (!el.consoleMsg.value.trim()) {
+    el.consoleNota.textContent = 'Escreva a nova direção antes de interromper.';
+    return;
+  }
+  enviar('interromper');
+});
+
+el.botaoPausar.addEventListener('click', () => {
+  if (fluxo.pausado) fluxo.retomar();
+  else fluxo.pausar();
+});
+
+cena.aoClicar = (agente) => atracar(agente);
 
 // ------------------------------------------------------------ ganchos do fluxo
 
