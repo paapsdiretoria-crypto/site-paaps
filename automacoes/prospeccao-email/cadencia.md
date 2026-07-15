@@ -6,23 +6,31 @@
 ## Ritmo semanal
 
 - Ciclo começa segunda-feira às 8h.
-- Meta: 100 e-mails personalizados por semana.
+- **Meta: 15 e-mails personalizados por semana** (decisão da Mallu, 15/07/2026; antes o
+  rascunho propunha 100).
 - Volume baixo e altamente personalizado protege a reputação do domínio
   paaps.com.br; este funil é originação qualificada, não disparo em massa.
 
+O número 15 não é tímido por acaso: **todo e-mail passa pelo gate de aprovação da Mallu**
+(passo 6 do runbook), e o gargalo real da semana é a atenção dela, não a capacidade de
+escrever do agente. A meta é o que ela consegue revisar bem, não o que dá para produzir.
+Quando o gate afrouxar, a meta pode ser revista com ela.
+
 ## Ritmo ao longo do dia
 
-Os 100 e-mails não saem todos de uma vez. Proposta: distribuir o envio em blocos ao longo
-do dia útil, com intervalo entre mensagens, para imitar comportamento humano e não gatilhar
-filtros de spam. Tamanho do bloco e intervalo exatos ficam pendentes de definição junto com
-a escolha da ferramenta de disparo (Resend provável).
+15 por semana dá cerca de 3 por dia útil, o que já é comportamento naturalmente humano e
+não gatilha filtro de spam por volume. Ainda assim: distribuir ao longo do dia útil, com
+intervalo entre mensagens, nunca em rajada. Tamanho do bloco e intervalo exatos ficam
+pendentes da definição técnica junto com o Resend.
 
 ## Warm-up de volume no começo
 
-Domínio e remetente novos não começam disparando 100 por dia. Proposta de aquecimento:
-subir o volume diário de forma gradual nas primeiras semanas, até chegar ao patamar-alvo,
-para construir reputação de envio. A curva exata (quantos por dia, por quantas semanas)
-entra na definição técnica.
+Neste patamar o warm-up deixa de ser o risco principal: 3 e-mails por dia num domínio novo
+é volume seguro. O aquecimento continua valendo como prudência (subir devagar nas primeiras
+semanas), mas o que protege a reputação aqui é a qualidade e o baixo volume, não a curva.
+
+Se um dia a meta subir muito acima de 15, revisitar esta seção: aí o warm-up volta a
+importar de verdade.
 
 ## Descadastro
 

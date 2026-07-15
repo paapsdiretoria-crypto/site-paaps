@@ -8,9 +8,9 @@
 ## O que é o ICP
 
 O ICP descreve a organização e a pessoa que a PAAPS quer alcançar com a Carta-Mallu e os
-demais moldes. Ele orienta a captura das 100 organizações por semana (segunda 8h) e a
-pontuação de personalização feita pelo Claude Code. Um lead que não encaixa no ICP não
-entra na fila, mesmo que o e-mail seja fácil de achar.
+demais moldes. Ele orienta a captura das 15 organizações por semana (segunda 8h, ver
+`../cadencia.md`) e a pontuação de personalização feita pelo Claude Code. Um lead que não
+encaixa no ICP não entra na fila, mesmo que o e-mail seja fácil de achar.
 
 ## Organização-alvo
 
