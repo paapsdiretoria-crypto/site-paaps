@@ -209,6 +209,16 @@ export class Visor {
     const e = this.estado;
     const y = A - 26;
 
+    // Agente sem trilha declarada não tem porcentagem honesta. Mesmo princípio
+    // que o @paaps.brasil aplica aos Reels: não mensurável nunca vira zero.
+    if (e.semProgresso) {
+      c.fillStyle = COR.begeRosa;
+      c.font = '600 10px "League Spartan", Arial, sans-serif';
+      c.letterSpacing = '2px';
+      c.fillText('PROGRESSO NÃO MENSURÁVEL: SEM ETAPAS DECLARADAS', 20, y + 4);
+      return;
+    }
+
     c.fillStyle = 'rgba(245,241,225,0.1)';
     c.fillRect(20, y, L - 40, 6);
 

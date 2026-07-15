@@ -475,6 +475,34 @@ export class Cena {
     this._alvoPos = null;
   }
 
+  /**
+   * Enquadra um conjunto de agentes. Com o fluxo paralelo, "seguir quem acordou"
+   * deixou de fazer sentido: acordam dois ao mesmo tempo, e a câmera ficava
+   * indo atrás do último. Aqui ela abre o suficiente para caber o grupo todo.
+   */
+  enquadrar(ids) {
+    if (this.atracado || !ids?.length) return;
+
+    const caixa = new THREE.Box3();
+    ids.forEach((id) => {
+      const a = this.astronautas.get(id);
+      if (a) caixa.expandByPoint(new THREE.Vector3(a.position.x, a.userData.baseY ?? a.position.y, a.position.z));
+    });
+    if (caixa.isEmpty()) return;
+
+    const centro = caixa.getCenter(new THREE.Vector3());
+    const tam = caixa.getSize(new THREE.Vector3());
+    // Raio do grupo mais a folga do corpo do astronauta.
+    const raio = Math.max(tam.x, tam.y, 2) / 2 + 2.4;
+    const fovV = (this.camera.fov * Math.PI) / 180;
+    const distV = raio / Math.tan(fovV / 2);
+    const distH = raio / Math.tan(Math.atan(Math.tan(fovV / 2) * this.camera.aspect));
+
+    this.alvoCamera = centro;
+    this._recuoX = 0;
+    this._alvoPos = centro.clone().add(new THREE.Vector3(0, 0.6, Math.max(distV, distH) + 2));
+  }
+
   /** A câmera ainda está indo para algum lugar? Usado para saber quando assentar o HTML. */
   emMovimento() {
     return this._alvoPos != null || this._alvoZ != null;

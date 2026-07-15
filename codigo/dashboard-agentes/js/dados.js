@@ -56,6 +56,9 @@ export async function carregarConstelacao(fluxo = 'carrossel') {
 
   atribuirProfundidade(agentes, tubos);
   posicionar(agentes);
+  // Ordena pela ordem do fluxo, não pela ordem que o Notion devolveu: a coluna
+  // da tripulação tem que ser lida de cima para baixo como a linha de produção.
+  agentes.sort((x, y) => x.profundidade - y.profundidade || y.pos.y - x.pos.y);
 
   return {
     nome: FLUXOS[fluxo].nome,

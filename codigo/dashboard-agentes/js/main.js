@@ -1,10 +1,8 @@
-// Costura: liga o motor do fluxo à cena 3D e à interface.
+// Costura: carrega a constelação do Notion, liga o motor à cena e à interface.
 
 import { Cena } from './cena.js';
-import { Fluxo, MODO, AGENTES } from './fluxo.js';
-
-const cena = new Cena(document.getElementById('cena'));
-const fluxo = new Fluxo();
+import { Fluxo, MODO, ESTADO } from './fluxo.js';
+import { carregarConstelacao } from './dados.js';
 
 const el = {
   botao: document.getElementById('botao'),
@@ -13,6 +11,7 @@ const el = {
   tripulacao: document.getElementById('tripulacao'),
   registro: document.getElementById('registro'),
   dica: document.getElementById('dica'),
+  fluxoNome: document.querySelector('.fluxo-nome'),
   ficha: document.getElementById('ficha'),
   fichaConteudo: document.getElementById('ficha-conteudo'),
   fecharFicha: document.getElementById('fechar-ficha'),
@@ -27,33 +26,69 @@ const el = {
 
 const pct = (n) => Math.round(n * 100) + '%';
 
-const SELO = {
-  pronto: 'Pronto',
-  parcial: 'Etapas 01–02',
-  'em-construcao': 'Em construção'
+const ROTULO_ESTADO = {
+  [ESTADO.REPOUSO]: 'Em repouso',
+  [ESTADO.TRABALHANDO]: 'Trabalhando',
+  [ESTADO.AGUARDANDO_MALLU]: 'Aguardando Mallu',
+  [ESTADO.CONCLUIDO]: 'Entregou',
+  [ESTADO.ABORTADO]: 'Abortado'
 };
+
+function registrar(texto, tipo = 'passo') {
+  const li = document.createElement('li');
+  li.className = tipo;
+  const hora = new Date().toLocaleTimeString('pt-BR', {
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit'
+  });
+  li.innerHTML = `<span class="hora">${hora}</span>${texto}`;
+  el.registro.prepend(li);
+  while (el.registro.children.length > 60) el.registro.lastChild.remove();
+}
+
+// ------------------------------------------------------------------- arranque
+
+let cena, fluxo, dados;
+let atracado = null;
+let consoleAssentado = false;
+let fichaAberta = null;
+const fichas = new Map();
+
+try {
+  dados = await carregarConstelacao('carrossel');
+} catch (erro) {
+  // Sem os dados do Notion não há dashboard. Falhar dizendo o motivo é melhor
+  // que subir uma tela bonita mostrando agentes que não existem mais.
+  registrar(erro.message, 'aviso');
+  el.botao.disabled = true;
+  el.botao.textContent = 'Sem dados';
+  throw erro;
+}
+
+cena = new Cena(document.getElementById('cena'), dados);
+fluxo = new Fluxo(dados);
+
+el.fluxoNome.textContent = `Fluxo 01 · ${dados.nome}`;
 
 // ------------------------------------------------------- coluna da tripulação
 
-const fichas = new Map();
-
-AGENTES.forEach((a) => {
+dados.agentes.forEach((a) => {
   const card = document.createElement('article');
   card.className = 'ficha-lista painel';
   card.innerHTML = `
     <div class="cabeca">
       <span class="ponto"></span>
       <span class="nome">${a.nome}</span>
-      <span class="cargo">${a.cargo}</span>
+      <span class="cargo">${a.camada}</span>
     </div>
     <p class="etapa" data-etapa>Em repouso</p>
     <div class="barra" data-barra><i></i></div>
     <div class="rodape">
-      <span class="selo ${a.estado}">${SELO[a.estado]}</span>
+      <span class="selo ${a.status === 'Ativo' ? 'pronto' : 'em-construcao'}">${a.status}</span>
       <span data-pct>0%</span>
     </div>`;
   card.addEventListener('click', () => abrirFicha(a));
-  card.addEventListener('mouseenter', () => cena.olharPara(a.id));
   el.tripulacao.appendChild(card);
   fichas.set(a.id, card);
 });
@@ -63,6 +98,7 @@ AGENTES.forEach((a) => {
 function renderizar() {
   const simulando = fluxo.modo === MODO.SIMULACAO;
   const geral = fluxo.progressoGeral;
+
   el.valorGeral.textContent = pct(geral);
   el.barraGeral.querySelector('i').style.width = pct(geral);
   el.barraGeral.classList.toggle('carregando', fluxo.rodando);
@@ -70,89 +106,101 @@ function renderizar() {
   el.botao.textContent = fluxo.rodando ? 'Interromper' : 'Acionar fluxo';
   el.botao.classList.toggle('rodando', fluxo.rodando);
 
-  AGENTES.forEach((a) => {
+  dados.agentes.forEach((a) => {
     const card = fichas.get(a.id);
     const p = fluxo.progresso.get(a.id) || 0;
-    const ativo = fluxo.agenteAtual?.id === a.id && fluxo.rodando;
+    const est = fluxo.estado.get(a.id);
+    const ativo = est === ESTADO.TRABALHANDO;
+    const semTrilha = !(a.trilha ?? []).length;
 
-    card.classList.toggle('ativa', ativo);
-    card.classList.toggle('concluida', fluxo.concluidos.has(a.id));
+    card.classList.toggle('ativa', ativo || est === ESTADO.AGUARDANDO_MALLU);
+    card.classList.toggle('concluida', est === ESTADO.CONCLUIDO);
     card.querySelector('[data-etapa]').textContent = fluxo.etapa.get(a.id);
     card.querySelector('[data-barra]').classList.toggle('carregando', ativo);
     card.querySelector('[data-barra] i').style.width = pct(p);
-    card.querySelector('[data-pct]').textContent = pct(p);
+    // Sem trilha declarada não existe porcentagem honesta: mostra o traço.
+    card.querySelector('[data-pct]').textContent = semTrilha && ativo ? '- -' : pct(p);
 
-    // A televisão do capacete. Em simulação, PENSANDO mostra a etapa real da
-    // trilha, e as outras duas faixas dizem a verdade: não há execução por trás.
     cena.atualizarVisor(a.id, {
       nome: a.nome,
-      acordado: ativo,
+      acordado: ativo || est === ESTADO.AGUARDANDO_MALLU,
       etapa: fluxo.etapa.get(a.id),
       pensando: fluxo.etapa.get(a.id),
       fazendo: simulando ? 'sem execução real: aguardando o servidor-ponte' : '',
       achando: simulando ? 'nenhum dado colhido nesta simulação' : '',
       progresso: p,
-      pausado: fluxo.pausado && ativo,
+      semProgresso: semTrilha,
+      pausado: est === ESTADO.AGUARDANDO_MALLU,
       simulacao: simulando
     });
   });
 
-  el.botaoPausar.textContent = fluxo.pausado ? 'Retomar' : 'Pausar';
-  el.botaoPausar.classList.toggle('ativa', fluxo.pausado);
-  el.botaoPausar.disabled = !fluxo.rodando;
+  // O botão do console muda de papel conforme o agente atracado.
+  if (atracado) {
+    const est = fluxo.estado.get(atracado.id);
+    if (est === ESTADO.AGUARDANDO_MALLU) {
+      el.botaoPausar.textContent = 'Validar e seguir';
+      el.botaoPausar.disabled = false;
+      el.botaoPausar.dataset.papel = 'liberar';
+    } else {
+      el.botaoPausar.textContent = fluxo.pausarNoHandoff
+        ? 'Retomar no handoff'
+        : 'Pausar no handoff';
+      el.botaoPausar.disabled = !fluxo.rodando;
+      el.botaoPausar.dataset.papel = 'handoff';
+    }
+    el.botaoPausar.classList.toggle('ativa', fluxo.pausarNoHandoff);
+  }
 
   if (el.ficha.classList.contains('aberta') && fichaAberta) abrirFicha(fichaAberta, true);
 }
 
-// -------------------------------------------------------- registro de bordo
-
-function registrar(texto, tipo = 'passo') {
-  const li = document.createElement('li');
-  li.className = tipo;
-  const hora = new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
-  li.innerHTML = `<span class="hora">${hora}</span>${texto}`;
-  el.registro.prepend(li);
-  while (el.registro.children.length > 60) el.registro.lastChild.remove();
-}
-
 // --------------------------------------------------------------------- ficha
-
-let fichaAberta = null;
 
 function abrirFicha(agente, apenasAtualiza = false) {
   fichaAberta = agente;
   const p = fluxo.progresso.get(agente.id) || 0;
+  const est = fluxo.estado.get(agente.id);
+  const trilha = agente.trilha ?? [];
+
   el.fichaConteudo.innerHTML = `
-    <span class="rotulo">Tripulante · ${SELO[agente.estado]}</span>
+    <span class="rotulo">${agente.camada} · ${agente.status}</span>
     <h2>${agente.nome}</h2>
-    <p class="subcargo">${agente.cargo}</p>
+    <p class="subcargo">${ROTULO_ESTADO[est]}</p>
 
     <section class="numeros">
       <div><span class="rotulo">Tokens gastos</span><b>${agente.tokens.toLocaleString('pt-BR')}</b></div>
-      <div><span class="rotulo">Trilha</span><b>${Math.round(p * 100)}%</b></div>
+      <div><span class="rotulo">Trilha</span><b>${trilha.length ? Math.round(p * 100) + '%' : '- -'}</b></div>
     </section>
 
     <section>
-      <span class="rotulo">Especialista em</span>
-      <p>${agente.especialista}</p>
+      <span class="rotulo">O que o Notion diz</span>
+      <p>${agente.notas || 'Sem notas no Banco de Agentes.'}</p>
     </section>
 
     <section>
-      <span class="rotulo">Missão</span>
-      <p>${agente.missao}</p>
-    </section>
-
-    <section>
-      <span class="rotulo">Características psicológicas</span>
-      <ul>${agente.psicologia.map((x) => `<li>${x}</li>`).join('')}</ul>
+      <span class="rotulo">Ferramentas</span>
+      <p>${(agente.tools ?? []).join(', ') || 'não declaradas'}</p>
     </section>
 
     <section>
       <span class="rotulo">Trilha de execução</span>
-      <ul>${agente.trilha.map((x) => `<li>${x}</li>`).join('')}</ul>
+      ${
+        trilha.length
+          ? `<ul>${trilha
+              .map((e) => `<li>${e.texto}${e.portao ? ' <b>(para e espera você)</b>' : ''}</li>`)
+              .join('')}</ul>`
+          : '<p>Este agente não declara etapas em sequência, então o progresso dele não é mensurável. O visor mostra o que ele está fazendo, sem porcentagem.</p>'
+      }
     </section>
 
-    ${agente.alerta ? `<section><div class="aviso-box">${agente.alerta}</div></section>` : ''}`;
+    ${agente.alerta ? `<section><div class="aviso-box">${agente.alerta}</div></section>` : ''}
+
+    <section>
+      <span class="rotulo">Origem</span>
+      <p><a href="${agente.url_notion}" target="_blank" rel="noopener">Ficha no Notion</a><br>
+      <code>${agente.arquivo}</code></p>
+    </section>`;
 
   if (!apenasAtualiza) {
     el.ficha.classList.add('aberta');
@@ -169,23 +217,7 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') el.fecharFicha.click();
 });
 
-// --------------------------------------------------------------- dica hover
-
-cena.aoPassarMouse = (agente, x, y) => {
-  if (!agente) {
-    el.dica.classList.remove('visivel');
-    return;
-  }
-  el.dica.textContent = agente.nome;
-  el.dica.style.left = x + 'px';
-  el.dica.style.top = y + 'px';
-  el.dica.classList.add('visivel');
-};
-
 // ------------------------------------------------------------------ console
-
-let atracado = null;
-let consoleAssentado = false;
 
 function atracar(agente) {
   atracado = agente;
@@ -193,6 +225,7 @@ function atracar(agente) {
   cena.atracar(agente.id);
   el.consoleNome.textContent = agente.nome;
   el.consoleEl.classList.add('aberto');
+  el.consoleNota.textContent = '';
   renderizar();
 }
 
@@ -202,22 +235,20 @@ function soltar() {
   el.consoleEl.classList.remove('aberto');
 }
 
-// O console é HTML e a âncora é 3D, então ele precisa perseguir o capacete a
-// cada quadro. Some quando o astronauta sai de quadro ou vai para trás da câmera.
+// O console é HTML e a âncora é 3D, então ele persegue o capacete até a câmera
+// assentar. Depois disso ele congela: alvo que foge do cursor não se clica.
 function seguirCapacete() {
   requestAnimationFrame(seguirCapacete);
   if (!atracado) return;
-  // Depois que a câmera assenta, o console para de perseguir o capacete. Alvo
-  // que foge do cursor é alvo que não se clica.
   if (consoleAssentado && !cena.emMovimento()) return;
+
   const p = cena.posicaoTela(atracado.id);
   if (!p) {
     el.consoleEl.style.opacity = '0';
     return;
   }
   el.consoleEl.style.opacity = '';
-  // Preso dentro da janela: atracado no capacete, a âncora sai do quadro e o
-  // console sumia junto justo quando ele é mais necessário.
+
   const larg = el.consoleEl.offsetWidth;
   const alt = el.consoleEl.offsetHeight;
   const x = Math.min(Math.max(p.x, larg / 2 + 12), window.innerWidth - larg / 2 - 12);
@@ -253,26 +284,46 @@ el.consoleEl.querySelector('[data-acao="interromper"]').addEventListener('click'
 });
 
 el.botaoPausar.addEventListener('click', () => {
-  if (fluxo.pausado) fluxo.retomar();
-  else fluxo.pausar();
+  if (el.botaoPausar.dataset.papel === 'liberar') {
+    fluxo.liberar(atracado.id);
+    return;
+  }
+  fluxo.pausarNoHandoff = !fluxo.pausarNoHandoff;
+  registrar(
+    fluxo.pausarNoHandoff
+      ? 'O fluxo vai parar antes de acordar o próximo agente.'
+      : 'O fluxo volta a seguir sozinho nos handoffs.',
+    'aviso'
+  );
+  // Se já estava parado esperando, destrava agora.
+  if (!fluxo.pausarNoHandoff) fluxo._acordarProntos();
+  renderizar();
 });
 
-cena.aoClicar = (agente) => atracar(agente);
+// ------------------------------------------------------------ ganchos e hover
 
-// ------------------------------------------------------------ ganchos do fluxo
+cena.aoPassarMouse = (agente, x, y) => {
+  if (!agente) return el.dica.classList.remove('visivel');
+  el.dica.textContent = agente.nome;
+  el.dica.style.left = x + 'px';
+  el.dica.style.top = y + 'px';
+  el.dica.classList.add('visivel');
+};
+
+cena.aoClicar = (agente) => atracar(agente);
 
 fluxo.aoMudar = renderizar;
 fluxo.aoRegistrar = registrar;
 fluxo.aoDormir = (id) => cena.definirDesperto(id, false);
 fluxo.aoConversar = (a, b, ligado) => cena.definirTuboAtivo(a, b, ligado);
 fluxo.aoTerminar = () => cena.apagarTudo();
-
 fluxo.aoAcordar = (id) => {
   cena.definirDesperto(id, true);
-  // A câmera só corre atrás de quem acordou se a Mallu não estiver atracada em
-  // alguém. Atracar é um ato de atenção: o fluxo não arranca ela de onde ela
-  // escolheu olhar.
-  if (!atracado) cena.olharPara(id, true);
+  // Enquadra TODO MUNDO que está trabalhando, não só quem acabou de acordar:
+  // com Radar e @paaps.brasil em paralelo, seguir um só deixava o outro fora
+  // de quadro. Se a Mallu está atracada em alguém, a câmera não se mexe:
+  // atracar é um ato de atenção e o fluxo não arranca ela de lá.
+  if (!atracado) cena.enquadrar(fluxo.trabalhando.map((a) => a.id));
 };
 
 el.botao.addEventListener('click', () => {
@@ -284,5 +335,8 @@ el.botao.addEventListener('click', () => {
   }
 });
 
-registrar('Constelação PAAPS pronta. Tripulação em repouso.', 'marco');
+registrar(
+  `Constelação carregada do Notion: ${dados.agentes.length} agentes, ${dados.tubos.length} tubos.`,
+  'marco'
+);
 renderizar();
