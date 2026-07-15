@@ -4,6 +4,7 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { AGENTES, TUBOS } from './agentes.js';
+import { Visor } from './visor.js';
 
 const COR = {
   fundo: 0x0b0805,
@@ -79,7 +80,10 @@ export class Cena {
     this.controls = new OrbitControls(this.camera, this.canvas);
     this.controls.enableDamping = true;
     this.controls.dampingFactor = 0.06;
-    this.controls.minDistance = 4;
+    // 0.7 é o que permite encostar no capacete para ler o visor. Com o padrão
+    // alto (4), a atracagem era silenciosamente cancelada e o texto ficava
+    // com uns 4px na tela: bonito e ilegível.
+    this.controls.minDistance = 0.7;
     this.controls.maxDistance = 60;
     this.controls.target.set(4, 0.4, 0);
     // Recuo inicial no eixo X, até a Mallu mexer na câmera.
@@ -202,27 +206,41 @@ export class Cena {
     );
     capacete.add(bolha);
 
-    // O visor é a "cara": esconde que não há rosto e reflete a luz do trabalho.
+    // O visor é a televisão do agente: a textura vem do canvas do Visor.
+    const tv = new Visor();
+    tv.atualizar({ nome: agente.nome });
     const visor = new THREE.Mesh(
-      new THREE.SphereGeometry(0.44, 32, 32, Math.PI * 0.28, Math.PI * 1.44, Math.PI * 0.24, Math.PI * 0.5),
-      new THREE.MeshPhysicalMaterial({
-        color: COR.visor,
-        roughness: 0.08,
-        metalness: 0.9,
+      Visor.geometria(),
+      new THREE.MeshBasicMaterial({ map: tv.textura, toneMapped: false })
+    );
+    // z = 0.53 põe a tela do lado de FORA da bolha de vidro (raio 0.5) e do
+    // crânio (raio 0.46). Dentro da bolha, a refração do vidro duplicava o
+    // texto num fantasma e a tela ficava impossível de ler.
+    visor.position.z = 0.53;
+    capacete.add(visor);
+
+    // Bezel: a tela precisa de borda, senão parece um decalque no capacete.
+    const moldura = new THREE.Mesh(
+      new THREE.RingGeometry(0.3, 0.35, 40),
+      new THREE.MeshStandardMaterial({
+        color: COR.marrom,
+        roughness: 0.4,
+        metalness: 0.5,
         emissive: COR.amarelo,
         emissiveIntensity: 0
       })
     );
-    visor.position.z = 0.02;
-    capacete.add(visor);
+    moldura.position.z = 0.508;
+    capacete.add(moldura);
     // A lâmpada de dentro do capacete: apagada = dormindo, acesa = trabalhando.
     const lampada = new THREE.PointLight(COR.amarelo, 0, 6);
     lampada.position.set(0, 0, 0.2);
     capacete.add(lampada);
 
-    // Anel de luz da testa
+    // Coroa de luz no alto do capacete. Fica no topo, e não na testa, porque na
+    // testa ela atravessava o visor bem no meio da leitura.
     const anel = new THREE.Mesh(
-      new THREE.TorusGeometry(0.4, 0.05, 12, 32),
+      new THREE.TorusGeometry(0.2, 0.035, 12, 32),
       new THREE.MeshStandardMaterial({
         color: COR.marrom,
         emissive: COR.amarelo,
@@ -231,7 +249,7 @@ export class Cena {
       })
     );
     anel.rotation.x = Math.PI / 2;
-    anel.position.y = 0.3;
+    anel.position.y = 0.42;
     capacete.add(anel);
 
     // Mochila de vida (PLSS) e seus tanques
@@ -300,6 +318,8 @@ export class Cena {
       agente,
       capacete,
       visor,
+      tv,
+      moldura,
       lampada,
       anel,
       led,
@@ -433,6 +453,54 @@ export class Cena {
     if (a) a.userData.alvoAcordado = desperto ? 1 : 0;
   }
 
+  /** Manda conteúdo para a televisão (o visor) de um agente. */
+  atualizarVisor(id, dados) {
+    const a = this.astronautas.get(id);
+    if (a) a.userData.tv.atualizar(dados);
+  }
+
+  /**
+   * Atraca a câmera de frente para o capacete, na distância de leitura do visor.
+   * Sem isto o visor é bonito e ilegível: é o preço de a tela viver na cena.
+   */
+  atracar(id) {
+    const a = this.astronautas.get(id);
+    if (!a) return;
+    this.atracado = id;
+    const alvo = new THREE.Vector3(a.position.x, (a.userData.baseY ?? a.position.y) + 1.02, a.position.z);
+    this.alvoCamera = alvo;
+    // Frente do capacete: o astronauta tem rotação própria, então a posição de
+    // leitura sai do eixo dele, não do eixo do mundo.
+    // 1.6 é medido do CENTRO do capacete, e a tela fica 0.53 à frente dele:
+    // sobra ~1.05 até o visor, a distância em que a letra fica legível sem que
+    // a câmera entre dentro da cabeça.
+    const frente = new THREE.Vector3(0, 0, 1).applyQuaternion(a.quaternion).multiplyScalar(1.6);
+    this._alvoPos = alvo.clone().add(frente);
+    this._recuoX = frente.x;
+    this._alvoZ = null;
+  }
+
+  desatracar() {
+    this.atracado = null;
+    this._alvoPos = null;
+  }
+
+  /** Onde o capacete de um agente está na tela, para ancorar HTML nele. */
+  posicaoTela(id) {
+    const a = this.astronautas.get(id);
+    if (!a) return null;
+    const v = new THREE.Vector3();
+    a.userData.capacete.getWorldPosition(v);
+    v.y -= 0.62; // ancora abaixo do queixo, para não tapar o visor
+    v.project(this.camera);
+    if (v.z > 1) return null; // atrás da câmera
+    const r = this.canvas.getBoundingClientRect();
+    return {
+      x: r.left + ((v.x + 1) / 2) * r.width,
+      y: r.top + ((-v.y + 1) / 2) * r.height
+    };
+  }
+
   /** Liga ou desliga o pulso de luz de um tubo. */
   definirTuboAtivo(origemId, destinoId, ativo) {
     const t = this.tubos.find((x) => x.origemId === origemId && x.destinoId === destinoId);
@@ -497,7 +565,8 @@ export class Cena {
       // A luz do trabalho, com uma pulsação sutil para não parecer estática.
       const pulsa = 0.75 + Math.sin(t * 3 + d.fase) * 0.25;
       d.lampada.intensity = d.acordado * 9 * pulsa;
-      d.visor.material.emissiveIntensity = d.acordado * 1.5 * pulsa;
+      // Bezel discreto: ele emoldura a tela, não compete com ela.
+      d.moldura.material.emissiveIntensity = d.acordado * 0.3 * pulsa;
       d.anel.material.emissiveIntensity = d.acordado * 2.6 * pulsa;
       d.led.material.emissiveIntensity = 0.2 + d.acordado * 2.4 * pulsa;
       // O halo é o que faz "acordado" ser legível de longe, mesmo com o
@@ -519,7 +588,20 @@ export class Cena {
       brilho.intensity = 7 + Math.sin(t * 9) * 2.5;
     });
 
-    if (this.alvoCamera) {
+    // Redesenho das televisões: 8 quadros por segundo bastam para o texto e o
+    // ponto piscando, e poupam o custo de repintar 4 canvas a 60fps.
+    if (t - (this._ultimoDesenho ?? 0) > 0.12) {
+      this._ultimoDesenho = t;
+      this.astronautas.forEach((a) => a.userData.tv.desenhar());
+    }
+
+    if (this._alvoPos) {
+      // Atracado: a câmera vai para a frente do capacete, em posição de leitura.
+      this.controls.target.lerp(this.alvoCamera, 0.07);
+      this.camera.position.lerp(this._alvoPos, 0.07);
+      // Chegou: solta a câmera, senão a atracagem briga com o mouse da Mallu.
+      if (this.camera.position.distanceTo(this._alvoPos) < 0.06) this._alvoPos = null;
+    } else if (this.alvoCamera) {
       // A câmera desliza junto com o alvo, mantendo a distância que a Mallu
       // escolheu no scroll. Só o eixo X acompanha: girar continua sendo dela.
       this.controls.target.lerp(this.alvoCamera, 0.045);

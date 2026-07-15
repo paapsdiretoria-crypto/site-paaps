@@ -24,6 +24,12 @@ export class Fluxo {
     this.progresso = new Map(); // id -> 0..1
     this.etapa = new Map(); // id -> texto da etapa corrente
     this.concluidos = new Set();
+    this.pausado = false;
+    // Mensagens da Mallu para cada agente. Em simulação elas NÃO são entregues:
+    // ficam aqui, marcadas como não entregues, para a ponte de execução real
+    // despejá-las no contexto do agente quando existir. Enfileirar de verdade e
+    // fingir entrega são coisas diferentes; esta é a primeira.
+    this.mensagens = new Map();
 
     // Ganchos que a interface preenche.
     this.aoMudar = () => {};
@@ -36,8 +42,50 @@ export class Fluxo {
     this.reiniciar();
   }
 
+  /** Congela o agente sem perder nada: a etapa corrente continua de onde parou. */
+  pausar() {
+    if (!this.rodando || this.pausado) return;
+    this.pausado = true;
+    this._pausadoEm = performance.now();
+    this.aoRegistrar(`${this.agenteAtual?.nome} pausado.`, 'aviso');
+    this.aoMudar();
+  }
+
+  retomar() {
+    if (!this.pausado) return;
+    // Empurra o relógio da etapa para frente pelo tempo parado, senão a etapa
+    // salta o progresso todo de uma vez ao voltar.
+    this._inicioEtapa += performance.now() - this._pausadoEm;
+    this.pausado = false;
+    this.aoRegistrar(`${this.agenteAtual?.nome} retomado.`, 'acorda');
+    this.aoMudar();
+  }
+
+  /**
+   * Guarda uma mensagem da Mallu para um agente.
+   * `modo`: 'interromper' (para a etapa agora) ou 'enfileirar' (espera a etapa).
+   */
+  enviarMensagem(id, texto, modo) {
+    if (!this.mensagens.has(id)) this.mensagens.set(id, []);
+    const msg = { texto, modo, hora: new Date().toISOString(), entregue: false };
+    this.mensagens.get(id).push(msg);
+
+    const agente = AGENTES.find((a) => a.id === id);
+    this.aoRegistrar(`Mallu → ${agente?.nome}: "${texto}"`, 'mensagem');
+
+    if (this.modo === MODO.SIMULACAO) {
+      this.aoRegistrar(
+        'Mensagem guardada, não entregue: em simulação não há agente rodando para receber.',
+        'aviso'
+      );
+    }
+    this.aoMudar();
+    return msg;
+  }
+
   reiniciar() {
     this.rodando = false;
+    this.pausado = false;
     this.indiceAtual = -1;
     this.concluidos.clear();
     AGENTES.forEach((a) => {
@@ -138,13 +186,17 @@ export class Fluxo {
     // Cada etapa tem duração própria: coleta e pesquisa demoram mais que um
     // fechamento. Números só valem para a simulação.
     const duracao = 1800 + Math.random() * 2200;
-    const inicio = performance.now();
+    this._inicioEtapa = performance.now();
     const base = this.passoAtual / totalPassos;
     const fatia = 1 / totalPassos;
 
     const tick = () => {
       if (!this.rodando) return;
-      const decorrido = performance.now() - inicio;
+      if (this.pausado) {
+        this._raf = requestAnimationFrame(tick);
+        return;
+      }
+      const decorrido = performance.now() - this._inicioEtapa;
       const frac = Math.min(decorrido / duracao, 1);
       this.progresso.set(a.id, base + fatia * frac);
       a.tokens += Math.round(40 + Math.random() * 90);
