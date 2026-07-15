@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Constelação PAAPS — Controle dos Agentes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/dashboard-agentes.css">
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <canvas id="cena"></canvas>
+  <div class="vinheta"></div>
+
+  <header class="topo">
+    <div class="marca">
+      <h1>Constelação PAAPS</h1>
+      <span class="fluxo-nome">Fluxo 01 · Produção de Conteúdo</span>
+    </div>
+    <div class="marcadores">
+      <span style="background:var(--cor-amarelo)"></span>
+      <span style="background:var(--cor-terracota)"></span>
+      <span style="background:var(--cor-oliva)"></span>
+    </div>
+  </header>
+
+  <aside class="tripulacao" id="tripulacao"></aside>
+
+  <aside class="registro painel">
+    <span class="rotulo">Registro de bordo</span>
+    <ul id="registro"></ul>
+  </aside>
+
+  <div class="controle painel">
+    <button class="botao-iniciar" id="botao">Acionar fluxo</button>
+    <div class="bateria-geral">
+      <div class="linha">
+        <span class="rotulo">Progresso da missão</span>
+        <span class="valor" id="valor-geral">0%</span>
+      </div>
+      <div class="barra" id="barra-geral"><i></i></div>
+    </div>
+  </div>
+
+  <div class="dica" id="dica"></div>
+
+  <div class="ficha" id="ficha">
+    <button class="fechar" id="fechar-ficha" aria-label="Fechar ficha">✕</button>
+    <div id="ficha-conteudo"></div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,495 @@
+:root {
+  --cor-fundo:     #f5f1e1;
+  --cor-marrom:    #442309;
+  --cor-terracota: #cb4710;
+  --cor-oliva:     #aea349;
+  --cor-amarelo:   #f7c31c;
+  --cor-bege-rosa: #bbada2;
+  --cor-branco:    #ffffff;
+  --raio: 4px;
+  --fonte-titulo: 'League Spartan', Arial, sans-serif;
+
+  /* O espaço é escuro; o bege é a luz que a tripulação carrega. */
+  --vidro: rgba(245, 241, 225, 0.06);
+  --borda: rgba(245, 241, 225, 0.16);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body { height: 100%; }
+
+body {
+  background: #0b0805;
+  color: var(--cor-fundo);
+  font-family: var(--fonte-titulo);
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+#cena {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: grab;
+}
+#cena:active { cursor: grabbing; }
+
+/* Vinheta: fecha as bordas e empurra o olho para o centro da cena. */
+.vinheta {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at 50% 45%, transparent 40%, rgba(11, 8, 5, 0.82) 100%);
+}
+
+.painel {
+  background: var(--vidro);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.rotulo {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--cor-bege-rosa);
+}
+
+/* ------------------------------------------------------------ cabeçalho */
+
+.topo {
+  position: fixed;
+  top: 22px;
+  left: 24px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.marca { display: flex; align-items: baseline; gap: 12px; }
+
+.marca h1 {
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.marca .fluxo-nome {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--cor-oliva);
+}
+
+.marcadores { display: flex; gap: 5px; align-self: center; }
+.marcadores span {
+  width: 9px; height: 9px; border-radius: 2px; display: block;
+}
+
+/* ---------------------------------------------------- controle principal */
+
+.controle {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 14px 18px;
+  z-index: 6;
+}
+
+.botao-iniciar {
+  font-family: var(--fonte-titulo);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--cor-fundo);
+  background: var(--cor-terracota);
+  border: none;
+  border-radius: var(--raio);
+  padding: 15px 30px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.15s ease, box-shadow 0.25s ease, background 0.25s ease;
+  box-shadow: 0 0 0 0 rgba(203, 71, 16, 0.5), 0 8px 30px rgba(203, 71, 16, 0.3);
+}
+
+.botao-iniciar:hover { transform: translateY(-1px); box-shadow: 0 0 30px 4px rgba(203, 71, 16, 0.45); }
+.botao-iniciar:active { transform: translateY(1px); }
+
+/* Enquanto o fluxo roda, o botão vira botão de parada. */
+.botao-iniciar.rodando { background: var(--cor-marrom); color: var(--cor-bege-rosa); }
+
+.botao-iniciar::after {
+  /* Varredura de luz: o botão "respira" enquanto está ocioso, chamando o clique. */
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(100deg, transparent 35%, rgba(247, 195, 28, 0.55) 50%, transparent 65%);
+  transform: translateX(-120%);
+  animation: varre 3.4s ease-in-out infinite;
+}
+.botao-iniciar.rodando::after { animation: none; opacity: 0; }
+
+@keyframes varre {
+  0%, 62% { transform: translateX(-120%); }
+  100%    { transform: translateX(120%); }
+}
+
+.bateria-geral { min-width: 260px; }
+
+.bateria-geral .linha {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 7px;
+}
+
+.bateria-geral .valor {
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--cor-amarelo);
+  font-variant-numeric: tabular-nums;
+}
+
+/* --------------------------------------------------------- barra bateria */
+
+.barra {
+  height: 8px;
+  background: rgba(245, 241, 225, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+
+.barra i {
+  display: block;
+  height: 100%;
+  width: 0%;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--cor-oliva), var(--cor-amarelo));
+  transition: width 0.2s linear;
+  position: relative;
+}
+
+/* A listra que corre dentro da barra: leitura imediata de "está carregando". */
+.barra.carregando i::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+    -45deg,
+    rgba(11, 8, 5, 0.22) 25%, transparent 25%,
+    transparent 50%, rgba(11, 8, 5, 0.22) 50%,
+    rgba(11, 8, 5, 0.22) 75%, transparent 75%
+  );
+  background-size: 14px 14px;
+  animation: corre 0.7s linear infinite;
+}
+
+@keyframes corre {
+  from { background-position: 0 0; }
+  to   { background-position: 14px 0; }
+}
+
+/* ------------------------------------------------------- coluna da tripulação */
+
+.tripulacao {
+  position: fixed;
+  top: 78px;
+  left: 24px;
+  width: 268px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 5;
+}
+
+.ficha-lista {
+  padding: 12px 13px;
+  cursor: pointer;
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+.ficha-lista:hover { border-color: var(--cor-oliva); }
+
+.ficha-lista.ativa {
+  border-color: var(--cor-amarelo);
+  background: rgba(247, 195, 28, 0.09);
+}
+
+.ficha-lista.concluida { opacity: 0.55; }
+
+.ficha-lista .cabeca {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.ficha-lista .ponto {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--cor-bege-rosa);
+  flex: none;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+.ficha-lista.ativa .ponto {
+  background: var(--cor-amarelo);
+  box-shadow: 0 0 9px 2px rgba(247, 195, 28, 0.85);
+  animation: bate 1.4s ease-in-out infinite;
+}
+.ficha-lista.concluida .ponto { background: var(--cor-oliva); box-shadow: none; animation: none; }
+
+@keyframes bate {
+  50% { transform: scale(1.45); }
+}
+
+.ficha-lista .nome {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.ficha-lista .cargo {
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cor-bege-rosa);
+  margin-left: auto;
+}
+
+.ficha-lista .etapa {
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  color: var(--cor-fundo);
+  opacity: 0.72;
+  margin: 6px 0 7px;
+  min-height: 13px;
+  line-height: 1.35;
+}
+
+.ficha-lista .rodape {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  color: var(--cor-bege-rosa);
+  font-variant-numeric: tabular-nums;
+}
+
+.selo {
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 2px 5px;
+  border-radius: 2px;
+  border: 1px solid currentColor;
+}
+.selo.pronto { color: var(--cor-oliva); }
+.selo.em-construcao { color: var(--cor-terracota); }
+
+/* ---------------------------------------------------------------- registro */
+
+.registro {
+  position: fixed;
+  top: 78px;
+  right: 24px;
+  width: 300px;
+  max-height: 44vh;
+  padding: 12px 13px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 5;
+}
+
+.registro ul {
+  list-style: none;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-right: 4px;
+}
+
+.registro li {
+  font-size: 10px;
+  line-height: 1.45;
+  letter-spacing: 0.03em;
+  color: var(--cor-fundo);
+  opacity: 0.8;
+  padding-left: 9px;
+  border-left: 2px solid var(--cor-bege-rosa);
+  animation: entra 0.3s ease;
+}
+
+.registro li.marco   { border-color: var(--cor-amarelo); opacity: 1; font-weight: 600; }
+.registro li.handoff { border-color: var(--cor-oliva); }
+.registro li.acorda  { border-color: var(--cor-branco); }
+.registro li.aviso   { border-color: var(--cor-terracota); color: var(--cor-terracota); opacity: 1; }
+
+@keyframes entra {
+  from { opacity: 0; transform: translateX(6px); }
+}
+
+.registro .hora { color: var(--cor-bege-rosa); margin-right: 5px; font-variant-numeric: tabular-nums; }
+
+/* ------------------------------------------------------------------ dica */
+
+.dica {
+  position: fixed;
+  pointer-events: none;
+  padding: 6px 10px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  background: rgba(11, 8, 5, 0.9);
+  border: 1px solid var(--cor-amarelo);
+  border-radius: var(--raio);
+  color: var(--cor-amarelo);
+  transform: translate(-50%, -180%);
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  z-index: 8;
+}
+.dica.visivel { opacity: 1; }
+
+/* ------------------------------------------------------------------ ficha */
+
+.ficha {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 380px;
+  max-width: 92vw;
+  padding: 26px 26px 30px;
+  background: rgba(11, 8, 5, 0.93);
+  border-left: 1px solid var(--borda);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
+  z-index: 9;
+}
+.ficha.aberta { transform: translateX(0); }
+
+.ficha .fechar {
+  position: absolute;
+  top: 20px;
+  right: 22px;
+  background: none;
+  border: none;
+  color: var(--cor-bege-rosa);
+  font-family: var(--fonte-titulo);
+  font-size: 18px;
+  cursor: pointer;
+  line-height: 1;
+}
+.ficha .fechar:hover { color: var(--cor-terracota); }
+
+.ficha h2 {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 16px 0 4px;
+  color: var(--cor-amarelo);
+}
+
+.ficha .subcargo {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--cor-oliva);
+  margin-bottom: 22px;
+}
+
+.ficha section { margin-bottom: 20px; }
+.ficha section .rotulo { display: block; margin-bottom: 6px; }
+
+.ficha section p {
+  font-size: 12px;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+  color: var(--cor-fundo);
+  opacity: 0.85;
+}
+
+.ficha ul { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+
+.ficha ul li {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--cor-fundo);
+  opacity: 0.85;
+  padding-left: 13px;
+  position: relative;
+}
+.ficha ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 5px;
+  height: 5px;
+  border-radius: 1px;
+  background: var(--cor-terracota);
+}
+
+.numeros { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+.numeros div {
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  padding: 11px 12px;
+}
+
+.numeros b {
+  display: block;
+  font-size: 21px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: var(--cor-amarelo);
+  font-variant-numeric: tabular-nums;
+  margin-top: 3px;
+}
+
+.ficha .aviso-box {
+  border: 1px solid var(--cor-terracota);
+  border-radius: var(--raio);
+  padding: 11px 12px;
+  font-size: 11px;
+  line-height: 1.55;
+  color: var(--cor-terracota);
+}
+
+/* --------------------------------------------------------------- ajustes */
+
+@media (max-width: 1080px) {
+  .tripulacao, .registro { display: none; }
+}
