@@ -78,6 +78,7 @@ export class Visor {
 
     c.fillStyle = e.acordado ? COR.fundoLigado : COR.fundoRepouso;
     c.fillRect(0, 0, L, A);
+    this._desenharBezel();
 
     if (!e.acordado) return this._desenharRepouso();
 
@@ -90,6 +91,15 @@ export class Visor {
 
     this._desenharBarra();
     this._desenharVarredura();
+  }
+
+  /** Borda da tela, desenhada no canvas: no 3D ela cortava os cantos do visor. */
+  _desenharBezel() {
+    const c = this.ctx;
+    const e = this.estado;
+    c.strokeStyle = e.acordado ? 'rgba(174,163,73,0.55)' : 'rgba(187,173,162,0.2)';
+    c.lineWidth = 6;
+    c.strokeRect(3, 3, L - 6, A - 6);
   }
 
   _desenharRepouso() {
