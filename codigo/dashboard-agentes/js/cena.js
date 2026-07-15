@@ -219,19 +219,9 @@ export class Cena {
     visor.position.z = 0.53;
     capacete.add(visor);
 
-    // Bezel: a tela precisa de borda, senão parece um decalque no capacete.
-    const moldura = new THREE.Mesh(
-      new THREE.RingGeometry(0.3, 0.35, 40),
-      new THREE.MeshStandardMaterial({
-        color: COR.marrom,
-        roughness: 0.4,
-        metalness: 0.5,
-        emissive: COR.amarelo,
-        emissiveIntensity: 0
-      })
-    );
-    moldura.position.z = 0.508;
-    capacete.add(moldura);
+    // O bezel é desenhado dentro do canvas, em visor.js. Como anel 3D ele
+    // passava na frente dos cantos do visor (que são abaulados para trás) e
+    // cortava o texto do cabeçalho.
     // A lâmpada de dentro do capacete: apagada = dormindo, acesa = trabalhando.
     const lampada = new THREE.PointLight(COR.amarelo, 0, 6);
     lampada.position.set(0, 0, 0.2);
@@ -319,7 +309,6 @@ export class Cena {
       capacete,
       visor,
       tv,
-      moldura,
       lampada,
       anel,
       led,
@@ -485,6 +474,11 @@ export class Cena {
     this._alvoPos = null;
   }
 
+  /** A câmera ainda está indo para algum lugar? Usado para saber quando assentar o HTML. */
+  emMovimento() {
+    return this._alvoPos != null || this._alvoZ != null;
+  }
+
   /** Onde o capacete de um agente está na tela, para ancorar HTML nele. */
   posicaoTela(id) {
     const a = this.astronautas.get(id);
@@ -536,12 +530,19 @@ export class Cena {
       d.acordado += (acordar - d.acordado) * 0.05;
       d.tremor *= 0.88;
 
+      // Atracado, o agente se estabiliza e para de flutuar. Não é firula: a
+      // flutuação sacode o visor e o console ancorado nele, e ler ou clicar
+      // num alvo que balança 150px é impossível.
+      const parado = this.atracado === d.agente.id ? 1 : 0;
+      d.estabilizado = (d.estabilizado ?? 0) + (parado - (d.estabilizado ?? 0)) * 0.06;
+      const firmeza = 1 - d.estabilizado * 0.94;
+
       // Flutuação: lenta e pesada quando dorme, mais viva quando trabalha.
       const ritmo = 0.5 + d.acordado * 0.9;
-      const amp = 0.16 + d.acordado * 0.1;
+      const amp = (0.16 + d.acordado * 0.1) * firmeza;
       a.position.y = (d.baseY ??= a.position.y);
       a.position.y = d.baseY + Math.sin(t * ritmo + d.fase) * amp;
-      a.rotation.z = Math.sin(t * ritmo * 0.6 + d.fase) * 0.08;
+      a.rotation.z = Math.sin(t * ritmo * 0.6 + d.fase) * 0.08 * firmeza;
 
       // Ao passar o mouse, o astronauta é sacudido de leve.
       if (d.tremor > 0.001) {
@@ -565,8 +566,6 @@ export class Cena {
       // A luz do trabalho, com uma pulsação sutil para não parecer estática.
       const pulsa = 0.75 + Math.sin(t * 3 + d.fase) * 0.25;
       d.lampada.intensity = d.acordado * 9 * pulsa;
-      // Bezel discreto: ele emoldura a tela, não compete com ela.
-      d.moldura.material.emissiveIntensity = d.acordado * 0.3 * pulsa;
       d.anel.material.emissiveIntensity = d.acordado * 2.6 * pulsa;
       d.led.material.emissiveIntensity = 0.2 + d.acordado * 2.4 * pulsa;
       // O halo é o que faz "acordado" ser legível de longe, mesmo com o
@@ -618,7 +617,10 @@ export class Cena {
     this.controls.update();
     this.renderer.render(this.scene, this.camera);
 
-    if (this.hover) this.hover.userData.tremor = 0.09;
+    // Sacode ao passar o mouse, menos no agente atracado: lá a Mallu está lendo.
+    if (this.hover && this.atracado !== this.hover.userData.agente.id) {
+      this.hover.userData.tremor = 0.09;
+    }
   }
 
   _redimensionar() {

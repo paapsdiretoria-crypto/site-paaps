@@ -185,9 +185,11 @@ cena.aoPassarMouse = (agente, x, y) => {
 // ------------------------------------------------------------------ console
 
 let atracado = null;
+let consoleAssentado = false;
 
 function atracar(agente) {
   atracado = agente;
+  consoleAssentado = false;
   cena.atracar(agente.id);
   el.consoleNome.textContent = agente.nome;
   el.consoleEl.classList.add('aberto');
@@ -205,6 +207,9 @@ function soltar() {
 function seguirCapacete() {
   requestAnimationFrame(seguirCapacete);
   if (!atracado) return;
+  // Depois que a câmera assenta, o console para de perseguir o capacete. Alvo
+  // que foge do cursor é alvo que não se clica.
+  if (consoleAssentado && !cena.emMovimento()) return;
   const p = cena.posicaoTela(atracado.id);
   if (!p) {
     el.consoleEl.style.opacity = '0';
@@ -219,6 +224,7 @@ function seguirCapacete() {
   const y = Math.min(Math.max(p.y, 70), window.innerHeight - alt - 16);
   el.consoleEl.style.left = x + 'px';
   el.consoleEl.style.top = y + 'px';
+  if (!cena.emMovimento()) consoleAssentado = true;
 }
 seguirCapacete();
 
@@ -263,7 +269,10 @@ fluxo.aoTerminar = () => cena.apagarTudo();
 
 fluxo.aoAcordar = (id) => {
   cena.definirDesperto(id, true);
-  cena.olharPara(id, true);
+  // A câmera só corre atrás de quem acordou se a Mallu não estiver atracada em
+  // alguém. Atracar é um ato de atenção: o fluxo não arranca ela de onde ela
+  // escolheu olhar.
+  if (!atracado) cena.olharPara(id, true);
 };
 
 el.botao.addEventListener('click', () => {
