@@ -307,6 +307,7 @@ body {
   border: 1px solid currentColor;
 }
 .selo.pronto { color: var(--cor-oliva); }
+.selo.parcial { color: var(--cor-amarelo); }
 .selo.em-construcao { color: var(--cor-terracota); }
 
 /* ---------------------------------------------------------------- registro */

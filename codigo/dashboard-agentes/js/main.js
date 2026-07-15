@@ -20,6 +20,12 @@ const el = {
 
 const pct = (n) => Math.round(n * 100) + '%';
 
+const SELO = {
+  pronto: 'Pronto',
+  parcial: 'Etapas 01–02',
+  'em-construcao': 'Em construção'
+};
+
 // ------------------------------------------------------- coluna da tripulação
 
 const fichas = new Map();
@@ -36,7 +42,7 @@ AGENTES.forEach((a) => {
     <p class="etapa" data-etapa>Em repouso</p>
     <div class="barra" data-barra><i></i></div>
     <div class="rodape">
-      <span class="selo ${a.estado}">${a.estado === 'pronto' ? 'Pronto' : 'Em construção'}</span>
+      <span class="selo ${a.estado}">${SELO[a.estado]}</span>
       <span data-pct>0%</span>
     </div>`;
   card.addEventListener('click', () => abrirFicha(a));
@@ -91,7 +97,7 @@ function abrirFicha(agente, apenasAtualiza = false) {
   fichaAberta = agente;
   const p = fluxo.progresso.get(agente.id) || 0;
   el.fichaConteudo.innerHTML = `
-    <span class="rotulo">${agente.estado === 'pronto' ? 'Tripulante ativo' : 'Tripulante em construção'}</span>
+    <span class="rotulo">Tripulante · ${SELO[agente.estado]}</span>
     <h2>${agente.nome}</h2>
     <p class="subcargo">${agente.cargo}</p>
 

@@ -128,10 +128,24 @@ Um post não é a capa. É a sequência de slides, a legenda, as imagens escolhi
 
 ### 2.1 O roteiro literal do carrossel
 
-O Windsor entrega a capa e a legenda, **não os slides 2 a 10**. Para obter o interior, em ordem de preferência:
+O Windsor entrega a capa e a legenda, **não os slides 2 a 10**. Hoje o único caminho é ler o post publicado pelo Chrome. Receita validada em 15/07/2026:
 
-1. **Canva, via MCP** (`get-design-content`): devolve o texto de cada página do design original. É a fonte mais fiel, porque é o texto-fonte, sem OCR. Depende de casar o post com o design: use data de publicação, tema e capa. Todo pareamento resolvido vai para o MEMORY, com `media_id` → id do design. Nunca refaça uma busca já resolvida.
-2. **Leitura das imagens do post**, quando não houver design no Canva (posts antigos, peças feitas fora).
+1. `mcp__playwright__browser_navigate` para o `media_permalink`. O Chrome já está logado como `paaps.brasil`.
+2. `mcp__playwright__browser_evaluate` para extrair as URLs das imagens:
+
+   ```js
+   () => Array.from(document.querySelectorAll('article img, main img'))
+     .filter(i => i.naturalWidth > 300)
+     .map(i => ({ src: i.src, alt: i.alt, w: i.naturalWidth, h: i.naturalHeight }))
+   ```
+
+3. **Identificar os slides do post pelo `alt` vazio.** Isto é contraintuitivo e é a chave da receita: o Instagram preenche o `alt` das imagens de **outros** posts da página (relacionados, recomendados) com a legenda deles, mas os slides do post aberto vêm com `alt: ""`. Se você pegar as imagens com `alt` preenchido, está transcrevendo o post errado. Os slides vêm na ordem do carrossel: índice 0 é o slide 1.
+4. Baixar via `curl` para o scratchpad e ler com o Read (visão). Não use o screenshot do Playwright: neste setup ele roda em modo extensão e **não grava arquivo em disco**, o retorno vem vazio.
+5. Só os 2 primeiros slides são renderizados de saída. Para os demais, clicar em "Avançar" no carrossel e repetir a extração, ou reconstruir pelo padrão de URL do CDN.
+
+**Confirme sempre a ordem** antes de transcrever: o slide 1 traz o logo da PAAPS. Se a peça que você chamou de slide 1 não tiver logo, você provavelmente pegou o slide 2.
+
+**Futuro** (não implementar ainda): quando a equipe de agentes passar a arquivar todo post produzido no Drive, a fonte primária vira a API do Drive, com o texto-fonte em vez de imagem. Não montar pastas retroativas: o custo não compensa.
 
 Transcreva **literalmente**. Não resuma, não corrija, não "melhore". Se o slide 4 tem uma frase quebrada em três linhas, a quebra é decisão de design e faz parte do dado. Registre slide a slide, numerado.
 

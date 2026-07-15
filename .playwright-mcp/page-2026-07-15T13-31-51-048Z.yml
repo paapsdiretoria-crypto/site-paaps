@@ -1,0 +1,48 @@
+- generic [active] [ref=e1]:
+  - banner:
+    - generic:
+      - heading "Constelação PAAPS" [level=1]
+      - generic: Fluxo 01 · Produção de Conteúdo
+  - complementary [ref=e3]:
+    - article [ref=e4] [cursor=pointer]:
+      - generic [ref=e5]:
+        - generic [ref=e7]: "@paaps.brasil"
+        - generic [ref=e8]: Decifrador · Arqueologia de Performance
+      - paragraph [ref=e9]: Em repouso
+      - generic [ref=e11]:
+        - generic [ref=e12]: Etapas 01–02
+        - generic [ref=e13]: 0%
+    - article [ref=e14] [cursor=pointer]:
+      - generic [ref=e15]:
+        - generic [ref=e17]: Radar
+        - generic [ref=e18]: Editor de Pauta
+      - paragraph [ref=e19]: Em repouso
+      - generic [ref=e21]:
+        - generic [ref=e22]: Pronto
+        - generic [ref=e23]: 0%
+    - article [ref=e24] [cursor=pointer]:
+      - generic [ref=e25]:
+        - generic [ref=e27]: Tecelã
+        - generic [ref=e28]: Leitura Crítica
+      - paragraph [ref=e29]: Em repouso
+      - generic [ref=e31]:
+        - generic [ref=e32]: Em construção
+        - generic [ref=e33]: 0%
+    - article [ref=e34] [cursor=pointer]:
+      - generic [ref=e35]:
+        - generic [ref=e37]: Narrador
+        - generic [ref=e38]: Copywriter e Contador de Histórias
+      - paragraph [ref=e39]: Em repouso
+      - generic [ref=e41]:
+        - generic [ref=e42]: Em construção
+        - generic [ref=e43]: 0%
+  - complementary [ref=e44]:
+    - generic [ref=e45]: Registro de bordo
+    - list [ref=e46]:
+      - listitem [ref=e47]: 10:31:49Constelação PAAPS pronta. Tripulação em repouso.
+  - generic [ref=e48]:
+    - button "Acionar fluxo" [ref=e49] [cursor=pointer]
+    - generic [ref=e51]:
+      - generic [ref=e52]: Progresso da missão
+      - generic [ref=e53]: 0%
+  - button "Fechar ficha" [ref=e56] [cursor=pointer]: ✕

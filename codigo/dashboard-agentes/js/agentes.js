@@ -7,44 +7,54 @@
 //   nome, cargo, especialista, psicologia, missao
 // Campos técnicos:
 //   id ......... precisa bater com o nome do subagente em .claude/agents/<id>.md
-//   estado ..... 'pronto' | 'em-construcao'
+//   estado ..... 'pronto' | 'parcial' | 'em-construcao'
 //   trilha ..... etapas reais do agente; o progresso de 0% a 100% é medido nelas
 
 export const AGENTES = [
   {
-    id: 'paaps-brasil',
+    // O agente já existe em .claude/agents/decifrador.md. Aqui ele aparece com o
+    // nome de guerra que a Mallu pediu: na tela, quem fala é o próprio perfil.
+    id: 'decifrador',
     nome: '@paaps.brasil',
-    cargo: 'Consciência do Perfil',
-    especialista: 'Leitura de momentum, engajamento real e memória do público',
-    estado: 'em-construcao',
+    cargo: 'Decifrador · Arqueologia de Performance',
+    especialista: 'Descobrir por que uma peça performou, não relatar que ela performou',
+    estado: 'parcial',
     missao:
-      'Escaneia o perfil @paaps.brasil (posts fixados + últimos 16), com foco nas ' +
-      'colaborações e nos posts de melhor desempenho. Cruza dado de consumo com o ' +
-      'conteúdo em si: o que o carrossel diz, quais imagens foram escolhidas, em que ' +
-      'data e contexto foi postado, o que os comentários revelam sobre a persona e ' +
-      'quantos seguidores aquele post converteu.',
+      'Escaneia os posts fixados e os últimos 16 posts do @paaps.brasil, reconstrói ' +
+      'cada peça na íntegra (roteiro do carrossel transcrito, imagens, legenda, ' +
+      'contexto de data) e cruza com as métricas reais. Foco extra em colaborações. ' +
+      'Um post que performa é um encontro entre mensagem, forma e momento: separar os ' +
+      'três é o erro que produz relatório inútil.',
     psicologia: [
-      'Fala na primeira pessoa: é o próprio perfil se explicando',
-      'Não confunde volume com relevância',
-      'Desconfia da média; procura o caso fora da curva e o porquê dele'
+      'Fala como o próprio perfil: primeira pessoa, sem distância de consultor',
+      'Se um achado não muda uma decisão de escrita, imagem ou data, ele não entra',
+      'Não credita tudo à data (vira calendário) nem tudo ao texto (vira clone que morre)',
+      'Prefere abortar a estimar: dado zerado não vira suposição'
     ],
     tokens: 0,
+    // Trilha real, lida de .claude/agents/decifrador.md.
     trilha: [
-      'Autenticando acesso aos dados do Instagram',
-      'Coletando posts fixados e os últimos 16 posts',
-      'Separando colaborações e posts fora da curva',
-      'Puxando alcance, salvamentos, compartilhamentos e retenção',
-      'Transcrevendo os carrosséis e lendo as imagens escolhidas',
-      'Lendo os comentários em busca da persona real',
-      'Cruzando data, contexto e efeméride com o desempenho',
-      'Medindo seguidores convertidos por post',
-      'Escrevendo o parecer para o Radar'
+      'Pré-voo: o acesso ao dado está vivo?',
+      '1.1 Definindo o conjunto de posts',
+      '1.2 Puxando as métricas',
+      '1.3 Validando antes de acreditar',
+      '1.4 Ranqueando sem reduzir a um número só',
+      '1.5 Marcando as colaborações',
+      '2.1 Transcrevendo o roteiro literal dos carrosséis',
+      '2.2 Extraindo a mensagem central',
+      '2.3 Lendo as imagens escolhidas',
+      '2.4 Reconstruindo o momento da publicação',
+      '2.5 Lendo o que os comentários revelam',
+      'Fechando as fichas para o Radar'
     ],
     // Bloqueio conhecido, declarado na tela em vez de escondido no código.
     alerta:
-      'Acesso ao Windsor.ai possivelmente desatualizado. Enquanto a origem do dado ' +
-      'não for decidida (Windsor ou coleta direta no Instagram), este agente roda em ' +
-      'simulação.'
+      'Bloqueado pelo Windsor. O plano Forever Free dá 1 fonte e 1 conta, e há 4 fontes ' +
+      'e 6 contas conectadas. Estourado o limite, o Windsor não dá erro: devolve a frase ' +
+      'de upsell nos campos de texto e zero em todos os números. Não é login desatualizado, ' +
+      'e reconectar OAuth não resolve. Saídas: desconectar até sobrar só instagram → ' +
+      'paaps.brasil, ou assinar o Basic. As Etapas 03+ do agente só serão escritas depois ' +
+      'da primeira execução com dado real.'
   },
   {
     id: 'radar',
@@ -117,7 +127,7 @@ export const AGENTES = [
 
 // Ligações entre agentes: cada tubo é um par [origem, destino].
 export const TUBOS = [
-  ['paaps-brasil', 'radar'],
+  ['decifrador', 'radar'],
   ['radar', 'tecela'],
   ['tecela', 'narrador']
 ];
