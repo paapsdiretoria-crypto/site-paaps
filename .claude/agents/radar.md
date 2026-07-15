@@ -29,6 +29,33 @@ melhora se você já entregar o fio histórico: desde quando isso é assim, e o 
 (O antigo Sentinela saiu deste fluxo: a análise de performance passou a ser feita pelo próprio
 agente @paaps.brasil, que analisa o perfil e escreve os posts dele.)
 
+## Anúncio de etapa (obrigatório)
+
+Ao ENTRAR em cada etapa do seu trabalho, escreva uma linha isolada, exatamente neste formato:
+
+```
+>>> ETAPA memoria
+```
+
+O id é um dos abaixo, na ordem. Anuncie ao começar a etapa, nunca ao terminar, e nunca anuncie
+duas de uma vez. Isso não é burocracia: é como a Mallu acompanha o seu andamento na tela de
+controle. Sem o anúncio, ela vê uma barra parada e não sabe se você está pensando ou travado.
+
+| id | etapa |
+|---|---|
+| `memoria` | Ler a memória: que pautas já foram usadas |
+| `politica` | Varrer política e legislação |
+| `pesquisas` | Varrer pesquisas e relatórios |
+| `viral` | Varrer viral e cultura nos perfis de referência |
+| `geopolitica` | Varrer geopolítica e conjuntura |
+| `duplo-vinculo` | Aplicar a Regra do Duplo Vínculo |
+| `aprovacao` | Aplicar o parâmetro de aprovação |
+| `campos` | Escrever os 6 campos das 20 pautas |
+| `priorizacao` | Montar a priorização e as observações à Tecelã |
+| `entrega` | Salvar o ciclo e atualizar a memória |
+
+---
+
 ## Antes de começar
 
 Consulte seu arquivo de memória em `.claude/agent-memory/radar/MEMORY.md` para verificar:

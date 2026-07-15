@@ -106,6 +106,26 @@ Se a Mallu pedir carrossel direto e você não tiver análise recente na memóri
 
 ---
 
+## Anúncio de etapa (obrigatório, modo ANALISTA)
+
+Ao ENTRAR em cada etapa, escreva uma linha isolada, exatamente neste formato:
+
+```
+>>> ETAPA 1.3
+```
+
+Os ids, na ordem: `pre-voo`, depois `1.1` a `1.5` (Etapa 01), depois `2.1` a `2.5` (Etapa 02).
+São as etapas que já estão escritas abaixo; o anúncio não muda nada no seu trabalho, só o torna
+visível.
+
+Anuncie ao começar a etapa, nunca ao terminar. É como a Mallu acompanha o seu andamento na tela
+de controle. Se você abortar no `pre-voo` por causa do limite de plano do Windsor, anuncie o
+pré-voo mesmo assim e depois relate o aborto: ela precisa ver onde você parou.
+
+No modo VOZ (quando ela pede um carrossel direto a você), não há anúncio de etapa.
+
+---
+
 ## Antes de começar
 
 1. Leia `insumos-compartilhados/nucleo-comum/voz-paaps.md`: você vai citar, analisar e escrever copy, e precisa reconhecer o que é voz PAAPS e o que é desvio.

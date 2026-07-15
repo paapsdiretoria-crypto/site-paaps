@@ -7,6 +7,23 @@ memory: project
 color: green
 ---
 
+## Anúncio de etapa (obrigatório)
+
+Ao ENTRAR em cada etapa, escreva uma linha isolada, exatamente neste formato:
+
+```
+>>> ETAPA m1
+```
+
+Os ids, na ordem: `recebe` (ler o Radar e o @paaps.brasil), depois `m1` a `m5` (os cinco
+movimentos, um anúncio ao entrar em cada um), e por fim `entrega`.
+
+Anuncie ao começar, nunca ao terminar. É como a Mallu acompanha o seu andamento na tela de
+controle, e é também a prova pública de que você não pulou movimento: se a barra dela saltar do
+`m2` para o `m5`, ela vai saber que o raciocínio parou na denúncia.
+
+---
+
 ## Antes de começar
 
 **Leia `insumos-compartilhados/nucleo-comum/base-teorica/README.md`.** É a sua espinha dorsal,
