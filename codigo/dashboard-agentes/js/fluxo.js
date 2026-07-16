@@ -46,6 +46,8 @@ export class Fluxo {
     this.aoConversar = () => {};
     this.aoRegistrar = () => {};
     this.aoTerminar = () => {};
+    this.aoRodarReal = () => {}; // dispara a execução real de um agente na ponte
+    this.aoFala = () => {}; // pensando/fazendo/achando para o visor
 
     this.reiniciar();
   }
@@ -159,7 +161,44 @@ export class Fluxo {
     this.aoRegistrar(`${a.nome} acordou. ${a.camada}.`, 'acorda');
     if (a.alerta) this.aoRegistrar(a.alerta, 'aviso');
 
+    // No modo real, quem move a barra são os eventos da ponte, não o relógio.
+    // O motor só dispara a execução e espera; `receberEvento` cuida do resto.
+    if (this.modo === MODO.REAL) {
+      this.aoRodarReal(a);
+      return;
+    }
     this._avancar(a);
+  }
+
+  /**
+   * Recebe um evento do servidor-ponte (execução real) e o traduz para o mesmo
+   * vocabulário da simulação. É o único ponto onde o "real" entra no motor.
+   */
+  receberEvento(ev) {
+    const a = this.dados.porId.get(ev.id);
+    if (!a) return;
+
+    if (ev.tipo === 'estado') {
+      if (typeof ev.progresso === 'number') this.progresso.set(a.id, ev.progresso);
+      if (ev.etapa) this.etapa.set(a.id, ev.etapa);
+      if (ev.usage?.output_tokens) a.tokens = (a.tokens || 0) + ev.usage.output_tokens;
+
+      if (ev.estado === 'concluido') return this._concluir(a);
+      if (ev.estado === 'abortado') {
+        this.estado.set(a.id, ESTADO.ABORTADO);
+        this.aoRegistrar(`${a.nome} abortou: ${ev.etapa}.`, 'aviso');
+        this.aoDormir(a.id);
+        this.aoMudar();
+        this._timers.push(setTimeout(() => this._acordarProntos(), 700));
+        return;
+      }
+      this.aoMudar();
+    }
+
+    // pensando / fazendo / achando alimentam o visor via aoFala.
+    if (['pensando', 'fazendo', 'achando'].includes(ev.tipo)) {
+      this.aoFala(a.id, ev.tipo, ev.texto);
+    }
   }
 
   /** Evita apagar um agente que ainda está passando parecer para outro. */
