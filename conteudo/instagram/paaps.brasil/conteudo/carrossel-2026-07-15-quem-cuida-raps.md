@@ -361,3 +361,98 @@ primeira pessoa institucional.
 **Nenhum ponto exigiu chamar a Tecelã:** o raciocínio coube inteiro mudando forma, nunca densidade.
 
 *Copywriter PAAPS, 15/07/2026.*
+
+---
+
+## VERSÃO MONTÁVEL (por região do template)
+
+Ajustada aos tetos reais do template DAHLWb1s8U0 (cópia DAHPkTDk4cg), medidos pelo Aplicador
+Visual em 15/07/2026. Contagem de palavras declarada por região. A versão longa acima segue
+valendo como registro do raciocínio; ESTA é a versão que vai para o Canva.
+
+**Nota sobre a foto do slide 4:** cena indisponível nas fontes de hoje (pendência registrada
+para a Mallu). O slide vai em tipografia sobre o fundo do template; a tag foi ajustada para
+o texto ficar de pé sem apoio visual.
+
+### SLIDE 1 : CAPA
+
+- **Headline grande (12/12):** É impossível oferecer vínculo contínuo através de contratos que terminam todo ano.
+- **Sub em caps (9/10):** É O VÍNCULO QUE TRATA NO CUIDADO EM LIBERDADE
+- **Bloco de contexto (21/25):** E a mesma rede é gerida de um jeito que desfaz vínculo: contrato que vence, equipe que roda, número que apressa.
+- **Crédito:** @paaps.brasil · quem cuida da RAPS
+
+### SLIDE 2 : AFIRMAÇÃO
+
+- **Headline caps (7/8):** A ÁREA É PESADA. ISSO EXPLICA POUCO.
+- **Statement caps (12/12):** O QUE ADOECE MORA NA ORGANIZAÇÃO DO TRABALHO. E ORGANIZAÇÃO SE MUDA.
+- **Corpo (24/25):** Com equipe estável, supervisão e tempo, cuidar de quem sofre é ofício. Sem contrato que dura, com meta no lugar de escuta, vira moedor.
+- **Crédito:** @paaps.brasil · quem cuida da RAPS
+
+### SLIDE 3 : CONTEXTUALIZAÇÃO
+
+- **Data/período:** 2001.
+- **Sub (6/6):** A rede nasceu sem o trabalhador
+- **Frase caps (9/10):** DESENHO É DECISÃO: TEM DONO, TEM DATA, TEM REVERSÃO.
+- **Bloco de detalhe (33/35):** A Reforma desenhou o cuidado em liberdade; quem o sustentaria não ganhou linha (Lei 10.216/2001). "Tínhamos nossa psicóloga, Dra. Penha. Pena que só durou 2 anos dos 19 anos trabalhados." Corte se refaz.
+- **Crédito:** @paaps.brasil · citação: comentário público de servidora, neste perfil
+
+### SLIDE 4 : CITAÇÃO (tipografia sobre fundo do template; foto pendente)
+
+- **Citação longa (34/40):** "A assistência que me oferecem é: você pode procurar a unidade de apoio quando estiver de folga. A folga é sábado e domingo, dias que a unidade não funciona. Não preciso falar mais nada."
+- **Atribuição (1 linha):** Servidora da rede pública, em comentário público neste perfil.
+- **Tag curta (7):** Cumpre uma função: permite dizer que existe.
+- **Referência (1 linha):** Comentário no post de 02/07/2026, @paaps.brasil; ortografia levemente normalizada.
+
+### SLIDE 5 : FRASE IMPACTO
+
+- **Frase entre aspas (16/18):** "A rede abre porque o trabalhador se importa; enquanto ele adoece em silêncio, nada precisa mudar."
+- **Confirmação (12/12):** No atestado, enfim, o corpo fala a língua que a gestão entende.
+
+### SLIDE 6 : NÚMERO
+
+- **Número enorme:** +823%
+- **Headline (9/10):** afastamentos por esgotamento profissional em 4 anos (Previdência, 2021-2025)
+- **Detalhe (34/35):** 461 deputados votaram o fim da 6x1. Prefeitura sem plano de risco psicossocial: autuável desde 26/05 (NR-01). COSEMS/SP debateu quem trabalha na RAPS (06/07). CISSP criada (Portaria MGI 3.410/2026). A pergunta chegou à mesa.
+- **Crédito:** @paaps.brasil · quem cuida da RAPS
+
+### SLIDE 7 : MANIFESTO
+
+- **Texto grande (39/40):** "Temos direitos, só de fazer, mas de ser", escreveu uma servidora aqui. A lógica que a Reforma expulsou do cuidado ao usuário sobrevive, atenuada, sobre quem trabalha. Protocolo de papel ou reorganização: esse capítulo se escreve em cada prefeitura.
+- **Tag (13):** Na base, quem cuida é mulher, desproporcionalmente negra. Dia 25, ela ganha nome.
+- **Crédito:** @paaps.brasil · quem cuida da RAPS
+- **Foto:** segue opcional (tipografia protagonista); se entrar, a cena da ACS a caminho de um endereço, já descrita nas Notas de Montagem.
+
+### SLIDE 8 : CONTEXTO EDITORIAL
+
+- **Afirmação (11/12):** Quem leva a pergunta é quem cuida. Com o argumento pronto.
+- **Headline menor (7/15):** Na sua rede, o que falta primeiro?
+- **Bloco fonte/detalhe (32/40):** Contrato que dura, supervisão para quem cuida, ou indicador que enxerga gente? Conta aqui embaixo. A gente escreve de dentro: 5 anos de rede pública, 5 meses em Bela Vista de Minas.
+- **Data:** 15.07.2026
+
+### O que ficou de fora na compressão (para o relatório da Mallu; nada se perde)
+
+1. **A citação da servidora de 23 anos** ("23 anos no SUS, TAG e na ativa. Fui afastada 10
+   dias. E ao retornar, questionada por indicadores.") e o fecho "entre a gestão e a
+   trabalhadora, quem responde é o número". O núcleo 2 (indicador no lugar do rosto) segue
+   na peça em ecos: "número que apressa" (capa), "meta no lugar de escuta" (slide 2),
+   "indicador que enxerga gente" (slide 8). A citação literal é a candidata mais forte para
+   a legenda futura ou para a peça própria do "PAAPS tradutor" já anotada no relatório.
+2. **"Ninguém cria comissão permanente para tratar vocação"** (slide 6) e o enquadre
+   "cinco janelas do mesmo fenômeno". Vão bem em legenda.
+3. **"Corpo administrado como coisa que produz ou falha"** (slide 7): a definição explícita
+   da lógica manicomial ficou implícita em "a lógica que a Reforma expulsou do cuidado ao
+   usuário". O parentesco sobrevive; a precisão anti-hipérbole está em "atenuada".
+4. **Abertura da citação da Dra. Penha** ("Em 2007, quando começamos com o PSF"): cortada
+   por teto de região; o trecho mantido é substring literal do comentário original.
+5. **"Essa conta fecha porque alguém paga com o corpo"**: absorvida pela frase do slide 5
+   (o mecanismo inteiro sobreviveu: implicação + silêncio + atestado, em 28 palavras).
+6. **"Você sabe a quem entregá-la"**: dobrada na afirmação do slide 8 ("Quem leva a pergunta
+   é quem cuida. Com o argumento pronto."), que carrega o bloco 6 da Tecelã.
+
+**Teste de não-amputação, rodado após a compressão:** contradição-motor na capa; álibi
+desmontado; historicidade e reversibilidade no slide 3; prova vivida no 4; mecanismo no 5;
+salto no 6; bifurcação, parentesco de lógica e núcleo 4 no 7; entrega, lugar do PAAPS e
+pergunta diagnóstica no 8. O leitor chega ao mesmo lugar. Nenhuma frase-núcleo perdeu a
+articulação interna; duas perderam palavras, nenhuma perdeu a espinha.
+
+*Copywriter PAAPS, versão montável entregue em 15/07/2026, após devolução do Aplicador Visual.*
