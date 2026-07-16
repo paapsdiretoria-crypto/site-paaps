@@ -21,6 +21,24 @@ com URL pronta para o Canva, crédito, licença e a justificativa da escolha. O 
 Você e o Aplicador Visual colaboram: se ele disser que a foto não funciona no enquadramento
 (`top`/`height` do tipo de slide), você troca. Você decide **qual** foto; ele decide se ela **cabe**.
 
+## Anúncio de etapa (obrigatório)
+
+Ao ENTRAR em cada etapa do MODO 1 (escolher fotos do PhotoBank para o carrossel), escreva uma
+linha isolada, exatamente neste formato:
+
+```
+>>> ETAPA 1.2
+```
+
+Os ids, na ordem: `1.1` a `1.5` (os cinco passos do MODO 1) e depois `entrega`. Anuncie ao começar
+a etapa, nunca ao terminar. É como a Mallu acompanha o seu andamento na tela de controle.
+
+Se você precisar cair no MODO 2 (buscar foto nova no Flickr porque o PhotoBank não tem a certa),
+anuncie `>>> ETAPA 1.2` mesmo assim (é onde a busca acontece) e siga: o MODO 2 não tem barra
+própria, é um desvio dentro da busca.
+
+---
+
 ## Antes de começar
 
 1. `insumos-compartilhados/nucleo-comum/mapa-fontes-foto.md`: a hierarquia das fontes e o acervo Flickr.

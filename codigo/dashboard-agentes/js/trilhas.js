@@ -84,5 +84,44 @@ export const TRILHAS = {
       'Regra dura do agente: ele entrega só a primeira rodada (capa + lógica do argumento) ' +
       'e PARA, aguardando a validação da Mallu. O astronauta fica em "aguardando Mallu", ' +
       'não travado.'
+  },
+
+  'buscador-fotos': {
+    // Fonte: buscador-fotos.md, "MODO 1: escolher fotos do PhotoBank" (1.1 a 1.5).
+    // MODO 2 (alimentar o PhotoBank pelo Flickr) é o desvio de quando falta foto:
+    // fica de fora da trilha principal para o progresso não mentir sobre o que
+    // é o caminho comum no fluxo de carrossel.
+    etapas: [
+      { id: '1.1', texto: 'Lendo o carrossel como quem vai ilustrar' },
+      { id: '1.2', texto: 'Buscando no PhotoBank' },
+      { id: '1.3', texto: 'Julgando o contexto: a foto carrega a estrutura do argumento' },
+      { id: '1.4', texto: 'Checando repetição (não repetir foto em 60 dias)' },
+      { id: '1.5', texto: 'Checando licença e exposição de pessoa identificável' },
+      { id: 'entrega', texto: 'Entregando uma foto por slide, com URL, crédito e licença' }
+    ],
+    alerta:
+      'Se o PhotoBank não tiver a foto certa, o agente entra no MODO 2 (busca no ' +
+      'Flickr do Ministério da Saúde e cadastra a foto nova). Esse desvio não está na ' +
+      'barra: a trilha mostra o caminho comum, de escolha no acervo.'
+  },
+
+  'aplicador-visual': {
+    // Fonte: aplicador-visual.md, "Passo a passo (MCP Canva)", "Inserção de foto",
+    // "Anti-padrões", a chamada ao critico-design e "Entrega final: Drive".
+    etapas: [
+      { id: 'recebe', texto: 'Lendo o texto do Copywriter e as fotos do Buscador' },
+      { id: 'copia', texto: 'Copiando o template no Canva (DAHLWb1s8U0)' },
+      { id: 'texto', texto: 'Aplicando o texto com find_and_replace_text (preserva a cor)' },
+      { id: 'fotos', texto: 'Inserindo as fotos por tipo de slide' },
+      { id: 'identidade', texto: 'Conferindo paleta, League Spartan e os 3 modos visuais' },
+      { id: 'anti-padroes', texto: 'Checando os anti-padrões de reprovação automática' },
+      { id: 'critico', texto: 'Chamando o critico-design para auditar antes de entregar' },
+      { id: 'export', texto: 'Exportando os slides em PNG' },
+      { id: 'drive', texto: 'Entregando no Drive, em pasta própria dentro do mês atual' }
+    ],
+    alerta:
+      'O filtro P&B é passo manual: não existe no MCP do Canva e precisa ser declarado ' +
+      'na entrega. O agente não reescreve texto nem troca foto por conta própria: devolve ' +
+      'ao Copywriter ou ao Buscador.'
   }
 };

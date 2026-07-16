@@ -104,6 +104,37 @@ duras intactas ("Não preciso falar mais nada").
 
 ---
 
+## Situação: texto que excede a região do template
+
+**Quando acontece:** o Aplicador Visual devolve a peça porque o texto não cabe nas regiões
+fixas do template do Canva (aconteceu em 15/07: 6 dos 8 slides estouraram os tetos; o
+manifesto estourava 3x). Ele não corta; volta para mim, e a compressão é decisão editorial.
+
+**O que eu fiz:** reescrevi por região, contando palavras e declarando a contagem
+(ex.: 39/40) para o Aplicador verificar sem medir de novo. Antes de cortar, redistribuí:
+o que não coube num slide migrou para a região certa de outro ("quem leva a pergunta é quem
+cuida" saiu do manifesto e virou a afirmação do slide 8; a ponte de 25/07 virou tag). Só
+então cortei, e cada corte foi declarado numa lista "o que ficou de fora", com destino
+(legenda futura, peça própria, relatório da Mallu). Fechei com um teste de não-amputação:
+o leitor ainda chega ao mesmo lugar?
+
+**O que aconteceu:** a versão montável coube inteira nos tetos na primeira reescrita;
+nenhuma frase-núcleo perdeu a articulação. Aguardando montagem e validação da Mallu.
+
+**Regra que fica:**
+- ❌ Assim não: aparar cada slide por igual até caber, sem hierarquia ("tirar 30% de tudo")
+- ✅ Assim sim: primeiro redistribuir entre regiões e slides, depois cortar andaime declarando o destino de cada corte, e contar palavras por região (39/40) na entrega
+
+**Por quê:** compressão sem hierarquia amputa pensamento em silêncio; redistribuição + corte declarado preserva a densidade e deixa a Mallu ver o que ficou de fora.
+
+**Nota para a próxima peça:** escrever JÁ na medida do template poupa uma rodada inteira.
+Tetos reais do DAHLWb1s8U0 (medidos em 15/07): capa 12+10+25; afirmação 8+12+25;
+contextualização data+6+10+35; citação 40+atribuição+tag+referência; frase impacto 18+12;
+número 10+35; manifesto 40+tag; contexto editorial 12+15+40. Confirmar com o Aplicador se
+o template mudar.
+
+---
+
 ## Pendências para o próximo ciclo
 
 - Confirmar com a Mallu a peça inteira (Sessão 01 pulou a parada da primeira rodada por

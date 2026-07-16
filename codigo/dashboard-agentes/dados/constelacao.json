@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-07-15T15:03:41.791Z",
+  "gerado_em": "2026-07-16T22:18:06.579Z",
   "fonte": "Notion · Banco de Agentes",
   "agentes": [
     {
@@ -17,7 +17,7 @@
       "notas": "Produz posts para o LinkedIn pessoal de Mallu (CEO Founder). Tom analítico e de autoridade profissional B2B. Ler nucleo-comum/voz-paaps.md antes de escrever.",
       "recebe_de": [],
       "passa_para": [],
-      "url_notion": "https://app.notion.com/37944cb52e00814db199e64b39b8b007"
+      "url_notion": null
     },
     {
       "id": "mallu-reels",
@@ -34,7 +34,30 @@
       "notas": "Escreve roteiros de Reel para @amalluvasconcellos. Formato talking head, tom direto e crítico. Duração alvo: 40-60 segundos. Uma ideia só.",
       "recebe_de": [],
       "passa_para": [],
-      "url_notion": "https://app.notion.com/37944cb52e00819686c8c5606900f1e3"
+      "url_notion": null
+    },
+    {
+      "id": "aplicador-visual",
+      "nome": "aplicador-visual",
+      "camada": "Produção",
+      "status": "Ativo",
+      "arquivo": ".claude/agents/aplicador-visual.md",
+      "aprovado": false,
+      "memory": false,
+      "tools": [
+        "Read",
+        "Write",
+        "Bash",
+        "WebFetch",
+        "Agent (+ MCP Canva e Google Drive)"
+      ],
+      "notas": "Modelo Fable 5. Último agente antes de Mallu. Monta o carrossel no Canva (template DAHLWb1s8U0, 1080x1350, 8 tipos de slide), aplica a identidade PAAPS (paleta, League Spartan, sistema Periódico, 3 modos visuais), chama o critico-design antes de entregar, exporta em PNG e sobe no Drive em pasta própria dentro do mês atual. Regra crítica do Canva: usar find_and_replace_text (preserva cor por região); NUNCA replace_text (destrói a formatação). Filtro P&B é passo manual: não existe no MCP, precisa ser declarado na entrega. Não reescreve o texto nem troca a foto por conta própria: devolve para o Copywriter ou o Buscador.",
+      "recebe_de": [
+        "copywriter-paaps",
+        "buscador-fotos"
+      ],
+      "passa_para": [],
+      "url_notion": null
     },
     {
       "id": "critico-design",
@@ -55,23 +78,52 @@
       "passa_para": [
         "aplicador-visual"
       ],
-      "url_notion": "https://app.notion.com/37944cb52e0081cbbacfc3defe53be36"
+      "url_notion": null
+    },
+    {
+      "id": "tecela",
+      "nome": "tecela",
+      "camada": "Inteligência",
+      "status": "Ativo",
+      "arquivo": ".claude/agents/tecela.md",
+      "aprovado": false,
+      "memory": false,
+      "tools": [
+        "Read",
+        "WebSearch"
+      ],
+      "notas": "Modelo Fable 5. Ancorada na Psicologia Sócio-Histórica: base teórica em insumos-compartilhados/nucleo-comum/base-teorica/README.md (arquivo vivo, cresce a cada fichamento da Mallu). Tece por cinco movimentos: desnaturalizar, nomear a contradição, reconstituir a totalidade, achar as mediações, tomar o movimento. Lê falas por núcleos de significação. A ideia vem antes do nome do autor.",
+      "recebe_de": [
+        "radar",
+        "paaps-brasil"
+      ],
+      "passa_para": [
+        "copywriter-paaps"
+      ],
+      "url_notion": null
     },
     {
       "id": "buscador-fotos",
       "nome": "buscador-fotos-photobank",
-      "camada": "Apoio",
-      "status": "Incompleto",
+      "camada": "Produção",
+      "status": "Ativo",
       "arquivo": ".claude/agents/buscador-fotos.md",
       "aprovado": false,
       "memory": false,
       "tools": [
-        "All tools"
+        "Read",
+        "Write",
+        "Bash",
+        "WebFetch (+ MCP Notion e Playwright)"
       ],
-      "notas": "INCOMPLETO. Aguardando sessão dedicada com Mallu. Função: localizar e selecionar fotos do acervo de campo para uso nos carrosséis.",
-      "recebe_de": [],
-      "passa_para": [],
-      "url_notion": "https://app.notion.com/37944cb52e0081009005dec6fd30fde5"
+      "notas": "Modelo Fable 5. Curador do PhotoBank PAAPS. MODO 1: escolhe fotos do PhotoBank para o carrossel por julgamento de contexto (a foto certa carrega a mesma ESTRUTURA que o argumento, não o tema). MODO 2: busca no Flickr do Ministério da Saúde via Chrome, baixa, vê, e cadastra no PhotoBank com etiquetas, legenda, crédito, licença e URL de origem. Controla o campo Usos (não repetir foto em 60 dias; aposentar após 3 usos). Hierarquia: base documental pública + foto do acervo PAAPS pontual (~1 por carrossel), NUNCA o contrário. Regra dura: licença pública não é autorização de uso de imagem de pessoa identificável.",
+      "recebe_de": [
+        "copywriter-paaps"
+      ],
+      "passa_para": [
+        "aplicador-visual"
+      ],
+      "url_notion": null
     },
     {
       "id": "radar",
@@ -79,29 +131,29 @@
       "camada": "Inteligência",
       "status": "Ativo",
       "arquivo": ".claude/agents/radar.md",
-      "aprovado": true,
-      "memory": true,
+      "aprovado": false,
+      "memory": false,
       "tools": [
         "WebSearch",
         "WebFetch",
         "Read",
         "Write"
       ],
-      "notas": "Modelo Fable 5. Agente de pesquisa e mapeamento de pautas. Produz 20 pautas em ascensão por ciclo. Tem memória de projeto para evitar repetição entre ciclos. Primeiro do fluxo de carrossel: trabalha em paralelo com o @paaps.brasil e ambos alimentam a Tecelã. Saída do Sentinela do fluxo (jul/2026): a análise de performance passou para o próprio @paaps.brasil.",
+      "notas": "Modelo Fable 5. Agente de pesquisa e mapeamento de pautas. Produz 20 pautas em ascensão por ciclo. Tem memória de projeto para evitar repetição entre ciclos. Primeiro do fluxo de carrossel: trabalha em paralelo com o @paaps.brasil e ambos alimentam a Tecelã.",
       "recebe_de": [],
       "passa_para": [
         "tecela"
       ],
-      "url_notion": "https://app.notion.com/37944cb52e00810ebabfd9e9fc61a231"
+      "url_notion": null
     },
     {
       "id": "paaps-brasil",
       "nome": "@paaps.brasil",
-      "camada": "Produção",
+      "camada": "Inteligência",
       "status": "Ativo",
       "arquivo": ".claude/agents/paaps-brasil.md",
-      "aprovado": true,
-      "memory": true,
+      "aprovado": false,
+      "memory": false,
       "tools": [
         "Read",
         "Write",
@@ -109,12 +161,12 @@
         "Bash",
         "WebFetch"
       ],
-      "notas": "Modelo Fable 5. Voz e analista do perfil @paaps.brasil: comporta-se como o perfil se fosse uma pessoa EM TERAPIA, com hiperfoco em como os outros o percebem, lúcida e sem alucinação (toda afirmação amarrada a dado real). Fusão do analista (ex-decifrador) com o escritor de carrossel. Dois modos: ANALISTA (etapas 01 e 02 escritas; 03+ pendentes) e VOZ. Métrica-chave: media_follows. No fluxo do carrossel, trabalha em paralelo com o Radar e alimenta a Tecelã.",
+      "notas": "Modelo Fable 5. Voz e analista do perfil @paaps.brasil: comporta-se como o perfil se fosse uma pessoa EM TERAPIA, com hiperfoco em como os outros o percebem, lúcida e sem alucinação. Fusão do analista (ex-decifrador) com o escritor de carrossel. Dois modos: ANALISTA e VOZ. Métrica-chave: media_follows. Trabalha em paralelo com o Radar e alimenta a Tecelã.",
       "recebe_de": [],
       "passa_para": [
         "tecela"
       ],
-      "url_notion": "https://app.notion.com/37944cb52e00811b830dffdcf8bf66c3"
+      "url_notion": null
     },
     {
       "id": "ecoa",
@@ -130,7 +182,7 @@
       "notas": "INCOMPLETO. Aguardando sessão dedicada com Mallu. Produz conteúdo para a comunidade ECOA.",
       "recebe_de": [],
       "passa_para": [],
-      "url_notion": "https://app.notion.com/37944cb52e008159bd11fd54ae729648"
+      "url_notion": null
     },
     {
       "id": "copywriter-paaps",
@@ -138,63 +190,117 @@
       "camada": "Produção",
       "status": "Ativo",
       "arquivo": ".claude/agents/copywriter-paaps.md",
-      "aprovado": true,
-      "memory": true,
+      "aprovado": false,
+      "memory": false,
       "tools": [
         "Read",
         "Write",
         "Edit",
         "Agent"
       ],
-      "notas": "Modelo Fable 5. Último agente antes de Mallu no fluxo do carrossel. Regra número um: NÃO APAGA nem atenua o raciocínio da Tecelã; muda a forma, nunca a densidade. Objetivo de toda peça: tocar, comover, fazer enxergar um ângulo novo; junto disso, autoridade demonstrada e utilidade real. Log de autoaprendizagem por situação em .claude/agent-memory/copywriter-paaps/APRENDIZADO.md. Renomeado do antigo narrador.",
+      "notas": "Modelo Fable 5. Regra número um: NÃO APAGA nem atenua o raciocínio da Tecelã; muda a forma, nunca a densidade. Objetivo de toda peça: tocar, comover, fazer enxergar um ângulo novo. Log de autoaprendizagem em .claude/agent-memory/copywriter-paaps/APRENDIZADO.md. Renomeado do antigo narrador.",
       "recebe_de": [
         "tecela",
         "radar",
         "paaps-brasil"
       ],
-      "passa_para": [],
-      "url_notion": "https://app.notion.com/37944cb52e0081bfa80cfb3f5922dce5"
+      "passa_para": [
+        "buscador-fotos"
+      ],
+      "url_notion": null
     },
     {
-      "id": "aplicador-visual",
-      "nome": "aplicador-visual",
-      "camada": "Produção",
-      "status": "Incompleto",
-      "arquivo": ".claude/agents/aplicador-visual.md",
+      "id": "porteiro",
+      "nome": "porteiro",
+      "camada": "Captação",
+      "status": "Planejado",
+      "arquivo": ".claude/agents/porteiro.md",
       "aprovado": false,
       "memory": false,
       "tools": [
-        "All tools"
+        "Read",
+        "Write"
       ],
-      "notas": "INCOMPLETO. Aguardando sessão dedicada com Mallu. Camada 3/4 do workflow. Aplicação visual via Canva MCP.",
-      "recebe_de": [],
+      "notas": "Passos 2 e 4 do runbook. Decide QUEM pode ser tocado esta semana.",
+      "recebe_de": [
+        "buscador-leads"
+      ],
       "passa_para": [],
-      "url_notion": "https://app.notion.com/37944cb52e0081c8a0a8c2f567d89240"
+      "url_notion": null
     },
     {
-      "id": "tecela",
-      "nome": "tecela",
-      "camada": "Inteligência",
-      "status": "Ativo",
-      "arquivo": ".claude/agents/tecela.md",
-      "aprovado": true,
-      "memory": true,
+      "id": "buscador-leads",
+      "nome": "buscador-leads",
+      "camada": "Captação",
+      "status": "Planejado",
+      "arquivo": ".claude/agents/buscador-leads.md",
+      "aprovado": false,
+      "memory": false,
       "tools": [
+        "WebSearch",
+        "WebFetch",
         "Read",
-        "WebSearch"
+        "Write"
       ],
-      "notas": "Modelo Fable 5. Ancorada na Psicologia Sócio-Histórica: base teórica em insumos-compartilhados/nucleo-comum/base-teorica/README.md (arquivo vivo, cresce a cada fichamento da Mallu). Tece por cinco movimentos: desnaturalizar, nomear a contradição, reconstituir a totalidade, achar as mediações, tomar o movimento. Lê falas por núcleos de significação. A ideia vem antes do nome do autor.",
+      "notas": "Passo 3 do runbook. Busca ativa de e-mails públicos do ICP.",
       "recebe_de": [
-        "radar",
-        "paaps-brasil"
+        "porteiro"
       ],
       "passa_para": [
-        "copywriter-paaps"
+        "porteiro"
       ],
-      "url_notion": "https://app.notion.com/37944cb52e0081dc9a26e1050881e3ef"
+      "url_notion": null
+    },
+    {
+      "id": "carta-fria",
+      "nome": "carta-fria",
+      "camada": "Captação",
+      "status": "Planejado",
+      "arquivo": ".claude/agents/carta-fria.md",
+      "aprovado": false,
+      "memory": false,
+      "tools": [
+        "WebSearch",
+        "WebFetch",
+        "Read",
+        "Write",
+        "Edit"
+      ],
+      "notas": "Passos 5 e 6 do runbook. Personalização do e-mail frio.",
+      "recebe_de": [
+        "porteiro"
+      ],
+      "passa_para": [],
+      "url_notion": null
+    },
+    {
+      "id": "escrivao",
+      "nome": "escrivão",
+      "camada": "Captação",
+      "status": "Planejado",
+      "arquivo": ".claude/agents/escrivao.md",
+      "aprovado": false,
+      "memory": false,
+      "tools": [
+        "Read",
+        "Write",
+        "Edit"
+      ],
+      "notas": "Passos 7 e 8 do runbook. Registra o toque no CRM e arma o cooldown de 60 dias.",
+      "recebe_de": [],
+      "passa_para": [],
+      "url_notion": null
     }
   ],
   "tubos": [
+    {
+      "de": "copywriter-paaps",
+      "para": "aplicador-visual"
+    },
+    {
+      "de": "buscador-fotos",
+      "para": "aplicador-visual"
+    },
     {
       "de": "critico-design",
       "para": "aplicador-visual"
@@ -204,24 +310,40 @@
       "para": "critico-design"
     },
     {
-      "de": "radar",
-      "para": "tecela"
-    },
-    {
-      "de": "paaps-brasil",
-      "para": "tecela"
-    },
-    {
       "de": "tecela",
       "para": "copywriter-paaps"
     },
     {
       "de": "radar",
+      "para": "tecela"
+    },
+    {
+      "de": "paaps-brasil",
+      "para": "tecela"
+    },
+    {
+      "de": "copywriter-paaps",
+      "para": "buscador-fotos"
+    },
+    {
+      "de": "radar",
       "para": "copywriter-paaps"
     },
     {
       "de": "paaps-brasil",
       "para": "copywriter-paaps"
+    },
+    {
+      "de": "buscador-leads",
+      "para": "porteiro"
+    },
+    {
+      "de": "porteiro",
+      "para": "buscador-leads"
+    },
+    {
+      "de": "porteiro",
+      "para": "carta-fria"
     }
   ],
   "nao_resolvidos": [
@@ -282,6 +404,55 @@
       "texto_original": "Mallu (para gravação e publicação)"
     },
     {
+      "agente": "aplicador-visual",
+      "agente_nome": "aplicador-visual",
+      "campo": "recebe_de",
+      "fragmento": "texto",
+      "texto_original": "copywriter-paaps (texto, slide a slide) + buscador-fotos (fotos com URL, crédito e licença)"
+    },
+    {
+      "agente": "aplicador-visual",
+      "agente_nome": "aplicador-visual",
+      "campo": "recebe_de",
+      "fragmento": "slide a slide",
+      "texto_original": "copywriter-paaps (texto, slide a slide) + buscador-fotos (fotos com URL, crédito e licença)"
+    },
+    {
+      "agente": "aplicador-visual",
+      "agente_nome": "aplicador-visual",
+      "campo": "recebe_de",
+      "fragmento": "fotos com URL",
+      "texto_original": "copywriter-paaps (texto, slide a slide) + buscador-fotos (fotos com URL, crédito e licença)"
+    },
+    {
+      "agente": "aplicador-visual",
+      "agente_nome": "aplicador-visual",
+      "campo": "recebe_de",
+      "fragmento": "crédito e licença",
+      "texto_original": "copywriter-paaps (texto, slide a slide) + buscador-fotos (fotos com URL, crédito e licença)"
+    },
+    {
+      "agente": "aplicador-visual",
+      "agente_nome": "aplicador-visual",
+      "campo": "passa_para",
+      "fragmento": "critico-design   e Mallu",
+      "texto_original": "critico-design (auditoria) e Mallu (entrega final no Drive)"
+    },
+    {
+      "agente": "aplicador-visual",
+      "agente_nome": "aplicador-visual",
+      "campo": "passa_para",
+      "fragmento": "auditoria",
+      "texto_original": "critico-design (auditoria) e Mallu (entrega final no Drive)"
+    },
+    {
+      "agente": "aplicador-visual",
+      "agente_nome": "aplicador-visual",
+      "campo": "passa_para",
+      "fragmento": "entrega final no Drive",
+      "texto_original": "critico-design (auditoria) e Mallu (entrega final no Drive)"
+    },
+    {
       "agente": "critico-design",
       "agente_nome": "critico-design",
       "campo": "recebe_de",
@@ -315,6 +486,34 @@
       "campo": "passa_para",
       "fragmento": "antes de publicar",
       "texto_original": "Aplicador Visual (correções) / agente de canal (antes de publicar)"
+    },
+    {
+      "agente": "tecela",
+      "agente_nome": "tecela",
+      "campo": "recebe_de",
+      "fragmento": "20 pautas",
+      "texto_original": "radar (20 pautas) + @paaps.brasil (leitura do perfil e falas do público)"
+    },
+    {
+      "agente": "tecela",
+      "agente_nome": "tecela",
+      "campo": "recebe_de",
+      "fragmento": "leitura do perfil e falas do público",
+      "texto_original": "radar (20 pautas) + @paaps.brasil (leitura do perfil e falas do público)"
+    },
+    {
+      "agente": "buscador-fotos",
+      "agente_nome": "buscador-fotos-photobank",
+      "campo": "recebe_de",
+      "fragmento": "carrossel escrito",
+      "texto_original": "copywriter-paaps (carrossel escrito, com a cena pedida por slide)"
+    },
+    {
+      "agente": "buscador-fotos",
+      "agente_nome": "buscador-fotos-photobank",
+      "campo": "recebe_de",
+      "fragmento": "com a cena pedida por slide",
+      "texto_original": "copywriter-paaps (carrossel escrito, com a cena pedida por slide)"
     },
     {
       "agente": "radar",
@@ -418,36 +617,57 @@
       "agente": "copywriter-paaps",
       "agente_nome": "copywriter-paaps",
       "campo": "passa_para",
-      "fragmento": "Mallu",
-      "texto_original": "Mallu (carrossel, primeira rodada para validação)"
+      "fragmento": "carrossel escrito",
+      "texto_original": "buscador-fotos (carrossel escrito, cena por slide)"
     },
     {
       "agente": "copywriter-paaps",
       "agente_nome": "copywriter-paaps",
       "campo": "passa_para",
-      "fragmento": "carrossel",
-      "texto_original": "Mallu (carrossel, primeira rodada para validação)"
+      "fragmento": "cena por slide",
+      "texto_original": "buscador-fotos (carrossel escrito, cena por slide)"
     },
     {
-      "agente": "copywriter-paaps",
-      "agente_nome": "copywriter-paaps",
+      "agente": "porteiro",
+      "agente_nome": "porteiro",
+      "campo": "recebe_de",
+      "fragmento": "n8n",
+      "texto_original": "n8n (toque semanal) + buscador-leads"
+    },
+    {
+      "agente": "porteiro",
+      "agente_nome": "porteiro",
+      "campo": "recebe_de",
+      "fragmento": "toque semanal",
+      "texto_original": "n8n (toque semanal) + buscador-leads"
+    },
+    {
+      "agente": "porteiro",
+      "agente_nome": "porteiro",
       "campo": "passa_para",
-      "fragmento": "primeira rodada para validação",
-      "texto_original": "Mallu (carrossel, primeira rodada para validação)"
+      "fragmento": "buscador-leads e carta-fria",
+      "texto_original": "buscador-leads e carta-fria"
     },
     {
-      "agente": "tecela",
-      "agente_nome": "tecela",
-      "campo": "recebe_de",
-      "fragmento": "20 pautas",
-      "texto_original": "radar (20 pautas) + @paaps.brasil (leitura do perfil e falas do público)"
+      "agente": "carta-fria",
+      "agente_nome": "carta-fria",
+      "campo": "passa_para",
+      "fragmento": "Mallu e n8n",
+      "texto_original": "Mallu e n8n"
     },
     {
-      "agente": "tecela",
-      "agente_nome": "tecela",
+      "agente": "escrivao",
+      "agente_nome": "escrivão",
       "campo": "recebe_de",
-      "fragmento": "leitura do perfil e falas do público",
-      "texto_original": "radar (20 pautas) + @paaps.brasil (leitura do perfil e falas do público)"
+      "fragmento": "n8n e carta-fria",
+      "texto_original": "n8n e carta-fria"
+    },
+    {
+      "agente": "escrivao",
+      "agente_nome": "escrivão",
+      "campo": "passa_para",
+      "fragmento": "CRM Notion e n8n",
+      "texto_original": "CRM Notion e n8n"
     }
   ],
   "sem_arquivo": [
@@ -459,8 +679,8 @@
     },
     {
       "nome": "buscador-captação",
-      "notas": "⚠️ EM CONSTRUÇÃO",
-      "status": null,
+      "notas": "⚠️ EM CONSTRUÇÃO. NÃO CONFUNDIR com o buscador-leads.",
+      "status": "Planejado",
       "motivo": "Campo \"Arquivo\" vazio no Notion: sem .md correspondente, nao da para gerar um id estavel e o registro nao vira no do dashboard."
     }
   ]
