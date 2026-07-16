@@ -23,7 +23,7 @@
 1. Entre em `https://resend.com` e clique em **Sign up**.
 2. Crie a conta com o e-mail da PAAPS.
 3. O plano gratuito basta por enquanto: envia até 100 e-mails por dia, que cobre a meta de
-   100 por semana com folga.
+   15 por semana com folga enorme (ver `cadencia.md`).
 
 ## Passo 2: adicionar o domínio
 

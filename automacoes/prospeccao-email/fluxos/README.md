@@ -9,16 +9,18 @@ os dados das pessoas.
 ## O pipeline que estes fluxos executam
 
 1. Início segunda-feira 8h.
-2. Captura de 100 organizações com base no ICP.
+2. Captura de organizações com base no ICP, até fechar a meta da semana (15, ver `../cadencia.md`).
 3. Escolha do molde e da estratégia de personalização.
 4. Pesquisa individual de cada lead pelo Claude Code, com nota 0 a 100.
 5. Montagem estética do e-mail personalizado.
-6. Envio dos 100 e-mails ao longo do dia (ver `../cadencia.md`).
-7. Retorno de eventos (entregue, aberto, respondido) para o CRM (ver `../metricas.md`).
+6. Gate de aprovação da Mallu: nenhum e-mail segue sem ela ver (ver `../regras-prospeccao.md`).
+7. Envio dos e-mails aprovados ao longo do dia (ver `../cadencia.md`).
+8. Retorno de eventos (entregue, aberto, respondido) para o CRM (ver `../metricas.md`).
 
-> Divisão de trabalho: o Claude Code faz os passos 3 a 5 (personalização, em sessão) e
-> o n8n faz os passos 2, 6 e 7 (captura, disparo via Resend e retorno de eventos). O
-> Claude Code entrega os e-mails prontos; o n8n dispara e devolve os eventos ao CRM.
+> Divisão de trabalho: o Claude Code faz os passos 3 a 5 (personalização, em sessão), a
+> Mallu faz o passo 6 (aprovação) e o n8n faz os passos 2, 7 e 8 (captura, disparo via
+> Resend e retorno de eventos). O Claude Code entrega os e-mails; a Mallu aprova; o n8n
+> dispara só os aprovados e devolve os eventos ao CRM.
 
 ## Regra de segredos (obrigatória antes de commitar)
 
