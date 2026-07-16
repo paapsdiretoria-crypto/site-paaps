@@ -3,6 +3,7 @@
 import { Cena } from './cena.js';
 import { Fluxo, MODO, ESTADO } from './fluxo.js';
 import { carregarConstelacao } from './dados.js';
+import { PonteCliente } from './ponte.js';
 
 const el = {
   botao: document.getElementById('botao'),
@@ -71,6 +72,42 @@ fluxo = new Fluxo(dados);
 
 el.fluxoNome.textContent = `Fluxo 01 · ${dados.nome}`;
 
+// ------------------------------------------------------- ponte de execução real
+
+const ponte = new PonteCliente();
+
+// A ponte decide o modo. Sem servidor ou sem chave, fica simulação: o dashboard
+// funciona igual, só não executa nem cobra nada.
+ponte.aoStatus = ({ conectado, temChave, motivo }) => {
+  const antes = fluxo.modo;
+  fluxo.modo = conectado && temChave ? MODO.REAL : MODO.SIMULACAO;
+  if (fluxo.modo === antes) return;
+
+  if (fluxo.modo === MODO.REAL) {
+    registrar('Ponte conectada com chave de API: execução REAL ligada. Cada ciclo gasta crédito.', 'marco');
+  } else if (motivo === 'sem-servidor' || motivo === 'arquivo-local') {
+    registrar('Sem servidor-ponte: modo simulação. Abra pelo ABRIR-DASHBOARD.command para execução real.', 'aviso');
+  } else if (conectado && !temChave) {
+    registrar('Ponte conectada, mas sem ANTHROPIC_API_KEY: modo simulação. Cole a chave em ponte/.env.', 'aviso');
+  }
+  renderizar();
+};
+
+// Cada evento real do servidor entra no motor, que o traduz para os ganchos.
+ponte.aoEvento = (ev) => {
+  if (ev.tipo === 'aviso') return registrar(ev.texto, 'aviso');
+  if (ev.tipo === 'erro') return registrar(`Erro em ${ev.id || 'ponte'}: ${ev.texto}`, 'aviso');
+  fluxo.receberEvento(ev);
+};
+
+// O motor, no modo real, delega para a ponte em vez de rodar o relógio.
+fluxo.aoRodarReal = (a) => ponte.rodar(a);
+
+// pensando/fazendo/achando de verdade vão direto para a televisão do agente.
+fluxo.aoFala = (id, faixa, texto) => cena.atualizarVisor(id, { [faixa]: texto });
+
+ponte.conectar();
+
 // ------------------------------------------------------- coluna da tripulação
 
 dados.agentes.forEach((a) => {
@@ -121,18 +158,27 @@ function renderizar() {
     // Sem trilha declarada não existe porcentagem honesta: mostra o traço.
     card.querySelector('[data-pct]').textContent = semTrilha && ativo ? '- -' : pct(p);
 
-    cena.atualizarVisor(a.id, {
+    // No modo real, as faixas fazendo/achando são preenchidas pelos eventos da
+    // ponte (aoFala), não aqui: por isso só mandamos o placeholder em simulação.
+    const dadosVisor = {
       nome: a.nome,
       acordado: ativo || est === ESTADO.AGUARDANDO_MALLU,
       etapa: fluxo.etapa.get(a.id),
-      pensando: fluxo.etapa.get(a.id),
-      fazendo: simulando ? 'sem execução real: aguardando o servidor-ponte' : '',
-      achando: simulando ? 'nenhum dado colhido nesta simulação' : '',
       progresso: p,
       semProgresso: semTrilha,
       pausado: est === ESTADO.AGUARDANDO_MALLU,
       simulacao: simulando
-    });
+    };
+    if (simulando) {
+      // Em simulação, o motor é a única fonte: PENSANDO espelha a etapa, e as
+      // outras faixas dizem a verdade (não há execução por trás).
+      dadosVisor.pensando = fluxo.etapa.get(a.id);
+      dadosVisor.fazendo = 'sem execução real: aguardando o servidor-ponte';
+      dadosVisor.achando = 'nenhum dado colhido nesta simulação';
+    }
+    // No modo real, pensando/fazendo/achando são donos de aoFala: não os toco
+    // aqui, senão o raciocínio real seria sobrescrito pela etapa a cada quadro.
+    cena.atualizarVisor(a.id, dadosVisor);
   });
 
   // O botão do console muda de papel conforme o agente atracado.
@@ -263,9 +309,19 @@ function enviar(modo) {
   const texto = el.consoleMsg.value.trim();
   if (!texto || !atracado) return;
   fluxo.enviarMensagem(atracado.id, texto, modo);
+
+  if (fluxo.modo === MODO.REAL) {
+    // No modo real a mensagem chega ao agente que está rodando. Interromper
+    // pede o interrupt do SDK primeiro; a nova direção segue como input.
+    if (modo === 'interromper') ponte.interromper(atracado.id);
+    ponte.mensagem(atracado.id, texto);
+    el.consoleNota.textContent =
+      modo === 'interromper' ? 'Interrompido: a nova direção foi enviada.' : 'Enviada ao agente.';
+  } else {
+    el.consoleNota.textContent =
+      'Guardada na fila deste agente. Entrega real depende do servidor-ponte.';
+  }
   el.consoleMsg.value = '';
-  el.consoleNota.textContent =
-    'Guardada na fila deste agente. Entrega real depende do servidor-ponte.';
 }
 
 el.consoleEnviar.addEventListener('click', () => enviar('enfileirar'));

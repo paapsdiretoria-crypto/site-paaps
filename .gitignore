@@ -42,3 +42,7 @@ codigo/dashboard/js/config.js
 *.dmg
 *.app/
 .playwright-mcp/
+
+# Constelação: deps e chave da ponte
+codigo/dashboard-agentes/ponte/node_modules/
+codigo/dashboard-agentes/ponte/.env
