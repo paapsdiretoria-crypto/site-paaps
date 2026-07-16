@@ -13,7 +13,9 @@ import { TRILHAS } from './trilhas.js';
 export const FLUXOS = {
   carrossel: {
     nome: 'Produção de Conteúdo',
-    final: 'copywriter-paaps'
+    // O fluxo termina em quem entrega para a Mallu. Com os 6 agentes, é o
+    // Aplicador Visual (o Copywriter passou a entregar para o Buscador de Fotos).
+    final: 'aplicador-visual'
   }
 };
 

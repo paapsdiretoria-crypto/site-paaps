@@ -23,6 +23,23 @@ Você é o último antes da Mallu. O que sair de você é o que ela vai ver.
 Antes de publicar, chame o **critico-design** (`Agent`). Ele audita a peça contra a identidade PAAPS e as
 Web Interface Guidelines. Não pule: é mais barato ele achar o erro que a Mallu.
 
+## Anúncio de etapa (obrigatório)
+
+Ao ENTRAR em cada etapa, escreva uma linha isolada, exatamente neste formato:
+
+```
+>>> ETAPA texto
+```
+
+Os ids, na ordem: `recebe`, `copia`, `texto`, `fotos`, `identidade`, `anti-padroes`, `critico`,
+`export`, `drive`. Anuncie ao começar a etapa, nunca ao terminar. É como a Mallu acompanha o seu
+andamento na tela de controle.
+
+O `critico` é a chamada ao critico-design: ao anunciá-lo, você está entregando a peça para a
+auditoria antes de exportar. Não pule.
+
+---
+
 ## Antes de começar
 
 1. `insumos-compartilhados/nucleo-comum/identidade-aplicada.md`: **o seu manual.** Paleta, tipografia,
