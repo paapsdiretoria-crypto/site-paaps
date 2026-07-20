@@ -596,8 +596,45 @@ body {
   color: var(--cor-terracota);
 }
 
+/* ------------------------------------------------- seletor de fluxo (01/02) */
+/* Liga o Fluxo 01 (conteúdo, index.html) ao Fluxo 02 (prospecção,
+   estacao-prospeccao.html). Um dashboard, dois fluxos, o mesmo universo. */
+
+.seletor-fluxo {
+  display: flex;
+  gap: 4px;
+  pointer-events: auto;
+  background: var(--vidro);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  padding: 3px;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.seletor-fluxo .aba {
+  font-family: var(--fonte-titulo);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--cor-bege-rosa);
+  padding: 6px 13px;
+  border-radius: 3px;
+  transition: background 0.18s, color 0.18s;
+}
+
+.seletor-fluxo .aba:hover { color: var(--cor-fundo); }
+
+.seletor-fluxo .aba.ativa {
+  background: var(--cor-amarelo);
+  color: #0b0805;
+}
+
 /* --------------------------------------------------------------- ajustes */
 
 @media (max-width: 1080px) {
   .tripulacao, .registro { display: none; }
+  .seletor-fluxo .aba { padding: 6px 9px; font-size: 10px; }
 }
