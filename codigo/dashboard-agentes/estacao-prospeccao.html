@@ -507,7 +507,7 @@
     // ---------------------------------------------------------------- o ciclo (máquina de estados da demo)
     // Um relógio dispara uma sonda a cada ~2.6s. A sonda vai ao portão, a Mallu
     // decide (a maioria aprova), e ela cruza para um planeta ou volta ao pátio.
-    let proximaSonda = 1.5;
+    let proximaSonda = 0.8;
     function pegarPlaneta() {
       // Prefere planetas apagados e fora de cooldown (a regra dos 60 dias).
       const livres = planetas.filter((p) => p.userData.cooldown <= 0 && p.userData.alvoAceso < 0.5);
@@ -530,10 +530,17 @@
     }
 
     // ---------------------------------------------------------------- laço de animação
-    const relogio = new THREE.Clock();
+    // Relógio de parede próprio (performance.now), em vez de THREE.Clock: o teto
+    // de dt garante que, se a aba engasgar ou ficar em segundo plano, a cena se
+    // recupera suave em vez de saltar, e o tempo de simulação sempre avança.
+    let ultimoQuadro = 0;
+    let tempo = 0;
     function quadro() {
-      const dt = Math.min(relogio.getDelta(), 0.05);
-      const t = relogio.getElapsedTime();
+      const agora = performance.now() / 1000;
+      const dt = Math.min(agora - (ultimoQuadro || agora), 0.1);
+      ultimoQuadro = agora;
+      tempo += dt;
+      const t = tempo;
 
       dispararCiclo(dt);
 
