@@ -46,11 +46,25 @@
       display: block; margin-top: 4px; font-weight: 600; font-size: 12px;
       letter-spacing: 3px; color: var(--amarelo); text-transform: uppercase;
     }
-    .topo .maquete {
-      display: inline-block; margin-top: 10px; padding: 3px 9px;
-      border: 1px solid var(--creamRosa); border-radius: 3px;
-      font-weight: 600; font-size: 10px; letter-spacing: 3px; color: var(--creamRosa);
+    /* Seletor de fluxo: o mesmo do Fluxo 01, para a estação viver no mesmo dash. */
+    .seletor-fluxo {
+      display: inline-flex; gap: 4px; margin-top: 12px;
+      background: rgba(245,241,225,0.06); border: 1px solid rgba(245,241,225,0.16);
+      border-radius: 4px; padding: 3px; backdrop-filter: blur(6px);
     }
+    .seletor-fluxo .aba {
+      font-family: "League Spartan", Arial, sans-serif; font-size: 11px; font-weight: 600;
+      letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none;
+      color: var(--creamRosa); padding: 6px 13px; border-radius: 3px;
+      transition: background .18s, color .18s;
+    }
+    .seletor-fluxo .aba:hover { color: var(--cream); }
+    .seletor-fluxo .aba.ativa { background: var(--amarelo); color: #0b0805; }
+    .legenda .fonte {
+      margin-top: 6px; padding-top: 12px; border-top: 1px solid rgba(174,163,73,0.2);
+      font-size: 11px; line-height: 1.4; color: var(--creamRosa);
+    }
+    .legenda .fonte b { color: var(--amarelo); font-weight: 700; }
 
     /* Legenda do que cada coisa significa. */
     .legenda {
@@ -105,7 +119,10 @@
   <header class="topo">
     <h1>Estação de Prospecção Fria</h1>
     <span class="sub">Fluxo 02 · os missionários da mensagem</span>
-    <span class="maquete">Maquete · direção visual para aprovar</span>
+    <nav class="seletor-fluxo">
+      <a href="index.html" class="aba">01 · Conteúdo</a>
+      <a href="estacao-prospeccao.html" class="aba ativa">02 · Prospecção</a>
+    </nav>
   </header>
 
   <aside class="legenda">
@@ -120,6 +137,7 @@
       <li><span class="ponto" style="background:var(--oliva)"></span>
         <span>Os <b>planetas</b> são as prefeituras. Acendem ao receber, brilham de volta se respondem.</span></li>
     </ul>
+    <p class="fonte" id="fonte-crew">tripulação lida do <b>Banco de Agentes</b> no Notion</p>
   </aside>
 
   <aside class="narracao">
@@ -327,12 +345,39 @@
 
     // ---------------------------------------------------------------- os 4 agentes (uniforme amarelo)
     // Missionários: figura simplificada da Constelação, mas com o traje amarelo.
+    // Regra de ouro do dashboard: a fonte da verdade é o Notion, nunca o código.
+    // A posição visual de cada agente (ang, papel) mora aqui, mas nome e status
+    // vêm do MESMO dados/constelacao.json que alimenta o Fluxo 01. Se o Notion
+    // renomear ou tirar um agente da prospecção, a estação acompanha.
     const AGENTES = [
       { id: 'porteiro', nome: 'porteiro', papel: 'a porta', ang: 2.4 },
       { id: 'buscador-leads', nome: 'buscador-leads', papel: 'busca ativa', ang: 3.5 },
       { id: 'carta-fria', nome: 'carta-fria', papel: 'a carta', ang: 4.6 },
       { id: 'escrivao', nome: 'escrivão', papel: 'a memória', ang: 5.7 }
     ];
+
+    // Enriquece com os dados reais do Banco de Agentes. Fetch relativo: funciona
+    // servido pelo mesmo http.server do dashboard. Aberto sem servidor (file://),
+    // o fetch falha e a estação segue com os nomes padrão, sem quebrar.
+    let statusCrew = 'Planejado';
+    try {
+      const resp = await fetch('dados/constelacao.json');
+      if (resp.ok) {
+        const bruto = await resp.json();
+        const porId = new Map((bruto.agentes || []).map((a) => [a.id, a]));
+        AGENTES.forEach((a) => {
+          const real = porId.get(a.id);
+          if (real) { a.nome = real.nome; a.status = real.status; a.notas = real.notas; }
+        });
+        const st = AGENTES.map((a) => a.status).filter(Boolean);
+        if (st.length && st.every((s) => s === st[0])) statusCrew = st[0];
+      }
+    } catch (e) {
+      // standalone: mantém os nomes padrão da lista acima.
+    }
+    // Espelha o status real da tripulação na legenda.
+    const elFonte = document.getElementById('fonte-crew');
+    if (elFonte) elFonte.innerHTML = 'tripulação lida do <b>Banco de Agentes</b> no Notion · hoje <b>' + statusCrew + '</b>';
 
     function missionario(nome) {
       const g = new THREE.Group();
