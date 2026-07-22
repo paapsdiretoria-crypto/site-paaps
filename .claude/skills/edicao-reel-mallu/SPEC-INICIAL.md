@@ -153,21 +153,41 @@ Cinco modos são muitos para uma identidade nascendo. Proposta de recorte:
 
 **Regra de mistura:** no máximo três modos por reel. D não convive com A nem com B.
 
-### Tipografia: o que falta comprar ou baixar
+### Tipografia: IMPACT (definida pela Mallu em 22/07/2026)
 
-Hoje o repositório tem `League Spartan`, `Evermore`, `Caveat` e `Barlow Condensed`.
-A identidade dela pede duas famílias que ainda não existem aqui:
+**A grotesca do perfil é `Impact`.** Não é League Spartan: o perfil pessoal tem fonte
+própria. League Spartan fica sendo o vínculo com o PAAPS, quando ela falar de lá.
 
-| Papel | Referência | Candidata gratuita | Candidata paga |
-|---|---|---|---|
-| Grotesca pesada (modo A) | a das refs "no brasil" e "hooks" | `Anton`, `Archivo Black`, `Sofia Sans Condensed` | `Druk`, `Söhne Breit` |
-| Serifada de alto contraste (modo B) | a da ref "Pertencimento" | `Playfair Display`, `Bodoni Moda` | `Canela`, `Tiempos Headline` |
+Consequências práticas de escolher Impact:
 
-**Decisão pendente:** confirmar se a identidade da Mallu usa `League Spartan` (o que a
-aproxima do PAAPS e cria família) ou uma grotesca própria (o que a separa). Minha
-recomendação: **grotesca própria no modo A, para o perfil pessoal ter corpo próprio**, e
-serifada no modo B. League Spartan fica sendo o vínculo com o PAAPS quando ela falar de
-lá.
+- **Peso único.** Impact não tem light, regular nem black. Toda hierarquia sai de
+  TAMANHO e de COR, nunca de peso. Isso simplifica: não existe a tentação de "deixa
+  semibold aqui".
+- **Acentuação completa em caixa alta.** Impact tem Ê, Ã, Ç e Õ em capitular. O acidente
+  da referência "no brasil VOCê" não se repete aqui, e não vira regra.
+- **Entressilhas já apertadas por padrão.** Casa direto com o `line-height` 0,82-0,90 do
+  modo A. Aplicar `letter-spacing` levemente negativo (-0,01em a -0,02em) e não mais que
+  isso, senão as hastes colam.
+- **Só caixa alta.** Impact em caixa baixa fica pesado e mal espaçado. Todo texto em
+  Impact vai `text-transform: uppercase`.
+
+**Risco a controlar:** Impact é a fonte de meme por associação histórica. O que produz
+essa leitura é a receita completa (branco puro, contorno preto duro, caixa alta
+centralizada em cima e embaixo do quadro), não a fonte sozinha. Nesta identidade nada
+disso acontece: cor de marca sólida, sem contorno, alinhado à esquerda, entrelinha
+travada. Nessa configuração Impact lê como cartaz de protesto e capa de disco, que é
+exatamente o lugar dela. **A proibição de contorno e de sombra visível (seção 4) é o que
+segura isso. Não afrouxar.**
+
+**Arquivo:** `/System/Library/Fonts/Supplemental/Impact.ttf`, já presente no Mac dela.
+Impact é da Monotype e vem licenciada com o sistema operacional: **não commitar o `.ttf`
+no repositório.** O `ingest.py` copia do sistema para `public/fonts/` na criação do
+projeto, e `public/fonts/Impact.ttf` entra no `.gitignore`. Se o render um dia rodar em
+outra máquina sem a fonte, o fallback é `Anton` (gratuita, OFL, desenho muito próximo).
+
+**Pendente:** o modo B pede uma serifada de alto contraste, que Impact não cobre.
+Candidatas gratuitas: `Playfair Display`, `Bodoni Moda`. Pagas: `Canela`,
+`Tiempos Headline`. Ver seção 7.
 
 ---
 
@@ -202,7 +222,7 @@ palavra de cor diferente no meio da frase, sem contorno colorido.
 | Backdrop | Legenda inteira |
 |---|---|
 | Parede clara / branca (o caso mais comum) | **vinho `#6f0d33`** |
-| Fundo escuro, b-roll escuro, roupa escura | **branca** |
+| Fundo escuro, b-roll escuro, roupa escura | **bege `#f5f1e0`** (o "branco" da paleta, nunca `#ffffff`) |
 
 Num vídeo de cenário misto a cor troca no ponto de troca do cenário, não no meio de uma
 frase.
@@ -336,10 +356,46 @@ Só ganha corpo depois que 3, 4 e 5 estiverem decididos. Sequência prevista:
 2. ~~**Rosto**~~ RESOLVIDO em 22/07/2026: dois regimes na seção 5. Gancho e destaques
    cruzam o rosto com revelação por clique; continuação mantém o rosto limpo, acima da
    cabeça ou no peito conforme o enquadramento.
-3. **Branco:** o branco do fundo escuro é o bege da paleta `#f5f1e0` ou branco puro
-   `#ffffff`?
-4. **Tipografia:** grotesca própria (separa do PAAPS) ou League Spartan (cria família)?
-5. **Modos:** os cinco entram, ou começamos com três (A, B, E) e abrimos C e D depois do
+3. ~~**Branco**~~ RESOLVIDO em 22/07/2026: é o bege da paleta `#f5f1e0`. Branco puro
+   `#ffffff` não existe nesta identidade.
+4. ~~**Tipografia**~~ RESOLVIDO em 22/07/2026: `Impact`, grotesca própria do perfil.
+5. ~~**Perfil**~~ RESOLVIDO em 22/07/2026: ver seção 8.
+6. **Modos:** os cinco entram, ou começamos com três (A, B, E) e abrimos C e D depois do
    primeiro reel entregue?
-6. **Perfil:** esta identidade é do @amalluvasconcellos, do @psimalluvasconcellos, ou os
-   dois compartilham?
+7. **Serifada do modo B:** Impact não cobre esse papel. `Playfair Display` ou
+   `Bodoni Moda` (gratuitas), `Canela` ou `Tiempos Headline` (pagas). Alternativa: cortar
+   o modo B por ora e resolver a identidade só com Impact.
+
+---
+
+## 8. De quem é esta identidade
+
+**Perfil: `@malluvasconcellos` no Instagram.** Um só.
+
+A confusão de handles no repositório vem de uma sequência de trocas de @ feitas pela
+própria Mallu nos últimos dias. O repositório ainda carrega os dois nomes antigos:
+`conteudo/instagram/amalluvasconcellos/`, os agentes `mallu-reels`, `mallu-carrossel` e
+`mallu-linkedin`, e a seção v4 do `edicao-reel-paaps` que fala em `@psimalluvasconcellos`.
+Nada disso é um perfil separado: é o mesmo perfil em momentos diferentes.
+
+**Posicionamento atual, e ele explica a identidade inteira:** marca pessoal
+**MALLU VASCONCELLOS**, sem "Psi" na frente. A decisão é deliberada e tem duas razões que
+ela deu:
+
+1. Ela ainda é estudante. "Psi" no handle daria a entender que já é psicóloga formada, o
+   que não é verdade e traria problema de conselho profissional.
+2. O perfil já foi pessoal dela. Ela ainda está decidindo se quer usar o Instagram para
+   captar pacientes, e não quer que a estrutura visual force essa direção antes da
+   decisão estar tomada.
+
+**Consequência de projeto:** esta identidade é de AUTORA e de PENSAMENTO, não de
+consultório. Nada de linguagem de atendimento clínico, agendamento, "agende sua consulta",
+CRP no rodapé ou estética de perfil de terapeuta. Impact em vinho sobre parede clara
+comunica exatamente isso: uma pessoa que pensa em público, não um serviço à venda.
+
+Se em algum momento ela decidir abrir o consultório no perfil, essa decisão volta como
+mudança de identidade, e não como um card de CTA colado por cima desta.
+
+**Faxina pendente (não fazer agora, fazer quando ela pedir):** renomear a pasta
+`conteudo/instagram/amalluvasconcellos/` e corrigir os handles nos três agentes e na
+seção v4 do `edicao-reel-paaps`. É mexida de infraestrutura e merece sessão própria.
