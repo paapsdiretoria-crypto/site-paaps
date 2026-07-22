@@ -331,15 +331,18 @@ pensamento.
 Ou seja, a tela tem dois regimes e eles se alternam ao longo do reel:
 
 ### Regime 1: destaque (gancho, virada, frase-âncora)
-- O bloco pode cruzar o rosto, ocupando o centro
+- O bloco vive na **faixa neutra** (ver 5.0), ancorado pelo pé junto ao topo da cabeça
+- Pode encostar na testa e no alto do cabelo. Não pode tapar o rosto nem subir para a
+  faixa da interface
 - Poucos por reel: o gancho e um ou dois beats de virada
 - Sempre com a revelação por clique (ver 5.1)
 - Modos A, B e C vivem aqui
 
 ### Regime 2: continuação (a maior parte do texto falado)
 - Rosto limpo, sempre
-- A legenda vai **acima da cabeça** ou **no colo/peito**, escolhido pelo ENQUADRAMENTO
+- A legenda vai na **faixa neutra** ou no **colo/peito**, escolhido pelo ENQUADRAMENTO
   daquele trecho, não por uma faixa fixa em pixels
+- Nunca colada na borda de cima: ali é a interface do Instagram
 - Plano fechado, cabeça alta no quadro: legenda no peito
 - Plano aberto, cabeça no terço superior com parede sobrando em cima: legenda acima da
   cabeça
@@ -349,6 +352,58 @@ Ou seja, a tela tem dois regimes e eles se alternam ao longo do reel:
 Regra prática de execução: antes de escrever o layout, tirar um frame de cada trecho e
 marcar onde está a linha do queixo e onde está o topo da cabeça. A posição da legenda sai
 desse mapa, nunca de uma margem herdada do PAAPS.
+
+### 5.0 A FAIXA NEUTRA: onde o texto de cima realmente mora
+
+Corrigido pela Mallu em 22/07/2026, depois de ver o primeiro reel publicado. Era o erro
+mais grosseiro da v1 e vale para todo reel daqui em diante.
+
+**O problema:** eu tratei a tela como se tivesse só dois lugares, o rosto e o topo do
+quadro. Então ou o texto tapava o rosto, ou ia para `y=150`, colado na borda de cima. Não
+existia meio-termo. E `y=150` é justamente onde o **Instagram desenha as palavras dele**:
+o cabeçalho do Reels, o nome do perfil, os controles. O resultado no aplicativo é uma
+papa de palavras amontoadas, minhas e da plataforma, no mesmo lugar.
+
+**O que existe de fato entre as duas coisas:** uma faixa larga e limpa entre o fim da
+interface do Instagram e o topo da cabeça dela. É ali que o texto de cima mora. Nem
+colado na borda, nem sobre o rosto.
+
+```
+y=0     ┌─────────────────────────┐
+        │  INTERFACE DO INSTAGRAM │  proibido: a plataforma escreve aqui
+y≈320   ├─────────────────────────┤
+        │                         │
+        │      FAIXA NEUTRA       │  <- o texto de cima vive AQUI
+        │                         │
+y=?     ├─────────────────────────┤  topo da cabeça (medido por vídeo)
+        │         ROSTO           │
+```
+
+**Regra de ancoragem, e é a mudança de fundo:** o bloco de cima **ancora pelo PÉ, junto ao
+topo da cabeça, e cresce para cima**. Nunca ancora pelo topo do quadro. Assim ele fica
+sempre perto do rosto, respirando com ele, e sobra automaticamente a distância da
+interface. Uma frase de duas linhas e uma de quatro terminam no mesmo lugar; o que muda é
+onde começam.
+
+**Quando a faixa neutra não comporta o texto:** o bloco desce para o peito. Ele **não
+invade a faixa da interface** para ganhar espaço. Se não cabe em cima, não é lugar dele.
+
+**Números de trabalho** (1080×1920, Instagram Reels), a confirmar contra um print real
+do aplicativo:
+
+| Zona | Faixa | Por quê |
+|---|---|---|
+| Interface do topo | `y 0 .. 320` | Barra de status, cabeçalho do Reels |
+| Faixa neutra | `y 320 .. topo da cabeça` | Onde o texto de cima mora |
+| Trilho de ações | `x 880 .. 1080` | Curtir, comentar, compartilhar, áudio |
+| Interface de baixo | `y 1500 .. 1920` | Legenda, @, faixa de áudio |
+
+O topo da cabeça é medido por vídeo, nunca estimado. A faixa útil do peito fica entre o
+queixo e `y=1500`.
+
+**Verificação obrigatória:** antes de entregar, olhar o snapshot **imaginando a interface
+do Instagram por cima**. Se o texto encosta na zona onde a plataforma escreve, está
+errado, mesmo que o frame isolado pareça bonito. O reel não é visto no frame isolado.
 
 ### 5.1 Revelação por clique (assinatura sonora e visual)
 
@@ -427,7 +482,11 @@ Só ganha corpo depois que 3, 4 e 5 estiverem decididos. Sequência prevista:
   sobre fundo escuro. Sem palavra de outra cor no meio, exceto o conceito rosa do modo B.
 - **Nenhum texto vinho sobre fundo escuro** e nenhum texto branco sobre parede clara.
   Conferir nos PNGs do `snapshot`, não só no relatório do validador.
-- Todo beat de continuação tem o rosto limpo: legenda acima da cabeça ou no peito,
+- **Nenhum texto entra na faixa da interface do Instagram** (`y < 320` e o trilho de ações
+  à direita). Conferir o snapshot IMAGINANDO a interface por cima, não o frame isolado.
+- **Todo bloco de cima está ancorado pelo pé, junto ao topo da cabeça**, e não pela borda
+  do quadro. Se ele começa colado no topo, está errado.
+- Todo beat de continuação tem o rosto limpo: legenda na faixa neutra ou no peito,
   escolhido pelo enquadramento real daquele trecho
 - Só o gancho e os beats de destaque cruzam o rosto
 - Toda frase revelada palavra a palavra tem clique de trackpad em cada palavra
