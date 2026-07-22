@@ -25,7 +25,7 @@ Não crie skill para registrar como você resolveu um problema uma vez. Skill ex
 
 ## O ciclo RED-GREEN-REFACTOR para skills
 
-### RED — teste sem a skill
+### RED: teste sem a skill
 
 Despache um subagente sem o conteúdo da skill que você pretende criar. Dê a ele a mesma tarefa que a skill vai governar. Documente:
 
@@ -35,11 +35,11 @@ Despache um subagente sem o conteúdo da skill que você pretende criar. Dê a e
 
 Se o agente acertou sem a skill, você não precisa da skill. Outro mecanismo já governa aquele comportamento.
 
-### GREEN — escreva a skill
+### GREEN: escreva a skill
 
 A skill resolve exatamente o que o cenário de pressão revelou. Nada mais. Não tente prever todos os casos futuros. Resolva o que você viu falhar.
 
-### REFACTOR — feche brechas sem perder conformidade
+### REFACTOR: feche brechas sem perder conformidade
 
 Rode o cenário de pressão de novo, agora com a skill. Se o agente encontrou uma saída lateral ("tecnicamente estou cumprindo, mas estou driblando o espírito da regra"), adicione o contra-argumento. Atualize a tabela de racionalizações se necessário.
 
@@ -89,11 +89,11 @@ Antes de escrever o arquivo final, passe o texto pela `evita-padrao-ia-imersao-c
 Verifique especificamente:
 
 - Negrito em excesso: skills usam negrito só para gates e leis. Não para ênfase decorativa.
-- Gerúndio em cascata: "garantindo que o agente compreenda, executando cada etapa e verificando os resultados" — reescreva como afirmações diretas.
+- Gerúndio em cascata: "garantindo que o agente compreenda, executando cada etapa e verificando os resultados": reescreva como afirmações diretas.
 - Listas de três adjetivos: "claro, direto e objetivo" não diz nada. Diga o que o texto faz, não como ele é.
 - Abertura com contexto amplo: não comece com "No ecossistema PAAPS, criar skills eficazes é fundamental para...". Abra com o que a skill faz.
 - "Não é X, é Y": proibido em todo output PAAPS, inclusive skills.
-- Frases de preenchimento: "é importante destacar", "vale ressaltar", "cabe mencionar" — corte.
+- Frases de preenchimento: "é importante destacar", "vale ressaltar", "cabe mencionar": corte.
 
 ---
 
@@ -109,23 +109,32 @@ Verifique especificamente:
 8. Rode o cenário de pressão com a skill. Verifique conformidade
 9. Refine para fechar brechas. Não para adicionar escopo novo
 10. Passe pela auditoria anti-IA
-11. Salve em `.claude/skills/nome-da-skill.md`
+11. Salve em `.claude/skills/nome-da-skill/SKILL.md`
 12. Adicione a skill na tabela do CLAUDE.md raiz
-13. Registre no Banco de Skills do Notion (ver Passo 12 abaixo)
+13. Registre no Banco de Skills do Notion (ver Passo 13 abaixo)
 
 ---
 
 ## Onde salvar
 
-Skills PAAPS ficam em `.claude/skills/` na raiz do projeto.
+```
+.claude/skills/nome-da-skill/SKILL.md
+```
 
-Skills específicas para o site ficam em `site/.claude/skills/`.
+**Cada skill é uma pasta com `SKILL.md` dentro.** Arquivo `.md` solto em
+`.claude/skills/` não é carregado pelo Claude Code: foi a causa de um mês de erros
+"Unknown skill", corrigido em 06/07/2026. Salvar como `.claude/skills/nome.md`
+produz uma skill que existe no disco e nunca é acionada.
+
+Skills PAAPS ficam na raiz do projeto. Skills específicas do site ficam em
+`codigo/site/.claude/skills/` (a pasta `site/` foi consolidada dentro de `codigo/`
+em julho de 2026).
 
 Após salvar, adicione a skill na tabela de skills disponíveis no CLAUDE.md raiz.
 
 ---
 
-## Passo 12 — Registrar no Banco de Skills (Notion)
+## Passo 13: registrar no Banco de Skills (Notion)
 
 Após salvar o arquivo, registrar a skill no Banco de Skills do Notion usando o MCP Notion (`notion-create-pages`):
 
@@ -135,7 +144,7 @@ Após salvar o arquivo, registrar a skill no Banco de Skills do Notion usando o 
 - `Nome`: nome da skill (kebab-case)
 - `Status`: "Ativa"
 - `Categoria`: "Voz e conteúdo" / "Construção de agentes" / "Gestão de projetos" / "Pesquisa e Notion" / "Infraestrutura" / "Ecossistema externo"
-- `Arquivo`: caminho relativo (ex: `.claude/skills/nome.md`)
+- `Arquivo`: caminho relativo (ex: `.claude/skills/nome-da-skill/SKILL.md`)
 - `Quando acionar`: extraído da `description` do frontmatter
 
 **Conteúdo da página:** incluir o arquivo completo da skill.
