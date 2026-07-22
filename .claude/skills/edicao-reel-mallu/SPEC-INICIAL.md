@@ -84,72 +84,103 @@ O mais forte do conjunto e o candidato a modo-assinatura.
 - Ocupação: ~90% da largura, ~35% da altura, topo do bloco em ~28% da altura
 - A frase inteira aparece de uma vez e permanece; não é revelação palavra a palavra
 
-*Observação técnica:* nessa referência o "Ê" de VOCÊ saiu em caixa baixa, provavelmente
-porque a fonte não tem a versão acentuada em capitular. É um acidente, mas vira textura.
-Se a Mallu gostar do efeito, viramos regra deliberada; se não, escolhemos fonte com
-acentuação completa em caps. **Decisão pendente.**
+*Observação técnica:* nessa referência o "Ê" de VOCÊ saiu em caixa baixa, porque a fonte
+usada lá não tinha capitular acentuada. **Não se aplica aqui:** Impact tem Ê, Ã, Ç e Õ em
+caixa alta. O acidente não vira regra.
 
-### Modo B: EDITORIAL SÉRIO (ref. "a necessidade de Pertencimento")
-O mais sofisticado e o que mais combina com o lugar de autoridade dela.
+**Status: APROVADO pela Mallu em 22/07/2026, sem alteração.**
 
-- Serifada de alto contraste (didona/transicional), caixa mista
-- Mistura de romano e itálico dentro da MESMA frase, marcando o movimento do pensamento
-- Duas cores: a cor do trecho no corpo (vinho ou branco) e rosa `#c42443` nos dois
-  conceitos-chave. Único modo em que a cor varia dentro da frase.
-- As palavras destacadas ganham inicial maiúscula no meio da frase, tratadas como
-  conceitos nomeados (Pertencimento, Essência), não como palavras comuns
-- `line-height` ~0,95, alinhado à esquerda, sangrando na direita
-- Ocupação: ~85% da largura, ~45% da altura, centralizado verticalmente
+### Modo B: EDITORIAL SÉRIO
+Ref. inicial: "a necessidade de Pertencimento".
+**Ref. definitiva (22/07/2026): "Aprender a identificar seus pensamentos é o primeiro
+passo para mudar emoções e transformar comportamentos", em bege sobre campo de cor.**
 
-Este modo é o mais alinhado à linha epistemológica dela: nomear o conceito com inicial
-maiúscula é literalmente o gesto de desnaturalizar, de dizer "isto tem nome e tem
-história".
+A segunda referência corrigiu duas coisas em relação à primeira, e ela é que vale:
+
+- **Fonte: `Times New Roman`.** Serifada de leitura, não didona de alto contraste.
+- **O destaque é BOLD contra REGULAR, na mesma cor.** Não é troca de cor e não é itálico.
+  As frases de peso vão em negrito, os conectivos ficam em regular. O texto pulsa entre
+  os dois pesos, e é isso que marca o movimento do pensamento.
+- **Campo de cor sólido, não vídeo por baixo.** O bloco vive sobre uma chapada de cor,
+  ocupando o quadro inteiro. Texto em bege `#f5f1e0` sobre o campo.
+- **Centralizado**, não alinhado à esquerda. Único modo centralizado do sistema.
+- `line-height` ~1,15, mais folgado que o modo A: é modo de leitura, não de grito.
+- Ocupação: ~85% da largura, altura conforme o texto, centralizado verticalmente.
+
+Times New Roman tem os quatro estilos no sistema (Regular, Bold, Italic, Bold Italic), o
+que dá o pulso bold/regular sem nenhum truque.
+
+Este é o modo do pensamento formulado: o lugar onde ela para de falar em cima do vídeo e
+apresenta uma frase acabada.
+
+**Status: APROVADO pela Mallu em 22/07/2026, com Times New Roman.**
 
 ### Modo C: MARCA D'ÁGUA (ref. "teste esses hooks visuais")
-- Condensada pesada, caixa alta, duas linhas
-- Vinho `#6f0d33` a 20-25% de opacidade sobre parede clara, integrado à textura dela
-- Contraste deliberadamente baixo: o texto pertence ao ambiente, não flutua acima dele
-- A pessoa entra em quadro e passa na frente, o que dá profundidade
+- Impact, caixa alta, duas linhas, cor sólida da paleta
+- **Sem transparência.** O texto é opaco. A translucidez daquele print era o meio de um
+  fade, não um estado.
+- **Fade in e fade out MUITO rápidos** na entrada e na saída. É o efeito que dá o nome ao
+  modo. Rápido de verdade: da ordem de 0,15 a 0,25s, não meio segundo.
+- **A pessoa passa NA FRENTE do texto.** Este é o ponto central do modo, não um detalhe:
+  é o que cria profundidade e a leitura de 3D. Sem isso, o modo C não existe e vira só um
+  título piscando.
 - Ocupação: ~85% da largura, ~15% da altura, no terço superior
 
-Modo de respiro. Serve para transição, para título de bloco, para o segundo beat de um
-reel que já abriu forte. Não sustenta um reel inteiro.
+Modo de respiro. Serve para transição, título de bloco, segundo beat de um reel que já
+abriu forte. Não sustenta um reel inteiro.
+
+**Execução da profundidade (o item mais caro da spec):** o sujeito precisa ser recortado
+do vídeo e recomposto por cima do texto. Fluxo: `npx hyperframes remove-background
+<trecho>.mp4 -o sujeito.webm` gera um WebM com alfa; a composição empilha vídeo original
+→ texto → `sujeito.webm`. O comando existe e roda local. Custa tempo de processamento, e
+por isso o recorte é feito só no TRECHO do modo C, nunca no vídeo inteiro.
+
+**Status: APROVADO pela Mallu em 22/07/2026, com as correções acima.**
 
 ### Modo D: CADERNO (ref. "como gravar os seus vídeos sozinha?")
-- Manuscrita branca fina, três linhas em escala crescente, rotação leve por linha
-- A palavra-chave da pergunta em corpo bem maior e itálico acentuado
+- **Fonte: `Times New Roman`**, não manuscrita. A Mallu descartou a manuscrita da
+  referência.
+- Três linhas em escala crescente, rotação leve por linha
+- A palavra-chave da pergunta em corpo bem maior e em itálico
 - Card de b-roll no topo, cantos arredondados generosos (~24px), sombra suave
-- Legenda de fala pequena, manuscrita, uma linha, na faixa inferior, discreta
+- Legenda de fala pequena, uma linha, na faixa inferior, discreta
 - Ocupação do título: ~70% da largura, dentro do card superior
 
-Modo íntimo. Fonte `Caveat` já está no repositório (`hyperframes/skills/talking-head-recut/assets/fonts/`).
-Atenção: manuscrita é a fronteira mais próxima do "conteúdo genérico de coach". Só usar
-em vídeo de bastidor e processo, nunca em vídeo de tese.
+Modo íntimo, para bastidor e processo. Trocar a manuscrita por Times New Roman resolveu
+de graça o risco que esse modo tinha: manuscrita é a fronteira mais próxima da estética de
+coach, e Times New Roman puxa para o lado oposto, o do caderno de anotação e do texto
+datilografado.
 
-### Modo E: CADÊNCIA SUBLINHADA (ref. "2) até você criar uma relevância")
-- Grotesca geométrica pesada, caixa baixa, quatro linhas centralizadas
+**Status: APROVADO pela Mallu em 22/07/2026, com Times New Roman.**
+
+### Modo E: CADÊNCIA SUBLINHADA (ref. "até você criar uma relevância")
+- Impact, caixa alta, três a quatro linhas
 - **Sublinhado por linha, com a régua na largura exata daquela frase**: é o recurso mais
   aproveitável do conjunto
-- Numeração explícita no início ("2)"), tornando a estrutura da fala legível sem áudio
 - Régua na mesma cor do texto; cor sólida única pelo fundo
+- **Sem numeração.** O "2)" daquele print existia porque o roteiro daquele vídeo era uma
+  lista. Não é elemento do modo. Só numerar quando a fala for de fato enumerada.
+- Fonte: Impact
 - Ocupação: ~80% da largura, ~30% da altura, centro do quadro
 
 O sublinhado adaptativo é a coisa mais barata e mais diferenciadora das cinco referências.
 Nenhum app de legenda automática faz isso.
 
+**Status: APROVADO pela Mallu em 22/07/2026, sem numeração.**
+
 ---
 
-## 3. Síntese: o sistema tipográfico proposto
+## 3. Síntese: o sistema tipográfico
 
-Cinco modos são muitos para uma identidade nascendo. Proposta de recorte:
+**Os cinco modos foram aprovados pela Mallu em 22/07/2026.** Nenhum foi cortado.
 
-| Papel | Modo | Quando |
-|---|---|---|
-| Assinatura | **A: Manifesto** | Frase-âncora, virada, fechamento. 1 a 2 por reel. |
-| Pensamento | **B: Editorial sério** | O conceito nomeado, a tese. 1 por reel, no ápice. |
-| Respiro | **C: Marca d'água** | Título de bloco, transição. Opcional. |
-| Corpo | **E: Cadência sublinhada** | A legenda contínua da fala. Presente o reel todo. |
-| Bastidor | **D: Caderno** | Reel de processo e bastidor. Nunca no mesmo reel dos outros. |
+| Papel | Modo | Fonte | Quando |
+|---|---|---|---|
+| Assinatura | **A: Manifesto** | Impact | Frase-âncora, virada, fechamento. 1 a 2 por reel. |
+| Pensamento | **B: Editorial sério** | Times New Roman | A frase acabada, sobre campo de cor. 1 por reel, no ápice. |
+| Respiro | **C: Marca d'água** | Impact | Título de bloco, transição. Fade rápido + sujeito na frente. |
+| Corpo | **E: Cadência sublinhada** | Impact | A legenda contínua da fala. Presente o reel todo. |
+| Bastidor | **D: Caderno** | Times New Roman | Reel de processo e bastidor. Nunca no mesmo reel dos outros. |
 
 **Regra de mistura:** no máximo três modos por reel. D não convive com A nem com B.
 
@@ -185,9 +216,29 @@ no repositório.** O `ingest.py` copia do sistema para `public/fonts/` na criaç
 projeto, e `public/fonts/Impact.ttf` entra no `.gitignore`. Se o render um dia rodar em
 outra máquina sem a fonte, o fallback é `Anton` (gratuita, OFL, desenho muito próximo).
 
-**Pendente:** o modo B pede uma serifada de alto contraste, que Impact não cobre.
-Candidatas gratuitas: `Playfair Display`, `Bodoni Moda`. Pagas: `Canela`,
-`Tiempos Headline`. Ver seção 7.
+### A segunda fonte: TIMES NEW ROMAN (definida pela Mallu em 22/07/2026)
+
+**A serifada do perfil é `Times New Roman`.** Cobre os modos B e D. A identidade fecha em
+DUAS fontes, e cada uma tem um trabalho claro:
+
+| Fonte | Modos | O que faz |
+|---|---|---|
+| `Impact` | A, C, E | A voz alta. Caixa alta, entrelinha travada, cor sólida. |
+| `Times New Roman` | B, D | O pensamento formulado e a nota de bastidor. Caixa mista. |
+
+Times New Roman tem os quatro estilos no sistema: Regular, Bold, Italic e Bold Italic. O
+modo B usa o pulso **Bold contra Regular** dentro da mesma frase como mecanismo de
+destaque, e o modo D usa o Italic na palavra-chave. Nada disso precisa de truque de CSS.
+
+**Arquivos:** `/System/Library/Fonts/Supplemental/Times New Roman*.ttf`. Mesma situação
+de licença do Impact (Monotype, licenciada com o sistema): **não commitar.** O ingest
+copia para `public/fonts/` e a pasta fica no `.gitignore`. Fallback OFL para outra
+máquina: `Tinos`, que é metricamente compatível com Times New Roman.
+
+**Nota de intenção:** Times New Roman é a fonte do documento, da monografia, do texto que
+foi escrito para ser lido e não para ser vendido. Ao lado de Impact ela produz um contraste
+que diz muito sobre o perfil: o cartaz de rua e o papel acadêmico na mesma peça. É
+coerente com alguém que é estudante e pensa em público.
 
 ---
 
@@ -341,10 +392,15 @@ Só ganha corpo depois que 3, 4 e 5 estiverem decididos. Sequência prevista:
 - Nenhum clique aparece no regime de continuação
 - Nenhum beat usa mais de três modos
 - O sublinhado do modo E acompanha a largura real de cada linha, não uma largura fixa
+- **O modo E não tem numeração**, a menos que a fala seja de fato uma lista
 - A entrelinha do modo A está entre 0,82 e 0,90; se estiver em 1,0, está errado
+- **Nenhum texto está em opacidade parcial em nenhum frame estático.** No modo C a
+  translucidez só existe durante o fade, que dura 0,15-0,25s.
+- **O modo C tem o sujeito recortado por cima do texto.** Sem o recorte, o modo C não foi
+  executado. Conferir no snapshot, no meio do trecho, não na borda.
 - O modo D não aparece no mesmo reel que A ou B
 - Nenhuma camada escurece o fundo (herdado)
-- Não usei fonte fora das duas famílias definidas
+- Não usei fonte fora de Impact e Times New Roman
 - Não usei cor fora dos seis hex da seção 4
 
 ---
@@ -360,11 +416,21 @@ Só ganha corpo depois que 3, 4 e 5 estiverem decididos. Sequência prevista:
    `#ffffff` não existe nesta identidade.
 4. ~~**Tipografia**~~ RESOLVIDO em 22/07/2026: `Impact`, grotesca própria do perfil.
 5. ~~**Perfil**~~ RESOLVIDO em 22/07/2026: ver seção 8.
-6. **Modos:** os cinco entram, ou começamos com três (A, B, E) e abrimos C e D depois do
-   primeiro reel entregue?
-7. **Serifada do modo B:** Impact não cobre esse papel. `Playfair Display` ou
-   `Bodoni Moda` (gratuitas), `Canela` ou `Tiempos Headline` (pagas). Alternativa: cortar
-   o modo B por ora e resolver a identidade só com Impact.
+6. ~~**Modos**~~ RESOLVIDO em 22/07/2026: os cinco entram, com as correções da seção 2.
+7. ~~**Serifada do modo B**~~ RESOLVIDO em 22/07/2026: `Times New Roman`, que cobre B e D.
+
+### Abertas de verdade
+
+8. **Cor do campo do modo B:** a referência tem um carmim médio, mais próximo do rosa
+   `#c42443` que do vinho `#6f0d33`. O campo é sempre rosa, sempre vinho, ou alterna?
+9. **O modo B interrompe ou convive?** O campo de cor cobre o quadro inteiro e o vídeo
+   some por baixo, ou o campo é um bloco que ocupa parte da tela com a Mallu ainda
+   visível?
+10. **Som do modo B e do modo C:** o clique é do modo A. O modo B corta para uma chapada
+    de cor e o modo C tem fade rápido; os dois pedem alguma marcação sonora própria, ou
+    entram mudos?
+11. **Clique:** clique de mouse mecânico (seco, agudo) ou clique de trackpad (mais surdo
+    e curto)? Os dois são "clique de mouse" e soam bem diferentes no reel.
 
 ---
 
