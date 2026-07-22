@@ -249,7 +249,8 @@ A pasta ainda se chama `SITE PAAPS/` por limitação do ambiente. Para renomear 
 | `instala-skill-segura` | Instalar skill externa com auditoria de segurança prévia (código malicioso, exfiltração, escopo de permissões) |
 | `espelho-notion` | Sincronizar agentes, skills e hooks COMPLETOS (nunca resumo) para as databases do Notion |
 | `ferramenta-local-mallu` | Construir, consertar ou remover automação que roda na máquina da Mallu: atalho de tecla, agendamento, notificação, envio automático para o Notion. Carrega o mapa de permissões do macOS, os fatos fixos da máquina e o inventário de automações |
-| `edicao-reel-paaps` | Editar vídeo JÁ GRAVADO da Mallu (talking-head) em Reel PAAPS: legendas em cadência, cards de dados, b-roll, trilha do HeyGen, SFX — com as regras duras dela (nunca escurecer, texto fora do rosto, só League Spartan + Evermore, imagem congelada + áudio por re-mux) |
+| `edicao-reel-paaps` | Editar vídeo JÁ GRAVADO da Mallu (talking-head) em Reel do **@paaps.brasil**: legendas em cadência, cards de dados, b-roll, trilha do HeyGen, SFX. Regras duras: nunca escurecer, texto fora do rosto, só League Spartan + Evermore, imagem congelada + áudio por re-mux |
+| `edicao-reel-mallu` | Editar vídeo JÁ GRAVADO em Reel do perfil **PESSOAL @malluvasconcellos**: Impact + Times New Roman, bege com destaque vinho, revelação palavra a palavra com clique de trackpad, modo B digitado. Identidade INCOMPATÍVEL com a do PAAPS: não misturar as duas skills |
 
 ### Notion — página de operações
 

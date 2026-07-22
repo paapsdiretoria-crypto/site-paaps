@@ -14,7 +14,9 @@ Ler `insumos-compartilhados/nucleo-comum/voz-paaps.md` antes de escrever.
 
 ## Carrossel @amalluvasconcellos
 
-Paleta AMALLUVASCONCELLOS. De 4 a 8 slides. Voz crítica e autoral. Capa precisa parar o scroll
+Paleta e tipografia do perfil pessoal, definidas em
+`.claude/skills/edicao-reel-mallu/SKILL.md` (bege `#f5f1e0`, vinho `#6f0d33` no destaque,
+Impact e Times New Roman). Handle atual: `@malluvasconcellos`. De 4 a 8 slides. Voz crítica e autoral. Capa precisa parar o scroll
 (título de no máx. 8 palavras + visual forte com identificação profunda). Cada slide
 avança o argumento. Último slide: chamada autoral + handle. Todo carrossel contém referências
 em formato próximo à ABNT.

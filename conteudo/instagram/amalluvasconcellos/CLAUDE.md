@@ -1,10 +1,14 @@
-# CLAUDE.md — @amalluvasconcellos
+# CLAUDE.md — @malluvasconcellos
 
 Workspace dedicado à gestão e produção de conteúdo do Instagram de Mallu Vasconcellos.
 
+> **A pasta ainda se chama `amalluvasconcellos/` por inércia. Renomear numa sessão
+> dedicada.** O handle mudou algumas vezes (`@amalluvasconcellos`,
+> `@psimalluvasconcellos`), mas é sempre o MESMO perfil.
+
 ## Conta
 
-- **Handle:** @amalluvasconcellos
+- **Handle:** @malluvasconcellos (jul/2026)
 - **Nome completo:** Mallu Vasconcellos • Psicologia e Impacto Social
 - **Seguidores:** ~3.256 (jun/2026)
 - **Tipo:** Conta Profissional (Criador) vinculada à Página do Facebook **uivovivo**
@@ -50,6 +54,13 @@ Este workspace produz conteúdo para @amalluvasconcellos. Antes de qualquer peç
 - O agente correspondente em `../../../.claude/agents/` (mallu-reels, paaps-carrossel,
   mallu-linkedin).
 
-Paleta deste canal: AMALLUVASCONCELLOS. Função no funil: topo (alcance/descoberta via
-Reels) + retenção/salvamento (carrossel). Público real: 84% mulheres, 87% entre 18–34,
-96% Brasil.
+Identidade visual deste canal: `.claude/skills/edicao-reel-mallu/SKILL.md`. Paleta de 6
+hex com bege `#f5f1e0` no texto e vinho `#6f0d33` no destaque; fontes Impact e Times New
+Roman. Definida com a Mallu em 22/07/2026: até então "paleta AMALLUVASCONCELLOS" era
+citada em vários lugares sem nunca ter sido definida.
+
+**Posicionamento:** marca pessoal, sem "Psi". Identidade de AUTORA e de pensamento, nunca
+de consultório. Sem CTA de agendamento, sem CRP, sem estética de perfil de terapeuta.
+
+Função no funil: topo (alcance/descoberta via Reels) + retenção/salvamento (carrossel).
+Público real: 84% mulheres, 87% entre 18-34, 96% Brasil.

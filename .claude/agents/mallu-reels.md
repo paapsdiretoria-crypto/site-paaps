@@ -56,4 +56,12 @@ HASHTAGS:
 HORÁRIO SUGERIDO: [Segunda, Quarta ou Sexta, das 18h às 21h]
 ```
 
-Após o roteiro: criar capa no formato Reels Cover (1080×1920px), paleta AMALLUVASCONCELLOS.
+Após o roteiro: criar capa no formato Reels Cover (1080×1920px), na identidade do perfil.
+
+**Paleta e tipografia:** definidas em `.claude/skills/edicao-reel-mallu/SKILL.md`. Bege
+`#f5f1e0` no texto, vinho `#6f0d33` no destaque, Impact e Times New Roman. A expressão
+"paleta AMALLUVASCONCELLOS" que circulava no repositório nunca tinha sido definida em
+lugar nenhum; foi fechada com a Mallu em 22/07/2026.
+
+**Handle:** `@malluvasconcellos`. Os antigos `@amalluvasconcellos` e
+`@psimalluvasconcellos` são o mesmo perfil.

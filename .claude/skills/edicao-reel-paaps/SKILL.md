@@ -121,11 +121,16 @@ Quando a Mallu pede para cortar um trecho (ex.: a ilha na Bahia): crie `input-vi
 ### Cenário misto no mesmo vídeo
 Um vídeo da Mallu pode trocar de cenário/figurino no meio (madeira escura → área externa clara; cozinha → rua). A **cor por backdrop vale por TRECHO**, não pelo vídeo todo. Solução robusta: halo escuro reforçado (`0 0 4-5px rgba(0,0,0,0.9)` + camadas) faz creme/amarelo ler tanto no escuro quanto no céu claro sem trocar a cor.
 
-## Regras aprendidas (v4 — @psimalluvasconcellos, corte de silêncios, jul/2026)
+## Regras aprendidas (v4 — corte de silêncios, jul/2026)
 
-Perfil **@psimalluvasconcellos** (persona Mallu Vasconcellos Psicóloga, autoridade) tem
-identidade PRÓPRIA (ver memória `psimallu-identidade-legenda` e o doc do projeto). Regra
-dura que custou uma rodada rejeitada:
+> **O perfil pessoal saiu daqui.** Os handles `@psimalluvasconcellos` e
+> `@amalluvasconcellos` são o mesmo perfil, hoje **`@malluvasconcellos`**, e ele tem skill
+> própria: **`edicao-reel-mallu`**. Não editar vídeo do perfil pessoal com esta skill: a
+> identidade dele é incompatível (Impact + Times New Roman em vez de League Spartan,
+> nenhuma sombra colorida, texto pode encostar na testa). O que segue vale para os DOIS,
+> porque é sobre corte de fala, não sobre identidade visual.
+
+Regra dura que custou uma rodada rejeitada:
 
 - **Cortar silêncios/pausas/respirações em TODO o vídeo** (passada global), não só as
   frases de concisão. Silêncio de emenda entre clipes (clicar gravar, voltar o olho ao
