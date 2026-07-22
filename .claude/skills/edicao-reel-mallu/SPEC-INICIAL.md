@@ -95,25 +95,33 @@ Ref. inicial: "a necessidade de Pertencimento".
 **Ref. definitiva (22/07/2026): "Aprender a identificar seus pensamentos é o primeiro
 passo para mudar emoções e transformar comportamentos", em bege sobre campo de cor.**
 
-A segunda referência corrigiu duas coisas em relação à primeira, e ela é que vale:
-
 - **Fonte: `Times New Roman`.** Serifada de leitura, não didona de alto contraste.
 - **O destaque é BOLD contra REGULAR, na mesma cor.** Não é troca de cor e não é itálico.
   As frases de peso vão em negrito, os conectivos ficam em regular. O texto pulsa entre
   os dois pesos, e é isso que marca o movimento do pensamento.
-- **Campo de cor sólido, não vídeo por baixo.** O bloco vive sobre uma chapada de cor,
-  ocupando o quadro inteiro. Texto em bege `#f5f1e0` sobre o campo.
+- **NÃO EXISTE campo de cor.** O fundo daquela referência era só a demonstração da fonte,
+  fora de contexto de vídeo. No reel real o texto vive sobre o cenário, que é instável
+  porque é um cenário de verdade. Sem chapada, sem painel, sem camada, sem caixa.
+- Cor pela regra de backdrop, igual a todos os outros modos: vinho `#6f0d33` sobre parede
+  clara, bege `#f5f1e0` sobre fundo escuro.
 - **Centralizado**, não alinhado à esquerda. Único modo centralizado do sistema.
 - `line-height` ~1,15, mais folgado que o modo A: é modo de leitura, não de grito.
 - Ocupação: ~85% da largura, altura conforme o texto, centralizado verticalmente.
+- **Entrada: a frase inteira de uma vez, com um POP.** Não é revelação palavra a palavra,
+  e portanto não tem clique.
 
 Times New Roman tem os quatro estilos no sistema (Regular, Bold, Italic, Bold Italic), o
 que dá o pulso bold/regular sem nenhum truque.
 
-Este é o modo do pensamento formulado: o lugar onde ela para de falar em cima do vídeo e
-apresenta uma frase acabada.
+**O que este modo é, no ritmo:** um respiro seco. A cadência da fala para, uma frase
+acabada aparece por inteiro, e o reel respira. O corte é rítmico, não gráfico: o que muda
+não é o fundo, é o tipo de texto e a forma como ele entra.
 
-**Status: APROVADO pela Mallu em 22/07/2026, com Times New Roman.**
+Como o cenário é instável e não há painel para segurar o texto, este é o modo que mais
+exige conferência de contraste no snapshot. Se a frase cair metade sobre parede clara e
+metade sobre um móvel escuro, o modo B não pode ser usado ali: escolher outro momento.
+
+**Status: APROVADO pela Mallu em 22/07/2026. Sem campo de cor.**
 
 ### Modo C: MARCA D'ÁGUA (ref. "teste esses hooks visuais")
 - Impact, caixa alta, duas linhas, cor sólida da paleta
@@ -177,7 +185,7 @@ Nenhum app de legenda automática faz isso.
 | Papel | Modo | Fonte | Quando |
 |---|---|---|---|
 | Assinatura | **A: Manifesto** | Impact | Frase-âncora, virada, fechamento. 1 a 2 por reel. |
-| Pensamento | **B: Editorial sério** | Times New Roman | A frase acabada, sobre campo de cor. 1 por reel, no ápice. |
+| Pensamento | **B: Editorial sério** | Times New Roman | A frase acabada, respiro seco. 1 por reel, no ápice. |
 | Respiro | **C: Marca d'água** | Impact | Título de bloco, transição. Fade rápido + sujeito na frente. |
 | Corpo | **E: Cadência sublinhada** | Impact | A legenda contínua da fala. Presente o reel todo. |
 | Bastidor | **D: Caderno** | Times New Roman | Reel de processo e bastidor. Nunca no mesmo reel dos outros. |
@@ -347,9 +355,7 @@ palavras entram uma a uma, como peças sendo encaixadas.
 
 - Uma palavra por vez, encaixe seco, sem fade lento e sem deslize longo
 - Cada palavra entra sincronizada com a palavra falada
-- **Cada palavra vem com um SFX de clique de mouse, suave**
-- O clique é discreto: presente, nunca estalado. Volume na faixa dos SFX sutis já
-  aprovados no PAAPS (~0.10 a 0.15), calibrado por LUFS junto do mix
+- **Cada palavra vem com um SFX de clique**, ver seção 5.2
 - A frase montada permanece na tela depois do último clique; não desmonta palavra a
   palavra
 
@@ -358,6 +364,26 @@ O clique é o que dá a sensação de peça encaixando. É a assinatura sonora d
 
 Não usar clique no regime 2. Se toda palavra do vídeo clica, o recurso vira ruído e perde
 a função de marcar o que é destaque.
+
+### 5.2 Desenho de som por modo (definido pela Mallu em 22/07/2026)
+
+Três sons, um por gesto. Nenhum deles é o whoosh grande de transição de vídeo comercial:
+todos são pequenos, físicos e de baixo volume.
+
+| Gesto | Som | Caráter |
+|---|---|---|
+| Palavra encaixando (regime de destaque) | **clique de trackpad** | Surdo e curto, como alguém realmente clicando. Não é clique mecânico seco e agudo. |
+| Modo B entrando | **pop** | Um só, na entrada da frase inteira. Marca o respiro seco. |
+| Modo C entrando | **whoosh de arraste, muito rápido** | Som de arrastar, não de vento. Rápido de verdade, leve, nunca exagerado. Acompanha o fade de 0,15-0,25s. |
+
+Regras comuns aos três:
+
+- Volume na faixa dos SFX sutis já aprovados no PAAPS (~0,10 a 0,15), calibrado por LUFS
+  junto do mix, nunca por multiplicador cru
+- Presentes, nunca estalados. Se o som chama atenção para si, está alto demais.
+- O clique de trackpad é a assinatura: é o único que se repete muitas vezes no reel, e por
+  isso é o que mais rápido cansa se estiver alto
+- Um gesto, um som. Não empilhar pop e whoosh no mesmo beat.
 
 ---
 
@@ -388,8 +414,12 @@ Só ganha corpo depois que 3, 4 e 5 estiverem decididos. Sequência prevista:
 - Todo beat de continuação tem o rosto limpo: legenda acima da cabeça ou no peito,
   escolhido pelo enquadramento real daquele trecho
 - Só o gancho e os beats de destaque cruzam o rosto
-- Toda frase que cruza o rosto usa revelação por clique, e todo clique tem SFX
+- Toda frase revelada palavra a palavra tem clique de trackpad em cada palavra
 - Nenhum clique aparece no regime de continuação
+- O modo B entra com pop; o modo C entra com whoosh de arraste rápido
+- Nenhum beat tem dois SFX empilhados
+- **Nenhum modo tem painel, caixa ou campo de cor atrás do texto.** Em nenhum modo,
+  nunca. Se a frase não lê sobre o cenário daquele trecho, o beat muda de lugar.
 - Nenhum beat usa mais de três modos
 - O sublinhado do modo E acompanha a largura real de cada linha, não uma largura fixa
 - **O modo E não tem numeração**, a menos que a fala seja de fato uma lista
@@ -419,18 +449,24 @@ Só ganha corpo depois que 3, 4 e 5 estiverem decididos. Sequência prevista:
 6. ~~**Modos**~~ RESOLVIDO em 22/07/2026: os cinco entram, com as correções da seção 2.
 7. ~~**Serifada do modo B**~~ RESOLVIDO em 22/07/2026: `Times New Roman`, que cobre B e D.
 
-### Abertas de verdade
+8. ~~**Campo de cor do modo B**~~ RESOLVIDO em 22/07/2026: não existe. Nenhum modo tem
+   fundo, painel ou camada atrás do texto.
+9. ~~**Som do B e do C**~~ RESOLVIDO em 22/07/2026: pop no B, whoosh de arraste rápido no
+   C. Ver 5.2.
+10. ~~**Clique**~~ RESOLVIDO em 22/07/2026: trackpad, surdo e curto.
 
-8. **Cor do campo do modo B:** a referência tem um carmim médio, mais próximo do rosa
-   `#c42443` que do vinho `#6f0d33`. O campo é sempre rosa, sempre vinho, ou alterna?
-9. **O modo B interrompe ou convive?** O campo de cor cobre o quadro inteiro e o vídeo
-   some por baixo, ou o campo é um bloco que ocupa parte da tela com a Mallu ainda
-   visível?
-10. **Som do modo B e do modo C:** o clique é do modo A. O modo B corta para uma chapada
-    de cor e o modo C tem fade rápido; os dois pedem alguma marcação sonora própria, ou
-    entram mudos?
-11. **Clique:** clique de mouse mecânico (seco, agudo) ou clique de trackpad (mais surdo
-    e curto)? Os dois são "clique de mouse" e soam bem diferentes no reel.
+### Aberta de verdade
+
+11. **O modo A entra palavra a palavra ou de uma vez?** Há um conflito nesta spec. A
+    seção 2 diz que no modo A "a frase inteira aparece de uma vez e permanece" (foi minha
+    leitura do print estático, e você aprovou o modo sem mexer nessa linha). A seção 5.1
+    diz que gancho e frases de destaque entram palavra a palavra com clique. O modo A é
+    justamente o modo de gancho e de destaque. As duas coisas não cabem juntas.
+
+    Três saídas possíveis: (a) A é sempre palavra a palavra com clique, e a linha da
+    seção 2 está errada; (b) A tem duas variantes, uma para gancho com clique e outra para
+    a frase de fechamento que entra inteira; (c) o clique palavra a palavra pertence só ao
+    gancho, e o modo A no meio do reel entra inteiro.
 
 ---
 
