@@ -80,7 +80,7 @@ O mais forte do conjunto e o candidato a modo-assinatura.
 - `line-height` ~0,85: as linhas se tocam
 - Alinhado à esquerda, sangrando na direita até cortar a última letra
 - Bloco de 4 a 5 linhas ocupando o terço central-superior
-- Bege `#f5f1e0` com halo vinho; alto contraste com o fundo
+- Cor sólida única pelo fundo (vinho na parede clara, branco no escuro), sem sombra visível
 - Ocupação: ~90% da largura, ~35% da altura, topo do bloco em ~28% da altura
 - A frase inteira aparece de uma vez e permanece; não é revelação palavra a palavra
 
@@ -94,8 +94,8 @@ O mais sofisticado e o que mais combina com o lugar de autoridade dela.
 
 - Serifada de alto contraste (didona/transicional), caixa mista
 - Mistura de romano e itálico dentro da MESMA frase, marcando o movimento do pensamento
-- Duas cores: bege `#f5f1e0` no corpo, vinho `#6f0d33` nos dois conceitos-chave (ou rosa
-  `#c42443` se o trecho for escuro; ver seção 4)
+- Duas cores: a cor do trecho no corpo (vinho ou branco) e rosa `#c42443` nos dois
+  conceitos-chave. Único modo em que a cor varia dentro da frase.
 - As palavras destacadas ganham inicial maiúscula no meio da frase, tratadas como
   conceitos nomeados (Pertencimento, Essência), não como palavras comuns
 - `line-height` ~0,95, alinhado à esquerda, sangrando na direita
@@ -129,9 +129,9 @@ em vídeo de bastidor e processo, nunca em vídeo de tese.
 ### Modo E: CADÊNCIA SUBLINHADA (ref. "2) até você criar uma relevância")
 - Grotesca geométrica pesada, caixa baixa, quatro linhas centralizadas
 - **Sublinhado por linha, com a régua na largura exata daquela frase**: é o recurso mais
-  aproveitável do conjunto, e é onde o vinho `#6f0d33` mais aparece
+  aproveitável do conjunto
 - Numeração explícita no início ("2)"), tornando a estrutura da fala legível sem áudio
-- Texto em bege `#f5f1e0` com halo vinho
+- Régua na mesma cor do texto; cor sólida única pelo fundo
 - Ocupação: ~80% da largura, ~30% da altura, centro do quadro
 
 O sublinhado adaptativo é a coisa mais barata e mais diferenciadora das cinco referências.
@@ -194,71 +194,99 @@ Três cores são compartilhadas com o PAAPS (`#bcb6f2`, `#cb4710`, `#442309`) e 
 praticamente o mesmo (`#f5f1e0` aqui, `#f5f1e1` lá). O que faz a identidade dela ser dela
 são `--m-rosa` e `--m-vinho`, que o PAAPS não tem.
 
-### Regra de legenda (definida pela Mallu)
+### Regra de legenda (definida pela Mallu em 22/07/2026)
 
-> **Legenda sempre em bege `#f5f1e0`. Destaque e qualquer aplicação colorida em vinho
-> `#6f0d33`.**
+A legenda tem **uma cor sólida por trecho, decidida pelo fundo**. Sem painel atrás, sem
+palavra de cor diferente no meio da frase, sem contorno colorido.
 
-Isso não é uma preferência solta: os dois valores têm contraste de ~9,8:1 entre si, o que
-faz do par bege-sobre-vinho a combinação mais legível de toda a paleta. O sistema inteiro
-sai daí.
+| Backdrop | Legenda inteira |
+|---|---|
+| Parede clara / branca (o caso mais comum) | **vinho `#6f0d33`** |
+| Fundo escuro, b-roll escuro, roupa escura | **branca** |
 
-### Como a regra sobrevive ao backdrop
+Num vídeo de cenário misto a cor troca no ponto de troca do cenário, não no meio de uma
+frase.
 
-O bege sozinho falha sobre parede clara. Isso não é hipótese: o validador acusou 6 falhas
-de contraste WCAG no vídeo 02 do PAAPS exatamente por creme sobre parede clara. A Mallu
-filma quase sempre em parede clara. **A cor não muda; o que muda é o suporte.**
+### Sombra: a regra mais dura desta skill
 
-| Backdrop | Legenda | Como sustenta |
-|---|---|---|
-| Parede clara (o caso mais comum) | bege `#f5f1e0` | halo vinho forte: `text-shadow` `0 0 5px` + `0 2px 0` em `#6f0d33` a 0,9 |
-| Footage escura, roupa escura, b-roll | bege `#f5f1e0` | halo escuro (`rgba(0,0,0,0.85)`), o padrão já herdado |
-| Cenário misto no mesmo vídeo | bege `#f5f1e0` | halo vinho + halo escuro empilhados; a cor nunca troca no meio |
+> **Sombra colorida é PROIBIDA.** Nada de halo vinho, halo terracota, contorno de marca.
+> O máximo permitido é uma sombra preta padrão, muito suave.
 
-O halo vinho é o que transforma a instrução dela num sistema: mantém a legenda sempre
-bege, resolve a parede clara sem escurecer o vídeo, e faz o vinho aparecer em toda peça
-mesmo quando não há palavra destacada.
+Referência de teto: `text-shadow: 0 1px 3px rgba(0,0,0,0.25)`. Se der para ver a sombra
+olhando o frame, ela está forte demais. A legibilidade vem do peso da fonte e da cor
+certa para aquele fundo, nunca de empilhar camadas em volta da letra.
 
-### Como o vinho entra como destaque
+Isso invalida a receita herdada do `edicao-reel-paaps`, que usa halo forte para sustentar
+creme sobre parede clara. Aqui o problema é resolvido na origem: sobre parede clara a
+legenda é vinho, e vinho sobre parede clara tem contraste de sobra sem precisar de
+nenhuma muleta.
 
-`#6f0d33` é escuro. Como TEXTO sobre footage escura ele some. Por isso o destaque não é
-"trocar a cor da palavra para vinho", é **inverter**:
+### Onde as outras cores entram
 
-- **Palavra destacada:** painel vinho justo atrás da palavra (padding ~0.08em, raio 4px),
-  com a palavra em bege por cima. Contraste 9,8:1, funciona sobre qualquer fundo.
-- **Sublinhado do modo E:** régua vinho sólida na largura exata da linha. É aqui que a
-  cor aparece com mais frequência, sem custar legibilidade nenhuma.
-- **Conceito nomeado do modo B:** aí sim a palavra vai em vinho puro, sem painel, porque
-  o modo B é usado sobre fundo claro por definição. Se o trecho for escuro, o conceito
-  usa `--m-rosa` `#c42443`, que é o mesmo gesto num tom que ainda lê no escuro.
-- **Marca d'água do modo C:** vinho a 20-25% de opacidade sobre parede clara.
+Com a legenda resolvida em duas cores, as outras quatro ficam para os elementos de peça,
+não para o corpo do texto:
 
-Regra dura: **vinho como texto puro só sobre fundo claro.** Sobre escuro, vinho é painel,
-régua ou fundo, nunca a letra.
+- **Sublinhado do modo E:** régua na cor da própria legenda, sólida, na largura exata da
+  linha
+- **Conceito nomeado do modo B:** sobre fundo claro, vinho `#6f0d33` no corpo e rosa
+  `#c42443` no conceito; sobre fundo escuro, branco no corpo e rosa `#c42443` no conceito.
+  O rosa é o único desvio de cor permitido dentro de uma frase, e só no modo B.
+- **Marca d'água do modo C:** vinho a 20-25% de opacidade sobre parede clara
+- **Terracota, marrom e lilás:** reservados para elementos gráficos e para as peças que
+  conversam com o PAAPS. Não entram em legenda.
 
 ---
 
-## 5. A ruptura que precisa da decisão dela
+## 5. Ocupação da tela e a regra do rosto (definida pela Mallu em 22/07/2026)
 
-No PAAPS a regra é dura: **texto nunca sobre o rosto**. Quatro das cinco referências que
-ela escolheu passam o texto por cima do rosto.
+No PAAPS a regra é dura: texto nunca sobre o rosto. Aqui ela é condicional, porque o lugar
+de fala é outro: no institucional quem fala é a instituição e o rosto é a prova de que tem
+gente atrás; no perfil pessoal o rosto já está dado, e o que precisa de espaço é o
+pensamento.
 
-Isso não é contradição, é diferença de lugar de fala. No PAAPS quem fala é a instituição e
-o rosto dela é a prova de que existe gente por trás. No perfil pessoal quem fala é ela, e
-o rosto já está dado: o que precisa de espaço é o pensamento.
+> **O texto pode cruzar o rosto no GANCHO e nas frases de destaque. Na continuação da
+> fala, o rosto fica limpo.**
 
-**Proposta de regra intermediária, para ela cortar ou aprovar:**
+Ou seja, a tela tem dois regimes e eles se alternam ao longo do reel:
 
-> O tipo pode cruzar o corpo, os ombros e a testa livremente. Sobre o rosto, só quando o
-> par de olhos permanece visível. Olho tapado, não. Boca tapada, pode: ela está falando,
-> a legenda diz o mesmo.
+### Regime 1: destaque (gancho, virada, frase-âncora)
+- O bloco pode cruzar o rosto, ocupando o centro
+- Poucos por reel: o gancho e um ou dois beats de virada
+- Sempre com a revelação por clique (ver 5.1)
+- Modos A, B e C vivem aqui
 
-Essa regra deixa passar quatro das cinco referências e barra só a primeira (que tapa a
-boca e o queixo com quatro linhas, e é a mais pesada do conjunto).
+### Regime 2: continuação (a maior parte do texto falado)
+- Rosto limpo, sempre
+- A legenda vai **acima da cabeça** ou **no colo/peito**, escolhido pelo ENQUADRAMENTO
+  daquele trecho, não por uma faixa fixa em pixels
+- Plano fechado, cabeça alta no quadro: legenda no peito
+- Plano aberto, cabeça no terço superior com parede sobrando em cima: legenda acima da
+  cabeça
+- Cenário muda no meio do vídeo: a posição é reavaliada por trecho
+- Modo E vive aqui
 
-**Alternativa mais conservadora:** manter o rosto livre e reservar a invasão só para o
-modo A, no beat de virada, uma vez por reel. Menos ousado, mais seguro, mais próximo do
-que já está aprovado no PAAPS.
+Regra prática de execução: antes de escrever o layout, tirar um frame de cada trecho e
+marcar onde está a linha do queixo e onde está o topo da cabeça. A posição da legenda sai
+desse mapa, nunca de uma margem herdada do PAAPS.
+
+### 5.1 Revelação por clique (assinatura sonora e visual)
+
+Nas frases de destaque o texto **não aparece inteiro nem se revela suavemente**: as
+palavras entram uma a uma, como peças sendo encaixadas.
+
+- Uma palavra por vez, encaixe seco, sem fade lento e sem deslize longo
+- Cada palavra entra sincronizada com a palavra falada
+- **Cada palavra vem com um SFX de clique de mouse, suave**
+- O clique é discreto: presente, nunca estalado. Volume na faixa dos SFX sutis já
+  aprovados no PAAPS (~0.10 a 0.15), calibrado por LUFS junto do mix
+- A frase montada permanece na tela depois do último clique; não desmonta palavra a
+  palavra
+
+O clique é o que dá a sensação de peça encaixando. É a assinatura sonora do perfil dela, e
+é o que separa esse reel de legenda automática mesmo com o som ligado.
+
+Não usar clique no regime 2. Se toda palavra do vídeo clica, o recurso vira ruído e perde
+a função de marcar o que é destaque.
 
 ---
 
@@ -280,15 +308,21 @@ Só ganha corpo depois que 3, 4 e 5 estiverem decididos. Sequência prevista:
 
 ### Gate próprio (o que muda em relação ao PAAPS)
 
-- Os olhos aparecem em todos os beats com texto sobre o rosto
+- **Nenhuma sombra colorida em lugar nenhum.** Só preto padrão, muito suave, invisível a
+  olho nu no frame. Se dá para notar a sombra, está errado.
+- **Legenda em cor sólida única por trecho:** vinho `#6f0d33` sobre parede clara, branco
+  sobre fundo escuro. Sem palavra de outra cor no meio, exceto o conceito rosa do modo B.
+- **Nenhum texto vinho sobre fundo escuro** e nenhum texto branco sobre parede clara.
+  Conferir nos PNGs do `snapshot`, não só no relatório do validador.
+- Todo beat de continuação tem o rosto limpo: legenda acima da cabeça ou no peito,
+  escolhido pelo enquadramento real daquele trecho
+- Só o gancho e os beats de destaque cruzam o rosto
+- Toda frase que cruza o rosto usa revelação por clique, e todo clique tem SFX
+- Nenhum clique aparece no regime de continuação
 - Nenhum beat usa mais de três modos
 - O sublinhado do modo E acompanha a largura real de cada linha, não uma largura fixa
 - A entrelinha do modo A está entre 0,82 e 0,90; se estiver em 1,0, está errado
 - O modo D não aparece no mesmo reel que A ou B
-- **Toda legenda está em bege `#f5f1e0`. Nenhuma exceção, nenhum branco puro.**
-- **Nenhuma letra em vinho `#6f0d33` cai sobre fundo escuro.** Sobre escuro, vinho é
-  painel, régua ou fundo. Conferir isso nos PNGs do `snapshot`, não só no validador.
-- Toda peça tem o vinho aparecendo em algum lugar (halo, régua, painel ou conceito)
 - Nenhuma camada escurece o fundo (herdado)
 - Não usei fonte fora das duas famílias definidas
 - Não usei cor fora dos seis hex da seção 4
@@ -297,11 +331,15 @@ Só ganha corpo depois que 3, 4 e 5 estiverem decididos. Sequência prevista:
 
 ## 7. Perguntas abertas, em ordem de bloqueio
 
-1. ~~**Paleta**~~ RESOLVIDO em 22/07/2026: seis hex definidos na seção 4, legenda em bege
-   `#f5f1e0`, destaque e aplicação colorida em vinho `#6f0d33`.
-2. **Rosto:** a regra dos olhos livres, a alternativa conservadora, ou outra?
-3. **Tipografia:** grotesca própria (separa do PAAPS) ou League Spartan (cria família)?
-4. **Modos:** os cinco entram, ou cortamos algum agora? Minha sugestão é começar com três
-   (A, B, E) e só abrir C e D depois do primeiro reel entregue.
-5. **Perfil:** esta identidade é do @amalluvasconcellos, do @psimalluvasconcellos, ou os
+1. ~~**Paleta**~~ RESOLVIDO em 22/07/2026: seis hex na seção 4. Legenda em cor sólida por
+   backdrop (vinho na parede clara, branco no escuro), sombra só preta e suavíssima.
+2. ~~**Rosto**~~ RESOLVIDO em 22/07/2026: dois regimes na seção 5. Gancho e destaques
+   cruzam o rosto com revelação por clique; continuação mantém o rosto limpo, acima da
+   cabeça ou no peito conforme o enquadramento.
+3. **Branco:** o branco do fundo escuro é o bege da paleta `#f5f1e0` ou branco puro
+   `#ffffff`?
+4. **Tipografia:** grotesca própria (separa do PAAPS) ou League Spartan (cria família)?
+5. **Modos:** os cinco entram, ou começamos com três (A, B, E) e abrimos C e D depois do
+   primeiro reel entregue?
+6. **Perfil:** esta identidade é do @amalluvasconcellos, do @psimalluvasconcellos, ou os
    dois compartilham?
