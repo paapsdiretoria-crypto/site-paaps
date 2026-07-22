@@ -9,11 +9,38 @@ não depende de internet e não tem assinatura.
 ## Como usar
 
 1. Clica no lugar onde você quer que o texto apareça.
-2. Aperta o atalho. Toca um `tin`: está gravando.
-3. Fala.
-4. Aperta o atalho de novo. Toca um `pop`: em cerca de 2 segundos o texto é colado.
+2. Aperta o atalho. Toca um `tin` e aparece **🔴 ditando** na barra de menu.
+3. Fala, com as pausas que você precisar.
+4. Aperta o atalho de novo. Toca um `pop` e o indicador vira **⏳ transcrevendo**.
+5. Quando o indicador some, o texto foi colado. Um resumo dele pisca na tela.
 
 Se nada for reconhecido, toca um som grave e nada é colado.
+
+## Quanto tempo demora
+
+A transcrição roda a cerca de 7x a velocidade da fala. Uma ditada de 2 minutos
+leva por volta de 20 segundos de máquina depois que você para de falar.
+
+O indicador na barra de menu existe justamente por isso: enquanto ele estiver
+ali, o trabalho está acontecendo. Apertar o atalho de novo nesse intervalo não
+atrapalha, só avisa que ainda está transcrevendo.
+
+## Nada se perde
+
+Toda fala transcrita é gravada em `~/Ditado/AAAA-MM-DD.md`, com horário, **antes**
+de qualquer tentativa de colar. Se a janela mudou, se a colagem falhou ou se você
+apertou outra coisa sem querer, o raciocínio continua lá.
+
+Pelo ícone na barra de menu dá para abrir o arquivo do dia direto.
+
+Essa pasta fica fora do repositório de propósito: você dita saúde, renda e
+reflexão pessoal, e isso não entra no git.
+
+## Se a colagem cair na janela errada
+
+O Hammerspoon guarda qual janela estava em foco quando você começou a ditar e
+volta para ela antes de colar. Numa transcrição longa dá tempo de trocar de app,
+e sem isso o texto cairia onde você estivesse no fim, não onde começou.
 
 Pelo terminal, se precisar:
 
