@@ -82,7 +82,8 @@ O mais forte do conjunto e o candidato a modo-assinatura.
 - Bloco de 4 a 5 linhas ocupando o terço central-superior
 - Cor sólida única pelo fundo (vinho na parede clara, branco no escuro), sem sombra visível
 - Ocupação: ~90% da largura, ~35% da altura, topo do bloco em ~28% da altura
-- A frase inteira aparece de uma vez e permanece; não é revelação palavra a palavra
+- **Sempre palavra por palavra, com clique em TODAS as palavras.** Sem exceção, sem
+  variante que entre inteira. Ver 5.1.
 
 *Observação técnica:* nessa referência o "Ê" de VOCÊ saiu em caixa baixa, porque a fonte
 usada lá não tinha capitular acentuada. **Não se aplica aqui:** Impact tem Ê, Ã, Ç e Õ em
@@ -353,11 +354,22 @@ desse mapa, nunca de uma margem herdada do PAAPS.
 Nas frases de destaque o texto **não aparece inteiro nem se revela suavemente**: as
 palavras entram uma a uma, como peças sendo encaixadas.
 
+**Cada palavra é uma PEÇA que MONTA uma frase.** Este é o modelo mental correto, e ele
+manda em toda a implementação:
+
 - Uma palavra por vez, encaixe seco, sem fade lento e sem deslize longo
 - Cada palavra entra sincronizada com a palavra falada
-- **Cada palavra vem com um SFX de clique**, ver seção 5.2
-- A frase montada permanece na tela depois do último clique; não desmonta palavra a
-  palavra
+- **Clique de trackpad em TODAS as palavras que aparecem.** Nenhuma entra muda.
+- **A palavra que aparece FICA.** Não some, não pisca, não é substituída pela próxima.
+  Não são palavras alternadas: é uma frase sendo construída diante do espectador.
+- A frase completa permanece **durante todo o tempo em que ela está falando aquela
+  frase, mais instantes CURTOS depois**, para leitura, compreensão e impacto. Curtos: o
+  suficiente para ler, não o suficiente para a tela parecer parada.
+- Só então a frase sai inteira e a próxima começa a montar
+
+O erro a evitar tem nome: legenda que troca palavra a palavra, tipo karaokê. Ali a palavra
+anterior desaparece quando a seguinte chega. Aqui é o oposto: nada desaparece até a frase
+inteira estar montada e lida.
 
 O clique é o que dá a sensação de peça encaixando. É a assinatura sonora do perfil dela, e
 é o que separa esse reel de legenda automática mesmo com o som ligado.
@@ -455,18 +467,33 @@ Só ganha corpo depois que 3, 4 e 5 estiverem decididos. Sequência prevista:
    C. Ver 5.2.
 10. ~~**Clique**~~ RESOLVIDO em 22/07/2026: trackpad, surdo e curto.
 
-### Aberta de verdade
+11. ~~**Entrada do modo A**~~ RESOLVIDO em 22/07/2026: sempre palavra por palavra, clique
+    em todas, cada palavra fica e monta a frase. Sem variante. Ver 5.1.
 
-11. **O modo A entra palavra a palavra ou de uma vez?** Há um conflito nesta spec. A
-    seção 2 diz que no modo A "a frase inteira aparece de uma vez e permanece" (foi minha
-    leitura do print estático, e você aprovou o modo sem mexer nessa linha). A seção 5.1
-    diz que gancho e frases de destaque entram palavra a palavra com clique. O modo A é
-    justamente o modo de gancho e de destaque. As duas coisas não cabem juntas.
+**Nenhuma decisão de identidade em aberto.** O que falta agora é execução: montar o
+primeiro reel real e descobrir o que a spec não previu.
 
-    Três saídas possíveis: (a) A é sempre palavra a palavra com clique, e a linha da
-    seção 2 está errada; (b) A tem duas variantes, uma para gancho com clique e outra para
-    a frase de fechamento que entra inteira; (c) o clique palavra a palavra pertence só ao
-    gancho, e o modo A no meio do reel entra inteiro.
+---
+
+## 9. O que falta para o primeiro teste em vídeo real
+
+Decisões de identidade estão fechadas. Falta infraestrutura, e ela é pequena:
+
+1. **Fontes para `public/fonts/`:** copiar `Impact.ttf` e os quatro `Times New Roman*.ttf`
+   de `/System/Library/Fonts/Supplemental/`. Entram no `.gitignore` (licença Monotype).
+2. **Três SFX:** clique de trackpad, pop, whoosh de arraste rápido. Buscar na biblioteca
+   do HeyGen ou na biblioteca local de SFX do hyperframes, apresentar os candidatos para a
+   Mallu ouvir antes de aplicar. Nenhum é difícil de achar; o risco é escolher um clique
+   agudo demais.
+3. **Gerador `mallu_reel.py`:** irmão do `paaps_reel.py`, com os tokens desta spec. Não
+   reaproveitar o do PAAPS: as regras de cor, sombra, fonte e ocupação são diferentes o
+   bastante para a herança atrapalhar mais do que ajudar.
+4. **Só depois:** `remove-background` para o modo C.
+
+**Recomendação de sequência:** o primeiro reel usa **A, B e E**, sem modo C. Isso valida
+tipografia, cor por backdrop, os dois regimes de ocupação e o clique, que é onde está o
+risco real. O modo C entra no segundo reel, porque o recorte do sujeito é caro e é o único
+item que pode falhar por motivo técnico e não por decisão de design.
 
 ---
 
