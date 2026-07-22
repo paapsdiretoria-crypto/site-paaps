@@ -371,10 +371,10 @@ colado na borda, nem sobre o rosto.
 ```
 y=0     ┌─────────────────────────┐
         │  INTERFACE DO INSTAGRAM │  proibido: a plataforma escreve aqui
-y≈320   ├─────────────────────────┤
-        │                         │
+y=210   ├─────────────────────────┤  (medido, ver 5.0.1)
+        │      folga de 90        │
+y=300   ├─────────────────────────┤
         │      FAIXA NEUTRA       │  <- o texto de cima vive AQUI
-        │                         │
 y=?     ├─────────────────────────┤  topo da cabeça (medido por vídeo)
         │         ROSTO           │
 ```
@@ -388,22 +388,61 @@ onde começam.
 **Quando a faixa neutra não comporta o texto:** o bloco desce para o peito. Ele **não
 invade a faixa da interface** para ganhar espaço. Se não cabe em cima, não é lugar dele.
 
-**Números de trabalho** (1080×1920, Instagram Reels), a confirmar contra um print real
-do aplicativo:
+### 5.0.1 As zonas MEDIDAS no aparelho da Mallu
 
-| Zona | Faixa | Por quê |
+Medido em 22/07/2026 sobre um print real do reel publicado, no iPhone dela. Não são
+números de referência de internet: saíram do aparelho onde o conteúdo é visto.
+
+**Como o print se converte em coordenadas do vídeo:**
+
+- O vídeo NÃO ocupa a tela inteira: vai de `tela_y 0` até `tela_y 1445` (num print de
+  739×1600). Abaixo disso é preto, com a caixa de comentário.
+- Escala: **1 pixel de tela = 1,329 pixel de vídeo**. Logo `video_y = tela_y × 1,329`.
+- **O Instagram CORTA as laterais.** `video_x = tela_x × 1,329 + 49`, ou seja, as faixas
+  `x 0..49` e `x 1031..1080` do vídeo **não aparecem** no aparelho.
+
+Conferência que valida o modelo: a legenda "MUITAS VEZES ESSA BOLHA", que o gerador
+colocou em `x=84`, aparece no print em `tela_x 27,5`, que converte para `video_x 85,5`.
+Bate. E o topo dessa legenda, que o gerador pôs em `y=150`, aparece em `tela_y 113`.
+
+**As zonas, em coordenadas do vídeo (1080×1920):**
+
+| Zona | Faixa no vídeo | O que tem ali |
 |---|---|---|
-| Interface do topo | `y 0 .. 320` | Barra de status, cabeçalho do Reels |
-| Faixa neutra | `y 320 .. topo da cabeça` | Onde o texto de cima mora |
-| Trilho de ações | `x 880 .. 1080` | Curtir, comentar, compartilhar, áudio |
-| Interface de baixo | `y 1500 .. 1920` | Legenda, @, faixa de áudio |
+| Corte lateral | `x 0..49` e `x 1031..1080` | Simplesmente não aparece |
+| Barra de status | `y 49..84` | Hora, sinal, bateria |
+| **Cabeçalho do Reels** | **`y 155..210`** | Seta de voltar, "Reels", "Amigos", bolhas de perfil |
+| Trilho de ações | `x 900..1010`, `y 1140..1730` | Curtir, comentar, repostar, enviar, áudio |
+| Nome do perfil | `y 1701..1781` | @malluvasconcellos |
+| Legenda do post | `y 1821..1861` | A primeira linha da legenda |
+| Barra de progresso | `y ~1914` | |
 
-O topo da cabeça é medido por vídeo, nunca estimado. A faixa útil do peito fica entre o
-queixo e `y=1500`.
+**A colisão que aconteceu:** o gerador pôs a legenda em `y=150`. O cabeçalho do Reels
+ocupa `y 155..210`. Elas se sobrepõem quase exatamente. No print dá para ler
+"MUITAS**Reels** ESSA **Amigos**BOLHA" tudo embaralhado.
+
+**Caixa de texto segura, daqui em diante:**
+
+```
+x:  90 .. 870     (largura 780, não 912: o 996 antigo entrava no trilho de ações)
+y:  300 .. 1650   (nunca acima de 300; nunca abaixo de 1650)
+```
+
+O `x` antigo (84..996) errava dos dois lados: começava a 35px do corte lateral, e
+terminava dentro do trilho dos botões.
+
+**Consequência dura para o modo A:** neste vídeo a faixa neutra vai de `y=300` ao topo da
+cabeça (`y≈525`), ou seja, 225px. Impact a 132px ocupa 113px por linha. Cabem DUAS linhas,
+não três. Quando o bloco não couber na faixa neutra, ele **encolhe ou desce para o peito**.
+Nunca sobe para cima de 300.
 
 **Verificação obrigatória:** antes de entregar, olhar o snapshot **imaginando a interface
 do Instagram por cima**. Se o texto encosta na zona onde a plataforma escreve, está
-errado, mesmo que o frame isolado pareça bonito. O reel não é visto no frame isolado.
+errado, mesmo que o frame isolado pareça bonito. O reel não é visto no frame isolado, e
+foi exatamente esse o erro do primeiro reel.
+
+**Refazer a medição quando:** ela trocar de aparelho, o Instagram mudar a interface, ou o
+destino for TikTok (que tem trilho e rodapé próprios, em outras alturas).
 
 ### 5.1 Revelação por clique (assinatura sonora e visual)
 
