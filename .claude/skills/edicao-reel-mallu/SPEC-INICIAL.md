@@ -80,7 +80,7 @@ O mais forte do conjunto e o candidato a modo-assinatura.
 - `line-height` ~0,85: as linhas se tocam
 - Alinhado à esquerda, sangrando na direita até cortar a última letra
 - Bloco de 4 a 5 linhas ocupando o terço central-superior
-- Cor única, sem sombra, alto contraste com o fundo
+- Bege `#f5f1e0` com halo vinho; alto contraste com o fundo
 - Ocupação: ~90% da largura, ~35% da altura, topo do bloco em ~28% da altura
 - A frase inteira aparece de uma vez e permanece; não é revelação palavra a palavra
 
@@ -94,7 +94,8 @@ O mais sofisticado e o que mais combina com o lugar de autoridade dela.
 
 - Serifada de alto contraste (didona/transicional), caixa mista
 - Mistura de romano e itálico dentro da MESMA frase, marcando o movimento do pensamento
-- Duas cores: neutro claro para o corpo, vermelho-tijolo para os dois conceitos-chave
+- Duas cores: bege `#f5f1e0` no corpo, vinho `#6f0d33` nos dois conceitos-chave (ou rosa
+  `#c42443` se o trecho for escuro; ver seção 4)
 - As palavras destacadas ganham inicial maiúscula no meio da frase, tratadas como
   conceitos nomeados (Pertencimento, Essência), não como palavras comuns
 - `line-height` ~0,95, alinhado à esquerda, sangrando na direita
@@ -106,7 +107,7 @@ história".
 
 ### Modo C: MARCA D'ÁGUA (ref. "teste esses hooks visuais")
 - Condensada pesada, caixa alta, duas linhas
-- Cor areia com opacidade reduzida (~65-75%), integrada à textura da parede
+- Vinho `#6f0d33` a 20-25% de opacidade sobre parede clara, integrado à textura dela
 - Contraste deliberadamente baixo: o texto pertence ao ambiente, não flutua acima dele
 - A pessoa entra em quadro e passa na frente, o que dá profundidade
 - Ocupação: ~85% da largura, ~15% da altura, no terço superior
@@ -128,9 +129,9 @@ em vídeo de bastidor e processo, nunca em vídeo de tese.
 ### Modo E: CADÊNCIA SUBLINHADA (ref. "2) até você criar uma relevância")
 - Grotesca geométrica pesada, caixa baixa, quatro linhas centralizadas
 - **Sublinhado por linha, com a régua na largura exata daquela frase**: é o recurso mais
-  aproveitável do conjunto
+  aproveitável do conjunto, e é onde o vinho `#6f0d33` mais aparece
 - Numeração explícita no início ("2)"), tornando a estrutura da fala legível sem áudio
-- Cor clara, leve sombra
+- Texto em bege `#f5f1e0` com halo vinho
 - Ocupação: ~80% da largura, ~30% da altura, centro do quadro
 
 O sublinhado adaptativo é a coisa mais barata e mais diferenciadora das cinco referências.
@@ -170,46 +171,70 @@ lá.
 
 ---
 
-## 4. Paleta AMALLUVASCONCELLOS: o buraco a preencher
+## 4. Paleta AMALLUVASCONCELLOS (definida pela Mallu em 22/07/2026)
 
-Auditei o repositório. A expressão "paleta AMALLUVASCONCELLOS" aparece em
+Auditei o repositório antes: a expressão "paleta AMALLUVASCONCELLOS" aparecia em
 `.claude/agents/mallu-reels.md`, `.claude/agents/mallu-carrossel.md` e
-`conteudo/instagram/amalluvasconcellos/CLAUDE.md`, sempre como instrução. **Ela nunca foi
-definida em lugar nenhum do repositório.** Todo agente que a cita está trabalhando no
-escuro há meses. Isso é exatamente o que ela está pedindo para resolver agora.
-
-O que as cinco referências indicam como temperatura: nenhuma delas é fria. Nenhuma usa
-azul, roxo ou cinza-tech. Todas ficam entre o creme, o areia, o amarelo pálido, o
-vermelho-tijolo e o branco quente. É a mesma família térmica do PAAPS, um pouco mais
-saturada e um pouco menos institucional.
-
-**Proposta de partida, para ela validar ou destruir:**
+`conteudo/instagram/amalluvasconcellos/CLAUDE.md` sempre como instrução, mas nunca tinha
+sido definida em lugar nenhum. Todo agente que a citava trabalhava no escuro. Fica
+definida aqui, a partir da paleta que a Mallu passou.
 
 ```css
 :root {
-  /* herdado do PAAPS: mantém o parentesco */
-  --m-marrom:     #442309;  /* texto neutro sobre fundo claro */
-  --m-terracota:  #cb4710;  /* ponte com o PAAPS */
-
-  /* próprio do perfil dela */
-  --m-creme:      #f7f2e4;  /* neutro sobre fundo escuro; um grau mais quente que o PAAPS */
-  --m-manteiga:   #f2ecb8;  /* amarelo pálido do modo A; o creme-amarelado da referência */
-  --m-tijolo:     #b5251a;  /* vermelho do modo B; conceito nomeado */
-  --m-areia:      #d8cdb4;  /* modo C, marca d'água em opacidade reduzida */
+  --m-bege:       #f5f1e0;  /* fundo e TEXTO PADRÃO da legenda */
+  --m-lilas:      #bcb6f2;  /* acento frio, uso restrito (herdado do PAAPS) */
+  --m-rosa:       #c42443;  /* acento vivo, meio-tom */
+  --m-vinho:      #6f0d33;  /* DESTAQUE e toda aplicação colorida */
+  --m-terracota:  #cb4710;  /* herdado do PAAPS: ponte entre os dois perfis */
+  --m-marrom:     #442309;  /* herdado do PAAPS: neutro escuro */
 }
 ```
 
-`--m-manteiga` e `--m-tijolo` são as duas cores que o PAAPS não tem. São elas que fazem a
-identidade dela ser dela. As outras três garantem que os dois perfis pareçam da mesma
-casa.
+Três cores são compartilhadas com o PAAPS (`#bcb6f2`, `#cb4710`, `#442309`) e o bege é
+praticamente o mesmo (`#f5f1e0` aqui, `#f5f1e1` lá). O que faz a identidade dela ser dela
+são `--m-rosa` e `--m-vinho`, que o PAAPS não tem.
 
-**Regra de cor por backdrop** (herdada, vale igual): sobre parede clara o neutro é
-`--m-marrom` com halo claro; sobre fundo escuro ou b-roll o neutro é `--m-creme` com halo
-escuro forte. `--m-manteiga` só sobre fundo médio ou escuro. `--m-tijolo` nunca sozinho
-como frase inteira: só palavra-conceito dentro de frase neutra.
+### Regra de legenda (definida pela Mallu)
 
-**Decisão pendente:** ela tem paleta definida no Canva sob esse nome? Se sim, essa vence e
-eu documento a dela. Se não, essa proposta vira a v1.
+> **Legenda sempre em bege `#f5f1e0`. Destaque e qualquer aplicação colorida em vinho
+> `#6f0d33`.**
+
+Isso não é uma preferência solta: os dois valores têm contraste de ~9,8:1 entre si, o que
+faz do par bege-sobre-vinho a combinação mais legível de toda a paleta. O sistema inteiro
+sai daí.
+
+### Como a regra sobrevive ao backdrop
+
+O bege sozinho falha sobre parede clara. Isso não é hipótese: o validador acusou 6 falhas
+de contraste WCAG no vídeo 02 do PAAPS exatamente por creme sobre parede clara. A Mallu
+filma quase sempre em parede clara. **A cor não muda; o que muda é o suporte.**
+
+| Backdrop | Legenda | Como sustenta |
+|---|---|---|
+| Parede clara (o caso mais comum) | bege `#f5f1e0` | halo vinho forte: `text-shadow` `0 0 5px` + `0 2px 0` em `#6f0d33` a 0,9 |
+| Footage escura, roupa escura, b-roll | bege `#f5f1e0` | halo escuro (`rgba(0,0,0,0.85)`), o padrão já herdado |
+| Cenário misto no mesmo vídeo | bege `#f5f1e0` | halo vinho + halo escuro empilhados; a cor nunca troca no meio |
+
+O halo vinho é o que transforma a instrução dela num sistema: mantém a legenda sempre
+bege, resolve a parede clara sem escurecer o vídeo, e faz o vinho aparecer em toda peça
+mesmo quando não há palavra destacada.
+
+### Como o vinho entra como destaque
+
+`#6f0d33` é escuro. Como TEXTO sobre footage escura ele some. Por isso o destaque não é
+"trocar a cor da palavra para vinho", é **inverter**:
+
+- **Palavra destacada:** painel vinho justo atrás da palavra (padding ~0.08em, raio 4px),
+  com a palavra em bege por cima. Contraste 9,8:1, funciona sobre qualquer fundo.
+- **Sublinhado do modo E:** régua vinho sólida na largura exata da linha. É aqui que a
+  cor aparece com mais frequência, sem custar legibilidade nenhuma.
+- **Conceito nomeado do modo B:** aí sim a palavra vai em vinho puro, sem painel, porque
+  o modo B é usado sobre fundo claro por definição. Se o trecho for escuro, o conceito
+  usa `--m-rosa` `#c42443`, que é o mesmo gesto num tom que ainda lê no escuro.
+- **Marca d'água do modo C:** vinho a 20-25% de opacidade sobre parede clara.
+
+Regra dura: **vinho como texto puro só sobre fundo claro.** Sobre escuro, vinho é painel,
+régua ou fundo, nunca a letra.
 
 ---
 
@@ -260,15 +285,20 @@ Só ganha corpo depois que 3, 4 e 5 estiverem decididos. Sequência prevista:
 - O sublinhado do modo E acompanha a largura real de cada linha, não uma largura fixa
 - A entrelinha do modo A está entre 0,82 e 0,90; se estiver em 1,0, está errado
 - O modo D não aparece no mesmo reel que A ou B
+- **Toda legenda está em bege `#f5f1e0`. Nenhuma exceção, nenhum branco puro.**
+- **Nenhuma letra em vinho `#6f0d33` cai sobre fundo escuro.** Sobre escuro, vinho é
+  painel, régua ou fundo. Conferir isso nos PNGs do `snapshot`, não só no validador.
+- Toda peça tem o vinho aparecendo em algum lugar (halo, régua, painel ou conceito)
 - Nenhuma camada escurece o fundo (herdado)
 - Não usei fonte fora das duas famílias definidas
+- Não usei cor fora dos seis hex da seção 4
 
 ---
 
 ## 7. Perguntas abertas, em ordem de bloqueio
 
-1. **Paleta:** existe uma paleta AMALLUVASCONCELLOS no Canva? Ou a proposta da seção 4
-   vira a v1?
+1. ~~**Paleta**~~ RESOLVIDO em 22/07/2026: seis hex definidos na seção 4, legenda em bege
+   `#f5f1e0`, destaque e aplicação colorida em vinho `#6f0d33`.
 2. **Rosto:** a regra dos olhos livres, a alternativa conservadora, ou outra?
 3. **Tipografia:** grotesca própria (separa do PAAPS) ou League Spartan (cria família)?
 4. **Modos:** os cinco entram, ou cortamos algum agora? Minha sugestão é começar com três
