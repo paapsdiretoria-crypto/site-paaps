@@ -164,8 +164,9 @@ datilografado.
 
 ### Modo E: CADÊNCIA SUBLINHADA (ref. "até você criar uma relevância")
 - Impact, caixa alta, três a quatro linhas
-- **Sublinhado por linha, com a régua na largura exata daquela frase**: é o recurso mais
-  aproveitável do conjunto
+- **Régua na largura exata da palavra ou expressão DESTACADA.** Não é régua em toda linha:
+  a Mallu corrigiu isso em 22/07/2026, ao ver o primeiro reel. Legenda corrida entra
+  limpa; a régua marca destaque.
 - Régua na mesma cor do texto; cor sólida única pelo fundo
 - **Sem numeração.** O "2)" daquele print existia porque o roteiro daquele vídeo era uma
   lista. Não é elemento do modo. Só numerar quando a fala for de fato enumerada.
@@ -417,6 +418,9 @@ Só ganha corpo depois que 3, 4 e 5 estiverem decididos. Sequência prevista:
 
 ### Gate próprio (o que muda em relação ao PAAPS)
 
+- **Toda palavra falada aparece escrita em algum modo.** Rodar a verificação automática
+  (transcrição × texto na tela) e conferir que dá zero. É a falha mais visível de todas.
+- **A legenda corrida está sem régua**, exceto na palavra destacada.
 - **Nenhuma sombra colorida em lugar nenhum.** Só preto padrão, muito suave, invisível a
   olho nu no frame. Se dá para notar a sombra, está errado.
 - **Legenda em cor sólida única por trecho:** vinho `#6f0d33` sobre parede clara, branco
@@ -560,6 +564,45 @@ lista e o clamp produz duração NEGATIVA. Sintoma no snapshot: todos os blocos 
 aparecem empilhados e nunca somem, porque o `tl.set(opacity:0)` cai antes do início.
 Comparar sempre contra as janelas dos OUTROS blocos, e deixar um
 `assert fim > início` no gerador.
+
+### FALA NUNCA FICA SEM LEGENDA
+
+Regra dura, e a primeira coisa que a Mallu apontou ao ver o reel. Toda palavra dita tem
+que estar escrita em algum modo. Na v1 eu quebrei isso em três lugares diferentes, todos
+pelo mesmo motivo: tratei "este trecho pertence ao modo A/B" como "aqui não entra
+legenda".
+
+**1. O tempo de leitura estava silenciando a legenda corrida.**
+O bloco do modo A permanece na tela ~1,15s depois da última palavra falada, para leitura.
+Eu usava essa mesma janela para suprimir a legenda corrida, então as palavras ditas nesse
+1,15s não apareciam em lugar nenhum. Some meia frase em cada transição: "na sua vida, já
+deve ter passado", "como alguém que é", "saiu uma matéria da", "e pra esse vídeo".
+
+Correção: **duas janelas separadas.** `OFF_FALA` (só o trecho falado) silencia a legenda
+corrida; `OFF_CLIP` (fala + leitura) serve só para o bloco não encostar no próximo da
+mesma track. A legenda corrida volta na palavra seguinte, mesmo com o bloco A ainda na
+tela. Não há colisão: o bloco A vive em `y≈470` e a legenda corrida em `y=150` ou
+`y=1385`.
+
+**2. O modo B estava condensando a frase.**
+Eu tinha escrito uma versão resumida da frase e a oração "quando a gente entra em contato
+com novas informações" ficou sem legenda nenhuma durante os 11s do bloco. O modo B carrega
+a frase INTEIRA da sua janela. Se não couber, diminui o corpo; não corta texto.
+
+**3. Verificação automática, no gerador.**
+Depois de gerar, cruzar a transcrição com o que foi escrito na tela e listar as palavras
+faladas que não aparecem em nenhum modo. Tem que dar zero (fora as diferenças de
+tokenização do ASR). Custa 10 linhas e pega os três casos acima.
+
+### O grifo é destaque, não é padrão
+
+A referência da cadência sublinhada tinha régua embaixo de TODAS as linhas, e eu
+implementei assim. A Mallu corrigiu: **o grifo marca destaque; não é a aparência padrão da
+legenda corrida.** Legenda corrida entra limpa, sem régua. A régua entra só na palavra ou
+expressão destacada.
+
+*Pendente:* qual o critério para escolher a palavra destacada, e se ela existe em todo
+reel ou só quando há uma palavra que pede.
 
 ### Gate: o lint e o validate não pegam isso
 
