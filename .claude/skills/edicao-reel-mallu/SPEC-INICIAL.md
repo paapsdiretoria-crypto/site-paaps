@@ -497,6 +497,77 @@ item que pode falhar por motivo técnico e não por decisão de design.
 
 ---
 
+## 10. Aprendido no primeiro reel real (vídeo 02, série 02, 22/07/2026)
+
+Projeto: `hyperframes/videos/reel-video02-serie02-mallu/`. Fonte: o `vídeo cortado.mov`
+que a Mallu já tinha cortado à mão. 116s, 1080x1920, gravado dentro de um carro.
+
+### Medir a luminância do vídeo antes de posicionar qualquer texto
+
+Foi o achado mais valioso da rodada, e ele generaliza. Estimar as faixas claras "no olho"
+a partir de um frame me fez errar por 150px: eu pus a legenda de peito em `y=1250`
+achando que ali começava a regata clara, e a medição mostrou luma 48 (ainda é sombra de
+pescoço). A regata só começa de fato em `y≈1400`, onde a luma é 143.
+
+Receita, ~1 minuto de processamento:
+
+```bash
+ffmpeg -i public/input-video.mp4 -vf "fps=1,scale=270:480,format=gray" -f rawvideo frames.gray
+```
+Depois, em numpy: mediana por linha em cada frame, percentil 10 no tempo (pior caso
+razoável). O perfil resultante diz onde o texto lê e onde não lê, para o vídeo inteiro.
+
+Neste vídeo o perfil deu:
+- teto do carro, `y 80..440`: luma 100-118, fundo MÉDIO
+- regata, `y 1400..1500`: luma 140-143, fundo CLARO
+
+### A regra de cor vale por ZONA, não só por trecho
+
+A spec dizia "parede clara → vinho, fundo escuro → bege". Este vídeo não é nem um nem
+outro: é um **carro, com fundo médio em cima e claro embaixo, ao mesmo tempo**. Nenhuma
+cor única funciona nas duas faixas:
+
+| Faixa | luma | bege | vinho |
+|---|---|---|---|
+| Teto (acima da cabeça) | ~117 | **4,0:1** | 2,4:1 |
+| Regata (peito) | ~143 | 2,8:1 | **3,5:1** |
+
+A saída foi aplicar a regra dela num grão mais fino: **a cor é decidida pelo fundo daquela
+faixa**, não pelo vídeo inteiro. Bege acima da cabeça, vinho no peito. É a mesma regra,
+lida com mais rigor. **Pendente de validação da Mallu ao ver o vídeo.**
+
+### Escolher o trecho do modo A pelo SENTIDO, nunca por janela de tempo
+
+Primeira tentativa: definir uma janela `(início, fim)` e pegar as 8 primeiras palavras.
+Resultado: "NA SUA CABEÇA A IMPORTÂNCIA DA GENTE FURAR" (perdeu "a nossa bolha") e
+"COMO É IMPORTANTE FURAR A SUA BOLHA, VOCÊ" (perdeu "teve educação", que era o remate).
+
+A janela sempre come o remate, porque o remate é a última coisa dita. **Escrever o texto
+exato da oração no gerador e deixar o código achar os timestamps na transcrição.** Assim
+o bloco nunca corta no meio de um pensamento.
+
+### Corrigir o ASR antes de qualquer coisa
+
+O whisper colou o "E" inicial em quatro palavras: `Eainda`, `Eisso`, `Eagora`, `Epra`.
+Em legenda comum passa despercebido; no modo A, com a palavra em Impact a 132px na tela,
+"EAGORA" grita. Separar preservando o timestamp (o "E" fica com os primeiros ~18% da
+duração do token).
+
+### Armadilha do gerador: a janela OFF de um bloco limitando ele mesmo
+
+Ao clampear o fim de um bloco A contra "a próxima janela OFF", o próprio bloco entra na
+lista e o clamp produz duração NEGATIVA. Sintoma no snapshot: todos os blocos de destaque
+aparecem empilhados e nunca somem, porque o `tl.set(opacity:0)` cai antes do início.
+Comparar sempre contra as janelas dos OUTROS blocos, e deixar um
+`assert fim > início` no gerador.
+
+### Gate: o lint e o validate não pegam isso
+
+`lint` deu 0 erros com os blocos empilhados; `validate` acusou só contraste. Quem pegou
+foi o `snapshot` com os PNGs abertos. **A conferência visual não é opcional.**
+
+---
+
 ## 8. De quem é esta identidade
 
 **Perfil: `@malluvasconcellos` no Instagram.** Um só.

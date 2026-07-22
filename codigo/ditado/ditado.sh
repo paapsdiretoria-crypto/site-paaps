@@ -26,6 +26,9 @@ LIMITE_SEG="${DITADO_LIMITE:-300}"
 # repetir termo que nao foi dito.
 VOCAB="${DITADO_VOCAB:-Conversa de trabalho da Mallu Vasconcellos, da PAAPS. Fala sobre Claude, Claude Code, Notion, Instagram, carrossel, psicologia social, saúde mental, servidores públicos, prefeitura, gestão pública, políticas públicas, ECOA, TEAtrar e a Rede PAAPS.}"
 
+# Onde toda ditada fica guardada. Fora do repositorio: e material pessoal.
+ARQUIVO_DIR="${DITADO_ARQUIVO:-$HOME/Ditado}"
+
 DIR="${TMPDIR:-/tmp}/ditado"
 mkdir -p "$DIR"
 PIDFILE="$DIR/gravando.pid"
@@ -51,8 +54,11 @@ indice_do_mic() {
   printf '%s' "${idx:-0}"
 }
 
+# A presenca do arquivo de estado marca a sessao de gravacao, e nao o processo
+# vivo. Se o ffmpeg morrer sozinho (teto de tempo, dispositivo removido), a fala
+# ja gravada continua valendo: perder o audio dela e inaceitavel.
 esta_gravando() {
-  [ -f "$PIDFILE" ] && kill -0 "$(cat "$PIDFILE" 2>/dev/null)" 2>/dev/null
+  [ -f "$PIDFILE" ]
 }
 
 comeca() {
@@ -100,10 +106,14 @@ termina() {
   # Whisper alucina legenda de filme quando recebe silencio ("Legendas pela
   # comunidade Amara.org" e parentes). Barrar antes de transcrever e mais
   # confiavel do que tentar filtrar a invencao depois.
+  #
+  # Usa o PICO e nao a media: numa ditada longa ela pensa, pausa e retoma, entao
+  # a media desaba mesmo havendo fala boa no meio. Media como criterio jogaria
+  # fora justamente a ditada mais valiosa, que e a mais longa.
   volume=$("$FFMPEG" -hide_banner -i "$WAV" -af volumedetect -f null - 2>&1 \
-    | sed -n 's/.*mean_volume: \(-*[0-9.]*\) dB.*/\1/p' | head -1)
-  if [ -n "$volume" ] && [ "${volume%.*}" -lt -50 ] 2>/dev/null; then
-    registra "silencio ($volume dB), nada a transcrever"
+    | sed -n 's/.*max_volume: \(-*[0-9.]*\) dB.*/\1/p' | head -1)
+  if [ -n "$volume" ] && [ "${volume%.*}" -lt -40 ] 2>/dev/null; then
+    registra "silencio (pico $volume dB), nada a transcrever"
     som Basso
     return 1
   fi
@@ -123,6 +133,18 @@ termina() {
   fi
 
   registra "transcrito: $texto"
+
+  # Rede de segurança: toda fala transcrita vira arquivo antes de qualquer
+  # tentativa de colar. Se a colagem falhar, se a janela tiver mudado ou se ela
+  # apertar outra coisa sem querer, o raciocinio nao se perde.
+  # Fica FORA do repositorio de proposito: ela dita saude, renda e reflexao
+  # pessoal, e isso nao entra no git.
+  mkdir -p "$ARQUIVO_DIR"
+  {
+    printf '\n## %s\n\n' "$(date '+%H:%M')"
+    printf '%s\n' "$texto"
+  } >> "$ARQUIVO_DIR/$(date '+%Y-%m-%d').md"
+
   # O texto fica no clipboard de proposito: se a colagem falhar por falta de
   # permissao de acessibilidade, ainda da para colar na mao com cmd+V.
   printf '%s' "$texto" | pbcopy
