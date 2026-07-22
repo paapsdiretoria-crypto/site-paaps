@@ -601,8 +601,35 @@ implementei assim. A Mallu corrigiu: **o grifo marca destaque; não é a aparên
 legenda corrida.** Legenda corrida entra limpa, sem régua. A régua entra só na palavra ou
 expressão destacada.
 
-*Pendente:* qual o critério para escolher a palavra destacada, e se ela existe em todo
-reel ou só quando há uma palavra que pede.
+### Qual palavra leva o grifo
+
+Critério para decidir sozinho, sem perguntar a cada reel:
+
+**1. A palavra nomeia a estrutura ou a contradição.** Não o sentimento, não a intensidade.
+`política pública` leva grifo; `esperança` não. `machista` leva; `bastante` não. É a mesma
+régua da linha epistemológica: o que se grifa é o que desnaturaliza, não o que emociona.
+
+**2. Substantivo ou conceito, nunca advérbio nem adjetivo de ênfase.**
+`restrito`, `oportunidades`, `marcador social`. Nunca `muito`, `extremamente`,
+`provavelmente`.
+
+**3. Escolhida pelo PESO, nunca pela frequência.** A palavra mais repetida do reel
+costuma ser a menos interessante.
+
+**4. Não repetir o que o modo A já gritou.** Se o bloco grande já pôs `DESINFORMAÇÃO` na
+tela em Impact a 132px, grifar a mesma palavra na legenda corrida é redundância. O grifo
+marca o que o modo A não levou. Exceção: quando ela repete a tese citando fonte, aí o
+grifo confirma em vez de repetir.
+
+**5. Densidade: uma a cada 15-20 segundos.** Num reel de 2 minutos, de 5 a 7 grifos. Menos
+que isso o recurso não vira ritmo; mais que isso deixa de ser destaque e vira decoração.
+
+**6. Nunca dois grifos a menos de 8 segundos um do outro.** Se dois candidatos caem perto,
+fica o de maior peso e o outro sai.
+
+Grifo é obrigatório em todo reel: sem nenhum, a legenda corrida perde o recurso que a
+diferencia de legenda automática. Se nenhuma palavra do reel passa no critério 1, o
+problema é o roteiro, não o grifo.
 
 ### Gate: o lint e o validate não pegam isso
 
