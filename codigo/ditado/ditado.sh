@@ -19,6 +19,13 @@ IDIOMA="${DITADO_IDIOMA:-pt}"
 MIC_NOME="${DITADO_MIC:-MacBook Pro}"
 LIMITE_SEG="${DITADO_LIMITE:-300}"
 
+# Vocabulario do contexto. O whisper usa isso para enviesar o reconhecimento,
+# entao nomes proprios e jargao do PAAPS param de virar palavra parecida
+# ("Claude" saia como "Claudio", "ditando" saia como "de Tando").
+# Precisa ler como frase, nao como lista solta: prompt picotado faz o modelo
+# repetir termo que nao foi dito.
+VOCAB="${DITADO_VOCAB:-Conversa de trabalho da Mallu Vasconcellos, da PAAPS. Fala sobre Claude, Claude Code, Notion, Instagram, carrossel, psicologia social, saúde mental, servidores públicos, prefeitura, gestão pública, políticas públicas, ECOA, TEAtrar e a Rede PAAPS.}"
+
 DIR="${TMPDIR:-/tmp}/ditado"
 mkdir -p "$DIR"
 PIDFILE="$DIR/gravando.pid"
@@ -90,7 +97,18 @@ termina() {
     return 1
   fi
 
-  texto=$("$WHISPER" -m "$MODELO" -l "$IDIOMA" -nt -np -t 4 -f "$WAV" 2>>"$LOG" | tr '\n' ' ')
+  # Whisper alucina legenda de filme quando recebe silencio ("Legendas pela
+  # comunidade Amara.org" e parentes). Barrar antes de transcrever e mais
+  # confiavel do que tentar filtrar a invencao depois.
+  volume=$("$FFMPEG" -hide_banner -i "$WAV" -af volumedetect -f null - 2>&1 \
+    | sed -n 's/.*mean_volume: \(-*[0-9.]*\) dB.*/\1/p' | head -1)
+  if [ -n "$volume" ] && [ "${volume%.*}" -lt -50 ] 2>/dev/null; then
+    registra "silencio ($volume dB), nada a transcrever"
+    som Basso
+    return 1
+  fi
+
+  texto=$("$WHISPER" -m "$MODELO" -l "$IDIOMA" -nt -np -t 4 --prompt "$VOCAB" -f "$WAV" 2>>"$LOG" | tr '\n' ' ')
   # O whisper marca ruido e silencio entre colchetes. Isso nao e fala.
   texto=$(printf '%s' "$texto" \
     | sed -E 's/\[[^]]*\]//g' \

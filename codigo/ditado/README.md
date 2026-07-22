@@ -23,23 +23,27 @@ ditado status     diz se está gravando
 ditado cancelar   descarta a gravação em andamento
 ```
 
-## Falta um passo, e só você pode fazer
+O atalho é **⌘;** e já está armado.
 
-O macOS não deixa nenhum programa definir um atalho de teclado global sozinho.
-A Ação Rápida já está instalada e registrada; falta escolher a tecla:
+## Trocar a tecla
 
-1. Abre **Ajustes do Sistema** > **Teclado** > **Atalhos de Teclado…**
-2. Na lista da esquerda, clica em **Serviços**.
-3. Abre a seção **Geral** e procura **Ditado**.
-4. Clica em **nenhum** do lado direito e aperta a combinação que você quer.
+Edita a linha `local MOD, TECLA` em `~/.hammerspoon/init.lua` e depois clica em
+**Reload Config** no ícone do martelo, na barra de menu.
 
-Sugestão: `⌃⌥D` (control + option + D). Evite teclas que digitam sozinhas.
+## Permissões
 
-Na primeira vez que o atalho rodar, o macOS vai pedir duas permissões. As duas são
-necessárias e pedidas uma vez só:
+Duas, pedidas uma vez só:
 
 - **Microfone**: para gravar a sua voz.
-- **Acessibilidade**: para colar o texto na janela ativa.
+- **Acessibilidade**, concedida ao **Hammerspoon**: para colar na janela ativa.
+
+Atenção ao caminho da acessibilidade, porque os Ajustes do Sistema têm dois lugares
+com esse nome e só um serve:
+
+- **Privacidade e Segurança** > **Acessibilidade**: a lista de apps. É esta.
+- Barra lateral > **Acessibilidade**: VoiceOver, Zoom, tamanho de texto. Não serve.
+
+Se o Hammerspoon não estiver na lista, o botão **+** embaixo dela resolve.
 
 ## Se a colagem não acontecer
 
@@ -73,14 +77,40 @@ Medido nesta máquina, com Metal ativo, modelo já em cache de disco.
 ## Como está montado
 
 ```
-atalho
-  -> ~/Library/Services/Ditado.workflow   (Ação Rápida do Automator)
-     -> ~/bin/ditado                      (link para este repositório)
-        -> ffmpeg          grava do microfone em wav 16 kHz mono
-        -> whisper-cpp     transcreve local, na GPU, via Metal
-        -> pbcopy          põe o texto na área de transferência
-        -> osascript       envia cmd+V para a janela ativa
+⌘;
+  -> ~/.hammerspoon/init.lua    (Hammerspoon registra a tecla no sistema)
+     -> ~/bin/ditado            (link para este repositório)
+        -> ffmpeg        grava do microfone em wav 16 kHz mono
+        -> volumedetect  recusa silêncio antes de transcrever
+        -> whisper-cpp   transcreve local, na GPU, via Metal
+        -> pbcopy        põe o texto na área de transferência
+     -> Hammerspoon      envia cmd+V com a permissão dele mesmo
 ```
+
+### Por que Hammerspoon e não uma Ação Rápida do Automator
+
+A primeira versão usava o menu de Serviços do macOS, e **não funcionava**. Duas razões:
+
+1. O atalho de Serviço passa pelo menu Serviços de cada aplicativo e é engolido quando
+   o próprio app já usa aquela combinação. O script nunca era chamado.
+2. A colagem dependia do `osascript`, que nesta máquina não tem permissão de
+   acessibilidade: `osascript não tem permissão para acionar teclas (1002)`.
+
+O Hammerspoon resolve os dois: registra a tecla acima de qualquer aplicativo e digita
+com a permissão concedida a ele. Nenhum passo depende de `osascript`.
+
+### Alucinação em silêncio
+
+O Whisper inventa legenda de filme quando recebe silêncio, tipicamente
+"Legendas pela comunidade Amara.org". Por isso o volume médio é medido antes da
+transcrição e qualquer coisa abaixo de -50 dB é recusada sem chamar o modelo.
+
+### Vocabulário
+
+Termos do contexto PAAPS são passados ao whisper via `--prompt`, senão "Claude" sai
+como "Claudio" e "ditando" como "de Tando". A lista fica na variável `VOCAB`, no
+começo do script, e precisa ler como frase: prompt picotado em lista solta faz o
+modelo repetir termo que não foi dito.
 
 O índice do microfone é resolvido **pelo nome**, nunca fixado no código: quando o
 iPhone entra ou sai por Continuidade, os números de dispositivo mudam de posição
