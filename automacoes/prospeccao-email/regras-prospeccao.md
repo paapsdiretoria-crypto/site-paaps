@@ -15,6 +15,18 @@
 
 Guia completo dos databases: página Notion `35644cb52e0081729d35cd1d52deff18`.
 
+## A esteira de Status (a escada do lead)
+
+`0. Alvo` (fila do buscador, nunca contatado) → **e-mail de prospecção sai** → `1. Cadastrado`
+(já tocado; só recebe re-prospecção depois de 60 dias, e se respondeu não recebe mais) →
+**respondeu** → `Aquecimento` (saiu do pool frio, virou conversa humana) → **após reunião de
+venda, com algo concreto sendo negociado** → `2. Negociação` → **fechou** → `3. Cliente`.
+`4. Perdido` fica fora da linha.
+
+A prospecção fria só age nas duas primeiras etapas: manda o primeiro e-mail para quem está
+em `0. Alvo` e a re-prospecção para quem está em `1. Cadastrado` com o cooldown vencido. De
+`Aquecimento` em diante é a Mallu, no toque humano.
+
 ## A regra dos 2 meses (dedup, sem mexer no schema)
 
 A (EMP) Leads não tem campo de "data do último contato" e, por decisão da fundadora, não
@@ -34,8 +46,8 @@ lead voltaria à fila na semana seguinte.
 
 **Entra** um lead que reúne tudo:
 
-1. `Status = 1. Cadastrado` (nunca contatado), ou reativação de `4. Perdido` / `Aquecimento`
-   com o cooldown de 60 dias vencido.
+1. `Status = 0. Alvo` (nunca contatado, primeiro toque), ou `Status = 1. Cadastrado` /
+   `4. Perdido` com o cooldown de 60 dias vencido (re-prospecção).
 2. Bate o ICP (ver `icp/README.md`: prefeitura/secretaria com servidores expostos a
    sofrimento coletivo, sinal de necessidade, gancho local verificável).
 3. Tem e-mail institucional público em (EMP) Contato.
@@ -43,7 +55,7 @@ lead voltaria à fila na semana seguinte.
 
 **Nunca entra:**
 
-- `Status = 2. Negociação`, `3. Cliente` ou `5. Finalizado`: já estão no funil humano.
+- `Aquecimento`, `2. Negociação`, `3. Cliente` ou `5. Finalizado`: já respondeu ou está no funil humano.
 - Quem recebeu toque há menos de 60 dias.
 - Quem pediu descadastro.
 
@@ -51,14 +63,14 @@ lead voltaria à fila na semana seguinte.
 
 1. **Ler a meta da semana.** Padrão: 15 e-mails (ver `cadencia.md`); respeitar o warm-up de
    volume no começo.
-2. **Montar o pool de elegíveis** consultando o CRM: Leads em `1. Cadastrado` (mais
-   reativáveis com cooldown vencido), que batem o ICP, com e-mail em (EMP) Contato, e **sem
-   Atividade PROSPECÇÃO nos últimos 60 dias**. Excluir os status de funil humano e os
-   descadastrados.
+2. **Montar o pool de elegíveis** consultando o CRM: Leads em `0. Alvo` (primeiro toque) e
+   Leads em `1. Cadastrado` / `4. Perdido` com o cooldown de 60 dias vencido (re-prospecção),
+   que batem o ICP, com e-mail em (EMP) Contato, e **sem Atividade PROSPECÇÃO nos últimos 60
+   dias**. Excluir quem respondeu (`Aquecimento` em diante), o funil humano e os descadastrados.
 3. **Se o pool for menor que a meta, fazer busca ativa na internet** por novas organizações
    do ICP. Fontes: sites `.gov.br` de prefeituras e câmaras, diários oficiais, portais de
    transparência, órgãos de estatística (IBGE/MTE/INSS). Para cada organização nova:
-   - Cadastrar em **(EMP) Leads**: `Nome`, `Status = 1. Cadastrado`,
+   - Cadastrar em **(EMP) Leads**: `Nome`, `Status = 0. Alvo`,
      `Como conheceu? = vendas/buscaativa`, `Criativo` conforme a oferta.
    - Cadastrar o gestor/contato em **(EMP) Contato**: `Nome`, `Email` (institucional
      público), vínculo pela relação `Lead`.
@@ -75,10 +87,11 @@ lead voltaria à fila na semana seguinte.
 7. **Entregar ao n8n os e-mails aprovados** (só os aprovados), que dispara via Resend com a
    cadência e o warm-up de `cadencia.md`.
 8. **No envio confirmado de cada e-mail:** registrar a Atividade `PROSPECÇÃO` no lead (a marca
-   que arma o cooldown de 60 dias) e mover o `Status` do lead para `Aquecimento`.
+   que arma o cooldown de 60 dias) e mover o `Status` do lead de `0. Alvo` para `1. Cadastrado`.
 9. **Retorno:** o n8n recebe os webhooks (entregue, aberto, respondido) e atualiza o CRM.
-   Quando um lead **responde**, o n8n **avisa a Mallu no WhatsApp** e o lead sai do pool: vira
-   conversa humana (`Status = 2. Negociação` quando qualificado).
+   Quando um lead **responde**, o n8n **avisa a Mallu no WhatsApp** e o lead sai do pool frio:
+   `Status = Aquecimento`. Vira conversa humana; passa a `2. Negociação` só após a reunião de
+   venda, com algo concreto sendo negociado para o projeto.
 
 ## O gate de aprovação (passo 6)
 

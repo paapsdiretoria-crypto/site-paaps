@@ -73,14 +73,14 @@ respondeu e não avançou, só volta depois de 60 dias.
 
 Entra o lead que reúne tudo, sem exceção:
 
-- `Status = 1. Cadastrado` (ou reativação de `4. Perdido` / `Aquecimento` com cooldown vencido)
+- `Status = 0. Alvo` (primeiro toque), ou `Status = 1. Cadastrado` / `4. Perdido` com cooldown de 60 dias vencido (re-prospecção)
 - bate o ICP
 - tem e-mail institucional público em (EMP) Contato
 - não tem Atividade `PROSPECÇÃO` nos últimos 60 dias
 
 ## Quem nunca entra
 
-- `2. Negociação`, `3. Cliente`, `5. Finalizado`: já são funil humano, pertencem à Mallu.
+- `Aquecimento`, `2. Negociação`, `3. Cliente`, `5. Finalizado`: já respondeu ou é funil humano, pertencem à Mallu.
 - Quem recebeu toque há menos de 60 dias.
 - Quem pediu descadastro. Honrado na hora, não volta nunca.
 
