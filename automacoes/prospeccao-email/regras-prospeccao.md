@@ -27,6 +27,10 @@ A prospecção fria só age nas duas primeiras etapas: manda o primeiro e-mail p
 em `0. Alvo` e a re-prospecção para quem está em `1. Cadastrado` com o cooldown vencido. De
 `Aquecimento` em diante é a Mallu, no toque humano.
 
+**Inbound espontâneo:** quem chega direto no nosso e-mail manifestando interesse, sem a gente
+ter prospectado, entra em `Aquecimento` (manifestou interesse, ainda sem reunião). Segue para
+`2. Negociação` só depois da reunião de venda.
+
 ## A regra dos 2 meses (dedup, sem mexer no schema)
 
 A (EMP) Leads não tem campo de "data do último contato" e, por decisão da fundadora, não
