@@ -21,7 +21,13 @@ encaixa no ICP não entra na fila, mesmo que o e-mail seja fácil de achar.
 - Programas e políticas públicas com servidores em contato direto com sofrimento social
   (SUS, SUAS, escolas, guarda, vigilância).
 
-Critérios de porte, região e recorte fino ficam pendentes de definição com a fundadora.
+**Recorte da primeira leva (fechado com a fundadora em 24/07/2026):** interior de MG,
+porte pequeno a médio, na esteira do case Bela Vista de Minas, com âncora na dor de
+afastamento e adoecimento das equipes. A fila é montada em modo **híbrido**: no topo, os
+municípios que já têm lei ou projeto de lei de saúde mental do servidor (o sinal mais
+forte, ver critério 0 abaixo); o resto completa 15 pelo porte e pela dor de afastamento.
+Estratégia de escrita e ficha de pesquisa por município em
+`../personalizacao/ficha-municipio.md`.
 
 ## Personas do CRM
 
@@ -49,6 +55,13 @@ pesquisa individual se ajustam a qual persona o lead representa.
 
 Um lead avança quando reúne sinais de:
 
+0. **Sinal legislativo (o mais forte, quando existe):** lei ou projeto de lei local, dos
+   últimos dois anos, que institui apoio psicossocial ou saúde mental do servidor, ou que
+   menciona riscos psicossociais e NR-1 no serviço público. A cidade já declarou que isso
+   precisa existir, e o texto costuma prever parceria com instituição externa por convênio
+   ou termo de cooperação: a porta legal para a PAAPS. O buscador acha a existência; a
+   carta-fria confirma o status (projeto em tramitação vs lei sancionada) no envio. Ver
+   `../personalizacao/ficha-municipio.md`.
 1. **Encaixe estrutural:** é prefeitura/secretaria com servidores expostos a sofrimento
    coletivo e com quem decide sobre saúde do servidor.
 2. **Sinal de necessidade:** indícios públicos de afastamento, adoecimento, concurso,

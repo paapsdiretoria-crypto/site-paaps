@@ -12,6 +12,13 @@
 
 set -uo pipefail
 
+# O Hammerspoon roda este script com "zsh -c" a partir de um processo aberto pelo
+# launchd, que nao tem LANG definido. Sem locale UTF-8, o pbcopy assume Mac OS
+# Roman e le a saida do whisper errado: "a" com acento (bytes C3 A1) vira "√°".
+# Fixar o locale aqui garante acento correto seja quem for que chame o script.
+export LANG=pt_BR.UTF-8
+export LC_ALL=pt_BR.UTF-8
+
 FFMPEG="$HOME/bin/ffmpeg"
 WHISPER="$HOME/bin/whisper-cpp"
 MODELO="${DITADO_MODELO:-$HOME/.local/share/whisper-models/ggml-medium.bin}"

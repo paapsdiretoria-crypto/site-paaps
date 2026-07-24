@@ -15,6 +15,22 @@
 
 Guia completo dos databases: página Notion `35644cb52e0081729d35cd1d52deff18`.
 
+## Quem pesquisa o quê (divisão por velocidade do dado)
+
+Dois agentes encostam em pesquisa. Para não duplicarem nem se contradizerem, a divisão é
+por quão rápido o dado envelhece, não por assunto:
+
+- **Buscador-leads:** a ficha estrutural (dado que muda devagar): porte, status jurídico,
+  de onde vem a verba, secretaria e decisor, e-mail institucional, e a **existência** de
+  lei/projeto de saúde do servidor. Qualifica o lead e serve por meses.
+- **Carta-fria:** o gancho conjuntural (dado que precisa estar fresco): a notícia da
+  semana, o edital recém-saído, o dado de afastamento mais recente, e o **status atual** da
+  lei/projeto. Revalida no instante do envio, com o critério de veracidade de sempre: fato
+  publicado, com link, nada inferido.
+
+A ficha completa dos sete dados por município, a estratégia de escrita por porte e o
+detalhamento do sinal legislativo estão em `personalizacao/ficha-municipio.md`.
+
 ## A esteira de Status (a escada do lead)
 
 `0. Alvo` (fila do buscador, nunca contatado) → **e-mail de prospecção sai** → `1. Cadastrado`
@@ -73,7 +89,12 @@ lead voltaria à fila na semana seguinte.
    dias**. Excluir quem respondeu (`Aquecimento` em diante), o funil humano e os descadastrados.
 3. **Se o pool for menor que a meta, fazer busca ativa na internet** por novas organizações
    do ICP. Fontes: sites `.gov.br` de prefeituras e câmaras, diários oficiais, portais de
-   transparência, órgãos de estatística (IBGE/MTE/INSS). Para cada organização nova:
+   transparência, órgãos de estatística (IBGE/MTE/INSS) e o Diário Oficial dos Municípios de
+   MG (AMM-MG) para o sinal legislativo. **Ordem híbrida da fila:** primeiro os municípios
+   que já têm lei ou projeto de lei de saúde mental do servidor; depois completar até a meta
+   pelo porte (interior de MG, pequeno a médio) e pela dor de afastamento. Preencher a ficha
+   dos sete dados (`personalizacao/ficha-municipio.md`) na página do Lead. Para cada
+   organização nova:
    - Cadastrar em **(EMP) Leads**: `Nome`, `Status = 0. Alvo`,
      `Como conheceu? = vendas/buscaativa`, `Criativo` conforme a oferta.
    - Cadastrar o gestor/contato em **(EMP) Contato**: `Nome`, `Email` (institucional
