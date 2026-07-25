@@ -1,0 +1,73 @@
+/* Assinatura de e-mail PAAPS - base compartilhada pelas duas variantes.
+   Paleta e tipografia conforme nucleo-comum/identidade-aplicada.md */
+
+@font-face { font-family:'League Spartan'; src:url('assets/fonts/LeagueSpartan-Regular.ttf')   format('truetype'); font-weight:400; }
+@font-face { font-family:'League Spartan'; src:url('assets/fonts/LeagueSpartan-Medium.ttf')    format('truetype'); font-weight:500; }
+@font-face { font-family:'League Spartan'; src:url('assets/fonts/LeagueSpartan-SemiBold.ttf')  format('truetype'); font-weight:600; }
+@font-face { font-family:'League Spartan'; src:url('assets/fonts/LeagueSpartan-Bold.ttf')      format('truetype'); font-weight:700; }
+@font-face { font-family:'League Spartan'; src:url('assets/fonts/LeagueSpartan-ExtraBold.ttf') format('truetype'); font-weight:800; }
+
+:root {
+  --cor-fundo:     #f5f1e1;
+  --cor-marrom:    #442309;
+  --cor-terracota: #cb4710;
+  --cor-oliva:     #aea349;
+  --cor-amarelo:   #f7c31c;
+  --cor-bege-rosa: #bbada2;
+  --cor-branco:    #ffffff;
+  --raio: 4px;
+  --fonte-titulo: 'League Spartan', Arial, sans-serif;
+  --fonte-corpo:  'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --linha: rgba(68,35,9,0.14);
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+html, body { background:transparent; }
+body { -webkit-font-smoothing:antialiased; }
+
+.grao {
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+}
+
+/* ---------- tipografia da assinatura ---------- */
+.nome {
+  font-family:var(--fonte-titulo); font-weight:800; font-size:20px;
+  letter-spacing:0.055em; text-transform:uppercase; color:var(--cor-marrom);
+  line-height:1;
+}
+.cargo {
+  font-family:var(--fonte-titulo); font-weight:500; font-size:10px;
+  letter-spacing:0.19em; text-transform:uppercase; color:var(--cor-terracota);
+  margin-top:7px;
+}
+.label {
+  font-family:var(--fonte-titulo); font-weight:700; font-size:8px;
+  letter-spacing:0.24em; text-transform:uppercase; color:var(--cor-oliva);
+}
+
+/* ---------- divisor tricolor ---------- */
+.tricolor { display:flex; height:2px; }
+.tricolor i { flex:1; }
+.tricolor i:nth-child(1) { background:var(--cor-oliva); }
+.tricolor i:nth-child(2) { background:var(--cor-terracota); }
+.tricolor i:nth-child(3) { background:var(--cor-amarelo); }
+
+/* ---------- contatos ---------- */
+.contatos {
+  font-family:var(--fonte-corpo); font-weight:400; font-size:11.5px;
+  line-height:1.05; color:var(--cor-marrom);
+}
+.contatos .ln { display:flex; align-items:center; gap:8px; margin-top:8px; }
+.contatos .ln:first-child { margin-top:0; }
+.contatos .mk { width:7px; height:7px; border-radius:2px; flex:none; }
+.contatos .mk.a { background:var(--cor-amarelo); }
+.contatos .mk.t { background:var(--cor-terracota); }
+.contatos .mk.o { background:var(--cor-oliva); }
+.contatos .sep { color:var(--cor-bege-rosa); margin:0 5px; }
+.contatos .fraco { color:rgba(68,35,9,0.62); }
+
+/* ---------- rodapé de posicionamento ---------- */
+.posicionamento {
+  font-family:var(--fonte-titulo); font-weight:600; font-size:8px;
+  letter-spacing:0.22em; text-transform:uppercase; color:rgba(68,35,9,0.52);
+}
