@@ -1,0 +1,67 @@
+---
+name: email-prospeccao
+description: Use para escrever ou refinar um e-mail de prospecção fria do PAAPS Brasil (prefeitura, secretaria, associação, cooperativa, instituto). Ative em "escreve o e-mail frio de X", "monta a carta de prospecção de Y", "refina esse e-mail de prospecção", ou ao redigir o primeiro toque de um lead B2G. Não use para carrossel (copy-carrossel), legenda (legendas-otimizadas), post de LinkedIn, nem para decidir QUEM prospectar (isso é porteiro/buscador-leads).
+---
+
+# Escrever e-mail de prospecção fria (PAAPS Brasil)
+
+O e-mail chega cuidando, sobre um fato local verificável, na voz do PAAPS Brasil. Ele constrói permissão para uma conversa, não vende.
+
+## Lei central
+
+**NENHUM E-MAIL SAI COM GANCHO INVENTADO OU FORA DA VOZ PAAPS BRASIL, E NENHUM VAI AO ENVIO SEM O GATE DA MALLU.**
+
+## Gate: onde você não passa sem evidência
+
+- **Sem fato local publicado e com fonte (link), você não escreve.** O lead volta ao buscador. Gancho sem link é gancho inventado, e um gancho errado numa prefeitura queima a Mallu com nome e assinatura.
+- **Nenhum e-mail vai ao disparo sem a Mallu ver.** Você entrega a ela, não ao n8n.
+
+## Processo
+
+1. Ler a ficha do lead (7 dados) e o `.claude/agent-memory/carta-fria/APRENDIZADO.md` atual.
+2. Fixar o gancho conjuntural verificável, com fonte. Sem ele, pare aqui.
+3. Escolher a estratégia por porte e a persona:
+   - até ~5 mil hab: fala direto com secretário ou prefeito, tom de proximidade, oferta que cabe no FPM apertado.
+   - ~15 a 50 mil: a secretaria certa (Saúde ou Desenvolvimento Social), tom técnico, âncora em NR-01 e afastamento.
+   - acima de 100 mil: formal, ciclo longo, fase posterior.
+   - associação, consórcio, cooperativa: presidência ou diretoria técnica; a oferta é uma frente que a instituição distribui à rede dela.
+4. Escrever nesta estrutura:
+   - abertura que lê o território pelo gancho (o fato local, nomeado);
+   - o padrão coletivo que o PAAPS Brasil enxerga na rede (variar entre SUS, SUAS, escolas, guarda, vigilância, Estratégia Saúde da Família; não listar tudo sempre);
+   - o descritivo do PAAPS Brasil e a lógica de impacto que justifica o "coletivo";
+   - o toque na dor da gestão (RH sobrecarregado, método próprio, lado a lado);
+   - a prova curta (Bela Vista de Minas e Desterro do Melo, entre outros);
+   - o CTA.
+5. Dar nota de 0 a 100, honesta, e dizer o que segura a nota.
+6. Levar ao gate da Mallu com o lead, o gancho com a fonte, o texto inteiro, o assunto e a nota.
+7. Registrar a correção dela e, depois, o resultado real no `APRENDIZADO.md`.
+
+## Regras de voz (calibradas no gate)
+
+- Marca: **PAAPS Brasil**, nunca só "PAAPS".
+- Voz em "nós". Assinar "Mallu Vasconcellos e equipe de relacionamento PAAPS Brasil", com a linha "PAAPS Brasil - Rede de Saúde Mental Coletiva para as políticas públicas".
+- Descritivo do PAAPS Brasil: rede de saúde mental coletiva para as políticas públicas à prova de futuro, que cuida de quem cuida.
+- Lógica de impacto que justifica o "coletivo": cuidar de quem cuida para que o atendimento chegue mais qualificado na ponta, para que a política pública funcione melhor onde acontece, e para que o servidor tenha rede de suporte tão real quanto a que o município oferece ao cidadão. Coletivo porque age na estrutura do trabalho.
+- Assunto: nomeia a dor ou o território. Evita "parceria", "proposta", "solução".
+- CTA: conversa breve, sem custo e sem compromisso, ancorada em algo concreto do lead. Fecho: "Se houver interesse, basta responder a este e-mail e combinamos o melhor momento."
+- A PAAPS Brasil acabou de chegar: nunca fale no que "fica quando a gente sai".
+
+## Proibições ativas
+
+Travessão grande (usar `:`, `;`, `-`); a estrutura "não é X, é Y"; linguagem coachesca; metáfora de guerra; cara de IA, autoajuda ou venda explícita; catálogo, preço ou proposta no primeiro toque; linguagem clínica sem contexto sistêmico; conteúdo pejorativo sobre a política vigente.
+
+## Baseline que se atualiza
+
+Estes princípios são o ponto de partida e evoluem com o resultado. Segui-los ao pé da letra quando isso piora uma carta específica é erro: adapte ao lead. Antes de cada ciclo, leia no Dashboard de Funil de Conversão qual gancho, abertura, porte e segmento converteram mais, e desloque a ênfase para o que deu resultado. **Na dúvida entre a regra e o que deu resultado, vence o resultado**, e você registra a exceção no APRENDIZADO para virar regra nova.
+
+## Racionalizações que sinalizam desvio
+
+| Pensamento | O que está acontecendo |
+|---|---|
+| "'Podemos?' é mais caloroso" | Informal demais. O fecho convida a responder ao e-mail. |
+| "Escrevo em 'eu', que é a Mallu" | A voz é "nós"; a assinatura é da equipe PAAPS Brasil. |
+| "PAAPS sozinho já se entende" | A marca é PAAPS Brasil, sempre. |
+| "'Coletivo' já diz o valor" | Coletivo vago soa amador. Justifique pelos três fins de impacto. |
+| "Falo que deixamos capacidade instalada" | A PAAPS Brasil acabou de chegar. Não prometa saída. |
+| "Esse gancho genérico serve" | Sem fato local com fonte, o lead volta ao buscador. |
+| "Sigo a regra mesmo piorando a carta" | Baseline vivo. Se piora, adapte. Vence o resultado. |

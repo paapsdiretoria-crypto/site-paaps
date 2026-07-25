@@ -252,6 +252,7 @@ A pasta ainda se chama `SITE PAAPS/` por limitação do ambiente. Para renomear 
 | `edicao-reel-paaps` | Editar vídeo JÁ GRAVADO da Mallu (talking-head) em Reel do **@paaps.brasil**: legendas em cadência, cards de dados, b-roll, trilha do HeyGen, SFX. Regras duras: nunca escurecer, texto fora do rosto, só League Spartan + Evermore, imagem congelada + áudio por re-mux |
 | `edicao-reel-mallu` | Editar vídeo JÁ GRAVADO em Reel do perfil **PESSOAL @malluvasconcellos**: Impact + Times New Roman, bege com destaque vinho, revelação palavra a palavra com clique de trackpad, modo B digitado. Identidade INCOMPATÍVEL com a do PAAPS: não misturar as duas skills |
 | `recupera-ditado` | Recuperar ditado por voz já gravado em `~/Ditado/AAAA-MM-DD.md`: último, por data, busca por conteúdo, listar. Material pessoal: mostra no chat, não commita nem cola no Notion sem pedido. Não use para gravar/transcrever (isso é `codigo/ditado/`) |
+| `email-prospeccao` | Escrever ou refinar e-mail de prospecção fria do PAAPS Brasil (prefeitura, secretaria, associação): voz calibrada, gancho local verificável, estratégia por porte, gate da Mallu. Fonte única da craft de escrever; o agente `carta-fria` aponta para ela |
 
 ### Notion — página de operações
 

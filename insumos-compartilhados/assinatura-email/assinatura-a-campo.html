@@ -1,0 +1,62 @@
+<meta charset="utf-8">
+<title>Assinatura PAAPS - variante A (campo)</title>
+<link rel="stylesheet" href="base.css">
+<style>
+  .cartao {
+    position:relative; width:620px; height:244px; overflow:hidden;
+    background:var(--cor-fundo); border:1px solid var(--linha); border-radius:var(--raio);
+    display:flex; flex-direction:column; justify-content:space-between;
+    padding:24px 26px 0 24px;
+  }
+  .corpo { display:flex; align-items:stretch; gap:24px; }
+
+  /* foto do PhotoBank, em monocromia quente (convenção P&B da marca) */
+  .moldura { position:relative; flex:none; width:150px; align-self:stretch; border-radius:var(--raio); overflow:hidden; }
+  .moldura img { width:100%; height:100%; object-fit:cover; object-position:54% 44%;
+                 filter:grayscale(1) contrast(1.08) brightness(1.04); }
+  .moldura .tinta { position:absolute; inset:0; background:#6b3a15; mix-blend-mode:multiply; opacity:0.46; }
+  .moldura .luz   { position:absolute; inset:0; background:#f7e9c8; mix-blend-mode:screen; opacity:0.16; }
+  .moldura .borda { position:absolute; inset:0; border:1px solid rgba(68,35,9,0.22); border-radius:var(--raio); }
+
+  .regua { flex:none; width:1px; background:rgba(68,35,9,0.16); }
+
+  .dados { flex:1; display:flex; flex-direction:column; }
+  .dados img.logo { width:88px; display:block; margin-bottom:18px; }
+  .risco { height:1px; background:var(--linha); margin:15px 0 14px; }
+
+  .rodape { display:flex; flex-direction:column; gap:9px; padding-bottom:14px; }
+  .credito { font-family:var(--fonte-titulo); font-weight:500; font-size:7.5px;
+             letter-spacing:0.16em; text-transform:uppercase; color:rgba(68,35,9,0.34); }
+  .linha-rodape { display:flex; align-items:baseline; justify-content:space-between; gap:16px; }
+</style>
+
+<div class="cartao grao">
+  <div class="corpo">
+    <div class="moldura">
+      <img src="assets/foto-photobank.jpg" alt="">
+      <span class="tinta"></span><span class="luz"></span><span class="borda"></span>
+    </div>
+
+    <div class="regua"></div>
+
+    <div class="dados">
+      <img class="logo" src="assets/logo-marrom-colorido.png" alt="paaps">
+      <div class="nome">Mallu Vasconcellos</div>
+      <div class="cargo">CEO Founder &middot; Psicóloga social</div>
+      <div class="risco"></div>
+      <div class="contatos">
+        <div class="ln"><span class="mk t"></span>relacionamento@paaps.com.br</div>
+        <div class="ln"><span class="mk a"></span>+55 11 99523-1724<span class="sep">|</span><span class="fraco">paaps.com.br</span></div>
+        <div class="ln"><span class="mk o"></span>@paaps.brasil<span class="sep">|</span><span class="fraco">linkedin.com/company/paaps</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rodape">
+    <div class="tricolor"><i></i><i></i><i></i></div>
+    <div class="linha-rodape">
+      <span class="posicionamento">Rede da Saúde Mental Coletiva &middot; Prefeituras à prova de futuro</span>
+      <span class="credito">Acervo PAAPS</span>
+    </div>
+  </div>
+</div>
