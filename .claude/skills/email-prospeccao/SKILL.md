@@ -26,6 +26,16 @@ O arco importa mais que as frases. É esta ordem que faz o e-mail ser lido em ve
 4. **Volte para a prefeitura.** A dor da gestão (o RH sobrecarregado) fecha o laço aberto na abertura e mostra que entendemos a realidade de quem lê.
 5. **Feche com um CTA direto que qualifica.** Conversa breve, e "se houver interesse". Esse "se houver interesse" funciona como qualificador: deixa o próprio lead se selecionar e poupa reunião com quem não tem chance de fechar. Depois de explicar a situação, vá direto.
 
+## Qual gancho abrir
+
+Abrir sobre eles é abrir sobre um **movimento**, não sobre uma transação isolada.
+
+- **Prefira o padrão ao evento único.** Um repasse de verba, a compra de um equipamento, uma inauguração pontual são fatos rasos para abrir: sugerem que vimos uma manchete, não que acompanhamos a cidade. Abra pelo que a cidade vem construindo ao longo do tempo, a trajetória que se repete nas notícias e nas análises de mais de um ano.
+- **Onde achar o padrão:** análises mais longas (da gestão, da saúde, da segurança, da assistência), plano municipal, série de notícias no mesmo tema. A trajetória aparece ali, não numa nota de repasse.
+- **Escala importa.** Um investimento sistêmico (a saúde mental do município como um todo) abre melhor que um único equipamento.
+- **O fato fresco e específico é adjacência.** Cite-o como um achado da nossa pesquisa dentro do padrão, mais para o meio, nunca como a razão do contato.
+- A abertura afirma que acompanhamos a cidade. Isso só soa verdadeiro se o gancho for um movimento sustentado e verificável.
+
 ## O destinatário: saudação honesta
 
 Antes da saudação, responda: **sabemos quem vai ler?**
@@ -37,7 +47,7 @@ Antes da saudação, responda: **sabemos quem vai ler?**
 ## Processo
 
 1. Ler a ficha do lead (7 dados) e o `.claude/agent-memory/carta-fria/APRENDIZADO.md` atual.
-2. Fixar o gancho conjuntural verificável, com fonte. Sem ele, pare aqui.
+2. Fixar o gancho, de preferência um padrão/movimento da cidade ao longo do tempo (ver "Qual gancho abrir"), sempre com fonte. Sem fato com fonte, pare aqui.
 3. Escolher a estratégia por porte e a persona:
    - até ~5 mil hab: fala direto com secretário ou prefeito, tom de proximidade, oferta que cabe no FPM apertado.
    - ~15 a 50 mil: a secretaria certa (Saúde ou Desenvolvimento Social), tom técnico, âncora em NR-01 e afastamento.
@@ -96,3 +106,4 @@ Estes princípios são o ponto de partida e evoluem com o resultado. Segui-los a
 | "Esse gancho genérico serve" | Sem fato local com fonte, o lead volta ao buscador. |
 | "Sigo a regra mesmo piorando a carta" | Baseline vivo. Se piora, adapte. Vence o resultado. |
 | "Deve ser o secretário que lê" | Sem confirmar quem lê, a saudação trata a instituição em vez de chutar um cargo. |
+| "Achei uma notícia fresca, abro com ela" | Evento único não sustenta o "acompanhamos". Abra pelo padrão; a notícia fresca é adjacência. |
