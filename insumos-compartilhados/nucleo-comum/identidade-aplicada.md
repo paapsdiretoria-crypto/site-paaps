@@ -70,6 +70,22 @@ O design PAAPS vive no cruzamento de três tensões que nunca se resolvem comple
 
 ---
 
+## 3.1 Logo: qual arquivo usar
+
+**Os pontinhos coloridos são o padrão PAAPS.** Existem só duas versões corretas, ambas em
+`identidade-visual/01-logo/01 - Logo sem descritivo/`:
+
+| Fundo | Arquivo |
+|---|---|
+| Claro (off-white, arenoso, foto clara) | `Paaps - Logo marrom + colorido-8.png` |
+| Escuro (marrom, foto escura, painel cheio) | `Paaps - Logo branco + colorido-8.png` |
+
+Nunca usar `Paaps - Logo marrom-8.png` nem `Paaps - Logo branco-8.png`: são as versões de
+pontinhos monocromáticos, e a branca traz embaixo o descritivo "autoria e impacto social em
+rede", frase que Mallu não usa e já pediu para retirar mais de uma vez.
+
+---
+
 ## 4. Elementos Decorativos da Marca
 
 ### Marcadores coloridos
@@ -171,7 +187,9 @@ main { animation: fadeIn 0.5s ease; }
 - ❌ Sombras dramáticas no estilo Periódico (usar bordas)
 - ❌ Fontes Inter, Roboto, sistema como primária
 - ❌ Cores fora da paleta (exceto #25D366 para WhatsApp)
-- ❌ Logo colorido em fundo escuro
+- ❌ Logo **sem** os pontinhos coloridos (ver regra do logo abaixo)
+- ❌ Logo com o descritivo "autoria e impacto social em rede" embaixo: Mallu não usa essa frase
+- ❌ Logo em marrom sobre fundo escuro (usar a versão branca)
 - ❌ Imagens de stock genérico (handshake, pessoas com laptop sorrindo)
 - ❌ Gradientes de texto (texto é sempre cor sólida)
 
