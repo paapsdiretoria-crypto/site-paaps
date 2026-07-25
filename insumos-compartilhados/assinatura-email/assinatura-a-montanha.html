@@ -1,0 +1,79 @@
+<meta charset="utf-8">
+<title>Assinatura PAAPS - variante A (montanha)</title>
+<link rel="stylesheet" href="base.css">
+<style>
+  /* Lockup centrado sobre a serra de Minas, na linguagem do banner institucional:
+     foto em cor cheia, headline em terracota, linha de posicionamento em branco caixa
+     alta, logo branco + pontinhos coloridos apoiado na crista. Contato acrescentado
+     abaixo, sobre a parte escura da imagem. */
+
+  .cartao {
+    position:relative; width:640px; height:348px; overflow:hidden;
+    border-radius:var(--raio);
+    display:flex; flex-direction:column; align-items:center;
+    padding:46px 44px 26px;
+    text-align:center;
+  }
+  .cartao > .foto {
+    position:absolute; inset:0; width:100%; height:100%;
+    object-fit:cover; object-position:50% 62%;
+  }
+  .pilha { position:relative; display:flex; flex-direction:column; align-items:center; width:100%; height:100%; }
+
+  .chamada {
+    font-family:var(--fonte-titulo); font-weight:800; font-size:27px; line-height:1.1;
+    letter-spacing:0.005em; color:var(--cor-terracota);
+    text-shadow:0 1px 10px rgba(255,255,255,0.30);
+  }
+  .posicao {
+    margin-top:20px;
+    font-family:var(--fonte-titulo); font-weight:700; font-size:10.5px; line-height:1.66;
+    letter-spacing:0.15em; text-transform:uppercase; color:var(--cor-branco);
+    text-shadow:0 1px 5px rgba(24,12,2,0.5);
+  }
+
+  .marca { margin-top:auto; }
+  .marca img { width:158px; display:block; }
+
+  .contato { margin-top:19px; display:flex; flex-direction:column; align-items:center; gap:8px; }
+  .contato .quem {
+    font-family:var(--fonte-titulo); font-weight:700; font-size:9.5px;
+    letter-spacing:0.21em; text-transform:uppercase; color:var(--cor-branco);
+    text-shadow:0 1px 4px rgba(24,12,2,0.5);
+  }
+  .contato .ln {
+    display:flex; align-items:center; justify-content:center; gap:9px;
+    font-family:var(--fonte-corpo); font-size:11.5px; line-height:1;
+    color:var(--cor-branco); text-shadow:0 1px 5px rgba(24,12,2,0.62);
+  }
+  .contato .mk { width:6px; height:6px; border-radius:2px; flex:none; }
+  .contato .mk.a { background:var(--cor-amarelo); }
+  .contato .mk.t { background:var(--cor-terracota); }
+  .contato .mk.o { background:var(--cor-oliva); }
+</style>
+
+<div class="cartao">
+  <img class="foto" src="assets/foto-montanha-minas.jpg" alt="">
+    <div class="pilha">
+    <div class="chamada">Cuidar da ponta,<br>impactar o mundo.</div>
+    <div class="posicao">A rede da saúde mental para as políticas<br>públicas do futuro.</div>
+
+    <div class="marca"><img src="assets/logo-branco-colorido.png" alt="paaps"></div>
+
+    <div class="contato">
+      <div class="quem">Mallu Vasconcellos &middot; CEO Founder</div>
+      <div class="ln">
+        relacionamento@paaps.com.br
+        <span class="mk t"></span>
+        +55 11 99523-1724
+        <span class="mk a"></span>
+        paaps.com.br
+      </div>
+      <div class="ln">
+        @paaps.brasil
+        <span class="mk o"></span>
+        linkedin.com/company/paaps
+      </div>
+    </div>
+  </div>
+</div>
