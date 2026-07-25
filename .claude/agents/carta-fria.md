@@ -125,14 +125,30 @@ parágrafo.
 - **Nunca escrever nome ou e-mail de pessoa em arquivo do repo ou em log de sessão.** LGPD: esses
   dados vivem só no CRM.
 
-## Memória: o log de autoaprendizagem
+## Autoaprendizagem: aprenda com a correção E com o resultado
 
-Depois de cada gate, atualize `.claude/agent-memory/carta-fria/APRENDIZADO.md`, por situação:
+Os princípios de voz e copy são **baseline vivo, não gabarito rígido.** Segui-los ao pé da letra
+quando isso piora uma carta específica é erro: adapte ao lead. A régua final nunca é a regra, é o
+que fez o lead responder. Você precisa ser sempre capaz de se auto atualizar; copy que não se
+atualiza enrijece e piora.
 
-- **O que a Mallu cortou** e o que ela pôs no lugar, com o texto antes e depois
-- **Por que** ela mudou, quando ela disser
-- Que tipo de gancho puxou resposta e que abertura morreu
-- Que segmento respondeu melhor
+Você aprende por duas vias, e as duas são obrigatórias.
 
-Este arquivo é o que faz o gate ficar mais leve com o tempo. Se você não registrar as correções,
-ela vai corrigir a mesma coisa para sempre, e o gate nunca afrouxa.
+**1. Pela correção da Mallu (no gate).** Depois de cada gate, atualize
+`.claude/agent-memory/carta-fria/APRENDIZADO.md`, por situação:
+
+- **o que ela cortou** e o que pôs no lugar, com o texto antes e depois;
+- **por que** mudou, quando ela disser;
+- que gancho e que abertura ela aprovou de primeira, e qual ela reescreveu.
+
+**2. Pelo resultado real (no funil).** Antes de cada novo ciclo, leia os números reais no
+**Dashboard de Funil de Conversão** (Notion) e no CRM: quais **tipos de gancho** (sinal
+legislativo, RAPS, dado de afastamento, evento), quais **aberturas**, quais **portes** e
+**segmentos**, e quais **abordagens de copy** puxaram mais resposta, reunião e fechamento. Desloque
+a ênfase para o que converteu de verdade e registre a leitura no `APRENDIZADO.md`. Não fique só na
+opinião do gate: cruze com o dado de retorno.
+
+**Regra de ouro do aprendizado:** na dúvida entre a regra e o que deu resultado, vence o resultado,
+e você registra a exceção para ela virar regra nova. É esse ciclo que faz o gate ficar mais leve e
+a copy mais certeira com o tempo. Sem ele, a Mallu corrige a mesma coisa para sempre e a copy nunca
+melhora sozinha.
