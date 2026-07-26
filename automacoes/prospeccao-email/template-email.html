@@ -1,0 +1,65 @@
+<!--
+  Molde HTML do e-mail de prospecção fria do PAAPS Brasil.
+
+  Lacuna única: {{CORPO}}  ->  o corpo da carta já convertido em <p>...</p>.
+  Quem preenche: automacoes/prospeccao-email/montar-leva.mjs
+
+  Regras de construção (por que está feito com <table> e estilo inline):
+  cliente de e-mail institucional (Outlook do gov, webmail de prefeitura) ignora
+  folha de estilo e layout moderno. Tabela com estilo inline é o que renderiza
+  igual em todos.
+
+  A assinatura entra como imagem embutida (cid:assinatura), não como link
+  externo. Abaixo dela vai a MESMA informação em texto: se o cliente bloquear
+  imagem, o contato continua legível e clicável.
+-->
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:0; padding:0; background-color:#efeae0;">
+  <tr>
+    <td align="center" style="padding:28px 12px;">
+
+      <table role="presentation" width="640" cellpadding="0" cellspacing="0" border="0" style="width:640px; max-width:100%; background-color:#ffffff; border-radius:6px; overflow:hidden;">
+
+        <!-- corpo da carta -->
+        <tr>
+          <td style="padding:44px 46px 34px 46px; font-family:'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:15px; line-height:1.68; color:#3b2109;">
+            {{CORPO}}
+          </td>
+        </tr>
+
+        <!-- assinatura visual (variante A, montanha) -->
+        <tr>
+          <td style="padding:0; font-size:0; line-height:0;">
+            <img src="cid:assinatura"
+                 width="640"
+                 alt="PAAPS Brasil - Cuidar da ponta, impactar o mundo. Mallu Vasconcellos, CEO Founder. relacionamento@paaps.com.br, +55 11 99523-1724, paaps.com.br"
+                 style="display:block; width:100%; max-width:640px; height:auto; border:0; outline:none; text-decoration:none;">
+          </td>
+        </tr>
+
+        <!-- mesmo contato em texto: sobrevive ao bloqueio de imagem e é clicável -->
+        <tr>
+          <td style="padding:16px 46px 18px 46px; background-color:#f5f1e1; font-family:'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:12px; line-height:1.7; color:#6b4a2c; text-align:center;">
+            <a href="mailto:relacionamento@paaps.com.br" style="color:#cb4710; text-decoration:none;">relacionamento@paaps.com.br</a>
+            &nbsp;&middot;&nbsp;
+            <a href="https://wa.me/5511995231724" style="color:#cb4710; text-decoration:none;">+55 11 99523-1724</a>
+            &nbsp;&middot;&nbsp;
+            <a href="https://paaps.com.br" style="color:#cb4710; text-decoration:none;">paaps.com.br</a>
+            <br>
+            <span style="color:#8a6a4c;">PAAPS Brasil - Rede de Saúde Mental Coletiva para as políticas públicas</span>
+          </td>
+        </tr>
+
+        <!-- saída honesta -->
+        <tr>
+          <td style="padding:14px 46px 20px 46px; background-color:#f5f1e1; border-top:1px solid #e2d8c4; font-family:'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:11px; line-height:1.6; color:#9b8a72; text-align:center;">
+            Escrevemos para o endereço institucional publicado pela prefeitura. Se preferir não
+            receber mais contatos nossos, basta responder este e-mail com a palavra
+            <strong style="color:#6b4a2c;">remover</strong> e retiramos o endereço na hora.
+          </td>
+        </tr>
+
+      </table>
+
+    </td>
+  </tr>
+</table>
