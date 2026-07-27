@@ -1,6 +1,14 @@
 ---
-name: "paaps-orquestrador-conteudo"
-description: "Orquestra o fluxo de criação de conteúdo do ecossistema Mallu + paaps. Acione ao criar, planejar ou coordenar conteúdo para qualquer canal (Instagram @amalluvasconcellos, LinkedIn pessoal, @paaps.brasil, LinkedIn institucional, carrossel, gatilho na comunidade ECOA), ou ao estruturar o fluxo para rodar por agentes autônomos. Governa o fluxo montante compartilhado, aplica os guardrails invioláveis, opera o gate de bifurcação Mallu vs paaps e roteia para a skill de execução certa."
+name: paaps-orquestrador-conteudo
+description: >
+  Skill orquestradora do ecossistema Mallu Vasconcellos + paaps. ACIONE sempre que
+  a Mallu quiser criar, planejar ou coordenar conteúdo para QUALQUER canal (Instagram
+  @amalluvasconcellos, LinkedIn pessoal, @paaps.brasil, LinkedIn institucional, carrossel,
+  gatilho na comunidade ECOA), quando quiser transformar uma ideia crua em conteúdo,
+  ou quando estiver estruturando o fluxo de criação para rodar por agentes autônomos.
+  Esta skill NÃO escreve o conteúdo final sozinha: ela governa o fluxo compartilhado
+  (montante), decide a bifurcação Mallu vs paaps, aplica os guardrails invioláveis e
+  despacha a execução para a skill especializada certa. É a camada de orquestração.
 ---
 
 # Orquestrador de Conteúdo: Mallu + paaps
@@ -39,7 +47,7 @@ O verbal é o último a entrar. Antes da palavra, prepara-se o corpo e o campo a
 ### Fase 1. Fonte (fundida)
 Aqui acontece a fusão que a Mallu confirmou: o afeto situado e a âncora teórica entram **juntos**, alimentando um ao outro.
 
-- **Passo 3. De onde isso está saindo em mim agora (ETAPA FORMAL, obrigatória).** Antes de escrever, parar e rastrear o afeto situado: o que na vida real, no corpo, na casa, nas pessoas concretas está fazendo esse tema ferver agora. É o que garante raiz de verdade e impede que a frase quente vire slogan. Produzir uma nota curta de origem afetiva.
+- **Passo 3. De onde isso está saindo em mim agora (ETAPA FORMAL, obrigatória).** Antes de escrever, parar e responder três perguntas de forma explícita: o que isto está gerando em mim, o que está causando, e qual o contexto que me faz escrever sobre isso agora. Rastrear o afeto situado: o que na vida real, no corpo, na casa, nas pessoas concretas está fazendo o tema ferver. Produzir uma nota de contexto situado. É o que garante raiz de verdade e impede que a frase quente vire slogan. **Atenção, destino duplo (ver seção 4):** no ramo Mallu este material vira conteúdo de primeiro plano; no ramo paaps ele fica como raiz, e o primeiro plano passa a ser o dado e a forma científica.
 - **Passo 4. Âncora teórica (fundida com o passo 3).** Folhear a fonte densa (livro, artigo, dado), supra-entender o argumento inteiro e o fio da meada antes de recortar, e então caçar frases-trampolim. Critério da frase: só entra se provocar uma reação própria na Mallu (concordância, contestação, uma ponte com território, SUS, servidor). Frase sem reação fica de fora.
 
 Saída da Fase 1 (o material bruto que segue para a bifurcação): a frase quente (ou o núcleo dela), a nota de afeto situado, e as frases-trampolim com as linhas autorais puxadas delas.
@@ -50,9 +58,9 @@ A partir da Fonte, o fluxo se divide. O gate tem duas perguntas, nesta ordem.
 
 ### Gate A. Qual voz?
 
-**Ramo Mallu (@amalluvasconcellos).** Voz de porta-voz da Psicologia com Impacto Social real. Mote: "Uma psicologia à prova de futuro para uma sociedade que já exige outras respostas. Indo além do consultório ou RH no @paaps.brasil." Primeira pessoa, autoral, crítica, íntima.
+**Ramo Mallu (@amalluvasconcellos).** Voz de porta-voz da Psicologia com Impacto Social real. Mote: "Uma psicologia à prova de futuro para uma sociedade que já exige outras respostas. Indo além do consultório ou RH no @paaps.brasil." Primeira pessoa, autoral, crítica, íntima. **Ênfase de conteúdo:** o contexto situado do passo 3 (o que está gerando, o que está causando, o que me faz escrever agora) é o primeiro plano. É aqui que a experiência pessoal e o afeto viram o próprio conteúdo, expostos e narrados.
 
-**Ramo paaps (@paaps.brasil).** Voz institucional da rede. Mote: "Somos a Rede da Saúde Mental Coletiva para as Prefeituras à prova de futuro. Governos, ONGs, ESG e NR01. Gestor, cuide dos seus servidores aqui." Voz de rede, campo, política pública, B2G e B2B.
+**Ramo paaps (@paaps.brasil).** Voz institucional da rede. Mote: "Somos a Rede da Saúde Mental Coletiva para as Prefeituras à prova de futuro. Governos, ONGs, ESG e NR01. Gestor, cuide dos seus servidores aqui." Voz de rede, campo, política pública, B2G e B2B. **Ênfase de conteúdo:** construção de dados e forma científica. O carrossel paaps parte do mesmo afeto situado do passo 3, mas o traduz em evidência, estrutura e argumento. O contexto pessoal fica como raiz que orienta a escolha do tema, não como texto exposto.
 
 ### Gate B. Qual canal/formato?
 
@@ -79,9 +87,9 @@ Depois do gate, o orquestrador entrega o material bruto da Fonte à skill especi
 | Qualquer | Pesquisa de dado/atualidade | paaps-atualidades-pesquisa | acionar quando faltar prova falseável |
 | Qualquer | Imagem/visual | NÓ ABERTO | sem skill/fonte definida ainda |
 
-## 6. Fluxo específico do carrossel paaps (em detalhamento)
+## 6. Fase de montante para jusante do carrossel paaps (fluxo específico em detalhamento)
 
-Este é o ramo que está sendo mapeado ao vivo. Ordem confirmada até agora:
+Este é o ramo que está sendo mapeado ao vivo com a Mallu. Ordem confirmada até agora:
 
 - **Fase 2, Escrita.** Passo 5: frase quente primeiro (transborda do afeto, enquadrada como trabalho e política, não como sentimento). Passo 6: prova depois (dado falseável com fonte, mais território concreto, exemplos da vida real).
 - **Fase 3, Montagem.** Passo 7: dramaturgia dos slides (choque no presente, depois raiz histórica, depois prova; a imagem argumenta a tese antes do texto). Passo 8: assinatura institucional (o rodapé devolve o conteúdo ao campo das políticas públicas, mesmo num post visceral).
