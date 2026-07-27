@@ -10,7 +10,8 @@ Este arquivo é a lista de checagem que o **Crítico de Design** aplica antes de
 
 ### Identidade visual
 - [ ] Paleta: todas as cores são da paleta PAAPS? Nenhum hex fora do sistema?
-- [ ] Tipografia: League Spartan em títulos, labels e elementos de interface?
+- [ ] Tipografia: Helvetica em títulos e corpo, League Spartan só em label, tag e número?
+- [ ] `letter-spacing: 0` e peso só 400 ou 700, como nas peças do Canva?
 - [ ] Border-radius: 4px em TUDO? Nenhum elemento com mais de 4px?
 - [ ] Logo: está na versão certa para o fundo (marrom em fundo claro / branco em fundo escuro)?
 - [ ] Grain texture: presente no body (obrigatório em peças web)?
