@@ -1,78 +1,58 @@
 /**
- * Monta no n8n o workflow que dispara uma leva de prospecção fria em dia e hora marcados.
+ * Monta no n8n o workflow que dispara uma leva de prospecção fria em dia e hora marcados
+ * E registra o resultado no CRM sozinho, sem ninguém abrir o Claude Code depois.
  *
- * Lê:   automacoes/prospeccao-email/levas/<data>/leva.json   (as cartas já aprovadas)
- *       automacoes/prospeccao-email/template-email.html      (o molde HTML)
- * Cria: um workflow n8n com Schedule Trigger, envio espaçado e assinatura embutida.
+ * O fluxo completo, dentro do n8n:
+ *   agenda (segunda 07:00) -> busca a assinatura -> carrega as cartas aprovadas ->
+ *   uma de cada vez: envia -> cria a Atividade PROSPECÇÃO no CRM -> move o Lead de
+ *   "0. Alvo" para "1. Cadastrado" -> espera -> próxima.
  *
- * O workflow nasce e permanece DESATIVADO de propósito. Enquanto estiver desativado,
- * o horário passa e nada sai. Ativar é o gesto da Mallu, e é o gate: ativar equivale
- * a dizer "pode enviar". Ver a seção "O gate de aprovação" em regras-prospeccao.md.
+ * A Atividade PROSPECÇÃO é o que arma o cooldown de 60 dias que o porteiro lê. Se ela
+ * não for gravada, o mesmo lead volta para a fila na semana seguinte e leva e-mail
+ * repetido. Por isso o registro mora aqui dentro, no mesmo fluxo do envio, e não numa
+ * sessão manual depois.
+ *
+ * Lê:   levas/<data>/leva.json + levas/<data>/*.md + template-email.html
+ * Cria: um workflow n8n, DESATIVADO.
+ *
+ * O workflow nasce e permanece DESATIVADO de propósito: ativar é o gesto da Mallu, e é
+ * o gate. Enquanto estiver desativado, o horário passa e nada sai.
  *
  * Rodar:  node automacoes/prospeccao-email/n8n/montar-leva.mjs 2026-07-27
  */
 
-import { readFileSync } from 'node:fs';
-import { fileURLToPath } from 'node:url';
-import { dirname, resolve } from 'node:path';
+import { lerEnv, montarCartas, codigoDoNo } from './lib-leva.mjs';
 
-const aqui = dirname(fileURLToPath(import.meta.url));
-const raiz = resolve(aqui, '../../..');
 const pastaLeva = process.argv[2];
 if (!pastaLeva) throw new Error('faltou a data da leva, por exemplo: 2026-07-27');
 
-const env = Object.fromEntries(
-  readFileSync(resolve(raiz, 'automacoes/.env'), 'utf8')
-    .split('\n')
-    .filter((l) => l.includes('=') && !l.trim().startsWith('#'))
-    .map((l) => [l.slice(0, l.indexOf('=')).trim(), l.slice(l.indexOf('=') + 1).trim()])
-);
+const env = lerEnv();
 const API = env.N8N_API_URL;
-const KEY = env.N8N_API_KEY;
-const h = { 'X-N8N-API-KEY': KEY, 'Content-Type': 'application/json' };
+const h = { 'X-N8N-API-KEY': env.N8N_API_KEY, 'Content-Type': 'application/json' };
 
-const base = resolve(raiz, 'automacoes/prospeccao-email');
-const leva = JSON.parse(readFileSync(resolve(base, `levas/${pastaLeva}/leva.json`), 'utf8'));
-const molde = readFileSync(resolve(base, 'template-email.html'), 'utf8');
+const { leva, cartas } = montarCartas(pastaLeva);
 
-// A marca precisa existir uma vez só. Se aparecer duas (por exemplo, citada num comentário),
-// o replace troca a errada e o e-mail sai com a marca crua no corpo. Já aconteceu: falhar aqui
-// é muito melhor do que descobrir na caixa de entrada de uma prefeitura.
-const MARCA = '{{CORPO}}';
-const ocorrencias = molde.split(MARCA).length - 1;
-if (ocorrencias !== 1) {
-  throw new Error(`template-email.html precisa conter a marca ${MARCA} exatamente 1 vez; encontrei ${ocorrencias}`);
-}
+// IDs das bases do CRM no Notion (formato da API, com hífens)
+const DB_ATIVIDADES = '22244cb5-2e00-81e2-9071-db3762e265a6';
 
-/** Converte o corpo em texto (parágrafos separados por linha em branco) para HTML de e-mail. */
-function corpoParaHtml(texto) {
-  return texto
-    .trim()
-    .split(/\n\s*\n/)
-    .map((p) => {
-      const linha = p.trim().replace(/\n/g, '<br>');
-      return `<p style="margin:0 0 16px 0;">${linha}</p>`;
-    })
-    .join('\n');
-}
-
-const cartas = leva.cartas.map((c) => {
-  if (!c.para || !c.para.includes('@')) throw new Error(`carta sem e-mail de destino: ${c.lead}`);
-  if (!c.assunto) throw new Error(`carta sem assunto: ${c.lead}`);
-  return {
-    lead: c.lead,
-    leadPageId: c.leadPageId || null,
-    para: c.para,
-    assunto: c.assunto,
-    html: molde.replace(MARCA, corpoParaHtml(c.corpo))
-  };
-});
+// A credencial do Notion é procurada pelo nome, no próprio n8n. Se ainda não existir, o
+// workflow é montado assim mesmo (com o envio funcionando) mas avisa alto: sem ela o CRM
+// não é atualizado e o cooldown de 60 dias não existe.
+const credenciais = await (await fetch(`${API}/api/v1/credentials?limit=100`, { headers: h })).json();
+const credNotion = (credenciais.data || []).find((c) => c.name === 'Notion PAAPS (CRM)');
+const CRED_NOTION = credNotion ? { id: credNotion.id, name: credNotion.name } : undefined;
 
 const intervalo = leva.intervaloMinutos ?? 12;
-const [hora, minuto] = (leva.hora || '07:00').split(':').map(Number);
+const hora = leva.hora || '07:00';
+const [hh, mm] = hora.split(':').map(Number);
 const diaDaSemana = leva.diaDaSemana ?? 1; // 1 = segunda
 
-const nome = `Prospecção - Leva ${pastaLeva} (${leva.hora || '07:00'})`;
+const NOME_AGENDA = `Toda segunda às ${hora}`;
+const NOME_ESPERA = `Esperar ${intervalo} min`;
+const nome = `Prospecção - Leva ${pastaLeva} (${hora})`;
+
+/** O item que está sendo processado agora, lido do nó da fila. */
+const item = `$('Uma de cada vez').item.json`;
 
 const workflow = {
   name: nome,
@@ -86,12 +66,12 @@ const workflow = {
   nodes: [
     {
       id: 'agenda',
-      name: `Toda segunda às ${leva.hora || '07:00'}`,
+      name: NOME_AGENDA,
       type: 'n8n-nodes-base.scheduleTrigger',
       typeVersion: 1.2,
-      position: [220, 320],
+      position: [200, 320],
       parameters: {
-        rule: { interval: [{ field: 'weeks', triggerAtDay: [diaDaSemana], triggerAtHour: hora, triggerAtMinute: minuto }] }
+        rule: { interval: [{ field: 'weeks', triggerAtDay: [diaDaSemana], triggerAtHour: hh, triggerAtMinute: mm }] }
       },
       notes: 'Fuso America/Sao_Paulo, definido nas settings do workflow.'
     },
@@ -100,7 +80,7 @@ const workflow = {
       name: 'Buscar assinatura',
       type: 'n8n-nodes-base.httpRequest',
       typeVersion: 4.2,
-      position: [460, 320],
+      position: [420, 320],
       parameters: {
         url: `${API}/webhook/assinatura-paaps`,
         options: { response: { response: { responseFormat: 'file', outputPropertyName: 'assinatura' } } }
@@ -112,23 +92,15 @@ const workflow = {
       name: 'Cartas aprovadas',
       type: 'n8n-nodes-base.code',
       typeVersion: 2,
-      position: [700, 320],
-      parameters: {
-        jsCode: `// Cartas aprovadas no gate da Mallu. Geradas por montar-leva.mjs a partir de
-// automacoes/prospeccao-email/levas/${pastaLeva}/leva.json. Não editar aqui: editar o
-// arquivo no repositório e rodar o script de novo, senão o repositório e o n8n divergem.
-const cartas = ${JSON.stringify(cartas, null, 2)};
-
-const assinatura = $input.first().binary.assinatura;
-return cartas.map((c) => ({ json: c, binary: { assinatura } }));`
-      }
+      position: [640, 320],
+      parameters: { jsCode: codigoDoNo(cartas, pastaLeva) }
     },
     {
       id: 'fila',
       name: 'Uma de cada vez',
       type: 'n8n-nodes-base.splitInBatches',
       typeVersion: 3,
-      position: [940, 320],
+      position: [860, 320],
       parameters: { batchSize: 1, options: {} },
       notes: 'Envio espaçado, nunca em rajada (cadencia.md).'
     },
@@ -137,25 +109,76 @@ return cartas.map((c) => ({ json: c, binary: { assinatura } }));`
       name: 'Enviar (SMTP)',
       type: 'n8n-nodes-base.emailSend',
       typeVersion: 2.1,
-      position: [1200, 420],
+      position: [1100, 440],
       parameters: {
         fromEmail: 'PAAPS Brasil <relacionamento@paaps.com.br>',
-        toEmail: '={{ $json.para }}',
-        subject: '={{ $json.assunto }}',
+        toEmail: `={{ ${item}.para }}`,
+        subject: `={{ ${item}.assunto }}`,
         emailFormat: 'html',
-        html: '={{ $json.html }}',
+        html: `={{ ${item}.html }}`,
         options: { appendAttribution: false, attachments: 'assinatura' }
       },
       credentials: { smtp: { id: 'esX7Pt3LmeH2IWC5', name: 'SMTP account' } },
+      onError: 'continueErrorOutput',
+      notes:
+        'Saída de cima = enviou, e só então o CRM é atualizado. Saída de baixo = falhou, e aí NADA é gravado no CRM: o lead continua "0. Alvo" e entra na próxima leva. É o que impede o cooldown de marcar um e-mail que nunca chegou.'
+    },
+    {
+      id: 'atividade',
+      name: 'CRM: registrar Atividade PROSPECÇÃO',
+      type: 'n8n-nodes-base.httpRequest',
+      typeVersion: 4.2,
+      position: [1340, 340],
+      parameters: {
+        method: 'POST',
+        url: 'https://api.notion.com/v1/pages',
+        authentication: 'predefinedCredentialType',
+        nodeCredentialType: 'notionApi',
+        sendBody: true,
+        specifyBody: 'json',
+        jsonBody: `={{ JSON.stringify({
+  parent: { database_id: "${DB_ATIVIDADES}" },
+  properties: {
+    "Atividade": { title: [{ text: { content: "Prospecção fria: " + ${item}.lead } }] },
+    "Tipo": { select: { name: "PROSPECÇÃO" } },
+    "Status": { status: { name: "Finalizado" } },
+    "Lead": { relation: [{ id: ${item}.leadPageId }] },
+    "Descrição": { rich_text: [{ text: { content: "E-mail frio enviado para " + ${item}.para + ". Assunto: " + ${item}.assunto } }] }
+  }
+}) }}`,
+        options: {}
+      },
+      credentials: { notionApi: CRED_NOTION },
       onError: 'continueRegularOutput',
-      notes: 'Se um envio falhar, os outros seguem. O erro fica no log da execução.'
+      notes:
+        'Esta linha é o que arma o cooldown de 60 dias lido pelo porteiro. O createdTime dela é a data do toque.'
+    },
+    {
+      id: 'status',
+      name: 'CRM: Alvo -> Cadastrado',
+      type: 'n8n-nodes-base.httpRequest',
+      typeVersion: 4.2,
+      position: [1580, 340],
+      parameters: {
+        method: 'PATCH',
+        url: `=https://api.notion.com/v1/pages/{{ ${item}.leadPageId }}`,
+        authentication: 'predefinedCredentialType',
+        nodeCredentialType: 'notionApi',
+        sendBody: true,
+        specifyBody: 'json',
+        jsonBody: '={{ JSON.stringify({ properties: { "Status": { select: { name: "1. Cadastrado" } } } }) }}',
+        options: {}
+      },
+      credentials: { notionApi: CRED_NOTION },
+      onError: 'continueRegularOutput',
+      notes: 'Sobe o lead um degrau na esteira. De "Aquecimento" em diante quem conduz é a Mallu.'
     },
     {
       id: 'intervalo',
-      name: `Esperar ${intervalo} min`,
+      name: NOME_ESPERA,
       type: 'n8n-nodes-base.wait',
       typeVersion: 1.1,
-      position: [1440, 420],
+      position: [1820, 440],
       parameters: { amount: intervalo, unit: 'minutes' },
       webhookId: 'a1f2c3d4-0000-4000-8000-000000000001'
     },
@@ -164,13 +187,12 @@ return cartas.map((c) => ({ json: c, binary: { assinatura } }));`
       name: 'Leva concluída',
       type: 'n8n-nodes-base.noOp',
       typeVersion: 1,
-      position: [1200, 200],
-      parameters: {},
-      notes: 'Depois daqui, registrar no CRM a Atividade PROSPECÇÃO de cada lead e mover o Status de "0. Alvo" para "1. Cadastrado". Hoje isso é feito pelo escrivão em sessão do Claude Code: o n8n ainda não tem credencial do Notion.'
+      position: [1100, 180],
+      parameters: {}
     }
   ],
   connections: {
-    [`Toda segunda às ${leva.hora || '07:00'}`]: { main: [[{ node: 'Buscar assinatura', type: 'main', index: 0 }]] },
+    [NOME_AGENDA]: { main: [[{ node: 'Buscar assinatura', type: 'main', index: 0 }]] },
     'Buscar assinatura': { main: [[{ node: 'Cartas aprovadas', type: 'main', index: 0 }]] },
     'Cartas aprovadas': { main: [[{ node: 'Uma de cada vez', type: 'main', index: 0 }]] },
     'Uma de cada vez': {
@@ -179,8 +201,15 @@ return cartas.map((c) => ({ json: c, binary: { assinatura } }));`
         [{ node: 'Enviar (SMTP)', type: 'main', index: 0 }]
       ]
     },
-    'Enviar (SMTP)': { main: [[{ node: `Esperar ${intervalo} min`, type: 'main', index: 0 }]] },
-    [`Esperar ${intervalo} min`]: { main: [[{ node: 'Uma de cada vez', type: 'main', index: 0 }]] }
+    'Enviar (SMTP)': {
+      main: [
+        [{ node: 'CRM: registrar Atividade PROSPECÇÃO', type: 'main', index: 0 }],
+        [{ node: NOME_ESPERA, type: 'main', index: 0 }]
+      ]
+    },
+    'CRM: registrar Atividade PROSPECÇÃO': { main: [[{ node: 'CRM: Alvo -> Cadastrado', type: 'main', index: 0 }]] },
+    'CRM: Alvo -> Cadastrado': { main: [[{ node: NOME_ESPERA, type: 'main', index: 0 }]] },
+    [NOME_ESPERA]: { main: [[{ node: 'Uma de cada vez', type: 'main', index: 0 }]] }
   }
 };
 
@@ -200,10 +229,20 @@ if (existente) {
   console.log(`workflow criado: ${id}`);
 }
 
-console.log('');
-console.log(`cartas na leva: ${cartas.length}`);
+console.log(`\ncartas na leva: ${cartas.length}`);
 cartas.forEach((c) => console.log(`  ${c.lead}  ->  ${c.para}`));
-console.log('');
-console.log(`primeiro envio ${leva.hora || '07:00'}, um a cada ${intervalo} min`);
-console.log(`ATENÇÃO: o workflow está DESATIVADO. Nada sai enquanto ele não for ativado.`);
+console.log(`\nprimeiro envio ${hora}, um a cada ${intervalo} min`);
+console.log('o workflow está DESATIVADO: nada sai enquanto não for ativado.');
 console.log(`${API}/workflow/${id}`);
+
+if (!CRED_NOTION) {
+  console.log('\n' + '='.repeat(72));
+  console.log('FALTA A CREDENCIAL DO NOTION. O envio funciona, o registro no CRM não.');
+  console.log('Sem ela, a Atividade PROSPECÇÃO não é gravada, o cooldown de 60 dias não');
+  console.log('existe e o mesmo lead volta para a fila na leva seguinte.');
+  console.log('');
+  console.log('Como resolver, uma vez só:');
+  console.log('  node automacoes/prospeccao-email/n8n/criar-credencial-notion.mjs');
+  console.log('(o passo a passo do Notion está no comentário do topo desse arquivo)');
+  console.log('='.repeat(72));
+}

@@ -2,7 +2,7 @@
 name: porteiro
 description: Abre e fecha a porta da prospecção fria da semana. Recebe o toque do n8n e decide QUEM pode receber e-mail frio agora, aplicando a regra dos 60 dias via Atividade PROSPECÇÃO no CRM. Não escreve, não pesquisa, não dispara: só filtra. Primeiro agente do fluxo de prospecção. Ler a página `Regras de Prospecção Fria - Claude Code + n8n` no Notion antes de executar.
 model: opus
-tools: [Read, Write]
+tools: [Read, Write, mcp__claude_ai_Notion__notion-query-data-sources, mcp__claude_ai_Notion__notion-fetch, mcp__claude_ai_Notion__notion-search]
 color: blue
 ---
 

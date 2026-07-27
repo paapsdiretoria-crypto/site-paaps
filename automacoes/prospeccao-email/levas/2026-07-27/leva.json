@@ -1,0 +1,43 @@
+{
+  "_leia": "Logística da leva. A copy NÃO mora aqui: assunto e corpo saem do .md de cada carta, que é o arquivo que a Mallu lê e aprova. Aqui ficam só destinatário, ordem e horário.",
+  "hora": "07:00",
+  "diaDaSemana": 1,
+  "intervaloMinutos": 12,
+  "cartas": [
+    {
+      "arquivo": "diamantina.md",
+      "lead": "Prefeitura de Diamantina",
+      "leadPageId": "3a744cb5-2e00-813d-a958-f9416c6d78ce",
+      "para": "saude@diamantina.mg.gov.br",
+      "nota": 88
+    },
+    {
+      "arquivo": "salinas.md",
+      "lead": "Prefeitura de Salinas",
+      "leadPageId": "3a744cb5-2e00-8113-bf94-e04a1ce619b7",
+      "para": "secsaude@salinas.mg.gov.br",
+      "nota": 87
+    },
+    {
+      "arquivo": "amm.md",
+      "lead": "Associação Mineira de Municípios",
+      "leadPageId": "38644cb5-2e00-80db-9cae-f1f7b80c78cd",
+      "para": "amm@amm-mg.org.br",
+      "nota": 86
+    },
+    {
+      "arquivo": "janauba.md",
+      "lead": "Prefeitura de Janaúba",
+      "leadPageId": "3a744cb5-2e00-81c9-886a-e4e930467cf9",
+      "para": "secsaude@janauba.mg.gov.br",
+      "nota": 82
+    },
+    {
+      "arquivo": "bocaiuva.md",
+      "lead": "Prefeitura de Bocaiúva",
+      "leadPageId": "3a744cb5-2e00-814f-a543-f1b30d838ade",
+      "para": "saude@bocaiuva.mg.gov.br",
+      "nota": 74
+    }
+  ]
+}

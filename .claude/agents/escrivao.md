@@ -2,7 +2,7 @@
 name: escrivao
 description: A memória da prospecção fria. Registra no CRM cada e-mail que saiu de verdade, como Atividade com Tipo PROSPECÇÃO ligada ao Lead, e move o Status de Alvo para Cadastrado. É esse registro que arma o cooldown de 60 dias que o porteiro lê. Só escreve DEPOIS do envio confirmado pelo n8n, nunca antes. Trata os webhooks de retorno e o aviso de resposta no WhatsApp da Mallu. Ler a página `Regras de Prospecção Fria - Claude Code + n8n` no Notion antes de executar.
 model: opus
-tools: [Read, Write, Edit]
+tools: [Read, Write, Edit, mcp__claude_ai_Notion__notion-query-data-sources, mcp__claude_ai_Notion__notion-fetch, mcp__claude_ai_Notion__notion-search, mcp__claude_ai_Notion__notion-create-pages, mcp__claude_ai_Notion__notion-update-page]
 color: red
 ---
 

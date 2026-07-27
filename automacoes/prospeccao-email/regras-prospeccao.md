@@ -113,6 +113,16 @@ lead voltaria à fila na semana seguinte.
    cadência e o warm-up de `cadencia.md`.
 8. **No envio confirmado de cada e-mail:** registrar a Atividade `PROSPECÇÃO` no lead (a marca
    que arma o cooldown de 60 dias) e mover o `Status` do lead de `0. Alvo` para `1. Cadastrado`.
+
+   > **Automatizado desde 26/07/2026.** Este passo roda dentro do próprio workflow da leva no
+   > n8n, logo depois do envio de cada e-mail, e não em sessão do Claude Code. Ninguém precisa
+   > abrir nada depois do disparo. O registro está pendurado na **saída de sucesso** do nó de
+   > envio: e-mail que falhou não grava nada, o lead continua `0. Alvo` e volta na próxima leva.
+   > Isso impede que o cooldown marque um toque que nunca chegou.
+   >
+   > Depende da credencial `Notion PAAPS (CRM)` existir no n8n. Ver
+   > `n8n/criar-credencial-notion.mjs`. Sem ela o e-mail sai e o CRM não é atualizado, que é o
+   > pior dos mundos: o `montar-leva.mjs` avisa em letras garrafais quando ela está faltando.
 9. **Retorno:** o n8n recebe os webhooks (entregue, aberto, respondido) e atualiza o CRM.
    Quando um lead **responde**, o n8n **avisa a Mallu no WhatsApp** e o lead sai do pool frio:
    `Status = Aquecimento`. Vira conversa humana; passa a `2. Negociação` só após a reunião de
