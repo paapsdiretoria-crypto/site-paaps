@@ -34,18 +34,17 @@ a rede em vez de elogiar. Fonte: `.claude/agent-memory/paaps-brasil/baselines-e-
 
 ## Roteamento da execução
 
-A tabela da seção 5 da skill aponta para `paaps-carrossel (em construção)`. No repositório essa
-skill não existe e não precisa existir: o ramo já está implementado como cadeia de agentes.
+**Atualizado em 27/07 pela versão nova da skill.** A tabela de roteamento vive agora na seção 7
+da própria skill, com os nomes reais dos agentes. Este artefato não a duplica: quem executa cada
+etapa se lê lá, e a cadeia do carrossel está na seção 6.
 
-| Etapa | Quem executa aqui |
-|---|---|
-| Prova falseável e pauta em ascensão | agente `radar` (o `paaps-atualidades-pesquisa` da skill), acionado sob demanda, não como primeiro passo |
-| Raciocínio (5 movimentos sócio-históricos) | agente `tecela` |
-| Escrita da peça, slide a slide | agente `copywriter-paaps` + skill `copy-carrossel` |
-| Fotos | agente `buscador-fotos` (PhotoBank), escolha final da Mallu |
-| Montagem no Canva e export | agente `aplicador-visual`, com `critico-design` obrigatório antes do export |
-| Legenda | skill `legendas-otimizadas` |
-| QA final da seção 8 | ainda sem dono: o agente `critico-conteudo` é placeholder vazio. Enquanto não existir, rodo o QA eu mesmo e declaro |
+Duas observações que valem para esta peça e não estão na skill:
+
+- **Ordem obrigatória antes da escrita:** `radar` em modo dirigido e `tecela` em modo
+  co-construtora ainda não foram acionados nesta rodada. Ver `T-decisao-de-tronco.md`.
+- **QA final sem dono.** A seção 8 exige checagem dos 7 guardrails, e o agente `critico-conteudo`
+  é placeholder vazio. Enquanto ele não existir, quem roda o QA é o próprio autor do texto, que é
+  o arranjo mais frágil do fluxo. Declarado aqui para não passar silencioso.
 
 ## Artefatos
 
