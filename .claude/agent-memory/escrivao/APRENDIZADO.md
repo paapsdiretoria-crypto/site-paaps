@@ -46,6 +46,27 @@ retroativo, ele marca o dia do registro, não o dia do envio. Nesta leva os dois
 o cooldown fica mais curto do que deveria e a data real de envio precisa constar na `Descrição`
 para quem for auditar. Mais um motivo para o registro nunca ficar para depois.
 
+## A nota registrada é autonota, e precisa ser dita como tal (27/07/2026)
+
+Na 1ª leva, as autonotas da carta-fria no momento do envio foram: Diamantina 88, Salinas 87, AMM
+86, Janaúba 82, Bocaiúva 74. **A Mallu reprovou a escrita das cinco** ("ficaram grandes demais",
+"não ficou interessante"). Ou seja, cartas com 88, 87 e 86 foram reprovadas pela leitora real.
+
+Se a `Descrição` guardasse só o número, daqui a três meses alguém cruzaria nota com taxa de
+resposta lendo 88 como "carta boa" e concluiria besteira sobre o que funciona. O número sozinho
+mente: ele é a opinião do agente sobre o próprio texto, medida antes de qualquer contato com a
+realidade.
+
+**Regra que fica:** ao registrar a nota, sempre nomeá-la como **autonota da carta-fria no momento
+do envio** e, quando houver julgamento da Mallu, registrar esse julgamento junto, inclusive (e
+principalmente) quando ele contradiz a nota. Nota sem quem a deu não é dado, é ruído.
+
+**Por que registrar mesmo assim:** a autonota só ganha utilidade quando é falseável contra
+resultado real. Guardada com a ressalva, ela vira teste: se as notas altas desta leva não
+produzirem resposta no Dashboard de Funil, fica provado que o critério de autoavaliação da
+carta-fria está descalibrado em relação a quem lê de verdade. Esse é o valor do número, e é a
+única coisa que justifica gravá-lo.
+
 ## Checagem de duplicata antes de criar (sempre)
 
 Antes de criar uma Atividade, consultar `(EMP) Atividades` filtrando por `Tipo = PROSPECÇÃO` e
