@@ -34,6 +34,42 @@
   "Podemos?"; voz singular virou "nós"; somado Desterro do Melo aos cases; removida a ideia de
   saída; inserido o descritivo e a lógica de impacto. Nota subiu de 86 para ~90.
 
+## Reprovação da 1ª leva enviada (27/07/2026), a correção mais importante até aqui
+
+As 5 cartas da leva de 27/07 foram enviadas e **a Mallu reprovou a escrita**: "ficaram grandes
+demais", "não ficou interessante", "está diferente do que eu tinha aprovado". Vale mais que
+qualquer nota que eu tenha me dado: as autonotas foram 88, 87, 86, 82 e 74, e a leitora real
+reprovou. **Autonota alta com leitora insatisfeita significa que o critério da autonota está
+errado**, não que ela se enganou.
+
+O diagnóstico, relendo as 5 lado a lado:
+
+- **Duas das cinco frases-parágrafo eram boilerplate idêntico em todas as cartas.** O parágrafo
+  "Somos a PAAPS Brasil, rede de saúde mental coletiva... para que o cuidado chegue mais
+  qualificado na ponta, para que a política pública funcione melhor..." e o parágrafo "Sabemos
+  que o RH de uma prefeitura já tem demanda demais... Foi assim em Bela Vista de Minas e em
+  Desterro do Melo" apareceram quase palavra por palavra nas 5. Isso é o que incha a carta e o
+  que mata o interesse: o leitor sente que está lendo um modelo.
+- **Cinco parágrafos é longo demais para primeiro toque frio.** Só o gancho local era próprio de
+  cada município; o resto era institucional.
+- **Erro de origem:** eu tratei a lógica de impacto, o descritivo do PAAPS, o ICP-rede e a dor
+  de RH como um checklist a cumprir em toda carta. O próprio APRENDIZADO já dizia o contrário,
+  logo acima: "não jogar tudo isso como lista na carta: coletar e usar o ponto certo na hora
+  certa, deixando a copy cada vez mais direta". Eu li e não obedeci.
+
+Regras que passam a valer:
+
+1. **Teto de tamanho.** Primeiro toque frio: no máximo 4 parágrafos curtos. Se passar disso,
+   cortar, e o corte começa pelo institucional, nunca pelo que é do município.
+2. **Um argumento institucional por carta, não os quatro.** Escolher entre descritivo, lógica de
+   impacto, ICP-rede e dor de RH o único que conversa com o gancho daquele município. Os outros
+   três ficam para a conversa.
+3. **Proibido parágrafo idêntico em duas cartas da mesma leva.** Antes de fechar o lote, ler as
+   cartas lado a lado e reescrever o que se repetir.
+4. **Os cases (Bela Vista, Desterro do Melo) entram só quando o gancho pede**, não por reflexo.
+5. **A autonota passa a pesar tamanho e ineditismo**, não só veracidade e arco. Carta correta,
+   verificada e chata é carta reprovada.
+
 ## Lições de revalidação (26/07/2026, reescrita da 1ª leva)
 
 O texto das 5 cartas de 24/07 se perdeu (escrito no chat, nunca salvo). Ao reescrever, **dois
