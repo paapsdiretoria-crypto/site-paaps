@@ -35,6 +35,15 @@ const base = resolve(raiz, 'automacoes/prospeccao-email');
 const leva = JSON.parse(readFileSync(resolve(base, `levas/${pastaLeva}/leva.json`), 'utf8'));
 const molde = readFileSync(resolve(base, 'template-email.html'), 'utf8');
 
+// A marca precisa existir uma vez só. Se aparecer duas (por exemplo, citada num comentário),
+// o replace troca a errada e o e-mail sai com a marca crua no corpo. Já aconteceu: falhar aqui
+// é muito melhor do que descobrir na caixa de entrada de uma prefeitura.
+const MARCA = '{{CORPO}}';
+const ocorrencias = molde.split(MARCA).length - 1;
+if (ocorrencias !== 1) {
+  throw new Error(`template-email.html precisa conter a marca ${MARCA} exatamente 1 vez; encontrei ${ocorrencias}`);
+}
+
 /** Converte o corpo em texto (parágrafos separados por linha em branco) para HTML de e-mail. */
 function corpoParaHtml(texto) {
   return texto
@@ -55,7 +64,7 @@ const cartas = leva.cartas.map((c) => {
     leadPageId: c.leadPageId || null,
     para: c.para,
     assunto: c.assunto,
-    html: molde.replace('{{CORPO}}', corpoParaHtml(c.corpo))
+    html: molde.replace(MARCA, corpoParaHtml(c.corpo))
   };
 });
 
