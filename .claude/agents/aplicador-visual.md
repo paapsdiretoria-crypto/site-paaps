@@ -82,10 +82,16 @@ amarelo. Post de dado: fundo bege, texto marrom, número em amarelo enorme. Exce
 
 ## Tipografia
 
-**League Spartan** (400 a 800): headlines, labels, tags, números grandes. Sempre uppercase.
-`letter-spacing` sempre presente: 0.08em (denso) a 0.22em (labels tiny).
-**Helvetica Neue** (400 apenas): corpo de texto.
-Nunca Inter, Roboto, Arial ou system-ui como fonte principal.
+A escrita tem que sair igual à das peças do Canva da Mallu. Ver a seção 3 de
+`nucleo-comum/identidade-aplicada.md`, que é a fonte da verdade.
+
+**Helvetica** (400 e 700): headline, subtítulo, corpo, contato. É o padrão.
+**League Spartan** (700): só label pequena, tag e número solto. Nunca headline, nunca corpo.
+**Evermore:** só o logo.
+
+`letter-spacing: 0` sempre, inclusive em caixa alta. `font-weight` só 400 ou 700.
+Headline em caixa mista, salvo quando a peça pedir caixa alta.
+Nunca `Helvetica Neue` (outro desenho), nunca Inter, Roboto, Arial ou system-ui.
 
 ## Os 3 modos visuais
 

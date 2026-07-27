@@ -23,7 +23,7 @@ A tipografia domina. A foto é testemunha: pequena, em P&B, encravada no meio do
 ESTRUTURA:
 ┌──────────────────────┐
 │                      │
-│   FRASE              │  ← League Spartan 800, ~70-80pt equivalente
+│   FRASE              │  ← Helvetica Bold 700, ~70-80pt equivalente
 │   IMPACTANTE         │     uppercase, quase sangrando nas bordas
 │   EM GRANDE          │
 │  [foto P&B]          │  ← foto pequena, B&W, "testemunha" do texto
@@ -59,7 +59,7 @@ VARIAÇÃO B — foto com faixa:
 ┌──────────────────────┐
 │  [FOTO REAL grande]  │  ← foto ocupa 60-70% do frame
 │  ──────────────────  │  ← faixa marrom ou terracota
-│  FRASE EM CAPS       │  ← texto branco, League Spartan 700
+│  FRASE EM CAPS       │  ← texto branco, Helvetica Bold 700, letter-spacing 0
 └──────────────────────┘
 ```
 

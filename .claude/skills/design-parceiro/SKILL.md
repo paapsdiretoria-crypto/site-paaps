@@ -110,9 +110,9 @@ description: Parceiro criativo de design para o design system PAAPS. Opera em do
       <sinal>Inter, Roboto ou system-ui · tamanhos próximos entre H1, H2, H3 e body · peso 400 dominante</sinal>
       <diagnostico>Tipografia neutra é invisível. Sem hierarquia real, a leitura não tem ritmo nem caráter.</diagnostico>
       <substituto>
-        League Spartan 800 em títulos vs Helvetica Neue 400 no corpo.
-        Contraste de peso que cria hierarquia visível antes de o texto ser lido.
-        letter-spacing presente: 0.08em (denso) a 0.22em (labels pequenos em caps).
+        Helvetica Bold 700 em títulos vs Helvetica Regular 400 no corpo.
+        Contraste de peso e de tamanho que cria hierarquia visível antes de o texto ser lido.
+        letter-spacing 0 sempre: a hierarquia vem do tamanho e da cor.
         Se título e corpo parecem do mesmo universo visual, a tipografia falhou.
       </substituto>
     </padrao>

@@ -35,9 +35,9 @@ h1 { font-family: var(--fonte-titulo); font-weight: 800; font-size: clamp(2.4rem
 ```
 
 **Como se traduz no Canva:**
-- Headline: League Spartan, peso máximo disponível, tamanho que "domina" o slide — se não domina visualmente, aumentar
-- Body: Helvetica Neue ou equivalente, peso normal, tamanho que cria contraste real com o headline (nunca tamanho similar)
-- Labels acima do título: pequenos, em caps, com muito espaçamento entre letras
+- Headline: Helvetica Bold (700), tamanho que "domina" o slide. Se não domina visualmente, aumentar o corpo, nunca o peso
+- Body: Helvetica Regular (400), tamanho que cria contraste real com o headline (nunca tamanho similar)
+- Labels acima do título: pequenos, em caps, `letter-spacing: 0`. A hierarquia vem do tamanho e da cor, não do espaçamento entre letras
 
 **Anti-padrão:** tamanho uniforme em todos os elementos do slide — isso é o que produz "visual de IA", sem hierarquia, sem caráter.
 
