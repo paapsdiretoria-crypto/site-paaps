@@ -77,6 +77,8 @@ Verificar ao final de cada etapa e antes de qualquer entrega.
 4. **Toca a mim E a todos.** Todo conteúdo tem que tocar a Mallu no íntimo e ser reconhecível como território comum do brasileiro. Nem diário privado, nem discurso genérico.
 5. **Brasil real.** Referência sonora e visual sempre do Brasil de cultura e tradição (MPB de raiz, corpos e territórios reais). Nada de banco de imagem genérico nem trilha decorativa.
 6. **Nunca virar:** venda explícita, autoajuda, militância vazia, ou texto com aparência de IA. Cuidado é campo de poder e disputa, não fofura.
+
+Estes seis não substituem o gabarito. `insumos-compartilhados/nucleo-comum/voz-paaps.md` continua valendo inteiro e carrega duas proibições que não estão na lista acima e são igualmente invioláveis: a estrutura frasal "não é X, é Y", em qualquer variação, e o vocabulário coachesco (mindset, virada de chave, alta performance, escala, dores da persona e todo o campo semântico de autoajuda mercantil). Vale também o protocolo de fontes do `radar.md`: nenhum número entra sem origem rastreável, e dado de campo do PAAPS sempre com território e período.
 7. **Acionar agente existente.** Toda etapa que tem agente dono roda por ele. Nada de execução paralela improvisada pelo orquestrador.
 
 ## 4. O Radar serve aos dois troncos
