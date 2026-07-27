@@ -1,7 +1,19 @@
 # Afeto situado: como executar o Passo 3 sem a Mallu
 
-Arquivo vivo. Nasceu em 27/07/2026, quando a Mallu decidiu sair do fluxo de criação e pediu
-que o Claude aprendesse a fazer a parte dela.
+Arquivo vivo. Nasceu em 27/07/2026, quando a Mallu pediu que o Claude aprendesse a fazer a
+parte criativa que era dela.
+
+**O que ela deixou de fazer, e o que continua fazendo.** A versão da skill orquestradora escrita
+por ela no mesmo dia deixa isso explícito, e o recorte importa. Ela sai de **fornecer a
+criatividade**: o afeto que inicia a peça, o gancho, a frase quente. Ela continua sendo:
+o gate final de toda peça, quem escolhe a foto entre as candidatas do `buscador-fotos`, a
+interlocutora da `tecela` em modo co-construtora, e quem é avisada quando um agente necessário
+está incompleto ou quando o tronco da tarefa está ambíguo. Sair da criatividade não é sair do
+julgamento.
+
+No Tronco A da skill, o gancho é dela por definição ("a Mallu puxa o gancho"). Uma rodada de
+Tronco A sem gancho dela é, na prática, Tronco B. Este arquivo serve principalmente ao Tronco B
+e ao afeto que sustenta a peça quando ela não trouxe o tema.
 
 A skill `paaps-orquestrador-conteudo` exige, antes de qualquer escrita, o Passo 3: parar e
 responder **o que isto está gerando em mim, o que está causando, e qual o contexto que me faz

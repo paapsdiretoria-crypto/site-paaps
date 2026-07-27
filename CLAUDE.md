@@ -119,6 +119,7 @@ SITE PAAPS/                          ← pasta raiz (renomear para PAAPS/ no Fin
 │   │   └── paaps-pesquisa-mercado.md
 │   └── nucleo-comum/                ← O CORAÇÃO COMPARTILHADO — lido por todos os agentes
 │       ├── voz-paaps.md             ← gabarito de voz e proibições ativas
+│       ├── afeto-situado-mallu.md   ← como iniciar a peça quando o gancho não vem dela
 │       ├── identidade-aplicada.md   ← paleta, tipografia, sistema Periódico, workflow Canva
 │       ├── criterios-design.md      ← checklist do crítico de design
 │       ├── qualidade-frontend.md    ← princípios de design (web + Canva)
@@ -253,6 +254,7 @@ A pasta ainda se chama `SITE PAAPS/` por limitação do ambiente. Para renomear 
 | `edicao-reel-mallu` | Editar vídeo JÁ GRAVADO em Reel do perfil **PESSOAL @malluvasconcellos**: Impact + Times New Roman, bege com destaque vinho, revelação palavra a palavra com clique de trackpad, modo B digitado. Identidade INCOMPATÍVEL com a do PAAPS: não misturar as duas skills |
 | `recupera-ditado` | Recuperar ditado por voz já gravado em `~/Ditado/AAAA-MM-DD.md`: último, por data, busca por conteúdo, listar. Material pessoal: mostra no chat, não commita nem cola no Notion sem pedido. Não use para gravar/transcrever (isso é `codigo/ditado/`) |
 | `email-prospeccao` | Escrever ou refinar e-mail de prospecção fria do PAAPS Brasil (prefeitura, secretaria, associação): voz calibrada, gancho local verificável, estratégia por porte, gate da Mallu. Fonte única da craft de escrever; o agente `carta-fria` aponta para ela |
+| `paaps-orquestrador-conteudo` | **Fonte da verdade do fluxo de conteúdo.** Julga em qual dos dois troncos a tarefa cai (A: a Mallu puxa o gancho; B: o PAAPS por frequência, começando no Radar), conduz o montante daquele tronco, aplica os 7 guardrails, opera o gate de voz peça a peça e aciona os agentes que já existem. Ler antes de qualquer produção de conteúdo |
 
 ### Notion — página de operações
 
