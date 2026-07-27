@@ -128,6 +128,16 @@ Ordem confirmada, seis agentes, cada um com dono:
 
 O `sentinela` está fora deste fluxo.
 
+### A Tecelã tem dois modos, e é sempre acionada
+
+O processo da Tecelã (desnaturalizar, nomear a contradição, situar na totalidade, achar as mediações) é muito específico e só se afia com repetição. Por isso ela **entra em toda rodada, dos dois troncos**, mesmo quando não escreve nada da peça.
+
+- **Modo aprendizado (sempre).** Acompanha a rodada, lê o material, registra no próprio log de aprendizado o que apareceu, o que ficou de fora e o que ela faria diferente. Não bloqueia o fluxo. Serve para que o repertório dela cresça com o histórico real, e não com rodadas isoladas.
+- **Modo co-construtora (quando a Mallu pedir, ou quando o argumento ainda está aberto).** Constrói o argumento **junto** com a Mallu, em diálogo, em vez de entregar raciocínio fechado. É o modo a usar quando a Mallu já trouxe tese própria e quer testá-la, aprofundá-la ou achar a mediação que falta.
+- **Modo raciocínio fechado.** Entrega o argumento pronto para o `copywriter-paaps`. É o modo padrão do Tronco B quando a peça nasce do Radar sem a Mallu na mesa.
+
+Nunca pular a Tecelã para "ganhar tempo". Pular apaga uma rodada de aprendizado que não volta.
+
 Regra de dramaturgia do carrossel: choque no presente, depois raiz histórica, depois prova; a imagem argumenta a tese antes do texto; o rodapé devolve o conteúdo ao campo das políticas públicas. Um hook que promete consequência forte cria dívida narrativa que os slides seguintes precisam pagar com prova. Não deixar cheque sem fundo.
 
 ## 7. Roteamento: agentes e skills que EXISTEM
@@ -138,7 +148,7 @@ Nunca inventar nome de skill ou agente. Esta é a lista real.
 |---|---|---|
 | Pauta de atualidade, pesquisa com fonte | `radar` | agente |
 | Leitura do perfil @paaps.brasil e performance | `paaps-brasil` | agente |
-| Argumento sócio-histórico, contradição, mediações | `tecela` | agente |
+| Argumento sócio-histórico, contradição, mediações | `tecela` | agente (3 modos, seção 6) |
 | Texto do carrossel @paaps.brasil | `copywriter-paaps` | agente |
 | Curadoria de foto no PhotoBank | `buscador-fotos` | agente |
 | Montagem no Canva e entrega no Drive | `aplicador-visual` | agente |
