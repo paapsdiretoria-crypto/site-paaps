@@ -36,16 +36,43 @@ if (!token) {
 
 const NOME = 'Notion PAAPS (CRM)';
 
-// Confere o token antes de guardar: melhor falhar aqui do que na segunda de manhã.
-const teste = await fetch('https://api.notion.com/v1/users/me', {
-  headers: { Authorization: `Bearer ${token}`, 'Notion-Version': '2022-06-28' }
-});
-if (!teste.ok) {
-  console.error(`\nO Notion recusou o token (${teste.status}). Confira se copiou o segredo inteiro.\n`);
+// Confere o token E o acesso a cada base do CRM antes de guardar. Testar só o token não
+// serve de nada: o erro comum não é token inválido, é token válido que enxerga um
+// workspace vazio porque as bases não foram conectadas à integração. Melhor descobrir
+// aqui do que na segunda de manhã, com o e-mail já enviado e o CRM mudo.
+// Atenção: são os IDs de DATABASE (os que a API entende), não os de data source/coleção
+// que aparecem como collection:// nas ferramentas do Notion. Confundir os dois devolve 404
+// mesmo com a base já conectada.
+const BASES = {
+  '(EMP) Leads': '22244cb5-2e00-816a-b854-f1a1bf4aa934',
+  '(EMP) Contato': '22244cb5-2e00-816d-8f74-d5b28d9ae706',
+  '(EMP) Atividades': '22244cb5-2e00-81e2-9071-db3762e265a6'
+};
+const cabecalho = { Authorization: `Bearer ${token}`, 'Notion-Version': '2022-06-28' };
+
+let faltando = [];
+for (const [nome, dbId] of Object.entries(BASES)) {
+  const r = await fetch(`https://api.notion.com/v1/databases/${dbId}`, { headers: cabecalho });
+  if (r.status === 401) {
+    console.error(`\nO Notion recusou o token (401). Confira se copiou o segredo inteiro.\n`);
+    process.exit(1);
+  }
+  if (r.ok) {
+    console.log(`  ok    ${nome}`);
+  } else {
+    console.log(`  FALTA ${nome}  (${r.status})`);
+    faltando.push(nome);
+  }
+}
+
+if (faltando.length) {
+  console.error('\nO token é válido, mas estas bases ainda não estão conectadas à integração:');
+  faltando.forEach((n) => console.error(`  - ${n}`));
+  console.error('\nNo Notion: Conexões -> PAAPS CRM (n8n) -> aba "Acesso a conteúdo" -> adicionar');
+  console.error('as bases que faltam. Depois rode este script de novo.\n');
   process.exit(1);
 }
-const quem = await teste.json();
-console.log(`token válido, integração: ${quem.name || quem.bot?.owner?.type || 'ok'}`);
+console.log('token válido e as 3 bases do CRM estão acessíveis.');
 
 const lista = await (await fetch(`${API}/api/v1/credentials?limit=100`, { headers: h })).json();
 const existente = (lista.data || []).find((c) => c.name === NOME);
