@@ -43,7 +43,12 @@ imagem, estão legíveis e clicáveis; e se nada estourou a largura da tela no c
 <p style="margin:0; font-size:13px; color:#7a5a3a;">PAAPS Brasil - Rede de Saúde Mental Coletiva para as políticas públicas</p>
 `.trim();
 
-const html = molde.replace('{{CORPO}}', corpo);
+const MARCA = '{{CORPO}}';
+const ocorrencias = molde.split(MARCA).length - 1;
+if (ocorrencias !== 1) {
+  throw new Error(`template-email.html precisa conter a marca ${MARCA} exatamente 1 vez; encontrei ${ocorrencias}`);
+}
+const html = molde.replace(MARCA, corpo);
 
 const workflow = {
   name: 'TEMP - teste de assinatura',

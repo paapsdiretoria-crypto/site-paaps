@@ -1,8 +1,11 @@
 <!--
   Molde HTML do e-mail de prospecção fria do PAAPS Brasil.
 
-  Lacuna única: {{CORPO}}  ->  o corpo da carta já convertido em <p>...</p>.
-  Quem preenche: automacoes/prospeccao-email/montar-leva.mjs
+  Lacuna única: a marca CORPO entre chaves duplas, mais abaixo, trocada pelo corpo da
+  carta já convertido em <p>...</p>. Quem preenche: montar-leva.mjs.
+  Cuidado ao editar: a marca precisa aparecer UMA vez só no arquivo. Se ela for citada
+  também aqui em cima, o script troca a citação e o e-mail sai com a marca crua no corpo
+  (aconteceu no primeiro teste, 26/07/2026).
 
   Regras de construção (por que está feito com <table> e estilo inline):
   cliente de e-mail institucional (Outlook do gov, webmail de prefeitura) ignora
