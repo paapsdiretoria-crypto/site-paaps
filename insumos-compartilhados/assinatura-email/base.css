@@ -7,6 +7,13 @@
 @font-face { font-family:'League Spartan'; src:url('assets/fonts/LeagueSpartan-Bold.ttf')      format('truetype'); font-weight:700; }
 @font-face { font-family:'League Spartan'; src:url('assets/fonts/LeagueSpartan-ExtraBold.ttf') format('truetype'); font-weight:800; }
 
+/* Helvetica é a fonte que o Canva aplica de fato nas peças (HelveticaLTPro no PDF
+   exportado). No Mac, 'Helvetica' resolve para a Helvetica real. Nimbus Sans é o
+   clone de métricas idênticas, licença livre, para onde a Helvetica não existir.
+   Arial é o último recurso. Nunca usar 'Helvetica Neue': é outro desenho. */
+@font-face { font-family:'Nimbus Sans PAAPS'; src:url('../nucleo-comum/fontes/NimbusSanL-Reg.otf') format('opentype'); font-weight:400; }
+@font-face { font-family:'Nimbus Sans PAAPS'; src:url('../nucleo-comum/fontes/NimbusSanL-Bol.otf') format('opentype'); font-weight:700; }
+
 :root {
   --cor-fundo:     #f5f1e1;
   --cor-marrom:    #442309;
@@ -16,8 +23,9 @@
   --cor-bege-rosa: #bbada2;
   --cor-branco:    #ffffff;
   --raio: 4px;
-  --fonte-titulo: 'League Spartan', Arial, sans-serif;
-  --fonte-corpo:  'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --fonte-titulo: Helvetica, 'Nimbus Sans PAAPS', Arial, sans-serif;
+  --fonte-corpo:  Helvetica, 'Nimbus Sans PAAPS', Arial, sans-serif;
+  --fonte-label:  'League Spartan', Helvetica, Arial, sans-serif;
   --linha: rgba(68,35,9,0.14);
 }
 
@@ -30,19 +38,21 @@ body { -webkit-font-smoothing:antialiased; }
 }
 
 /* ---------- tipografia da assinatura ---------- */
+/* Pesos e espaçamento seguem o Canva: 400 e 700 apenas, letter-spacing 0.
+   Nada de 800, nada de tracking largo. */
 .nome {
-  font-family:var(--fonte-titulo); font-weight:800; font-size:20px;
-  letter-spacing:0.055em; text-transform:uppercase; color:var(--cor-marrom);
+  font-family:var(--fonte-titulo); font-weight:700; font-size:20px;
+  letter-spacing:0; text-transform:uppercase; color:var(--cor-marrom);
   line-height:1;
 }
 .cargo {
-  font-family:var(--fonte-titulo); font-weight:500; font-size:10px;
-  letter-spacing:0.19em; text-transform:uppercase; color:var(--cor-terracota);
+  font-family:var(--fonte-titulo); font-weight:400; font-size:10.5px;
+  letter-spacing:0; text-transform:uppercase; color:var(--cor-terracota);
   margin-top:7px;
 }
 .label {
-  font-family:var(--fonte-titulo); font-weight:700; font-size:8px;
-  letter-spacing:0.24em; text-transform:uppercase; color:var(--cor-oliva);
+  font-family:var(--fonte-titulo); font-weight:700; font-size:8.5px;
+  letter-spacing:0; text-transform:uppercase; color:var(--cor-oliva);
 }
 
 /* ---------- divisor tricolor ---------- */
@@ -68,6 +78,6 @@ body { -webkit-font-smoothing:antialiased; }
 
 /* ---------- rodapé de posicionamento ---------- */
 .posicionamento {
-  font-family:var(--fonte-titulo); font-weight:600; font-size:8px;
-  letter-spacing:0.22em; text-transform:uppercase; color:rgba(68,35,9,0.52);
+  font-family:var(--fonte-titulo); font-weight:400; font-size:8.5px;
+  letter-spacing:0; text-transform:uppercase; color:rgba(68,35,9,0.52);
 }

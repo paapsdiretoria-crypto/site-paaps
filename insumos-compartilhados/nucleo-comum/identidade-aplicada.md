@@ -37,8 +37,9 @@ O design PAAPS vive no cruzamento de três tensões que nunca se resolvem comple
   --cor-lilas:     #bcb6f2;  /* lilás — card empresas (uso restrito) */
   --cor-branco:    #ffffff;
   --raio: 4px;               /* border-radius PADRÃO — nunca mais */
-  --fonte-titulo: 'League Spartan', Arial, sans-serif;
-  --fonte-corpo:  'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --fonte-titulo: Helvetica, 'Nimbus Sans PAAPS', Arial, sans-serif;
+  --fonte-corpo:  Helvetica, 'Nimbus Sans PAAPS', Arial, sans-serif;
+  --fonte-label:  'League Spartan', Helvetica, Arial, sans-serif;  /* só label/tag/número */
 }
 ```
 
@@ -58,15 +59,52 @@ O design PAAPS vive no cruzamento de três tensões que nunca se resolvem comple
 
 ## 3. Tipografia
 
-### League Spartan (Google Fonts, pesos 400–800)
-- Headlines, labels, botões, navegação, tags, números grandes
-- Sempre `text-transform: uppercase` via CSS
-- `letter-spacing` sempre presente: 0.08em (denso) a 0.22em (labels tiny)
-- **Nunca usar:** Inter, Roboto, Arial, system-ui como fonte principal
+> **Regra de ouro:** o que sai daqui tem que ter a mesma escrita das peças do Canva.
+> O Canva é a referência, não este arquivo. Em caso de dúvida, abrir uma peça da
+> Mallu e copiar o que se vê.
 
-### Helvetica Neue (sistema)
-- Corpo de texto, parágrafos, descrições
-- `font-weight: 400` apenas
+**Arquivos das fontes:** `insumos-compartilhados/nucleo-comum/fontes/`
+Nunca puxar fonte do CDN do Google: sem internet ou em render headless, cai para Arial
+e a peça sai errada. Sempre `@font-face` apontando para essa pasta.
+
+### Helvetica: a fonte de escrita (padrão)
+Carrega headline, subtítulo, corpo, contato, quase tudo. É a fonte que aparece nas peças
+do Canva da Mallu (a exportação em PDF traz `HelveticaLTPro` embutida).
+
+```css
+font-family: Helvetica, 'Nimbus Sans PAAPS', Arial, sans-serif;
+```
+
+- No Mac, `Helvetica` resolve para a Helvetica real: é o que o Canva mostra.
+- `Nimbus Sans PAAPS` é o clone de métricas idênticas, licença livre, para onde a
+  Helvetica não existir. Arquivos `NimbusSanL-Reg.otf` e `NimbusSanL-Bol.otf`.
+- **Nunca usar `Helvetica Neue`:** é outro desenho, com letras mais estreitas.
+- **Nunca usar** a pasta `helvetica-similar-fonts/neue haas grotesk/`: são arquivos
+  `-Trial`, sem licença de produção.
+
+### League Spartan: uso restrito
+Só em label pequena, tag e número solto, no peso Bold. Nunca em headline, nunca em
+corpo de texto. Ela é geométrica e de letra larga, e em bloco fica com um peso visual
+que não é o das peças da Mallu.
+
+### Evermore: só o logo
+Nunca em texto corrido.
+
+### Peso e espaçamento: os valores do Canva
+
+| Propriedade | Valor | Observação |
+|---|---|---|
+| `font-weight` | `400` ou `700`, só | Nunca 500, 600 ou 800 |
+| `letter-spacing` | `0` | Inclusive em caixa alta |
+| `line-height` | `1.4` em texto, `1.16` em headline | |
+| `text-transform` | só quando a peça pede | Não é obrigatório |
+
+**Os três erros que produziram peças fora da identidade, e que estão proibidos:**
+
+1. `font-weight: 800` como padrão de headline. O Canva usa Bold, 700.
+2. `letter-spacing` de 0.08em a 0.22em espalhado por tudo. O Canva usa 0.
+3. `text-transform: uppercase` obrigatório em toda headline e label. No Canva a
+   headline é caixa mista.
 
 ---
 
