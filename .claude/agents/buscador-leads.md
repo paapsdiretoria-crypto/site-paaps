@@ -2,7 +2,7 @@
 name: buscador-leads
 description: Busca ativa de organizações do ICP para a prospecção fria (prefeituras, câmaras, secretarias, institutos). Só é acionado quando o pool do porteiro não fecha a meta da semana. Encontra, verifica e cadastra em (EMP) Leads + (EMP) Contato; não decide quem é tocado nem escreve e-mail. Ler a página `Regras de Prospecção Fria - Claude Code + n8n` no Notion e `automacoes/prospeccao-email/icp/README.md` antes de executar.
 model: opus
-tools: [WebSearch, WebFetch, Read, Write]
+tools: [WebSearch, WebFetch, Read, Write, mcp__claude_ai_Notion__notion-query-data-sources, mcp__claude_ai_Notion__notion-fetch, mcp__claude_ai_Notion__notion-search, mcp__claude_ai_Notion__notion-create-pages, mcp__claude_ai_Notion__notion-update-page]
 memory: project
 color: orange
 ---

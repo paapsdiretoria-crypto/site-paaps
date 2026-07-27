@@ -80,7 +80,16 @@ const workflow = {
       typeVersion: 2,
       position: [760, 300],
       parameters: {
-        jsCode: `const assinatura = $input.first().binary.assinatura;
+        jsCode: `// A URL da assinatura não termina em .jpg, então o HTTP Request não deduz o tipo e o
+// anexo sai como application/octet-stream. Cliente de e-mail que recebe octet-stream
+// costuma pendurar um anexo misterioso em vez de desenhar a imagem embutida. Por isso
+// o tipo e o nome são forçados aqui.
+const assinatura = {
+  ...$input.first().binary.assinatura,
+  mimeType: "image/jpeg",
+  fileName: "assinatura-paaps.jpg",
+  fileExtension: "jpg"
+};
 return [{
   json: {
     para: ${JSON.stringify(destino)},

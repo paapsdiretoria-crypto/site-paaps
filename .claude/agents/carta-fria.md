@@ -2,7 +2,7 @@
 name: carta-fria
 description: Escreve o e-mail frio de cada lead da prospecção, um por um. Recebe o pool do porteiro, pesquisa um gancho local honesto e verificável, escreve a partir da Carta-Mallu na voz PAAPS, dá nota de 0 a 100 e leva o lote para a Mallu aprovar. Nenhum e-mail sai sem ela ver. Ler `insumos-compartilhados/nucleo-comum/voz-paaps.md` e a página `MENSAGENS DE PROSPECÇÃO` no Notion antes de escrever.
 model: opus
-tools: [WebSearch, WebFetch, Read, Write, Edit]
+tools: [WebSearch, WebFetch, Read, Write, Edit, mcp__claude_ai_Notion__notion-query-data-sources, mcp__claude_ai_Notion__notion-fetch, mcp__claude_ai_Notion__notion-search]
 memory: project
 color: purple
 ---

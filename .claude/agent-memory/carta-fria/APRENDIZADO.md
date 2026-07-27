@@ -34,6 +34,49 @@
   "Podemos?"; voz singular virou "nós"; somado Desterro do Melo aos cases; removida a ideia de
   saída; inserido o descritivo e a lógica de impacto. Nota subiu de 86 para ~90.
 
+## Lições de revalidação (26/07/2026, reescrita da 1ª leva)
+
+O texto das 5 cartas de 24/07 se perdeu (escrito no chat, nunca salvo). Ao reescrever, **dois
+dos cinco ganchos aprovados não sobreviveram à revalidação**. Isso vira regra:
+
+- **Gancho aprovado no gate não é gancho permanente.** Revalidar todo ciclo, mesmo o que a
+  Mallu já aprovou. Aprovação dela é sobre a copy; a veracidade continua sendo minha.
+- **Diamantina, PL 52/2025: não confirmado.** Nenhuma fonte indexada; o site da Câmara
+  (`cmdiamantina.mg.gov.br`) e o `leismunicipais.com.br` devolvem 403 a acesso automatizado.
+  Sinal legislativo de município pequeno costuma ser invisível fora do site da Câmara, e site
+  de Câmara costuma bloquear robô. **Sinal legislativo só entra na carta com o texto na mão.**
+- **Janaúba, CAPS III: não confirmado como habilitado.** A única menção diz "aguarda a
+  habilitação". Diferença que queima: anunciar como conquista o que ainda é pendência.
+- **Não creditar equipamento estadual à prefeitura.** O CEAE de Janaúba é Centro *Estadual*,
+  operado via consórcio. Elogiá-lo numa carta à Secretaria *Municipal* entrega que não
+  entendemos quem faz o quê no SUS, que é justo o contrário do que a carta quer provar.
+- **Notícia boa mas anterior à eleição municipal é risco de gancho.** Se a gestão mudou,
+  estamos elogiando a obra do antecessor para quem o sucedeu. Confirmar a gestão antes de usar
+  fato anterior a 01/01/2025.
+
+### Onde o gancho verificável realmente mora
+
+- **A "Carta de Serviços" do portal da prefeitura é a melhor mina de gancho estrutural.**
+  Rendeu Diamantina (CAPS Renascer, referência de 14 municípios) e Salinas (CAPS desde 1996,
+  referência de 6 municípios, equipe nominada). É pública, oficial, aberta a robô, e descreve
+  o *padrão* da rede em vez do evento da semana. Passa a ser a **primeira parada** da pesquisa.
+- **Domínios que respondem bem:** portais `*.mg.gov.br` de prefeitura, `portalamm.org.br`,
+  `gov.br` (MTE, FUNDACENTRO, Fiocruz).
+- **Domínios que bloqueiam ou estão quebrados:** `cmdiamantina.mg.gov.br` (403),
+  `leismunicipais.com.br` (403), `jornalpanoramaminas.com.br` (403), e sobretudo
+  **`saude.mg.gov.br/component/gmg/story/...` (404 em todas as tentativas)**. As matérias da
+  SES-MG nesse padrão de URL estão indexadas na busca mas não abrem; as URLs no padrão
+  `/noticias/` redirecionam para a home. Consequência prática: **dado da SES-MG hoje só é
+  confirmável por busca, não por leitura direta.** Declarar isso na autonota quando usar.
+
+### Âncora legal atualizada (vale para todas as cartas)
+
+Fatores de risco psicossocial integram expressamente o Gerenciamento de Riscos Ocupacionais da
+NR-01 **desde 26/05/2026**, encerrada a fase educativa de um ano (Portaria MTE 1.419/2024 e
+Portaria MTE 765/2025). É âncora fresca e oficial. Ressalva a carregar: a NR-01 alcança de
+forma direta o vínculo celetista, e a maior parte do servidor municipal é estatutária. Afirmar
+o que a norma mudou, sem afirmar que obriga cada prefeitura.
+
 ## Resultado real (preencher com o Dashboard de Funil de Conversão + CRM)
 
 Ainda sem dado: nenhuma leva enviada. Conforme os retornos entrarem, registrar aqui, por via de

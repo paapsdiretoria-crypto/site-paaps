@@ -3,7 +3,11 @@
 | Arquivo | Variante | Quando usar |
 |---|---|---|
 | `assinatura-paaps-a-montanha.png` / `.jpg` | **A - Montanha.** Foto da serra de Minas em cor cheia, lockup centrado, na mesma linguagem do banner institucional do site | Padrão. Prospecção, apresentação, primeiro contato |
+| `assinatura-email-640.jpg` | **A comprimida para envio automático.** Mesmo desenho, compressão mais firme (106 KB contra 247 KB) | É esta que a automação usa. Não trocar por engano pelas de cima |
 | `assinatura-paaps-b-editorial.png` / `.jpg` | **B - Editorial.** Sem foto: painel marrom com o logo branco, dados no off-white arenoso | Conversa já em andamento, e-mail curto do dia a dia, quando a assinatura grande pesa |
+
+> **Aprovada em 26/07/2026** como assinatura padrão dos e-mails, inclusive os da
+> prospecção fria disparada pelo n8n.
 
 Tamanho de tela: 640 × 348 px (A) e 620 × 222 px (B). Exportado em 2× para não serrilhar em
 tela retina.
@@ -37,6 +41,39 @@ Assinatura em imagem não tem link clicável: o endereço fica legível, mas a p
 copiar. Duas saídas: deixar assim, ou colar a imagem e escrever abaixo dela uma linha de texto
 simples com o site e o WhatsApp. Se a assinatura precisar ser toda clicável, é preciso a versão
 em HTML em vez de imagem. É só pedir.
+
+### Nos e-mails que o n8n dispara (prospecção fria)
+
+Aqui não tem passo manual: a assinatura já entra sozinha em todo e-mail da leva.
+
+Como está montado, em uma frase: um workflow do n8n guarda a imagem e a serve numa URL
+fixa; o workflow da leva busca essa URL e embute a imagem no e-mail.
+
+| Peça | Onde |
+|---|---|
+| Workflow que guarda a imagem | n8n, `PAAPS - Asset: assinatura de e-mail` (ativo) |
+| URL fixa da assinatura | `https://n8n.srv1850231.hstgr.cloud/webhook/assinatura-paaps` |
+| Molde do e-mail | `automacoes/prospeccao-email/template-email.html` |
+
+**Para trocar a assinatura dos e-mails automáticos:** regenerar a imagem (comando mais
+abaixo), depois rodar no Terminal:
+
+```bash
+cd "/Users/mac/Documents/SITE PAAPS"
+node automacoes/prospeccao-email/n8n/criar-asset-assinatura.mjs
+```
+
+Isso substitui a imagem no n8n. Não precisa mexer em workflow nenhum: as levas seguintes
+já saem com a assinatura nova.
+
+**Duas decisões de construção, para quem for mexer depois:**
+
+1. A imagem vai **embutida** no e-mail, não como link para um servidor. Webmail de
+   prefeitura costuma bloquear imagem que vem de fora, e a assinatura chegaria como um
+   quadrado vazio.
+2. Abaixo da imagem vai o **mesmo contato em texto**, clicável. Se ainda assim algum
+   cliente de e-mail bloquear a imagem, o e-mail continua tendo endereço, telefone e site
+   legíveis. Nunca tirar essa linha achando que é repetição: ela é o plano B.
 
 ---
 
