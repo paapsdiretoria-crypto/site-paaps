@@ -123,10 +123,43 @@ lead voltaria à fila na semana seguinte.
    > Depende da credencial `Notion PAAPS (CRM)` existir no n8n. Ver
    > `n8n/criar-credencial-notion.mjs`. Sem ela o e-mail sai e o CRM não é atualizado, que é o
    > pior dos mundos: o `montar-leva.mjs` avisa em letras garrafais quando ela está faltando.
-9. **Retorno:** o n8n recebe os webhooks (entregue, aberto, respondido) e atualiza o CRM.
-   Quando um lead **responde**, o n8n **avisa a Mallu no WhatsApp** e o lead sai do pool frio:
-   `Status = Aquecimento`. Vira conversa humana; passa a `2. Negociação` só após a reunião de
-   venda, com algo concreto sendo negociado para o projeto.
+9. **Retorno:** o n8n vigia a caixa `relacionamento@paaps.com.br` por IMAP e reage ao que
+   chega. Quando um lead **responde**, o lead sai do pool frio (`Status = Aquecimento`,
+   marco `Respondeu?` marcado), a resposta vira Atividade no CRM e a Mallu é avisada. Vira
+   conversa humana; passa a `2. Negociação` só após a reunião de venda, com algo concreto
+   sendo negociado para o projeto.
+
+   > **Corrigido em 28/07/2026.** Este passo dizia que o n8n receberia um "webhook de
+   > respondido". **Esse webhook não existe, em serviço nenhum.** Resend, Titan, Brevo e
+   > afins avisam entrega, abertura e erro; nenhum deles sabe que alguém respondeu, porque
+   > a resposta não passa por eles: ela chega na caixa de entrada. Detectar resposta é
+   > sempre ler a caixa. Quem faz isso é o workflow `Prospecção - Retorno (quem respondeu)`
+   > (id `0SWJgkHYp5MCCIYq`), com gatilho `Email Trigger (IMAP)` em `imap.titan.email`.
+   >
+   > O workflow separa três coisas que caem na mesma caixa e trata cada uma:
+   >
+   > | O que chegou | O que acontece |
+   > |---|---|
+   > | Resposta de gente | atualiza o CRM, registra a Atividade e avisa |
+   > | Erro de entrega | avisa que a carta **não chegou**, e não toca no CRM: o endereço precisa ser corrigido antes do próximo toque |
+   > | Resposta automática (férias, protocolo) | ignora em silêncio |
+   >
+   > Se quem respondeu não estiver em `(EMP) Contato`, o CRM não é alterado, mas o aviso
+   > sai assim mesmo, marcado como não identificado. Aviso sem registro é melhor do que
+   > silêncio.
+   >
+   > Depende da credencial `Titan IMAP (relacionamento@)`. Ver `n8n/criar-credencial-imap.mjs`.
+
+   **Por onde o aviso chega.** Dois caminhos independentes, de propósito:
+
+   - **Celular:** o n8n manda um e-mail cujo assunto começa sempre com `RESPOSTA:` para
+     `paapsdiretoria@gmail.com`. Um filtro do Gmail etiqueta esses e-mails e o app do
+     celular notifica só essa etiqueta. Funciona com o Mac fechado.
+   - **Mac:** o serviço local `com.mallu.aviso-resposta` consulta o CRM a cada 5 minutos e
+     mostra notificação na tela. Ver `codigo/prospeccao-aviso/README.md`.
+
+   Um não depende do outro. O n8n roda na nuvem e não alcança o Mac; por isso o aviso da
+   tela funciona puxando do Notion, e não recebendo do n8n.
 
 ## O gate de aprovação (passo 6)
 

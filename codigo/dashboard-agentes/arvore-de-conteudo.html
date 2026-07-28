@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Árvore de Conteúdo — duas estações, um tronco · PAAPS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
+    }
+  }
+  </script>
+  <style>
+    :root {
+      --fundo: #0b0805;
+      /* identidade PAAPS */
+      --cream: #f5f1e1;
+      --creamRosa: #bbada2;
+      --marrom: #442309;
+      --terracota: #cb4710;
+      --oliva: #aea349;
+      --amarelo: #f7c31c;
+      /* identidade MALLU VASCONCELLOS (paleta dela, 22/07/2026) */
+      --m-bege: #f5f1e0;
+      --m-rosa: #c42443;
+      --m-vinho: #6f0d33;
+      --m-lilas: #bcb6f2;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { height: 100%; overflow: hidden; background: var(--fundo); }
+    body { font-family: "League Spartan", Arial, sans-serif; color: var(--cream); }
+    #cena { position: fixed; inset: 0; width: 100vw; height: 100vh; display: block; cursor: grab; }
+    #cena:active { cursor: grabbing; }
+
+    .vinheta {
+      position: fixed; inset: 0; pointer-events: none;
+      box-shadow: inset 0 0 240px 60px rgba(0,0,0,0.75);
+    }
+
+    .topo { position: fixed; top: 26px; left: 30px; pointer-events: none; }
+    .topo h1 { font-weight: 800; font-size: 21px; letter-spacing: 1px; text-transform: uppercase; }
+    .topo .sub {
+      display: block; margin-top: 4px; font-weight: 600; font-size: 12px;
+      letter-spacing: 3px; text-transform: uppercase;
+      /* o subtítulo carrega as duas identidades de uma vez */
+      background: linear-gradient(90deg, var(--amarelo) 0%, var(--amarelo) 42%, var(--m-rosa) 58%, var(--m-rosa) 100%);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .seletor-fluxo {
+      display: inline-flex; gap: 4px; margin-top: 12px; pointer-events: auto;
+      background: rgba(245,241,225,0.06); border: 1px solid rgba(245,241,225,0.16);
+      border-radius: 4px; padding: 3px; backdrop-filter: blur(6px);
+    }
+    .seletor-fluxo .aba {
+      font-family: "League Spartan", Arial, sans-serif; font-size: 11px; font-weight: 600;
+      letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none;
+      color: var(--creamRosa); padding: 6px 13px; border-radius: 3px;
+      transition: background .18s, color .18s;
+    }
+    .seletor-fluxo .aba:hover { color: var(--cream); }
+    .seletor-fluxo .aba.ativa { background: var(--cream); color: #0b0805; }
+
+    /* --------------------------------------------------- tripulação (esquerda) */
+    .tripulacao {
+      position: fixed; top: 150px; left: 30px; width: 262px;
+      max-height: calc(100vh - 200px); overflow-y: auto;
+      display: flex; flex-direction: column; gap: 14px;
+    }
+    .bloco {
+      background: rgba(13,10,6,0.72); border: 1px solid rgba(245,241,225,0.14);
+      border-radius: 8px; padding: 13px 15px; backdrop-filter: blur(6px);
+    }
+    .bloco.paaps { border-left: 3px solid var(--amarelo); }
+    .bloco.mallu { border-left: 3px solid var(--m-rosa); }
+    .bloco.tronco { border-left: 3px solid var(--cream); }
+    .bloco > .rotulo {
+      font-weight: 600; font-size: 10px; letter-spacing: 2.6px; text-transform: uppercase;
+      color: var(--creamRosa); display: block; margin-bottom: 10px;
+    }
+    .bloco.paaps > .rotulo { color: var(--amarelo); }
+    .bloco.mallu > .rotulo { color: var(--m-rosa); }
+    .bloco ul { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+    .bloco li {
+      display: flex; align-items: baseline; gap: 8px;
+      font-size: 12px; line-height: 1.3;
+    }
+    .bloco li .ponto {
+      flex: none; width: 7px; height: 7px; border-radius: 50%; align-self: center;
+      background: var(--creamRosa);
+    }
+    .bloco li .nome { font-weight: 700; letter-spacing: 0.04em; }
+    .bloco li .papel {
+      display: block; font-size: 10px; font-weight: 400; letter-spacing: 0.03em;
+      color: var(--creamRosa); margin-top: 2px; line-height: 1.35;
+    }
+    .bloco li.vago .nome { color: var(--m-rosa); }
+    .bloco li.vago .ponto { background: none; border: 1px dashed var(--m-rosa); width: 9px; height: 9px; }
+    .selo {
+      font-size: 8px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 1px 4px; border-radius: 2px; border: 1px solid currentColor; margin-left: auto;
+      flex: none; align-self: center;
+    }
+    .selo.ativo { color: var(--oliva); }
+    .selo.criar { color: var(--m-rosa); }
+    .selo.fora  { color: var(--terracota); }
+
+    /* ------------------------------------------------------- legenda (direita) */
+    .legenda {
+      position: fixed; top: 26px; right: 30px; width: 258px;
+      background: rgba(13,10,6,0.72); border: 1px solid rgba(245,241,225,0.16);
+      border-radius: 8px; padding: 16px 18px; backdrop-filter: blur(6px);
+    }
+    .legenda .rotulo {
+      font-weight: 600; font-size: 10px; letter-spacing: 3px; color: var(--creamRosa);
+      text-transform: uppercase; display: block; margin-bottom: 12px;
+    }
+    .legenda ul { list-style: none; }
+    .legenda li {
+      display: flex; align-items: flex-start; gap: 10px;
+      font-size: 12.5px; line-height: 1.35; margin-bottom: 11px; color: var(--cream);
+    }
+    .legenda li span.ponto { flex: none; width: 11px; height: 11px; border-radius: 50%; margin-top: 3px; }
+    .legenda li b { font-weight: 700; }
+    .legenda .fonte {
+      margin-top: 4px; padding-top: 12px; border-top: 1px solid rgba(245,241,225,0.14);
+      font-size: 10.5px; line-height: 1.45; color: var(--creamRosa);
+    }
+    .legenda .fonte b { color: var(--cream); font-weight: 700; }
+
+    /* -------------------------------------------------------------- narração */
+    .narracao {
+      position: fixed; bottom: 26px; left: 30px; width: 430px;
+      background: rgba(13,10,6,0.72); border: 1px solid rgba(245,241,225,0.16);
+      border-left: 3px solid var(--cream); border-radius: 8px;
+      padding: 14px 18px; backdrop-filter: blur(6px);
+    }
+    .narracao .rotulo {
+      font-weight: 600; font-size: 10px; letter-spacing: 3px; color: var(--creamRosa);
+      text-transform: uppercase; display: block; margin-bottom: 8px;
+    }
+    .narracao .fala { font-weight: 500; font-size: 14.5px; line-height: 1.4; min-height: 40px; }
+    .narracao .fala b { color: var(--amarelo); font-weight: 700; }
+    .narracao .fala i { color: var(--m-rosa); font-weight: 700; font-style: normal; }
+
+    .ajuda {
+      position: fixed; bottom: 22px; right: 30px;
+      font-size: 11px; letter-spacing: 1px; color: var(--creamRosa); opacity: 0.7;
+    }
+
+    /* Etiqueta que segue o cursor quando ele passa sobre um astronauta. */
+    .dica {
+      position: fixed; pointer-events: none; z-index: 8;
+      padding: 7px 11px; max-width: 260px;
+      background: rgba(11,8,5,0.94); border: 1px solid var(--cream); border-radius: 4px;
+      transform: translate(-50%, -130%); opacity: 0; transition: opacity .14s ease;
+    }
+    .dica.visivel { opacity: 1; }
+    .dica .t { font-size: 11px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
+    .dica .d { font-size: 10.5px; line-height: 1.4; color: var(--creamRosa); margin-top: 4px; }
+
+    @media (max-width: 1180px) {
+      .tripulacao, .legenda { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <canvas id="cena"></canvas>
+  <div class="vinheta"></div>
+
+  <header class="topo">
+    <h1>Árvore de Conteúdo</h1>
+    <span class="sub">Fluxo 03 · duas estações, um tronco em comum</span>
+    <nav class="seletor-fluxo">
+      <a href="index.html" class="aba">01 · Conteúdo</a>
+      <a href="estacao-prospeccao.html" class="aba">02 · Prospecção</a>
+      <a href="arvore-de-conteudo.html" class="aba ativa">03 · A Árvore</a>
+    </nav>
+  </header>
+
+  <aside class="tripulacao" id="tripulacao"></aside>
+
+  <aside class="legenda">
+    <span class="rotulo">O que você está vendo</span>
+    <ul>
+      <li><span class="ponto" style="background:var(--cream)"></span>
+        <span>O <b>tronco em comum</b>, embaixo: o núcleo, o Radar e a Tecelã. Servem às duas estações.</span></li>
+      <li><span class="ponto" style="background:var(--amarelo)"></span>
+        <span>A <b>Estação PAAPS</b>, à esquerda, construída e rodando. Uniforme amarelo.</span></li>
+      <li><span class="ponto" style="background:var(--m-rosa)"></span>
+        <span>A <b>Estação Mallu Vasconcellos</b>, à direita, em obra. Vinho, rosa e areia.</span></li>
+      <li><span class="ponto" style="background:var(--m-vinho); border:1px dashed var(--m-rosa)"></span>
+        <span>O <b>traje vazio</b> na doca da estação nova: o agente de voz dela, que ainda não existe.</span></li>
+      <li><span class="ponto" style="background:var(--creamRosa)"></span>
+        <span>No alto, a <b>Mallu</b>. As duas estações entregam nela, e nada passa sem ela aprovar.</span></li>
+    </ul>
+    <p class="fonte" id="fonte-crew">tripulação lida do <b>Banco de Agentes</b> no Notion</p>
+  </aside>
+
+  <aside class="narracao">
+    <span class="rotulo">Registro de bordo</span>
+    <p class="fala" id="fala">Maquete parada, para você olhar. Passe o mouse sobre um astronauta para ver quem é.</p>
+  </aside>
+
+  <div class="ajuda">arraste para girar · scroll para aproximar</div>
+  <div class="dica" id="dica"><div class="t" id="dica-t"></div><div class="d" id="dica-d"></div></div>
+
+  <script type="module">
+    import * as THREE from 'three';
+    import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+    // Duas paletas no mesmo céu. O que separa as identidades é o vinho e o rosa
+    // (ver memória project_paleta_amalluvasconcellos): tudo que for da estação
+    // dela nasce nessas duas cores, com o bege como luz.
+    const COR = {
+      fundo: 0x0b0805,
+      cream: 0xf5f1e1, creamRosa: 0xbbada2, marrom: 0x442309,
+      terracota: 0xcb4710, oliva: 0xaea349, amarelo: 0xf7c31c,
+      mBege: 0xf5f1e0, mRosa: 0xc42443, mVinho: 0x6f0d33, mLilas: 0xbcb6f2
+    };
+
+    const canvas = document.getElementById('cena');
+    const elFala = document.getElementById('fala');
+    const elDica = document.getElementById('dica');
+    const elDicaT = document.getElementById('dica-t');
+    const elDicaD = document.getElementById('dica-d');
+
+    // ------------------------------------------------------------------ palco
+    const scene = new THREE.Scene();
+    scene.background = new THREE.Color(COR.fundo);
+    scene.fog = new THREE.FogExp2(COR.fundo, 0.008);
+
+    const camera = new THREE.PerspectiveCamera(46, 1, 0.1, 600);
+    camera.position.set(0, 3, 52);
+
+    const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 1.12;
+
+    const controls = new OrbitControls(camera, canvas);
+    controls.enableDamping = true;
+    controls.dampingFactor = 0.06;
+    controls.minDistance = 8;
+    controls.maxDistance = 130;
+    controls.target.set(0, 1.5, 0);
+
+    // Cada estação ganha a própria luz de recorte: a da esquerda puxa amarelo,
+    // a da direita puxa rosa. É o que faz as duas identidades se lerem de longe.
+    scene.add(new THREE.AmbientLight(0xf5f1e1, 0.22));
+    const sol = new THREE.DirectionalLight(0xfff4dd, 1.5);
+    sol.position.set(-6, 18, 22);
+    scene.add(sol);
+    const luzPaaps = new THREE.PointLight(COR.amarelo, 260, 60);
+    luzPaaps.position.set(-16, 7, 7);
+    scene.add(luzPaaps);
+    const luzMallu = new THREE.PointLight(COR.mRosa, 260, 60);
+    luzMallu.position.set(16, 7, 7);
+    scene.add(luzMallu);
+    const luzTronco = new THREE.PointLight(COR.cream, 90, 40);
+    luzTronco.position.set(0, -8, 6);
+    scene.add(luzTronco);
+
+    // --------------------------------------------------------------- estrelas
+    [
+      { qtd: 1500, raio: 150, tam: 0.30, cor: 0xf5f1e1, op: 0.9 },
+      { qtd: 900,  raio: 230, tam: 0.55, cor: 0xbbada2, op: 0.45 },
+      { qtd: 420,  raio: 320, tam: 1.0,  cor: 0xaea349, op: 0.28 }
+    ].forEach(({ qtd, raio, tam, cor, op }) => {
+      const pos = new Float32Array(qtd * 3);
+      for (let i = 0; i < qtd; i++) {
+        new THREE.Vector3(Math.random() - 0.5, Math.random() - 0.5, Math.random() - 0.5)
+          .normalize().multiplyScalar(raio * (0.7 + Math.random() * 0.3))
+          .toArray(pos, i * 3);
+      }
+      const geo = new THREE.BufferGeometry();
+      geo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+      scene.add(new THREE.Points(geo, new THREE.PointsMaterial({
+        color: cor, size: tam, sizeAttenuation: true,
+        transparent: true, opacity: op, depthWrite: false, fog: false
+      })));
+    });
+
+    // ------------------------------------------------- etiqueta (texto sprite)
+    function etiqueta(texto, corHex, largura = 4.2) {
+      const c = document.createElement('canvas');
+      c.width = 512; c.height = 128;
+      const ctx = c.getContext('2d');
+      ctx.fillStyle = '#' + new THREE.Color(corHex).getHexString();
+      ctx.font = '700 50px "League Spartan", Arial, sans-serif';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.letterSpacing = '2px';
+      ctx.fillText(texto, 256, 64);
+      const tex = new THREE.CanvasTexture(c);
+      tex.colorSpace = THREE.SRGBColorSpace;
+      const sp = new THREE.Sprite(new THREE.SpriteMaterial({
+        map: tex, transparent: true, depthWrite: false, fog: false
+      }));
+      sp.scale.set(largura, largura / 4, 1);
+      return sp;
+    }
+
+    // ------------------------------------------------------------- astronauta
+    // Um corpo só, parametrizado por cor: é o uniforme que diz de qual estação
+    // o agente é. Traje vago = doca reservada para agente que ainda não existe.
+    function astronauta({ nome, traje, acento, visor, vago = false }) {
+      const g = new THREE.Group();
+      const opac = vago ? 0.28 : 1;
+      const matTraje = new THREE.MeshStandardMaterial({
+        color: traje, roughness: 0.55, metalness: 0.08,
+        transparent: vago, opacity: opac, wireframe: vago
+      });
+      const matAcento = new THREE.MeshStandardMaterial({
+        color: acento, roughness: 0.5, transparent: vago, opacity: opac, wireframe: vago
+      });
+
+      const torso = new THREE.Mesh(new THREE.CapsuleGeometry(0.3, 0.36, 6, 16), matTraje);
+      g.add(torso);
+
+      const cranio = new THREE.Mesh(new THREE.SphereGeometry(0.27, 20, 20), matTraje);
+      cranio.position.y = 0.56;
+      g.add(cranio);
+
+      // Bolha de vidro do capacete. O "visor" fica FORA dela (z > raio), senão a
+      // refração duplica a luz num fantasma: armadilha já paga no Fluxo 01.
+      const bolha = new THREE.Mesh(
+        new THREE.SphereGeometry(0.31, 20, 20),
+        new THREE.MeshPhysicalMaterial({
+          color: 0xffffff, transparent: true, opacity: 0.16,
+          roughness: 0.05, metalness: 0, transmission: 0.85, thickness: 0.3
+        })
+      );
+      bolha.position.y = 0.56;
+      g.add(bolha);
+
+      const tela = new THREE.Mesh(
+        new THREE.CircleGeometry(0.17, 22),
+        new THREE.MeshBasicMaterial({ color: visor, transparent: true, opacity: vago ? 0.2 : 0.95, fog: false })
+      );
+      tela.position.set(0, 0.57, 0.33);
+      g.add(tela);
+
+      if (!vago) {
+        const luz = new THREE.PointLight(visor, 2.2, 3.2);
+        luz.position.set(0, 0.57, 0.5);
+        g.add(luz);
+      }
+
+      const cinto = new THREE.Mesh(new THREE.TorusGeometry(0.3, 0.045, 8, 18), matAcento);
+      cinto.rotation.x = Math.PI / 2;
+      cinto.position.y = -0.12;
+      g.add(cinto);
+
+      [-1, 1].forEach((lado) => {
+        const braco = new THREE.Mesh(new THREE.CapsuleGeometry(0.085, 0.34, 6, 10), matTraje);
+        braco.position.set(lado * 0.36, 0.02, 0);
+        braco.rotation.z = lado * 0.5;
+        g.add(braco);
+      });
+
+      const rot = etiqueta(nome, vago ? acento : visor, 3.4);
+      rot.position.set(0, 1.15, 0);
+      g.add(rot);
+
+      g.userData.flutua = Math.random() * Math.PI * 2;
+      return g;
+    }
+
+    // ----------------------------------------------------------- doca / estação
+    // A estação é uma roda vista de frente: anel + eixo + a tripulação em volta.
+    // Em obra, o anel vira aro tracejado (segmentos faltando), que é como se diz
+    // "isto ainda não está pronto" sem escrever aviso nenhum na tela.
+    function estacao({ titulo, subtitulo, pos, cores, crew, emObra = false }) {
+      const g = new THREE.Group();
+      g.position.copy(pos);
+      scene.add(g);
+
+      const R = 4.6;
+
+      if (emObra) {
+        // Aro incompleto: 5 arcos com falhas entre eles.
+        for (let i = 0; i < 5; i++) {
+          const arco = new THREE.Mesh(
+            new THREE.TorusGeometry(R, 0.11, 8, 40, Math.PI * 2 / 7),
+            new THREE.MeshStandardMaterial({ color: cores.aro, roughness: 0.5, metalness: 0.2 })
+          );
+          arco.rotation.z = (i / 5) * Math.PI * 2;
+          g.add(arco);
+        }
+      } else {
+        const aro = new THREE.Mesh(
+          new THREE.TorusGeometry(R, 0.13, 10, 90),
+          new THREE.MeshStandardMaterial({ color: cores.aro, roughness: 0.45, metalness: 0.25 })
+        );
+        g.add(aro);
+      }
+
+      // Eixo central: o cubo da estação, onde o tubo do tronco atraca.
+      const eixo = new THREE.Mesh(
+        new THREE.IcosahedronGeometry(1.15, 1),
+        new THREE.MeshStandardMaterial({
+          color: cores.eixo, roughness: 0.4, metalness: 0.3,
+          emissive: cores.brilho, emissiveIntensity: 0.35
+        })
+      );
+      g.add(eixo);
+      g.userData.eixo = eixo;
+
+      const halo = new THREE.PointLight(cores.brilho, 40, 22);
+      halo.position.copy(pos);
+      scene.add(halo);
+
+      // Raios do eixo até o aro.
+      crew.forEach((_, i) => {
+        const a = (i / crew.length) * Math.PI * 2 + Math.PI / 2;
+        const raio = new THREE.Mesh(
+          new THREE.CylinderGeometry(0.035, 0.035, R - 1.1, 6),
+          new THREE.MeshStandardMaterial({ color: cores.aro, roughness: 0.6, transparent: true, opacity: 0.5 })
+        );
+        raio.position.set(Math.cos(a) * (R + 1.1) / 2, Math.sin(a) * (R + 1.1) / 2, 0);
+        raio.rotation.z = a - Math.PI / 2;
+        g.add(raio);
+      });
+
+      const nome = etiqueta(titulo, cores.brilho, 7.2);
+      nome.position.set(0, R + 2.1, 0);
+      g.add(nome);
+      const sub = etiqueta(subtitulo, cores.sub, 6.0);
+      sub.scale.multiplyScalar(0.62);
+      sub.position.set(0, R + 1.25, 0);
+      g.add(sub);
+
+      // A tripulação em volta do aro.
+      crew.forEach((membro, i) => {
+        const a = (i / crew.length) * Math.PI * 2 + Math.PI / 2;
+        const ast = astronauta({
+          nome: membro.nome,
+          traje: membro.vago ? cores.eixo : cores.traje,
+          acento: cores.acento,
+          visor: cores.brilho,
+          vago: membro.vago
+        });
+        ast.position.set(Math.cos(a) * R, Math.sin(a) * R, 0.4);
+        ast.userData.ficha = membro;
+        ast.userData.base = ast.position.clone();
+        g.add(ast);
+        astronautas.push(ast);
+
+        // Cabo curto ligando o astronauta ao aro: ninguém flutua solto.
+        const cabo = new THREE.Mesh(
+          new THREE.CylinderGeometry(0.02, 0.02, 0.5, 5),
+          new THREE.MeshBasicMaterial({ color: cores.aro, transparent: true, opacity: 0.4 })
+        );
+        cabo.position.set(Math.cos(a) * R, Math.sin(a) * R, 0.1);
+        cabo.rotation.x = Math.PI / 2;
+        g.add(cabo);
+      });
+
+      return g;
+    }
+
+    const astronautas = [];
+
+    // ------------------------------------------------------------ tubo de luz
+    // O tubo é a via; o pulso é o que corre nela. Amarelo para a frente, no
+    // handoff, é a mesma convenção do Fluxo 01: não inventar código de cor novo.
+    const pulsos = [];
+    function tubo(pontos, cor, { pulso = true, tracejado = false } = {}) {
+      const curva = new THREE.CatmullRomCurve3(pontos);
+      const malha = new THREE.Mesh(
+        new THREE.TubeGeometry(curva, 90, 0.12, 8, false),
+        new THREE.MeshStandardMaterial({
+          color: cor, roughness: 0.6, metalness: 0.1,
+          transparent: true, opacity: tracejado ? 0.28 : 0.55,
+          wireframe: tracejado
+        })
+      );
+      scene.add(malha);
+
+      if (pulso) {
+        const bola = new THREE.Mesh(
+          new THREE.SphereGeometry(0.2, 12, 12),
+          new THREE.MeshBasicMaterial({ color: cor, fog: false })
+        );
+        const luz = new THREE.PointLight(cor, 18, 9);
+        bola.add(luz);
+        scene.add(bola);
+        pulsos.push({ bola, curva, t: Math.random(), vel: 0.13 });
+      }
+      return curva;
+    }
+
+    // ---------------------------------------------------------- tronco comum
+    // Embaixo, a raiz. É de onde as duas estações puxam o mesmo material:
+    // a voz, a base teórica e o método do afeto situado.
+    const RAIZ = new THREE.Vector3(0, -11, 0);
+    const FORQUILHA = new THREE.Vector3(0, -0.8, 0);
+
+    const nucleo = new THREE.Mesh(
+      new THREE.IcosahedronGeometry(1.5, 2),
+      new THREE.MeshStandardMaterial({
+        color: COR.cream, roughness: 0.35, metalness: 0.1,
+        emissive: COR.cream, emissiveIntensity: 0.45
+      })
+    );
+    nucleo.position.copy(RAIZ);
+    scene.add(nucleo);
+    const rotNucleo = etiqueta('núcleo comum', COR.cream, 5.4);
+    rotNucleo.position.set(0, RAIZ.y - 2.2, 0);
+    scene.add(rotNucleo);
+    const subNucleo = etiqueta('voz · base teórica · afeto situado', COR.creamRosa, 6.6);
+    subNucleo.scale.multiplyScalar(0.58);
+    subNucleo.position.set(0, RAIZ.y - 3.0, 0);
+    scene.add(subNucleo);
+
+    // A espinha do tronco, da raiz até a forquilha.
+    const espinha = new THREE.Mesh(
+      new THREE.CylinderGeometry(0.34, 0.5, RAIZ.distanceTo(FORQUILHA), 12),
+      new THREE.MeshStandardMaterial({ color: COR.marrom, roughness: 0.7, metalness: 0.15 })
+    );
+    espinha.position.set(0, (RAIZ.y + FORQUILHA.y) / 2, 0);
+    scene.add(espinha);
+
+    // Os dois agentes que servem às DUAS estações ficam pendurados no tronco,
+    // não dentro de nenhuma delas. É a leitura que a skill pede: a Tecelã entra
+    // em toda rodada dos dois troncos, e o Radar tem modo para cada um.
+    const compartilhados = [
+      { id: 'radar', nome: 'radar', papel: 'pauta da atualidade, 2 modos: propositivo e dirigido', pos: new THREE.Vector3(-3.6, -7.6, 0.8) },
+      { id: 'tecela', nome: 'tecelã', papel: 'tece o argumento; entra em toda rodada dos dois troncos', pos: new THREE.Vector3(3.6, -4.6, -0.8) }
+    ];
+    compartilhados.forEach((c) => {
+      const ast = astronauta({ nome: c.nome, traje: COR.cream, acento: COR.oliva, visor: COR.oliva });
+      ast.position.copy(c.pos);
+      ast.userData.ficha = c;
+      ast.userData.base = c.pos.clone();
+      scene.add(ast);
+      astronautas.push(ast);
+      // Cabo até a espinha: mostra que eles estão no tronco, e não numa estação.
+      const alvo = new THREE.Vector3(0, c.pos.y, 0);
+      tubo([c.pos.clone(), alvo], COR.creamRosa, { pulso: false });
+    });
+
+    const rotTronco = etiqueta('tronco em comum', COR.creamRosa, 5.0);
+    rotTronco.scale.multiplyScalar(0.7);
+    rotTronco.position.set(0, -1.9, 1.2);
+    scene.add(rotTronco);
+
+    // ------------------------------------------------------------- as estações
+    const P = new THREE.Vector3(-15.5, 5.5, -1);
+    const M = new THREE.Vector3(15.5, 5.5, -1);
+
+    // Tripulação declarada aqui é LAYOUT (quem mora em qual estação). O status
+    // real de cada agente vem do Banco de Agentes, logo abaixo: nada de inventar.
+    const crewPaaps = [
+      { id: 'paaps-brasil', nome: 'paaps-brasil', papel: 'a voz e a analista do perfil @paaps.brasil' },
+      { id: 'copywriter-paaps', nome: 'copywriter', papel: 'escreve o carrossel do @paaps.brasil' },
+      { id: 'buscador-fotos', nome: 'buscador-fotos', papel: 'curadoria no PhotoBank; quem escolhe é a Mallu' },
+      { id: 'aplicador-visual', nome: 'aplicador', papel: 'monta no Canva, exporta e entrega no Drive' },
+      { id: 'critico-design', nome: 'crítico-design', papel: 'apoio: identidade visual e guidelines' }
+    ];
+
+    const crewMallu = [
+      { id: null, nome: '[ doca vaga ]', papel: 'a voz e a analista do @malluvasconcellos. Este agente ainda não existe: é o próximo a construir.', vago: true },
+      { id: 'mallu-carrossel', nome: 'mallu-carrossel', papel: 'carrossel do perfil pessoal, processo iterativo' },
+      { id: 'mallu-reels', nome: 'mallu-reels', papel: 'roteiro de Reel talking head' },
+      { id: 'mallu-linkedin', nome: 'mallu-linkedin', papel: 'post de LinkedIn pessoal' }
+    ];
+
+    estacao({
+      titulo: 'estação paaps',
+      subtitulo: 'construída · rodando',
+      pos: P,
+      cores: { aro: COR.oliva, eixo: COR.marrom, traje: COR.amarelo, acento: COR.terracota, brilho: COR.amarelo, sub: COR.oliva },
+      crew: crewPaaps
+    });
+
+    estacao({
+      titulo: 'estação mallu vasconcellos',
+      subtitulo: 'em obra · tripulação incompleta',
+      pos: M,
+      cores: { aro: COR.mVinho, eixo: COR.mVinho, traje: COR.mRosa, acento: COR.mVinho, brilho: COR.mRosa, sub: COR.mBege },
+      crew: crewMallu,
+      emObra: true
+    });
+
+    // --------------------------------------------------------------- os tubos
+    // Do tronco para cada estação. O da direita é tracejado: a via existe como
+    // decisão, mas ainda não roda material de verdade.
+    tubo([FORQUILHA.clone(), new THREE.Vector3(-8, 2.4, 0), P.clone()], COR.amarelo);
+    tubo([FORQUILHA.clone(), new THREE.Vector3(8, 2.4, 0), M.clone()], COR.mRosa, { tracejado: true });
+
+    // ------------------------------------------------------------ a Mallu, no alto
+    // No conteúdo ela é o DESTINO (diferente da prospecção, onde é portão no meio).
+    const TOPO = new THREE.Vector3(0, 15.5, 0);
+    const portal = new THREE.Group();
+    portal.position.copy(TOPO);
+    scene.add(portal);
+
+    const anel = new THREE.Mesh(
+      new THREE.TorusGeometry(2.2, 0.16, 12, 70),
+      new THREE.MeshStandardMaterial({
+        color: COR.cream, roughness: 0.3, metalness: 0.4,
+        emissive: COR.cream, emissiveIntensity: 0.25
+      })
+    );
+    portal.add(anel);
+    const membrana = new THREE.Mesh(
+      new THREE.CircleGeometry(2.1, 48),
+      new THREE.MeshBasicMaterial({ color: COR.cream, transparent: true, opacity: 0.09, fog: false })
+    );
+    portal.add(membrana);
+    portal.add(new THREE.PointLight(COR.cream, 60, 30));
+
+    const rotMallu = etiqueta('mallu', COR.cream, 4.6);
+    rotMallu.position.set(0, 3.3, 0);
+    portal.add(rotMallu);
+    const subMallu = etiqueta('nada publica sem ela aprovar', COR.creamRosa, 6.4);
+    subMallu.scale.multiplyScalar(0.6);
+    portal.add(subMallu);
+    subMallu.position.set(0, 2.65, 0);
+
+    // Cada estação entrega nela.
+    tubo([new THREE.Vector3(P.x, P.y + 5.2, P.z), new THREE.Vector3(-8, 13, 0), TOPO.clone()], COR.amarelo);
+    tubo([new THREE.Vector3(M.x, M.y + 5.2, M.z), new THREE.Vector3(8, 13, 0), TOPO.clone()], COR.mRosa, { tracejado: true });
+
+    // ------------------------------------------- Banco de Agentes (fonte da verdade)
+    // Regra de ouro do dashboard: nunca hardcode agente em JS. O layout acima diz
+    // ONDE cada um mora; o status de verdade vem daqui. Agente que não estiver no
+    // Banco aparece marcado como fora dele, nunca maquiado de ativo.
+    const painel = document.getElementById('tripulacao');
+    const elFonte = document.getElementById('fonte-crew');
+
+    async function carregarBanco() {
+      let porId = new Map();
+      let ok = false;
+      try {
+        const resp = await fetch('dados/constelacao.json');
+        if (resp.ok) {
+          const bruto = await resp.json();
+          porId = new Map((bruto.agentes || []).map((a) => [a.id, a]));
+          ok = true;
+          elFonte.innerHTML = `tripulação lida do <b>Banco de Agentes</b> no Notion · ${(bruto.gerado_em || '').slice(0, 10)}`;
+        }
+      } catch (e) {
+        // Aberto sem servidor (file://). Não fingir: dizer na tela.
+      }
+      if (!ok) elFonte.innerHTML = '<b>sem o Banco de Agentes</b>: aberto sem servidor, status não verificado';
+
+      [...crewPaaps, ...crewMallu, ...compartilhados].forEach((m) => {
+        const real = m.id ? porId.get(m.id) : null;
+        m.status = m.vago ? 'a criar' : (real ? real.status : (ok ? 'fora do banco' : 'não verificado'));
+        m.camada = real ? real.camada : null;
+      });
+
+      desenharPainel();
+    }
+
+    function linha(m) {
+      const classe = m.status === 'Ativo' ? 'ativo' : (m.status === 'a criar' ? 'criar' : 'fora');
+      const cor = m.vago ? 'var(--m-rosa)' : '';
+      return `<li class="${m.vago ? 'vago' : ''}">
+        <span class="ponto" ${cor ? `style="background:${cor}"` : ''}></span>
+        <span><span class="nome">${m.nome}</span><span class="papel">${m.papel}</span></span>
+        <span class="selo ${classe}">${m.status}</span>
+      </li>`;
+    }
+
+    function desenharPainel() {
+      painel.innerHTML = `
+        <div class="bloco tronco">
+          <span class="rotulo">Tronco em comum</span>
+          <ul>${compartilhados.map(linha).join('')}</ul>
+        </div>
+        <div class="bloco paaps">
+          <span class="rotulo">Estação PAAPS</span>
+          <ul>${crewPaaps.map(linha).join('')}</ul>
+        </div>
+        <div class="bloco mallu">
+          <span class="rotulo">Estação Mallu Vasconcellos</span>
+          <ul>${crewMallu.map(linha).join('')}</ul>
+        </div>`;
+    }
+
+    carregarBanco();
+
+    // ------------------------------------------------------------ passar o mouse
+    const raycaster = new THREE.Raycaster();
+    const ponteiro = new THREE.Vector2();
+    let sobre = null;
+
+    canvas.addEventListener('pointermove', (ev) => {
+      ponteiro.x = (ev.clientX / window.innerWidth) * 2 - 1;
+      ponteiro.y = -(ev.clientY / window.innerHeight) * 2 + 1;
+      raycaster.setFromCamera(ponteiro, camera);
+      const hits = raycaster.intersectObjects(astronautas, true);
+
+      if (hits.length) {
+        let o = hits[0].object;
+        while (o && !o.userData.ficha) o = o.parent;
+        if (o) {
+          sobre = o;
+          const f = o.userData.ficha;
+          elDicaT.textContent = f.nome;
+          elDicaD.textContent = f.papel;
+          elDica.style.left = ev.clientX + 'px';
+          elDica.style.top = ev.clientY + 'px';
+          elDica.classList.add('visivel');
+          canvas.style.cursor = 'pointer';
+          return;
+        }
+      }
+      sobre = null;
+      elDica.classList.remove('visivel');
+      canvas.style.cursor = '';
+    });
+
+    canvas.addEventListener('click', () => {
+      if (!sobre) return;
+      const f = sobre.userData.ficha;
+      elFala.innerHTML = f.vago
+        ? `<i>${f.nome}</i> ${f.papel}`
+        : `<b>${f.nome}</b>: ${f.papel}`;
+    });
+
+    // ---------------------------------------------------------------- animação
+    // Relógio de parede, não THREE.Clock: o Chrome estrangula o requestAnimationFrame
+    // em aba fora de foco e a cena parece travada. Teto de dt para recuperar suave.
+    let anterior = performance.now();
+
+    function medir() {
+      const l = Math.max(window.innerWidth, 320);
+      const a = Math.max(window.innerHeight, 320);
+      camera.aspect = l / a;
+      camera.updateProjectionMatrix();
+      renderer.setSize(l, a, false);
+    }
+    window.addEventListener('resize', medir);
+    medir();
+
+    function quadro(agora) {
+      const dt = Math.min((agora - anterior) / 1000, 0.1);
+      anterior = agora;
+      const t = agora / 1000;
+
+      astronautas.forEach((a, i) => {
+        a.position.y = a.userData.base.y + Math.sin(t * 0.8 + a.userData.flutua) * 0.13;
+        a.rotation.y = Math.sin(t * 0.35 + i) * 0.28;
+      });
+
+      nucleo.rotation.y += dt * 0.16;
+      nucleo.rotation.x += dt * 0.05;
+      portal.rotation.z += dt * 0.1;
+
+      pulsos.forEach((p) => {
+        p.t = (p.t + dt * p.vel) % 1;
+        p.curva.getPointAt(p.t, p.bola.position);
+      });
+
+      controls.update();
+      renderer.render(scene, camera);
+      requestAnimationFrame(quadro);
+    }
+    requestAnimationFrame(quadro);
+  </script>
+</body>
+</html>
