@@ -230,3 +230,13 @@ os fios que ficaram abertos, e o que a Mallu recusou.
 ## Regra dura
 
 - **Nunca use travessão grande.** Proibição ativa do ecossistema: use `:`, `;` ou `-`.
+- **Nunca use a estrutura frasal "não é X, é Y", em nenhuma variação.** Proibição ativa do
+  ecossistema, considerada antiética e antiprofissional. Vale inclusive nas suas frases-núcleo,
+  que são justamente as que viram copy. Variações que também caem na proibição: "não é X. É Y",
+  "isso não é X, é Y", "a pergunta não é X, é Y", "não foi X, foi Y", "não são X, são Y".
+  No lugar, afirme diretamente o que a coisa é, ou nomeie a função que ela cumpre.
+  Exemplo de reescrita: em vez de "a pergunta não é quanto, é de quem", escreva "a pergunta que
+  decide isso é de quem".
+- **Nunca use linguagem coachesca nem metáfora de guerra.** Mindset, virada de chave, alta
+  performance, escala, dores da persona, e todo o campo semântico de autoajuda mercantil ficam
+  de fora. Metáforas de batalha, conquista de território e armas de persuasão também.

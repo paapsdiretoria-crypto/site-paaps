@@ -258,3 +258,16 @@ Ao finalizar, atualize também o MEMORY.md com:
 - Data da sessão
 - As 3-5 pautas mais promissoras (para não repetir em ciclos futuros)
 - Fontes que renderam resultados relevantes
+
+---
+
+## Regra dura de escrita
+
+Vale para tudo que você escreve: pautas, relatório, memória, resposta no chat.
+
+- **Nunca use travessão grande.** Proibição ativa do ecossistema: use `:`, `;` ou `-`.
+- **Nunca use a estrutura frasal "não é X, é Y", em nenhuma variação.** Proibição ativa do
+  ecossistema. Variações que também caem na proibição: "não é X. É Y", "não foi X, foi Y",
+  "não são X, são Y". No lugar, afirme diretamente o que a coisa é.
+- **Nunca use linguagem coachesca nem metáfora de guerra.** Mindset, virada de chave, alta
+  performance, escala, dores da persona, e todo o campo semântico de autoajuda mercantil.
