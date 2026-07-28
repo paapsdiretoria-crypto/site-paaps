@@ -20,4 +20,19 @@ metadata:
 - Métricas de post e tabela de comentários (`comment_text`, `comment_like_count`, `comment_reply_count`, `comment_parent_id`) vêm no MESMO endpoint, só trocando `fields`. 35 posts desde 01/01/2026 vieram num único call.
 - `media_follows` em Reel vem vazio (limitação, não zero). Post com menos de ~48h ou reach < 100: fora dos rankings.
 
-**How to apply:** abrir cada ciclo checando os itens 1 a 3; fechar cada ciclo atualizando este arquivo.
+7. **Rede via Bash bloqueada quando rodo como subagente (27/07/2026).** Nesta execução, até um
+   `curl` de teste em example.com foi negado pela permissão do ambiente (Bash em modo don't-ask).
+   Não é o bloqueio de plano Free (que devolve texto de upsell): é a ferramenta de rede em si,
+   indisponível para mim, do mesmo jeito que o Playwright já esteve indisponível em 15/07. Sem
+   ela, não há como puxar Windsor nem confirmar performance de posts publicados após meu último
+   corpus coletado ao vivo. Registrar de novo se voltar a acontecer; se não se repetir, foi caso
+   isolado desta chamada.
+8. **Peça de 15/07 (carrossel "quem cuida da RAPS") nunca teve performance coletada.** Publicada
+   3 dias depois do corte do corpus de 15/07 (30/03 a 12/07); nenhuma sessão desde então voltou
+   a puxar o Windsor para medi-la. Prioridade do próximo ciclo com acesso real: reach, follows,
+   saves, comentários novos dela.
+9. **`voz-paaps.md` registra "84,2% mulheres, 87% entre 18-34 anos" em seção que não separa
+   @paaps.brasil de @amalluvasconcellos.** Não confirmado a qual conta pertence esse dado
+   demográfico. Relevante para qualquer peça sobre gênero: confirmar a fonte antes de citar.
+
+**How to apply:** abrir cada ciclo checando os itens 1 a 3 (e agora 7 a 9); fechar cada ciclo atualizando este arquivo.
