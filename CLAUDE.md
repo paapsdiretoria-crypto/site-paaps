@@ -1,4 +1,4 @@
-# CLAUDE.md — Contexto Mestre do Ecossistema PAAPS
+# CLAUDE.md : Contexto Mestre do Ecossistema PAAPS
 
 > Este arquivo é lido automaticamente pelo Claude Code ao abrir o repositório.
 > Ele carrega quem somos, como pensamos e o que nunca fazer. Tudo que for específico
@@ -54,7 +54,7 @@ e de consumo.
 
 ---
 
-## Proibições ativas — NUNCA, em nenhum output
+## Proibições ativas : NUNCA, em nenhum output
 
 - **Travessão grande "—" (em dash): PROIBIDO em qualquer entrega, em qualquer contexto.**
   Usar `:`, `;` ou `-` no lugar. Vale para textos, legendas, commits, logs, relatórios,
@@ -109,7 +109,7 @@ linguagem coachesca. Só avançar após esse raciocínio.
 SITE PAAPS/                          ← pasta raiz (renomear para PAAPS/ no Finder)
 │
 ├── insumos-compartilhados/          ← acervo compartilhado por todos os projetos
-│   ├── fotos/                       ← acervo de campo (1,5 GB — não commitado)
+│   ├── fotos/                       ← acervo de campo (1,5 GB, fora do git)
 │   ├── identidade-visual/           ← logos, texturas, paleta, templates (não commitado)
 │   ├── aplicacao-id-visual/         ← exemplos de aplicação da identidade
 │   ├── nossa-camiseta-paaps/        ← não commitado
@@ -117,7 +117,7 @@ SITE PAAPS/                          ← pasta raiz (renomear para PAAPS/ no Fin
 │   ├── docs/                        ← documentos institucionais convertidos para Markdown
 │   │   ├── manual-marca-posicionamento.md
 │   │   └── paaps-pesquisa-mercado.md
-│   └── nucleo-comum/                ← O CORAÇÃO COMPARTILHADO — lido por todos os agentes
+│   └── nucleo-comum/                ← O CORAÇÃO COMPARTILHADO, lido por todos os agentes
 │       ├── voz-paaps.md             ← gabarito de voz e proibições ativas
 │       ├── afeto-situado-mallu.md   ← como iniciar a peça quando o gancho não vem dela
 │       ├── identidade-aplicada.md   ← paleta, tipografia, sistema Periódico, workflow Canva
@@ -154,13 +154,13 @@ SITE PAAPS/                          ← pasta raiz (renomear para PAAPS/ no Fin
 │       └── paaps.brasil/            ← workspace do perfil institucional
 │
 ├── hyperframes/                     ← projeto de vídeo HyperFrames (render HTML→MP4)
-├── projetos/                        ← projetos avulsos (Minerva, portfólios…) — não commitado
+├── projetos/                        ← projetos avulsos (Minerva, portfólios…), não commitado
 ├── .claude/                         ← agents/, skills/ (formato pasta/SKILL.md), settings
 └── .agents/                         ← skills instaladas via npx skills (não commitado)
 ```
 
 > **Regra de workspace:** abrir o Claude Code SEMPRE na raiz `SITE PAAPS/`. Projetos
-> novos (eventos, pitches, portfólios, provas de conceito) nascem como subpasta daqui —
+> novos (eventos, pitches, portfólios, provas de conceito) nascem como subpasta daqui:
 > nunca em `~/Documents`, na home ou dentro de pastas técnicas como `dashboard/js/`.
 > Fora da raiz não existem CLAUDE.md, skills, memória nem auto-push: o trabalho fica
 > sem contexto e sem backup.
@@ -229,7 +229,7 @@ A pasta ainda se chama `SITE PAAPS/` por limitação do ambiente. Para renomear 
 
 > Formato obrigatório: cada skill é uma **pasta** com `SKILL.md` dentro
 > (`.claude/skills/nome-da-skill/SKILL.md`). Arquivo `.md` solto não é carregado
-> pelo Claude Code — foi a causa de um mês de erros "Unknown skill" (corrigido em 06/07).
+> pelo Claude Code, foi a causa de um mês de erros "Unknown skill" (corrigido em 06/07).
 
 | Skill | Acionar quando |
 |---|---|
@@ -256,7 +256,7 @@ A pasta ainda se chama `SITE PAAPS/` por limitação do ambiente. Para renomear 
 | `email-prospeccao` | Escrever ou refinar e-mail de prospecção fria do PAAPS Brasil (prefeitura, secretaria, associação): voz calibrada, gancho local verificável, estratégia por porte, gate da Mallu. Fonte única da craft de escrever; o agente `carta-fria` aponta para ela |
 | `paaps-orquestrador-conteudo` | **Fonte da verdade do fluxo de conteúdo.** Julga em qual dos dois troncos a tarefa cai (A: a Mallu puxa o gancho; B: o PAAPS por frequência, começando no Radar), conduz o montante daquele tronco, aplica os 7 guardrails, opera o gate de voz peça a peça e aciona os agentes que já existem. Ler antes de qualquer produção de conteúdo |
 
-### Notion — página de operações
+### Notion : página de operações
 
 Página central de operações do Claude no Notion (relatórios, análises, espelho do projeto):
 `https://app.notion.com/p/SITE-INSTITUCIONAL-38044cb52e0080b1a07de17b31d00cd2`
@@ -267,9 +267,9 @@ Novas respostas longas pedidas "para ler no Notion" viram subpáginas dela, no f
 | Hook | Ordem | O que faz |
 |---|---|---|
 | **log-de-sessão** | 1º | Registra timestamp e arquivos alterados em `sessoes/sessao-YYYY-MM-DD.md` (deduplicado, ignora a própria pasta sessoes/) |
-| **auto-push** | 2º | Detecta qualquer mudança (inclusive arquivos novos), commita com mensagem `auto: <áreas alteradas> — <data>` e faz push para `main` |
+| **auto-push** | 2º | Detecta qualquer mudança (inclusive arquivos novos), commita com mensagem `auto: <áreas alteradas> - <data>` e faz push para `main` |
 
 Ao encerrar uma tarefa relevante, registrar em 1–3 linhas no log do dia **o que foi
-decidido/entregue** (não só o status do git) — é o handoff para a próxima sessão.
+decidido/entregue** (não só o status do git): é o handoff para a próxima sessão.
 
 Os hooks rodam automaticamente ao final de cada resposta. Não é necessário nenhuma ação manual.

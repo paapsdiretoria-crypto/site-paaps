@@ -1,4 +1,4 @@
-# CLAUDE.md — Equipe de Conteúdo PAAPS
+# CLAUDE.md : Equipe de Conteúdo PAAPS
 
 Produzir conteúdo que soa como Mallu Vasconcellos e como o PAAPS, nunca como IA.
 
