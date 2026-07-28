@@ -73,6 +73,23 @@ Este painel controla gasto real de API. Ele nunca pode fingir.
   estrangula `requestAnimationFrame` em aba fora de foco, e a cena parece travada (renderiza, mas
   contadores em 0). Por isso a maquete precisa ser aberta EM FOCO para as animações correrem.
 
+## Fluxo 03 · Árvore de Conteúdo (`arvore-de-conteudo.html`, 28/07/2026)
+
+Maquete do mapa da arquitetura de conteúdo: o **tronco em comum** embaixo (núcleo comum, radar,
+tecelã), duas **estações** ligadas a ele por tubo, e a **Mallu** no alto, onde as duas entregam.
+A Estação PAAPS é a construída (uniforme amarelo); a Estação Mallu Vasconcellos nasce aqui, em
+obra, na paleta pessoal dela (vinho `#6f0d33` na estrutura, rosa `#c42443` na tripulação, areia
+`#f5f1e0` na escrita). Página **isolada**, mesma decisão do Fluxo 02: não encosta em
+`cena.js`/`main.js`/`fluxo.js`. No `index.html` e na estação só foi acrescentada a aba do seletor.
+
+- A **doca vaga** da estação nova é o agente de voz do `@malluvasconcellos`, que não existe:
+  traje em wireframe e aro tracejado. Não preencher com agente inventado.
+- Tripulação lida do mesmo `dados/constelacao.json`. Quem está no arquivo mostra o status real;
+  quem não está aparece como `fora do banco` (hoje: `mallu-carrossel`). Aberta sem servidor, a
+  legenda diz `sem o Banco de Agentes`, nunca finge status.
+- Rótulo é sprite de canvas que **encolhe a fonte até caber**: texto cortado mente sobre o que
+  está escrito. Título de estação fica acima do tripulante do topo do aro, senão encavala.
+
 ## Estado e pendências
 
 Ver as memórias [[project_dashboard_constelacao]] (decisões de design aprovadas pela Mallu, fluxo 02
