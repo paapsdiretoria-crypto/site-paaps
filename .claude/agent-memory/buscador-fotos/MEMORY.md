@@ -73,6 +73,57 @@ Cenas pedidas por carrossel que não existem em nenhum dos acervos em disco:
   **Isso é informação de gestão:** o argumento do PAAPS fala muito de cuidado que falta, e o acervo
   só sabe fotografar cuidado que acontece.
 
+- **Rotina administrativa: mesa de escritório, formulário de secretaria municipal, sem rosto**
+  (pedida no carrossel de 27/07, slide 7: NR-01, risco psicossocial). Não existe. Auditei as 33
+  fotos inteiras da pasta rede pública (não só as 9 cadastradas) e uma amostra de 5/35 do acervo
+  Bela Vista: zero fotos de escritório/mesa administrativa. **Confirma o mesmo padrão do item
+  acima:** o acervo fotografa o encontro no território (porta, varanda, visita), nunca a rotina de
+  gestão/medição da rede. Se o perfil for continuar fazendo peças sobre instrumentos de medição
+  (NR-01, Censo da Força de Trabalho, fichas), vale captar essa cena deliberadamente; hoje ela não
+  existe em lugar nenhum que eu tenha acesso.
+
+- **Mãos de ACS preenchendo ficha na soleira da porta, sem rosto** (pedida no mesmo carrossel de
+  27/07, slide 3). Não existe like a like. A foto mais próxima em ação ("The home visit",
+  Visita-Domiciliar-Gurupi-Tocantins) tem mãos+prancheta+caneta, mas é interior (parede de tijolo,
+  não soleira) e tem rosto claramente iluminado em quadro (mãe com recém-nascido). A mais próxima
+  em cenário ("The Home Visit", PSF-Periferia-Sao-Paulo) tem a soleira e a luz certas, mas é
+  dominada por três rostos rindo, não por mãos. Nenhuma resolve as duas exigências ao mesmo tempo.
+
+---
+
+## Correção importante: a pasta `REDE PÚBLICA BRASILEIRA` tem 33 arquivos, não 9
+
+Registrei em 25/07 que só 9 fotos dessa pasta estavam auditadas. Em 27/07 abri as 33 (todas).
+Achado que corrige uma suposição anterior:
+
+**A série `RAD_` NÃO é homogênea.** Uma parte dela (`RAD_2887`, `RAD_2822`, `RAD_2936`, `RAD_0472`,
+e também `RAD_2768`, `RAD_2776`, `RAD_2809`, `RAD_2818`, `RAD_2820`, `RAD_2865`) é de fato uma série
+de retrato de estúdio de campo com fundo de chita florida, provavelmente do Radilson Carlos Gomes.
+Mas **outra parte da mesma pasta, com o mesmo prefixo `RAD_`, é fotografia completamente diferente:
+retratos de rua e still-life sem relação óbvia com rede pública brasileira** (`RAD_1177`: escada em
+caracol de prédio europeu; `RAD_0589`: homem remando um barco, paisagem que lembra Haiti/Caribe;
+`RAD_2306`: menina com trança e vestido floral em parede de barro, provável África Ocidental;
+`RAD_3022`: detalhe arquitetônico de grade de ferro; `RAD_0388`, `RAD_2011`, `RAD_1282-2`,
+`RAD_1363`, `RAD_2046`, `RAD_2304`, `RAD_2348`, `RAD_2713`, `RAD_2721`: retratos individuais em
+contextos não identificados como Brasil). **Não assumir que arquivo com prefixo `RAD_` é
+documentação SUS brasileira: abrir e olhar sempre, mesmo dentro da série.**
+
+Também vi, pela primeira vez, os arquivos de nome genérico da mesma pasta:
+- `Atenção-PSF-Jaraguá-2048x1371.jpg`: cena de visita domiciliar em interior, luz de porta ao
+  fundo, várias pessoas incluindo uma criança com rosto visível (⚠ exposição). Não cadastrada no
+  Notion (sem link).
+- `psf6.jpg`: duas pessoas de costas andando por estrada rural, ACS + profissional de branco.
+  Boa foto, mas sem ação de preenchimento e sem porta/soleira. Não cadastrada.
+- `MECB221.jpg`: consulta com estetoscópio, ambos com rosto em quadro. Não cadastrada.
+- `DSC_0005-cópia-2.jpg`: corredor hospitalar com dois profissionais em traje de proteção
+  (parece cena de pandemia/isolamento), de costas. Não cadastrada.
+- `Presidente-Fiqueiredo-14-scaled.jpg`: retrato de ACS sorrindo, guarda-chuva, crachá de
+  "Secretaria Municipal de Saúde". Rosto em quadro. Não cadastrada.
+
+Todos os 24 arquivos não cadastrados existem no disco mas não têm página no PhotoBank: não têm
+link para oferecer como candidata formal. Cadastrá-los é trabalho para uma rodada de mutirão de
+metadados, não desta etapa de curadoria pontual.
+
 ---
 
 ## Fotos que a Mallu rejeitou
