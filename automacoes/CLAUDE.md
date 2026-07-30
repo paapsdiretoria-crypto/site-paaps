@@ -127,6 +127,8 @@ sempre deixar marca do que o agente fez, porque sem marca ele repete na semana s
 | Resend como serviço de disparo | jul/26 | Plano gratuito cobre 100/dia, folga enorme sobre a meta de 15/semana |
 | Respostas caem em `paapsdiretoria@gmail.com` via Cloudflare Email Routing | jul/26 | O domínio não tem MX. Resend envia, Cloudflare recebe |
 | Meta de 15 e-mails por semana | 15/07/26 | Limite do gate humano, não da capacidade de escrita |
+| ~~Meta de 15/semana~~ revogada: **5 por dia** | 30/07/26 | A meta de 15 nasceu do limite de atenção da Mallu lendo carta a carta. Com o gate por rubrica, esse limite deixou de ser o gargalo. Novo gargalo: o tamanho da fila de Alvos, que o buscador precisa reabastecer |
+| Gate da prospecção passa de integral para amostragem | 30/07/26 | Decisão explícita da Mallu, como o próprio gate prevê. Ela aprova a rubrica `prospeccao-email/personalizacao/rubrica-0-100.md`, não cada carta. Corte 85 sai sozinha; 70 a 84 espera por ela; categoria nova de organização e resposta de gente sempre param na mesa dela |
 | Notion como CRM, sem espelho Supabase | jul/26 | Fonte única. Supabase só quando o app exigir banco de verdade |
 | Cooldown de 60 dias via Atividade, sem campo novo | 14/07/26 | Usa o schema que já existe |
 
@@ -139,9 +141,10 @@ Doc divergente é pior que doc ausente, porque o agente obedece o que lê.
 1. **`metricas.md` está defasado.** Diz "meta: 100/semana", revogado pela decisão de
    15/07 que baixou para 15. Também trata o Resend como "provável", quando já foi
    escolhido.
-2. **`personalizacao/` não existe.** É citada em três arquivos como o lugar do prompt de
-   personalização e da rubrica 0 a 100. É o coração da qualidade da frente 5: sem a
-   rubrica escrita, o passo 5 do runbook roda sem critério.
+2. ~~**`personalizacao/` não existe.**~~ **Resolvido em 30/07/26.** A pasta tem
+   `ficha-municipio.md` (desde 24/07) e `rubrica-0-100.md` (30/07), que fecha a lacuna:
+   os cinco critérios da skill viraram pontos, com quatro reprovações automáticas e o
+   corte de 85. O passo 5 do runbook passou a ter critério.
 3. **`nucleo-comum/voz-paaps.md` é referenciado por caminho relativo** em
    `regras-prospeccao.md`, mas mora em `insumos-compartilhados/` na raiz. O caminho não
    resolve daqui.
