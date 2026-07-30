@@ -59,14 +59,6 @@ e de consumo.
 - **Travessão grande "—" (em dash): PROIBIDO em qualquer entrega, em qualquer contexto.**
   Usar `:`, `;` ou `-` no lugar. Vale para textos, legendas, commits, logs, relatórios,
   Notion, código e respostas no chat.
-- **Estrutura frasal "não é X, é Y": exceção rara, nunca recurso** (regra calibrada em 30/07/2026;
-  antes era proibição absoluta). Só entra quando não existe outro jeito de carregar a mesma mensagem,
-  e no **máximo uma vez por peça**. Carrossel inteiro nessa forma vira assinatura de IA.
-  **O teste que decide: o X negado precisa ser uma crença que alguém de verdade tem.**
-  ✅ "Aposentadoria não é um fim, é direito de quem se dedicou a vida inteira" (quem se aposenta
-  realmente sente que é um fim). ❌ Qualquer negação em que o X é espantalho inventado para dar
-  impulso à segunda metade: ninguém pensava aquilo, e é isso que soa como máquina.
-  Antes de usar, nomeie por escrito quem é a pessoa que acredita no X. Se não conseguir, não use.
 - Linguagem coachesca: "mindset", "gatilhos mentais", "alta performance", "virada de
   chave", "fórmula do sucesso", "escala", "leads qualificados", "dores da persona",
   "autoridade de elite", "produtividade extrema", "é só se esforçar que você consegue".
@@ -81,6 +73,38 @@ e de consumo.
   arquivo do repo. Ao registrar configuração que contenha segredo, mascarar como
   `[removido]`. Chaves reais vivem só no `.env` (ignorado pelo git); dados de pessoas,
   no CRM ou planilha privada. Ver `automacoes/.env.example` e `PLANO-DE-ACAO.md`.
+
+---
+
+## Regras calibradas : não são proibições absolutas
+
+### Estrutura frasal "não é X, é Y": exceção rara, nunca recurso
+
+Calibrada pela Mallu em 30/07/2026 (antes era proibição absoluta; a proibição total estava fazendo
+os agentes contorcerem o texto até ficar forçado, e a estrutura aparece na obra publicada dela).
+
+Só entra quando não existe outro jeito de carregar a mesma mensagem, e no **máximo uma vez por
+peça**. Carrossel inteiro nessa forma vira assinatura de IA, que é o que ela recusa.
+
+**O teste que decide: o X negado precisa ser uma crença que alguém de verdade tem.**
+
+- ✅ "Aposentadoria não é um fim, é direito de quem se dedicou a vida inteira": quem se aposenta
+  realmente sente que é um fim, e a frase tira um peso real de cima dela.
+- ❌ Qualquer negação em que o X é espantalho, inventado só para dar impulso à segunda metade.
+  Ninguém pensava aquilo, e é isso que soa como máquina.
+
+Antes de usar, nomeie por escrito quem é a pessoa que acredita no X. Se não conseguir, não use.
+Detalhe em `insumos-compartilhados/nucleo-comum/voz-paaps.md` seção 4.1.
+
+### Forma do slide: os 8 modelos do carrossel PAAPS
+
+`insumos-compartilhados/nucleo-comum/modelos-slide-paaps.md` é o catálogo dos 8 modelos de slide e
+das 8 leis universais do @paaps.brasil, lidos de dentro das peças publicadas. Quem escreve ou monta
+carrossel lê antes: `copywriter-paaps`, `aplicador-visual`, `buscador-fotos`, skill `copy-carrossel`.
+
+Duas leis que revogam regras antigas: **foto em TODOS os slides** (inclusive capa, dado e número) e
+**foto em cor** (a regra "sempre P&B" caiu). Catálogo vivo: os agentes refinam os modelos que tocaram
+ao fim de cada sessão, e **modelo novo só entra com aprovação explícita da Mallu**.
 
 ---
 
