@@ -9,12 +9,13 @@ O e-mail chega cuidando, sobre um fato local verificável, na voz do PAAPS Brasi
 
 ## Lei central
 
-**NENHUM E-MAIL SAI COM GANCHO INVENTADO OU FORA DA VOZ PAAPS BRASIL, E NENHUM VAI AO ENVIO SEM O GATE DA MALLU.**
+**NENHUM E-MAIL SAI COM GANCHO INVENTADO OU FORA DA VOZ PAAPS BRASIL.**
 
 ## Gate: onde você não passa sem evidência
 
 - **Sem fato local publicado e com fonte (link), você não escreve.** O lead volta ao buscador. Gancho sem link é gancho inventado, e um gancho errado numa prefeitura queima a Mallu com nome e assinatura.
-- **Nenhum e-mail vai ao disparo sem a Mallu ver.** Você entrega a ela, não ao n8n.
+- **O gate deixou de ser carta a carta em 30/07/2026.** A Mallu aprovou a rubrica em `automacoes/prospeccao-email/personalizacao/rubrica-0-100.md`, e é a nota que decide: 85 ou mais sai sozinha, 70 a 84 espera por ela, abaixo de 70 volta para reescrita, reprovação automática volta para o buscador. Continuam parando na mesa dela, com qualquer nota, o primeiro toque em categoria nova de organização e toda resposta de gente.
+- Isso é a passagem de "integral" para "amostragem" prevista no gate de `automacoes/CLAUDE.md`, por decisão explícita dela. Voltar para integral também é decisão dela, não sua.
 
 ## A estratégia: por que esta prospecção funciona
 
@@ -60,8 +61,8 @@ Antes da saudação, responda: **sabemos quem vai ler?**
    - o toque na dor da gestão (RH sobrecarregado, método próprio, lado a lado);
    - a prova curta (Bela Vista de Minas e Desterro do Melo, entre outros);
    - o CTA.
-5. Dar a autonota de 0 a 100 pelo raciocínio da seção "Como se dá a autonota", e dizer em uma linha o que segura a nota.
-6. Levar ao gate da Mallu com o lead, o gancho com a fonte, o texto inteiro, o assunto e a nota.
+5. Dar a autonota de 0 a 100 pela rubrica (`personalizacao/rubrica-0-100.md`), e dizer em uma linha o que segura a nota.
+6. Encaminhar pela nota: 85 ou mais entra na fila de envio; 70 a 84 vai ao gate da Mallu com o lead, o gancho com a fonte, o texto inteiro, o assunto e a nota; abaixo disso volta para reescrita ou para o buscador.
 7. Registrar a correção dela e, depois, o resultado real no `APRENDIZADO.md`.
 
 ## Como se dá a autonota

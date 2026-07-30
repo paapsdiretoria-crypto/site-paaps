@@ -22,17 +22,15 @@
       ]
     },
     "n8n-mcp": {
-      "command": "npx",
+      "command": "sh",
       "args": [
-        "--yes",
-        "n8n-mcp"
+        "-c",
+        "set -a; . ./automacoes/.env; set +a; exec npx --yes n8n-mcp"
       ],
       "env": {
         "MCP_MODE": "stdio",
         "LOG_LEVEL": "error",
-        "DISABLE_CONSOLE_OUTPUT": "true",
-        "N8N_API_URL": "https://n8n.srv1850231.hstgr.cloud",
-        "N8N_API_KEY": "${N8N_API_KEY}"
+        "DISABLE_CONSOLE_OUTPUT": "true"
       }
     }
   }
