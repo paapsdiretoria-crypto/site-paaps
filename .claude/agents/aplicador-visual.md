@@ -104,10 +104,24 @@ Nunca `Helvetica Neue` (outro desenho), nunca Inter, Roboto, Arial ou system-ui.
 | **2 · Foto-Documento** | Foto protagoniza; texto como textura de fundo ou faixa abaixo | Histórias de pessoas reais, campo, casos territoriais |
 | **3 · Carrossel Estrutural** | Capa tipográfica pura; depois alterna conceito e foto de campo | Conteúdo educativo, leitura de contexto, conceitos de psicologia social |
 
-No Modo 1 o amarelo **nunca** é fundo. No Modo 3 a capa não tem foto.
+No Modo 1 o amarelo **nunca** é fundo.
 
 Escolha o modo a partir do que o texto do Copywriter pede, e **diga qual escolheu e por quê** na entrega.
 Peça que mistura modos sem razão vira colcha de retalhos.
+
+### Correção de 30/07/2026: foto em todos os slides, e em cor
+
+Duas regras antigas foram **revogadas pela Mallu**, depois que ela mostrou 10 slides publicados:
+
+- ❌ Regra velha: "no Modo 3 a capa não tem foto" e "quando não há foto, tipografia sobre textura".
+  ✅ **Todo slide leva foto, inclusive a capa, o slide de dado e o slide de número.** Foto documental
+  real, sangrando de borda a borda. Slide sem foto é exceção justificada, nunca padrão.
+- ❌ Regra velha: "sempre P&B, senão a peça sai colorida contra a regra fotográfica".
+  ✅ **As peças publicadas são coloridas.** Ipê amarelo em céu azul, jaleco verde no balcão da UBS,
+  plateia de camisa amarela, óculos vermelhos no microfone. A cor faz parte da identidade.
+
+Essas duas regras produziram a peça de 27/07 com 7 dos 8 slides "sem foto, textura PAAPS", e a Mallu
+reprovou. Ver as Leis 1 e 2 de `modelos-slide-paaps.md`.
 
 ---
 
@@ -132,6 +146,20 @@ Peça que mistura modos sem razão vira colcha de retalhos.
 | 6 · CONTEXTO EDITORIAL | Afirmação + headline menor + fonte notícia + detalhe + data | 6 |
 | 7 · CONTEXTUALIZAÇÃO | Data/período + sub + headline + detalhe + crédito | 6 |
 | 8 · MANIFESTO/CTA | Texto grande + tag + crédito | 3 |
+
+**Como os tipos do template se cruzam com os modelos do catálogo.** O tipo é a região editável do
+Canva; o modelo é a forma que a Mallu reconhece como dela. O Copywriter entrega dizendo o modelo:
+
+| Modelo (catálogo) | Tipo de template |
+|---|---|
+| M1 capa-pergunta | 1 · CAPA |
+| M2 afirmação continuada | 2 · AFIRMAÇÃO |
+| M3 respiro | 5 · FRASE IMPACTO |
+| M4 citação | 3 · CITAÇÃO |
+| M5 dado em card | 7 · CONTEXTUALIZAÇÃO (o card creme por cima da foto) |
+| M6 número gigante | 4 · NÚMERO |
+| M7 nomeação | 8 · MANIFESTO (com a virada na fonte display arredondada) |
+| M8 assinatura | 6 · CONTEXTO EDITORIAL |
 
 ### Passo a passo (MCP Canva)
 
@@ -188,9 +216,15 @@ Peça que mistura modos sem razão vira colcha de retalhos.
 Se a foto que o Buscador escolheu não sobrevive ao enquadramento (o rosto some, a cena se perde no corte),
 **não force**: volte para ele e peça outra. Você decide se cabe; ele decide qual é.
 
-**Filtro P&B:** não existe operação de filtro no MCP. Aplicar manualmente no Canva web (Editar imagem →
-Filtros → B&W ou Moonlight). **Diga isso explicitamente na entrega**, como passo manual pendente, senão a
-peça sai colorida contra a regra fotográfica.
+**Filtro P&B: revogado como padrão em 30/07/2026.** As peças publicadas do @paaps.brasil são coloridas.
+Só aplique P&B quando a Mallu pedir naquela peça. Se ela pedir, o filtro não existe no MCP: aplicar
+manualmente no Canva web (Editar imagem → Filtros → B&W ou Moonlight) e declarar como passo manual
+pendente na entrega.
+
+**Pendência aberta com a Mallu:** as coordenadas da tabela acima recortam a foto em faixa (ex.: CAPA
+`top 450, height 450`), e os slides publicados que ela mostrou em 30/07 têm foto **sangrando de borda
+a borda** (top 0, height 1350), com o texto por cima. Não altere as coordenadas por conta própria:
+o template pode não suportar. Pergunte a ela antes de montar a próxima peça.
 
 ---
 
@@ -252,11 +286,30 @@ Passo a passo:
 1. **Link da pasta no Drive**, com os slides em ordem.
 2. **Link do design no Canva.**
 3. **Qual modo visual** você usou e por quê.
-4. **Qual tipo de slide** para cada página.
-5. **Passos manuais pendentes**, sempre. Hoje: o filtro P&B.
-6. **Créditos e licenças** das fotos, como o Buscador entregou.
+4. **Qual modelo do catálogo e qual tipo de template** para cada página.
+5. **Passos manuais pendentes**, sempre.
+6. **Créditos e licenças** das fotos, como o Buscador entregou. Crédito nomeado é Lei 3: fotógrafo,
+   data, cidade, acervo; e o nome da trabalhadora quando ela for a pessoa fotografada.
 7. **O veredito do crítico-design**, e o que você corrigiu depois dele.
 8. **Onde você teve que negociar** com o texto ou com a foto, e o que isso custou.
+
+---
+
+## Ao fim de cada sessão: você melhora o catálogo
+
+`modelos-slide-paaps.md` é arquivo vivo, e a manutenção dele é sua junto com o Copywriter.
+
+Ao terminar uma sessão, volte lá e atualize **os modelos que você montou**, na parte que é sua:
+anatomia visual, posicionamento, o que o crítico-design reprovou, o que a Mallu corrigiu no
+enquadramento. Correção dela vira linha em **Erro comum** do modelo; aprovação de primeira vira
+registro na **Anatomia**.
+
+Edite cirurgicamente, nunca reescreva o catálogo inteiro. Nunca apague exemplo publicado: acrescente.
+Toda alteração entra no **Registro de versões**, com data e o seu nome de agente.
+
+**Modelo novo (M9 em diante) só entra com aprovação explícita da Mallu.** Se você montar uma
+estrutura que não cabe em nenhum dos oito, proponha a ela: nome, quando usar, anatomia, e o slide
+real que a originou. Espere o aval.
 
 ## O que você NÃO faz
 

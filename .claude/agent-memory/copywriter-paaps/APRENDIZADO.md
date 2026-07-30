@@ -238,3 +238,111 @@ primeira fortalece a série, a segunda cansa quem acompanha de perto.
   cada exceção precisa vir com autorização nova, não vira precedente automático.
 - Após publicação de 27/07: registrar aqui se a capa em torno de "quanto vs. de quem" converteu
   melhor, pior ou igual à mecânica anterior de "impossível X através de Y".
+
+---
+
+## Situação: a peça virou tratado sobre o instrumento, e não sobre a pessoa
+
+**Quando acontece:** o eixo declarado pela orquestração é "precisão do diagnóstico institucional",
+e eu construo a superfície inteira da peça com o vocabulário da medição: indicador, planilha, medir,
+contar, número, nomear. O sujeito real (a trabalhadora) vira lacuna de dado.
+
+**O que eu fiz:** carrossel de 27/07/2026 ("De quem é esse trabalho"). Capa: "É impossível reconhecer
+um trabalho perguntando só quanto, nunca de quem". Slide 4: "NOMEAR NÃO BASTA. FALTA MEDIR."
+
+**O que aconteceu:** a Mallu REPROVOU a peça inteira em 30/07/2026. Palavras dela: "está uma merda",
+"completamente inacessível", "rebuscamento forçado", "parece um texto forçado e ruim". Único slide
+aprovado: o 2, o único que começava de coisas do mundo (amamentar, velar, escutar, criar filho alheio).
+
+**Regra que fica:**
+- ❌ Assim não: "É impossível reconhecer um trabalho perguntando só quanto, nunca de quem."
+- ✅ Assim sim: "É impossível oferecer vínculo contínuo através de contratos que terminam todo ano."
+
+**Por quê:** a primeira pede que a leitora segure duas abstrações no ar antes de sentir; a segunda
+nomeia um objeto que ela tem na gaveta. Teoria é parede de sustentação, escondida. A superfície é
+feita de contrato, folga, atestado, aposentadoria, colega de trabalho.
+
+---
+
+## Situação: dois murros do mesmo tamanho no mesmo slide
+
+**Quando acontece:** o template tem headline caps + statement caps + corpo, e eu preencho as duas
+regiões de cima com duas frases de impacto independentes, seguidas de um bloco denso de dado.
+
+**O que eu fiz:** 27/07/2026, em quase todos os slides. Ex.: "NINGUÉM NASCE COM JEITO PRA CUIDAR." +
+"ESSE TRABALHO FOI DECIDIDO, HÁ SÉCULOS, COMO NÃO PAGÁVEL." + bloco de 25 palavras.
+
+**O que aconteceu:** a Mallu descreveu o padrão sem eu ter contado: "o slide tinha uma afirmação
+esquisita, tentando se fazer impactante, e aí depois uma explicação que também tenta ser impactante".
+
+**Regra que fica:**
+- ❌ Assim não: FRASE DE IMPACTO EM CAPS + SEGUNDA FRASE DE IMPACTO EM CAPS + bloco de dado
+- ✅ Assim sim: uma frase só, quebrada em dois tratamentos, onde a parte em CAPS ainda não tem verbo
+  ("PARA QUEM CUIDOU DA POPULAÇÃO A VIDA INTEIRA, / se aposentar como Servidor Público pode ser um
+  agravador de questões de Saúde Mental.")
+
+**Por quê:** é o modelo M2 do catálogo, afirmação continuada. O texto pequeno é explicação em língua
+comum, nunca um segundo murro. Uma ideia por slide.
+
+---
+
+## Situação: peça sem nenhuma voz humana real dentro
+
+**Quando acontece:** a citação que eu tinha já foi usada numa peça recente, e eu decido não repetir
+para não parecer reciclagem.
+
+**O que eu fiz:** 27/07/2026, deixei de fora a citação da servidora de 23 anos e não pus nada no
+lugar. A peça ficou com zero falas de pessoas reais em 8 slides. A de 15/07 tinha três.
+
+**O que aconteceu:** foi uma das causas do "inacessível". Sobrou instituição falando com instituição.
+
+**Regra que fica:**
+- ❌ Assim não: cortar a única citação e seguir sem nenhuma
+- ✅ Assim sim: procurar OUTRA fala real (comentários públicos do perfil, campo, parceiro) e usar
+
+**Por quê:** modelo M4 do catálogo. Toda peça precisa de pelo menos uma voz humana real.
+
+---
+
+## Situação: a contabilidade do processo vazou para dentro da peça
+
+**Quando acontece:** a orquestração declara a peça como "continuação direta" de outra, e eu escrevo
+a continuidade em voz alta.
+
+**O que eu fiz:** slide 3 de 27/07: "Há 12 dias, dissemos: quem cuida é mulher, desproporcionalmente
+negra." + "Hoje, mostramos o tamanho, e o que falta contar."
+
+**O que aconteceu:** a Mallu: "há doze dias dissemos, que contexto esse de doze dias, que doze dias,
+meu Deus? por que que você colocou isso?"
+
+**Regra que fica:**
+- ❌ Assim não: "Há 12 dias, dissemos... Hoje, mostramos o tamanho."
+- ✅ Assim sim: entrar direto no dado, sem calendário interno: "Entre técnicas e auxiliares de
+  enfermagem: 57,4% negras."
+
+**Por quê:** ninguém no feed conta os dias desde o post anterior, nem sabe que existe um anterior.
+Continuidade se sente, nunca se anuncia. A peça não fala sobre si mesma.
+
+---
+
+## Situação: a estrutura "não é X, é Y" aparece no insumo (REGRA ATUALIZADA em 30/07/2026)
+
+**Atualiza a entrada anterior sobre este tema, que operava sob proibição absoluta.**
+
+**Quando acontece:** a formulação mais natural para carregar a ideia é a negação seguida de afirmação.
+
+**O que aconteceu:** eu passei a rodada de 27/07 inteira me contorcendo para fugir da estrutura
+(registrei isso duas vezes no relatório), e parte do texto forçado nasceu daí. A Mallu então
+calibrou a regra, depois de ver que a estrutura existe na obra publicada dela.
+
+**Regra que fica:**
+- Exceção rara, nunca recurso. **No máximo uma vez por carrossel.**
+- **O teste, na formulação que ela validou: o X negado precisa ser uma crença que alguém de verdade tem.**
+- ✅ "Aposentadoria não é um fim, é direito de quem se dedicou a vida inteira": quem se aposenta
+  realmente sente que é um fim; a frase tira um peso real de cima dela.
+- ✅ "Cuidar de quem cuida não é extra. É a condição para que o cuidado exista": o gestor de fato
+  trata como extra.
+- ❌ X espantalho, inventado só para dar impulso à segunda metade. Ninguém pensava aquilo.
+
+**Por quê:** o que soa como IA não é a estrutura em si, é o espantalho e a repetição. Antes de usar,
+nomeie por escrito quem é a pessoa que acredita no X. Se não conseguir nomear, não use.
