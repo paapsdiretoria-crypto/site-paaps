@@ -1,4 +1,4 @@
-# Voz PAAPS — Gabarito de Voz e Conteúdo
+# Voz PAAPS : Gabarito de Voz e Conteúdo
 
 Este arquivo é o gabarito que o **Crítico de Conteúdo** usa para julgar se um texto "soa PAAPS". Todo agente que escreve legenda, roteiro, título ou copy lê este arquivo antes de produzir qualquer peça.
 
@@ -14,7 +14,7 @@ Toda peça deve ser capaz de ser descrita por pelo menos três desses adjetivos.
 
 ---
 
-## 2. Tom de Voz — Como se fala
+## 2. Tom de Voz : Como se fala
 
 - Nomeia o que o mundo prefere silenciar
 - Fala sobre o que atravessa, não sobre o que vai agradar
@@ -27,7 +27,7 @@ Toda peça deve ser capaz de ser descrita por pelo menos três desses adjetivos.
 
 ---
 
-## 3. Tom de Voz — Como NÃO se fala
+## 3. Tom de Voz : Como NÃO se fala
 
 - ❌ Autoajuda neoliberal, meritocracia implícita, individualismo
 - ❌ Causalidade simplista ("esse conflito acontece PORQUE fulano tem TDAH")
@@ -37,7 +37,7 @@ Toda peça deve ser capaz de ser descrita por pelo menos três desses adjetivos.
 
 ---
 
-## 4. PROIBIÇÕES ABSOLUTAS DA MALLU — REGRAS INVIOLÁVEIS
+## 4. PROIBIÇÕES ABSOLUTAS DA MALLU : REGRAS INVIOLÁVEIS
 
 Estas proibições valem para TODO conteúdo PAAPS, sem exceção. Nenhum agente, em nenhuma circunstância, as ultrapassa.
 
@@ -64,7 +64,7 @@ artificial, que é exatamente o que ela quer evitar.
 Antes de usar, responda por escrito: quem é a pessoa que acredita no X? Se você não consegue nomear
 essa pessoa, não use a estrutura.
 
-### 4.2 Vocabulário coachesco — BANIDO COMPLETAMENTE
+### 4.2 Vocabulário coachesco : BANIDO COMPLETAMENTE
 Proibido usar qualquer dessas palavras ou expressões:
 - mindset, gatilhos mentais, alta performance, virada de chave
 - fórmula do sucesso, escala, leads qualificados, dores da persona
@@ -72,7 +72,7 @@ Proibido usar qualquer dessas palavras ou expressões:
 - "é só se esforçar que você consegue"
 - E qualquer variação do mesmo campo semântico de autoajuda mercantil
 
-### 4.3 Metáforas de guerra, violência e competição — BANIDAS
+### 4.3 Metáforas de guerra, violência e competição : BANIDAS
 - ❌ "tiro no escuro"
 - ❌ "batalha pelo feed"
 - ❌ "conquistar território"
@@ -98,22 +98,22 @@ Proibido fazer promessas, garantias ou afirmações de resultado determinado. Tr
 
 ---
 
-## 5. As Três Personas — Para Calibrar Tom e Visual
+## 5. As Três Personas : Para Calibrar Tom e Visual
 
-### Cláudia Martins — Gestora Pública (persona principal)
+### Cláudia Martins : Gestora Pública (persona principal)
 - Secretária de Saúde/Assistência Social, 45–60 anos, interior de Minas
 - Equipe exausta, emocionalmente adoecida, pressionada por limite político
 - Diz: *"Não quero mais um relatório bonito."*
 - Medo: ser criticada por investir em "cuidado" em vez de "obra"
 - O que a PAAPS deve comunicar para ela: **"Nós fomos ao campo. Funcionou. Podemos fazer com você."**
 
-### RH Genuíno — Persona Secundária
+### RH Genuíno : Persona Secundária
 - 30–45 anos, psicóloga/gestora de pessoas em org pública, OSC ou empresa de impacto
 - Busca leitura sistêmica, não hacks de engajamento
 - Solitária no diagnóstico que faz
 - O que a PAAPS deve comunicar: **"Sua leitura está certa. Temos o método."**
 
-### Psicóloga de Rede Pública — Persona Terciária
+### Psicóloga de Rede Pública : Persona Terciária
 - CAPS, CRAS, UBS, NASF
 - Quer ver o trabalho dela nomeado em público
 - O que a PAAPS deve comunicar: **"Seu trabalho existe e importa. Nós o vemos."**
@@ -132,7 +132,7 @@ Proibido fazer promessas, garantias ou afirmações de resultado determinado. Tr
 
 ---
 
-## 7. Copy — Regras por Elemento
+## 7. Copy : Regras por Elemento
 
 | Elemento | Regra |
 |---|---|
@@ -151,13 +151,13 @@ pequeno é explicação em língua comum, nunca segundo murro; o sintoma vivido 
 
 ---
 
-## 8. Contradições da Skill Anterior — Resolvidas
+## 8. Contradições da Skill Anterior : Resolvidas
 
 A versão anterior da skill tinha a instrução de buscar fotos no Unsplash. **Esta instrução está revogada.** A regra de fonte de imagem está em `mapa-fontes-foto.md`.
 
 ---
 
-## 9. Filosofia de Conteúdo — O Norte que Orienta Tudo
+## 9. Filosofia de Conteúdo : O Norte que Orienta Tudo
 
 A audiência nunca precisa ser convencida. O conteúdo nomeia: a audiência já sente o que
 vai ser dito, o que ela não tinha eram as palavras. Se o conteúdo está tentando convencer
@@ -187,7 +187,7 @@ sempre vem da Mallu: de uma observação de campo, de uma raiva, de algo que alg
 **Teste decisivo:** se o texto poderia ser publicado por qualquer psicólogo do Instagram
 sem nenhuma estranheza, reescreva até que só possa ser da Mallu ou do PAAPS.
 
-**Mallu não explica — ela situa.** A audiência já conhece o dado ou o fenômeno. O
+**Mallu não explica: ela situa.** A audiência já conhece o dado ou o fenômeno. O
 trabalho é mostrar onde ele está encaixado, que sistema o sustenta, por que ele persiste.
 
 **Fechamentos não-conclusivos.** Encerrar com pensamento aberto é mais honesto e mais
@@ -202,14 +202,14 @@ demais, desconfie.
 |---|---|---|
 | Reel @amalluvasconcellos | Alcance, descoberta, topo de funil | Direto, crítico, conversacional. Câmera no rosto. Abertura com a tensão real, sem gancho fabricado. "a gente" em vez de "nós". |
 | Carrossel @amalluvasconcellos | Retenção, salvamento, aprofundamento | Autoral, voz crítica. Uma tensão por carrossel. Autoridade oculta. Emojis com moderação. |
-| Stories @amalluvasconcellos | Conversão, proximidade | Íntimo, direto, pode ser informal. CTA estruturado e específico para aquele post — nunca genérico. |
+| Stories @amalluvasconcellos | Conversão, proximidade | Íntimo, direto, pode ser informal. CTA estruturado e específico para aquele post, nunca genérico. |
 | Carrossel @paaps.brasil | Posicionamento institucional, parceiros, B2G | Institucional sem perder profundidade crítica. Fala para gestores, ESG, NR01, parceiros. |
-| LinkedIn Mallu | Autoridade B2B — decisores e parceiros | CEO Founder e psicóloga social-sistêmica. Argumenta com dados e campo. Conecta teoria à gestão pública. Nunca informal demais, nunca frio demais. O primeiro parágrafo é decisivo (LinkedIn corta antes do "ver mais"). Máx. 3-4 hashtags específicas. |
+| LinkedIn Mallu | Autoridade B2B: decisores e parceiros | CEO Founder e psicóloga social-sistêmica. Argumenta com dados e campo. Conecta teoria à gestão pública. Nunca informal demais, nunca frio demais. O primeiro parágrafo é decisivo (LinkedIn corta antes do "ver mais"). Máx. 3-4 hashtags específicas. |
 | LinkedIn PAAPS | Conversão institucional, B2G e B2B | Institucional, posicionamento público. Profundidade crítica sem perder o ângulo técnico. Fala para decisores. |
 
 ---
 
-## 11. Público Real — Dados Validados
+## 11. Público Real : Dados Validados
 
 84,2% mulheres | 87% entre 18–34 anos | 96,6% Brasil
 

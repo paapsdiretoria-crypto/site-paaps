@@ -1,4 +1,4 @@
-# Visual Instagram — Os Três Modos e as Regras Fotográficas
+# Visual Instagram : Os Três Modos e as Regras Fotográficas
 
 Este arquivo é lido pelos **subagentes de canal de Instagram** (Mallu LinkedIn usa apenas parcialmente: ver nota ao final). Define os três modos visuais do Instagram PAAPS, as regras fotográficas universais e os enquadramentos.
 
@@ -25,7 +25,7 @@ A relação entre fotografia e tipografia no Instagram PAAPS é fusão, não hie
 
 ## 2. Os Três Modos Visuais
 
-### MODO 1 — PALAVRA-MANIFESTO
+### MODO 1 : PALAVRA-MANIFESTO
 **Referência:** @despatologiza
 
 A tipografia domina. A foto é testemunha: pequena, em P&B, encravada no meio do texto.
@@ -51,13 +51,13 @@ Logo PAAPS: discreto, canto inferior
 
 ---
 
-### MODO 2 — FOTO-DOCUMENTO
+### MODO 2 : FOTO-DOCUMENTO
 **Referência:** @prapretopsi, fotos de campo PAAPS
 
 A foto protagoniza. O texto pode aparecer como textura de fundo ou em faixa abaixo.
 
 ```
-VARIAÇÃO A — texto como textura:
+VARIAÇÃO A : texto como textura:
 ┌──────────────────────┐
 │   TEXTO COMO         │  ← texto repetido como padrão/textura de fundo
 │   FRASE QU TEXTO     │
@@ -66,7 +66,7 @@ VARIAÇÃO A — texto como textura:
 │   FRASE COMO         │
 └──────────────────────┘
 
-VARIAÇÃO B — foto com faixa:
+VARIAÇÃO B : foto com faixa:
 ┌──────────────────────┐
 │  [FOTO REAL grande]  │  ← foto ocupa 60-70% do frame
 │  ──────────────────  │  ← faixa marrom ou terracota
@@ -80,7 +80,7 @@ VARIAÇÃO B — foto com faixa:
 
 ---
 
-### MODO 3 — CARROSSEL ESTRUTURAL
+### MODO 3 : CARROSSEL ESTRUTURAL
 **Referência:** @terabrigo, @otrabalhoemanalise
 
 ```
@@ -131,7 +131,7 @@ Valem para qualquer modo.
 |---|---|---|---|
 | Carrossel educativo | --cor-marrom | branco | amarelo |
 | Post de dado/número | --cor-fundo | marrom | número em amarelo enorme |
-| Reels cover | foto de campo + overlay marrom 58% | branco | — |
+| Reels cover | foto de campo + overlay marrom 58% | branco | - |
 | Stories CTA | --cor-terracota | branco | botão branco |
 
 ---
