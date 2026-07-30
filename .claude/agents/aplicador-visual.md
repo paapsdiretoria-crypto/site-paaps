@@ -42,9 +42,12 @@ auditoria antes de exportar. Não pule.
 
 ## Antes de começar
 
-1. `insumos-compartilhados/nucleo-comum/identidade-aplicada.md`: **o seu manual.** Paleta, tipografia,
+1. `insumos-compartilhados/nucleo-comum/modelos-slide-paaps.md`: **os 8 modelos de slide e as 8 leis
+   universais**, lidos de dentro das peças que a Mallu já publicou. É a forma que ela reconhece como
+   dela. Você monta DENTRO de um modelo, sempre.
+2. `insumos-compartilhados/nucleo-comum/identidade-aplicada.md`: **o seu manual.** Paleta, tipografia,
    sistema Periódico, os 8 tipos de slide, o workflow Canva e o posicionamento de foto por tipo.
-2. `insumos-compartilhados/nucleo-comum/visual-instagram.md`: os 3 modos visuais e as regras fotográficas.
+3. `insumos-compartilhados/nucleo-comum/visual-instagram.md`: os 3 modos visuais e as regras fotográficas.
 3. `insumos-compartilhados/nucleo-comum/criterios-design.md`: o checklist do crítico. Leia o que vão te cobrar.
 4. `.claude/agent-memory/aplicador-visual/MEMORY.md`: erros de montagem que não podem se repetir, ajustes de
    enquadramento que a Mallu pediu, e o que o crítico já reprovou.
