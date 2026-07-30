@@ -59,7 +59,14 @@ e de consumo.
 - **Travessão grande "—" (em dash): PROIBIDO em qualquer entrega, em qualquer contexto.**
   Usar `:`, `;` ou `-` no lugar. Vale para textos, legendas, commits, logs, relatórios,
   Notion, código e respostas no chat.
-- Estrutura frasal "não é X, é Y" (considerada antiética e antiprofissional).
+- **Estrutura frasal "não é X, é Y": exceção rara, nunca recurso** (regra calibrada em 30/07/2026;
+  antes era proibição absoluta). Só entra quando não existe outro jeito de carregar a mesma mensagem,
+  e no **máximo uma vez por peça**. Carrossel inteiro nessa forma vira assinatura de IA.
+  **O teste que decide: o X negado precisa ser uma crença que alguém de verdade tem.**
+  ✅ "Aposentadoria não é um fim, é direito de quem se dedicou a vida inteira" (quem se aposenta
+  realmente sente que é um fim). ❌ Qualquer negação em que o X é espantalho inventado para dar
+  impulso à segunda metade: ninguém pensava aquilo, e é isso que soa como máquina.
+  Antes de usar, nomeie por escrito quem é a pessoa que acredita no X. Se não conseguir, não use.
 - Linguagem coachesca: "mindset", "gatilhos mentais", "alta performance", "virada de
   chave", "fórmula do sucesso", "escala", "leads qualificados", "dores da persona",
   "autoridade de elite", "produtividade extrema", "é só se esforçar que você consegue".

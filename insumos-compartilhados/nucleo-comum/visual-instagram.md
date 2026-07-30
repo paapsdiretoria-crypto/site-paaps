@@ -6,6 +6,17 @@ Este arquivo é lido pelos **subagentes de canal de Instagram** (Mallu LinkedIn 
 
 ---
 
+> **Correção de 30/07/2026, que prevalece sobre qualquer trecho abaixo.**
+> A Mallu revogou duas regras deste arquivo depois de mostrar 10 slides publicados:
+> 1. **Foto em TODOS os slides**, inclusive a capa, o slide de dado e o slide de número. Sangrando
+>    de borda a borda. Slide sem foto passa a ser exceção justificada, nunca padrão.
+> 2. **Foto em COR.** As peças publicadas são coloridas. P&B só quando ela pedir naquela peça.
+>
+> As duas regras antigas produziram o carrossel de 27/07 com 7 dos 8 slides "sem foto, textura
+> PAAPS", e ela reprovou a peça. A forma completa está em `modelos-slide-paaps.md` (8 leis + 8 modelos).
+
+---
+
 ## 1. O Princípio Central
 
 A relação entre fotografia e tipografia no Instagram PAAPS é fusão, não hierarquia. Os dois criam sentido juntos. O *ponto de entrada* (o que o olho vê primeiro) muda por modo. Mas nenhum dos dois é decoração do outro.
@@ -75,7 +86,7 @@ VARIAÇÃO B — foto com faixa:
 ```
 SLIDE 1 (capa):
   Pergunta estrutural ou dado chocante
-  Tipografia apenas. Sem foto. Fundo --cor-marrom ou --cor-fundo.
+  Foto documental sangrando + tipografia por cima (CORRIGIDO 30/07: a capa TEM foto).
   "O que acontece com quem cuida dos outros o dia todo?"
 
 SLIDES 2-N (desenvolvimento):
@@ -98,11 +109,13 @@ Para o workflow de produção do carrossel no Canva (template, tipos de slide, p
 
 Valem para qualquer modo.
 
-- **Sempre P&B ou com tratamento de cor contido:** nunca filtros saturados
+- **Cor, com tratamento contido:** nunca filtros saturados. (CORRIGIDO 30/07/2026: a regra
+  "sempre P&B" foi revogada. As peças publicadas são coloridas. P&B só a pedido da Mallu.)
 - **Fotos de campo em prioridade** sobre qualquer outra fonte (ver hierarquia em `mapa-fontes-foto.md`)
 - **Pessoas reais, ambientes reais:** reuniões, rodas de conversa, territórios, equipamentos públicos
 - **Escala humana:** rostos, mãos, detalhes do cotidiano do cuidado
-- **Quando não há foto:** tipografia como protagonista absoluta (Modo 1)
+- **Todo slide leva foto** (Lei 1 de `modelos-slide-paaps.md`). Tipografia sozinha é exceção
+  justificada peça a peça, nunca o padrão de quando "não achou foto"
 
 **Nunca usar:**
 - ❌ Foto de handshake

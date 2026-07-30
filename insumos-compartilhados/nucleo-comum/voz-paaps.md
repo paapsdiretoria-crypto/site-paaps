@@ -41,8 +41,28 @@ Toda peça deve ser capaz de ser descrita por pelo menos três desses adjetivos.
 
 Estas proibições valem para TODO conteúdo PAAPS, sem exceção. Nenhum agente, em nenhuma circunstância, as ultrapassa.
 
-### 4.1 Estrutura frasal proibida
-- **NUNCA usar "não é X, é Y"**: considerada antiética e antiprofissional pela Mallu. Nenhuma variação dessa estrutura é aceitável.
+### 4.1 Estrutura frasal "não é X, é Y": exceção rara, nunca recurso
+
+**Regra calibrada pela Mallu em 30/07/2026.** Antes era proibição absoluta; a proibição total estava
+fazendo os agentes contorcerem o texto até ficar forçado, e a estrutura aparece na obra publicada dela.
+
+**Quando pode:** só quando não existe outro jeito de carregar a mesma mensagem, e **no máximo uma vez
+por peça**. O que não pode é a peça inteira nessa forma, porque aí vira assinatura de inteligência
+artificial, que é exatamente o que ela quer evitar.
+
+**O teste que decide, na formulação que ela validou:**
+
+> **O X negado precisa ser uma crença que alguém de verdade tem.**
+
+- ✅ "Aposentadoria não é um fim, é direito de quem se dedicou a vida inteira a sustentar o Sistema
+  Público": funciona, porque quem se aposenta realmente sente que é um fim. A frase tira um peso real.
+- ✅ "Cuidar de quem cuida não é extra. É a condição para que o cuidado exista": funciona, porque o
+  gestor de fato trata como extra.
+- ❌ Qualquer negação em que o X é espantalho, inventado só para dar impulso à segunda metade.
+  Ninguém pensava aquilo; a frase só está fazendo ginástica retórica. **É isso que soa como IA.**
+
+Antes de usar, responda por escrito: quem é a pessoa que acredita no X? Se você não consegue nomear
+essa pessoa, não use a estrutura.
 
 ### 4.2 Vocabulário coachesco — BANIDO COMPLETAMENTE
 Proibido usar qualquer dessas palavras ou expressões:
@@ -123,6 +143,11 @@ Proibido fazer promessas, garantias ou afirmações de resultado determinado. Tr
 | Crédito | `@paaps.brasil · [tema do carrossel]` |
 
 **CTAs genéricos proibidos:** "Clique aqui", "Saiba mais", "Siga o perfil"
+
+**A forma do slide está em `modelos-slide-paaps.md`:** os 8 modelos e as 8 leis universais, lidos de
+dentro das peças que a Mallu já publicou. Quem escreve carrossel lê os dois arquivos, este e aquele.
+Dali vêm, entre outras: foto em todos os slides; uma frase de impacto por slide, nunca duas; texto
+pequeno é explicação em língua comum, nunca segundo murro; o sintoma vivido vem antes da lei.
 
 ---
 
