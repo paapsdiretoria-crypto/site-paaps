@@ -4,9 +4,20 @@
 > 8ª Alteração e Consolidação do Contrato Social (AC-08), São Paulo, 01/04/2026.
 > Registrado por Claude em 31/07/2026 a pedido da Mallu.
 >
-> **Regra de privacidade:** este arquivo é commitado. Dados pessoais das sócias e sócio
-> (CPF, RG, data de nascimento, filiação, endereço residencial de terceiros) estão
-> marcados como `[removido]`. Os valores reais vivem só nos PDFs originais, fora do repo.
+> **Aviso de dados pessoais:** por decisão expressa da Mallu em 31/07/2026, este arquivo
+> contém a qualificação completa das sócias e do sócio (CPF, RG, nascimento, filiação e
+> endereço), como consta no contrato social. São dados dos titulares da própria empresa,
+> não de leads nem de servidores atendidos.
+>
+> Isso impõe três condições:
+> 1. **O repositório precisa continuar PRIVADO.** Nenhuma hipótese de torná-lo público
+>    sem antes tirar a seção 3 daqui.
+> 2. Este arquivo **nunca vai inteiro** para o Notion, para um anexo de e-mail, para um
+>    edital ou para qualquer serviço externo. Em edital, envia-se o PDF do contrato social,
+>    que é o documento oficial.
+> 3. A regra do `CLAUDE.md` continua valendo integralmente para **terceiros**: CPF, e-mail
+>    e dado pessoal de lead, servidor ou pessoa atendida seguem proibidos em arquivo
+>    commitado.
 
 ---
 
@@ -61,12 +72,70 @@ Consequência prática para editais, licitações e propostas:
 
 ## 3. Sócios e administração
 
+### Quadro societário
+
 | Sócia/sócio | Quotas | Valor | % |
 |---|---|---|---|
 | Fabiane Quarez de Vasconcellos | 84.906 | R$ 84.906,00 | 89% |
 | Maria Luiza Vasconcellos Barbosa (Mallu) | 9.540 | R$ 9.540,00 | 10% |
 | Luiz Sergio Barbosa | 954 | R$ 954,00 | 1% |
 | **Total** | **95.400** | **R$ 95.400,00** | **100%** |
+
+### Qualificação completa (preâmbulo do contrato social)
+
+O laço familiar, para eu não errar em nenhum texto: **Fabiane é mãe da Mallu**, e as duas são
+as sócias administradoras. **Luiz Sergio é pai da Mallu**, sócio quotista sem função
+administrativa.
+
+**FABIANE QUAREZ DE VASCONCELLOS** : sócia administradora, 89%
+
+| Campo | Valor |
+|---|---|
+| Nacionalidade / estado civil | brasileira, divorciada |
+| Profissão declarada no contrato | publicitária |
+| Naturalidade | Rio de Janeiro/RJ |
+| Nascimento | 17/12/1967 |
+| Filiação | Mauro Ávila de Vasconcellos e Lizete Quarez de Vasconcellos |
+| RG | 27.740.129-X, SSP/SP, expedido em 21/03/2017 |
+| CPF | 992.518.507-63 |
+| Endereço | Rua Curuzu, 186, Alto da Lapa, São Paulo/SP, CEP 05084-020 |
+| E-mail | fabiane@digging.com.br |
+
+**MARIA LUIZA VASCONCELLOS BARBOSA (Mallu)** : sócia administradora, 10%
+
+| Campo | Valor |
+|---|---|
+| Nacionalidade / estado civil | brasileira, solteira |
+| Profissão declarada no contrato | empresária |
+| Naturalidade | São Paulo/SP |
+| Nascimento | 12/03/2003 |
+| Filiação | Luiz Sergio Barbosa e Fabiane Quarez de Vasconcellos |
+| RG | 55.389.630-1, SSP/SP, expedido em 05/07/2021 |
+| CPF | 528.680.888-30 |
+| Endereço | Rua Curuzu, 186, Alto da Lapa, São Paulo/SP, CEP 05084-020 |
+| E-mail | maluvbarbosa@gmail.com |
+
+**LUIZ SERGIO BARBOSA** : sócio quotista, 1%, sem função administrativa e sem pró-labore
+
+| Campo | Valor |
+|---|---|
+| Nacionalidade / estado civil | brasileiro, divorciado |
+| Profissão declarada no contrato | aposentado |
+| Naturalidade | Visconde de Rio Branco/MG |
+| Nascimento | 24/03/1958 |
+| Filiação | Luiz Barbosa e Odete de Oliveira Barbosa |
+| RG | 7.266.472, SSP/SP, expedido em 14/03/1973 |
+| CPF | 006.260.548-85 |
+| Endereço | Rua Fernão Dias, 323, apto. 188, Pinheiros, São Paulo/SP, CEP 05427-010 |
+| E-mail | barbosa.luizsb@gmail.com |
+
+> **Nota:** o contrato registra Fabiane como publicitária, que é a profissão declarada no
+> instrumento. Nos materiais institucionais ela aparece como executiva com mais de 25 anos e
+> psicanalista de grupos. As duas coisas convivem, mas em documento oficial vale a
+> qualificação do contrato.
+>
+> **Cláusula Décima:** as sócias administradoras declaram, sob as penas da lei, não estarem
+> impedidas de exercer suas funções. Serve de base para declaração de idoneidade em licitação.
 
 - **Capital social:** R$ 95.400,00, totalmente subscrito e integralizado, em 95.400 quotas de R$ 1,00.
 - **Administração:** exercida pelas sócias **Fabiane Quarez de Vasconcellos e Maria Luiza
@@ -77,7 +146,10 @@ Consequência prática para editais, licitações e propostas:
 - Responsabilidade dos sócios restrita ao valor das quotas (art. 1.052, CC).
 - Quotas gravadas com inalienabilidade, incomunicabilidade e impenhorabilidade.
 - Direito de preferência entre sócios na cessão de quotas; retirada exige aviso de 30 dias.
-- Dados pessoais (CPF, RG, nascimento, filiação): `[removido]`, ver PDFs originais.
+- **Sucessão:** no falecimento de Luiz Sergio Barbosa, 50% das quotas dele passam
+  automaticamente para Maria Luiza Vasconcellos Barbosa. Nos demais casos, apuração de
+  haveres em 60 dias e pagamento aos herdeiros em 12 parcelas mensais, dispensada a apuração
+  se os herdeiros quiserem assumir a sociedade.
 
 ---
 
