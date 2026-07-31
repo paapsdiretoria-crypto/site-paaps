@@ -113,6 +113,35 @@ Portaria MTE 765/2025). É âncora fresca e oficial. Ressalva a carregar: a NR-0
 forma direta o vínculo celetista, e a maior parte do servidor municipal é estatutária. Afirmar
 o que a norma mudou, sem afirmar que obriga cada prefeitura.
 
+## Rodada de 31/07/2026 (1ª leva sob a rubrica, sem a Mallu presente)
+
+Cinco prefeituras do Norte de Minas, primeiro toque, cartas escritas já com o teto de 4 parágrafos
+e um argumento institucional por carta. Notas: 89, 84, 84, 82, 79. Só uma passou de 85.
+
+**Tensão detectada entre a rubrica e a correção de 27/07, que precisa de decisão da Mallu.** A
+rubrica dá 25 pontos ao arco de cinco partes, e uma delas é "descritivo do PAAPS Brasil **e** a
+lógica dos três fins". A correção de 27/07 proibiu justamente empilhar os argumentos
+institucionais e impôs o teto de 4 parágrafos. Consequência aritmética: carta que obedece o
+APRENDIZADO perde de 2 a 3 pontos de arco por construção, e o teto prático do lote fica na casa
+dos 84 a 89. Não inflei nota para contornar isso. Se a intenção é que boas cartas curtas saiam
+sozinhas, quem tem que mudar é a rubrica (o beat 3 valer pelo argumento institucional **certo**
+para aquele gancho, não pelos três fins obrigatórios), não a carta.
+
+**Segundo limitador estrutural: destinatário.** As cinco caíram em 6 de 10, porque o portal
+confirma o cargo mas não o nome de quem lê. Enquanto o buscador não trouxer nome, a rubrica
+impõe um teto de ~91 a qualquer carta de prefeitura pequena. Vale medir depois se nome próprio
+converte mais, ou se isso é só custo de pesquisa.
+
+**Gancho de ausência funciona, com cuidado de tom.** Monte Azul não tem CAPS na lista oficial de
+unidades. É fato verificável e abre bem, desde que escrito como constatação de estrutura (onde a
+demanda chega hoje) e nunca como falta imputada à gestão.
+
+**Fato de 2022 continua sendo o gancho possível em cidade pequena, e pede duas travas:** sujeito
+é a cidade, nunca "a gestão"; e verbo no passado datado ("convocou, em 2022"), nunca no presente
+("mantém"), porque vigência atual não foi confirmada. Taiobeiras trocou de prefeito em 2025,
+logo o risco de elogiar o antecessor era real. As duas travas custam nota de gancho, e devem
+custar mesmo.
+
 ## Resultado real (preencher com o Dashboard de Funil de Conversão + CRM)
 
 Ainda sem dado: nenhuma leva enviada. Conforme os retornos entrarem, registrar aqui, por via de
