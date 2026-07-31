@@ -20,6 +20,43 @@ Governos, ONGs, ESG e NR01. Gestor, cuide dos seus servidores aqui."
 
 ---
 
+## Situação jurídica: PAAPS é o programa, DIGGING é a empresa
+
+**Nunca confundir os dois em edital, licitação, proposta ou formulário.** A pessoa jurídica
+que assina contrato e emite nota é a **DIGGING**; o PAAPS é a metodologia proprietária dela,
+definida no contrato social como "Programa de Aceleração Ativa de Projetos Sociais".
+
+| Campo | Valor |
+|---|---|
+| Razão social | DIGGING DESENVOLVIMENTO E CAPACITACAO ORGANIZACIONAL E INDIVIDUAL LTDA |
+| CNPJ | 05.983.700/0001-67 (matriz) |
+| Situação cadastral | **ATIVA** desde 23/10/2003 |
+| Porte / natureza | ME / Sociedade Empresária Limitada (206-2) |
+| NIRE (JUCESP) | 3523399396-6 |
+| Sede | Rua Curuzu, 186, Alto da Lapa, São Paulo/SP, CEP 05084-020 |
+| Capital social | R$ 95.400,00 integralizado |
+| Administração | Fabiane Quarez de Vasconcellos e Maria Luiza Vasconcellos Barbosa, isolada ou conjuntamente |
+| Composição societária | 99% feminina (Fabiane 89%, Mallu 10%, Luiz Sergio 1%) |
+| CNAE principal | 85.99-6-04 Treinamento em desenvolvimento profissional e gerencial |
+| Contrato vigente | 8ª alteração e consolidação (AC-08), 01/04/2026 |
+
+Três consequências que decidem preenchimento de formulário:
+
+- **A sede fiscal é São Paulo capital.** Minas Gerais e Rio de Janeiro são territórios de
+  operação, não domicílio. Onde pedirem UF e cidade da empresa, é SP / São Paulo.
+- A DIGGING se declara **GovTech** no contrato social, e o PAAPS é **ativo intangível
+  pré-existente de titularidade exclusiva dela**, insuscetível de alienação total em
+  licitação. Só cabe licenciamento ou cessão de uso. Edital que exija cessão total de
+  direitos sobre a solução conflita com o contrato social: sinalizar antes de submeter.
+- O contrato prevê expressamente **priorizar o impacto social** e limitar distribuição de
+  excedentes em favor de reinvestimento em P,D&I. É o que sustenta a autodefinição
+  como negócio social.
+
+Ficha completa (objeto social alínea por alínea, cláusula GovTech, histórico de registro e
+checklist de documentos de habilitação): `insumos-compartilhados/docs/ficha-juridica-paaps.md`.
+
+---
+
 ## Quem é Mallu Vasconcellos
 
 Porta-voz da Psicologia com Impacto Social real. CEO Founder da PAAPS (GovTech de
