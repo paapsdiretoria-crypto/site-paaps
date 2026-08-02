@@ -1,0 +1,135 @@
+/* ==========================================================================
+   MAPA DA REDE : a cidade, a malha de cuidado e a lupa
+   Componente didático da página Como Atuamos.
+   ========================================================================== */
+
+.mapa{background:var(--bege);position:relative}
+
+/* O trilho dá o comprimento de rolagem; o palco fica preso enquanto ela acontece. */
+.mapa__trilho{height:420vh}
+.mapa__palco{
+  position:sticky;top:0;height:100svh;display:grid;
+  grid-template-rows:auto minmax(0,1fr) auto;gap:clamp(10px,1.6vw,22px);
+  padding-block:clamp(16px,2.6vw,30px);overflow:hidden;
+}
+
+/* ----- texto que troca a cada etapa ----- */
+.mapa__cabeca{position:relative}
+.mapa__cabeca h2{max-width:22ch;margin-bottom:.34em;
+  font-size:clamp(1.45rem,2.9vw,2.5rem)}
+.mapa__cabeca .rotulo{margin-bottom:.8em}
+.mapa__passo{
+  position:absolute;max-width:64ch;font-size:clamp(.94rem,1.15vw,1.08rem);line-height:1.55;
+  opacity:0;transform:translateY(10px);pointer-events:none;
+  transition:opacity .5s var(--ease),transform .5s var(--ease);
+}
+.mapa__passo:first-of-type{position:relative}
+.mapa__passo.ativo{opacity:1;transform:none;pointer-events:auto}
+.mapa__passo b{font-weight:700;color:var(--marrom);
+  box-shadow:inset 0 -.42em 0 rgba(247,195,28,.5)}
+
+/* ----- a ilustração ----- */
+.mapa__figura{
+  margin:0;min-height:0;display:grid;grid-template-rows:minmax(0,1fr) auto;gap:8px;
+  padding-inline:var(--gutter);
+}
+.mapa__svg{
+  width:100%;height:100%;min-height:0;display:block;
+  background:var(--bege);
+  border-radius:var(--raio);border:1px solid rgba(174,163,73,.35);
+  cursor:crosshair;touch-action:pan-y;
+}
+.mapa__figura .legenda{max-width:none;margin-top:0}
+
+/* ----- etiquetas dos serviços ----- */
+.etiqueta{
+  font-family:var(--titulo);font-size:14px;font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;text-anchor:middle;fill:var(--marrom);
+  paint-order:stroke;stroke:#f5f1e1;stroke-width:5px;stroke-linejoin:round;
+}
+.servico{transition:transform .4s var(--ease)}
+.pino{transition:fill .5s var(--ease),r .4s var(--ease)}
+
+/* ----- a malha, escondida até a etapa 3 ----- */
+.malha{opacity:0;transition:opacity .9s var(--ease)}
+.malha__fios path,.malha__descidas path{
+  stroke-dasharray:var(--comp,900);stroke-dashoffset:var(--comp,900);
+}
+.malha__toldo{transform:translateY(-140px);opacity:0;
+  transition:transform 1.1s var(--ease),opacity 1.1s var(--ease)}
+
+.mapa[data-etapa="2"] .malha,
+.mapa[data-etapa="3"] .malha{opacity:1}
+.mapa[data-etapa="2"] .malha__toldo,
+.mapa[data-etapa="3"] .malha__toldo{transform:none;opacity:.5}
+.mapa[data-etapa="2"] .malha__fios path,
+.mapa[data-etapa="3"] .malha__fios path,
+.mapa[data-etapa="2"] .malha__descidas path,
+.mapa[data-etapa="3"] .malha__descidas path{
+  animation:tecer 1.5s var(--ease) forwards;
+}
+.mapa[data-etapa="2"] .pino,
+.mapa[data-etapa="3"] .pino{fill:#f7c31c;r:9}
+@keyframes tecer{to{stroke-dashoffset:0}}
+
+/* ----- o que a lupa revela ----- */
+.interior{transition:opacity .6s var(--ease)}
+.interior--antes{opacity:0}
+.interior--depois{opacity:0}
+.mapa[data-etapa="1"] .interior--antes{opacity:1}
+.mapa[data-etapa="2"] .interior--antes{opacity:.28}
+.mapa[data-etapa="3"] .interior--depois{opacity:1}
+
+/* na etapa 0 a lupa mostra a própria cidade, então nenhum interior aparece */
+
+/* ----- a lupa ----- */
+.lupa{pointer-events:none}
+.lupa__aro{filter:drop-shadow(0 6px 18px rgba(68,35,9,.34))}
+.lupa__brilho{opacity:0;transition:opacity .5s var(--ease)}
+.mapa[data-etapa="3"] .lupa__brilho{opacity:.85}
+.lupa-alvo{transition:cx .38s var(--ease),cy .38s var(--ease)}
+.mapa.mapa--seguindo .lupa-alvo{transition:none}
+
+/* ----- controles ----- */
+.mapa__controles{display:flex;flex-wrap:wrap;gap:8px}
+.mapa__btn{
+  display:inline-flex;align-items:center;gap:9px;
+  padding:11px 17px;border:1px solid rgba(68,35,9,.24);border-radius:var(--raio);
+  background:transparent;color:var(--marrom);cursor:pointer;
+  font-family:var(--titulo);font-size:.72rem;font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;
+  transition:background-color .25s var(--ease),border-color .25s var(--ease),color .25s var(--ease);
+}
+.mapa__btn span{
+  display:grid;place-items:center;width:20px;height:20px;border-radius:50%;
+  background:rgba(68,35,9,.1);font-size:.68rem;
+}
+.mapa__btn:hover{border-color:var(--marrom)}
+.mapa__btn[aria-current="true"]{background:var(--marrom);color:var(--bege);border-color:var(--marrom)}
+.mapa__btn[aria-current="true"] span{background:var(--amarelo);color:var(--marrom)}
+
+/* ----- responsivo ----- */
+@media (max-width:768px){
+  .mapa__trilho{height:340vh}
+  .mapa__svg{max-height:48svh}
+  .etiqueta{font-size:19px;stroke-width:6px}
+  .mapa__btn{font-size:.66rem;padding:9px 12px}
+  .mapa__cabeca h2{font-size:clamp(1.5rem,6.4vw,2rem)}
+}
+
+/* ----- sem JS ou com movimento reduzido: tudo visível, nada preso ----- */
+@media (prefers-reduced-motion:reduce){
+  .mapa__trilho{height:auto}
+  .mapa__palco{position:static;min-height:0}
+  .mapa__passo{position:relative;opacity:1;transform:none;pointer-events:auto;margin-top:.9em}
+  .malha,.mapa .malha__toldo{opacity:1;transform:none}
+  .malha__fios path,.malha__descidas path{stroke-dashoffset:0}
+  .interior--depois{opacity:1}
+}
+html:not(.js) .mapa__trilho{height:auto}
+html:not(.js) .mapa__palco{position:static;min-height:0}
+html:not(.js) .mapa__passo{position:relative;opacity:1;transform:none;margin-top:.9em}
+html:not(.js) .mapa .malha{opacity:1}
+html:not(.js) .mapa .malha__toldo{opacity:.5;transform:none}
+html:not(.js) .malha__fios path,html:not(.js) .malha__descidas path{stroke-dashoffset:0}
+html:not(.js) .mapa__controles{display:none}

@@ -1,0 +1,388 @@
+/* ==========================================================================
+   PAAPS BRASIL : folha de estilo única do site
+   Calibrada com a Mallu em 02/08/2026.
+   Hierarquia de cor: bege > marrom > amarelo > oliva > terracota > roxo.
+   Fontes locais, nunca Google Fonts.
+   ========================================================================== */
+
+/* ----- 1. FONTES LOCAIS -------------------------------------------------- */
+
+@font-face{
+  font-family:'League Spartan';src:url('../fontes/LeagueSpartan-Regular.ttf') format('truetype');
+  font-weight:400;font-style:normal;font-display:swap;
+}
+@font-face{
+  font-family:'League Spartan';src:url('../fontes/LeagueSpartan-Medium.ttf') format('truetype');
+  font-weight:500;font-style:normal;font-display:swap;
+}
+@font-face{
+  font-family:'League Spartan';src:url('../fontes/LeagueSpartan-SemiBold.ttf') format('truetype');
+  font-weight:600;font-style:normal;font-display:swap;
+}
+@font-face{
+  font-family:'League Spartan';src:url('../fontes/LeagueSpartan-Bold.ttf') format('truetype');
+  font-weight:700;font-style:normal;font-display:swap;
+}
+@font-face{
+  font-family:'League Spartan';src:url('../fontes/LeagueSpartan-ExtraBold.ttf') format('truetype');
+  font-weight:800;font-style:normal;font-display:swap;
+}
+@font-face{
+  font-family:'Nimbus Sans';src:url('../fontes/NimbusSanL-Reg.otf') format('opentype');
+  font-weight:400;font-style:normal;font-display:swap;
+}
+@font-face{
+  font-family:'Nimbus Sans';src:url('../fontes/NimbusSanL-Bol.otf') format('opentype');
+  font-weight:700;font-style:normal;font-display:swap;
+}
+@font-face{
+  font-family:'Evermore';src:url('../fontes/Evermore.ttf') format('truetype');
+  font-weight:400;font-style:normal;font-display:swap;
+}
+
+/* ----- 2. TOKENS --------------------------------------------------------- */
+
+:root{
+  /* Hierarquia de cor calibrada 02/08/2026 */
+  --bege:#f5f1e1;          /* 1. dominante, o papel */
+  --marrom:#442309;        /* 2. a tinta, seções escuras */
+  --amarelo:#f7c31c;       /* 3. palavra-chave, destaque pontual */
+  --oliva:#aea349;         /* 4. cor chapada, detalhe, fundo discreto */
+  --terracota:#cb4710;     /* 5. raro */
+  --roxo:#bcb6f2;          /* 6. quase nunca */
+  --bege-rosa:#bbada2;     /* neutro de apoio */
+  --branco:#fff;
+
+  --tinta-70:rgba(68,35,9,.70);
+  --tinta-55:rgba(68,35,9,.55);
+  --tinta-40:rgba(68,35,9,.40);
+
+  --titulo:'League Spartan',Helvetica,Arial,sans-serif;
+  --corpo:'Nimbus Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+  --logo:'Evermore','League Spartan',serif;
+
+  --raio:4px;
+  --max:1200px;
+  --gutter:clamp(22px,5vw,56px);
+  --secao:clamp(72px,10vw,132px);
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+
+/* ----- 3. RESET E BASE --------------------------------------------------- */
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;
+    transition-duration:.001ms!important;scroll-behavior:auto!important}
+}
+
+body{
+  font-family:var(--corpo);font-weight:400;font-size:1rem;line-height:1.7;letter-spacing:0;
+  color:var(--marrom);background:var(--bege);
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+  overflow-x:hidden;
+}
+/* Grão de impressão. O PAAPS é orgânico, não digital puro. */
+body::before{
+  content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:.035;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+
+::selection{background:var(--amarelo);color:var(--marrom)}
+
+:focus-visible{outline:3px solid var(--amarelo);outline-offset:3px}
+
+.container{max-width:var(--max);margin:0 auto;padding-inline:var(--gutter)}
+.container--largo{max-width:1440px}
+.secao{padding-block:var(--secao)}
+.secao--marrom{background:var(--marrom);color:var(--bege)}
+.secao--oliva{background:var(--oliva);color:var(--branco)}
+.secao--branca{background:var(--branco)}
+
+.pular{
+  position:absolute;left:-9999px;top:0;z-index:10000;
+  background:var(--marrom);color:var(--bege);padding:14px 22px;font-family:var(--titulo);
+  font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:.78rem;
+}
+.pular:focus{left:12px;top:12px}
+
+/* ----- 4. TIPOGRAFIA ----------------------------------------------------- */
+
+h1,h2,h3,h4{font-family:var(--titulo);font-weight:700;line-height:1.04;letter-spacing:-.005em;
+  text-transform:uppercase;text-wrap:balance}
+
+h1{font-size:clamp(2.5rem,6.4vw,5.4rem)}
+h2{font-size:clamp(1.9rem,4vw,3.35rem);margin-bottom:.6em}
+h3{font-size:clamp(1.15rem,1.7vw,1.5rem);letter-spacing:.01em;margin-bottom:.5em}
+h4{font-size:1rem;letter-spacing:.05em;margin-bottom:.4em}
+
+p{max-width:62ch;text-wrap:pretty}
+p + p{margin-top:1.05em}
+
+.lead{font-size:clamp(1.12rem,1.55vw,1.4rem);line-height:1.6;max-width:46ch}
+.lead--largo{max-width:60ch}
+
+.olho{ /* palavra-chave em Evermore, uso raro e pontual */
+  font-family:var(--logo);text-transform:none;letter-spacing:.01em;
+}
+
+.chave{color:var(--amarelo);font-weight:700}
+.secao--marrom .chave{color:var(--amarelo)}
+.chave--oliva{color:var(--oliva);font-weight:700}
+
+.rotulo{
+  display:block;font-family:var(--titulo);font-size:.72rem;font-weight:700;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--oliva);margin-bottom:1.4em;
+}
+.secao--marrom .rotulo{color:var(--amarelo)}
+.rotulo--marrom{color:var(--marrom)}
+
+.fonte-dado{
+  font-size:.78rem;line-height:1.5;color:var(--tinta-55);max-width:70ch;margin-top:2.2em;
+}
+.secao--marrom .fonte-dado{color:rgba(245,241,225,.55)}
+
+/* ----- 5. NAVEGAÇÃO ------------------------------------------------------ */
+
+.topo{
+  position:sticky;top:0;z-index:900;background:rgba(245,241,225,.94);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(174,163,73,.28);
+}
+.topo__nav{
+  display:flex;align-items:center;justify-content:space-between;gap:24px;
+  max-width:1440px;margin:0 auto;padding:14px var(--gutter);
+}
+.marca{font-family:var(--logo);font-size:1.6rem;line-height:1;letter-spacing:.01em;color:var(--marrom)}
+.marca span{color:var(--amarelo)}
+
+.menu{display:flex;align-items:center;gap:clamp(16px,2.4vw,34px);list-style:none}
+.menu a{
+  font-family:var(--titulo);font-size:.78rem;font-weight:600;letter-spacing:.11em;
+  text-transform:uppercase;padding-block:6px;border-bottom:2px solid transparent;
+  transition:border-color .2s var(--ease),color .2s var(--ease);
+}
+.menu a:hover{border-bottom-color:var(--amarelo)}
+.menu a[aria-current="page"]{border-bottom-color:var(--marrom)}
+
+.menu__botao{
+  display:none;background:none;border:0;cursor:pointer;padding:10px;color:var(--marrom);
+}
+.menu__botao svg{display:block}
+
+/* ----- 6. BOTÕES --------------------------------------------------------- */
+
+.btn{
+  display:inline-block;padding:16px 30px;border-radius:var(--raio);border:2px solid transparent;
+  font-family:var(--titulo);font-size:.82rem;font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;cursor:pointer;
+  transition:transform .22s var(--ease),background-color .22s var(--ease),color .22s var(--ease);
+}
+.btn:hover{transform:translateY(-2px)}
+.btn--marrom{background:var(--marrom);color:var(--bege)}
+.btn--marrom:hover{background:#2e1706}
+.btn--amarelo{background:var(--amarelo);color:var(--marrom)}
+.btn--bege{background:var(--bege);color:var(--marrom)}
+.btn--linha{border-color:currentColor}
+.btn--linha:hover{background:var(--marrom);color:var(--bege);border-color:var(--marrom)}
+.sobre-foto .btn--linha{color:var(--bege)}
+.sobre-foto .btn--linha:hover{background:var(--bege);color:var(--marrom);border-color:var(--bege)}
+
+/* ----- 7. FOTO DE TELA CHEIA COM TEXTO POR CIMA -------------------------- */
+/* Regra da Mallu: foto tela cheia, texto League Spartan CAPS bege (ou marrom
+   se a foto for clara), sobre preto com 70% de transparência, leve.          */
+
+.sobre-foto{
+  position:relative;isolation:isolate;display:flex;align-items:flex-end;
+  min-height:clamp(520px,86svh,900px);overflow:hidden;
+}
+.sobre-foto--media{min-height:clamp(420px,62svh,660px)}
+.sobre-foto__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.sobre-foto::after{ /* o preto a 70%, esse é o valor calibrado */
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(180deg,rgba(0,0,0,.42) 0%,rgba(0,0,0,.58) 46%,rgba(0,0,0,.78) 100%);
+}
+.sobre-foto--uniforme::after{background:rgba(0,0,0,.70)}
+.sobre-foto__c{
+  position:relative;width:100%;max-width:var(--max);margin:0 auto;
+  padding:clamp(60px,10vw,110px) var(--gutter) clamp(72px,9vw,104px);color:var(--bege);
+}
+.sobre-foto h1,.sobre-foto h2{color:var(--bege);max-width:17ch}
+.sobre-foto p{color:rgba(245,241,225,.9)}
+.sobre-foto .rotulo{color:var(--amarelo)}
+
+/* Variante para foto CLARA: texto marrom, véu bege no lugar do preto */
+.sobre-foto--clara::after{
+  background:linear-gradient(180deg,rgba(245,241,225,.34) 0%,rgba(245,241,225,.76) 100%);
+}
+.sobre-foto--clara .sobre-foto__c,
+.sobre-foto--clara h1,.sobre-foto--clara h2{color:var(--marrom)}
+.sobre-foto--clara p{color:var(--tinta-70)}
+.sobre-foto--clara .rotulo{color:var(--marrom)}
+
+/* ----- 8. LEGENDA DE FOTO : OBRIGATÓRIA EM TODA FOTO -------------------- */
+
+figure{margin:0}
+.legenda{
+  font-family:var(--corpo);font-size:.72rem;line-height:1.45;letter-spacing:.01em;
+  color:var(--tinta-55);margin-top:10px;max-width:52ch;
+}
+.legenda b{font-weight:700;color:var(--marrom)}
+.legenda--clara{color:rgba(245,241,225,.62)}
+.legenda--clara b{color:rgba(245,241,225,.9)}
+.legenda--pendente::after{
+  content:" Referência a confirmar.";font-style:italic;opacity:.8;
+}
+/* Legenda dentro de foto de tela cheia: canto inferior, discreta */
+.sobre-foto .legenda{
+  position:absolute;right:var(--gutter);bottom:14px;margin:0;text-align:right;
+  color:rgba(245,241,225,.55);font-size:.68rem;max-width:38ch;
+}
+.sobre-foto--clara .legenda{color:var(--tinta-55)}
+
+/* ----- 9. GRADES --------------------------------------------------------- */
+
+.duas{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(34px,5vw,80px);align-items:center}
+.duas--topo{align-items:start}
+.tres{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,3vw,44px)}
+.quatro{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(20px,2.4vw,34px)}
+
+/* ----- 10. NÚMEROS ------------------------------------------------------- */
+
+.numero{font-family:var(--titulo);font-weight:800;font-size:clamp(2.7rem,6vw,4.6rem);
+  line-height:.92;letter-spacing:-.02em;color:var(--amarelo);display:block}
+.numero--marrom{color:var(--marrom)}
+.numero--oliva{color:var(--oliva)}
+.numero__legenda{font-size:.9rem;line-height:1.45;margin-top:12px;max-width:26ch;
+  color:rgba(245,241,225,.82)}
+.secao:not(.secao--marrom) .numero__legenda{color:var(--tinta-70)}
+
+/* ----- 11. CARTÕES ------------------------------------------------------- */
+
+.cartao{
+  background:var(--branco);border:1px solid rgba(174,163,73,.3);border-radius:var(--raio);
+  padding:clamp(26px,3vw,40px);transition:transform .25s var(--ease),box-shadow .25s var(--ease);
+}
+.cartao:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(68,35,9,.13)}
+.cartao--marcado{border-top:5px solid var(--amarelo)}
+.cartao--oliva{border-top:5px solid var(--oliva)}
+.cartao p{font-size:.96rem}
+
+.lista{list-style:none;display:grid;gap:14px;margin-top:1.4em}
+.lista li{position:relative;padding-left:26px;font-size:.98rem;line-height:1.55}
+.lista li::before{
+  content:"";position:absolute;left:0;top:.62em;width:9px;height:9px;
+  background:var(--amarelo);border-radius:50%;
+}
+.lista--oliva li::before{background:var(--oliva)}
+
+/* ----- 12. IMAGINE : bloco narrativo ------------------------------------ */
+
+.imagine{
+  font-family:var(--corpo);font-size:clamp(1.18rem,2.1vw,1.72rem);line-height:1.5;
+  max-width:26ch;color:var(--bege);
+}
+.imagine span{display:block;opacity:0;transform:translateY(14px);
+  animation:sobe .8s var(--ease) forwards}
+.imagine span:nth-child(1){animation-delay:.05s}
+.imagine span:nth-child(2){animation-delay:.28s}
+.imagine span:nth-child(3){animation-delay:.51s}
+.imagine span:nth-child(4){animation-delay:.74s}
+.imagine span:nth-child(5){animation-delay:.97s}
+@keyframes sobe{to{opacity:1;transform:none}}
+
+/* ----- 13. FAIXA DE LEMA ------------------------------------------------- */
+
+.faixa{
+  background:var(--marrom);color:var(--amarelo);text-align:center;
+  padding:clamp(22px,3vw,34px) var(--gutter);
+  font-family:var(--titulo);font-weight:700;text-transform:uppercase;
+  letter-spacing:.14em;font-size:clamp(.8rem,1.6vw,1.05rem);
+}
+.faixa--oliva{background:var(--oliva);color:var(--marrom)}
+
+/* ----- 14. FORMULÁRIO ---------------------------------------------------- */
+
+.form{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form .full{grid-column:1/-1}
+.form label{font-family:var(--titulo);font-size:.7rem;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;display:block;margin-bottom:7px;color:rgba(245,241,225,.8)}
+.form input,.form select,.form textarea{
+  width:100%;padding:15px 16px;border:1px solid rgba(245,241,225,.3);border-radius:var(--raio);
+  background:rgba(245,241,225,.07);color:var(--bege);font-size:.97rem;
+  transition:border-color .2s var(--ease),background-color .2s var(--ease);
+}
+.form input::placeholder,.form textarea::placeholder{color:rgba(245,241,225,.45)}
+.form input:focus,.form select:focus,.form textarea:focus{
+  border-color:var(--amarelo);background:rgba(245,241,225,.11);outline:none;
+}
+.form textarea{min-height:110px;resize:vertical}
+.form select option{background:var(--marrom);color:var(--bege)}
+.form .ajuda{font-size:.76rem;color:rgba(245,241,225,.6);margin-top:-4px}
+
+/* ----- 15. RODAPÉ -------------------------------------------------------- */
+
+.rodape{background:var(--marrom);color:var(--bege);padding-block:clamp(56px,7vw,84px) 34px}
+.rodape__grade{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:clamp(28px,4vw,60px)}
+.rodape h4{font-size:.7rem;letter-spacing:.18em;color:var(--amarelo);margin-bottom:1.2em}
+.rodape ul{list-style:none;display:grid;gap:10px}
+.rodape a{font-size:.92rem;opacity:.84;transition:opacity .2s var(--ease)}
+.rodape a:hover{opacity:1;color:var(--amarelo)}
+.rodape__base{
+  margin-top:clamp(40px,5vw,64px);padding-top:24px;border-top:1px solid rgba(245,241,225,.16);
+  font-size:.74rem;line-height:1.6;color:rgba(245,241,225,.6);
+}
+.mural{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-top:clamp(34px,4vw,54px)}
+.mural img{aspect-ratio:1;object-fit:cover;filter:grayscale(1) contrast(1.04);opacity:.72;
+  transition:opacity .3s var(--ease)}
+.mural img:hover{opacity:1}
+
+/* ----- 16. REVELAÇÃO NO SCROLL ------------------------------------------ */
+/* Progressive enhancement: sem JS, tudo já está visível. */
+
+.js .revela{opacity:0;transform:translateY(22px);
+  transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.js .revela.visivel{opacity:1;transform:none}
+.js .revela--1{transition-delay:.1s}
+.js .revela--2{transition-delay:.2s}
+.js .revela--3{transition-delay:.3s}
+
+/* ----- 17. RESPONSIVO --------------------------------------------------- */
+
+@media (max-width:960px){
+  .duas{grid-template-columns:1fr}
+  .tres{grid-template-columns:repeat(2,1fr)}
+  .quatro{grid-template-columns:repeat(2,1fr)}
+  .rodape__grade{grid-template-columns:1fr 1fr}
+}
+@media (max-width:768px){
+  .menu{
+    position:fixed;inset:64px 0 auto;flex-direction:column;align-items:flex-start;gap:0;
+    background:var(--bege);border-bottom:1px solid rgba(174,163,73,.3);
+    padding:8px var(--gutter) 26px;display:none;
+  }
+  .menu.aberto{display:flex}
+  .menu li{width:100%}
+  .menu a{display:block;padding:15px 0;font-size:1rem;border-bottom:1px solid rgba(174,163,73,.22)}
+  .menu__botao{display:block}
+  .tres,.quatro{grid-template-columns:1fr}
+  .form{grid-template-columns:1fr}
+  .mural{grid-template-columns:repeat(4,1fr)}
+  .sobre-foto .legenda{position:static;text-align:left;margin-top:22px;max-width:none}
+}
+@media (max-width:480px){
+  .sobre-foto{min-height:100svh}
+  .rodape__grade{grid-template-columns:1fr}
+  .mural{grid-template-columns:repeat(3,1fr)}
+}
+
+@media print{
+  .topo,.menu__botao,.form{display:none}
+  body{background:#fff;color:#000}
+}

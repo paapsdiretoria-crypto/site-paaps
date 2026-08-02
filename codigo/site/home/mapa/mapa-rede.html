@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mapa da rede : componente PAAPS</title>
+<link rel="stylesheet" href="../css/paaps.css">
+<link rel="stylesheet" href="mapa.css">
+</head>
+<body>
+<main>
+<!-- ====================== COMPONENTE: MAPA DA REDE ====================== -->
+<section class="mapa" id="mapa" aria-labelledby="mapa-titulo">
+  <div class="mapa__trilho">
+    <div class="mapa__palco">
+
+      <div class="mapa__cabeca container">
+        <span class="rotulo">Como olhamos a sua cidade</span>
+        <h2 id="mapa-titulo">Uma cidade não é uma lista de equipamentos.</h2>
+        <p class="mapa__passo" data-passo="0">
+          Estes são os serviços que já existem no seu município. Cada um cuida de uma parte da
+          população. <b>Passe a lupa por cima deles</b> e veja quem faz esse cuidado acontecer.
+        </p>
+        <p class="mapa__passo" data-passo="1">
+          Quem sustenta esses serviços está sozinho. O que a lupa mostra agora acontece todo dia,
+          no corredor, longe do atendimento: <b>cansaço, choro e desamparo de quem cuida.</b>
+        </p>
+        <p class="mapa__passo" data-passo="2">
+          A PAAPS entra como <b>uma camada de cuidado por cima da rede inteira</b>, ligando serviço
+          a serviço. Nada é substituído: o que já existe passa a ser sustentado.
+        </p>
+        <p class="mapa__passo" data-passo="3">
+          Com a rede sustentada, a lupa mostra outra cena. <b>A mesma equipe, agora cuidada:</b>
+          em terapia, em grupo, em treinamento. É assim que ela consegue cuidar melhor da população.
+        </p>
+      </div>
+
+      <figure class="mapa__figura">
+        <svg class="mapa__svg" viewBox="0 148 1200 532" role="img"
+             aria-labelledby="svg-titulo svg-desc" preserveAspectRatio="xMidYMid meet">
+          <title id="svg-titulo">Mapa ilustrado de um município do interior de Minas Gerais</title>
+          <desc id="svg-desc">Uma cidade pequena com igreja colonial ao centro e sete serviços
+            públicos espalhados: postinho, CRAS, CAPS I, residência terapêutica, CAPS AD, CREAS e
+            CAPS III. Uma malha de cuidado desce sobre a cidade e liga todos os serviços entre si.
+            Uma lupa revela, dentro de cada serviço, as pessoas que trabalham ali: primeiro
+            exaustas nos corredores, depois em atendimento psicológico, em grupo e em treinamento.
+          </desc>
+
+          <defs>
+            <linearGradient id="ceu" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%"  stop-color="#fbf8ee"/>
+              <stop offset="62%" stop-color="#f5f1e1"/>
+              <stop offset="100%" stop-color="#efe9d3"/>
+            </linearGradient>
+            <linearGradient id="chao" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%"   stop-color="#efe9d3"/>
+              <stop offset="100%" stop-color="#e6dfc4"/>
+            </linearGradient>
+            <linearGradient id="malha" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%"   stop-color="#f7c31c" stop-opacity=".95"/>
+              <stop offset="100%" stop-color="#aea349" stop-opacity=".55"/>
+            </linearGradient>
+
+            <!-- máscara da lupa: só o que estiver sob o círculo aparece -->
+            <mask id="lupa-mascara">
+              <rect x="-500" y="-200" width="2200" height="1200" fill="#000"/>
+              <circle class="lupa-alvo" cx="430" cy="470" r="104" fill="#fff"/>
+            </mask>
+
+            <!-- ---------- VINHETAS "ANTES": quem cuida, sem cuidado ---------- -->
+            <g id="v-corredor">
+              <rect x="-92" y="-64" width="184" height="128" fill="#fbf8ee"/>
+              <rect x="-92" y="34" width="184" height="30" fill="#e6dfc4"/>
+              <rect x="-92" y="-64" width="184" height="12" fill="#efe9d3"/>
+              <!-- porta ao fundo -->
+              <rect x="34" y="-34" width="34" height="68" fill="#e0d8ba"/>
+              <rect x="-70" y="-30" width="22" height="44" fill="#ece5cd"/>
+              <!-- figura encostada na parede, cabeça baixa -->
+              <path d="M-46 34 q-4 -32 6 -44 l14 -3 q10 12 7 47z" fill="#442309"/>
+              <circle cx="-30" cy="-19" r="10" fill="#442309"/>
+              <path d="M-40 -12 q10 8 20 0" stroke="#fbf8ee" stroke-width="2.4" fill="none"
+                    stroke-linecap="round"/>
+              <!-- segunda figura, mão no ombro -->
+              <path d="M2 34 q-5 -34 7 -46 l15 -2 q10 13 6 48z" fill="#5c3412"/>
+              <circle cx="18" cy="-22" r="10.5" fill="#5c3412"/>
+              <path d="M2 -14 q-16 4 -22 6" stroke="#5c3412" stroke-width="5.4" fill="none"
+                    stroke-linecap="round"/>
+            </g>
+
+            <g id="v-chao">
+              <rect x="-92" y="-64" width="184" height="128" fill="#fbf8ee"/>
+              <rect x="-92" y="28" width="184" height="36" fill="#e6dfc4"/>
+              <rect x="-92" y="-64" width="184" height="10" fill="#efe9d3"/>
+              <rect x="-88" y="-40" width="176" height="4" fill="#e0d8ba"/>
+              <!-- figura sentada no chão, joelhos dobrados, cabeça entre eles -->
+              <path d="M-26 28 q-14 -6 -10 -26 q3 -16 16 -18 l20 0 q13 4 12 22 l-2 22z"
+                    fill="#442309"/>
+              <circle cx="-2" cy="-16" r="11" fill="#442309"/>
+              <path d="M-16 -6 q14 10 28 -2" stroke="#fbf8ee" stroke-width="2.4" fill="none"
+                    stroke-linecap="round"/>
+              <!-- copo caído -->
+              <rect x="42" y="18" width="12" height="10" rx="1.5" fill="#bbada2"/>
+            </g>
+
+            <g id="v-mesa">
+              <rect x="-92" y="-64" width="184" height="128" fill="#fbf8ee"/>
+              <rect x="-92" y="30" width="184" height="34" fill="#e6dfc4"/>
+              <rect x="-92" y="-64" width="184" height="10" fill="#efe9d3"/>
+              <!-- janela -->
+              <rect x="34" y="-44" width="46" height="34" fill="#ece5cd"/>
+              <line x1="57" y1="-44" x2="57" y2="-10" stroke="#e0d8ba" stroke-width="2"/>
+              <!-- mesa -->
+              <rect x="-84" y="16" width="120" height="7" fill="#5c3412"/>
+              <rect x="-76" y="23" width="6" height="18" fill="#5c3412"/>
+              <rect x="22" y="23" width="6" height="18" fill="#5c3412"/>
+              <!-- pilha de papel -->
+              <rect x="4" y="4" width="28" height="12" fill="#efe9d3" stroke="#bbada2"/>
+              <rect x="8" y="-2" width="28" height="10" fill="#fbf8ee" stroke="#bbada2"/>
+              <!-- figura com a cabeça nas mãos -->
+              <path d="M-62 16 q-6 -28 6 -38 l16 -2 q11 11 8 40z" fill="#442309"/>
+              <circle cx="-44" cy="-24" r="10.5" fill="#442309"/>
+              <path d="M-58 -20 q6 -12 14 -12 q9 0 14 12" stroke="#442309" stroke-width="5"
+                    fill="none" stroke-linecap="round"/>
+            </g>
+
+            <!-- ---------- VINHETAS "DEPOIS": a equipe cuidada ---------- -->
+            <g id="v-roda">
+              <rect x="-92" y="-64" width="184" height="128" fill="#fbf8ee"/>
+              <rect x="-92" y="26" width="184" height="38" fill="#e6dfc4"/>
+              <rect x="-92" y="-64" width="184" height="10" fill="#efe9d3"/>
+              <ellipse cx="0" cy="8" rx="66" ry="26" fill="#aea349" opacity=".16"/>
+              <g fill="#442309">
+                <circle cx="-46" cy="-8" r="8.4"/>
+                <path d="M-56 22 q-3 -22 10 -25 q13 3 10 25z"/>
+                <circle cx="0" cy="-20" r="8.4"/>
+                <path d="M-10 10 q-3 -22 10 -25 q13 3 10 25z"/>
+                <circle cx="46" cy="-8" r="8.4"/>
+                <path d="M36 22 q-3 -22 10 -25 q13 3 10 25z"/>
+              </g>
+              <g fill="#5c3412">
+                <circle cx="-22" cy="14" r="8.4"/>
+                <path d="M-32 44 q-3 -22 10 -25 q13 3 10 25z"/>
+                <circle cx="24" cy="14" r="8.4"/>
+                <path d="M14 44 q-3 -22 10 -25 q13 3 10 25z"/>
+              </g>
+              <circle cx="0" cy="8" r="7" fill="#f7c31c"/>
+            </g>
+
+            <g id="v-terapia">
+              <rect x="-92" y="-64" width="184" height="128" fill="#fbf8ee"/>
+              <rect x="-92" y="28" width="184" height="36" fill="#e6dfc4"/>
+              <rect x="-92" y="-64" width="184" height="10" fill="#efe9d3"/>
+              <rect x="-84" y="-46" width="30" height="40" fill="#ece5cd"/>
+              <circle cx="60" cy="-34" r="14" fill="#aea349" opacity=".3"/>
+              <!-- duas poltronas frente a frente -->
+              <rect x="-64" y="4" width="34" height="8" rx="2" fill="#aea349"/>
+              <rect x="30" y="4" width="34" height="8" rx="2" fill="#aea349"/>
+              <!-- figura que escuta -->
+              <path d="M-58 28 q-4 -28 8 -32 l10 -1 q11 6 8 33z" fill="#442309"/>
+              <circle cx="-44" cy="-14" r="10" fill="#442309"/>
+              <!-- figura que fala -->
+              <path d="M32 28 q-4 -28 8 -32 l10 -1 q11 6 8 33z" fill="#5c3412"/>
+              <circle cx="46" cy="-14" r="10" fill="#5c3412"/>
+              <!-- fio de fala -->
+              <path d="M-30 -18 q22 -14 60 -2" stroke="#f7c31c" stroke-width="2.6" fill="none"
+                    stroke-linecap="round" stroke-dasharray="5 6"/>
+            </g>
+
+            <g id="v-treino">
+              <rect x="-92" y="-64" width="184" height="128" fill="#fbf8ee"/>
+              <rect x="-92" y="30" width="184" height="34" fill="#e6dfc4"/>
+              <rect x="-92" y="-64" width="184" height="10" fill="#efe9d3"/>
+              <!-- quadro / flip chart -->
+              <rect x="24" y="-48" width="62" height="46" fill="#fff" stroke="#442309"
+                    stroke-width="2.4"/>
+              <line x1="34" y1="-36" x2="76" y2="-36" stroke="#aea349" stroke-width="3"/>
+              <line x1="34" y1="-26" x2="66" y2="-26" stroke="#aea349" stroke-width="3"/>
+              <rect x="34" y="-18" width="12" height="9" fill="#f7c31c"/>
+              <rect x="52" y="-18" width="12" height="9" fill="#f7c31c"/>
+              <!-- quem conduz -->
+              <path d="M4 30 q-4 -32 8 -36 l10 -1 q11 6 8 37z" fill="#442309"/>
+              <circle cx="18" cy="-12" r="10" fill="#442309"/>
+              <path d="M26 -4 q10 -8 16 -14" stroke="#442309" stroke-width="4.6" fill="none"
+                    stroke-linecap="round"/>
+              <!-- quem aprende, de costas -->
+              <g fill="#5c3412">
+                <circle cx="-66" cy="0" r="9"/><path d="M-77 30 q-3 -22 11 -25 q14 3 11 25z"/>
+                <circle cx="-38" cy="6" r="9"/><path d="M-49 36 q-3 -22 11 -25 q14 3 11 25z"/>
+              </g>
+            </g>
+
+            <!-- casa genérica reutilizável -->
+            <g id="casinha">
+              <rect x="-17" y="-14" width="34" height="24" fill="#fbf8ee" stroke="#442309"
+                    stroke-width="1.6"/>
+              <path d="M-21 -14 L0 -30 L21 -14z" fill="#5c3412"/>
+              <rect x="-6" y="-4" width="9" height="14" fill="#442309" opacity=".72"/>
+              <rect x="6" y="-8" width="7" height="7" fill="#f7c31c" opacity=".8"/>
+            </g>
+            <g id="arvore">
+              <rect x="-2.5" y="-2" width="5" height="14" fill="#5c3412"/>
+              <circle cx="0" cy="-11" r="13" fill="#aea349"/>
+              <circle cx="-8" cy="-4" r="9" fill="#aea349" opacity=".85"/>
+              <circle cx="8" cy="-5" r="8" fill="#aea349" opacity=".7"/>
+            </g>
+          </defs>
+
+          <!-- ============ CAMADA 1: A CIDADE ============ -->
+          <rect x="-500" y="-200" width="2200" height="1120" fill="url(#ceu)"/>
+
+          <!-- serra mineira ao fundo -->
+          <path d="M-500 352 q300 -34 500 -30 q118 -78 226 -30 q92 40 176 -18 q96 -66 206 -8
+                   q84 44 168 -12 q98 -66 200 -6 q100 58 224 12 q260 -14 500 16 L1700 920 L-500 920z"
+                fill="#aea349" opacity=".26"/>
+          <path d="M-500 404 q300 -22 500 0 q140 -60 258 -18 q106 38 202 -14 q104 -56 214 -4
+                   q98 46 208 -10 q94 -48 318 8 q260 22 500 4 L1700 920 L-500 920z"
+                fill="#aea349" opacity=".34"/>
+          <rect x="-500" y="424" width="2200" height="496" fill="url(#chao)"/>
+
+          <!-- caminho de terra -->
+          <path d="M-520 700 q250 -80 330 -132 q88 -58 288 -66 q206 -8 300 58 q86 60 322 40
+                   q210 -26 500 -40"
+                stroke="#e0d8ba" stroke-width="34" fill="none" stroke-linecap="round"/>
+          <path d="M-520 700 q250 -80 330 -132 q88 -58 288 -66 q206 -8 300 58 q86 60 322 40
+                   q210 -26 500 -40"
+                stroke="#d8cfae" stroke-width="1.6" fill="none" stroke-dasharray="12 16"/>
+
+          <!-- IGREJA MINEIRA, o coração da praça -->
+          <g transform="translate(600 384)">
+            <!-- torres sineiras -->
+            <rect x="-84" y="-58" width="40" height="120" fill="#fff" stroke="#442309"
+                  stroke-width="2.4"/>
+            <rect x="44"  y="-58" width="40" height="120" fill="#fff" stroke="#442309"
+                  stroke-width="2.4"/>
+            <path d="M-90 -58 L-64 -96 L-38 -58z" fill="#5c3412"/>
+            <path d="M38 -58 L64 -96 L90 -58z" fill="#5c3412"/>
+            <rect x="-72" y="-40" width="16" height="22" rx="8" fill="#442309" opacity=".78"/>
+            <rect x="56"  y="-40" width="16" height="22" rx="8" fill="#442309" opacity=".78"/>
+            <!-- corpo e frontão -->
+            <rect x="-46" y="-30" width="92" height="92" fill="#fff" stroke="#442309"
+                  stroke-width="2.4"/>
+            <path d="M-52 -30 L0 -70 L52 -30z" fill="#fff" stroke="#442309" stroke-width="2.4"/>
+            <circle cx="0" cy="-44" r="9" fill="#f7c31c" opacity=".85"/>
+            <path d="M-14 62 L-14 14 q14 -18 28 0 L14 62z" fill="#5c3412"/>
+            <rect x="-34" y="4" width="14" height="20" rx="7" fill="#442309" opacity=".62"/>
+            <rect x="20"  y="4" width="14" height="20" rx="7" fill="#442309" opacity=".62"/>
+            <!-- cruzes -->
+            <path d="M0 -70 L0 -90 M-7 -82 L7 -82" stroke="#442309" stroke-width="3.4"
+                  stroke-linecap="round"/>
+            <path d="M-64 -96 L-64 -108 M-70 -103 L-58 -103" stroke="#442309" stroke-width="2.6"
+                  stroke-linecap="round"/>
+            <path d="M64 -96 L64 -108 M58 -103 L70 -103" stroke="#442309" stroke-width="2.6"
+                  stroke-linecap="round"/>
+          </g>
+
+          <!-- casario e vegetação -->
+          <g opacity=".92">
+            <use href="#casinha" x="96"  y="486"/><use href="#casinha" x="252" y="512"/>
+            <use href="#casinha" x="392" y="470"/><use href="#casinha" x="452" y="556"/>
+            <use href="#casinha" x="522" y="500"/><use href="#casinha" x="694" y="478"/>
+            <use href="#casinha" x="760" y="566"/><use href="#casinha" x="866" y="510"/>
+            <use href="#casinha" x="982" y="496"/><use href="#casinha" x="1116" y="540"/>
+            <use href="#casinha" x="176" y="606"/><use href="#casinha" x="608" y="632"/>
+            <use href="#casinha" x="1042" y="638"/><use href="#casinha" x="330" y="672"/>
+          </g>
+          <g opacity=".9">
+            <use href="#arvore" x="60"  y="540"/><use href="#arvore" x="312" y="466"/>
+            <use href="#arvore" x="500" y="628"/><use href="#arvore" x="668" y="524"/>
+            <use href="#arvore" x="836" y="592"/><use href="#arvore" x="1104" y="470"/>
+            <use href="#arvore" x="922" y="676"/><use href="#arvore" x="214" y="700"/>
+          </g>
+
+          <!-- ============ CAMADA 2: A MALHA DE CUIDADO ============ -->
+          <g class="malha" aria-hidden="true">
+            <!-- ligações entre serviço e serviço -->
+            <g class="malha__fios" fill="none" stroke="url(#malha)" stroke-width="2.4"
+               stroke-linecap="round">
+              <path d="M150 520 Q240 440 320 600"/>
+              <path d="M320 600 Q380 500 430 470"/>
+              <path d="M430 470 Q520 430 620 620"/>
+              <path d="M620 620 Q710 560 790 500"/>
+              <path d="M790 500 Q860 520 930 610"/>
+              <path d="M930 610 Q1000 540 1050 470"/>
+              <path d="M150 520 Q560 300 1050 470"/>
+              <path d="M430 470 Q640 380 790 500"/>
+              <path d="M320 600 Q640 660 930 610"/>
+              <path d="M620 620 Q790 480 1050 470"/>
+            </g>
+            <!-- o toldo que desce por cima da cidade -->
+            <g class="malha__toldo" fill="none" stroke="#f7c31c" stroke-width="1.5" opacity=".5">
+              <path d="M-40 196 q300 -66 620 -10 q320 56 660 -18"/>
+              <path d="M-40 244 q300 -60 620 -8 q320 52 660 -14"/>
+              <path d="M-40 292 q300 -54 620 -6 q320 48 660 -10"/>
+              <path d="M60 168 L110 320 M240 150 L268 312 M420 152 L432 306
+                       M600 162 L600 300 M780 156 L770 306 M960 150 L942 312 M1140 168 L1104 322"/>
+            </g>
+            <!-- fios que descem do toldo até cada serviço -->
+            <g class="malha__descidas" fill="none" stroke="#f7c31c" stroke-width="1.8"
+               opacity=".62" stroke-dasharray="4 7">
+              <path d="M150 300 L150 508"/><path d="M320 306 L320 588"/>
+              <path d="M430 300 L430 458"/><path d="M620 300 L620 608"/>
+              <path d="M790 302 L790 488"/><path d="M930 306 L930 598"/>
+              <path d="M1050 300 L1050 458"/>
+            </g>
+          </g>
+
+          <!-- ============ CAMADA 3: OS SERVIÇOS ============ -->
+          <g class="servicos">
+            <g class="servico" transform="translate(150 520)">
+              <rect x="-30" y="-26" width="60" height="40" fill="#fff" stroke="#442309"
+                    stroke-width="2.2"/>
+              <path d="M-35 -26 L0 -48 L35 -26z" fill="#aea349"/>
+              <rect x="-8" y="-14" width="16" height="28" fill="#442309" opacity=".7"/>
+              <circle class="pino" cx="0" cy="-58" r="7" fill="#442309"/>
+              <text class="etiqueta" x="0" y="34">Postinho</text>
+            </g>
+            <g class="servico" transform="translate(320 600)">
+              <rect x="-30" y="-26" width="60" height="40" fill="#fff" stroke="#442309"
+                    stroke-width="2.2"/>
+              <path d="M-35 -26 L0 -48 L35 -26z" fill="#aea349"/>
+              <rect x="-8" y="-14" width="16" height="28" fill="#442309" opacity=".7"/>
+              <circle class="pino" cx="0" cy="-58" r="7" fill="#442309"/>
+              <text class="etiqueta" x="0" y="34">CRAS</text>
+            </g>
+            <g class="servico" transform="translate(430 470)">
+              <rect x="-30" y="-26" width="60" height="40" fill="#fff" stroke="#442309"
+                    stroke-width="2.2"/>
+              <path d="M-35 -26 L0 -48 L35 -26z" fill="#aea349"/>
+              <rect x="-8" y="-14" width="16" height="28" fill="#442309" opacity=".7"/>
+              <circle class="pino" cx="0" cy="-58" r="7" fill="#442309"/>
+              <text class="etiqueta" x="0" y="34">CAPS I</text>
+            </g>
+            <g class="servico" transform="translate(620 620)">
+              <rect x="-30" y="-26" width="60" height="40" fill="#fff" stroke="#442309"
+                    stroke-width="2.2"/>
+              <path d="M-35 -26 L0 -48 L35 -26z" fill="#aea349"/>
+              <rect x="-8" y="-14" width="16" height="28" fill="#442309" opacity=".7"/>
+              <circle class="pino" cx="0" cy="-58" r="7" fill="#442309"/>
+              <text class="etiqueta" x="0" y="34">Residência Terapêutica</text>
+            </g>
+            <g class="servico" transform="translate(790 500)">
+              <rect x="-30" y="-26" width="60" height="40" fill="#fff" stroke="#442309"
+                    stroke-width="2.2"/>
+              <path d="M-35 -26 L0 -48 L35 -26z" fill="#aea349"/>
+              <rect x="-8" y="-14" width="16" height="28" fill="#442309" opacity=".7"/>
+              <circle class="pino" cx="0" cy="-58" r="7" fill="#442309"/>
+              <text class="etiqueta" x="0" y="34">CAPS AD</text>
+            </g>
+            <g class="servico" transform="translate(930 610)">
+              <rect x="-30" y="-26" width="60" height="40" fill="#fff" stroke="#442309"
+                    stroke-width="2.2"/>
+              <path d="M-35 -26 L0 -48 L35 -26z" fill="#aea349"/>
+              <rect x="-8" y="-14" width="16" height="28" fill="#442309" opacity=".7"/>
+              <circle class="pino" cx="0" cy="-58" r="7" fill="#442309"/>
+              <text class="etiqueta" x="0" y="34">CREAS</text>
+            </g>
+            <g class="servico" transform="translate(1050 470)">
+              <rect x="-30" y="-26" width="60" height="40" fill="#fff" stroke="#442309"
+                    stroke-width="2.2"/>
+              <path d="M-35 -26 L0 -48 L35 -26z" fill="#aea349"/>
+              <rect x="-8" y="-14" width="16" height="28" fill="#442309" opacity=".7"/>
+              <circle class="pino" cx="0" cy="-58" r="7" fill="#442309"/>
+              <text class="etiqueta" x="0" y="34">CAPS III</text>
+            </g>
+          </g>
+
+          <!-- ============ CAMADA 4: O QUE A LUPA REVELA ============ -->
+          <g mask="url(#lupa-mascara)">
+            <g class="interior interior--antes">
+              <use href="#v-corredor" x="150"  y="500"/>
+              <use href="#v-mesa"     x="320"  y="580"/>
+              <use href="#v-chao"     x="430"  y="450"/>
+              <use href="#v-corredor" x="620"  y="600"/>
+              <use href="#v-mesa"     x="790"  y="480"/>
+              <use href="#v-chao"     x="930"  y="590"/>
+              <use href="#v-corredor" x="1050" y="450"/>
+            </g>
+            <g class="interior interior--depois">
+              <use href="#v-terapia" x="150"  y="500"/>
+              <use href="#v-treino"  x="320"  y="580"/>
+              <use href="#v-roda"    x="430"  y="450"/>
+              <use href="#v-terapia" x="620"  y="600"/>
+              <use href="#v-roda"    x="790"  y="480"/>
+              <use href="#v-treino"  x="930"  y="590"/>
+              <use href="#v-roda"    x="1050" y="450"/>
+            </g>
+          </g>
+
+          <!-- ============ CAMADA 5: A LUPA ============ -->
+          <g class="lupa" aria-hidden="true">
+            <circle class="lupa-alvo lupa__vidro" cx="430" cy="470" r="104"
+                    fill="none" stroke="#fff" stroke-width="3" opacity=".55"/>
+            <circle class="lupa-alvo lupa__aro" cx="430" cy="470" r="104"
+                    fill="none" stroke="#442309" stroke-width="7"/>
+            <circle class="lupa-alvo lupa__brilho" cx="430" cy="470" r="104"
+                    fill="none" stroke="#f7c31c" stroke-width="2" opacity=".8"/>
+            <path class="lupa__cabo" d="M0 0" stroke="#442309" stroke-width="13"
+                  stroke-linecap="round"/>
+          </g>
+        </svg>
+
+        <figcaption class="legenda">
+          Ilustração PAAPS: um município do interior de Minas e os serviços que formam a sua rede
+          de cuidado. Desenho próprio, não representa cidade específica.
+        </figcaption>
+      </figure>
+
+      <div class="mapa__controles container" role="group" aria-label="Etapas da ilustração">
+        <button type="button" class="mapa__btn" data-ir="0">
+          <span>1</span> A rede que já existe
+        </button>
+        <button type="button" class="mapa__btn" data-ir="1">
+          <span>2</span> Quem sustenta ela
+        </button>
+        <button type="button" class="mapa__btn" data-ir="2">
+          <span>3</span> A PAAPS entra
+        </button>
+        <button type="button" class="mapa__btn" data-ir="3">
+          <span>4</span> A mesma equipe, cuidada
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+</main>
+<script src="mapa.js"></script>
+</body>
+</html>
