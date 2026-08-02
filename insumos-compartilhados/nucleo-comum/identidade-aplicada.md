@@ -82,10 +82,18 @@ font-family: Helvetica, 'Nimbus Sans PAAPS', Arial, sans-serif;
 - **Nunca usar** a pasta `helvetica-similar-fonts/neue haas grotesk/`: são arquivos
   `-Trial`, sem licença de produção.
 
-### League Spartan: uso restrito
-Só em label pequena, tag e número solto, no peso Bold. Nunca em headline, nunca em
-corpo de texto. Ela é geométrica e de letra larga, e em bloco fica com um peso visual
-que não é o das peças da Mallu.
+### League Spartan: uso restrito NO CANVA, título NO SITE
+
+**No Canva e nos carrosséis:** só em label pequena, tag e número solto, no peso Bold. Nunca em
+headline, nunca em corpo de texto. Ela é geométrica e de letra larga, e em bloco fica com um peso
+visual que não é o das peças da Mallu.
+
+> ⚠️ **Exceção calibrada pela Mallu em 02/08/2026, válida só para o site institucional.**
+> No site, League Spartan CAIXA ALTA é a fonte de **todo título**, com foto por trás ou sem.
+> Helvetica (Nimbus Sans) continua carregando todo o corpo, nos pesos 400 e 700, letter-spacing 0.
+> Motivo: o site precisa de uma assinatura tipográfica reconhecível no scroll, que o benchmark
+> apontou como a coisa que falta à marca. Ver `codigo/site/PROMPT-SITE-PAAPS-V1.md`.
+> A regra do Canva acima continua valendo para carrossel, story e peça de Instagram.
 
 ### Evermore: só o logo
 Nunca em texto corrido.

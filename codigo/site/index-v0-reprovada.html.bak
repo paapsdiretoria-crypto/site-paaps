@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PAAPS Brasil : Cuidamos de quem trabalha na Rede Pública</title>
+<meta name="description" content="Cuidamos de quem trabalha na Rede Pública para uma Saúde Mental Coletiva. Formações, Projeto PAAPS e atuação em emergências para prefeituras, ONGs e projetos sociais.">
+<style>
+:root{
+  --fundo:#f5f1e1; --marrom:#442309; --terracota:#cb4710; --oliva:#aea349;
+  --amarelo:#f7c31c; --bege-rosa:#bbada2; --branco:#fff; --raio:4px; --max:1180px;
+  --fonte:'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--fonte);font-weight:400;letter-spacing:0;color:var(--marrom);
+  background:var(--fundo);line-height:1.7;-webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+.container{max-width:var(--max);margin:0 auto;padding:0 40px}
+.secao{padding:110px 0}
+.secao--escura{background:var(--marrom);color:var(--branco)}
+.secao--branca{background:var(--branco)}
+
+h1,h2,h3{font-weight:700;line-height:1.08;letter-spacing:0}
+h1{font-size:clamp(2.3rem,4.6vw,4.05rem)}
+h2{font-size:clamp(1.9rem,3.2vw,2.9rem);margin-bottom:28px}
+h3{font-size:1.22rem;line-height:1.25;margin-bottom:12px}
+p{font-size:1.02rem}
+.lead{font-size:clamp(1.1rem,1.5vw,1.32rem);line-height:1.6;max-width:41ch}
+.kicker{
+  display:block;font-size:.7rem;font-weight:700;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--terracota);margin-bottom:18px;
+}
+.kicker--clara{color:var(--amarelo)}
+.marcadores{display:flex;gap:7px;margin-bottom:22px}
+.marcadores span{width:11px;height:11px;border-radius:50%}
+.m-a{background:var(--amarelo)}.m-t{background:var(--terracota)}.m-o{background:var(--oliva)}
+
+.btn{
+  display:inline-block;padding:17px 32px;border-radius:var(--raio);
+  font-size:.87rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  text-decoration:none;transition:transform .2s,opacity .2s;
+}
+.btn:hover{transform:translateY(-2px);opacity:.9}
+.btn--t{background:var(--terracota);color:#fff}
+.btn--b{background:#fff;color:var(--terracota)}
+.btn--linha{border:2px solid var(--terracota);color:var(--terracota)}
+.btn--linha:hover{background:var(--terracota);color:#fff;opacity:1}
+
+/* CABECALHO */
+header{
+  position:sticky;top:0;z-index:100;background:rgba(245,241,225,.96);
+  backdrop-filter:blur(8px);border-bottom:1px solid rgba(187,173,162,.35);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:15px 40px;max-width:1400px;margin:0 auto}
+.marca{font-size:1.32rem;font-weight:700;letter-spacing:.01em;text-decoration:none}
+.marca i{font-style:normal;color:var(--terracota)}
+.nav ul{display:flex;gap:34px;list-style:none;align-items:center}
+.nav ul a{font-size:.79rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;text-decoration:none}
+.nav ul a:hover{color:var(--terracota)}
+
+/* HERO estatico, sem animacao, sem lazy */
+.hero{position:relative;min-height:82vh;display:flex;align-items:flex-end;overflow:hidden}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(68,35,9,.30) 0%,rgba(68,35,9,.52) 55%,rgba(68,35,9,.86) 100%);
+}
+.hero__c{position:relative;z-index:2;width:100%;padding:0 40px 76px;max-width:1260px;margin:0 auto}
+.hero h1{color:#fff;max-width:19ch}
+.hero__sub{color:rgba(255,255,255,.9);font-size:1.1rem;max-width:52ch;margin-top:26px}
+.hero__btn{margin-top:36px;display:flex;gap:14px;flex-wrap:wrap}
+
+/* FAIXA lema */
+.faixa{
+  background:var(--marrom);color:var(--amarelo);text-align:center;
+  padding:26px 40px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;
+  font-size:clamp(.78rem,1.5vw,1rem);
+}
+
+/* DUAS COLUNAS */
+.duas{display:grid;grid-template-columns:1fr 1fr;gap:76px;align-items:center}
+.duas--foto img{border-radius:var(--raio);aspect-ratio:4/5;object-fit:cover;width:100%}
+
+/* PORTAS: padrao Oré, foto no centro, publicos ladeando */
+.portas{display:grid;grid-template-columns:1fr 340px 1fr;gap:52px;align-items:center;margin-top:60px}
+.porta{border-top:4px solid var(--terracota);padding-top:26px}
+.porta--o{border-top-color:var(--oliva)}
+.porta p{font-size:.97rem;margin-top:10px;color:rgba(68,35,9,.78)}
+.porta a{
+  display:inline-block;margin-top:18px;font-size:.79rem;font-weight:700;
+  letter-spacing:.07em;text-transform:uppercase;color:var(--terracota);text-decoration:none;
+}
+.porta--o a{color:#7d7430}
+.portas__foto img{border-radius:var(--raio);aspect-ratio:3/4;object-fit:cover;width:100%}
+
+/* NUMEROS estaticos, escritos no HTML */
+.nums{display:grid;grid-template-columns:repeat(4,1fr);gap:34px;margin-top:54px}
+.num b{display:block;font-size:clamp(2.1rem,3.6vw,3rem);font-weight:700;line-height:1;color:var(--amarelo)}
+.num span{display:block;margin-top:12px;font-size:.9rem;line-height:1.45;color:rgba(255,255,255,.8)}
+.fonte{margin-top:38px;font-size:.76rem;color:rgba(255,255,255,.5);letter-spacing:.03em}
+
+/* FRENTES */
+.frentes{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:52px}
+.frente{
+  background:#fff;border-radius:var(--raio);padding:44px 36px;
+  display:flex;flex-direction:column;border-top:5px solid var(--terracota);
+}
+.frente:nth-child(2){border-top-color:var(--amarelo)}
+.frente:nth-child(3){border-top-color:var(--oliva)}
+.frente p{font-size:.96rem;color:rgba(68,35,9,.78);flex-grow:1}
+.frente ul{margin:16px 0 0;padding-left:18px;font-size:.9rem;color:rgba(68,35,9,.7)}
+.frente ul li{margin-bottom:5px}
+.frente a{
+  margin-top:26px;font-size:.79rem;font-weight:700;letter-spacing:.07em;
+  text-transform:uppercase;color:var(--terracota);text-decoration:none;
+}
+
+/* REDE: as siglas */
+.siglas{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px}
+.siglas span{
+  border:1px solid rgba(255,255,255,.28);border-radius:var(--raio);
+  padding:9px 17px;font-size:.83rem;font-weight:700;letter-spacing:.04em;
+}
+
+/* CASO */
+.caso{display:grid;grid-template-columns:1fr 1fr;align-items:stretch}
+.caso__foto{position:relative;min-height:520px}
+.caso__foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.caso__txt{background:var(--oliva);color:#fff;padding:78px 64px;display:flex;flex-direction:column;justify-content:center}
+.caso__txt .kicker{color:rgba(255,255,255,.72)}
+.caso__lista{list-style:none;margin-top:26px}
+.caso__lista li{padding:13px 0;border-top:1px solid rgba(255,255,255,.25);font-size:.99rem}
+
+/* CREDENCIAIS */
+.creds{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:46px}
+.cred{background:rgba(68,35,9,.05);border-radius:var(--raio);padding:34px 30px}
+.cred b{display:block;font-size:1.05rem;margin-bottom:8px}
+.cred p{font-size:.93rem;color:rgba(68,35,9,.74)}
+
+/* CONTRATAR */
+.vias{display:flex;flex-wrap:wrap;gap:11px;margin-top:30px}
+.vias span{background:#fff;border-radius:var(--raio);padding:11px 20px;font-size:.87rem;font-weight:700}
+
+/* FORM */
+.cta{background:var(--terracota);color:#fff}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:34px}
+.form-grid .full{grid-column:1/-1}
+.cta input,.cta select,.cta textarea{
+  width:100%;padding:16px 18px;border:1px solid rgba(255,255,255,.45);
+  background:transparent;color:#fff;border-radius:var(--raio);
+  font-family:var(--fonte);font-size:.97rem;
+}
+.cta input::placeholder,.cta textarea::placeholder{color:rgba(255,255,255,.72)}
+.cta select{color:rgba(255,255,255,.72)}
+.cta select option{color:var(--marrom)}
+.cta textarea{min-height:108px;resize:vertical}
+.cta .btn--b{margin-top:20px;width:100%;border:0;font-family:var(--fonte);cursor:pointer}
+
+/* RODAPE */
+footer{background:var(--marrom);color:rgba(255,255,255,.75);padding:70px 0 34px;font-size:.9rem}
+.foot{display:grid;grid-template-columns:2fr 1fr 1fr;gap:44px}
+.foot h4{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--amarelo);margin-bottom:16px;font-weight:700}
+.foot ul{list-style:none}
+.foot ul li{margin-bottom:9px}
+.foot a{text-decoration:none}
+.foot a:hover{color:var(--amarelo)}
+.foot__base{
+  margin-top:52px;padding-top:26px;border-top:1px solid rgba(255,255,255,.15);
+  font-size:.76rem;color:rgba(255,255,255,.5);
+}
+
+@media(max-width:960px){
+  .duas,.caso,.foot{grid-template-columns:1fr;gap:44px}
+  .portas{grid-template-columns:1fr;gap:36px}
+  .portas__foto{order:-1}
+  .frentes,.creds{grid-template-columns:1fr}
+  .nums{grid-template-columns:1fr 1fr;gap:28px}
+  .caso__txt{padding:52px 32px}
+  .caso__foto{min-height:320px}
+}
+@media(max-width:768px){
+  .container,.nav,.hero__c{padding-left:22px;padding-right:22px}
+  .secao{padding:76px 0}
+  .nav ul{display:none}
+  .form-grid{grid-template-columns:1fr}
+  .btn{width:100%;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a href="#" class="marca">paaps<i>.</i></a>
+    <ul>
+      <li><a href="#frentes">Formações</a></li>
+      <li><a href="#frentes">Projeto PAAPS</a></li>
+      <li><a href="#frentes">Emergências</a></li>
+      <li><a href="#contato" class="btn btn--t" style="padding:12px 22px">Falar com a gente</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <!-- 1. HERO : estatico, sem animacao, sem lazy-load -->
+  <section class="hero">
+    <img src="img/hero.jpg" alt="Roda de conversa com trabalhadoras da rede pública em território">
+    <div class="hero__c">
+      <div class="marcadores"><span class="m-a"></span><span class="m-t"></span><span class="m-o"></span></div>
+      <h1>Cuidamos de quem trabalha na Rede&nbsp;Pública para uma Saúde Mental Coletiva.</h1>
+      <p class="hero__sub">
+        A rede pública já é uma política de cuidado. A PAAPS é a rede que cuida dela por cima:
+        formação, dispositivos de cuidado coletivo e redesenho do fluxo entre as equipes.
+      </p>
+      <div class="hero__btn">
+        <a href="#contato" class="btn btn--b">Conversar sobre o meu município</a>
+        <a href="#frentes" class="btn" style="border:2px solid rgba(255,255,255,.6);color:#fff">Ver o que fazemos</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="faixa">Cuidar da Ponta, impactar o mundo.</div>
+
+  <!-- 2. O QUE E A PAAPS -->
+  <section class="secao">
+    <div class="container duas">
+      <div>
+        <span class="kicker">Quem somos</span>
+        <h2>Uma supraestrutura de cuidado para a rede que já cuida.</h2>
+        <p class="lead" style="max-width:100%">
+          Quem sustenta o sistema público vive uma crise silenciosa. Cuida dos mais vulneráveis
+          enquanto ninguém cuida dele. As respostas de sempre não alcançam: treinamento corporativo
+          importado e atendimento individual isolado ignoram que a ferida é coletiva e institucional.
+        </p>
+        <p style="margin-top:22px;color:rgba(68,35,9,.78)">
+          A PAAPS constrói sistemas humanos vivos de cuidado coletivo dentro do setor público.
+          Não chegamos com um pacote pronto: lemos a rede do município, nomeamos o que a adoece e
+          desenhamos com as equipes os dispositivos de que aquela rede precisa.
+        </p>
+        <p style="margin-top:26px;font-size:1.2rem;font-weight:700;line-height:1.35;color:var(--terracota)">
+          Para cuidar em rede a gente precisa aprender a ser cuidado em rede.
+        </p>
+      </div>
+      <div class="duas--foto">
+        <img src="img/rede.jpg" alt="Formação dentro do território, com profissionais da rede pública" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. AS DUAS PORTAS : padrao Oré -->
+  <section class="secao secao--branca">
+    <div class="container">
+      <div style="max-width:60ch">
+        <span class="kicker">Para quem trabalhamos</span>
+        <h2>Duas organizações, o mesmo compromisso.</h2>
+        <p style="color:rgba(68,35,9,.78)">
+          O que entregamos é o mesmo. O que muda é o caminho para chegar até ele.
+        </p>
+      </div>
+
+      <div class="portas">
+        <div class="porta">
+          <span class="kicker">Porta 1</span>
+          <h3>Gestão pública</h3>
+          <p>
+            Prefeituras, secretarias de saúde, assistência social e educação, consórcios e
+            associações de municípios. Trabalhamos com quem faz a política pública acontecer na
+            ponta: postinho, CRAS, CREAS, escola, vigilância e guarda.
+          </p>
+          <p style="margin-top:12px">
+            Entramos pelos caminhos que a lei já prevê, sem inventar atalho: inexigibilidade,
+            dispensa, licitação, CPSI e UST.
+          </p>
+          <a href="#contato">Levar a PAAPS para o meu município</a>
+        </div>
+
+        <div class="portas__foto">
+          <img src="img/portas.jpg" alt="Profissionais da rede pública em atividade de campo" loading="lazy">
+        </div>
+
+        <div class="porta porta--o">
+          <span class="kicker" style="color:#7d7430">Porta 2</span>
+          <h3>ONGs e projetos sociais</h3>
+          <p>
+            Institutos, associações, projetos sociais e organizações que atendem população em
+            situação de vulnerabilidade e sustentam equipes expostas à violência todos os dias.
+          </p>
+          <p style="margin-top:12px">
+            O desgaste é o mesmo do serviço público, com menos estrutura para sustentá-lo.
+            Desenhamos o cuidado no tamanho do projeto, do edital e da equipe que existe.
+          </p>
+          <a href="#contato">Falar sobre a minha organização</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. A DOR, com numero estatico no HTML -->
+  <section class="secao secao--escura">
+    <div class="container">
+      <div style="max-width:62ch">
+        <span class="kicker kicker--clara">O que está acontecendo com as equipes</span>
+        <h2>Faltas e afastamentos por transtorno de saúde mental bateram recorde.</h2>
+        <p style="color:rgba(255,255,255,.82)">
+          E antes de qualquer licença, o sofrimento já trava o serviço: a comunicação entre as
+          equipes emperra, o encaminhamento se perde, o colega absorve a carga de quem faltou, e
+          quem fica passa a trabalhar sob remédio psiquiátrico que impacta o próprio trabalho.
+          Quem sente o resultado no fim da fila é o cidadão.
+        </p>
+      </div>
+
+      <div class="nums">
+        <div class="num">
+          <b>546.254</b>
+          <span>benefícios concedidos por transtornos mentais e comportamentais em 2025</span>
+        </div>
+        <div class="num">
+          <b>+15,66%</b>
+          <span>de aumento sobre 2024, segundo ano seguido de recorde</span>
+        </div>
+        <div class="num">
+          <b>83.321</b>
+          <span>afastamentos em Minas Gerais, o segundo estado mais atingido</span>
+        </div>
+        <div class="num">
+          <b>63,46%</b>
+          <span>são mulheres: exatamente quem sustenta a ponta da rede de cuidado</span>
+        </div>
+      </div>
+      <p class="fonte">Fonte: Ministério da Previdência Social, dados de 2025 divulgados em janeiro de 2026.</p>
+    </div>
+  </section>
+
+  <!-- 5. AS TRES FRENTES -->
+  <section class="secao" id="frentes">
+    <div class="container">
+      <div style="max-width:58ch">
+        <div class="marcadores"><span class="m-a"></span><span class="m-t"></span><span class="m-o"></span></div>
+        <span class="kicker">O que fazemos</span>
+        <h2>Três frentes, combinadas conforme a leitura da sua rede.</h2>
+        <p style="color:rgba(68,35,9,.78)">
+          Você pode contratar o projeto inteiro ou começar por uma frente só.
+        </p>
+      </div>
+
+      <div class="frentes">
+        <div class="frente">
+          <span class="kicker">Frente 1</span>
+          <h3>Formações</h3>
+          <p>
+            Formação prática, feita com estudo de caso e com o conhecimento que a equipe já tem
+            entrando na sala. Ninguém muda a própria prática assistindo a uma palestra sobre ela.
+          </p>
+          <ul>
+            <li>Fluxo, encaminhamento e matriciamento</li>
+            <li>Comunicação e construção de equipe</li>
+            <li>Reforma psiquiátrica e temas sanitaristas</li>
+            <li>Violência de gênero e saúde da mulher</li>
+            <li>Questões raciais e saúde da população negra</li>
+            <li>Saúde da população LGBTQIAPN+</li>
+          </ul>
+          <a href="#contato">Montar a formação da minha equipe</a>
+        </div>
+
+        <div class="frente">
+          <span class="kicker" style="color:#a8830f">Frente 2</span>
+          <h3>Projeto PAAPS no seu município</h3>
+          <p>
+            Um projeto desenhado para a sua rede, composto de dispositivos de cuidado. A leitura
+            decide o que entra: se a lida com a violência diária está pesada, entra plantão; se o
+            fluxo entre as equipes travou, entram grupos e um encontro de integração.
+          </p>
+          <ul>
+            <li>Psicoterapia para servidores, presencial e online</li>
+            <li>Grupo PAAPS: grupos terapêuticos</li>
+            <li>Plantão Psicológico PAAPS</li>
+            <li>Construção de equipe, de fluxos e de processos</li>
+          </ul>
+          <a href="#contato">Desenhar o projeto da minha rede</a>
+        </div>
+
+        <div class="frente">
+          <span class="kicker" style="color:#7d7430">Frente 3</span>
+          <h3>Emergências e violências</h3>
+          <p>
+            Equipe de psicologia convocada para atuar em situação de emergência, acidente ou
+            violência que atinge um território. Atuação em frentes de rede, com método, ao lado
+            das equipes que já estão no chão.
+          </p>
+          <ul>
+            <li>Acionamento por gestão pública ou organização</li>
+            <li>Trabalho articulado com a rede local</li>
+            <li>Cuidado com quem atende e com quem foi atingido</li>
+          </ul>
+          <a href="#contato">Acionar a PAAPS</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. POR QUE A PAAPS CONSEGUE -->
+  <section class="secao secao--escura">
+    <div class="container duas">
+      <div>
+        <span class="kicker kicker--clara">Por que a PAAPS consegue</span>
+        <h2>A gente conhece a rede por dentro, com nome e sigla.</h2>
+        <p style="color:rgba(255,255,255,.82)">
+          Somos da Psicologia Social. Sabemos o que é atenção básica e o que muda quando o caso
+          sobe de complexidade. Sabemos por que um encaminhamento se perde entre o postinho e o
+          CAPS, e o que acontece com a família enquanto isso.
+        </p>
+        <div class="siglas">
+          <span>Postinho e Atenção Básica</span><span>CAPS</span><span>CRAS</span>
+          <span>CREAS</span><span>Proteção Social Básica</span><span>Média complexidade</span>
+          <span>Alta complexidade</span><span>Escola</span><span>Matriciamento</span>
+        </div>
+        <p style="margin-top:30px;color:rgba(255,255,255,.82)">
+          Usamos a psicologia social e sistêmica para alinhar esse processo entre as equipes e
+          melhorar a comunicação entre elas. Para que o cidadão não precise sentir na pele os
+          defeitos de uma rede que não consegue se comunicar nem efetivar o próprio fluxo.
+        </p>
+      </div>
+      <div class="duas--foto">
+        <img src="img/equipe.jpg" alt="Trabalho com equipe da rede pública municipal" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. O CASO -->
+  <section class="caso">
+    <div class="caso__foto">
+      <img src="img/case.jpg" alt="Campo em Desterro do Melo, interior de Minas Gerais" loading="lazy">
+    </div>
+    <div class="caso__txt">
+      <span class="kicker">Prova de campo</span>
+      <h2 style="color:#fff">Um ano dentro da rede inteira de uma cidade.</h2>
+      <p style="color:rgba(255,255,255,.9)">
+        Em Desterro do Melo, no interior rural de Minas, um município de cerca de 3 mil habitantes
+        com uma escola municipal, uma escola estadual e um único posto de saúde, a PAAPS construiu
+        do zero um programa de cuidado em rede, tecido entre educação, saúde, prefeitura e
+        agricultura familiar.
+      </p>
+      <ul class="caso__lista">
+        <li>Um ano inteiro de atuação de campo em 6 instituições</li>
+        <li>Mais de 120 pais e cuidadores numa única dinâmica de Dia da Família</li>
+        <li>Os 3 candidatos a prefeito assinaram juntos a Carta de Compromisso Melo 2050</li>
+        <li>Documentado do início ao fim: diários de campo, registros e supervisão</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 8. QUEM ENTREGA -->
+  <section class="secao">
+    <div class="container">
+      <div style="max-width:58ch">
+        <span class="kicker">Quem entrega</span>
+        <h2>Uma rede de profissionais, formada na metodologia da PAAPS.</h2>
+        <p style="color:rgba(68,35,9,.78)">
+          Não é uma consultora sozinha com um catálogo de cursos. Montamos a equipe conforme o que
+          a sua rede precisa, e todo mundo que entra passa pela nossa formação antes de entrar em
+          campo.
+        </p>
+      </div>
+      <div class="creds">
+        <div class="cred">
+          <b>Consultores com mais de 25 anos</b>
+          <p>Carreira executiva e experiência de gestão aplicada ao desafio da rede pública.</p>
+        </div>
+        <div class="cred">
+          <b>Professores e educadores</b>
+          <p>Profissionais com mestrado ou doutorado, vindos de universidades e da pesquisa.</p>
+        </div>
+        <div class="cred">
+          <b>Lastro científico próprio</b>
+          <p>Nosso modelo nasce de pesquisa revisada por pares, com dados verificáveis e falseáveis.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. COMO SE CONTRATA -->
+  <section class="secao secao--branca">
+    <div class="container duas">
+      <div>
+        <span class="kicker">Como se contrata</span>
+        <h2>A parte burocrática já está resolvida.</h2>
+        <p style="color:rgba(68,35,9,.78)">
+          A PAAPS é operada pela DIGGING, empresa ativa desde 2003, com CNPJ regular e documentação
+          de habilitação em dia. A contratação acontece pelos caminhos que a legislação já prevê,
+          e a gente ajuda o seu setor de compras a escolher o mais adequado.
+        </p>
+        <div class="vias">
+          <span>Inexigibilidade</span><span>Dispensa</span><span>Licitação</span>
+          <span>CPSI</span><span>UST</span><span>Edital e emenda</span>
+        </div>
+      </div>
+      <div>
+        <span class="kicker">Como começa</span>
+        <h2 style="font-size:1.6rem">Uma conversa de 45 minutos, sem custo.</h2>
+        <p style="color:rgba(68,35,9,.78)">
+          A primeira conversa serve para entender o desenho da sua rede e onde o desgaste está
+          concentrado. Dela sai uma leitura inicial e uma proposta de composição. Sem compromisso
+          de contratação, e sem custo nenhum.
+        </p>
+        <a href="#contato" class="btn btn--linha" style="margin-top:26px">Agendar a conversa</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. FORMULARIO -->
+  <section class="secao cta" id="contato">
+    <div class="container duas" style="align-items:start">
+      <div>
+        <div class="marcadores"><span class="m-a"></span><span style="background:#fff"></span><span class="m-o"></span></div>
+        <h2 style="color:#fff">Vamos olhar para a sua rede.</h2>
+        <p style="color:rgba(255,255,255,.9);max-width:44ch">
+          Conte onde dói. A gente responde com uma leitura inicial e com os caminhos possíveis para
+          a sua realidade, seja prefeitura, seja projeto social.
+        </p>
+        <p style="margin-top:30px;font-weight:700;color:#fff">Transformar o Cuidado no Brasil.</p>
+      </div>
+
+      <form class="form-grid" onsubmit="return false">
+        <input class="full" type="text" placeholder="Seu nome" required>
+        <input type="text" placeholder="Prefeitura ou organização" required>
+        <input type="text" placeholder="Seu cargo" required>
+        <input type="email" placeholder="E-mail institucional" required>
+        <input type="tel" placeholder="WhatsApp">
+        <select class="full">
+          <option>Como você chega até a PAAPS</option>
+          <option>Sou da gestão pública</option>
+          <option>Sou de ONG ou projeto social</option>
+          <option>Outro</option>
+        </select>
+        <select class="full">
+          <option>O que você está buscando</option>
+          <option>Uma formação para a equipe</option>
+          <option>O Projeto PAAPS para o município</option>
+          <option>Um Grupo PAAPS ou Plantão Psicológico PAAPS</option>
+          <option>Atuação em emergência ou violência</option>
+          <option>Ainda não sei, quero conversar</option>
+        </select>
+        <textarea class="full" placeholder="Em uma frase: o que está acontecendo com a sua equipe hoje?"></textarea>
+        <button class="btn btn--b full">Agendar conversa de 45 minutos</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="foot">
+      <div>
+        <a href="#" class="marca" style="color:#fff;font-size:1.5rem">paaps<i style="color:var(--amarelo)">.</i></a>
+        <p style="margin-top:18px;max-width:38ch;color:rgba(255,255,255,.7)">
+          Somos a Rede de Saúde Mental para as Políticas Públicas do futuro.
+        </p>
+      </div>
+      <div>
+        <h4>O que fazemos</h4>
+        <ul>
+          <li><a href="#frentes">Formações</a></li>
+          <li><a href="#frentes">Projeto PAAPS</a></li>
+          <li><a href="#frentes">Emergências e violências</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="#contato">Agendar conversa</a></li>
+          <li><a href="https://instagram.com/paaps.brasil" target="_blank" rel="noopener">@paaps.brasil</a></li>
+          <li><a href="https://www.linkedin.com/company/paaps/" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="foot__base">
+      PAAPS Brasil é um programa operado por DIGGING Desenvolvimento e Capacitação Organizacional e
+      Individual LTDA · CNPJ 05.983.700/0001-67 · São Paulo, SP
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
