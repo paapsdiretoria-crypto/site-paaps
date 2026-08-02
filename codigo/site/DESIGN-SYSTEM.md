@@ -26,10 +26,14 @@
 
 ### 1.1 Posicionamento
 
-**Nome completo:** Programa de Aceleração Ativa de Projetos Sociais  
-**Sigla:** PAAPS  
-**Tagline principal:** "Psicologia Social para Políticas Públicas"  
-**Posicionamento de mercado:** Startup GovTech especializada em Psicologia Social do Trabalho  
+**Nome público:** PAAPS Brasil (nome próprio, **nunca** expandido como sigla em peça pública)  
+**Descritivo do logo:** "Psicologia Social para Políticas Públicas"  
+**Posicionamento (PAAPS FrameWork, ago/2026):** "A Rede de Saúde Mental Coletiva à prova de futuro
+para o setor público." Negócio social que constrói sistemas humanos vivos de cuidado coletivo.  
+
+> ⚠️ **Atualizado em 02/08/2026.** A expansão "Programa de Aceleração Ativa de Projetos Sociais"
+> saiu de toda comunicação pública: sobrevive apenas como citação literal do contrato social em
+> documento jurídico. "Aceleração" comunica velocidade; a PAAPS comunica cuidado.  
 **Razão social:** DIGGING DESENVOLVIMENTO E CAPACITAÇÃO ORGANIZACIONAL E INDIVIDUAL LTDA  
 **CNPJ:** 05.983.700/0001-67  
 **Fundação:** 2014  

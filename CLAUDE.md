@@ -26,6 +26,14 @@ Governos, ONGs, ESG e NR01. Gestor, cuide dos seus servidores aqui."
 que assina contrato e emite nota é a **DIGGING**; o PAAPS é a metodologia proprietária dela,
 definida no contrato social como "Programa de Aceleração Ativa de Projetos Sociais".
 
+> **Nome público: PAAPS Brasil, nome próprio, sem tradução de sigla.** (Calibrado pela Mallu em
+> 02/08/2026.) A expansão "Programa de Aceleração Ativa de Projetos Sociais" existe **só dentro do
+> contrato social e de documentos jurídicos**, onde é citação literal e não pode ser alterada. Em
+> site, proposta, e-mail, carrossel, legenda, apresentação e qualquer peça pública: escrever apenas
+> **PAAPS** ou **PAAPS Brasil**, nunca a expansão. Motivo: "aceleração" comunica velocidade e
+> produtividade, exatamente o oposto do que a PAAPS faz, que é cuidado. Ver
+> `insumos-compartilhados/docs/ficha-juridica-paaps.md` para o uso jurídico.
+
 | Campo | Valor |
 |---|---|
 | Razão social | DIGGING DESENVOLVIMENTO E CAPACITACAO ORGANIZACIONAL E INDIVIDUAL LTDA |
