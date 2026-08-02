@@ -143,8 +143,9 @@ const workflow = {
       type: 'n8n-nodes-base.scheduleTrigger',
       typeVersion: 1.2,
       position: [200, 320],
-      parameters: { rule: { interval: [{ field: 'days', triggerAtHour: 7, triggerAtMinute: 30 }] } },
-      notes: 'Fuso America/Sao_Paulo. A Mallu não precisa estar acordada nem com o Mac ligado: isto roda no servidor.'
+      parameters: { rule: { interval: [{ field: 'cronExpression', expression: '30 7 * * 1-5' }] } },
+      notes:
+        'Segunda a sexta, 07:30, fuso America/Sao_Paulo. Sábado e domingo NÃO: em 01/08/2026 um e-mail saiu num sábado e a Mallu barrou. Prefeitura não lê fim de semana e e-mail frio de sábado queima o primeiro toque.'
     },
     {
       id: 'assinatura',
