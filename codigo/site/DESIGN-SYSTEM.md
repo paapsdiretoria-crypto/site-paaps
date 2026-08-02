@@ -34,6 +34,47 @@ para o setor público." Negócio social que constrói sistemas humanos vivos de 
 > ⚠️ **Atualizado em 02/08/2026.** A expansão "Programa de Aceleração Ativa de Projetos Sociais"
 > saiu de toda comunicação pública: sobrevive apenas como citação literal do contrato social em
 > documento jurídico. "Aceleração" comunica velocidade; a PAAPS comunica cuidado.  
+
+---
+
+## HIERARQUIA DE COR DO SITE (calibrada pela Mallu em 02/08/2026)
+
+**Esta hierarquia manda.** Onde o resto deste documento disser outra coisa, vale esta seção.
+
+| Ordem | Cor | Hex | Uso |
+|---|---|---|---|
+| 1 | **Bege** | `#f5f1e1` | Cor dominante. Fundo do site inteiro. |
+| 2 | **Marrom** | `#442309` | Texto e seções escuras. |
+| 3 | **Amarelo** | `#f7c31c` | Palavras-chave e destaques pontuais e profissionais. |
+| 4 | **Verde oliva** | `#aea349` | Fundos menos aparentes, detalhes, cor chapada. |
+| 5 | **Terracota** | `#cb4710` | Bem secundária. Uso raro. |
+| 6 | **Roxo / lilás** | `#bcb6f2` | Quase nunca. |
+
+**Correção do que estava escrito antes:** terracota **não** é mais o CTA primário nem a cor de link
+padrão. CTA primário é marrom, com amarelo em destaque.
+
+### Texto sobre foto
+Sempre **bege** ou **amarelo**. Se a foto for clara, marrom.
+Título sobre foto: **League Spartan, CAIXA ALTA**, sobre fundo preto com **70% de transparência**,
+leve, só o suficiente para escurecer a foto e garantir leitura.
+
+### Texto em Helvetica
+Marrom, e pontualmente verde oliva.
+
+### Tipografia
+Helvetica (Nimbus Sans local) no corpo, pesos 400 e 700, **letter-spacing 0**.
+League Spartan em título. Evermore em palavra-chave.
+As três embutidas por `@font-face` a partir de `insumos-compartilhados/nucleo-comum/fontes/`.
+**Nunca Google Fonts.**
+
+### Legenda de foto: obrigatória, sem exceção
+- Foto própria: nome do case. Ex.: *Bela Vista de Minas, Minas Gerais : capacitação de equipe*
+- Foto de terceiro: crédito ao fotógrafo. Ex.: *Foto: Radilson Carlos Gomes, fotógrafo do SUS*
+- Autoria não localizada: aplicar a foto com legenda e **sinalizar a pendência na entrega**
+
+**Radilson Carlos Gomes é o fotógrafo do SUS** cujas imagens formam a espinha visual do site.
+Acervo em `insumos-compartilhados/fotos-radilson/` (33 fotos, 2560px).
+
 **Razão social:** DIGGING DESENVOLVIMENTO E CAPACITAÇÃO ORGANIZACIONAL E INDIVIDUAL LTDA  
 **CNPJ:** 05.983.700/0001-67  
 **Fundação:** 2014  
