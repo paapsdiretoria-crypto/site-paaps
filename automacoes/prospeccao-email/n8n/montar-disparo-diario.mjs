@@ -255,12 +255,18 @@ const workflow = {
         nodeCredentialType: 'notionApi',
         sendBody: true,
         specifyBody: 'json',
-        jsonBody: '={{ JSON.stringify({ properties: { "Estado": { select: { name: "Enviada" } } } }) }}',
+        jsonBody: `={{ JSON.stringify({
+  properties: {
+    "Estado": { select: { name: "Enviada" } },
+    "Enviada em": { date: { start: new Date().toISOString() } }
+  }
+}) }}`,
         options: {}
       },
       credentials: { notionApi: CRED_NOTION },
       onError: 'continueRegularOutput',
-      notes: 'Tira a carta da fila. Sem isto ela sairia de novo amanhã.'
+      notes:
+        'Tira a carta da fila e carimba a hora. O SMTP não deixa cópia na caixa de Enviados, então ESTE registro é o único comprovante que a Mallu consegue ler: a página guarda o texto que saiu, para quem e quando.'
     },
     {
       id: 'atividade',
@@ -328,6 +334,55 @@ const workflow = {
       position: [1300, 180],
       parameters: {},
       notes: 'Chega aqui também nos dias em que nenhuma carta está aprovada. Dia sem envio é resultado válido.'
+    },
+    {
+      id: 'enviadas_hoje',
+      name: 'Buscar o que saiu hoje',
+      type: 'n8n-nodes-base.httpRequest',
+      typeVersion: 4.2,
+      position: [1520, 180],
+      parameters: {
+        method: 'POST',
+        url: `https://api.notion.com/v1/databases/${DB_CARTAS}/query`,
+        authentication: 'predefinedCredentialType',
+        nodeCredentialType: 'notionApi',
+        sendBody: true,
+        specifyBody: 'json',
+        jsonBody: JSON.stringify({
+          filter: { property: 'Estado', select: { equals: 'Enviada' } },
+          sorts: [{ property: 'Enviada em', direction: 'descending' }],
+          page_size: 20
+        }),
+        options: {}
+      },
+      credentials: { notionApi: CRED_NOTION },
+      notes: 'A fonte do aviso é o que está gravado como Enviada, não o que entrou na fila. Se um envio falhou, ele não aparece aqui, que é o correto.'
+    },
+    {
+      id: 'resumo',
+      name: 'Montar resumo',
+      type: 'n8n-nodes-base.code',
+      typeVersion: 2,
+      position: [1740, 180],
+      parameters: { jsCode: codigoResumo }
+    },
+    {
+      id: 'avisar',
+      name: 'Avisar a Mallu',
+      type: 'n8n-nodes-base.emailSend',
+      typeVersion: 2.1,
+      position: [1960, 180],
+      parameters: {
+        fromEmail: 'PAAPS Brasil <relacionamento@paaps.com.br>',
+        toEmail: 'paapsdiretoria@gmail.com',
+        subject: '={{ $json.assunto }}',
+        emailFormat: 'html',
+        html: '={{ $json.html }}',
+        options: { appendAttribution: false }
+      },
+      credentials: { smtp: CRED_SMTP },
+      onError: 'continueRegularOutput',
+      notes: 'Só sai em dia que teve envio. Dia sem carta não vira e-mail, senão o aviso vira ruído e ela para de ler.'
     }
   ],
   connections: {
