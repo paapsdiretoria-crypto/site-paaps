@@ -127,6 +127,49 @@ const assinatura = {
 const carta = $('Uma de cada vez').item.json;
 return [{ json: { ...carta, html }, binary: { assinatura } }];`;
 
+const codigoResumo = `// Monta o aviso do dia. Sai só se alguma carta saiu de verdade.
+const hoje = new Date().toLocaleDateString('sv-SE', { timeZone: 'America/Sao_Paulo' }); // AAAA-MM-DD
+
+const linhas = ($input.first().json.results || [])
+  .map((p) => {
+    const pr = p.properties;
+    const env = pr['Enviada em'] && pr['Enviada em'].date ? pr['Enviada em'].date.start : null;
+    if (!env) return null;
+    const dia = new Date(env).toLocaleDateString('sv-SE', { timeZone: 'America/Sao_Paulo' });
+    if (dia !== hoje) return null;
+    return {
+      titulo: pr['Carta'].title[0] ? pr['Carta'].title[0].plain_text : 'sem nome',
+      para: pr['Para'] ? pr['Para'].email : '',
+      assunto: pr['Assunto'] && pr['Assunto'].rich_text[0] ? pr['Assunto'].rich_text[0].plain_text : '',
+      hora: new Date(env).toLocaleTimeString('pt-BR', { timeZone: 'America/Sao_Paulo', hour: '2-digit', minute: '2-digit' }),
+      link: 'https://www.notion.so/' + p.id.replace(/-/g, '')
+    };
+  })
+  .filter((l) => l !== null);
+
+// Dia sem envio não vira e-mail. Aviso que chega todo dia sem novidade deixa de ser lido.
+if (!linhas.length) return [];
+
+const itens = linhas
+  .map(
+    (l) =>
+      '<li style="margin:0 0 14px 0;"><b>' + l.titulo + '</b><br>' +
+      'para ' + l.para + ', às ' + l.hora + '<br>' +
+      '<i>' + l.assunto + '</i><br>' +
+      '<a href="' + l.link + '">ler a carta que saiu</a></li>'
+  )
+  .join('');
+
+const html =
+  '<div style="font-family:Helvetica,Arial,sans-serif;font-size:15px;color:#222;line-height:1.5;">' +
+  '<p>Saíram ' + linhas.length + (linhas.length === 1 ? ' carta' : ' cartas') + ' hoje de manhã:</p>' +
+  '<ul style="padding-left:18px;">' + itens + '</ul>' +
+  '<p style="color:#666;font-size:13px;">O texto de cada uma está na página do Notion pelo link acima. ' +
+  'O servidor de e-mail não guarda cópia em Enviados, então esse registro é o comprovante.</p>' +
+  '</div>';
+
+return [{ json: { assunto: 'PAAPS: ' + linhas.length + (linhas.length === 1 ? ' carta saiu' : ' cartas saíram') + ' hoje', html } }];`;
+
 const workflow = {
   name: NOME,
   settings: {
@@ -407,7 +450,10 @@ const workflow = {
     'Carta: Aprovada -> Enviada': { main: [[{ node: 'CRM: registrar Atividade PROSPECÇÃO', type: 'main', index: 0 }]] },
     'CRM: registrar Atividade PROSPECÇÃO': { main: [[{ node: 'CRM: Alvo -> Cadastrado', type: 'main', index: 0 }]] },
     'CRM: Alvo -> Cadastrado': { main: [[{ node: NOME_ESPERA, type: 'main', index: 0 }]] },
-    [NOME_ESPERA]: { main: [[{ node: 'Uma de cada vez', type: 'main', index: 0 }]] }
+    [NOME_ESPERA]: { main: [[{ node: 'Uma de cada vez', type: 'main', index: 0 }]] },
+    'Dia concluído': { main: [[{ node: 'Buscar o que saiu hoje', type: 'main', index: 0 }]] },
+    'Buscar o que saiu hoje': { main: [[{ node: 'Montar resumo', type: 'main', index: 0 }]] },
+    'Montar resumo': { main: [[{ node: 'Avisar a Mallu', type: 'main', index: 0 }]] }
   }
 };
 
