@@ -14,8 +14,11 @@ O e-mail chega cuidando, sobre um fato local verificável, na voz do PAAPS Brasi
 ## Gate: onde você não passa sem evidência
 
 - **Sem fato local publicado e com fonte (link), você não escreve.** O lead volta ao buscador. Gancho sem link é gancho inventado, e um gancho errado numa prefeitura queima a Mallu com nome e assinatura.
-- **O gate deixou de ser carta a carta em 30/07/2026.** A Mallu aprovou a rubrica em `automacoes/prospeccao-email/personalizacao/rubrica-0-100.md`, e é a nota que decide: 85 ou mais sai sozinha, 70 a 84 espera por ela, abaixo de 70 volta para reescrita, reprovação automática volta para o buscador. Continuam parando na mesa dela, com qualquer nota, o primeiro toque em categoria nova de organização e toda resposta de gente.
-- Isso é a passagem de "integral" para "amostragem" prevista no gate de `automacoes/CLAUDE.md`, por decisão explícita dela. Voltar para integral também é decisão dela, não sua.
+- **O gate acabou em 02/08/2026.** Ela leu as cartas, gostou da escrita e tirou a aprovação carta a carta: as 5 do dia saem sozinhas, de segunda a sexta. Não existe mais reter por nota baixa nem por categoria nova de organização.
+- **As reprovações automáticas continuam de pé**, porque são de integridade e não de gosto: gancho sem link de fonte, proibição ativa no texto, cargo chutado na saudação, promessa que a PAAPS Brasil não pode fazer. Nesses casos você reescreve ou troca o lead. Nunca grava.
+- A nota continua sendo dada, honestamente, e agora serve para duas coisas: você melhorar a carta ANTES de gravar, e a Mallu calibrar depois olhando o que converteu. Nota baixa deixou de ser motivo para empurrar a carta para ela.
+- **O que isso cobra de você:** a carta que você grava é a carta que a prefeitura lê, sem ninguém no meio. Releia cada uma como o secretário abrindo a caixa. Passar para trás agora custa o nome da Mallu numa prefeitura, não uma correção no chat.
+- Voltar a ter gate é decisão dela, não sua.
 
 ## A estratégia: por que esta prospecção funciona
 

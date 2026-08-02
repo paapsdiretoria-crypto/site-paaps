@@ -84,28 +84,35 @@ na caixa, desde que a carta enderece o escopo real dele.
 
 ---
 
-## O corte: o que sai sozinho e o que espera pela Mallu
+## O corte acabou em 02/08/2026
 
-| Nota | O que a rotina faz |
+O corte de 85 durou dois dias. A Mallu leu as cartas da primeira rodada automática, aprovou a
+escrita e tirou o gate: **as 5 cartas do dia saem sozinhas, de segunda a sexta, com qualquer
+nota.** Categoria nova de organização também deixou de reter.
+
+O que ficou no lugar dele:
+
+| Situação | O que a rotina faz |
 |---|---|
-| **85 a 100** | Entra na fila e **sai sozinha**, sem passar por ninguém. |
-| **70 a 84** | **Segura e mostra para a Mallu**, com a nota e a linha do que puxou para baixo. Ela aprova, corrige ou recusa. |
-| **abaixo de 70** | Não vai para o gate. Volta para reescrita ou para o buscador, porque o problema é de matéria-prima, não de acabamento. |
-| **zerada** | Reprovação automática. Volta para o buscador. |
+| Passou nas quatro reprovações automáticas | Grava como `Aprovada` e sai no próximo dia útil, às 7h30 |
+| Reprovação automática | **Não grava.** Reescreve, ou troca o lead |
+| Carta em que quem escreve não confia | **Não grava.** Melhora antes, porque não há mais ninguém depois de você |
 
-**Por que 85.** Nas 5 cartas que saíram em 27/07, as notas foram 88, 87, 86, 82 e 74. Com
-este corte, Diamantina, Salinas e AMM teriam saído sozinhas, e Janaúba e Bocaiúva teriam
-parado na mesa da Mallu. É a proporção que ela já viveu, agora automática.
+**A nota continua existindo, e mudou de função.** Ela deixou de ser porteira e virou duas
+coisas: o sinal para melhorar a carta antes de gravar, e o dado que a Mallu cruza depois com
+o Dashboard de Funil de Conversão para saber que tipo de gancho converte. Nota inflada agora
+não engana um gate, engana a calibragem.
 
-## Duas exceções que continuam parando na mesa dela
+**O que a rodada de 31/07 mostrou:** de 5 cartas, 4 ficaram entre 79 e 84 e uma passou com
+89. Com o corte de 85, a esteira teria parado quase inteira todo dia, e a Mallu teria virado
+gargalo de novo. Duas leituras possíveis, e as duas importam: ou o corte estava apertado
+demais para os ganchos que existem no interior de Minas, ou a autonota é conservadora. Ela
+resolveu lendo as cartas, que é a única evidência que decide isso.
 
-Decididas em 30/07/2026, valem mesmo com nota 100:
+## O que continua parando na mesa dela
 
-1. **Categoria nova de organização.** Prefeitura e secretaria seguem direto. O primeiro toque
-   num tipo de instituição inédito (cooperativa, instituto, consórcio, federação) espera a
-   Mallu. Foi assim que SICOOB e AMM entraram, e o julgamento de escopo ali é dela.
-2. **Resposta de gente.** O envio é automático, a resposta não. Quem respondeu sobe na hora
-   para ela, com a ficha do lead.
+Uma coisa só: **resposta de gente.** O envio é automático, a conversa não. Quem responde sobe
+na hora, com o texto da resposta e a ficha do lead.
 
 ## Como a nota vira log de aprendizado
 
