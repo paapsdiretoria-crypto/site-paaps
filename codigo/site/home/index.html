@@ -14,14 +14,15 @@
 <header class="topo">
   <nav class="topo__nav" aria-label="Principal">
     <a class="marca" href="index.html" aria-label="PAAPS Brasil, página inicial">
-      <img src="img/logo-marrom.png" alt="PAAPS" width="132" height="54" style="height:34px;width:auto">
+      <img class="topo__logo topo__logo--escuro" src="img/logo-marrom.png" alt="PAAPS" width="132" height="54">
+      <img class="topo__logo topo__logo--claro" src="img/logo-claro.png" alt="" aria-hidden="true" width="132" height="54">
     </a>
     <button class="menu__botao" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
     </button>
     <ul class="menu" id="menu">
+      <li><a href="como-atuamos/">Cuidado ao Servidor + Integração de Rede</a></li>
       <li><a href="treinamentos/">Treinamentos</a></li>
-      <li><a href="como-atuamos/">Como Atuamos</a></li>
       <li><a href="urgencias/">Urgências e Eventos Extremos</a></li>
       <li><a href="contato/">Contato</a></li>
     </ul>
@@ -33,8 +34,8 @@
 <nav class="trilha" aria-label="Seções desta página">
   <ol>
     <li><a href="#hero"><span class="trilha__b"></span><span class="trilha__t">Quem cuidamos</span></a></li>
-    <li><a href="#elo"><span class="trilha__b"></span><span class="trilha__t">A rede que cuida da rede</span></a></li>
-    <li><a href="#escala"><span class="trilha__b"></span><span class="trilha__t">A escala do trabalho</span></a></li>
+    <li><a href="#atendimento"><span class="trilha__b"></span><span class="trilha__t">Quem sente é quem chega na porta</span></a></li>
+    <li><a href="#rede"><span class="trilha__b"></span><span class="trilha__t">A gente cuida da rede</span></a></li>
     <li><a href="#portas"><span class="trilha__b"></span><span class="trilha__t">Para quem trabalhamos</span></a></li>
     <li><a href="#frentes"><span class="trilha__b"></span><span class="trilha__t">As três frentes</span></a></li>
     <li><a href="#campo"><span class="trilha__b"></span><span class="trilha__t">Prova de campo</span></a></li>
@@ -49,78 +50,113 @@
   <!-- 1. HERO ------------------------------------------------------------ -->
   <section id="hero" data-tom="escuro" class="sobre-foto">
     <img class="sobre-foto__img" src="img/radilson/palafitas-chuva.jpg"
+         style="object-position:22% center"
          alt="Agente comunitária de saúde caminha com guarda-chuva diante de casas de palafita">
     <div class="sobre-foto__c">
-      <h1>Cuidamos de Funcionários Públicos para uma Saúde Mental Coletiva.</h1>
-      <p class="lead" style="margin-top:24px">
-        A rede pública cuida da população. A gente cuida da rede: treinamento, cuidado e
-        integração para as equipes que sustentam o seu município.
+      <h1>Cuidamos de Funcionários Públicos para um Território Transformado</h1>
+      <p class="hero__sub">A Rede da Saúde Mental Coletiva para as Políticas Públicas do futuro.</p>
+      <p class="lead" style="margin-top:22px">
+        A rede pública cuida da população.
+        <span class="grifo grifo--linha">A gente <u>cuida</u> da rede.</span><br>
+        Cuidado em Saúde Mental, Integração para a Rede e Treinamentos para as equipes do município.
       </p>
-      <div style="margin-top:32px;display:flex;gap:14px;flex-wrap:wrap">
-        <a class="btn btn--amarelo" href="contato/">Falar sobre a minha equipe</a>
+      <div style="margin-top:30px">
+        <a class="btn btn--amarelo" href="contato/">Quero falar sobre a minha equipe</a>
       </div>
 
       <div class="prova">
-        <div class="prova__i">
-          <span class="prova__n">546.254</span>
-          <span class="prova__l">benefícios por transtornos mentais concedidos em 2025, o maior número já registrado no país</span>
+        <div class="dado" tabindex="0">
+          <span class="dado__n">1 em cada <span data-conta="4">4</span></span>
+          <span class="dado__l">agentes comunitários de saúde já dá sinal de sofrimento mental.</span>
+          <div class="dado__prova" role="note">
+            Não conseguir dormir, cansaço que não passa por mais que descanse, esquecer
+            frequentemente as coisas, chorar ou perder o controle, dores sem causa, vontade de não
+            sair da cama.
+            <span class="dado__fonte">Alcântara, M. A.; Assunção, A. A. Revista Brasileira de Saúde Ocupacional, volume 41, 2016.</span>
+          </div>
         </div>
-        <div class="prova__i">
-          <span class="prova__n">83.321</span>
-          <span class="prova__l">deles em Minas Gerais, o segundo estado do Brasil nesse indicador</span>
+
+        <div class="dado" tabindex="0">
+          <span class="dado__n">o dobro</span>
+          <span class="dado__l">de chance de erros no atendimento quando o profissional está esgotado.</span>
+          <div class="dado__prova" role="note">
+            Erro de medicação, exame que se perde, encaminhamento que não sai, informação que passa
+            errada. Pesquisadores juntaram 35 estudos, com mais de 41 mil profissionais de saúde.
+            Onde o profissional está esgotado, a chance disso acontecer é <span class="forte">o dobro</span>.
+            Os dados foram levantados com médicos, e o mesmo esgotamento atinge toda a equipe.
+            <span class="dado__fonte">Hodkinson, A. e outros. British Medical Journal, volume 378, 2022.</span>
+          </div>
         </div>
-        <div class="prova__i">
-          <span class="prova__n">63,46%</span>
-          <span class="prova__l">são mulheres, exatamente quem sustenta a ponta da rede pública</span>
+
+        <div class="dado" tabindex="0">
+          <span class="dado__n">R$ 1 vira R$ <span data-conta="4">4</span></span>
+          <span class="dado__l">de retorno em saúde e em gente conseguindo trabalhar.</span>
+          <div class="dado__prova" role="note">
+            A Organização Mundial da Saúde acompanhou 36 países e calculou quanto volta para cada
+            real gasto em cuidar de depressão e ansiedade. E volta como dinheiro mesmo: menos
+            afastamento, menos faltas, menos gente saindo do serviço, mais gente dando conta do
+            trabalho.
+            <span class="dado__fonte">Chisholm, D. e outros. The Lancet Psychiatry, volume 3, número 5, 2016. Estudo conduzido pela Organização Mundial da Saúde.</span>
+          </div>
         </div>
       </div>
-      <p class="fonte-dado" style="color:rgba(245,241,225,.72)">
-        Fonte: Ministério da Previdência Social, dados de 2025 divulgados em janeiro de 2026.
-      </p>
     </div>
     <p class="legenda">Foto: Radilson Carlos Gomes, fotógrafo do SUS.</p>
   </section>
 
-  <!-- 2. O ELO ----------------------------------------------------------- -->
-  <section id="elo" data-tom="claro" class="secao">
-    <div class="container duas">
-      <div class="revela">
-        <h2>A rede pública cuida da população. A gente cuida da rede.</h2>
-        <p class="lead lead--largo">
-          O postinho, o CRAS, o CREAS, o CAPS e a escola já formam uma rede de cuidado no seu
-          município. Ela funciona porque tem gente dentro dela.
-        </p>
-        <p style="margin-top:1.2em">
-          A PAAPS trabalha com essa gente. Treina as equipes, cuida da saúde mental de quem atende
-          e faz os serviços conversarem entre si. Quando a equipe se sustenta, quem sente a
-          diferença é <span class="chave--oliva">o cidadão que chega na porta</span>.
-        </p>
+  <!-- 2. QUEM SENTE É QUEM CHEGA NA PORTA : meia tela ---------------------- -->
+  <section id="atendimento" data-tom="claro" class="meia">
+    <div class="meia__texto revela">
+      <h2>Quando a equipe está no limite, quem sente é quem chega na porta.</h2>
+      <div class="meia__lista">
+        <div class="dado dado--claro" tabindex="0">
+          <span class="dado__n">o dobro</span>
+          <span class="dado__l">
+            de chance de o atendimento sair fora do esperado, onde o profissional está esgotado.
+          </span>
+          <div class="dado__prova" role="note">
+            Atender no automático, cortar a conversa, não explicar, pular passo do procedimento.
+            Foram 40 estudos, com mais de 32 mil profissionais de saúde: onde há esgotamento, a
+            chance disso acontecer é <span class="forte">mais que o dobro</span>, e isso não é
+            desleixo do profissional: é risco psicossocial do trabalho.
+            <span class="dado__fonte">Hodkinson, A. e outros. British Medical Journal, volume 378, 2022. Os dados foram levantados com médicos.</span>
+          </div>
+        </div>
+
+        <div class="dado dado--claro" tabindex="0">
+          <span class="dado__n">mais que o dobro</span>
+          <span class="dado__l">
+            de chance de quem foi atendido sair insatisfeito, onde o profissional está esgotado.
+          </span>
+          <div class="dado__prova" role="note">
+            É a reclamação que chega na ouvidoria, na câmara e na porta da prefeitura. O esgotamento
+            da equipe não fica dentro da unidade: ele sai pela porta junto com o cidadão.
+            <span class="dado__fonte">Hodkinson, A. e outros. British Medical Journal, volume 378, 2022. Os dados foram levantados com médicos.</span>
+          </div>
+        </div>
       </div>
-      <figure class="revela revela--1" style="margin:0">
-        <img src="img/radilson/escuta-ausculta.jpg" loading="lazy"
-             alt="Profissional de saúde ausculta um senhor idoso durante atendimento"
-             style="border-radius:var(--raio)">
-        <figcaption class="legenda">Foto: Radilson Carlos Gomes, fotógrafo do SUS.</figcaption>
-      </figure>
     </div>
+    <figure class="meia__foto">
+      <img src="img/radilson/escuta-ausculta.jpg" loading="lazy"
+           alt="Profissional de saúde ausculta um senhor idoso durante atendimento">
+      <figcaption class="legenda">Foto: Radilson Carlos Gomes, fotógrafo do SUS.</figcaption>
+    </figure>
   </section>
 
-  <!-- 3. A ESCALA DO TRABALHO -------------------------------------------- -->
-  <section id="escala" data-tom="escuro" class="sobre-foto sobre-foto--media sobre-foto--uniforme">
-    <img class="sobre-foto__img" src="img/radilson/mae-coruja-pe.jpg" loading="lazy"
-         alt="Grupo de mulheres e crianças reunidas em atividade comunitária de saúde">
-    <div class="sobre-foto__c">
-      <div class="caixa caixa--larga">
-        <h2 style="font-size:clamp(1.5rem,2.4vw,2.1rem)">Quem sustenta essa rede é muita gente.</h2>
-        <p style="color:rgba(245,241,225,.9)">
-          São 265 mil agentes comunitários de saúde, 8.357 unidades de CRAS e serviços do CREAS em
-          quase 3 mil municípios. Saúde, assistência social e educação, todos os dias, na mesma
-          cidade e muitas vezes com as mesmas famílias.
-        </p>
-        <p class="fonte-dado" style="color:rgba(245,241,225,.65)">
-          Fontes: Ministério da Saúde e Censo SUAS.
-        </p>
-      </div>
+  <!-- 3. A REDE QUE CUIDA DA REDE : foto inteira, sem corte e sem véu ------ -->
+  <section id="rede" data-tom="claro" class="foto-inteira">
+    <img src="img/radilson/mae-coruja-pe.jpg" loading="lazy"
+         alt="Grupo de mulheres, muitas grávidas, e crianças reunidas em atividade comunitária de saúde">
+    <div class="foto-inteira__c revela">
+      <h2>
+        A rede pública cuida da população.<br>
+        <span class="grifo grifo--linha">A gente <u>cuida</u> da rede.</span>
+      </h2>
+      <p class="lead">
+        Postinho, CRAS, CREAS, CAPS, Escola formam a rede de cuidado do seu município.
+        A PAAPS treina as equipes, cuida da saúde mental de quem atende e faz os serviços
+        conversarem entre si.
+      </p>
     </div>
     <p class="legenda">Foto: Radilson Carlos Gomes, fotógrafo do SUS.</p>
   </section>

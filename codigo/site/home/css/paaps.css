@@ -101,6 +101,8 @@ button,input,select,textarea{font:inherit;color:inherit}
 .container{max-width:var(--max);margin:0 auto;padding-inline:var(--gutter)}
 .container--largo{max-width:1440px}
 .secao{padding-block:var(--secao)}
+/* âncoras não podem parar embaixo do menu fixo */
+section[id]{scroll-margin-top:clamp(72px,9vw,96px)}
 .secao--marrom{background:var(--marrom);color:var(--bege)}
 .secao--oliva{background:var(--oliva);color:var(--branco)}
 .secao--branca{background:var(--branco)}
@@ -132,6 +134,22 @@ p + p{margin-top:1.05em}
   font-family:var(--logo);text-transform:none;letter-spacing:.01em;
 }
 
+/* Subtítulo do hero: League Spartan caixa alta, mas ABAIXO do título e em corpo
+   de leitura. Não é chapéu: chapéu é acima, miúdo e espaçado. */
+.hero__sub{
+  font-family:var(--titulo);font-weight:700;text-transform:uppercase;
+  font-size:clamp(.95rem,1.5vw,1.24rem);line-height:1.25;letter-spacing:0;
+  color:var(--amarelo);margin-top:.7em;max-width:30ch;
+}
+
+/* Grifo: a frase inteira em amarelo com uma palavra sublinhada. */
+.grifo{color:var(--amarelo);font-weight:700}
+.grifo u{text-decoration:underline;text-underline-offset:.18em;
+  text-decoration-thickness:.07em}
+/* nunca quebra no meio: a frase é uma unidade */
+.grifo--linha{display:inline-block;white-space:nowrap}
+@media (max-width:520px){.grifo--linha{white-space:normal}}
+
 .chave{color:var(--amarelo);font-weight:700}
 .secao--marrom .chave{color:var(--amarelo)}
 .chave--oliva{color:var(--oliva);font-weight:700}
@@ -158,11 +176,28 @@ p + p{margin-top:1.05em}
 
 /* ----- 5. NAVEGAÇÃO ------------------------------------------------------ */
 
+/* Fixo, não sticky: assim a foto do hero começa no topo absoluto da tela e o
+   menu flutua por cima dela, sem barra nenhuma. */
 .topo{
-  position:sticky;top:0;z-index:900;background:rgba(245,241,225,.94);
+  position:fixed;top:0;left:0;right:0;z-index:900;background:rgba(245,241,225,.94);
   backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
   border-bottom:1px solid rgba(174,163,73,.28);
+  transition:background-color .35s var(--ease),border-color .35s var(--ease),color .35s var(--ease);
 }
+/* Sobre foto escura o menu não tem barra: só as palavras, em branco, sobre a imagem. */
+.topo--sobre-foto{
+  background:transparent;border-bottom-color:transparent;color:#fff;
+  backdrop-filter:none;-webkit-backdrop-filter:none;
+}
+.topo--sobre-foto .menu a{color:#fff}
+.topo--sobre-foto .menu a:hover{border-bottom-color:var(--amarelo)}
+.topo--sobre-foto .menu a[aria-current="page"]{border-bottom-color:#fff}
+.topo--sobre-foto .menu__botao{color:#fff}
+/* O logo troca de arquivo conforme o fundo, sem recriar nada. */
+.topo__logo{height:34px;width:auto;display:block}
+.topo__logo--claro{display:none}
+.topo--sobre-foto .topo__logo--escuro{display:none}
+.topo--sobre-foto .topo__logo--claro{display:block}
 .topo__nav{
   display:flex;align-items:center;justify-content:space-between;gap:24px;
   max-width:1440px;margin:0 auto;padding:14px var(--gutter);
@@ -278,7 +313,8 @@ p + p{margin-top:1.05em}
 .sobre-foto--uniforme::after{background:rgba(0,0,0,.70)}
 .sobre-foto__c{
   position:relative;width:100%;max-width:var(--max);margin:0 auto;
-  padding:clamp(60px,10vw,110px) var(--gutter) clamp(72px,9vw,104px);color:var(--bege);
+  /* o topo já reserva a altura do menu fixo, que flutua por cima da foto */
+  padding:clamp(112px,13vw,160px) var(--gutter) clamp(72px,9vw,104px);color:var(--bege);
 }
 .sobre-foto h1,.sobre-foto h2{color:var(--bege);max-width:20ch}
 /* No hero o título divide a tela com a faixa de prova: escala própria. */
@@ -337,6 +373,54 @@ figure{margin:0}
 .sobre-foto--clara .prova__n{color:var(--marrom)}
 .sobre-foto--clara .prova__l{color:var(--tinta-70)}
 
+/* ----- 8b2. DADO COM PROVA : número, frase e fonte no hover -------------- */
+/* Regra dura da Mallu: o número e a linha de baixo se sustentam sozinhos.
+   O hover aprofunda e prova, nunca completa. No toque abre e fecha por clique.
+   Por teclado abre com Tab mais Enter. Nunca fecha por tempo.                */
+
+/* O dado inteiro é o gatilho: passou o mouse, a prova aparece sozinha.
+   Nada de botão, nada de clique no desktop. */
+.dado{position:relative;max-width:30ch}
+.dado__n{
+  display:block;font-family:var(--titulo);font-weight:800;line-height:1;
+  font-size:clamp(1.9rem,3.4vw,2.8rem);color:var(--amarelo);letter-spacing:-.01em;
+}
+/* o pontilhado é o sinal de que existe informação ali */
+.dado__l{
+  display:block;margin-top:10px;font-size:.92rem;line-height:1.45;
+  border-bottom:1px dotted currentColor;padding-bottom:.35em;
+  transition:border-color .2s var(--ease);
+}
+.sobre-foto .dado__l{color:rgba(245,241,225,.92)}
+.dado:hover .dado__l,.dado:focus-visible .dado__l{border-bottom-color:var(--amarelo)}
+.dado:focus{outline:none}
+.dado:focus-visible{outline:3px solid var(--amarelo);outline-offset:8px;border-radius:2px}
+
+.dado__prova{
+  position:absolute;left:0;top:calc(100% + 12px);z-index:40;width:min(36ch,86vw);
+  background:rgba(46,24,6,.94);color:var(--bege);border-radius:var(--raio);
+  border:1px solid rgba(245,241,225,.16);
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  padding:18px 20px;box-shadow:0 10px 30px rgba(0,0,0,.28);
+  font-size:.86rem;line-height:1.55;
+  opacity:0;visibility:hidden;transform:translateY(-4px);
+  transition:opacity .2s var(--ease),transform .2s var(--ease),visibility .2s;
+}
+.dado:hover .dado__prova,
+.dado:focus-within .dado__prova,
+.dado.aberto .dado__prova{opacity:1;visibility:visible;transform:none}
+/* Fonte sempre na última linha, separada e em corpo menor. */
+.dado__fonte{
+  display:block;margin-top:12px;padding-top:10px;
+  border-top:1px solid rgba(245,241,225,.24);
+  font-size:.74rem;line-height:1.45;color:rgba(245,241,225,.82);
+}
+.dado--claro .dado__n{color:var(--marrom)}
+.dado--claro .dado__l{color:var(--tinta-70)}
+
+/* Destaque amarelo obrigatório em "o dobro" e afins. */
+.forte{color:var(--amarelo);font-weight:700}
+
 /* ----- 8c. CAIXA DE TEXTO SOBRE FOTO ------------------------------------- */
 /* O respiro do site não vem de trocar a cor da seção: vem destas caixas.    */
 
@@ -358,6 +442,45 @@ figure{margin:0}
   display:inline-block;padding:9px 16px;border-radius:999px;
   background:rgba(68,35,9,.88);color:var(--bege);
   font-size:.74rem;font-weight:700;letter-spacing:.02em;
+}
+
+/* ----- 8c2. MEIA TELA : texto de um lado, foto sangrando do outro -------- */
+/* A foto ocupa metade da tela de verdade, de borda a borda, sem moldura.    */
+
+.meia{display:grid;grid-template-columns:1fr 1fr;align-items:center;min-height:82svh}
+.meia__texto{padding:clamp(48px,7vw,104px) 0}
+.meia__texto > *{max-width:min(56ch,100%)}
+.meia__texto{padding-left:max(var(--gutter),calc((100vw - var(--max)) / 2));padding-right:clamp(24px,4vw,64px)}
+.meia__foto{position:relative;align-self:stretch;min-height:60svh}
+.meia__foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.meia__foto .legenda{position:absolute;right:14px;bottom:12px;margin:0;text-align:right;
+  color:rgba(245,241,225,.72);max-width:34ch;text-shadow:0 1px 6px rgba(0,0,0,.6)}
+.meia__lista{display:grid;gap:clamp(26px,3vw,40px);margin-top:clamp(26px,3vw,40px)}
+
+/* ----- 8c3. FOTO INTEIRA : sem corte e sem véu --------------------------- */
+/* Regra da Mallu para a foto das mulheres: presente, sem ser cortada e sem ser
+   escurecida, sem bloco por cima. A legibilidade vem de sombra no próprio tipo
+   e de um degradê curtíssimo só no pé do texto, nunca de um véu na foto toda.  */
+
+.foto-inteira{position:relative;isolation:isolate;background:var(--bege)}
+.foto-inteira > img{width:100%;height:auto;display:block}
+.foto-inteira__c{
+  position:absolute;left:0;right:0;bottom:0;z-index:2;
+  max-width:var(--max);margin:0 auto;
+  padding:clamp(44px,7vw,96px) var(--gutter) clamp(52px,7vw,92px);
+  color:#fff;
+}
+/* degradê só atrás do texto, subindo pouco: a foto continua legível inteira */
+.foto-inteira__c::before{
+  content:"";position:absolute;inset:auto 0 0 0;height:190%;z-index:-1;
+  background:linear-gradient(to top,rgba(0,0,0,.72) 0%,rgba(0,0,0,.42) 42%,rgba(0,0,0,0) 100%);
+}
+.foto-inteira h2{color:#fff;max-width:22ch;text-shadow:0 2px 18px rgba(0,0,0,.55)}
+.foto-inteira .lead{color:rgba(255,255,255,.94);max-width:56ch;margin-top:1em;
+  text-shadow:0 1px 12px rgba(0,0,0,.6)}
+.foto-inteira .legenda{
+  position:absolute;right:var(--gutter);top:16px;z-index:3;margin:0;text-align:right;
+  color:rgba(255,255,255,.75);text-shadow:0 1px 8px rgba(0,0,0,.7);max-width:36ch;
 }
 
 /* ----- 8d. PORTAS DE PÚBLICO (foto ao centro, cards ladeando) ------------ */
@@ -532,6 +655,12 @@ figure{margin:0}
   .frente__foto img{aspect-ratio:16/10}
   .caixa{max-width:none}
   .chip{left:16px;bottom:16px;font-size:.68rem;padding:7px 13px}
+  .meia{grid-template-columns:1fr;min-height:0}
+  .meia__texto{padding:clamp(40px,8vw,64px) var(--gutter)}
+  .meia__foto{min-height:56svh;order:-1}
+  .dado__prova{position:static;opacity:1;visibility:visible;transform:none;
+    box-shadow:none;margin-top:12px;width:auto;display:none}
+  .dado.aberto .dado__prova{display:block}
 }
 @media (max-width:480px){
   .sobre-foto{min-height:100svh}
