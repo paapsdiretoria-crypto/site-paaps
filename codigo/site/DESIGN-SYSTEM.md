@@ -37,6 +37,46 @@ para o setor público." Negócio social que constrói sistemas humanos vivos de 
 
 ---
 
+## PROIBIDO: CHAPÉU / EYEBROW ACIMA DO TÍTULO (Mallu, 02/08/2026)
+
+**Esta proibição é absoluta e vale para site, carrossel, apresentação e qualquer peça.**
+
+Está proibido colocar acima de um título uma linha curta em **CAIXA ALTA, com tracking largo,
+em tamanho pequeno**, para dizer de que seção ou assunto se trata. É o padrão conhecido como
+*eyebrow*, *kicker* ou chapéu, e no design system antigo era a classe `.label-secao`.
+
+Motivo: virou a assinatura visual mais reconhecível de site gerado por inteligência artificial.
+Toda landing page automática abre com "NOSSOS SERVIÇOS" espaçado em cima do h2. A PAAPS não pode
+parecer feita por robô.
+
+**Fica revogado:** `.label-secao`, `.label-secao--branca`, `.label-secao--amarela` e a classe
+`.rotulo` da folha nova. Nenhuma delas pode voltar ao HTML.
+
+### O que fazer no lugar
+
+A função do chapéu era **localizar o leitor**. Essa função não some, ela muda de lugar:
+
+1. **No site: a trilha de capítulos** (`.trilha`), uma barra fixa na lateral direita, de cima a
+   baixo, com um traço por seção, na altura proporcional ao tamanho real de cada uma. O traço da
+   seção atual se preenche conforme a pessoa desce, e o nome da seção aparece ao lado. Clicar leva
+   até ela. É o mesmo princípio dos capítulos de um vídeo do YouTube. Implementada em
+   `codigo/site/home/css/paaps.css` seção 5b e `js/site.js`.
+2. **Se um bloco realmente precisa de um rótulo,** ele vira um `h3` de verdade, na escala normal de
+   título, em caixa alta como todo título do site. Não é um mini-título espaçado: é um título.
+3. **Na maioria dos casos, apague e não reponha.** Se o `h2` já diz do que se trata, o chapéu era
+   redundância. Quase sempre era.
+
+### Como reconhecer a violação
+
+Se o elemento tem, ao mesmo tempo, `text-transform: uppercase` + `letter-spacing` acima de `0.1em`
++ `font-size` abaixo de `0.85rem` + posição imediatamente acima de um `h1`, `h2` ou `h3`, é chapéu.
+Reprovado.
+
+Exceções que continuam válidas, porque não são chapéu: rótulo de campo de formulário (`label`),
+texto de botão, item de navegação, e o `.chip` de legenda pinado na foto.
+
+---
+
 ## HIERARQUIA DE COR DO SITE (calibrada pela Mallu em 02/08/2026)
 
 **Esta hierarquia manda.** Onde o resto deste documento disser outra coisa, vale esta seção.

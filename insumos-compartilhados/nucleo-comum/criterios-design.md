@@ -58,7 +58,15 @@ Este arquivo é a lista de checagem que o **Crítico de Design** aplica antes de
 - ❌ Logo colorido sobre fundo escuro
 - ❌ Foto de stock genérico (handshake, laptop aberto, sorriso corporativo em escritório)
 - ❌ Texto sem crédito de fotógrafo quando há foto
-- ❌ Texto sobreposto sobre área clara sem overlay — ilegível
+- ❌ Texto sobreposto sobre área clara sem overlay : ilegível
+- ❌ **Chapéu (eyebrow) acima do título.** Linha curta em CAIXA ALTA, tracking largo e corpo
+  pequeno, colocada acima de um título para dizer de que assunto se trata. É a assinatura visual
+  mais reconhecível de peça gerada por IA. Proibida pela Mallu em 02/08/2026, em qualquer canal.
+  **Teste objetivo:** caixa alta + `letter-spacing` acima de 0,1em + corpo abaixo de 0,85rem +
+  posição logo acima de um título. Se bate nos quatro, reprovar.
+  **No lugar:** ou o rótulo vira um título de verdade na escala normal, ou some (quase sempre era
+  redundante com o título abaixo). No site, quem localiza o leitor é a trilha de capítulos na
+  lateral. Ver `codigo/site/DESIGN-SYSTEM.md`, seção de proibição.
 
 ---
 

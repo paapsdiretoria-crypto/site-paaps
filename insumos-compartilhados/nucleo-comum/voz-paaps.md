@@ -96,6 +96,26 @@ Proibido fazer promessas, garantias ou afirmações de resultado determinado. Tr
 - Frases de relato/posicionamento ("quando a gestão ignora, a rede adoece") não precisam de fonte: são opinião declarada
 - Afirmações do tipo "1ª causa de afastamento" precisam de fonte: INSS/DATAPREV por CID
 
+### 4.7 Chapéu acima do título : BANIDO (Mallu, 02/08/2026)
+
+**Nenhuma peça abre com uma etiqueta em caixa alta acima do título.** Nada de "NOSSOS SERVIÇOS",
+"SOBRE NÓS", "O QUE FAZEMOS", "SAÚDE MENTAL" espaçado e miúdo em cima da frase principal, seja em
+slide de carrossel, seção de site, apresentação ou proposta.
+
+Motivo: é a marca registrada de peça feita por inteligência artificial. Todo gerador automático faz
+isso, e quem lê reconhece na hora. A PAAPS não pode parecer feita por robô.
+
+**No lugar:**
+- Se a informação importa, ela entra **dentro da frase**, no português falado que a Lei 7 dos
+  modelos de slide já pede. "A gente treina equipe da rede pública" diz mais que "TREINAMENTOS"
+  espaçado em cima.
+- Se é só localização, ela vira **navegação de verdade**: a numeração do slide, a trilha de
+  capítulos do site, o sumário da proposta.
+- Na dúvida, **apague**. Quase sempre o chapéu repetia o que o título já dizia.
+
+Critério de reprovação, objetivo: caixa alta, mais tracking largo, mais corpo pequeno, mais posição
+logo acima do título. Bateu nos quatro, reescreve. Detalhe visual em `criterios-design.md`.
+
 ---
 
 ## 5. As Três Personas : Para Calibrar Tom e Visual

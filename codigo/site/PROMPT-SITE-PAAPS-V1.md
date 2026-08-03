@@ -101,6 +101,17 @@
     públicos apenas quanto aos empregados regidos pela CLT; servidor estatutário fica
     formalmente fora. A ressalva é obrigatória sempre que a NR-1 aparecer.
   </item>
+  <item id="chapeu" gravidade="absoluta" data="2026-08-02">
+    Chapéu, eyebrow ou kicker acima do título: linha curta em CAIXA ALTA, tracking largo e corpo
+    pequeno, colocada acima de um título para dizer de que seção se trata. É a assinatura visual
+    mais reconhecível de peça gerada por IA. Vale para site, carrossel, apresentação e proposta.
+    Revoga as classes .label-secao e .rotulo.
+    No lugar: no site, a trilha de capítulos na lateral direita (.trilha), que mostra em que seção
+    a pessoa está enquanto desce, como capítulo de vídeo. Em peça, o rótulo vira título de verdade
+    ou some.
+    Teste de reprovação: caixa alta + letter-spacing acima de 0.1em + corpo abaixo de 0.85rem +
+    posição logo acima de um título. Bateu nos quatro, reescreve.
+  </item>
   <item id="nao_e_x">
     Estrutura "não é X, é Y": no máximo uma vez por página, e só quando o X negado for crença
     que alguém de verdade tem. Nomear por escrito quem acredita no X antes de usar.

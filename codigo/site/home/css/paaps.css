@@ -136,12 +136,20 @@ p + p{margin-top:1.05em}
 .secao--marrom .chave{color:var(--amarelo)}
 .chave--oliva{color:var(--oliva);font-weight:700}
 
-.rotulo{
-  display:block;font-family:var(--titulo);font-size:.72rem;font-weight:700;
-  letter-spacing:.2em;text-transform:uppercase;color:var(--oliva);margin-bottom:1.4em;
-}
-.secao--marrom .rotulo{color:var(--amarelo)}
-.rotulo--marrom{color:var(--marrom)}
+/* ┌──────────────────────────────────────────────────────────────────────┐
+   │ PROIBIDO: chapéu / eyebrow / label-secao                             │
+   │                                                                      │
+   │ Não criar linha curta em CAIXA ALTA com tracking largo acima do      │
+   │ título para dizer de que seção se trata. É a assinatura visual mais  │
+   │ reconhecível de site gerado por IA, e a Mallu recusou em 02/08/2026. │
+   │                                                                      │
+   │ A função de localizar o leitor NÃO sumiu: ela migrou para .trilha,   │
+   │ a barra de capítulos na lateral direita, que mostra em que seção a   │
+   │ pessoa está enquanto ela desce. Ver seção 5b desta folha.            │
+   │                                                                      │
+   │ Se um bloco precisa de um rótulo, ele vira um h3 de verdade, na      │
+   │ escala normal de título, ou o texto se reescreve sem precisar dele.  │
+   └──────────────────────────────────────────────────────────────────────┘ */
 
 .fonte-dado{
   font-size:.78rem;line-height:1.5;color:var(--tinta-55);max-width:70ch;margin-top:2.2em;
@@ -175,6 +183,65 @@ p + p{margin-top:1.05em}
   display:none;background:none;border:0;cursor:pointer;padding:10px;color:var(--marrom);
 }
 .menu__botao svg{display:block}
+
+/* ----- 5b. TRILHA : a barra de capítulos da página ----------------------- */
+/* Substitui o chapéu proibido. Fica colada na direita, de cima a baixo, com
+   um traço por seção, na altura proporcional ao tamanho real da seção. Ao
+   descer, o traço da seção atual se preenche e o nome dela aparece ao lado.
+   Sem JavaScript ela não aparece: é enriquecimento, não estrutura.          */
+
+.trilha{
+  position:fixed;right:clamp(12px,1.5vw,26px);top:50%;transform:translateY(-50%);
+  z-index:820;display:none;color:var(--marrom);
+}
+.js .trilha{display:block}
+@media (max-width:960px){.js .trilha{display:none}}
+
+.trilha ol{
+  list-style:none;display:flex;flex-direction:column;gap:7px;
+  height:min(64svh,600px);margin:0;padding:0;
+}
+.trilha li{flex:1 1 0;display:flex;min-height:14px}
+
+.trilha a{
+  position:relative;display:flex;align-items:stretch;justify-content:flex-end;
+  width:34px;padding-left:24px;text-decoration:none;
+}
+/* o traço */
+.trilha__b{
+  position:relative;width:4px;border-radius:2px;overflow:hidden;
+  background:currentColor;opacity:.38;
+  transition:opacity .25s var(--ease),width .25s var(--ease);
+  /* halo suave, para o traço não sumir sobre foto movimentada */
+  box-shadow:0 0 0 1px rgba(0,0,0,.12), 0 1px 6px rgba(0,0,0,.22);
+}
+.trilha--claro .trilha__b{box-shadow:0 0 0 1px rgba(0,0,0,.3), 0 1px 8px rgba(0,0,0,.4)}
+.trilha a:hover .trilha__b,
+.trilha a:focus-visible .trilha__b{opacity:.7;width:6px}
+/* o preenchimento de progresso, controlado pelo JS via --p */
+.trilha__b::after{
+  content:"";position:absolute;inset:0 0 auto 0;height:calc(var(--p,0) * 100%);
+  background:var(--amarelo);
+}
+.trilha li[aria-current="true"] .trilha__b{opacity:1;width:6px}
+
+/* o nome do capítulo, à esquerda do traço */
+.trilha__t{
+  position:absolute;right:16px;top:50%;transform:translateY(-50%) translateX(6px);
+  white-space:nowrap;pointer-events:none;
+  background:var(--marrom);color:var(--bege);
+  font-family:var(--corpo);font-size:.8rem;line-height:1;letter-spacing:0;
+  padding:9px 14px;border-radius:var(--raio);
+  opacity:0;transition:opacity .28s var(--ease),transform .28s var(--ease);
+  box-shadow:0 6px 22px rgba(68,35,9,.24);
+}
+.trilha a:hover .trilha__t,
+.trilha a:focus-visible .trilha__t,
+.trilha--falando li[aria-current="true"] .trilha__t{opacity:1;transform:translateY(-50%)}
+
+/* Sobre foto escura o traço precisa clarear para continuar visível. */
+.trilha--claro{color:var(--bege)}
+.trilha--claro .trilha__t{background:var(--bege);color:var(--marrom)}
 
 /* ----- 6. BOTÕES --------------------------------------------------------- */
 
