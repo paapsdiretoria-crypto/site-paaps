@@ -55,10 +55,11 @@
     if (!dados.length) return;
     var reduzido = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    /* No desktop a prova aparece sozinha no hover, só por CSS.
-       Aqui é só o caminho do toque: no celular não existe mouse, então um
-       toque no dado abre e um toque fora fecha. */
-    dados.forEach(function (d) {
+    /* No desktop a prova aparece sozinha no hover, só por CSS, e o clique não
+       participa: se participasse, ela ficaria travada aberta depois que o
+       mouse saísse. Este caminho é exclusivo de quem não tem mouse. */
+    var semMouse = window.matchMedia('(hover: none)').matches;
+    if (semMouse) dados.forEach(function (d) {
       d.addEventListener('click', function (e) {
         e.stopPropagation();
         var estava = d.classList.contains('aberto');
@@ -185,6 +186,68 @@
       document.fonts.ready.then(function () { proporcionar(); ler(); });
     }
     window.addEventListener('load', function () { proporcionar(); ler(); });
+  })();
+
+  /* ---- ODS: a grade acende quando entra na tela ---- */
+  (function () {
+    var lista = document.querySelector('.ods__lista');
+    if (!lista) return;
+    if (!('IntersectionObserver' in window)) { lista.classList.add('visivel'); return; }
+    var o = new IntersectionObserver(function (e) {
+      e.forEach(function (en) {
+        if (en.isIntersecting) { lista.classList.add('visivel'); o.unobserve(en.target); }
+      });
+    }, { threshold: 0.25 });
+    o.observe(lista);
+  })();
+
+  /* ---- esteiras da comunidade: monta as duas filas e duplica para o loop ---- */
+  (function () {
+    var a = document.querySelector('.esteira__fila--a');
+    var b = document.querySelector('.esteira__fila--b');
+    if (!a || !b) return;
+    var total = 12, fila = [];
+    for (var i = 1; i <= total; i++) {
+      fila.push('img/comunidade/c' + (i < 10 ? '0' + i : i) + '.jpg');
+    }
+    function preencher(el, ordem) {
+      var html = ordem.map(function (src) {
+        return '<img src="' + src + '" alt="" loading="lazy">';
+      }).join('');
+      el.innerHTML = html + html;   /* duplicado: o loop fecha sem buraco */
+    }
+    preencher(a, fila);
+    preencher(b, fila.slice().reverse());
+  })();
+
+  /* ---- equipe: no toque, o cartão abre com um toque e fecha com um toque fora ---- */
+  (function () {
+    var pessoas = Array.prototype.slice.call(document.querySelectorAll('.pessoa'));
+    if (!pessoas.length) return;
+    if (!window.matchMedia('(hover: none)').matches) return;   /* só no toque */
+    pessoas.forEach(function (p) {
+      p.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var estava = p.classList.contains('aberto');
+        pessoas.forEach(function (o) { o.classList.remove('aberto'); });
+        if (!estava) p.classList.add('aberto');
+      });
+    });
+    document.addEventListener('click', function () {
+      pessoas.forEach(function (p) { p.classList.remove('aberto'); });
+    });
+  })();
+
+  /* ---- quem contrata: o ícone escolhido já chega marcado no formulário ---- */
+  (function () {
+    var botoes = Array.prototype.slice.call(document.querySelectorAll('[data-perfil]'));
+    if (!botoes.length) return;
+    botoes.forEach(function (b) {
+      b.addEventListener('click', function () {
+        var alvo = document.getElementById('perfil-' + b.getAttribute('data-perfil'));
+        if (alvo) { alvo.checked = true; }
+      });
+    });
   })();
 
   /* ---- revelação no scroll ---- */

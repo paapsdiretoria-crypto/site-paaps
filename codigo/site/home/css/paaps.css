@@ -139,7 +139,7 @@ p + p{margin-top:1.05em}
 .hero__sub{
   font-family:var(--titulo);font-weight:700;text-transform:uppercase;
   font-size:clamp(.95rem,1.5vw,1.24rem);line-height:1.25;letter-spacing:0;
-  color:var(--amarelo);margin-top:.7em;max-width:30ch;
+  color:var(--amarelo);margin-top:.7em;max-width:39ch;
 }
 
 /* Grifo: a frase inteira em amarelo com uma palavra sublinhada. */
@@ -288,7 +288,7 @@ p + p{margin-top:1.05em}
 }
 .btn:hover{transform:translateY(-2px)}
 .btn--marrom{background:var(--marrom);color:var(--bege)}
-.btn--marrom:hover{background:#2e1706}
+.btn--marrom:hover{background:color-mix(in srgb,var(--marrom) 84%, #000)}
 .btn--amarelo{background:var(--amarelo);color:var(--marrom)}
 .btn--bege{background:var(--bege);color:var(--marrom)}
 .btn--linha{border-color:currentColor}
@@ -360,19 +360,8 @@ figure{margin:0}
   margin-top:clamp(30px,4vw,46px);padding-top:26px;
   border-top:1px solid rgba(245,241,225,.22);
 }
-.prova__i{max-width:23ch}
-.prova__n{
-  display:block;font-family:var(--titulo);font-weight:800;line-height:1;
-  font-size:clamp(1.9rem,3.4vw,2.7rem);color:var(--amarelo);letter-spacing:-.01em;
-}
-.prova__l{
-  display:block;margin-top:9px;font-size:.86rem;line-height:1.45;
-  color:rgba(245,241,225,.9);
-}
 .sobre-foto--clara .prova{border-top-color:rgba(68,35,9,.22)}
-.sobre-foto--clara .prova__n{color:var(--marrom)}
-.sobre-foto--clara .prova__l{color:var(--tinta-70)}
-
+.sobre-foto--clara .sobre-foto--clara 
 /* ----- 8b2. DADO COM PROVA : número, frase e fonte no hover -------------- */
 /* Regra dura da Mallu: o número e a linha de baixo se sustentam sozinhos.
    O hover aprofunda e prova, nunca completa. No toque abre e fecha por clique.
@@ -398,6 +387,7 @@ figure{margin:0}
 
 .dado__prova{
   position:absolute;left:0;top:calc(100% + 12px);z-index:40;width:min(36ch,86vw);
+  pointer-events:none;
   background:rgba(46,24,6,.94);color:var(--bege);border-radius:var(--raio);
   border:1px solid rgba(245,241,225,.16);
   backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
@@ -417,6 +407,11 @@ figure{margin:0}
 }
 .dado--claro .dado__n{color:var(--marrom)}
 .dado--claro .dado__l{color:var(--tinta-70)}
+
+/* Dentro do hero a seção corta o que sai dela (overflow hidden), e os dados
+   ficam no pé da tela. Por isso a prova abre PARA CIMA ali: senão ela é
+   desenhada fora da seção e o navegador simplesmente não mostra. */
+.sobre-foto .dado__prova{top:auto;bottom:calc(100% + 12px)}
 
 /* Destaque amarelo obrigatório em "o dobro" e afins. */
 .forte{color:var(--amarelo);font-weight:700}
@@ -439,7 +434,7 @@ figure{margin:0}
 /* Chip de legenda pinado no canto da foto: vira registro, não ilustração. */
 .chip{
   position:absolute;left:var(--gutter);bottom:22px;z-index:3;
-  display:inline-block;padding:9px 16px;border-radius:999px;
+  display:inline-block;padding:9px 16px;border-radius:var(--raio);
   background:rgba(68,35,9,.88);color:var(--bege);
   font-size:.74rem;font-weight:700;letter-spacing:.02em;
 }
@@ -516,6 +511,194 @@ figure{margin:0}
 }
 .frente__cartao p{font-size:.92rem;margin-bottom:1.4em}
 .frente__cartao .btn{width:100%;text-align:center;padding-inline:18px}
+
+/* ----- 8f. ODS : a fração do que a PAAPS move ---------------------------- */
+/* Fundo oliva, excepcionalmente. Os 8 impactados sobem de baixo e acendem;
+   os outros 9 ficam apagados, e é o contraste que conta a fração.           */
+
+.ods{background:var(--oliva);color:var(--branco);padding-top:var(--secao)}
+.ods__grade{
+  display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(30px,5vw,72px);align-items:center;
+  padding-bottom:var(--secao);
+}
+.ods h2{color:var(--branco);max-width:18ch}
+.ods .lead{color:rgba(255,255,255,.92)}
+.ods__fracao{display:flex;align-items:baseline;gap:12px;margin-top:clamp(24px,3vw,38px)}
+.ods__n{font-family:var(--titulo);font-weight:800;line-height:.85;
+  font-size:clamp(3.4rem,8vw,6.4rem);color:var(--marrom)}
+.ods__de{font-family:var(--titulo);font-weight:700;text-transform:uppercase;
+  font-size:clamp(1rem,1.7vw,1.4rem);color:rgba(255,255,255,.92)}
+.ods__nota{font-size:.94rem;color:rgba(255,255,255,.88);max-width:40ch;margin-top:.5em}
+
+.ods__lista{list-style:none;display:grid;grid-template-columns:repeat(6,1fr);gap:clamp(6px,.8vw,10px)}
+.ods__i{border-radius:3px;overflow:hidden;aspect-ratio:1;
+  opacity:.16;filter:grayscale(1);transform:translateY(26px);
+  transition:opacity .6s var(--ease),transform .6s var(--ease),filter .6s var(--ease)}
+.ods__i img{width:100%;height:100%;object-fit:cover;display:block}
+.ods__i--on{opacity:.34}
+.js .ods__lista.visivel .ods__i{transform:none}
+.js .ods__lista.visivel .ods__i--on{opacity:1;filter:none}
+html:not(.js) .ods__i{transform:none}
+html:not(.js) .ods__i--on{opacity:1;filter:none}
+/* sobem em cascata, um depois do outro */
+.ods__i:nth-child(1){transition-delay:.02s}   .ods__i:nth-child(2){transition-delay:.06s}
+.ods__i:nth-child(3){transition-delay:.10s}   .ods__i:nth-child(4){transition-delay:.14s}
+.ods__i:nth-child(5){transition-delay:.18s}   .ods__i:nth-child(6){transition-delay:.22s}
+.ods__i:nth-child(7){transition-delay:.26s}   .ods__i:nth-child(8){transition-delay:.30s}
+.ods__i:nth-child(n+9){transition-delay:.36s}
+
+/* ----- 8g. OS TRÊS SERVIÇOS : texto sobre foto, sem caixa separada ------- */
+/* A transparência é o recurso: o texto vive dentro da foto, não num bloco
+   colado embaixo dela. */
+
+.servicos{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:rgba(68,35,9,.2)}
+.servico{
+  position:relative;isolation:isolate;display:flex;align-items:flex-end;
+  min-height:min(78svh,660px);overflow:hidden;color:var(--bege);text-decoration:none;
+}
+.servico > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;
+  transition:transform .7s var(--ease)}
+.servico::after{content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(to top,rgba(28,14,3,.92) 0%,rgba(28,14,3,.74) 44%,rgba(28,14,3,.46) 100%);
+  transition:background .4s var(--ease)}
+.servico:hover > img{transform:scale(1.04)}
+.servico:hover::after{
+  background:linear-gradient(to top,rgba(28,14,3,.94) 0%,rgba(28,14,3,.8) 46%,rgba(28,14,3,.55) 100%)}
+.servico__c{padding:clamp(28px,3vw,42px);width:100%}
+.servico h3{color:var(--bege);font-size:clamp(1.15rem,1.7vw,1.5rem);margin-bottom:.7em}
+.servico__p{font-size:.95rem;line-height:1.55;color:rgba(245,241,225,.92);max-width:38ch}
+.servico__p b{color:var(--amarelo);font-weight:700}
+.servico__itens{
+  font-size:.82rem;line-height:1.6;color:rgba(245,241,225,.7);margin-top:1.1em;max-width:40ch;
+}
+.servico__cta{
+  display:inline-flex;align-items:center;gap:9px;margin-top:1.5em;
+  font-family:var(--titulo);font-size:.8rem;font-weight:700;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--amarelo);
+}
+.servico__cta::after{content:"";width:20px;height:1px;background:currentColor;
+  transition:width .25s var(--ease)}
+.servico:hover .servico__cta::after{width:34px}
+.servico__cred{position:absolute;right:14px;top:14px;z-index:2;text-align:right;max-width:26ch;
+  color:rgba(245,241,225,.55);margin:0}
+
+/* ----- 8h. QUEM CONTRATA ------------------------------------------------- */
+
+.contrata__t{display:flex;align-items:center;gap:.34em;flex-wrap:wrap;max-width:none}
+.contrata__logo{height:.86em;width:auto;display:inline-block;transform:translateY(.04em)}
+.porta-btn{
+  display:block;padding:clamp(26px,3vw,40px);border-radius:var(--raio);
+  border:1px solid rgba(174,163,73,.5);background:var(--branco);color:var(--marrom);
+  transition:transform .25s var(--ease),box-shadow .25s var(--ease),border-color .25s var(--ease);
+}
+.porta-btn:hover{transform:translateY(-3px);border-color:var(--marrom);
+  box-shadow:0 14px 40px rgba(68,35,9,.16)}
+.porta-btn svg{width:44px;height:44px;color:var(--oliva);display:block;margin-bottom:18px}
+.porta-btn--b svg{color:var(--marrom)}
+.porta-btn__t{display:block;font-family:var(--titulo);font-weight:700;text-transform:uppercase;
+  font-size:clamp(1.1rem,1.7vw,1.5rem);line-height:1.1}
+.porta-btn__l{display:block;margin-top:.8em;font-size:.95rem;line-height:1.55;color:var(--tinta-70)}
+.porta-btn__go{
+  display:inline-flex;align-items:center;gap:9px;margin-top:1.4em;
+  font-family:var(--titulo);font-size:.78rem;font-weight:700;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--marrom);border-bottom:2px solid var(--amarelo);
+  padding-bottom:3px;
+}
+
+/* ----- 8i. DIFERENCIAIS -------------------------------------------------- */
+
+.dif{display:grid;gap:14px;margin-top:clamp(26px,3vw,40px);max-width:62ch}
+.dif__i{font-size:.98rem;line-height:1.55;color:rgba(245,241,225,.9);
+  padding-left:20px;border-left:2px solid var(--amarelo)}
+.dif__i b{color:var(--bege)}
+
+/* ----- 8j. CIÊNCIA ------------------------------------------------------- */
+
+.ciencia{display:grid;gap:clamp(18px,2.2vw,26px);margin-top:clamp(26px,3vw,42px);max-width:74ch}
+.dado--texto{max-width:none}
+.dado--texto .dado__l{font-size:1.06rem;line-height:1.6;margin-top:0;color:var(--marrom)}
+.dado--texto .dado__prova{left:0;right:auto;width:min(46ch,90vw)}
+
+/* ----- 8k. CADASTRO ------------------------------------------------------ */
+
+.cadastro__logo{height:44px;width:auto;display:block}
+.cadastro__lema{font-family:var(--titulo);font-weight:700;text-transform:uppercase;
+  font-size:clamp(1.1rem,2vw,1.6rem);color:var(--amarelo);margin-top:.7em;line-height:1.15}
+.form__legenda{font-family:var(--titulo);font-size:.7rem;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;color:rgba(245,241,225,.8);margin-bottom:10px}
+.opcoes{display:flex;gap:10px;flex-wrap:wrap}
+.opcao{position:relative;flex:1 1 160px}
+.opcao input{position:absolute;opacity:0;width:1px;height:1px}
+.opcao span{
+  display:block;padding:14px 16px;border-radius:var(--raio);text-align:center;
+  border:1px solid rgba(245,241,225,.3);color:var(--bege);
+  font-family:var(--titulo);font-size:.8rem;font-weight:700;letter-spacing:.06em;
+  text-transform:uppercase;cursor:pointer;transition:all .22s var(--ease);
+}
+.opcao input:checked + span{background:var(--amarelo);color:var(--marrom);border-color:var(--amarelo)}
+.opcao input:focus-visible + span{outline:3px solid var(--amarelo);outline-offset:3px}
+
+/* ----- 8l. EQUIPE -------------------------------------------------------- */
+
+.equipe__t{margin-top:clamp(44px,5vw,72px);margin-bottom:1.2em;color:var(--bege);
+  font-size:clamp(1.1rem,1.7vw,1.4rem)}
+.equipe{list-style:none;display:grid;grid-template-columns:repeat(5,1fr);gap:4px}
+.pessoa{position:relative;overflow:visible}
+.pessoa > img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;
+  filter:grayscale(.25);transition:filter .3s var(--ease)}
+.pessoa:hover > img,.pessoa:focus-visible > img{filter:none}
+.pessoa__nome{
+  position:absolute;left:0;right:0;bottom:0;padding:34px 14px 12px;
+  font-family:var(--titulo);font-size:.8rem;font-weight:700;letter-spacing:.03em;
+  text-transform:uppercase;color:var(--bege);line-height:1.2;
+  background:linear-gradient(to top,rgba(46,24,6,.95) 0%,rgba(46,24,6,.7) 55%,rgba(46,24,6,0) 100%);
+}
+.pessoa__card{
+  position:absolute;left:50%;bottom:calc(100% + 12px);transform:translate(-50%,-6px);
+  z-index:60;width:min(38ch,80vw);pointer-events:none;
+  background:var(--bege);color:var(--marrom);border-radius:var(--raio);
+  padding:20px 22px;box-shadow:0 18px 50px rgba(0,0,0,.45);
+  opacity:0;visibility:hidden;transition:opacity .24s var(--ease),transform .24s var(--ease),visibility .24s;
+}
+.pessoa:hover .pessoa__card,.pessoa:focus-within .pessoa__card,.pessoa.aberto .pessoa__card{
+  opacity:1;visibility:visible;transform:translate(-50%,0)}
+.pessoa__card strong{display:block;text-align:center;font-family:var(--titulo);
+  text-transform:uppercase;font-size:.92rem;letter-spacing:.03em}
+.pessoa__card em{display:block;margin-top:.7em;font-style:italic;font-size:.94rem;
+  line-height:1.5;color:var(--marrom)}
+.pessoa__card p{margin-top:.8em;font-size:.86rem;line-height:1.55;color:var(--tinta-70)}
+.pessoa:focus{outline:none}
+.pessoa:focus-visible{outline:3px solid var(--amarelo);outline-offset:3px}
+
+/* ----- 8m. COMUNIDADE : duas esteiras em sentidos opostos ---------------- */
+
+.comunidade{margin-top:clamp(48px,6vw,84px);padding-top:clamp(30px,4vw,48px);
+  border-top:1px solid rgba(245,241,225,.16)}
+.comunidade__n{font-family:var(--titulo);font-weight:800;text-transform:uppercase;
+  font-size:clamp(1.1rem,2.2vw,1.8rem);color:var(--amarelo);line-height:1.2}
+.comunidade__s{font-family:var(--corpo);font-weight:400;text-transform:none;letter-spacing:0;
+  font-size:.98rem;line-height:1.6;color:rgba(245,241,225,.86);max-width:62ch;margin-top:.7em}
+.esteira{position:relative;margin-top:clamp(26px,3vw,40px);display:grid;gap:6px;overflow:hidden}
+.esteira__fila{display:flex;gap:6px;width:max-content}
+.esteira__fila img{height:clamp(110px,13vw,180px);width:auto;aspect-ratio:4/3;object-fit:cover;
+  border-radius:3px;flex:none}
+.esteira__fila--a{animation:corre-esq 46s linear infinite}
+.esteira__fila--b{animation:corre-dir 52s linear infinite}
+@keyframes corre-esq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes corre-dir{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+.esteira:hover .esteira__fila{animation-play-state:paused}
+.esteira__cta{
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) scale(.96);z-index:5;
+  padding:16px 30px;border-radius:var(--raio);background:var(--amarelo);color:var(--marrom);
+  font-family:var(--titulo);font-size:.86rem;font-weight:700;letter-spacing:.08em;
+  text-transform:uppercase;box-shadow:0 12px 40px rgba(0,0,0,.4);
+  opacity:0;visibility:hidden;transition:all .3s var(--ease);
+}
+.esteira:hover .esteira__cta,.esteira:focus-within .esteira__cta{
+  opacity:1;visibility:visible;transform:translate(-50%,-50%) scale(1)}
+.esteira::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:rgba(28,14,3,0);transition:background .3s var(--ease)}
+.esteira:hover::after{background:rgba(28,14,3,.45)}
 
 /* ----- 9. GRADES --------------------------------------------------------- */
 
@@ -658,9 +841,24 @@ figure{margin:0}
   .meia{grid-template-columns:1fr;min-height:0}
   .meia__texto{padding:clamp(40px,8vw,64px) var(--gutter)}
   .meia__foto{min-height:56svh;order:-1}
-  .dado__prova{position:static;opacity:1;visibility:visible;transform:none;
-    box-shadow:none;margin-top:12px;width:auto;display:none}
-  .dado.aberto .dado__prova{display:block}
+  /* No celular a prova não some nunca: fica no fluxo, sempre legível, sem
+     depender de JavaScript. Esconder aqui quebraria a regra de a página
+     inteira funcionar com o script fora do ar. */
+  .dado__prova{
+    position:static;opacity:1;visibility:visible;transform:none;
+    box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none;
+    margin-top:12px;width:auto;background:rgba(68,35,9,.08);
+    border:0;border-left:2px solid var(--amarelo);border-radius:0;
+    color:var(--tinta-70);padding:14px 16px;
+  }
+  .sobre-foto .dado__prova{
+    background:rgba(0,0,0,.34);color:rgba(245,241,225,.9);top:auto;bottom:auto;
+  }
+  .dado__fonte{border-top-color:rgba(68,35,9,.2);color:var(--tinta-55)}
+  .sobre-foto .dado__fonte{border-top-color:rgba(245,241,225,.24);color:rgba(245,241,225,.78)}
+  .dado__l{border-bottom:0;padding-bottom:0}
+  .pessoa__card{position:static;transform:none;opacity:1;visibility:visible;
+    width:auto;box-shadow:none;margin-top:8px}
 }
 @media (max-width:480px){
   .sobre-foto{min-height:100svh}
