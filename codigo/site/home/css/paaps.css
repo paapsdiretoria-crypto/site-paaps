@@ -326,14 +326,22 @@ p + p{margin-top:1.05em}
   /* o topo já reserva a altura do menu fixo, que flutua por cima da foto */
   padding:clamp(112px,13vw,160px) var(--gutter) clamp(72px,9vw,104px);color:var(--bege);
 }
-/* A altura do hero NÃO muda. O que muda é a distribuição dentro dela: o texto
-   fica em cima e os dados descem até o pé da imagem, que estava sobrando. */
+/* O título fica onde está. O que muda é a distribuição: texto em cima, dados
+   lá embaixo, na faixa da água e do barco, e imagem respirando no meio. */
+.sobre-foto--alto{min-height:min(1560px,212svh)}
 .sobre-foto--alto .sobre-foto__c{
   display:flex;flex-direction:column;justify-content:space-between;
-  min-height:inherit;
+  min-height:min(1560px,212svh);
 }
+/* Os dados ficam juntos e compactos, na faixa da água e do barco. O recuo de
+   baixo é generoso de propósito: sobe o bloco para a altura das pernas da
+   agente, para os dados não ficarem espremidos na borda da imagem. */
+.sobre-foto--alto .prova{row-gap:clamp(22px,2.6vw,34px)}
+.sobre-foto--alto .sobre-foto__c{padding-bottom:clamp(170px,26vh,300px)}
 .sobre-foto--alto .hero__texto{flex:0 0 auto}
 .sobre-foto--alto .prova{margin-top:0;flex:0 0 auto}
+/* O bloco das duas frases desgruda do título principal. */
+.sobre-foto--alto .hero__sub{margin-top:2.1em}
 
 .sobre-foto h1,.sobre-foto h2{color:var(--bege);max-width:20ch}
 /* No hero o título divide a tela com a faixa de prova: escala própria. */
@@ -410,15 +418,34 @@ figure{margin:0}
    folha "voa" na cara de quem olha. */
 .dado{position:relative;max-width:32ch;perspective:2600px}
 
+/* A folha tem a altura da FRENTE, só. O verso fica fora do fluxo e cresce para
+   cima, senão o cartão de trás inflava cada dado e comia a imagem inteira. */
 .dado__folha{
-  display:grid;                         /* as duas faces ocupam a mesma célula */
+  position:relative;
   transform-style:preserve-3d;
   /* vira POR CIMA, não para o lado. Estouro mínimo no fim, só para dar o pulo. */
   transition:transform .58s cubic-bezier(.3,1.06,.4,1);
 }
-.dado__frente,.dado__prova{grid-area:1/1;backface-visibility:hidden;-webkit-backface-visibility:hidden}
-.dado__frente{align-self:start}
-.dado__prova{transform:rotateX(180deg);align-self:start}
+/* Não dá para confiar só em backface-visibility: o backdrop-filter do verso
+   desliga o 3D do próprio elemento e ele reaparecia em repouso. A troca de
+   face é feita por opacidade, que é determinística; a rotação segue dando o
+   movimento da folha virando por cima. */
+.dado__frente,.dado__prova{backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.dado__prova{
+  position:absolute;left:0;bottom:0;transform:rotateX(180deg);
+  opacity:0;visibility:hidden;
+  transition:opacity .2s var(--ease) 0s,visibility 0s linear .2s;
+}
+.dado__frente{transition:opacity .2s var(--ease) .26s}
+.dado:hover .dado__prova,
+.dado:focus-visible .dado__prova,
+.dado.aberto .dado__prova{
+  opacity:1;visibility:visible;
+  transition:opacity .22s var(--ease) .26s,visibility 0s linear .26s;
+}
+.dado:hover .dado__frente,
+.dado:focus-visible .dado__frente,
+.dado.aberto .dado__frente{opacity:0;transition:opacity .18s var(--ease) .16s}
 
 /* :focus-visible, nunca :focus-within. Com :focus-within, clicar no dado dava
    foco nele e a folha ficava travada virada depois que o mouse ia embora.
