@@ -336,8 +336,13 @@ p + p{margin-top:1.05em}
 /* Os dados ficam juntos e compactos, na faixa da água e do barco. O recuo de
    baixo é generoso de propósito: sobe o bloco para a altura das pernas da
    agente, para os dados não ficarem espremidos na borda da imagem. */
-.sobre-foto--alto .prova{row-gap:clamp(22px,2.6vw,34px)}
-.sobre-foto--alto .sobre-foto__c{padding-bottom:clamp(170px,26vh,300px)}
+/* Os três dados precisam de ar entre eles por dois motivos: espremidos ficam
+   ilegíveis, e o cartão de prova nasce em cima do próprio dado, crescendo para
+   cima e para baixo. Sem essa folga, um cartão encostaria no dado vizinho.
+   O recuo de baixo encolhe na mesma medida em que a folga cresce, para o bloco
+   descer em vez de subir: o hero de cima fica limpo, sem dado nenhum. */
+.sobre-foto--alto .prova{row-gap:clamp(88px,11vh,148px)}
+.sobre-foto--alto .sobre-foto__c{padding-bottom:clamp(104px,16vh,208px)}
 .sobre-foto--alto .hero__texto{flex:0 0 auto}
 .sobre-foto--alto .prova{margin-top:0;flex:0 0 auto}
 /* O bloco das duas frases desgruda do título principal. */
@@ -404,7 +409,7 @@ figure{margin:0}
   margin-top:clamp(48px,6.5vw,84px);
 }
 .sobre-foto--clara .prova{border-top-color:rgba(68,35,9,.22)}
-.sobre-foto--clara .sobre-foto--clara 
+
 /* ----- 8b2. DADO COM PROVA : número, frase e fonte no hover -------------- */
 /* Regra dura da Mallu: o número e a linha de baixo se sustentam sozinhos.
    O hover aprofunda e prova, nunca completa. No toque abre e fecha por clique.
@@ -414,32 +419,33 @@ figure{margin:0}
    Passando o mouse por perto, a folha vira e a prova toma o lugar do dado,
    ali mesmo, sem abrir nada fora da tela. Tirando o mouse, ela desvira.     */
 
-/* Perspectiva longa deixa a virada discreta: quanto maior o valor, menos a
-   folha "voa" na cara de quem olha. */
-.dado{position:relative;max-width:32ch;perspective:2600px}
+/* Sem a propriedade `perspective` aqui: ela criava contexto de empilhamento e
+   prendia o cartão embaixo dos dados vizinhos. A perspectiva vive dentro do
+   transform de cada face, como função, e faz o mesmo efeito sem prender nada.  */
+/* Sem max-width: o dado ocupa a metade inteira da tela, que é a largura que
+   você aprovou. (Havia um `max-width:32ch` aqui que nunca chegou a valer, por
+   causa de um seletor quebrado logo acima; ao consertar o seletor ele passou a
+   valer e estreitou tudo.) */
+.dado{position:relative}
+/* O dado que está sendo lido sobe na pilha inteiro, então o cartão dele passa
+   por cima de qualquer vizinho, venha antes ou depois no código. */
+.dado:hover,.dado:focus-visible,.dado.aberto{z-index:60}
 
-/* A rotação vai em CADA FACE, não na folha. Assim a folha não vira contexto de
-   empilhamento, e o cartão pode se ancorar no bloco de dados inteiro, sempre no
-   mesmo lugar, em vez de pendurado em cada dado. */
 .dado__folha{position:static}
-.prova,.meia__lista,.ciencia{position:relative}
 /* Não dá para confiar só em backface-visibility: o backdrop-filter do verso
    desliga o 3D do próprio elemento e ele reaparecia em repouso. A troca de
    face é feita por opacidade, que é determinística; a rotação segue dando o
    movimento da folha virando por cima. */
 .dado__frente,.dado__prova{backface-visibility:hidden;-webkit-backface-visibility:hidden}
-/* PADRÃO DE POSIÇÃO: o cartão sempre nasce no mesmo lugar em relação ao dado.
-   Sempre acima, sempre com a base 20px acima do topo do dado, sempre do mesmo
-   tamanho. Ele cresce para a faixa de imagem vazia que existe logo acima dos
-   dados, e nunca desce para a borda de baixo. Nada de pular de canto. */
-/* PADRÃO DE POSIÇÃO: um só lugar para os três. O cartão nasce sempre ancorado
-   ao bloco de dados, centrado, com a base logo acima dele, e cresce para a
-   faixa de imagem vazia. Não importa qual dado você tocou: ele aparece sempre
-   ali. z-index alto porque ele passa por cima de todos os dados vizinhos. */
+/* PADRÃO DE POSIÇÃO: o cartão nasce EM CIMA DO PRÓPRIO DADO, cobrindo ele.
+   Como o dado desaparece na virada, o lugar já está livre: o cartão ocupa o
+   espaço dele e cresce para os dois lados, para cima e para baixo, a partir do
+   meio. Nada de viajar para o topo da imagem, nada de pular de canto: o cartão
+   sempre aparece onde o olho já estava. */
 .dado__prova{
-  position:absolute;left:50%;bottom:calc(100% + 26px);z-index:60;
-  transform:translateX(-50%) perspective(2600px) rotateX(180deg);
-  transform-origin:center bottom;
+  position:absolute;left:0;top:50%;
+  transform:translateY(-50%) perspective(2600px) rotateX(180deg);
+  transform-origin:center center;
   opacity:0;visibility:hidden;
   transition:transform .58s cubic-bezier(.3,1.06,.4,1),
              opacity .2s var(--ease) 0s,visibility 0s linear .2s;
@@ -451,7 +457,7 @@ figure{margin:0}
 .dado:hover .dado__prova,
 .dado:focus-visible .dado__prova,
 .dado.aberto .dado__prova{
-  transform:translateX(-50%) perspective(2600px) rotateX(0);
+  transform:translateY(-50%) perspective(2600px) rotateX(0);
   opacity:1;visibility:visible;
   transition:transform .58s cubic-bezier(.3,1.06,.4,1),
              opacity .22s var(--ease) .26s,visibility 0s linear .26s;
@@ -492,8 +498,10 @@ figure{margin:0}
    Largura curta de propósito: o cartão fica quase quadrado, nunca uma faixa
    comprida cobrindo a imagem.                                                */
 .dado__prova{
-  width:min(52ch,78vw);
-  border-radius:var(--raio);padding:24px 26px;
+  /* Exatamente a largura do dado que ele cobre: o cartão veste o lugar dele em
+     vez de virar uma faixa comprida atravessando a foto. */
+  width:100%;
+  border-radius:var(--raio);padding:22px 24px;
   background:rgba(28,14,3,.10);
   backdrop-filter:blur(26px) saturate(150%) brightness(.62);
   -webkit-backdrop-filter:blur(26px) saturate(150%) brightness(.62);
@@ -534,7 +542,16 @@ figure{margin:0}
 .dado--largo .dado__folha{justify-items:center}
 .dado--largo .dado__n{font-size:clamp(2.1rem,4vw,3.4rem)}
 .dado--largo .dado__l{max-width:44ch;margin-left:auto;margin-right:auto}
-.dado--largo .dado__prova{margin-left:auto;margin-right:auto;text-align:justify}
+/* O dado largo é centrado, então o cartão dele também nasce centrado nele. */
+.dado--largo .dado__prova{
+  left:50%;transform:translate(-50%,-50%) perspective(2600px) rotateX(180deg);
+  width:min(68ch,100%);text-align:left;
+}
+.dado--largo:hover .dado__prova,
+.dado--largo:focus-visible .dado__prova,
+.dado--largo.aberto .dado__prova{
+  transform:translate(-50%,-50%) perspective(2600px) rotateX(0);
+}
 
 /* O logo no lugar da palavra PAAPS, no mesmo corpo do texto. */
 .hero__logo{
@@ -792,7 +809,8 @@ html:not(.js) .ods__i--on{opacity:1;filter:none}
 .ciencia{display:grid;gap:clamp(18px,2.2vw,26px);margin-top:clamp(26px,3vw,42px);max-width:74ch}
 .dado--texto{max-width:none}
 .dado--texto .dado__l{font-size:1.06rem;line-height:1.6;margin-top:0;color:var(--marrom)}
-.dado--texto .dado__prova{width:min(34ch,100%)}
+/* Mesma regra dos outros: o cartão veste o dado que ele cobre. */
+.dado--texto .dado__prova{width:100%}
 
 /* ----- 8k. CADASTRO ------------------------------------------------------ */
 
@@ -1022,7 +1040,8 @@ html:not(.js) .ods__i--on{opacity:1;filter:none}
      Isso funciona SEM JavaScript: tocar num elemento com tabindex dá foco,
      e o :focus-within já vira a folha. Nada aqui pode voltar a esconder a
      prova por display, senão o conteúdo some quando o script falha. */
-  .dado__prova{padding:15px 16px;font-size:.82rem}
+  /* .82rem dava 13px, miúdo demais para quem lê de óculos. Fica em 15px. */
+  .dado__prova{padding:17px 18px;font-size:.94rem;line-height:1.55}
   .pessoa__card{position:static;transform:none;opacity:1;visibility:visible;
     width:auto;box-shadow:none;margin-top:8px}
 }

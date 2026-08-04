@@ -75,12 +75,23 @@
         if (!estava) d.classList.add('aberto');
       });
     });
-    document.addEventListener('click', function () {
+    function fecharTodos() {
       dados.forEach(function (d) { d.classList.remove('aberto'); });
-    });
+    }
+    document.addEventListener('click', fecharTodos);
     document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape') dados.forEach(function (d) { d.classList.remove('aberto'); });
+      if (e.key === 'Escape') fecharTodos();
     });
+
+    /* Rede de segurança: nenhuma folha pode ficar virada para sempre.
+       Se a pessoa liga um mouse, gira o aparelho ou muda o tamanho da janela,
+       a marca de "aberto" some. Sem isso, um dado podia ficar mostrando a prova
+       e escondendo o próprio número, que é o que não pode acontecer nunca. */
+    window.addEventListener('resize', fecharTodos);
+    window.addEventListener('blur', fecharTodos);
+    document.addEventListener('pointerdown', function (e) {
+      if (e.pointerType === 'mouse') fecharTodos();
+    }, true);
 
     /* Count-up: sobe do zero ao valor em cerca de 2 segundos. */
     if (reduzido || !('IntersectionObserver' in window)) return;
