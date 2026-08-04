@@ -631,7 +631,7 @@ figure{margin:0}
 /* ----- 8c2. MEIA TELA : texto de um lado, foto sangrando do outro -------- */
 /* A foto ocupa metade da tela de verdade, de borda a borda, sem moldura.    */
 
-.meia{display:grid;grid-template-columns:1fr 1fr;align-items:center;min-height:82svh}
+.meia{position:relative;display:grid;grid-template-columns:1fr 1fr;align-items:center;min-height:82svh}
 .meia__texto{padding:clamp(48px,7vw,104px) 0}
 .meia__texto > *{max-width:min(56ch,100%)}
 .meia__texto{padding-left:max(var(--gutter),calc((100vw - var(--max)) / 2));padding-right:clamp(24px,4vw,64px)}
@@ -643,6 +643,46 @@ figure{margin:0}
 .meia__foto .legenda{position:absolute;right:14px;bottom:12px;margin:0;text-align:right;
   color:rgba(245,241,225,.72);max-width:34ch;text-shadow:0 1px 6px rgba(0,0,0,.6)}
 .meia__lista{display:grid;gap:clamp(26px,3vw,40px);margin-top:clamp(26px,3vw,40px)}
+
+/* ----- 8c2. A PROVA DO BLOCO 2 VAI PARA CIMA DA FOTO --------------------- */
+/* Aqui a prova NÃO cobre o dado: a coluna de texto é estreita e o cartão saía
+   espremido, embaralhando os dois dados. Ele atravessa para a metade direita e
+   pousa centrado sobre a foto, com o mesmo vidro do hero. O dado que você está
+   lendo não some: fica levemente apagado, dizendo "a prova ali em cima é minha". */
+
+/* O cartão se ancora na seção inteira, não no dado, para poder cruzar a metade. */
+.meia .dado{position:static}
+.meia .dado__prova{
+  position:absolute;top:50%;left:75%;right:auto;z-index:5;
+  width:min(42ch,40vw);
+  transform:translate(-50%,-50%) perspective(2600px) rotateX(180deg);
+  transform-origin:center center;
+}
+.meia .dado:hover .dado__prova,
+.meia .dado:focus-visible .dado__prova,
+.meia .dado.aberto .dado__prova{
+  transform:translate(-50%,-50%) perspective(2600px) rotateX(0);
+}
+
+/* Vidro escuro, igual ao do hero: aqui o fundo é foto, não bege. */
+.meia .dado--claro .dado__prova{
+  background:rgba(28,14,3,.10);color:#fff;border:0;
+  backdrop-filter:blur(26px) saturate(150%) brightness(.62);
+  -webkit-backdrop-filter:blur(26px) saturate(150%) brightness(.62);
+}
+.meia .dado--claro .dado__prova .dado__fonte{color:rgba(255,255,255,.66)}
+@supports not (backdrop-filter: blur(1px)){
+  .meia .dado--claro .dado__prova{background:rgba(28,14,3,.88)}
+}
+
+/* A frente não vira nem desaparece: só recua. */
+.meia .dado__frente{transform:none;backface-visibility:visible}
+.meia .dado:hover .dado__frente,
+.meia .dado:focus-visible .dado__frente,
+.meia .dado.aberto .dado__frente{
+  transform:none;opacity:.42;
+  transition:opacity .28s var(--ease);
+}
 
 /* ----- 8c3. FOTO INTEIRA : sem corte e sem véu --------------------------- */
 /* Regra da Mallu para a foto das mulheres: presente, sem ser cortada e sem ser
@@ -665,8 +705,10 @@ figure{margin:0}
 .foto-inteira h2{color:#fff;max-width:22ch;text-shadow:0 2px 18px rgba(0,0,0,.55)}
 .foto-inteira .lead{color:rgba(255,255,255,.94);max-width:56ch;margin-top:1em;
   text-shadow:0 1px 12px rgba(0,0,0,.6)}
+/* Crédito de foto: SEMPRE no canto inferior direito, em toda foto do site.
+   É o padrão do hero e do bloco 2, e agora vale aqui também. */
 .foto-inteira .legenda{
-  position:absolute;right:var(--gutter);top:16px;z-index:3;margin:0;text-align:right;
+  position:absolute;right:var(--gutter);bottom:14px;z-index:3;margin:0;text-align:right;
   color:rgba(255,255,255,.75);text-shadow:0 1px 8px rgba(0,0,0,.7);max-width:36ch;
 }
 
@@ -710,34 +752,61 @@ figure{margin:0}
 
 .ods{background:var(--oliva);color:var(--branco);padding-top:var(--secao)}
 .ods__grade{
-  display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(30px,5vw,72px);align-items:center;
+  /* A grade de ícones ocupa a metade direita DA TELA, não a metade do container:
+     dentro do container os ícones ficavam pequenos demais para serem lidos.
+     A coluna de texto continua alinhada com o resto do site pela esquerda. */
+  display:grid;grid-template-columns:1fr minmax(0,46vw);
+  gap:clamp(28px,3.4vw,56px);align-items:center;
+  padding-left:max(var(--gutter),calc((100vw - var(--max)) / 2));
+  padding-right:clamp(20px,2.4vw,40px);
   padding-bottom:var(--secao);
 }
-.ods h2{color:var(--branco);max-width:18ch}
-.ods .lead{color:rgba(255,255,255,.92)}
-.ods__fracao{display:flex;align-items:baseline;gap:12px;margin-top:clamp(24px,3vw,38px)}
-.ods__n{font-family:var(--titulo);font-weight:800;line-height:.85;
-  font-size:clamp(3.4rem,8vw,6.4rem);color:var(--marrom)}
-.ods__de{font-family:var(--titulo);font-weight:700;text-transform:uppercase;
-  font-size:clamp(1rem,1.7vw,1.4rem);color:rgba(255,255,255,.92)}
-.ods__nota{font-size:.94rem;color:rgba(255,255,255,.88);max-width:40ch;margin-top:.5em}
+/* Os dois textos são igualmente importantes, um logo depois do outro. Nenhum é
+   subtítulo, nenhum é complemento, e nenhum leva Helvetica: os dois em League
+   Spartan e grandes. O primeiro em caixa alta, o segundo não.                 */
+.ods__t1{color:var(--branco);max-width:15ch;margin-bottom:.5em}
+.ods h2.ods__t1{font-size:clamp(2.2rem,4.6vw,4rem)}
+.ods__t2{
+  font-family:var(--titulo);font-weight:700;text-transform:none;
+  font-size:clamp(1.5rem,2.9vw,2.5rem);line-height:1.12;letter-spacing:-.005em;
+  color:var(--branco);max-width:19ch;
+}
+/* O logo do PAAPS entra no corpo da frase, alinhado pela altura da letra. */
+.ods__logo-paaps{
+  display:inline-block;height:.78em;width:auto;vertical-align:baseline;
+  transform:translateY(.04em);margin-inline:.1em;
+}
+/* Lugar reservado para o logo dos ODS. Enquanto o PNG não chega, a sigla fica
+   escrita no mesmo corpo do texto, para a frase nunca aparecer quebrada. */
+.ods__sigla{color:var(--marrom)}
+.ods__logo{
+  display:inline-block;height:1.05em;width:auto;vertical-align:baseline;
+  transform:translateY(.08em);margin-inline:.08em;
+}
+.ods__t2 .olho{font-size:1.12em;color:var(--marrom)}
 
-.ods__lista{list-style:none;display:grid;grid-template-columns:repeat(6,1fr);gap:clamp(6px,.8vw,10px)}
+/* A grade ocupa a metade direita inteira: os 8 impactados em 2 fileiras de 4,
+   grandes o bastante para serem lidos. Os 9 restantes vêm menores embaixo. */
+.ods__lista{list-style:none;display:grid}
+.ods__lista--on{grid-template-columns:repeat(4,1fr);gap:clamp(8px,1.1vw,16px)}
+/* Os 9 restantes não são o assunto: entram menores, numa grade mais estreita,
+   só para a conta de 17 fechar diante dos olhos. */
+.ods__lista--off{
+  grid-template-columns:repeat(5,1fr);gap:clamp(5px,.7vw,9px);
+  width:78%;margin-top:clamp(16px,2vw,30px);
+}
 .ods__i{border-radius:3px;overflow:hidden;aspect-ratio:1;
-  opacity:.16;filter:grayscale(1);transform:translateY(26px);
-  transition:opacity .6s var(--ease),transform .6s var(--ease),filter .6s var(--ease)}
+  transition:opacity .5s var(--ease),filter .5s var(--ease),transform .5s var(--ease)}
 .ods__i img{width:100%;height:100%;object-fit:cover;display:block}
-.ods__i--on{opacity:.34}
-.js .ods__lista.visivel .ods__i{transform:none}
-.js .ods__lista.visivel .ods__i--on{opacity:1;filter:none}
-html:not(.js) .ods__i{transform:none}
-html:not(.js) .ods__i--on{opacity:1;filter:none}
-/* sobem em cascata, um depois do outro */
-.ods__i:nth-child(1){transition-delay:.02s}   .ods__i:nth-child(2){transition-delay:.06s}
-.ods__i:nth-child(3){transition-delay:.10s}   .ods__i:nth-child(4){transition-delay:.14s}
-.ods__i:nth-child(5){transition-delay:.18s}   .ods__i:nth-child(6){transition-delay:.22s}
-.ods__i:nth-child(7){transition-delay:.26s}   .ods__i:nth-child(8){transition-delay:.30s}
-.ods__i:nth-child(n+9){transition-delay:.36s}
+
+/* PADRÃO, e o que vale se o script falhar: os 8 acesos, os 9 outros apagados.
+   Nenhuma informação depende de JavaScript para aparecer. */
+.ods__i--off{opacity:.30;filter:grayscale(1)}
+
+/* Só quando o script assume é que os 8 começam apagados e vão acendendo um a
+   um conforme a pessoa desce. A classe abaixo é escrita pelo próprio script. */
+.js .ods__lista--cascata .ods__i--on{opacity:.20;filter:grayscale(1);transform:scale(.93)}
+.js .ods__lista--cascata .ods__i--on.aceso{opacity:1;filter:none;transform:none}
 
 /* ----- 8g. OS TRÊS SERVIÇOS : texto sobre foto, sem caixa separada ------- */
 /* A transparência é o recurso: o texto vive dentro da foto, não num bloco
@@ -1003,6 +1072,21 @@ html:not(.js) .ods__i--on{opacity:1;filter:none}
 /* ----- 17. RESPONSIVO --------------------------------------------------- */
 
 @media (max-width:960px){
+  /* Sem duas metades não existe "metade direita": a prova volta a cobrir o
+     próprio dado, e os textos e a grade dos ODS empilham. */
+  .meia .dado{position:relative}
+  .meia .dado__prova{
+    left:0;top:50%;width:100%;
+    transform:translateY(-50%) perspective(2600px) rotateX(180deg);
+  }
+  .meia .dado:hover .dado__prova,
+  .meia .dado:focus-visible .dado__prova,
+  .meia .dado.aberto .dado__prova{
+    transform:translateY(-50%) perspective(2600px) rotateX(0);
+  }
+  .ods__grade{grid-template-columns:1fr;padding-right:var(--gutter);
+    padding-left:var(--gutter);gap:clamp(28px,5vw,46px)}
+  .ods__lista--off{width:100%}
   .duas{grid-template-columns:1fr}
   .tres{grid-template-columns:repeat(2,1fr)}
   .quatro{grid-template-columns:repeat(2,1fr)}

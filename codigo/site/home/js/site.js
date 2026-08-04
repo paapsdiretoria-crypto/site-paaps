@@ -207,17 +207,44 @@
     window.addEventListener('load', function () { proporcionar(); ler(); });
   })();
 
-  /* ---- ODS: a grade acende quando entra na tela ---- */
+  /* ---- ODS: os 8 acendem um a um, colados no movimento de descer ----
+     Não é uma animação que dispara e roda sozinha: é o próprio scroll que
+     controla. A cada pedacinho que a pessoa desce, mais um objetivo ganha cor.
+     Se ela subir de volta, eles apagam na ordem inversa.
+
+     O CSS deixa os 8 acesos por padrão. Só aqui, depois de confirmar que o
+     script está mesmo rodando, é que eles são apagados para poder acender.
+     Assim, script quebrado ou desligado nunca esconde informação nenhuma.   */
   (function () {
-    var lista = document.querySelector('.ods__lista');
+    var lista = document.querySelector('.ods__lista--on');
     if (!lista) return;
-    if (!('IntersectionObserver' in window)) { lista.classList.add('visivel'); return; }
-    var o = new IntersectionObserver(function (e) {
-      e.forEach(function (en) {
-        if (en.isIntersecting) { lista.classList.add('visivel'); o.unobserve(en.target); }
+    var itens = Array.prototype.slice.call(lista.children);
+    if (!itens.length) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    lista.classList.add('ods__lista--cascata');
+
+    var pedido = false;
+    function ler() {
+      pedido = false;
+      var r = lista.getBoundingClientRect();
+      /* Começa quando o topo da grade cruza 82% da altura da tela e termina
+         quando ela chega a 34%: nessa faixa cabem os 8 passos com folga. */
+      var inicio = window.innerHeight * 0.82;
+      var fim = window.innerHeight * 0.34;
+      var p = (inicio - r.top) / (inicio - fim);
+      p = Math.max(0, Math.min(1, p));
+      var acesos = Math.round(p * itens.length);
+      itens.forEach(function (li, i) {
+        li.classList.toggle('aceso', i < acesos);
       });
-    }, { threshold: 0.25 });
-    o.observe(lista);
+    }
+    function aoRolar() {
+      if (!pedido) { pedido = true; window.requestAnimationFrame(ler); }
+    }
+    ler();
+    window.addEventListener('scroll', aoRolar, { passive: true });
+    window.addEventListener('resize', aoRolar);
   })();
 
   /* ---- esteiras da comunidade: monta as duas filas e duplica para o loop ---- */
