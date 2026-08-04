@@ -68,16 +68,22 @@
 <main id="conteudo">
 
   <!-- 1. HERO ------------------------------------------------------------ -->
-  <section id="hero" data-tom="escuro" class="sobre-foto sobre-foto--veu-marrom">
+  <section id="hero" data-tom="escuro" class="sobre-foto sobre-foto--alto sobre-foto--veu-marrom">
     <img class="sobre-foto__img" src="img/gerada/agente-rio-barco.jpg"
          width="2000" height="1500"
          alt="Agente de saúde rema uma canoa levando uma mãe e quatro crianças pelo rio">
     <div class="sobre-foto__c">
-      <h1>Cuidamos dos <span class="chave">Funcionários Públicos</span> para um Território Transformado</h1>
-      <p class="hero__sub">PAAPS: a Rede da Saúde Mental Coletiva para as Políticas Públicas do futuro.</p>
-      <p class="hero__oferta">
-        Cuidado em Saúde Mental, integração para a Rede e treinamentos para as equipes do município.
-      </p>
+
+      <div class="hero__texto">
+        <h1>Cuidamos dos <span class="chave">Funcionários Públicos</span> para um Território Transformado</h1>
+        <p class="hero__sub">
+          <img src="img/logo-claro.png" alt="PAAPS" class="hero__logo">:
+          a Rede da Saúde Mental Coletiva para as Políticas Públicas do futuro.
+        </p>
+        <p class="hero__oferta">
+          Cuidado em Saúde Mental, integração para a Rede e treinamentos para as equipes do município.
+        </p>
+      </div>
 
       <div class="prova">
 
@@ -85,12 +91,14 @@
           <div class="dado__folha">
             <div class="dado__frente">
               <span class="dado__n">Quase <span data-conta="10">10</span> em cada 10</span>
-              <span class="dado__l">profissionais da educação, e <b>8 em cada 10</b> da saúde,
-                ligam o próprio adoecimento mental às condições de trabalho.</span>
+              <span class="dado__l">profissionais da educação, e 8 em cada 10 da saúde,
+                <b class="dado__forte">ligam o próprio adoecimento mental às
+                <span class="grifo"><u>condições de trabalho</u></span></b>.</span>
             </div>
             <div class="dado__prova" role="note">
-              Não é percepção solta: é a própria categoria apontando a origem. Quando quase todo
-              mundo aponta o mesmo lugar, o problema <span class="forte">não está nas pessoas</span>.
+              E quem sabe melhor o que está acontecendo com a própria saúde mental do que os
+              profissionais da linha de frente? Essa pesquisa da Apeoesp em São Paulo publicou a
+              preocupante autopercepção dos próprios funcionários públicos da educação e da saúde.
               <span class="dado__fonte">Apeoesp. Pesquisa com profissionais da educação e da saúde, estado de São Paulo, 2026.</span>
             </div>
           </div>
@@ -99,48 +107,33 @@
         <div class="dado dado--grad" tabindex="0">
           <div class="dado__folha">
             <div class="dado__frente">
+              <span class="dado__l dado__l--topo">Quanto mais na ponta do cuidado, mais adoecimento.</span>
               <ul class="grad">
-                <li><span class="grad__n">2 em cada 5</span> professores</li>
-                <li><span class="grad__n">1 em cada 3</span> agentes comunitários</li>
-                <li><span class="grad__n">1 em cada 5</span> médicos</li>
+                <li><span class="grad__n">2 em cada 5</span> <u>professores</u></li>
+                <li><span class="grad__n">1 em cada 3</span> <u>agentes comunitários</u></li>
+                <li><span class="grad__n">1 em cada 5</span> <u>médicos</u></li>
               </ul>
-              <span class="dado__l">Quanto mais perto da ponta, mais gente adoece.</span>
             </div>
             <div class="dado__prova" role="note">
-              São 89 estudos e mais de 56 mil trabalhadores brasileiros, todos medidos pelo mesmo
-              rastreio de sofrimento mental. A diferença não é a pessoa:
-              <span class="forte">é o lugar na rede</span>.
+              Dão sinal de sofrimento mental: insônia, cansaço que não passa, nervosismo,
+              dificuldade de decidir. É o que mostra uma análise científica criteriosa de 89
+              estudos e mais de 56 mil trabalhadores brasileiros.
               <span class="dado__fonte">Coledam, D. H. C. e outros. Ciência e Saúde Coletiva, volume 27, número 2, 2022.</span>
             </div>
           </div>
         </div>
 
-        <div class="dado" tabindex="0">
+        <div class="dado dado--largo" tabindex="0">
           <div class="dado__folha">
             <div class="dado__frente">
-              <span class="dado__n">o dobro</span>
-              <span class="dado__l">de chance de erro no atendimento quando o profissional
-                está esgotado.</span>
+              <span class="dado__n">R$ 1 volta em R$ <span data-conta="4">4</span> para o município</span>
+              <span class="dado__l">quando se investe em saúde, de acordo com a Organização
+                Mundial da Saúde.</span>
             </div>
             <div class="dado__prova" role="note">
-              Foram 35 estudos, com mais de 41 mil profissionais de saúde. Os dados foram
-              <span class="forte">levantados com médicos</span>, e o mesmo esgotamento atinge toda
-              a equipe.
-              <span class="dado__fonte">Hodkinson, A. e outros. British Medical Journal, volume 378, 2022.</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="dado" tabindex="0">
-          <div class="dado__folha">
-            <div class="dado__frente">
-              <span class="dado__n">R$ 1 vira R$ <span data-conta="4">4</span></span>
-              <span class="dado__l">de retorno em saúde e em gente conseguindo trabalhar.</span>
-            </div>
-            <div class="dado__prova" role="note">
-              A Organização Mundial da Saúde acompanhou 36 países. Volta como dinheiro mesmo:
-              <span class="forte">menos afastamento, menos falta</span>, menos gente saindo do
-              serviço.
+              A Organização Mundial da Saúde acompanhou 36 países. O investimento em cuidar de
+              depressão e ansiedade volta em menos afastamento, menos falta e mais gente
+              conseguindo trabalhar.
               <span class="dado__fonte">Chisholm, D. e outros. The Lancet Psychiatry, volume 3, número 5, 2016.</span>
             </div>
           </div>
@@ -157,37 +150,43 @@
       <h2>Quando a equipe está <span class="chave--oliva">no limite</span>, mas nada muda:</h2>
       <p class="meia__chamada">veja o que pesquisas apontam</p>
       <div class="meia__lista">
-        <div class="dado dado--claro dado--inverso" tabindex="0">
+
+        <div class="dado dado--claro" tabindex="0">
           <div class="dado__folha">
-            <div class="dado__frente"><span class="dado__n">2x</span>
-          <span class="dado__l">
-            de chance de o atendimento sair fora do esperado, onde o profissional está esgotado.
-          </span>
+            <div class="dado__frente">
+              <span class="dado__n">o dobro</span>
+              <span class="dado__l">de chance de o atendimento
+                <span class="chave--oliva">sair fora do esperado</span>, quando os profissionais
+                estão <span class="esgot">esgotados</span>.</span>
             </div>
             <div class="dado__prova" role="note">
-            Atender no automático, cortar a conversa, não explicar, pular passo do procedimento.
-            Foram 40 estudos, com mais de 32 mil profissionais de saúde: onde há esgotamento, a
-            chance disso acontecer é <span class="forte">mais que o dobro</span>, e isso não é
-            desleixo do profissional: é risco psicossocial do trabalho.
-            <span class="dado__fonte">Hodkinson, A. e outros. British Medical Journal, volume 378, 2022. Os dados foram levantados com médicos.</span>
+              Atender no automático, cortar a conversa, pular passo do procedimento, não explicar
+              detalhes importantes. Foram 40 estudos, com mais de 32 mil profissionais de saúde:
+              onde há esgotamento, mais que o dobro de chance de atendimentos assim. Não é desleixo
+              do profissional: é risco psicossocial do trabalho, e impacta diretamente na qualidade
+              do cuidado da rede.
+              <span class="dado__fonte">Hodkinson, A. e outros. British Medical Journal, volume 378, 2022. Os dados foram levantados com médicos.</span>
             </div>
           </div>
         </div>
 
-        <div class="dado dado--claro dado--inverso" tabindex="0">
+        <div class="dado dado--claro" tabindex="0">
           <div class="dado__folha">
-            <div class="dado__frente"><span class="dado__n">2x</span>
-          <span class="dado__l">
-            de chance de quem foi atendido sair insatisfeito, onde o profissional está esgotado.
-          </span>
+            <div class="dado__frente">
+              <span class="dado__n">mais que o dobro</span>
+              <span class="dado__l">de chance de quem foi atendido sair
+                <span class="chave--oliva">insatisfeito</span>, quando os profissionais estão
+                <span class="esgot">esgotados</span>.</span>
             </div>
             <div class="dado__prova" role="note">
-            É a reclamação que chega na ouvidoria, na câmara e na porta da prefeitura. O esgotamento
-            da equipe não fica dentro da unidade: ele sai pela porta junto com o cidadão.
-            <span class="dado__fonte">Hodkinson, A. e outros. British Medical Journal, volume 378, 2022. Os dados foram levantados com médicos.</span>
-          </div>
+              E isso é reclamação que chega na ouvidoria, nas redes sociais e, ainda pior, expõe a
+              população a riscos evitáveis. O esgotamento da equipe não fica dentro da unidade: ele
+              sai pela porta junto com o cidadão.
+              <span class="dado__fonte">Hodkinson, A. e outros. British Medical Journal, volume 378, 2022. Os dados foram levantados com médicos.</span>
+            </div>
           </div>
         </div>
+
       </div>
     </div>
     <figure class="meia__foto">

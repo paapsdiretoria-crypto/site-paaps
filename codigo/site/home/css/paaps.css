@@ -326,6 +326,15 @@ p + p{margin-top:1.05em}
   /* o topo já reserva a altura do menu fixo, que flutua por cima da foto */
   padding:clamp(112px,13vw,160px) var(--gutter) clamp(72px,9vw,104px);color:var(--bege);
 }
+/* A altura do hero NÃO muda. O que muda é a distribuição dentro dela: o texto
+   fica em cima e os dados descem até o pé da imagem, que estava sobrando. */
+.sobre-foto--alto .sobre-foto__c{
+  display:flex;flex-direction:column;justify-content:space-between;
+  min-height:inherit;
+}
+.sobre-foto--alto .hero__texto{flex:0 0 auto}
+.sobre-foto--alto .prova{margin-top:0;flex:0 0 auto}
+
 .sobre-foto h1,.sobre-foto h2{color:var(--bege);max-width:20ch}
 /* No hero o título divide a tela com a faixa de prova: escala própria. */
 .sobre-foto h1{font-size:clamp(2rem,4.3vw,3.7rem);max-width:23ch}
@@ -411,8 +420,11 @@ figure{margin:0}
 .dado__frente{align-self:start}
 .dado__prova{transform:rotateX(180deg);align-self:start}
 
+/* :focus-visible, nunca :focus-within. Com :focus-within, clicar no dado dava
+   foco nele e a folha ficava travada virada depois que o mouse ia embora.
+   :focus-visible só casa em navegação por teclado, que é quem de fato precisa. */
 .dado:hover .dado__folha,
-.dado:focus-within .dado__folha,
+.dado:focus-visible .dado__folha,
 .dado.aberto .dado__folha{transform:rotateX(180deg)}
 
 .dado__n{
@@ -434,8 +446,8 @@ figure{margin:0}
   background:rgba(28,14,3,.10);
   backdrop-filter:blur(26px) saturate(150%) brightness(.62);
   -webkit-backdrop-filter:blur(26px) saturate(150%) brightness(.62);
-  border:1px solid rgba(245,241,225,.22);
-  color:#fff;font-size:.84rem;line-height:1.6;
+  border:0;                              /* sem borda: fica mais limpo */
+  color:#fff;font-size:.78rem;line-height:1.6;
   text-align:justify;hyphens:auto;-webkit-hyphens:auto;
 }
 /* Se o navegador não tiver backdrop-filter, o vidro vira tinta, senão some. */
@@ -445,20 +457,38 @@ figure{margin:0}
 }
 .dado__prova .forte{color:var(--terracota);font-weight:700}
 .dado--claro .dado__prova{
-  background:rgba(245,241,225,.14);border-color:rgba(68,35,9,.14);color:var(--marrom);
+  background:rgba(245,241,225,.14);border:0;color:var(--marrom);
   backdrop-filter:blur(24px) saturate(140%) brightness(1.14);
   -webkit-backdrop-filter:blur(24px) saturate(140%) brightness(1.14);
 }
-.dado--claro .dado__prova .dado__fonte{color:var(--tinta-55);border-top-color:rgba(68,35,9,.18)}
+.dado--claro .dado__prova .dado__fonte{color:var(--tinta-55)}
 
-/* O gradiente: três proporções empilhadas, número em amarelo. */
-.grad{list-style:none;display:grid;gap:7px;margin:0 0 14px}
+/* O gradiente: a frase vem primeiro, depois as três proporções. */
+.grad{list-style:none;display:grid;gap:7px;margin:14px 0 0}
 .grad li{font-size:.95rem;line-height:1.35;color:rgba(245,241,225,.94)}
+.grad li u{text-decoration:underline;text-underline-offset:.2em;
+  text-decoration-thickness:.06em}
 .grad__n{
   font-family:var(--titulo);font-weight:800;color:var(--amarelo);
   font-size:clamp(1.35rem,2.2vw,1.85rem);margin-right:.4em;
 }
-.dado--grad .dado__l{font-weight:700;font-size:1.02rem}
+.dado__l--topo{margin-top:0;font-weight:700;font-size:clamp(1rem,1.35vw,1.18rem)}
+
+/* O destaque dentro da linha do dado. */
+.dado__forte{font-weight:700;color:#fff}
+.dado__forte .grifo u{text-decoration-thickness:.07em;text-underline-offset:.16em}
+
+/* Dado largo: ocupa as duas colunas e centraliza. */
+.dado--largo{grid-column:1/-1;max-width:none;text-align:center;justify-items:center}
+.dado--largo .dado__folha{justify-items:center}
+.dado--largo .dado__n{font-size:clamp(2.1rem,4vw,3.4rem)}
+.dado--largo .dado__l{max-width:44ch;margin-left:auto;margin-right:auto}
+.dado--largo .dado__prova{margin-left:auto;margin-right:auto;text-align:justify}
+
+/* O logo no lugar da palavra PAAPS, no mesmo corpo do texto. */
+.hero__logo{
+  display:inline-block;height:1.32em;width:auto;vertical-align:-.30em;margin-right:.02em;
+}
 
 /* Cutucada: o número se mexe de leve, de vez em quando, lembrando que ali tem
    mais coisa. Os três nunca se mexem juntos: cada um entra num tempo.
@@ -481,10 +511,11 @@ figure{margin:0}
 /* Nada de mexer no transform do verso aqui: quem gira é a folha, não a face.
    Zerar a rotação da face desfaz a virada e o verso some. */
 /* Fonte sempre na última linha, separada e em corpo menor. */
+/* Sem linha separadora: o que separa a fonte do texto é o respiro e o corpo menor. */
 .dado__fonte{
-  display:block;margin-top:12px;padding-top:10px;
-  border-top:1px solid rgba(245,241,225,.24);
-  font-size:.74rem;line-height:1.45;color:rgba(245,241,225,.82);
+  display:block;margin-top:14px;
+  font-size:.68rem;line-height:1.45;color:rgba(245,241,225,.72);
+  text-align:left;
 }
 .dado--claro .dado__n{color:var(--marrom)}
 .dado--claro .dado__l{color:var(--tinta-70)}
@@ -492,13 +523,15 @@ figure{margin:0}
 /* Com a folha virando no próprio lugar, nada mais é desenhado fora da seção:
    o problema de a prova abrir fora da tela deixou de existir. */
 
-/* Dado invertido: a frase é que manda, e o "2x" fica como marca secundária. */
-.dado--inverso .dado__n{
-  font-size:clamp(1.1rem,1.8vw,1.5rem);opacity:.42;margin-bottom:6px;
+/* No bloco 2 a frase é negrito e maior, e o número segue mandando em cima. */
+.meia__lista .dado__l{
+  font-weight:700;font-size:clamp(1rem,1.35vw,1.2rem);line-height:1.45;
 }
-.dado--inverso .dado__l{
-  font-family:var(--corpo);font-weight:700;
-  font-size:clamp(1.05rem,1.5vw,1.32rem);line-height:1.4;margin-top:0;
+/* ESGOTADOS: caixa alta em League Spartan, sublinhado. */
+.esgot{
+  font-family:var(--titulo);font-weight:700;text-transform:uppercase;
+  letter-spacing:.01em;text-decoration:underline;text-underline-offset:.18em;
+  text-decoration-thickness:.07em;
 }
 
 /* Destaque amarelo obrigatório em "o dobro" e afins. */
@@ -535,7 +568,10 @@ figure{margin:0}
 .meia__texto > *{max-width:min(56ch,100%)}
 .meia__texto{padding-left:max(var(--gutter),calc((100vw - var(--max)) / 2));padding-right:clamp(24px,4vw,64px)}
 .meia__foto{position:relative;align-self:stretch;min-height:60svh}
-.meia__foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+/* O corte é ancorado no rosto de quem atende. Sem isso, o recorte central cai
+   na parede entre as duas pessoas e a foto perde completamente o sentido. */
+.meia__foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  object-position:72% 38%}
 .meia__foto .legenda{position:absolute;right:14px;bottom:12px;margin:0;text-align:right;
   color:rgba(245,241,225,.72);max-width:34ch;text-shadow:0 1px 6px rgba(0,0,0,.6)}
 .meia__lista{display:grid;gap:clamp(26px,3vw,40px);margin-top:clamp(26px,3vw,40px)}
