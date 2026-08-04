@@ -55,6 +55,14 @@
     if (!dados.length) return;
     var reduzido = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+    /* A cutucada é só um lembrete. Depois que a pessoa chega no dado uma vez,
+       ele para de chamar para sempre. */
+    dados.forEach(function (d) {
+      ['pointerenter', 'focusin'].forEach(function (ev) {
+        d.addEventListener(ev, function () { d.classList.add('tocado'); }, { once: true });
+      });
+    });
+
     /* No desktop a prova aparece sozinha no hover, só por CSS, e o clique não
        participa: se participasse, ela ficaria travada aberta depois que o
        mouse saísse. Este caminho é exclusivo de quem não tem mouse. */
