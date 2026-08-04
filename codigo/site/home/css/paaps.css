@@ -331,6 +331,20 @@ p + p{margin-top:1.05em}
 .sobre-foto--clara p{color:var(--tinta-70)}
 .sobre-foto--clara .rotulo{color:var(--marrom)}
 
+/* Variante para foto com SOBRE-TOM MARROM: o véu vira a própria cor da marca.
+   O véu preto dessatura a foto e devolve o cinza que a grade tirou; no marrom
+   a foto segura o tom. Mesmo contraste de texto, mesma opacidade. */
+.sobre-foto--veu-marrom::after{
+  background:linear-gradient(180deg,
+    rgba(46,23,7,.34) 0%,rgba(46,23,7,.56) 46%,rgba(46,23,7,.80) 100%);
+}
+
+/* Hero da home: a agente está na direita da foto e o texto ocupa a esquerda.
+   Quando a tela estreita, o corte fecha em cima dela e precisa de mais
+   deslocamento para ela não sair do quadro. */
+#hero .sobre-foto__img{object-position:66% center}
+@media (max-width:900px){ #hero .sobre-foto__img{object-position:74% 38%} }
+
 /* ----- 8. LEGENDA DE FOTO : OBRIGATÓRIA EM TODA FOTO -------------------- */
 
 figure{margin:0}
