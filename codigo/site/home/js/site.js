@@ -216,27 +216,32 @@
      script está mesmo rodando, é que eles são apagados para poder acender.
      Assim, script quebrado ou desligado nunca esconde informação nenhuma.   */
   (function () {
-    var lista = document.querySelector('.ods__lista--on');
-    if (!lista) return;
-    var itens = Array.prototype.slice.call(lista.children);
-    if (!itens.length) return;
+    var listas = Array.prototype.slice.call(document.querySelectorAll('.ods__lista'));
+    if (!listas.length) return;
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-    lista.classList.add('ods__lista--cascata');
+    /* Cada grade tem a sua própria faixa de scroll, então a de baixo só começa
+       a acender quando chega a vez dela. */
+    var grades = listas.map(function (lista) {
+      lista.classList.add('ods__lista--cascata');
+      return { el: lista, itens: Array.prototype.slice.call(lista.children) };
+    });
 
     var pedido = false;
     function ler() {
       pedido = false;
-      var r = lista.getBoundingClientRect();
-      /* Começa quando o topo da grade cruza 82% da altura da tela e termina
-         quando ela chega a 34%: nessa faixa cabem os 8 passos com folga. */
-      var inicio = window.innerHeight * 0.82;
-      var fim = window.innerHeight * 0.34;
-      var p = (inicio - r.top) / (inicio - fim);
-      p = Math.max(0, Math.min(1, p));
-      var acesos = Math.round(p * itens.length);
-      itens.forEach(function (li, i) {
-        li.classList.toggle('aceso', i < acesos);
+      grades.forEach(function (g) {
+        var r = g.el.getBoundingClientRect();
+        /* Começa quando o topo da grade cruza 82% da altura da tela e termina
+           quando ela chega a 34%: nessa faixa os passos cabem com folga. */
+        var inicio = window.innerHeight * 0.82;
+        var fim = window.innerHeight * 0.34;
+        var p = (inicio - r.top) / (inicio - fim);
+        p = Math.max(0, Math.min(1, p));
+        var acesos = Math.round(p * g.itens.length);
+        g.itens.forEach(function (li, i) {
+          li.classList.toggle('aceso', i < acesos);
+        });
       });
     }
     function aoRolar() {

@@ -771,42 +771,61 @@ figure{margin:0}
   font-size:clamp(1.5rem,2.9vw,2.5rem);line-height:1.12;letter-spacing:-.005em;
   color:var(--branco);max-width:19ch;
 }
+.ods__t2 u{text-decoration:underline;text-underline-offset:.13em;
+  text-decoration-thickness:.055em}
+/* O subtítulo é o único lugar de Helvetica nesta seção, e não pode ficar miúdo. */
+.ods__t3{
+  font-family:var(--corpo);font-weight:400;
+  font-size:clamp(1.02rem,1.4vw,1.28rem);line-height:1.45;
+  color:rgba(255,255,255,.9);margin-top:.7em;max-width:30ch;
+}
 /* O logo do PAAPS entra no corpo da frase, alinhado pela altura da letra. */
 .ods__logo-paaps{
   display:inline-block;height:.78em;width:auto;vertical-align:baseline;
   transform:translateY(.04em);margin-inline:.1em;
 }
-/* Lugar reservado para o logo dos ODS. Enquanto o PNG não chega, a sigla fica
-   escrita no mesmo corpo do texto, para a frase nunca aparecer quebrada. */
-.ods__sigla{color:var(--marrom)}
-.ods__logo{
-  display:inline-block;height:1.05em;width:auto;vertical-align:baseline;
-  transform:translateY(.08em);margin-inline:.08em;
+/* O logo dos ODS entra no lugar da palavra, dentro da frase. Ele vai sobre uma
+   placa branca porque o azul da ONU (#069EDB) contra o oliva desta seção dá
+   1,18:1 de contraste: sumiria. Sobre branco vai a 3:1, e é assim que o próprio
+   manual da marca pede que ele seja aplicado. */
+.ods__selo{
+  display:inline-block;vertical-align:middle;
+  background:var(--branco);border-radius:var(--raio);
+  padding:.34em .5em;margin-inline:.12em;
+  transform:translateY(-.04em);
 }
-.ods__t2 .olho{font-size:1.12em;color:var(--marrom)}
+.ods__logo{display:block;height:1.72em;width:auto}
 
 /* A grade ocupa a metade direita inteira: os 8 impactados em 2 fileiras de 4,
    grandes o bastante para serem lidos. Os 9 restantes vêm menores embaixo. */
 .ods__lista{list-style:none;display:grid}
 .ods__lista--on{grid-template-columns:repeat(4,1fr);gap:clamp(8px,1.1vw,16px)}
-/* Os 9 restantes não são o assunto: entram menores, numa grade mais estreita,
-   só para a conta de 17 fechar diante dos olhos. */
+/* Os 9 restantes entram menores, mas inteiros: mesma cor, mesma nitidez, mesma
+   cascata. Menor porque o impacto é indireto, nunca porque estão mortos. */
 .ods__lista--off{
-  grid-template-columns:repeat(5,1fr);gap:clamp(5px,.7vw,9px);
-  width:78%;margin-top:clamp(16px,2vw,30px);
+  grid-template-columns:repeat(5,1fr);gap:clamp(6px,.8vw,11px);
+  width:72%;
 }
 .ods__i{border-radius:3px;overflow:hidden;aspect-ratio:1;
   transition:opacity .5s var(--ease),filter .5s var(--ease),transform .5s var(--ease)}
 .ods__i img{width:100%;height:100%;object-fit:cover;display:block}
 
-/* PADRÃO, e o que vale se o script falhar: os 8 acesos, os 9 outros apagados.
-   Nenhuma informação depende de JavaScript para aparecer. */
-.ods__i--off{opacity:.30;filter:grayscale(1)}
+/* Os rótulos das duas grades. NÃO são chapéu: não vão acima de título nenhum,
+   não são caixa alta e não têm entreletra aberta. Nomeiam a grade logo abaixo. */
+.ods__rotulo{
+  font-family:var(--titulo);font-weight:700;text-transform:none;letter-spacing:0;
+  font-size:clamp(.98rem,1.25vw,1.16rem);color:var(--marrom);
+  margin-bottom:clamp(10px,1.2vw,16px);
+}
+.ods__rotulo--b{margin-top:clamp(22px,2.8vw,40px);color:rgba(68,35,9,.78)}
 
-/* Só quando o script assume é que os 8 começam apagados e vão acendendo um a
-   um conforme a pessoa desce. A classe abaixo é escrita pelo próprio script. */
-.js .ods__lista--cascata .ods__i--on{opacity:.20;filter:grayscale(1);transform:scale(.93)}
-.js .ods__lista--cascata .ods__i--on.aceso{opacity:1;filter:none;transform:none}
+/* PADRÃO, e o que vale se o script falhar: todos os 17 inteiros e coloridos.
+   Nenhuma informação depende de JavaScript para aparecer. */
+
+/* Só quando o script assume é que eles começam recuados e vão surgindo um a um
+   conforme a pessoa desce, ficando nítidos. A classe é escrita pelo script. */
+.js .ods__lista--cascata .ods__i{opacity:.20;filter:grayscale(1);transform:scale(.93)}
+.js .ods__lista--cascata .ods__i.aceso{opacity:1;filter:none;transform:none}
 
 /* ----- 8g. OS TRÊS SERVIÇOS : texto sobre foto, sem caixa separada ------- */
 /* A transparência é o recurso: o texto vive dentro da foto, não num bloco
