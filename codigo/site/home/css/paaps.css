@@ -1124,15 +1124,18 @@ figure{margin:0}
   text-transform:uppercase;color:var(--bege);line-height:1.2;
   background:linear-gradient(to top,rgba(46,24,6,.95) 0%,rgba(46,24,6,.7) 55%,rgba(46,24,6,0) 100%);
 }
+/* O cartão nasce EM CIMA DA PRÓPRIA FOTO, cobrindo ela, e cresce dali para os
+   dois lados. Antes ele abria para cima: com as biografias longas ele passou de
+   580px e seria cortado pelo topo da tela na maior parte das rolagens. */
 .pessoa__card{
-  position:absolute;left:50%;bottom:calc(100% + 12px);transform:translate(-50%,-6px);
+  position:absolute;left:50%;top:50%;transform:translate(-50%,calc(-50% - 6px));
   z-index:60;width:min(38ch,80vw);pointer-events:none;
   background:var(--bege);color:var(--marrom);border-radius:var(--raio);
   padding:20px 22px;box-shadow:0 18px 50px rgba(0,0,0,.45);
   opacity:0;visibility:hidden;transition:opacity .24s var(--ease),transform .24s var(--ease),visibility .24s;
 }
 .pessoa:hover .pessoa__card,.pessoa:focus-within .pessoa__card,.pessoa.aberto .pessoa__card{
-  opacity:1;visibility:visible;transform:translate(-50%,0)}
+  opacity:1;visibility:visible;transform:translate(-50%,-50%)}
 .pessoa__card strong{display:block;text-align:center;font-family:var(--titulo);
   text-transform:uppercase;font-size:.92rem;letter-spacing:.03em}
 .pessoa__card em{display:block;margin-top:.7em;font-style:italic;font-size:.94rem;
