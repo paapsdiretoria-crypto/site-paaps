@@ -39,7 +39,18 @@
       "Bash(git push*)",
       "Bash(git log*)",
       "Bash(~/bin/gh*)",
-      "mcp__codegraph__*"
+      "mcp__codegraph__*",
+      "WebSearch",
+      "WebFetch",
+      "Read(//Users/mac/Documents/SITE PAAPS/**)",
+      "Write(//Users/mac/Documents/SITE PAAPS/**)",
+      "Edit(//Users/mac/Documents/SITE PAAPS/**)",
+      "mcp__notion__*",
+      "mcp__claude_ai_Notion__*",
+      "mcp__14be8da9-3f38-4015-8c7e-87b9ab437a0a__*",
+      "mcp__n8n-mcp__n8n_executions",
+      "mcp__n8n-mcp__n8n_list_workflows",
+      "mcp__n8n-mcp__n8n_get_workflow"
     ]
   }
 }
