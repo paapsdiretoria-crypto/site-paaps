@@ -1000,6 +1000,13 @@ figure{margin:0}
   font-size:1.02rem;line-height:1.6;color:var(--tinta-70);
   max-width:56ch;margin-top:.4em;
 }
+.ciencia__intro u{
+  color:var(--marrom);font-weight:700;
+  text-underline-offset:.18em;text-decoration-thickness:.06em;
+}
+/* A segunda frase do verso é o desdobramento da primeira: entra separada por
+   espaço, não por ponto, para as duas não virarem um bloco só de leitura. */
+.obra__verso-b{display:block;margin-top:.9em;color:rgba(245,241,225,.82)}
 /* Três por fileira. São cinco obras, então a sexta casa fica VAZIA de
    propósito: é o lugar reservado para o blog da PAAPS, que não entra no
    primeiro deploy. Não colocar nada ali, nem moldura, nem aviso. */
