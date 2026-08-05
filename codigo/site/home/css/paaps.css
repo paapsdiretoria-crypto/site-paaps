@@ -210,8 +210,11 @@ p + p{margin-top:1.05em}
 .topo--sobre-foto .topo__logo--claro{display:block}
 .topo__nav{
   display:flex;align-items:center;justify-content:space-between;gap:24px;
-  max-width:1440px;margin:0 auto;padding:14px var(--gutter);
+  max-width:1440px;margin:0 auto;padding:9px var(--gutter);
 }
+/* O item de duas linhas é o mais alto da barra; sem tirar o respiro dele mesmo,
+   a barra inteira crescia 30px em todas as páginas. */
+.menu__dupla{padding-block:0}
 .marca{font-family:var(--logo);font-size:1.6rem;line-height:1;letter-spacing:.01em;color:var(--marrom)}
 .marca span{color:var(--amarelo)}
 
@@ -223,6 +226,15 @@ p + p{margin-top:1.05em}
 }
 .menu a:hover{border-bottom-color:var(--amarelo)}
 .menu a[aria-current="page"]{border-bottom-color:var(--marrom)}
+/* O único item do menu em duas linhas, com o "+" no meio: sem isso o nome
+   ocupa quase metade da barra e desequilibra os outros três. */
+/* Entrelinha apertada de propósito: solto, este item sozinho levantava a barra
+   de 64px para 96px em TODAS as páginas. */
+.menu__dupla{
+  display:inline-flex;flex-direction:column;align-items:center;
+  text-align:center;line-height:1.05;
+}
+.mais--menu{display:block;font-size:1.05em;line-height:.7;margin:.1em 0 .12em}
 
 .menu__botao{
   display:none;background:none;border:0;cursor:pointer;padding:10px;color:var(--marrom);
@@ -848,17 +860,35 @@ figure{margin:0}
 .servico h3{color:var(--bege);font-size:clamp(1.15rem,1.7vw,1.5rem);margin-bottom:.7em}
 .servico__p{font-size:.95rem;line-height:1.55;color:rgba(245,241,225,.92);max-width:38ch}
 .servico__p b{color:var(--amarelo);font-weight:700}
+/* O "+" é elemento próprio, no meio, entre os dois nomes. A caixa do título
+   encolhe até a linha mais larga, senão o "+" ficaria centrado no vazio do
+   cartão em vez de centrado sobre o nome. */
+.servico__t--dupla{width:fit-content}
+.mais{
+  display:block;text-align:center;
+  font-size:1.85em;line-height:.92;font-weight:700;
+  margin:.08em 0 .02em;
+}
+
+/* Os tópicos fecham o cartão: linha de ponta a ponta, texto centrado e num
+   corpo que dá para ler de longe. */
 .servico__itens{
-  font-size:.82rem;line-height:1.6;color:rgba(245,241,225,.7);margin-top:1.1em;max-width:40ch;
+  font-size:.95rem;line-height:1.65;color:rgba(245,241,225,.8);
+  max-width:none;text-align:center;
+  margin-top:1.4em;padding-top:1.3em;
+  border-top:1px solid rgba(245,241,225,.24);
 }
+/* Sem o traço horizontal no fim: traço longo está proibido. O que chama é o
+   tamanho e o sublinhado, não um risco decorativo. */
 .servico__cta{
-  display:inline-flex;align-items:center;gap:9px;margin-top:1.5em;
-  font-family:var(--titulo);font-size:.8rem;font-weight:700;letter-spacing:.06em;
-  text-transform:uppercase;color:var(--amarelo);
+  display:block;text-align:center;margin-top:1.3em;
+  font-family:var(--titulo);font-size:clamp(.98rem,1.15vw,1.12rem);font-weight:700;
+  letter-spacing:.01em;text-transform:uppercase;color:var(--amarelo);
+  text-decoration:underline;text-underline-offset:.34em;text-decoration-thickness:.085em;
+  text-decoration-color:rgba(247,195,28,.55);
+  transition:text-decoration-color .25s var(--ease);
 }
-.servico__cta::after{content:"";width:20px;height:1px;background:currentColor;
-  transition:width .25s var(--ease)}
-.servico:hover .servico__cta::after{width:34px}
+.servico:hover .servico__cta{text-decoration-color:var(--amarelo)}
 .servico__cred{position:absolute;right:14px;top:14px;z-index:2;text-align:right;max-width:26ch;
   color:rgba(245,241,225,.55);margin:0}
 
@@ -866,8 +896,12 @@ figure{margin:0}
 
 .contrata__t{display:flex;align-items:center;gap:.34em;flex-wrap:wrap;max-width:none}
 .contrata__logo{height:.86em;width:auto;display:inline-block;transform:translateY(.04em)}
+/* Coluna flex: o texto de cada porta tem tamanho diferente, e é o `margin-top:auto`
+   do CTA que faz os dois "Começar por aqui" pousarem na mesma linha, em vez de
+   flutuarem cada um numa altura. */
 .porta-btn{
-  display:block;padding:clamp(26px,3vw,40px);border-radius:var(--raio);
+  display:flex;flex-direction:column;align-items:flex-start;
+  padding:clamp(26px,3vw,40px);border-radius:var(--raio);
   border:1px solid rgba(174,163,73,.5);background:var(--branco);color:var(--marrom);
   transition:transform .25s var(--ease),box-shadow .25s var(--ease),border-color .25s var(--ease);
 }
@@ -878,8 +912,11 @@ figure{margin:0}
 .porta-btn__t{display:block;font-family:var(--titulo);font-weight:700;text-transform:uppercase;
   font-size:clamp(1.1rem,1.7vw,1.5rem);line-height:1.1}
 .porta-btn__l{display:block;margin-top:.8em;font-size:.95rem;line-height:1.55;color:var(--tinta-70)}
+/* `margin-top:auto` empurra o CTA para o pé da caixa: os dois pousam na mesma
+   linha mesmo com textos de tamanhos diferentes. O `padding-top` garante o
+   respiro mínimo quando os dois textos são curtos. */
 .porta-btn__go{
-  display:inline-flex;align-items:center;gap:9px;margin-top:1.4em;
+  display:inline-flex;align-items:center;gap:9px;margin-top:auto;padding-top:1.4em;
   font-family:var(--titulo);font-size:.78rem;font-weight:700;letter-spacing:.08em;
   text-transform:uppercase;color:var(--marrom);border-bottom:2px solid var(--amarelo);
   padding-bottom:3px;
@@ -985,6 +1022,8 @@ figure{margin:0}
 
 .duas{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(34px,5vw,80px);align-items:center}
 .duas--topo{align-items:start}
+/* Duas opções gêmeas: mesma largura de coluna e mesma altura de caixa. */
+.duas--par{grid-template-columns:1fr 1fr;align-items:stretch}
 .tres{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,3vw,44px)}
 .quatro{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(20px,2.4vw,34px)}
 

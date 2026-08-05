@@ -22,7 +22,10 @@
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
     </button>
     <ul class="menu" id="menu">
-      <li><a href="como-atuamos/">Cuidado ao Servidor + Integração de Rede</a></li>
+      <!-- Único item do menu em duas linhas: o "+" vira elemento próprio, no meio,
+           para o nome não atravessar a barra inteira. -->
+      <li><a class="menu__dupla" href="como-atuamos/">Cuidado em Saúde Mental<span
+        class="mais mais--menu">+</span>Integração de Rede</a></li>
       <li><a href="treinamentos/">Treinamentos</a></li>
       <li><a href="urgencias/">Urgências e Eventos Extremos</a></li>
       <li><a href="contato/">Contato</a></li>
@@ -263,7 +266,8 @@
         <img src="img/paaps/cuidado-vivencia.jpg" loading="lazy"
              alt="Roda de conversa com moradoras num município do interior">
         <div class="servico__c">
-          <h3>Cuidado em Saúde Mental<br>+ Integração de Rede</h3>
+          <h3 class="servico__t--dupla">Cuidado em Saúde Mental<span
+            class="mais">+</span>Integração de Rede</h3>
           <p class="servico__p">
             O que a sua equipe precisa? <b>Cuidado</b>, quando a equipe está adoecida, ou
             <b>Integração de Rede</b>, quando os serviços não conversam?
@@ -272,7 +276,7 @@
             Psicoterapia online pro servidor · Plantão psicológico nas unidades · Grupos de apoio ·
             Acordos e fluxo entre as equipes
           </p>
-          <span class="servico__cta">Entenda por onde começar</span>
+          <span class="servico__cta">Entenda como atuamos</span>
         </div>
         <span class="legenda legenda--clara servico__cred">Refazenda Rio Xopotó, Desterro do Melo (MG), 2024.</span>
       </a>
@@ -325,7 +329,9 @@
         <img src="img/logo-marrom.png" alt="PAAPS" class="contrata__logo">
         ?
       </h2>
-      <div class="duas" style="margin-top:clamp(30px,4vw,52px)">
+      <!-- duas--par: as duas portas são gêmeas, então colunas iguais e mesma
+           altura. Sem isso a coluna da esquerda ficava 50px mais larga. -->
+      <div class="duas duas--par" style="margin-top:clamp(30px,4vw,52px)">
         <a class="porta-btn revela" href="#cadastro" data-perfil="publica">
           <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <path d="M6 42h36M10 42V20l14-9 14 9v22"/><path d="M19 42V30h10v12"/>
@@ -508,7 +514,7 @@
       <div>
         <h4>Navegar</h4>
         <ul>
-          <li><a href="como-atuamos/">Cuidado ao Servidor + Integração de Rede</a></li>
+          <li><a href="como-atuamos/">Cuidado em Saúde Mental + Integração de Rede</a></li>
           <li><a href="treinamentos/">Treinamentos</a></li>
           <li><a href="urgencias/">Urgências e Eventos Extremos</a></li>
           <li><a href="contato/">Contato</a></li>
