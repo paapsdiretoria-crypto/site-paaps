@@ -54,6 +54,21 @@ assistência social). É publicado em fonte oficial, mas prefira o endereço no 
   e-mail existe mas não é legível por essa rota: ou achar outra página do mesmo site, ou
   deixar o município de fora. **Nunca reconstruir o endereço por dedução.**
 
+## Terceira armadilha (05/08/2026): e-mail publicado com acento no local-part
+
+Mirabela publica o e-mail da Saúde como `saúde@mirabela.mg.gov.br` (com acento) em duas
+páginas diferentes do próprio site (`contato/` e `quem-e-quem/`), não é erro de renderização
+do WebFetch. Local-part acentuado é atípico e arriscado (pode não ser entregável). Registrei
+a normalização sem acento como inferência, não como dado publicado; ver
+[[project-organizacoes-varridas]] para o caso completo.
+
+## SES-MG: confirmado de novo, `/noticias/` sofre do mesmo bloqueio que `/story/`
+
+Além do padrão `saude.mg.gov.br/.../story/<id>-<slug>` (404 em todas as tentativas, já
+registrado), o padrão `saude.mg.gov.br/noticias/<slug>/` também não abre por WebFetch: devolve
+o conteúdo da homepage, não a matéria. Vale a mesma regra: dado da SES-MG só é confirmável por
+busca (com pelo menos duas queries convergindo no mesmo valor), nunca por leitura direta.
+
 ## Domínio: conferir antes de concluir que o município não tem site
 
 O domínio nem sempre é o nome da cidade. Rio Pardo de Minas responde em

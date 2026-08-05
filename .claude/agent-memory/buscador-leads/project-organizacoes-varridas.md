@@ -58,6 +58,46 @@ Ou seja: os 5 restantes não são secos, estão **a um dado de fechar**. Numa pr
 atacar Jaíba (falta nome) e Rio Pardo/Novo Cruzeiro (falta e-mail legível) antes de sair
 procurando município novo.
 
+## 3ª leva, norte de MG, cadastradas e enviadas em 05/08/2026 (rotina diária, sem a Mallu)
+
+Pool de `0. Alvo` com contato pronto estava zerado (Coração de Jesus e Jaíba já tinham carta
+aprovada; os outros `0. Alvo` do CRM são leads antigos e desconexos do recorte atual, sem
+Contato). Fui buscar e fechei nome + cargo + e-mail + gancho para três municípios novos,
+todos já cadastrados como `1. Cadastrado` com carta `Aprovada`:
+
+- **Prefeitura de Mato Verde**: e-mail institucional da Secretaria de Saúde em página
+  `/portal/secretarias`. Gancho: nove unidades de saúde (um ambulatório + oito UBS/apoio),
+  nenhuma é CAPS.
+- **Prefeitura de São João do Paraíso**: e-mail institucional em página individual do
+  departamento. Gancho: repasse SES-MG de 2024 para dois leitos de saúde mental do hospital
+  municipal, dentro de pacote regional de R$ 807,8 mil.
+- **Prefeitura de Mirabela**: e-mail institucional em duas páginas do site (`contato` e
+  `quem-e-quem`), mas **grafado com acento** (`saúde@mirabela.mg.gov.br`) nas duas. Usei a
+  normalização sem acento no cadastro (`saude@mirabela.mg.gov.br`) por ser o formato
+  tecnicamente válido mais provável, mas é inferência minha, não o dado ao pé da letra.
+  **Conferir se a carta voltar por endereço inexistente**: pode ser preciso testar a
+  variante acentuada, ou achar rota alternativa de contato. Gancho: hospital municipal
+  selecionado pela SES-MG para ~R$ 737 mil/ano (Rede de Urgência e Atenção Psicossocial),
+  repasse a partir de maio/2025.
+
+**Why:** o estoque de cartas `Aprovada` tinha caído para 2 (rodada extra de 12:00 do mesmo
+dia esvaziou a fila); a rotina precisava fechar 3 para voltar a 5 antes do disparo das
+07:30 do próximo dia útil.
+**How to apply:** não varrer esses 3 de novo. Se voltarem à fila (não respondeu em 60 dias),
+revalidar só o nome do titular e, no caso de Mirabela, resolver a dúvida do e-mail antes de
+reenviar.
+
+### Fonte de gancho nova: notícias da SES-MG sobre repasse a hospital específico
+
+`saude.mg.gov.br/noticias/...` e `saude.mg.gov.br/<seção>/story/...` renderam gancho bom
+(valor exato, hospital nomeado) em duas cartas desta leva, mas **nenhuma das duas URLs abriu
+por WebFetch** (mesmo padrão 404/homepage já registrado para `/story/` em
+[[reference-fontes-email-institucional]], agora confirmado também para `/noticias/`). O fato
+foi confirmado por duas buscas (`WebSearch`) independentes convergindo no mesmo valor em cada
+caso, não por leitura direta da página. Usei mesmo assim, com a ressalva declarada na nota de
+cada carta, conforme já autorizado no `APRENDIZADO.md` da carta-fria. **Vale como fonte
+consultável, não como fonte que abre no clique.**
+
 ## Sinal legislativo: buraco conhecido desta leva
 
 Nenhum dos 4 municípios teve lei ou projeto de lei de saúde mental do servidor localizável
