@@ -905,8 +905,10 @@ figure{margin:0}
   border:1px solid rgba(174,163,73,.5);background:var(--branco);color:var(--marrom);
   transition:transform .25s var(--ease),box-shadow .25s var(--ease),border-color .25s var(--ease);
 }
-.porta-btn:hover{transform:translateY(-3px);border-color:var(--marrom);
-  box-shadow:0 14px 40px rgba(68,35,9,.16)}
+/* Sem levantar e sem sombra: `identidade-aplicada.md` proíbe box-shadow de card
+   por nome, e ela disse que não gosta do sombreado. Por ora o hover é só a
+   borda escurecendo; o gesto definitivo ainda está em decisão com ela. */
+.porta-btn:hover{border-color:var(--marrom)}
 .porta-btn svg{width:44px;height:44px;color:var(--oliva);display:block;margin-bottom:18px}
 .porta-btn--b svg{color:var(--marrom)}
 .porta-btn__t{display:block;font-family:var(--titulo);font-weight:700;text-transform:uppercase;
@@ -915,9 +917,13 @@ figure{margin:0}
 /* `margin-top:auto` empurra o CTA para o pé da caixa: os dois pousam na mesma
    linha mesmo com textos de tamanhos diferentes. O `padding-top` garante o
    respiro mínimo quando os dois textos são curtos. */
+/* Corpo e entreletra iguais aos do CTA dos três serviços. Antes eram .78rem em
+   caixa alta com entreletra de .08em, que é a receita exata do chapéu banido:
+   ele tinha sobrevivido aqui só por estar embaixo do texto em vez de acima. */
 .porta-btn__go{
   display:inline-flex;align-items:center;gap:9px;margin-top:auto;padding-top:1.4em;
-  font-family:var(--titulo);font-size:.78rem;font-weight:700;letter-spacing:.08em;
+  font-family:var(--titulo);font-size:clamp(.98rem,1.15vw,1.12rem);font-weight:700;
+  letter-spacing:.01em;
   text-transform:uppercase;color:var(--marrom);border-bottom:2px solid var(--amarelo);
   padding-bottom:3px;
 }
