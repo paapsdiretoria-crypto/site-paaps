@@ -905,10 +905,18 @@ figure{margin:0}
   border:1px solid rgba(174,163,73,.5);background:var(--branco);color:var(--marrom);
   transition:transform .25s var(--ease),box-shadow .25s var(--ease),border-color .25s var(--ease);
 }
-/* Sem levantar e sem sombra: `identidade-aplicada.md` proíbe box-shadow de card
-   por nome, e ela disse que não gosta do sombreado. Por ora o hover é só a
-   borda escurecendo; o gesto definitivo ainda está em decisão com ela. */
-.porta-btn:hover{border-color:var(--marrom)}
+/* Decisão dela em 05/08/2026, revogando o "NUNCA box-shadow" do
+   identidade-aplicada.md SÓ para este bloco: a borda de hover sai e entra uma
+   sombra de verdade. Três camadas em vez de uma: a rasa cola o objeto na
+   superfície, a média dá o corpo e a longa dá a distância. Sombra de uma
+   camada só é o que faz o cartão parecer adesivo em vez de objeto. */
+.porta-btn:hover,.porta-btn:focus-visible{
+  transform:translateY(-2px);
+  box-shadow:
+    0 1px 2px rgba(68,35,9,.06),
+    0 8px 18px rgba(68,35,9,.09),
+    0 24px 48px rgba(68,35,9,.11);
+}
 .porta-btn svg{width:44px;height:44px;color:var(--oliva);display:block;margin-bottom:18px}
 .porta-btn--b svg{color:var(--marrom)}
 .porta-btn__t{display:block;font-family:var(--titulo);font-weight:700;text-transform:uppercase;
@@ -921,12 +929,49 @@ figure{margin:0}
    caixa alta com entreletra de .08em, que é a receita exata do chapéu banido:
    ele tinha sobrevivido aqui só por estar embaixo do texto em vez de acima. */
 .porta-btn__go{
+  position:relative;
   display:inline-flex;align-items:center;gap:9px;margin-top:auto;padding-top:1.4em;
   font-family:var(--titulo);font-size:clamp(.98rem,1.15vw,1.12rem);font-weight:700;
   letter-spacing:.01em;
-  text-transform:uppercase;color:var(--marrom);border-bottom:2px solid var(--amarelo);
-  padding-bottom:3px;
+  text-transform:uppercase;color:var(--marrom);
+  padding-bottom:5px;
 }
+/* A linha não existe em repouso: ela se desenha da esquerda para a direita
+   quando o mouse entra no bloco inteiro, e desfaz no mesmo caminho ao sair.
+   A curva é desacelerada no fim, senão o traço chega batendo na parede. */
+/* Cresce por `scaleX` a partir da esquerda, não por `width`: percentual de
+   largura não resolvia dentro deste contêiner, e transform ainda é mais leve,
+   porque não refaz o layout a cada quadro da animação. */
+.porta-btn__go::after{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:2px;
+  background:var(--amarelo);
+  transform:scaleX(0);transform-origin:left center;
+  transition:transform .5s cubic-bezier(.22,1,.36,1);
+}
+.porta-btn:hover .porta-btn__go::after,
+.porta-btn:focus-visible .porta-btn__go::after{transform:scaleX(1)}
+@media (prefers-reduced-motion:reduce){
+  .porta-btn__go::after{transition:none}
+}
+
+/* ----- 8h2. CADASTRO SOBRE A SERRA --------------------------------------- */
+/* A foto da serra de Minas, a mesma da assinatura de e-mail, cobre a seção
+   inteira, formulário incluso. O véu é marrom e não preto: o preto dessatura a
+   paisagem e devolve o cinza que a regra da cor em cor já recusou. */
+.cadastro--foto{position:relative;isolation:isolate;overflow:hidden}
+.cadastro__fundo{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  object-position:center 62%;z-index:-2;
+}
+.cadastro--foto::after{
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(180deg,rgba(46,23,7,.58) 0%,rgba(46,23,7,.74) 100%);
+}
+.cadastro--foto .form input,.cadastro--foto .form select,
+.cadastro--foto .form textarea{
+  background:rgba(245,241,225,.94);border-color:rgba(245,241,225,.5);
+}
+.cadastro--foto .cadastro__lema{max-width:14ch}
 
 /* ----- 8i. DIFERENCIAIS -------------------------------------------------- */
 
@@ -937,6 +982,87 @@ figure{margin:0}
 
 /* ----- 8j. CIÊNCIA ------------------------------------------------------- */
 
+/* ----- GALERIA DE CAPAS ACADÊMICAS -------------------------------------- */
+/* Cada obra é uma capa de trabalho acadêmico: instituição no alto, título ao
+   centro, referência ABNT no pé. Passando o mouse, a capa vira NO MESMO LUGAR
+   e mostra o que aquela obra sustenta. Duas colunas no computador.          */
+
+.ciencia__intro{
+  font-size:1.02rem;line-height:1.6;color:var(--tinta-70);
+  max-width:56ch;margin-top:.4em;
+}
+.galeria{
+  list-style:none;display:grid;grid-template-columns:1fr 1fr;
+  gap:clamp(20px,2.4vw,34px);
+  max-width:860px;margin-top:clamp(30px,3.6vw,48px);
+}
+.obra{
+  position:relative;aspect-ratio:1/1.3;
+  cursor:default;
+}
+.obra:focus{outline:none}
+.obra:focus-visible{outline:3px solid var(--amarelo);outline-offset:6px;border-radius:2px}
+
+/* As duas faces ocupam a MESMA caixa: a virada acontece no lugar, sem empurrar
+   nada e sem abrir painel em outro canto da tela. */
+.obra__frente,.obra__verso{
+  position:absolute;inset:0;border-radius:var(--raio);
+  display:flex;flex-direction:column;
+  padding:clamp(20px,2.2vw,30px);
+  transform-origin:center center;
+  transition:transform .6s cubic-bezier(.3,1.06,.4,1),opacity .2s var(--ease);
+}
+.obra__frente{
+  background:var(--branco);border:1px solid rgba(68,35,9,.16);
+  color:var(--marrom);
+  transform:perspective(2400px) rotateY(0);
+}
+.obra__verso{
+  background:var(--marrom);color:var(--bege);
+  transform:perspective(2400px) rotateY(180deg);
+  opacity:0;visibility:hidden;
+  justify-content:center;
+  font-size:.98rem;line-height:1.6;
+  transition:transform .6s cubic-bezier(.3,1.06,.4,1),
+             opacity .2s var(--ease) 0s,visibility 0s linear .2s;
+}
+.obra:hover .obra__verso,
+.obra:focus-visible .obra__verso,
+.obra.aberto .obra__verso{
+  transform:perspective(2400px) rotateY(0);
+  opacity:1;visibility:visible;
+  transition:transform .6s cubic-bezier(.3,1.06,.4,1),
+             opacity .22s var(--ease) .26s,visibility 0s linear .26s;
+}
+.obra:hover .obra__frente,
+.obra:focus-visible .obra__frente,
+.obra.aberto .obra__frente{
+  transform:perspective(2400px) rotateY(-180deg);
+  opacity:0;transition:transform .6s cubic-bezier(.3,1.06,.4,1),opacity .18s var(--ease) .18s;
+}
+
+/* Anatomia da capa. Um fio fino no alto e no pé, como capa impressa. */
+.obra__inst{
+  font-family:var(--titulo);font-weight:700;font-size:.8rem;line-height:1.3;
+  letter-spacing:.01em;color:var(--oliva);
+  padding-bottom:.9em;border-bottom:1px solid rgba(68,35,9,.14);
+}
+.obra__t{
+  font-family:var(--titulo);font-weight:700;text-transform:none;
+  font-size:clamp(1.05rem,1.5vw,1.32rem);line-height:1.16;letter-spacing:-.005em;
+  color:var(--marrom);margin:auto 0;text-wrap:balance;
+}
+.obra__ref{
+  font-family:var(--corpo);font-size:.74rem;line-height:1.45;color:var(--tinta-55);
+  padding-top:.9em;border-top:1px solid rgba(68,35,9,.14);
+}
+.obra__ref i{font-style:italic}
+
+@media (prefers-reduced-motion:reduce){
+  .obra__frente,.obra__verso{transition:opacity .2s linear}
+}
+
+/* Bloco antigo dos dados em texto corrido, ainda usado em outras páginas. */
 .ciencia{display:grid;gap:clamp(18px,2.2vw,26px);margin-top:clamp(26px,3vw,42px);max-width:74ch}
 .dado--texto{max-width:none}
 .dado--texto .dado__l{font-size:1.06rem;line-height:1.6;margin-top:0;color:var(--marrom)}
@@ -1148,6 +1274,7 @@ figure{margin:0}
   .meia .dado.aberto .dado__prova{
     transform:translateY(-50%) perspective(2600px) rotateX(0);
   }
+  .galeria{grid-template-columns:1fr;max-width:420px}
   .ods__grade{grid-template-columns:1fr;padding-right:var(--gutter);
     padding-left:var(--gutter);gap:clamp(28px,5vw,46px)}
   .ods__lista--off{width:100%}

@@ -271,6 +271,30 @@
     preencher(b, fila.slice().reverse());
   })();
 
+  /* ---- galeria de capas: no toque, a capa vira com um toque ----
+     No computador quem vira é o hover, só por CSS. Aqui é o caminho de quem
+     não tem mouse. A referência ABNT fica na frente da capa de propósito: ela
+     é a informação que não pode depender de gesto nenhum para ser lida.     */
+  (function () {
+    var obras = Array.prototype.slice.call(document.querySelectorAll('.obra'));
+    if (!obras.length) return;
+    function fechar() { obras.forEach(function (o) { o.classList.remove('aberto'); }); }
+    if (window.matchMedia('(hover: none)').matches) {
+      obras.forEach(function (o) {
+        o.addEventListener('click', function (e) {
+          e.stopPropagation();
+          var estava = o.classList.contains('aberto');
+          fechar();
+          if (!estava) o.classList.add('aberto');
+        });
+      });
+    }
+    document.addEventListener('click', fechar);
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') fechar(); });
+    window.addEventListener('resize', fechar);
+    window.addEventListener('blur', fechar);
+  })();
+
   /* ---- equipe: no toque, o cartão abre com um toque e fecha com um toque fora ---- */
   (function () {
     var pessoas = Array.prototype.slice.call(document.querySelectorAll('.pessoa'));
