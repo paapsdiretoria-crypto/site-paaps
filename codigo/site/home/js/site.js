@@ -271,6 +271,36 @@
     preencher(b, fila.slice().reverse());
   })();
 
+  /* ---- a linha amarela que se desenha conforme a pessoa desce ----
+     Não é animação que dispara e roda sozinha: é o scroll que controla, então
+     ela acompanha o gesto de descer e desfaz ao subir. O CSS já deixa a linha
+     inteira quando não há script ou quando o movimento reduzido está ligado. */
+  (function () {
+    var riscas = Array.prototype.slice.call(document.querySelectorAll('.risca'));
+    if (!riscas.length) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      riscas.forEach(function (r) { r.style.setProperty('--p', 1); });
+      return;
+    }
+    var pedido = false;
+    function ler() {
+      pedido = false;
+      riscas.forEach(function (r) {
+        var b = r.getBoundingClientRect();
+        /* começa quando a frase cruza 78% da altura da tela e fecha em 42% */
+        var ini = window.innerHeight * 0.78, fim = window.innerHeight * 0.42;
+        var p = (ini - b.top) / (ini - fim);
+        r.style.setProperty('--p', Math.max(0, Math.min(1, p)).toFixed(3));
+      });
+    }
+    function aoRolar() {
+      if (!pedido) { pedido = true; window.requestAnimationFrame(ler); }
+    }
+    ler();
+    window.addEventListener('scroll', aoRolar, { passive: true });
+    window.addEventListener('resize', aoRolar);
+  })();
+
   /* ---- galeria de capas: no toque, a capa vira com um toque ----
      No computador quem vira é o hover, só por CSS. Aqui é o caminho de quem
      não tem mouse. A referência ABNT fica na frente da capa de propósito: ela

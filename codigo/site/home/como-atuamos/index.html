@@ -33,13 +33,13 @@
      MAPA DESTA PÁGINA : CUIDADO AO SERVIDOR + INTEGRAÇÃO DE REDE  (pasta como-atuamos/)
      Para pedir correção, cite o número. Ex.: "bloco 4, o texto do meio".
 
-       1. HERO ..................... 'a gente olha a cidade inteira'
-       2. A LEITURA DECIDE ......... os dois caminhos, lado a lado
+       1. HERO ..................... 'Cuidado em Saúde Mental & Integração de Rede'
+       2. OS DOIS CAMINHOS ......... as 2 fotos de tela cheia, sem texto acima
        3. CUIDADO .................. abertura sobre a foto
-       4. CUIDADO .................. as 3 coisas concretas
+       4. CUIDADO .................. as 3 coisas concretas, levando ao cadastro
        5. INTEGRAÇÃO DE REDE ....... abertura sobre a foto
        6. INTEGRAÇÃO DE REDE ....... o problema é uma cultura
-       7. CTA ...................... comece contando o que acontece
+       7. CADASTRO ................. sobre a serra, com o seletor dos 2 caminhos
 
      ======================================================================== -->
 
@@ -64,30 +64,37 @@
     <p class="legenda">Foto: Radilson Carlos Gomes, fotógrafo do SUS.</p>
   </section>
 
-  <!-- 2. A LEITURA DECIDE : os dois caminhos, lado a lado ---------------- -->
-  <section class="secao">
-    <div class="container">
-      <div class="revela" style="max-width:52ch">
-        <h2>Duas situações diferentes pedem começos diferentes.</h2>
-        <p class="lead lead--largo">
-          Contratar a PAAPS começa com uma leitura da sua rede. O que essa leitura encontra é o que
-          define por onde a gente entra. São dois caminhos, e eles podem se somar depois.
+  <!-- 2. OS DOIS CAMINHOS : sem texto de abertura, direto nas duas fotos ---
+       É a primeira vez que a diferenciação da metodologia aparece. Sem moldura,
+       sem botão: a foto ocupa a tela e o texto vive dentro dela. -->
+  <section class="duplas" data-tom="escuro">
+    <a class="dupla" href="#cuidado">
+      <img src="../img/paaps/cuidado-farmacia.jpg" loading="lazy" width="1400" height="1750"
+           alt="Profissional de saúde de uniforme verde na janela da farmácia de um hospital">
+      <div class="dupla__c">
+        <h2 class="dupla__t">Cuidado em <span class="chave">Saúde Mental</span></h2>
+        <p class="dupla__p">
+          Quando a equipe está adoecida e em sofrimento. Primeiro se interrompe o que está
+          machucando as pessoas.
         </p>
       </div>
+      <span class="legenda legenda--clara dupla__cred">Foto: Walterson Rosa, Ministério da Saúde.
+        Hospital Municipal Universitário de Rio Verde.</span>
+    </a>
 
-      <div class="duas" style="margin-top:clamp(34px,4vw,56px)">
-        <div class="cartao cartao--marcado revela">
-          <h3>Cuidado</h3>
-          <p>Quando a equipe está adoecida e em sofrimento. Primeiro se interrompe o que está machucando as pessoas.</p>
-          <a class="btn btn--linha" href="#cuidado" style="margin-top:20px">Ver o Cuidado</a>
-        </div>
-        <div class="cartao cartao--oliva revela revela--1">
-          <h3>Integração de Rede</h3>
-          <p>Quando a equipe é madura, mas os serviços não conversam entre si, e quem sente isso é o cidadão.</p>
-          <a class="btn btn--linha" href="#integracao" style="margin-top:20px">Ver a Integração</a>
-        </div>
+    <a class="dupla" href="#integracao">
+      <img src="../img/paaps/integracao-agsus.jpg" loading="lazy" width="1400" height="1750"
+           alt="Três profissionais de colete da AgSUS diante de um rio, de costas, olhando o território">
+      <div class="dupla__c">
+        <h2 class="dupla__t"><span class="chave">Integração</span> de Rede</h2>
+        <p class="dupla__p">
+          Quando a equipe é madura, mas os serviços não conversam entre si, e quem sente isso é o
+          cidadão.
+        </p>
       </div>
-    </div>
+      <span class="legenda legenda--clara dupla__cred">Fonte: AgSUS, Agência Brasileira de Apoio à
+        Gestão do SUS. Mutirão SUS na Terra Indígena Andirá-Marau (AM).</span>
+    </a>
   </section>
 
   <!--
@@ -104,14 +111,13 @@
     <div class="sobre-foto__c">
       <h2>Cuidado</h2>
       <p class="imagine" style="margin-top:26px">
-        <span>Imagine que a gente chega para a primeira conversa com a sua equipe</span>
-        <span>e encontra gente adoecida.</span>
-        <span>Imagine que há choro.</span>
-        <span>Imagine que há desespero.</span>
-        <span>Imagine que há desesperança dentro da equipe que deveria cuidar do cidadão.</span>
+        <span>Imagine que a gente chega para a primeira conversa com a sua equipe.</span>
+        <span>E encontramos que, enquanto alguns <b>se esgotam sustentando mais do que podem</b>,
+          muitos <b>desabam silenciosamente</b>.</span>
       </p>
-      <p class="lead" style="margin-top:30px;color:var(--amarelo);max-width:34ch">
-        O que a PAAPS faz aqui é simples de dizer: a PAAPS cuida.
+      <p class="epidemia" style="margin-top:32px">
+        Estamos vivendo uma <b>epidemia de Saúde Mental</b> em todo o mundo:
+        <span class="risca">o cuidado é o caminho.</span>
       </p>
     </div>
     <p class="legenda">Foto: Radilson Carlos Gomes, fotógrafo do SUS.</p>
@@ -123,28 +129,30 @@
       <div class="revela" style="max-width:44ch;margin-bottom:clamp(28px,3.4vw,44px)">
         <h2>Três coisas concretas.</h2>
       </div>
+      <!-- Os três levam ao cadastro no pé desta página. Nenhum deles promete
+           resultado: psicologia não promete resultado, e a régua vale na copy. -->
       <div class="tres">
-        <div class="cartao cartao--marcado revela">
-          <h3>Psicoterapia online</h3>
+        <a class="cartao cartao--marcado cartao--clique revela" href="#cadastro">
+          <h3>Grupos de Apoio à Equipe</h3>
+          <p>
+            Grupos humanos, conduzidos presencialmente por psicóloga especializada, onde a equipe
+            elabora junto o que vive e aprende a se cuidar.
+          </p>
+        </a>
+        <a class="cartao cartao--marcado cartao--clique revela revela--1" href="#cadastro">
+          <h3>Plantão Psicológico para Funcionários nas Unidades</h3>
+          <p>
+            Acontece em sala apropriada, mas acessível ao ambiente do trabalho real. Porta de
+            entrada aberta para quem busca ou precisa de acolhimento imediato ou pontual.
+          </p>
+        </a>
+        <a class="cartao cartao--marcado cartao--clique revela revela--2" href="#cadastro">
+          <h3>Psicoterapia Online</h3>
           <p>
             Acompanhamento semanal com psicóloga da PAAPS, para as pessoas da equipe contempladas
             no contrato. Online, para caber na rotina de quem trabalha o dia inteiro.
           </p>
-        </div>
-        <div class="cartao cartao--marcado revela revela--1">
-          <h3>Plantão psicológico nas unidades</h3>
-          <p>
-            No próprio ambiente de trabalho, com privacidade, ética e regulamentação, ativo em pelo
-            menos um dia por semana, com revezamento entre os serviços do município.
-          </p>
-        </div>
-        <div class="cartao cartao--marcado revela revela--2">
-          <h3>Grupos de apoio à equipe</h3>
-          <p>
-            Grupos humanos, conduzidos presencialmente por psicóloga especializada, onde a equipe
-            elabora junto o que vive e aprende a se cuidar. É o que reata uma equipe isolada.
-          </p>
-        </div>
+        </a>
       </div>
     </div>
   </section>
@@ -200,21 +208,69 @@
     </div>
   </section>
 
-  <!-- 7. CTA : comece contando o que está acontecendo -------------------- -->
-  <section class="sobre-foto sobre-foto--media sobre-foto--uniforme">
-    <img class="sobre-foto__img" src="../img/paaps/paaps-vivencia.jpg" loading="lazy"
-         alt="Roda de conversa ao ar livre com moradoras de um município do interior">
-    <div class="sobre-foto__c">
-      <div class="caixa caixa--larga">
-        <h2 style="font-size:clamp(1.5rem,2.4vw,2.1rem)">Comece contando o que está acontecendo.</h2>
-        <p style="color:rgba(245,241,225,.9)">
-          O cadastro pergunta o tamanho da sua equipe e qual dos dois caminhos parece o seu. Pode
-          ser os dois. A partir dali a gente monta a leitura da sua rede.
-        </p>
-        <a class="btn btn--amarelo" href="../contato/" style="margin-top:26px">Preencher o cadastro</a>
+  <!-- 7. CADASTRO : o mesmo da home, sobre a serra, com o seletor de caminho -->
+  <section id="cadastro" data-tom="escuro" class="secao cadastro--foto">
+    <img class="cadastro__fundo" src="../img/montanha-minas.jpg" loading="lazy"
+         width="1600" height="1067" alt="">
+    <div class="container duas duas--topo">
+      <div class="revela">
+        <img src="../img/logo-claro.png" alt="PAAPS Brasil" class="cadastro__logo" loading="lazy" width="150" height="60">
+        <p class="cadastro__lema">Cuidar da Ponta, Impactar o Mundo</p>
       </div>
+      <form class="form revela revela--1" method="post" action="#" novalidate>
+        <fieldset class="full" style="border:0;padding:0">
+          <legend class="form__legenda">Você é de <span class="form__obrig">(obrigatório)</span></legend>
+          <div class="opcoes">
+            <label class="opcao">
+              <input type="radio" name="perfil" value="publica" id="perfil-publica" required>
+              <span>Gestão Pública</span>
+            </label>
+            <label class="opcao">
+              <input type="radio" name="perfil" value="instituto" id="perfil-instituto" required>
+              <span>ONG ou Instituto</span>
+            </label>
+          </div>
+        </fieldset>
+        <!-- O seletor dos dois caminhos. As duas caixas podem ser marcadas ao
+             mesmo tempo, e a linha de ajuda diz que isso é comum. -->
+        <fieldset class="full" style="border:0;padding:0">
+          <legend class="form__legenda">O que você procura</legend>
+          <div class="opcoes">
+            <label class="opcao">
+              <input type="checkbox" name="caminho" value="cuidado" id="caminho-cuidado">
+              <span>Cuidado em Saúde Mental</span>
+            </label>
+            <label class="opcao">
+              <input type="checkbox" name="caminho" value="integracao" id="caminho-integracao">
+              <span>Integração de Rede</span>
+            </label>
+          </div>
+          <p class="form__dica">Pode marcar os dois. Na maioria das redes, um puxa o outro.</p>
+        </fieldset>
+        <div class="full">
+          <label for="c-nome">Seu nome</label>
+          <input id="c-nome" name="nome" type="text" autocomplete="name" required>
+        </div>
+        <div>
+          <label for="c-org">Município ou organização</label>
+          <input id="c-org" name="organizacao" type="text" autocomplete="organization" required>
+        </div>
+        <div>
+          <label for="c-email">E-mail</label>
+          <input id="c-email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div class="full">
+          <label for="c-equipe">Número estimado de funcionários contemplados</label>
+          <input id="c-equipe" name="equipe" type="number" min="1" step="1" inputmode="numeric"
+                 placeholder="Por exemplo: 80">
+        </div>
+        <button class="btn btn--amarelo full" type="submit">Enviar cadastro</button>
+        <p class="ajuda full">
+          Prefere escrever?
+          <a href="mailto:relacionamento@paaps.com.br?subject=Contato%20de%20gestor%20:%20cuidado%20com%20a%20equipe%20do%20meu%20munic%C3%ADpio">relacionamento@paaps.com.br</a>
+        </p>
+      </form>
     </div>
-    <p class="legenda">Refazenda Rio Xopotó, Desterro do Melo (MG), 2024.</p>
   </section>
 
 </main>

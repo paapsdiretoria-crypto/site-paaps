@@ -901,6 +901,80 @@ figure{margin:0}
 .servico__cred{position:absolute;right:14px;top:14px;z-index:2;text-align:right;max-width:26ch;
   color:rgba(245,241,225,.55);margin:0}
 
+/* Título de linha única: são 43 caracteres, então o corpo é calculado para
+   caber na largura da coluna em vez de herdar a escala do hero. Abaixo de
+   900px ele volta a quebrar, porque uma linha só ficaria ilegível no celular. */
+/* `.sobre-foto h1` já traz escala e largura próprias, então esta regra precisa
+   da mesma especificidade para valer. */
+/* O corpo sai da largura útil da coluna, não do viewport: entre 1200 e 1440 a
+   coluna não muda de tamanho, e uma conta em `vw` encolhia o título à toa.
+   Os 43 caracteres ocupam 23,97em, e o divisor 26,1 deixa cerca de 9% de folga. */
+.sobre-foto h1.titulo-linha{
+  max-width:none;line-height:1.12;
+  font-size:min(calc((100vw - 100px) / 26.1), 2.58rem);
+}
+.titulo-linha u{text-underline-offset:.16em;text-decoration-thickness:.05em}
+@media (max-width:900px){
+  .sobre-foto h1.titulo-linha{font-size:clamp(1.5rem,5.6vw,2.1rem)}
+}
+
+/* ----- 8g1. A FRASE DA EPIDEMIA E A LINHA QUE SE DESENHA ----------------- */
+/* League Spartan em peso normal, bege, e o grifo amarelo NÃO existe em repouso:
+   ele se desenha da esquerda para a direita conforme a pessoa desce a página.
+   O `--p` é escrito pelo script, de 0 a 1, a partir da posição do scroll.     */
+
+/* `.sobre-foto p` deixa o texto a 90% de opacidade; aqui o bege é cheio. */
+.sobre-foto p.epidemia,.epidemia{
+  font-family:var(--titulo);font-weight:400;text-transform:none;letter-spacing:0;
+  font-size:clamp(1.15rem,1.9vw,1.65rem);line-height:1.35;
+  color:var(--bege);max-width:30ch;
+}
+.epidemia b{font-weight:700;color:var(--bege)}
+.risca{position:relative;display:inline-block;white-space:nowrap}
+.risca::after{
+  content:"";position:absolute;left:0;right:0;bottom:-.14em;height:.09em;
+  background:var(--amarelo);border-radius:2px;
+  transform:scaleX(var(--p,0));transform-origin:left center;
+}
+/* Sem script a linha já está inteira: o grifo é parte da mensagem, não enfeite. */
+html:not(.js) .risca::after{transform:scaleX(1)}
+@media (prefers-reduced-motion:reduce){.risca::after{transform:scaleX(1)}}
+
+/* ----- 8g2. OS DOIS CAMINHOS : duas fotos de tela cheia ------------------ */
+/* Mesma gramática dos três serviços da home: a foto é o bloco, o texto vive
+   dentro dela, e o que responde ao mouse é a própria foto se aproximando e o
+   véu escurecendo. Sem moldura, sem botão, sem cartão.
+   Proporção 4:5, que é o retrato do Instagram, e as duas juntas ocupam a
+   largura inteira da tela.                                                   */
+
+.duplas{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:rgba(68,35,9,.2)}
+.dupla{
+  position:relative;isolation:isolate;display:flex;align-items:flex-end;
+  aspect-ratio:4/5;overflow:hidden;color:var(--bege);text-decoration:none;
+}
+.dupla > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;
+  transition:transform .7s var(--ease)}
+.dupla::after{content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(to top,rgba(28,14,3,.9) 0%,rgba(28,14,3,.62) 42%,rgba(28,14,3,.28) 100%);
+  transition:background .4s var(--ease)}
+.dupla:hover > img,.dupla:focus-visible > img{transform:scale(1.04)}
+.dupla:hover::after,.dupla:focus-visible::after{
+  background:linear-gradient(to top,rgba(28,14,3,.93) 0%,rgba(28,14,3,.7) 46%,rgba(28,14,3,.4) 100%)}
+.dupla:focus{outline:none}
+.dupla:focus-visible{outline:3px solid var(--amarelo);outline-offset:-6px}
+
+.dupla__c{padding:clamp(30px,3.4vw,56px);width:100%}
+.dupla__t{
+  color:var(--bege);max-width:14ch;
+  font-size:clamp(1.5rem,2.6vw,2.5rem);margin-bottom:.5em;
+}
+.dupla__p{
+  font-size:clamp(.98rem,1.1vw,1.1rem);line-height:1.55;
+  color:rgba(245,241,225,.92);max-width:34ch;
+}
+.dupla__cred{position:absolute;right:16px;top:16px;z-index:2;text-align:right;max-width:26ch;
+  color:rgba(245,241,225,.55);margin:0}
+
 /* ----- 8h. QUEM CONTRATA ------------------------------------------------- */
 
 .contrata__t{display:flex;align-items:center;gap:.34em;flex-wrap:wrap;max-width:none}
@@ -981,6 +1055,17 @@ figure{margin:0}
   background:rgba(245,241,225,.94);border-color:rgba(245,241,225,.5);
 }
 .cadastro--foto .cadastro__lema{max-width:14ch}
+/* A pergunta de perfil é obrigatória em TODOS os formulários do site. */
+.form__obrig{font-weight:400;text-transform:none;letter-spacing:0;opacity:.72}
+.form__dica{
+  font-family:var(--corpo);font-size:.86rem;line-height:1.45;
+  color:rgba(245,241,225,.78);margin-top:.7em;
+}
+/* Cartão que é link: mesma caixa, só ganha o gesto de resposta ao mouse. */
+.cartao--clique{display:block;text-decoration:none;color:inherit;
+  transition:border-color .25s var(--ease),transform .25s var(--ease)}
+.cartao--clique:hover,.cartao--clique:focus-visible{
+  border-color:var(--marrom);transform:translateY(-2px)}
 
 /* ----- 8i. DIFERENCIAIS -------------------------------------------------- */
 
