@@ -436,6 +436,49 @@ p + p{margin-top:1.05em}
    escuro tentando emendar as duas ficou ruim, ela pediu separação lisa. */
 .faixa-bege{background:var(--bege);height:clamp(28px,4vw,56px)}
 
+/* Urgências : lista da seção "A gente organiza", mesmo tratamento de peso
+   de fonte que já existe em Treinamentos (escopado, não é mudança global). */
+#resposta-local .lista{font-weight:500}
+
+/* ----- 8g4. A LINHA DO TEMPO HORIZONTAL (5 tempos, Urgências) ------------ */
+/* Mesmo espírito da trilha vertical dos entregáveis (Como Atuamos), só
+   deitada: uma estrada que sobe e desce entre os pontos em vez de serpentear
+   de lado a lado. O `d` também é calculado pelo script a partir da posição
+   real de cada ponto. Sem script, a linha amarela aparece inteira. */
+.trilha-tempos{position:relative;padding:34px 0 6px}
+.trilha-tempos__svg{
+  position:absolute;inset:0;width:100%;height:100%;overflow:visible;
+  pointer-events:none;z-index:0;
+}
+.trilha-tempos__base{stroke:rgba(68,35,9,.18);stroke-width:2;stroke-linecap:round;fill:none}
+.trilha-tempos__luz{stroke:var(--amarelo);stroke-width:3;stroke-linecap:round;fill:none}
+
+.tempos{
+  list-style:none;display:flex;justify-content:space-between;gap:10px;
+  position:relative;z-index:1;
+}
+.tempo{display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px;flex:1;min-width:0}
+.tempo__n{
+  display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;
+  background:var(--bege);border:2px solid rgba(68,35,9,.22);color:var(--marrom);
+  font-family:var(--titulo);font-weight:800;font-size:.9rem;
+  transition:background .35s var(--ease),border-color .35s var(--ease),
+             transform .35s var(--ease),color .35s var(--ease);
+}
+.tempo__t{
+  font-family:var(--corpo);font-weight:700;font-size:.84rem;line-height:1.35;
+  color:var(--marrom);max-width:11ch;
+}
+.js .tempo__n{background:var(--bege)}
+.js .tempo.aceso .tempo__n{
+  background:var(--amarelo);border-color:var(--amarelo);transform:scale(1.18);
+}
+@media (max-width:600px){
+  .tempos{gap:4px}
+  .tempo__t{font-size:.74rem;max-width:8ch}
+  .tempo__n{width:28px;height:28px;font-size:.78rem}
+}
+
 /* ----- 8. LEGENDA DE FOTO : OBRIGATÓRIA EM TODA FOTO -------------------- */
 
 figure{margin:0}

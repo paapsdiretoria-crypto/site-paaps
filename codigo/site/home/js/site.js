@@ -360,6 +360,78 @@
     window.addEventListener('load', function () { desenhar(); ler(); });
   })();
 
+  /* ---- a linha do tempo horizontal (Urgências): mesma lógica da trilha dos
+     entregáveis acima, só com os pontos em fileira e o desvio da curva para
+     cima e para baixo em vez de para os lados. ---- */
+  (function () {
+    var caixa = document.querySelector('.trilha-tempos');
+    if (!caixa) return;
+    var svg = caixa.querySelector('.trilha-tempos__svg');
+    var base = caixa.querySelector('.trilha-tempos__base');
+    var luz = caixa.querySelector('.trilha-tempos__luz');
+    var tempos = Array.prototype.slice.call(caixa.querySelectorAll('.tempo'));
+    if (!svg || !base || !luz || !tempos.length) return;
+
+    var reduzido = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var pontos = [];
+
+    function desenhar() {
+      var cb = caixa.getBoundingClientRect();
+      svg.setAttribute('viewBox', '0 0 ' + Math.round(cb.width) + ' ' + Math.round(cb.height));
+      pontos = tempos.map(function (t) {
+        var b = t.querySelector('.tempo__n').getBoundingClientRect();
+        return { x: b.left - cb.left + b.width / 2, y: b.top - cb.top + b.height / 2 };
+      });
+      if (pontos.length < 2) return;
+      var d = 'M ' + pontos[0].x + ' ' + pontos[0].y;
+      for (var i = 1; i < pontos.length; i++) {
+        var a = pontos[i - 1], c = pontos[i];
+        /* o desvio troca de cima para baixo a cada trecho: é o que faz a
+           linha reta virar estrada */
+        var lado = (i % 2 === 1) ? -1 : 1;
+        var desvio = Math.min(26, (c.x - a.x) * 0.4) * lado;
+        d += ' C ' + (a.x + (c.x - a.x) * 0.42) + ' ' + (a.y + desvio) +
+             ', ' + (c.x - (c.x - a.x) * 0.42) + ' ' + (c.y - desvio) +
+             ', ' + c.x + ' ' + c.y;
+      }
+      base.setAttribute('d', d);
+      luz.setAttribute('d', d);
+      var total = luz.getTotalLength();
+      luz.style.strokeDasharray = total;
+      luz.style.strokeDashoffset = reduzido ? 0 : total;
+      luz.dataset.total = total;
+    }
+
+    var pedido = false;
+    function ler() {
+      pedido = false;
+      if (reduzido) { tempos.forEach(function (t) { t.classList.add('aceso'); }); return; }
+      var cb = caixa.getBoundingClientRect();
+      var ini = window.innerHeight * 0.82, fim = window.innerHeight * 0.42;
+      var p = (ini - cb.top) / ((cb.height) + (ini - fim));
+      p = Math.max(0, Math.min(1, p));
+      var total = parseFloat(luz.dataset.total || 0);
+      luz.style.strokeDashoffset = total * (1 - p);
+      /* um ponto acende quando a luz já passou por ele, na horizontal */
+      var alcance = cb.width * p;
+      tempos.forEach(function (t, i) {
+        var x = pontos[i] ? pontos[i].x : 0;
+        t.classList.toggle('aceso', alcance >= x - 8);
+      });
+    }
+    function aoRolar() {
+      if (!pedido) { pedido = true; window.requestAnimationFrame(ler); }
+    }
+
+    desenhar(); ler();
+    window.addEventListener('scroll', aoRolar, { passive: true });
+    window.addEventListener('resize', function () { desenhar(); ler(); });
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(function () { desenhar(); ler(); });
+    }
+    window.addEventListener('load', function () { desenhar(); ler(); });
+  })();
+
   /* ---- a linha amarela que se desenha conforme a pessoa desce ----
      Não é animação que dispara e roda sozinha: é o scroll que controla, então
      ela acompanha o gesto de descer e desfaz ao subir. O CSS já deixa a linha
