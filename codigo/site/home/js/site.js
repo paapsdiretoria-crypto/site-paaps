@@ -461,6 +461,12 @@
     });
   }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
   Array.prototype.forEach.call(alvos, function (e) { obs.observe(e); });
+  /* Rede de segurança: texto nunca pode ficar preso em opacity:0. Se o
+     observer falhar por qualquer motivo (JS antigo em cache, navegador
+     estranho), força tudo visível depois de um tempo. */
+  setTimeout(function () {
+    Array.prototype.forEach.call(alvos, function (e) { e.classList.add('visivel'); });
+  }, 6000);
 })();
 
 /* ---- queda por item, tela dividida de Treinamentos (observer próprio,
@@ -482,4 +488,8 @@
     });
   }, { threshold: 0, rootMargin: '0px 0px 15% 0px' });
   Array.prototype.forEach.call(alvos, function (e) { obs.observe(e); });
+  /* Mesma rede de segurança do bloco acima. */
+  setTimeout(function () {
+    Array.prototype.forEach.call(alvos, function (e) { e.classList.add('visivel'); });
+  }, 6000);
 })();
