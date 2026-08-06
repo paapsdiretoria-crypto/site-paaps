@@ -376,8 +376,10 @@
       pedido = false;
       riscas.forEach(function (r) {
         var b = r.getBoundingClientRect();
-        /* começa quando a frase cruza 78% da altura da tela e fecha em 42% */
-        var ini = window.innerHeight * 0.78, fim = window.innerHeight * 0.42;
+        /* Começa no instante em que a frase entra pelo pé da tela e fecha quando
+           ela chega ao meio: assim o traço já está correndo quando a pessoa
+           alcança o quadro da seção, e não depois de passar por ele. */
+        var ini = window.innerHeight * 0.98, fim = window.innerHeight * 0.52;
         var p = (ini - b.top) / (ini - fim);
         r.style.setProperty('--p', Math.max(0, Math.min(1, p)).toFixed(3));
       });
