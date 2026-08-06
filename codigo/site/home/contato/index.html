@@ -80,9 +80,8 @@
             <select id="tipo" name="tipo">
               <option value="">Selecione</option>
               <option>Prefeitura</option>
-              <option>Secretaria municipal</option>
-              <option>Secretaria estadual</option>
-              <option>Consórcio ou associação de municípios</option>
+              <option>Órgão municipal</option>
+              <option>Órgão estadual</option>
               <option>ONG, instituto ou projeto social</option>
               <option>Empresa</option>
               <option>Outro</option>
@@ -101,14 +100,18 @@
               <input type="checkbox" name="frente" value="integracao" style="width:auto;margin-top:3px">
               <span><b>Integração de Rede</b> : os serviços não conversam entre si</span>
             </label>
-            <label style="display:flex;gap:10px;align-items:flex-start;text-transform:none;font-family:var(--corpo);font-size:.95rem;letter-spacing:0;font-weight:400;color:rgba(245,241,225,.92)">
+            <label style="display:flex;gap:10px;align-items:flex-start;text-transform:none;font-family:var(--corpo);font-size:.95rem;letter-spacing:0;font-weight:400;color:rgba(245,241,225,.92);margin-bottom:10px">
               <input type="checkbox" name="frente" value="treinamento" style="width:auto;margin-top:3px">
               <span><b>Treinamento</b> : a equipe precisa aprender algo específico</span>
+            </label>
+            <label style="display:flex;gap:10px;align-items:flex-start;text-transform:none;font-family:var(--corpo);font-size:.95rem;letter-spacing:0;font-weight:400;color:rgba(245,241,225,.92)">
+              <input type="checkbox" name="frente" value="urgencias" style="width:auto;margin-top:3px">
+              <span><b>Urgências e Eventos Extremos</b> : o município foi ou pode ser atingido por um evento extremo</span>
             </label>
           </fieldset>
 
           <div class="full">
-            <label for="equipe">Número estimado de funcionários contemplados</label>
+            <label for="equipe">Número estimado de funcionários (em todas as equipes) que serão contemplados</label>
             <input id="equipe" name="equipe" type="number" min="1" step="1" inputmode="numeric"
                    placeholder="Por exemplo: 80">
             <p class="ajuda">É o que define o tamanho da equipe da PAAPS e o formato do trabalho.</p>
