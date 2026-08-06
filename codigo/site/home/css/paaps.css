@@ -393,6 +393,11 @@ p + p{margin-top:1.05em}
 #hero .sobre-foto__img{object-position:66% center}
 @media (max-width:900px){ #hero .sobre-foto__img{object-position:74% 38%} }
 
+/* Hero de Treinamentos: em telas largas sobrava uma faixa de parede lisa no
+   canto esquerdo. Desloca o corte para a direita, mantendo a roda de pessoas
+   centralizada no quadro. */
+#hero-treino .sobre-foto__img{object-position:62% center}
+
 /* ----- 8. LEGENDA DE FOTO : OBRIGATÓRIA EM TODA FOTO -------------------- */
 
 figure{margin:0}
