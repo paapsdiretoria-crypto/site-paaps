@@ -1627,6 +1627,12 @@ html:not(.js) .risca::after{transform:scaleX(1)}
   .menu.aberto{display:flex}
   .menu li{width:100%}
   .menu a{display:block;padding:15px 0;font-size:1rem;border-bottom:1px solid rgba(174,163,73,.22)}
+  /* O painel do menu aberto é sempre bege sólido, mesmo em página com foto
+     escura atrás do topo. Sem isso o link herdava o branco de
+     .topo--sobre-foto e ficava ilegível em cima do bege. */
+  .topo--sobre-foto .menu.aberto a{color:var(--marrom)}
+  .topo--sobre-foto .menu.aberto a:hover{border-bottom-color:var(--amarelo)}
+  .topo--sobre-foto .menu.aberto a[aria-current="page"]{border-bottom-color:var(--marrom)}
   .menu__botao{display:block}
   .tres,.quatro{grid-template-columns:1fr}
   .form{grid-template-columns:1fr}
