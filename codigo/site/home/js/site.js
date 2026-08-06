@@ -462,3 +462,24 @@
   }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
   Array.prototype.forEach.call(alvos, function (e) { obs.observe(e); });
 })();
+
+/* ---- queda por item, tela dividida de Treinamentos (observer próprio,
+   não mexe no threshold do .revela padrão usado no resto do site) ---- */
+(function () {
+  var alvos = document.querySelectorAll('.cai');
+  if (!alvos.length) return;
+
+  if (!('IntersectionObserver' in window) ||
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    Array.prototype.forEach.call(alvos, function (e) { e.classList.add('visivel'); });
+    return;
+  }
+  /* rootMargin positivo por baixo: o item já acende um pouco antes de entrar
+     de fato na tela, para chegar nítido assim que a pessoa consegue lê-lo. */
+  var obs = new IntersectionObserver(function (entradas) {
+    entradas.forEach(function (en) {
+      if (en.isIntersecting) { en.target.classList.add('visivel'); obs.unobserve(en.target); }
+    });
+  }, { threshold: 0, rootMargin: '0px 0px 15% 0px' });
+  Array.prototype.forEach.call(alvos, function (e) { obs.observe(e); });
+})();

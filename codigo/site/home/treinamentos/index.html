@@ -33,15 +33,14 @@
 </header>
 
 <!-- ========================================================================
-     MAPA DESTA PÁGINA : TREINAMENTOS (reframe de 06/08/2026)
+     MAPA DESTA PÁGINA : TREINAMENTOS (rodada 2 de ajustes, 06/08/2026)
      Para pedir correção, cite o número. Ex.: "bloco 4, o texto do meio".
 
        1. HERO ..................... título "sentir" o que estão aprendendo
-       2. TELA DIVIDIDA ............ diferenciais (esquerda) + temas (direita)
-       3. FORMATOS .................. as 5 caixas clicáveis
-       4. QUEM SÓ ASSISTE APRENDE MENOS ... o dado sobre a foto
-       5. QUEM DÁ .................. a rede de formadores
-       6. BLOCO FINAL .............. CTA de cadastro
+       2. TELA DIVIDIDA ............ diferenciais + temas + botão de contato
+       3. FORMATOS .................. as 4 caixas clicáveis, com tag de modalidade
+       4. EXPERIÊNCIAS IMPACTANTES .. foto da parede de post-its
+       5. BLOCO FINAL .............. CTA de cadastro, sobre a foto das montanhas
 
      ======================================================================== -->
 
@@ -58,59 +57,59 @@
         trabalho: social, coletivo e transformador.
       </p>
     </div>
-    <p class="legenda">Refazenda Rio Xopotó, Desterro do Melo (MG), 2024.</p>
+    <p class="legenda">PAAPS em ação no interior de Minas Gerais, prefeitura.</p>
   </section>
 
   <!-- 2. TELA DIVIDIDA : diferenciais (esquerda) + temas (direita) -------- -->
-  <section class="secao" style="background:rgba(174,163,73,.1)">
+  <section class="secao" id="diferenciais" style="background:rgba(174,163,73,.1)">
     <div class="container">
       <div class="duas duas--topo">
         <div class="revela">
           <h2>Como são nossos Treinamentos?</h2>
           <ul class="lista">
-            <li>Acadêmicos e pesquisadores do tema, professores e profissionais com experiência.</li>
-            <li>
+            <li class="cai"><b>Acadêmicos e pesquisadores do tema,</b> professores e profissionais com experiência.</li>
+            <li class="cai">
               <b>Respeito pelo Professor.</b> Acreditamos profundamente que ser professor escolar
               é uma das profissões mais importantes da sociedade, do presente e do futuro. É por
               esse respeito à classe e ao ofício de educar que nossa equipe é formada por
               pedagogos orientadores e profissionais com experiência prática concreta.
             </li>
-            <li>
-              Somos apaixonados pelo que fazemos. Sua equipe sente a energia de quem estuda
+            <li class="cai">
+              <b>Somos apaixonados pelo que fazemos.</b> Sua equipe sente a energia de quem estuda
               aquilo com profundidade, e dedica parte da vida a um propósito social maior.
             </li>
-            <li>
-              Não somos ligados a nenhuma matriz religiosa, fé ou crença. Não toleramos
+            <li class="cai">
+              <b>Não somos ligados a nenhuma matriz religiosa, fé ou crença.</b> Não toleramos
               preconceito ou discriminação religiosa em qualquer formato.
             </li>
-            <li>
-              Isso não significa aula difícil. Todo conteúdo nasce da REALIDADE que o grupo de
-              aprendizagem traz para a sala, não de uma aula pronta.
+            <li class="cai">
+              <b>Isso não significa aula difícil.</b> Todo conteúdo nasce da <b>realidade</b> que
+              o grupo de aprendizagem traz para a sala, não de uma aula pronta.
             </li>
           </ul>
         </div>
         <div class="revela revela--1">
-          <h2>Exemplos de Temas de Treinamentos que já conduzimos</h2>
+          <h2>Temas que já conduzimos</h2>
           <ul class="lista">
-            <li>Fluxo e Matriciamento</li>
-            <li>TEA e Neurodivergências na Educação</li>
-            <li>Comunicação de Equipe</li>
-            <li>Saúde da mulher</li>
-            <li>Saúde da População Negra</li>
-            <li>Saúde Mental no Trabalho</li>
-            <li>RAPS e Reforma Psiquiátrica</li>
-            <li>Vício em telas e Adolescência</li>
+            <li class="cai">Fluxo e Matriciamento</li>
+            <li class="cai">TEA e Neurodivergências na Educação</li>
+            <li class="cai">Comunicação de Equipe</li>
+            <li class="cai">Saúde da mulher</li>
+            <li class="cai">Saúde da População Negra</li>
+            <li class="cai">Saúde Mental no Trabalho</li>
+            <li class="cai">RAPS e Reforma Psiquiátrica</li>
+            <li class="cai">Vício em telas e Adolescência</li>
           </ul>
           <p style="margin-top:1.2em"><b>Trabalhamos em cima do tema que você propor!</b></p>
         </div>
       </div>
       <div class="revela revela--2" style="margin-top:clamp(30px,4vw,50px);text-align:center">
-        <a class="btn btn--marrom" href="../contato/">Falar sobre a demanda da minha equipe</a>
+        <a class="btn btn--marrom" href="../contato/" id="btn-demanda-equipe">Falar sobre a demanda da minha equipe</a>
       </div>
     </div>
   </section>
 
-  <!-- 3. FORMATOS : as 5 caixas clicáveis ---------------------------------- -->
+  <!-- 3. FORMATOS : as 4 caixas clicáveis, com tag de modalidade ---------- -->
   <section class="secao">
     <div class="container">
       <div class="revela" style="max-width:46ch;margin-bottom:clamp(30px,4vw,50px)">
@@ -118,7 +117,8 @@
       </div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:clamp(20px,2.4vw,34px)">
         <a class="cartao cartao--clique revela" href="../contato/">
-          <h3>Cultura de Aprendizagem</h3>
+          <h3>Treinamento</h3>
+          <span class="cartao__tag">Presencial</span>
           <p>
             Fortalecemos a cultura de aprendizagem com foco em temas humanos e sociais,
             políticas públicas e em habilidades de convivência e colaboração.
@@ -127,6 +127,7 @@
         </a>
         <a class="cartao cartao--clique revela revela--1" href="../contato/">
           <h3>Workshops</h3>
+          <span class="cartao__tag">Presencial</span>
           <p>
             Criamos vivências inspiradoras e mão na massa, para que seu time desenvolva e
             fortaleça novas habilidades e competências.
@@ -135,6 +136,7 @@
         </a>
         <a class="cartao cartao--clique revela revela--2" href="../contato/">
           <h3>Cursos sob demanda</h3>
+          <span class="cartao__tag">Remoto</span>
           <p>
             Jornadas de aprendizagem inovadoras, personalizadas e interativas, ao vivo e/ou com
             aulas gravadas, no horário que o seu time puder e preferir.
@@ -143,75 +145,49 @@
         </a>
         <a class="cartao cartao--clique revela revela--3" href="../contato/">
           <h3>Estudos e Reports</h3>
+          <span class="cartao__tag">Presencial · Remoto</span>
           <p>
             Estudo completo, mapeando sinais, projetos ou estratégias, com nossa análise e
             sugestão de plano de ação, incluindo a devolutiva completa dos achados para a gestão.
           </p>
           <span class="cartao__go">Quero implementar</span>
         </a>
-        <a class="cartao cartao--clique revela revela--3" href="../contato/">
-          <h3>Experiências impactantes</h3>
-          <p>
-            Cada projeto é único porque cada time é único. Combinamos inovação, criatividade e
-            conexão para capacitações transformadoras.
-          </p>
-          <span class="cartao__go">Quero implementar</span>
-        </a>
       </div>
     </div>
   </section>
 
-  <!-- 4. QUEM SÓ ASSISTE APRENDE MENOS : o dado sobre a foto -------------- -->
-  <section class="sobre-foto sobre-foto--media sobre-foto--uniforme" data-tom="escuro">
-    <img class="sobre-foto__img" src="../img/radilson/roda-cozinha.jpg" loading="lazy"
-         alt="Cinco mulheres conversando reunidas em uma cozinha">
-    <div class="sobre-foto__c">
-      <div class="caixa caixa--larga">
-        <h2 style="font-size:clamp(1.5rem,2.4vw,2.1rem)">Quem só assiste, aprende menos.</h2>
-        <p style="color:rgba(245,241,225,.9)">
-          Uma revisão de 225 estudos mostrou que a aprendizagem ativa eleva em 6% a média das
-          avaliações, e que a aula expositiva aumenta em 55% a taxa de reprovação. Na saúde e na
-          assistência social, quem paga essa conta é a população atendida.
-        </p>
-        <p class="fonte-dado" style="color:rgba(245,241,225,.65)">
-          Fonte: Freeman et al., Proceedings of the National Academy of Sciences, 2014.
-        </p>
-      </div>
-    </div>
-    <p class="legenda">Foto: Radilson Carlos Gomes, fotógrafo do SUS.</p>
-  </section>
-
-  <!-- 5. QUEM DÁ : a rede de formadores ------------------------------------ -->
+  <!-- 4. EXPERIÊNCIAS IMPACTANTES : foto da parede de post-its ------------ -->
   <section class="sobre-foto sobre-foto--media" data-tom="escuro">
     <img class="sobre-foto__img" src="../img/paaps/treino-sala.jpg" loading="lazy"
-         alt="Encontro de trabalho com equipe municipal">
+         alt="Servidoras organizando post-its coloridos na parede durante dinâmica com a equipe PAAPS">
     <div class="sobre-foto__c">
-      <h2 style="max-width:22ch">Uma rede montada por tema, formada na metodologia da casa.</h2>
-      <ul class="lista" style="margin-top:26px;max-width:56ch;color:rgba(245,241,225,.92)">
-        <li>Consultores com mais de 25 anos de carreira executiva.</li>
-        <li>Professores e educadores com mestrado ou doutorado, vindos da universidade e da pesquisa.</li>
-        <li>Todo mundo que entra passa pela formação da PAAPS antes de ir a campo.</li>
-      </ul>
+      <h2 style="max-width:22ch">Experiências impactantes</h2>
+      <p style="margin-top:18px;max-width:52ch">
+        Cada projeto é único porque cada time é único. Combinamos conhecimento, criatividade e
+        conexão para capacitações transformadoras.
+      </p>
     </div>
-    <p class="legenda">Refazenda Rio Xopotó, Desterro do Melo (MG), 2024.</p>
+    <p class="legenda">PAAPS em ação no interior de Minas Gerais, prefeitura.</p>
   </section>
 
-  <!-- 6. BLOCO FINAL : CTA de cadastro ------------------------------------- -->
-  <section class="secao">
+  <!-- 5. BLOCO FINAL : CTA de cadastro, sobre a foto das montanhas -------- -->
+  <section class="secao cadastro--foto" data-tom="escuro">
+    <img class="cadastro__fundo" src="../img/montanha-minas.jpg" loading="lazy"
+         width="1600" height="1067" alt="">
     <div class="container" style="max-width:64ch;margin-inline:auto;text-align:center">
       <div class="revela">
-        <h2>Se prepare para ir à frente e além.</h2>
-        <p style="margin-top:16px">
+        <h2 style="color:var(--bege)">Se prepare para ir à frente e além.</h2>
+        <p style="margin-top:16px;color:rgba(245,241,225,.9)">
           Nosso time está aqui para ajudar você a entender o que é necessário para o
           desenvolvimento humano e profissional da sua equipe.
         </p>
-        <p style="margin-top:12px">
+        <p style="margin-top:12px;color:rgba(245,241,225,.9)">
           Preencha o nosso cadastro e um de nossos especialistas entrará prontamente em contato,
           dentro do horário comercial. Descubra como sua equipe pode dar passos em direção a uma
           cultura madura e bases sólidas de conhecimento.
         </p>
         <div style="margin-top:28px">
-          <a class="btn btn--marrom" href="../contato/">Preencher cadastro</a>
+          <a class="btn btn--amarelo" href="../contato/">Preencher cadastro</a>
         </div>
       </div>
     </div>

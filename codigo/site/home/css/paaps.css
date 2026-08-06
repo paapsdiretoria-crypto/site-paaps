@@ -398,6 +398,25 @@ p + p{margin-top:1.05em}
    centralizada no quadro. */
 #hero-treino .sobre-foto__img{object-position:62% center}
 
+/* Tela dividida de Treinamentos: letra estava fina demais para o corpo desta
+   seção especificamente (não é mudança global do site). */
+#diferenciais .lista{font-weight:500}
+#diferenciais .lista li{line-height:1.6}
+
+/* Tags de modalidade dos cartões de Formato. Fica ABAIXO do título de
+   propósito: caixa alta acima do título é o "chapéu" de IA que está banido
+   neste site (ver feedback_chapeu_eyebrow_proibido). */
+.cartao__tag{
+  display:block;margin-top:6px;margin-bottom:.7em;
+  font-family:var(--corpo);font-size:.8rem;font-weight:700;color:var(--oliva);
+}
+
+/* Botão "Falar sobre a demanda da minha equipe": hover amarelo só aqui,
+   o .btn--marrom:hover padrão (escurece) continua valendo no resto do site. */
+#btn-demanda-equipe:hover,#btn-demanda-equipe:focus-visible{
+  background:var(--amarelo);color:var(--marrom)
+}
+
 /* ----- 8. LEGENDA DE FOTO : OBRIGATÓRIA EM TODA FOTO -------------------- */
 
 figure{margin:0}
@@ -1493,6 +1512,15 @@ html:not(.js) .risca::after{transform:scaleX(1)}
 .js .revela--1{transition-delay:.1s}
 .js .revela--2{transition-delay:.2s}
 .js .revela--3{transition-delay:.3s}
+
+/* Variante "caindo": tópicos da tela dividida de Treinamentos. Vem de cima
+   (não de baixo, como o .revela padrão), mais rápida, sem trilha nem SVG.
+   Cada <li> observado individualmente já dá a cascata de graça: um acende
+   depois do outro conforme a rolagem, sem precisar de delay manual. */
+.js .cai{opacity:0;transform:translateY(-14px);
+  transition:opacity .35s var(--ease),transform .35s var(--ease)}
+.js .cai.visivel{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .cai{opacity:1;transform:none}}
 
 /* ----- 17. RESPONSIVO --------------------------------------------------- */
 
