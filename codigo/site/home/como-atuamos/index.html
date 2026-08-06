@@ -68,7 +68,7 @@
        É a primeira vez que a diferenciação da metodologia aparece. Sem moldura,
        sem botão: a foto ocupa a tela e o texto vive dentro dela. -->
   <section class="duplas" data-tom="escuro">
-    <a class="dupla" href="#cuidado">
+    <a class="dupla dupla--a" href="#cuidado">
       <img src="../img/paaps/cuidado-farmacia.jpg" loading="lazy" width="1400" height="1750"
            alt="Profissional de saúde de uniforme verde na janela da farmácia de um hospital">
       <div class="dupla__c">
@@ -82,7 +82,7 @@
         Hospital Municipal Universitário de Rio Verde.</span>
     </a>
 
-    <a class="dupla" href="#integracao">
+    <a class="dupla dupla--b" href="#integracao">
       <img src="../img/paaps/integracao-agsus.jpg" loading="lazy" width="1400" height="1750"
            alt="Três profissionais de colete da AgSUS diante de um rio, de costas, olhando o território">
       <div class="dupla__c">
@@ -105,17 +105,18 @@
   -->
 
   <!-- 3. CUIDADO : abertura sobre a foto --------------------------------- -->
-  <section class="sobre-foto" id="cuidado">
+  <section class="sobre-foto sobre-foto--cheia sobre-foto--centro sobre-foto--entra" id="cuidado"
+           data-tom="escuro">
     <img class="sobre-foto__img" src="../img/radilson/visita-gurupi.jpg" loading="lazy"
          alt="Profissional de saúde escuta e anota ao lado de uma mãe com o filho recém-nascido">
     <div class="sobre-foto__c">
-      <h2>Cuidado</h2>
+      <h2 class="titulo-linha titulo-linha--h2">Cuidado em Saúde Mental para a Equipe</h2>
       <p class="imagine" style="margin-top:26px">
         <span>Imagine que a gente chega para a primeira conversa com a sua equipe.</span>
-        <span>E encontramos que, enquanto alguns <b>se esgotam sustentando mais do que podem</b>,
-          muitos <b>desabam silenciosamente</b>.</span>
+        <span>E encontramos que, enquanto alguns <b class="chave">se esgotam</b> sustentando mais
+          do que podem, muitos <b class="chave">desabam</b> silenciosamente.</span>
       </p>
-      <p class="epidemia" style="margin-top:32px">
+      <p class="epidemia">
         Estamos vivendo uma <b>epidemia de Saúde Mental</b> em todo o mundo:
         <span class="risca">o cuidado é o caminho.</span>
       </p>
@@ -132,78 +133,97 @@
       <!-- Os três levam ao cadastro no pé desta página. Nenhum deles promete
            resultado: psicologia não promete resultado, e a régua vale na copy. -->
       <div class="tres">
-        <a class="cartao cartao--marcado cartao--clique revela" href="#cadastro">
+        <a class="cartao cartao--clique revela" href="#cadastro">
           <h3>Grupos de Apoio à Equipe</h3>
           <p>
             Grupos humanos, conduzidos presencialmente por psicóloga especializada, onde a equipe
             elabora junto o que vive e aprende a se cuidar.
           </p>
+          <span class="cartao__go">Quero implementar</span>
         </a>
-        <a class="cartao cartao--marcado cartao--clique revela revela--1" href="#cadastro">
+        <a class="cartao cartao--clique revela revela--1" href="#cadastro">
           <h3>Plantão Psicológico para Funcionários nas Unidades</h3>
           <p>
             Acontece em sala apropriada, mas acessível ao ambiente do trabalho real. Porta de
             entrada aberta para quem busca ou precisa de acolhimento imediato ou pontual.
           </p>
+          <span class="cartao__go">Quero implementar</span>
         </a>
-        <a class="cartao cartao--marcado cartao--clique revela revela--2" href="#cadastro">
+        <a class="cartao cartao--clique revela revela--2" href="#cadastro">
           <h3>Psicoterapia Online</h3>
           <p>
             Acompanhamento semanal com psicóloga da PAAPS, para as pessoas da equipe contempladas
             no contrato. Online, para caber na rotina de quem trabalha o dia inteiro.
           </p>
+          <span class="cartao__go">Quero implementar</span>
         </a>
       </div>
     </div>
   </section>
 
   <!-- 5. INTEGRAÇÃO DE REDE : abertura sobre a foto ---------------------- -->
-  <section class="sobre-foto" id="integracao">
+  <section class="sobre-foto sobre-foto--cheia sobre-foto--centro sobre-foto--entra" id="integracao"
+           data-tom="escuro">
     <img class="sobre-foto__img" src="../img/radilson/psf-jaragua.jpg" loading="lazy"
          alt="Equipe de saúde atendendo um grupo de pessoas dentro de um espaço improvisado">
     <div class="sobre-foto__c">
-      <h2>Integração de Rede</h2>
+      <h2 class="titulo-linha titulo-linha--h2">Integração de Rede</h2>
       <p class="imagine" style="margin-top:26px">
-        <span>Imagine uma rede que deveria trabalhar junta e não se comunica.</span>
-        <span>Que deveria se apoiar e não se apoia.</span>
-        <span>Onde o encaminhamento trava.</span>
-        <span>E quem sente isso é o cidadão.</span>
+        <span>Imagine o quanto prejudica uma Escola que não conversa com o CRAS Infanto-Juvenil
+          da cidade.</span>
+        <span>Imagine uma rede que deveria trabalhar junta e não se comunica,
+          que poderia ter apoio, mas seguem <b class="chave risca">isoladas</b>.</span>
       </p>
-      <p class="lead" style="margin-top:30px;color:var(--amarelo);max-width:40ch">
-        Você sabe que isso acontece. A gente também sabe. E o problema não é uma pessoa.
+      <!-- A explicação vive no hover desta frase: quem quiser entender por que é
+           cultura e não pessoa, encosta o mouse. Por teclado abre com Tab. -->
+      <p class="epidemia epidemia--nota" tabindex="0">
+        <b class="epidemia__caps">O problema é uma cultura</b> de não-colaboração:
+        <span class="risca">o caminho é a integração.</span>
+        <span class="epidemia__texto" role="note">Ninguém acorda querendo travar um encaminhamento.
+          O que existe é uma forma de trabalhar que foi se acomodando ao longo dos anos, em
+          serviços que raramente se sentam na mesma mesa.</span>
       </p>
     </div>
     <p class="legenda">Foto: Radilson Carlos Gomes, fotógrafo do SUS.</p>
   </section>
 
-  <!-- 6. INTEGRAÇÃO DE REDE : o problema é uma cultura ------------------- -->
+  <!-- 6. O QUE OS SERVIÇOS RECEBEM : a trilha que desce ------------------ -->
   <section class="secao">
-    <div class="container duas duas--topo">
-      <div class="revela">
-        <h2>O problema é uma cultura.</h2>
-        <p>
-          Ninguém acorda querendo travar um encaminhamento. O que existe é uma forma de trabalhar
-          que foi se acomodando ao longo dos anos, em serviços que raramente se sentam na mesma
-          mesa. Isso não se resolve com uma circular nem com troca de pessoas.
-        </p>
-        <p>
-          A gente escuta cada serviço, faz as equipes compartilharem o que sabem e constrói acordos
-          entre elas. Depois cuida para que esses acordos continuem valendo.
-        </p>
-      </div>
-      <div class="revela revela--1">
-        <div class="cartao cartao--oliva">
-          <h3>O que fica com o município</h3>
-          <ul class="lista lista--oliva">
-            <li>Acordos escritos entre os serviços</li>
-            <li>Fluxos desenhados junto com quem executa</li>
-            <li>A manutenção desses fluxos ao longo do tempo</li>
-            <li>A manutenção das relações entre as equipes</li>
-            <li>Pessoas escolhidas dentro de cada equipe como representantes de comunicação nos momentos-chave</li>
-            <li>Realinhamento dos fluxos quando a realidade muda</li>
-            <li>Discussão de casos em ambiente seguro e respeitoso, com acordos e mediada por especialistas da PAAPS</li>
-          </ul>
-        </div>
+    <div class="container">
+      <p class="lead lead--largo revela" style="max-width:56ch">
+        Ninguém acorda querendo travar um encaminhamento. O que existe é uma forma de trabalhar que
+        foi se acomodando ao longo dos anos, em serviços que raramente se sentam na mesma mesa.
+      </p>
+
+      <h3 class="passos__t revela" style="margin-top:clamp(34px,4vw,56px)">Os serviços recebem:</h3>
+
+      <!-- A trilha: um traço fraco desenha o caminho inteiro, e um traço amarelo
+           desce por cima acendendo ponto a ponto conforme a pessoa rola. O `d`
+           dos dois caminhos é escrito pelo script a partir da posição real de
+           cada ponto, porque os textos têm alturas diferentes. -->
+      <div class="trilha-passos">
+        <svg class="trilha-passos__svg" aria-hidden="true" focusable="false" preserveAspectRatio="none">
+          <path class="trilha-passos__base" fill="none"></path>
+          <path class="trilha-passos__luz" fill="none"></path>
+        </svg>
+        <ol class="passos">
+          <li class="passo"><span class="passo__ponto"></span>
+            <span class="passo__t">Fluxos desenhados junto com quem executa</span></li>
+          <li class="passo"><span class="passo__ponto"></span>
+            <span class="passo__t">Discussão de casos em ambiente seguro e respeitoso, com acordos e
+              mediada por especialistas da PAAPS</span></li>
+          <li class="passo"><span class="passo__ponto"></span>
+            <span class="passo__t">Acordos escritos entre os serviços</span></li>
+          <li class="passo"><span class="passo__ponto"></span>
+            <span class="passo__t">A manutenção desses fluxos e acordos ao longo do tempo</span></li>
+          <li class="passo"><span class="passo__ponto"></span>
+            <span class="passo__t">Pessoas escolhidas dentro de cada equipe como representantes de
+              comunicação nos momentos-chave</span></li>
+          <li class="passo"><span class="passo__ponto"></span>
+            <span class="passo__t">Realinhamento dos fluxos quando a realidade muda</span></li>
+          <li class="passo"><span class="passo__ponto"></span>
+            <span class="passo__t">Manutenção das relações entre as equipes</span></li>
+        </ol>
       </div>
     </div>
   </section>

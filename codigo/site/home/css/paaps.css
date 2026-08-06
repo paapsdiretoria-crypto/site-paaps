@@ -918,8 +918,37 @@ figure{margin:0}
   font-size:min(calc((100vw - 100px) / 26.1), 2.58rem);
 }
 .titulo-linha u{text-underline-offset:.16em;text-decoration-thickness:.05em}
+/* Os h2 de seção são mais curtos que o h1, então o divisor é menor. */
+.sobre-foto h2.titulo-linha--h2{
+  max-width:none;line-height:1.12;
+  font-size:min(calc((100vw - 100px) / 23.2), 2.7rem);
+}
+@media (max-width:900px){
+  .sobre-foto h2.titulo-linha--h2{font-size:clamp(1.45rem,5.4vw,2rem)}
+}
 @media (max-width:900px){
   .sobre-foto h1.titulo-linha{font-size:clamp(1.5rem,5.6vw,2.1rem)}
+}
+
+/* Conteúdo centrado na vertical, em vez de encostado no pé. Sobe o bloco todo
+   para o meio da tela, que é onde a frase precisa estar quando a pessoa chega. */
+.sobre-foto--centro{align-items:center}
+
+/* Chegada na seção: o véu escurece e o texto se assenta. Nada de deslize longo;
+   é um movimento curto, que termina antes de a pessoa terminar de ler a
+   primeira linha. Sem script, tudo já está no lugar e visível. */
+.js .sobre-foto--entra::after{opacity:.35;transition:opacity 1.1s var(--ease)}
+.js .sobre-foto--entra.dentro::after{opacity:1}
+.js .sobre-foto--entra .sobre-foto__c > *{
+  opacity:0;transform:translateY(16px);
+  transition:opacity .8s var(--ease),transform .8s cubic-bezier(.2,.8,.3,1);
+}
+.js .sobre-foto--entra.dentro .sobre-foto__c > *{opacity:1;transform:none}
+.js .sobre-foto--entra.dentro .sobre-foto__c > *:nth-child(2){transition-delay:.13s}
+.js .sobre-foto--entra.dentro .sobre-foto__c > *:nth-child(3){transition-delay:.26s}
+@media (prefers-reduced-motion:reduce){
+  .js .sobre-foto--entra::after{opacity:1}
+  .js .sobre-foto--entra .sobre-foto__c > *{opacity:1;transform:none;transition:none}
 }
 
 /* ----- 8g1. A FRASE DA EPIDEMIA E A LINHA QUE SE DESENHA ----------------- */
@@ -927,11 +956,36 @@ figure{margin:0}
    ele se desenha da esquerda para a direita conforme a pessoa desce a página.
    O `--p` é escrito pelo script, de 0 a 1, a partir da posição do scroll.     */
 
-/* `.sobre-foto p` deixa o texto a 90% de opacidade; aqui o bege é cheio. */
+/* `.sobre-foto p` deixa o texto a 90% de opacidade; aqui o bege é cheio.
+   Centrada e com respiro grande acima: é a frase que fecha a seção. */
 .sobre-foto p.epidemia,.epidemia{
   font-family:var(--titulo);font-weight:400;text-transform:none;letter-spacing:0;
   font-size:clamp(1.15rem,1.9vw,1.65rem);line-height:1.35;
-  color:var(--bege);max-width:30ch;
+  color:var(--bege);max-width:36ch;
+  margin:clamp(34px,4.2vw,58px) auto 0;text-align:center;
+}
+.epidemia__caps{text-transform:uppercase}
+/* A explicação só aparece quando a pessoa procura por ela. */
+.epidemia--nota{position:relative;cursor:default}
+.epidemia--nota:focus{outline:none}
+.epidemia--nota:focus-visible{outline:3px solid var(--amarelo);outline-offset:10px;border-radius:2px}
+.epidemia__texto{
+  position:absolute;left:50%;top:calc(100% + 18px);z-index:40;
+  transform:translateX(-50%) translateY(-6px);
+  width:min(46ch,84vw);padding:20px 22px;border-radius:var(--raio);
+  background:rgba(28,14,3,.10);
+  backdrop-filter:blur(26px) saturate(150%) brightness(.62);
+  -webkit-backdrop-filter:blur(26px) saturate(150%) brightness(.62);
+  font-family:var(--corpo);font-size:.98rem;line-height:1.6;letter-spacing:0;
+  color:#fff;text-align:left;text-transform:none;
+  opacity:0;visibility:hidden;
+  transition:opacity .22s var(--ease),transform .22s var(--ease),visibility 0s linear .22s;
+}
+@supports not (backdrop-filter: blur(1px)){.epidemia__texto{background:rgba(28,14,3,.9)}}
+.epidemia--nota:hover .epidemia__texto,
+.epidemia--nota:focus-visible .epidemia__texto{
+  opacity:1;visibility:visible;transform:translateX(-50%) translateY(0);
+  transition:opacity .22s var(--ease),transform .22s var(--ease),visibility 0s linear 0s;
 }
 .epidemia b{font-weight:700;color:var(--bege)}
 .risca{position:relative;display:inline-block;white-space:nowrap}
@@ -952,12 +1006,19 @@ html:not(.js) .risca::after{transform:scaleX(1)}
    largura inteira da tela.                                                   */
 
 .duplas{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:rgba(68,35,9,.2)}
+/* Altura amarrada à tela, não à proporção da foto: em 4:5 as duas caixas
+   passavam de 890px e obrigavam a rolar até o fim da imagem para chegar no
+   texto. Agora as duas cabem num quadro só de computador, foto e texto juntos. */
 .dupla{
   position:relative;isolation:isolate;display:flex;align-items:flex-end;
-  aspect-ratio:4/5;overflow:hidden;color:var(--bege);text-decoration:none;
+  height:min(76svh,760px);overflow:hidden;color:var(--bege);text-decoration:none;
 }
 .dupla > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;
   transition:transform .7s var(--ease)}
+/* O corte foge do que não informa: o teto na foto do hospital e o céu na do
+   rio. As duas descem o enquadramento para onde estão as pessoas. */
+.dupla--a > img{object-position:center 72%}
+.dupla--b > img{object-position:center 78%}
 .dupla::after{content:"";position:absolute;inset:0;z-index:-1;
   background:linear-gradient(to top,rgba(28,14,3,.9) 0%,rgba(28,14,3,.62) 42%,rgba(28,14,3,.28) 100%);
   transition:background .4s var(--ease)}
@@ -978,6 +1039,52 @@ html:not(.js) .risca::after{transform:scaleX(1)}
 }
 .dupla__cred{position:absolute;right:16px;top:16px;z-index:2;text-align:right;max-width:26ch;
   color:rgba(245,241,225,.55);margin:0}
+
+/* ----- 8g3. A TRILHA DOS ENTREGÁVEIS ------------------------------------ */
+/* Um caminho com curvas descendo. O traço fraco desenha o percurso inteiro
+   desde o começo; o traço amarelo desce por cima conforme a pessoa rola, e cada
+   ponto acende quando a luz passa por ele, trazendo o texto junto.
+   O `d` dos dois caminhos é calculado pelo script a partir da posição real de
+   cada ponto, porque os textos têm alturas diferentes e um caminho fixo
+   desalinharia. Sem script, tudo aparece aceso e legível.                     */
+
+.passos__t{font-size:clamp(1.15rem,1.7vw,1.5rem);margin-bottom:clamp(20px,2.4vw,32px)}
+.trilha-passos{position:relative}
+.trilha-passos__svg{
+  position:absolute;inset:0;width:100%;height:100%;overflow:visible;
+  pointer-events:none;z-index:0;
+}
+.trilha-passos__base{stroke:rgba(68,35,9,.18);stroke-width:2;stroke-linecap:round}
+.trilha-passos__luz{stroke:var(--amarelo);stroke-width:3;stroke-linecap:round}
+
+.passos{list-style:none;display:grid;gap:clamp(20px,2.6vw,34px);position:relative;z-index:1}
+.passo{
+  display:grid;grid-template-columns:64px 1fr;align-items:center;
+  min-height:56px;
+}
+.passo__ponto{
+  width:15px;height:15px;border-radius:50%;justify-self:center;
+  background:var(--bege);border:2px solid rgba(68,35,9,.22);
+  transition:background .35s var(--ease),border-color .35s var(--ease),
+             transform .35s var(--ease);
+}
+.passo__t{
+  font-size:1.02rem;line-height:1.55;color:var(--tinta-70);max-width:52ch;
+}
+/* Só com script os passos começam apagados. */
+.js .passo__ponto{background:var(--bege)}
+.js .passo__t{opacity:.3;transform:translateX(10px);
+  transition:opacity .45s var(--ease),transform .45s var(--ease)}
+.js .passo.aceso .passo__ponto{
+  background:var(--amarelo);border-color:var(--amarelo);transform:scale(1.18);
+}
+.js .passo.aceso .passo__t{opacity:1;transform:none;color:var(--marrom)}
+@media (prefers-reduced-motion:reduce){
+  .js .passo__t{opacity:1;transform:none}
+}
+@media (max-width:600px){
+  .passo{grid-template-columns:44px 1fr}
+}
 
 /* ----- 8h. QUEM CONTRATA ------------------------------------------------- */
 
@@ -1065,11 +1172,39 @@ html:not(.js) .risca::after{transform:scaleX(1)}
   font-family:var(--corpo);font-size:.86rem;line-height:1.45;
   color:rgba(245,241,225,.78);margin-top:.7em;
 }
-/* Cartão que é link: mesma caixa, só ganha o gesto de resposta ao mouse. */
-.cartao--clique{display:block;text-decoration:none;color:inherit;
-  transition:border-color .25s var(--ease),transform .25s var(--ease)}
+/* Cartão que é link, no mesmo gesto das portas da home: sem a borda amarela
+   bruta em cima, sombra em três camadas mais discreta que a das portas, e a
+   borda escurecendo no hover. O CTA ganha a linha que se desenha da esquerda
+   para a direita quando o mouse entra no cartão inteiro. */
+.cartao--clique{
+  display:flex;flex-direction:column;align-items:flex-start;
+  text-decoration:none;color:inherit;
+  transition:border-color .25s var(--ease),transform .25s var(--ease),
+             box-shadow .25s var(--ease);
+}
 .cartao--clique:hover,.cartao--clique:focus-visible{
-  border-color:var(--marrom);transform:translateY(-2px)}
+  border-color:var(--marrom);transform:translateY(-2px);
+  box-shadow:
+    0 1px 2px rgba(68,35,9,.05),
+    0 6px 14px rgba(68,35,9,.07),
+    0 18px 34px rgba(68,35,9,.08);
+}
+.cartao--clique:focus{outline:none}
+.cartao--clique:focus-visible{outline:3px solid var(--amarelo);outline-offset:4px}
+.cartao__go{
+  position:relative;display:inline-block;margin-top:auto;padding-top:1.4em;padding-bottom:5px;
+  font-family:var(--titulo);font-size:clamp(.98rem,1.15vw,1.12rem);font-weight:700;
+  letter-spacing:.01em;text-transform:uppercase;color:var(--marrom);
+}
+.cartao__go::after{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:2px;
+  background:var(--amarelo);
+  transform:scaleX(0);transform-origin:left center;
+  transition:transform .5s cubic-bezier(.22,1,.36,1);
+}
+.cartao--clique:hover .cartao__go::after,
+.cartao--clique:focus-visible .cartao__go::after{transform:scaleX(1)}
+@media (prefers-reduced-motion:reduce){.cartao__go::after{transition:none}}
 
 /* ----- 8i. DIFERENCIAIS -------------------------------------------------- */
 

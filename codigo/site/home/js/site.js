@@ -271,6 +271,95 @@
     preencher(b, fila.slice().reverse());
   })();
 
+  /* ---- chegada nas seções de foto: o véu escurece e o texto se assenta ---- */
+  (function () {
+    var secoes = Array.prototype.slice.call(document.querySelectorAll('.sobre-foto--entra'));
+    if (!secoes.length) return;
+    if (!('IntersectionObserver' in window)) {
+      secoes.forEach(function (s) { s.classList.add('dentro'); });
+      return;
+    }
+    var o = new IntersectionObserver(function (ent) {
+      ent.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('dentro'); });
+    }, { threshold: 0.22 });
+    secoes.forEach(function (s) { o.observe(s); });
+  })();
+
+  /* ---- a trilha dos entregáveis: o caminho com curvas que acende ----
+     O caminho não é fixo no HTML: ele é desenhado a partir da posição real de
+     cada ponto, porque os textos têm alturas diferentes e um traçado fixo
+     desalinharia. A curva sai de uma Bézier entre um ponto e o seguinte, com o
+     desvio lateral alternando de lado para o caminho serpentear.            */
+  (function () {
+    var caixa = document.querySelector('.trilha-passos');
+    if (!caixa) return;
+    var svg = caixa.querySelector('.trilha-passos__svg');
+    var base = caixa.querySelector('.trilha-passos__base');
+    var luz = caixa.querySelector('.trilha-passos__luz');
+    var passos = Array.prototype.slice.call(caixa.querySelectorAll('.passo'));
+    if (!svg || !base || !luz || !passos.length) return;
+
+    var reduzido = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var pontos = [];
+
+    function desenhar() {
+      var cb = caixa.getBoundingClientRect();
+      svg.setAttribute('viewBox', '0 0 ' + Math.round(cb.width) + ' ' + Math.round(cb.height));
+      pontos = passos.map(function (p) {
+        var b = p.querySelector('.passo__ponto').getBoundingClientRect();
+        return { x: b.left - cb.left + b.width / 2, y: b.top - cb.top + b.height / 2 };
+      });
+      if (pontos.length < 2) return;
+      var d = 'M ' + pontos[0].x + ' ' + pontos[0].y;
+      for (var i = 1; i < pontos.length; i++) {
+        var a = pontos[i - 1], c = pontos[i];
+        /* o desvio troca de lado a cada trecho: é o que faz o caminho serpentear */
+        var lado = (i % 2 === 1) ? 1 : -1;
+        var desvio = Math.min(34, (c.y - a.y) * 0.42) * lado;
+        d += ' C ' + (a.x + desvio) + ' ' + (a.y + (c.y - a.y) * 0.42) +
+             ', ' + (c.x - desvio) + ' ' + (c.y - (c.y - a.y) * 0.42) +
+             ', ' + c.x + ' ' + c.y;
+      }
+      base.setAttribute('d', d);
+      luz.setAttribute('d', d);
+      var total = luz.getTotalLength();
+      luz.style.strokeDasharray = total;
+      luz.style.strokeDashoffset = reduzido ? 0 : total;
+      luz.dataset.total = total;
+    }
+
+    var pedido = false;
+    function ler() {
+      pedido = false;
+      if (reduzido) { passos.forEach(function (p) { p.classList.add('aceso'); }); return; }
+      var cb = caixa.getBoundingClientRect();
+      /* a luz começa quando o topo da trilha cruza 76% da tela e termina quando
+         o pé dela chega a 46%: a descida da luz acompanha a descida da pessoa */
+      var ini = window.innerHeight * 0.76, fim = window.innerHeight * 0.46;
+      var p = (ini - cb.top) / ((cb.height) + (ini - fim));
+      p = Math.max(0, Math.min(1, p));
+      var total = parseFloat(luz.dataset.total || 0);
+      luz.style.strokeDashoffset = total * (1 - p);
+      /* um ponto acende quando a luz já passou por ele */
+      var alcance = cb.height * p;
+      passos.forEach(function (passo, i) {
+        var y = pontos[i] ? pontos[i].y : 0;
+        passo.classList.toggle('aceso', alcance >= y - 8);
+      });
+    }
+    function aoRolar() {
+      if (!pedido) { pedido = true; window.requestAnimationFrame(ler); }
+    }
+
+    desenhar(); ler();
+    window.addEventListener('scroll', aoRolar, { passive: true });
+    window.addEventListener('resize', function () { desenhar(); ler(); });
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(function () { desenhar(); ler(); });
+    }
+    window.addEventListener('load', function () { desenhar(); ler(); });
+  })();
+
   /* ---- a linha amarela que se desenha conforme a pessoa desce ----
      Não é animação que dispara e roda sozinha: é o scroll que controla, então
      ela acompanha o gesto de descer e desfaz ao subir. O CSS já deixa a linha
