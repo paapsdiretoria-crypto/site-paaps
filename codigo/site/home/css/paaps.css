@@ -424,21 +424,17 @@ p + p{margin-top:1.05em}
   top:clamp(84px,10vw,104px);bottom:auto;
 }
 
-/* Emenda entre "Experiências impactantes" e o bloco final (fotos diferentes,
-   uma em seguida da outra): sem isso o corte caía seco bem em cima da cabeça
-   das pessoas. As duas pontas escurecem quase até fechar, no mesmo marrom de
-   véu, para a transição ler como degradê contínuo, não como corte de foto. */
-#experiencias-impactantes::after{
-  background:linear-gradient(180deg,
-    rgba(46,23,7,.28) 0%,rgba(46,23,7,.52) 55%,rgba(46,23,7,.95) 100%);
-}
-#cadastro-treinamentos::after{
-  background:linear-gradient(180deg,
-    rgba(46,23,7,.95) 0%,rgba(46,23,7,.55) 18%,rgba(46,23,7,.74) 100%);
-}
+/* Foto de "Experiências impactantes": estava pegando parede e teto vazios
+   demais. Desce o corte para mostrar mais o corpo das pessoas. */
+#experiencias-impactantes .sobre-foto__img{object-position:center 78%}
+
 /* Título um pouco mais abaixo, para pousar perto do horizonte da foto das
-   montanhas em vez de ficar colado no topo escuro da emenda. */
+   montanhas. */
 #cadastro-treinamentos{padding-top:clamp(150px,20vw,230px)}
+
+/* Faixa bege simples entre as duas fotos (post-its e montanhas): o degradê
+   escuro tentando emendar as duas ficou ruim, ela pediu separação lisa. */
+.faixa-bege{background:var(--bege);height:clamp(28px,4vw,56px)}
 
 /* ----- 8. LEGENDA DE FOTO : OBRIGATÓRIA EM TODA FOTO -------------------- */
 
