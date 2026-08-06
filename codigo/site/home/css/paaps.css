@@ -965,28 +965,6 @@ figure{margin:0}
   margin:clamp(34px,4.2vw,58px) auto 0;text-align:center;
 }
 .epidemia__caps{text-transform:uppercase}
-/* A explicação só aparece quando a pessoa procura por ela. */
-.epidemia--nota{position:relative;cursor:default}
-.epidemia--nota:focus{outline:none}
-.epidemia--nota:focus-visible{outline:3px solid var(--amarelo);outline-offset:10px;border-radius:2px}
-.epidemia__texto{
-  position:absolute;left:50%;top:calc(100% + 18px);z-index:40;
-  transform:translateX(-50%) translateY(-6px);
-  width:min(46ch,84vw);padding:20px 22px;border-radius:var(--raio);
-  background:rgba(28,14,3,.10);
-  backdrop-filter:blur(26px) saturate(150%) brightness(.62);
-  -webkit-backdrop-filter:blur(26px) saturate(150%) brightness(.62);
-  font-family:var(--corpo);font-size:.98rem;line-height:1.6;letter-spacing:0;
-  color:#fff;text-align:left;text-transform:none;
-  opacity:0;visibility:hidden;
-  transition:opacity .22s var(--ease),transform .22s var(--ease),visibility 0s linear .22s;
-}
-@supports not (backdrop-filter: blur(1px)){.epidemia__texto{background:rgba(28,14,3,.9)}}
-.epidemia--nota:hover .epidemia__texto,
-.epidemia--nota:focus-visible .epidemia__texto{
-  opacity:1;visibility:visible;transform:translateX(-50%) translateY(0);
-  transition:opacity .22s var(--ease),transform .22s var(--ease),visibility 0s linear 0s;
-}
 .epidemia b{font-weight:700;color:var(--bege)}
 .risca{position:relative;display:inline-block;white-space:nowrap}
 .risca::after{
@@ -1068,12 +1046,16 @@ html:not(.js) .risca::after{transform:scaleX(1)}
   transition:background .35s var(--ease),border-color .35s var(--ease),
              transform .35s var(--ease);
 }
+/* Helvetica, mas em negrito e num corpo que se lê de longe: são os entregáveis,
+   a informação mais concreta da página inteira. */
 .passo__t{
-  font-size:1.02rem;line-height:1.55;color:var(--tinta-70);max-width:52ch;
+  font-family:var(--corpo);font-weight:700;
+  font-size:clamp(1.12rem,1.45vw,1.34rem);line-height:1.45;
+  color:var(--marrom);max-width:46ch;
 }
-/* Só com script os passos começam apagados. */
+/* Só com script os passos começam recuados, e nunca a ponto de sumir. */
 .js .passo__ponto{background:var(--bege)}
-.js .passo__t{opacity:.3;transform:translateX(10px);
+.js .passo__t{opacity:.42;transform:translateX(10px);
   transition:opacity .45s var(--ease),transform .45s var(--ease)}
 .js .passo.aceso .passo__ponto{
   background:var(--amarelo);border-color:var(--amarelo);transform:scale(1.18);
