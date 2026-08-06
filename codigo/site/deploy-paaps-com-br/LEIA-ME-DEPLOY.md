@@ -20,10 +20,14 @@ seu e-mail. Não precisa configurar banco de dados nem nada: isso já está func
 4. **Se já existir o site antigo em WordPress ali dentro:** mova tudo que já existe pra uma pasta
    de backup antes de continuar (ex.: cria uma pasta `_wordpress-antigo` e arrasta tudo pra lá). Não
    apague nada, só tira do caminho, pra poder voltar se precisar.
-5. Envia (upload) **todo o conteúdo de dentro desta pasta** `deploy-paaps-com-br` para dentro de
-   `public_html` — os arquivos e pastas ficam soltos direto dentro de `public_html`, não dentro de
-   uma subpasta `deploy-paaps-com-br/site/...`.
-6. Pronto. Abre paaps.com.br no navegador pra conferir.
+5. Envia (upload) o arquivo **`paaps-site-deploy.zip`** (está aqui do lado deste LEIA-ME) para
+   dentro de `public_html`. É só esse um arquivo, não precisa selecionar os 98 arquivos um por um.
+6. Ainda dentro do Gerenciador de Arquivos, clica com o botão direito em `paaps-site-deploy.zip`
+   e escolhe **"Extract"** (Extrair). Ele extrai o `index.html` e as pastas direto dentro de
+   `public_html`.
+7. Apaga o `paaps-site-deploy.zip` de dentro de `public_html` depois de extrair (só ele, não as
+   pastas que saíram dele).
+8. Pronto. Abre paaps.com.br no navegador pra conferir.
 
 Se o domínio ainda não estiver apontando pra essa conta HostGator (às vezes o registro.br aponta
 pra outro lugar), isso é configuração de DNS no registro.br, separada deste passo a passo — me avisa
