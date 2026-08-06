@@ -76,7 +76,7 @@ A decisora de referência é **Cláudia Martins** (gestão pública municipal); 
 **Em (EMP) Leads** `collection://22244cb5-2e00-811b-8203-000b10c4de63`, a organização:
 
 - `Nome`: a organização (prefeitura, secretaria, instituto). **Nunca a pessoa.**
-- `Status`: `1. Cadastrado`
+- `Status`: `0. Alvo`. Lead novo nasce como Alvo; quem move para `1. Cadastrado` é o escrivão, depois que o e-mail sai de verdade. Cadastrar já como Cadastrado mente sobre o funil e estraga a taxa de conversão da etapa.
 - `Como conheceu?`: `vendas/buscaativa`
 - `Criativo`: conforme a oferta que encaixa
 
