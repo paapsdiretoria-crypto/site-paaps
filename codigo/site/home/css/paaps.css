@@ -1548,6 +1548,12 @@ html:not(.js) .risca::after{transform:scaleX(1)}
 .form select option{background:var(--marrom);color:var(--bege)}
 .form .ajuda{font-size:.76rem;color:rgba(245,241,225,.6);margin-top:-4px}
 
+/* Mensagem que substitui o formulário depois do envio, no lugar exato onde
+   ele estava: sobre foto escura nas duas páginas que usam .form--cadastro. */
+.form__sucesso{padding:8px 0;color:var(--bege)}
+.form__sucesso h3{color:var(--bege);margin-bottom:.5em}
+.form__sucesso p{color:rgba(245,241,225,.85)}
+
 /* ----- 15. RODAPÉ -------------------------------------------------------- */
 
 .rodape{background:var(--marrom);color:var(--bege);padding-block:clamp(56px,7vw,84px) 34px}

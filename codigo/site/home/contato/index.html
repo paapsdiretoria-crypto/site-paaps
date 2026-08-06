@@ -6,7 +6,7 @@
 <title>Contato : PAAPS Brasil</title>
 <meta name="description" content="Preencha o cadastro e conte o que está acontecendo com a sua equipe. A partir dele a PAAPS monta a leitura da sua rede.">
 <link rel="icon" href="../img/pontinhos.png">
-<link rel="stylesheet" href="../css/paaps.css">
+<link rel="stylesheet" href="../css/paaps.css?v=4">
 </head>
 <body>
 <a class="pular" href="#conteudo">Pular para o conteúdo</a>
@@ -52,7 +52,9 @@
           </p>
         </div>
 
-        <form class="form" method="post" action="#" novalidate>
+        <form class="form form--cadastro" method="post"
+              action="https://n8n.srv1850231.hstgr.cloud/webhook/cadastro-paaps-x7q2m9k4" novalidate>
+          <input type="hidden" name="origem" value="contato">
           <div class="full">
             <label for="nome">Seu nome</label>
             <input id="nome" name="nome" type="text" autocomplete="name" required>
@@ -191,6 +193,6 @@
   </div>
 </footer>
 
-<script src="../js/site.js"></script>
+<script src="../js/site.js?v=4"></script>
 </body>
 </html>

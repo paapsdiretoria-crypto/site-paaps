@@ -565,3 +565,41 @@
     Array.prototype.forEach.call(alvos, function (e) { e.classList.add('visivel'); });
   }, 6000);
 })();
+
+/* ---- formulários de cadastro (Contato e Como Atuamos): envia pro n8n, mostra
+   confirmação sem sair da página. O `action` do form já aponta pro webhook,
+   então sem JS o POST nativo funciona do mesmo jeito, só sem a mensagem. ---- */
+(function () {
+  'use strict';
+  var forms = Array.prototype.slice.call(document.querySelectorAll('.form--cadastro'));
+  if (!forms.length) return;
+
+  forms.forEach(function (form) {
+    var url = form.getAttribute('action');
+    var botao = form.querySelector('button[type="submit"]');
+    var textoOriginal = botao ? botao.textContent : '';
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (botao) { botao.disabled = true; botao.textContent = 'Enviando...'; }
+
+      fetch(url, { method: 'POST', body: new URLSearchParams(new FormData(form)) })
+        .then(function (r) { if (!r.ok) throw new Error('resposta não ok'); })
+        .then(function () {
+          var aviso = document.createElement('div');
+          aviso.className = 'form__sucesso';
+          aviso.innerHTML =
+            '<h3>Recebemos o seu cadastro.</h3>' +
+            '<p>Nosso time vai olhar com calma e entrar em contato.</p>';
+          form.replaceWith(aviso);
+        })
+        .catch(function () {
+          if (botao) { botao.disabled = false; botao.textContent = textoOriginal; }
+          window.alert(
+            'Não conseguimos enviar agora. Tenta de novo em instantes, ou manda um e-mail ' +
+            'para relacionamento@paaps.com.br.'
+          );
+        });
+    });
+  });
+})();
