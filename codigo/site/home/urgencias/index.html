@@ -14,14 +14,17 @@
 <header class="topo">
   <nav class="topo__nav" aria-label="Principal">
     <a class="marca" href="../index.html" aria-label="PAAPS Brasil, página inicial">
-      <img src="../img/logo-marrom.png" alt="PAAPS" width="132" height="54" style="height:34px;width:auto">
+      <img class="topo__logo topo__logo--escuro" src="../img/logo-marrom.png"
+           alt="PAAPS" width="132" height="54">
+      <img class="topo__logo topo__logo--claro" src="../img/logo-claro.png"
+           alt="" aria-hidden="true" width="132" height="54">
     </a>
     <button class="menu__botao" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
     </button>
     <ul class="menu" id="menu">
-      <li><a href="../treinamentos/">Treinamentos</a></li>
       <li><a href="../como-atuamos/">Como Atuamos</a></li>
+      <li><a href="../treinamentos/">Treinamentos</a></li>
       <li><a href="./" aria-current="page">Urgências e Eventos Extremos</a></li>
       <li><a href="../contato/">Contato</a></li>
     </ul>
@@ -31,7 +34,7 @@
 <main id="conteudo">
 
   <!-- HERO : contido, respeitoso, sem drama ------------------------------ -->
-  <section class="sobre-foto">
+  <section class="sobre-foto" data-tom="escuro">
     <img class="sobre-foto__img" src="../img/radilson/familia-ribeirinha.jpg"
          alt="Casa ribeirinha de comunidade isolada, com moradores no cotidiano">
     <div class="sobre-foto__c">
@@ -93,7 +96,7 @@
   </section>
 
   <!-- O QUE A PAAPS FAZ -------------------------------------------------- -->
-  <section class="sobre-foto">
+  <section class="sobre-foto" data-tom="escuro">
     <img class="sobre-foto__img" src="../img/radilson/palafitas-chuva.jpg" loading="lazy"
          alt="Agente comunitária de saúde caminha com guarda-chuva diante de casas de palafita">
     <div class="sobre-foto__c">
@@ -147,7 +150,7 @@
   </section>
 
   <!-- CTA ---------------------------------------------------------------- -->
-  <section class="sobre-foto sobre-foto--media sobre-foto--uniforme">
+  <section class="sobre-foto sobre-foto--media sobre-foto--uniforme" data-tom="escuro">
     <img class="sobre-foto__img" src="../img/radilson/corredor-epi.jpg" loading="lazy"
          alt="Dois profissionais de saúde de costas, com equipamento de proteção, num corredor">
     <div class="sobre-foto__c">

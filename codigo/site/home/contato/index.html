@@ -14,14 +14,17 @@
 <header class="topo">
   <nav class="topo__nav" aria-label="Principal">
     <a class="marca" href="../index.html" aria-label="PAAPS Brasil, página inicial">
-      <img src="../img/logo-marrom.png" alt="PAAPS" width="132" height="54" style="height:34px;width:auto">
+      <img class="topo__logo topo__logo--escuro" src="../img/logo-marrom.png"
+           alt="PAAPS" width="132" height="54">
+      <img class="topo__logo topo__logo--claro" src="../img/logo-claro.png"
+           alt="" aria-hidden="true" width="132" height="54">
     </a>
     <button class="menu__botao" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
     </button>
     <ul class="menu" id="menu">
-      <li><a href="../treinamentos/">Treinamentos</a></li>
       <li><a href="../como-atuamos/">Como Atuamos</a></li>
+      <li><a href="../treinamentos/">Treinamentos</a></li>
       <li><a href="../urgencias/">Urgências e Eventos Extremos</a></li>
       <li><a href="./" aria-current="page">Contato</a></li>
     </ul>
@@ -31,7 +34,7 @@
 <main id="conteudo">
 
   <!-- FORMULÁRIO SOBRE FOTO ---------------------------------------------- -->
-  <section class="sobre-foto sobre-foto--uniforme" style="align-items:center">
+  <section class="sobre-foto sobre-foto--uniforme" data-tom="escuro" style="align-items:center">
     <img class="sobre-foto__img" src="../img/radilson/acs-quilombola-para.jpg"
          alt="Agente comunitária de saúde sorrindo no vão da porta de uma casa">
     <div class="sobre-foto__c">
