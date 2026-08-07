@@ -991,6 +991,16 @@ figure{margin:0}
 .servico__cred{position:absolute;right:14px;top:14px;z-index:2;text-align:right;max-width:26ch;
   color:rgba(245,241,225,.55);margin:0}
 
+/* Rótulo que revela a lista de itens no celular (ver @media 768px). No desktop
+   os itens já aparecem sozinhos, então o rótulo nunca chega a existir ali. */
+.servico__mais-toggle{
+  display:none;margin-top:1.1em;padding:9px 20px;width:fit-content;
+  border:1px solid rgba(245,241,225,.4);border-radius:999px;
+  font-family:var(--titulo);font-size:.78rem;font-weight:700;letter-spacing:.03em;
+  text-transform:uppercase;color:var(--bege);cursor:pointer;
+}
+.servico.aberto .servico__mais-toggle{border-color:var(--amarelo);color:var(--amarelo)}
+
 /* Título de linha única: são 43 caracteres, então o corpo é calculado para
    caber na largura da coluna em vez de herdar a escala do hero. Abaixo de
    900px ele volta a quebrar, porque uma linha só ficaria ilegível no celular. */
@@ -1656,11 +1666,40 @@ html:not(.js) .risca::after{transform:scaleX(1)}
   .dado__prova{padding:17px 18px;font-size:.94rem;line-height:1.55}
   .pessoa__card{position:static;transform:none;opacity:1;visibility:visible;
     width:auto;box-shadow:none;margin-top:8px}
+
+  /* Os três cartões de serviço e os cinco retratos da equipe nunca tiveram
+     regra de celular (só receberam a de tablet/desktop, repeat(3,1fr) e
+     repeat(5,1fr)): a página inteira estourava a largura da tela e empurrava
+     o botão do menu pra fora dela. Ver simulação de UX mobile, 07/08/2026. */
+  .servicos{grid-template-columns:1fr}
+  .equipe{grid-template-columns:repeat(2,1fr)}
+  /* Com 5 pessoas em 2 colunas, a 5ª sobra sozinha na última linha: melhor
+     centralizada do que grudada na esquerda. */
+  .equipe .pessoa:last-child{grid-column:1/-1;max-width:50%;margin:0 auto}
+
+  /* Cada cartão de serviço era desenhado pra caber 3 lado a lado no desktop
+     (min-height quase a tela inteira). Empilhado numa coluna só, essa altura
+     virava uma faixa estreitíssima e a foto cortava no centro (às vezes numa
+     parede, sem ninguém em quadro). clamp() dá uma altura bem mais baixa,
+     mas ainda é min-height: se o texto do cartão aberto precisar de mais
+     espaço, o cartão cresce, nunca corta conteúdo. */
+  .servico{min-height:clamp(340px,68vw,420px)}
+  .servico--cuidado > img{object-position:55% 68%}
+  .servico--treinos > img{object-position:68% 42%}
+  .servico--urgencias > img{object-position:50% 35%}
+
+  /* A lista densa de itens (separados por "·") só aparece depois do toque no
+     rótulo "Ver o que inclui", pelo mesmo mecanismo (classe .aberto) que já
+     abre os cartões de dado e de pessoa da equipe. */
+  .servico__itens{display:none}
+  .servico.aberto .servico__itens{display:block}
+  .servico__mais-toggle{display:inline-block}
 }
 @media (max-width:480px){
   .sobre-foto{min-height:100svh}
   .rodape__grade{grid-template-columns:1fr}
   .mural{grid-template-columns:repeat(3,1fr)}
+  .equipe{grid-template-columns:1fr}
 }
 
 @media print{

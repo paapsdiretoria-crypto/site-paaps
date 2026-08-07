@@ -506,6 +506,39 @@
     });
   })();
 
+  /* ---- cartões de serviço: "Ver o que inclui" abre a lista de itens sem
+     navegar. O cartão inteiro é um link (`<a class="servico">`), então o
+     rótulo precisa parar a navegação (preventDefault) e a propagação
+     (stopPropagation) antes que o clique chegue no link. Só existe no
+     celular: no desktop o CSS mantém o rótulo com display:none e a lista
+     de itens sempre visível, então este script nunca tem o que abrir ali. */
+  (function () {
+    var rotulos = Array.prototype.slice.call(document.querySelectorAll('.servico__mais-toggle'));
+    if (!rotulos.length) return;
+
+    function alternar(rotulo) {
+      var cartao = rotulo.closest('.servico');
+      if (!cartao) return;
+      var aberto = cartao.classList.toggle('aberto');
+      rotulo.setAttribute('aria-expanded', aberto ? 'true' : 'false');
+      rotulo.textContent = aberto ? 'Ver menos' : 'Ver o que inclui';
+    }
+
+    rotulos.forEach(function (rotulo) {
+      rotulo.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        alternar(rotulo);
+      });
+      rotulo.addEventListener('keydown', function (e) {
+        if (e.key !== 'Enter' && e.key !== ' ') return;
+        e.preventDefault();
+        e.stopPropagation();
+        alternar(rotulo);
+      });
+    });
+  })();
+
   /* ---- quem contrata: o ícone escolhido já chega marcado no formulário ---- */
   (function () {
     var botoes = Array.prototype.slice.call(document.querySelectorAll('[data-perfil]'));
