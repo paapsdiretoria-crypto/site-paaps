@@ -6,6 +6,12 @@
       "runtimeExecutable": "python3",
       "runtimeArgs": ["-m", "http.server", "8080", "-d", "codigo/site/home"],
       "port": 8080
+    },
+    {
+      "name": "site-paaps-deploy",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8081", "-d", "codigo/site/deploy-paaps-com-br"],
+      "port": 8081
     }
   ]
 }
