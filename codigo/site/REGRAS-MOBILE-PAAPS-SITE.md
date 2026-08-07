@@ -84,16 +84,25 @@ Quando a faixa nítida para no limite da Lei 1a e ainda sobra tela, **o que pree
 nunca é cor chapada: é a mesma fotografia, em `cover`, desfocada e escurecida por baixo de
 tudo.** O bloco inteiro continua sendo uma imagem só, do topo ao último dado.
 
-Receita aplicada no hero da Home:
+**O desfoque não é filtro de CSS. É a mesma foto salva minúscula.** Salve uma cópia da
+fotografia com cerca de **48x36 pixels** (fica em 2 KB) ao lado do arquivo grande, com o sufixo
+`-fundo`. O navegador estica essa miniatura para a tela inteira e o próprio escalonamento produz
+o borrão, sem custo nenhum:
 
 ```
 #hero::before{
   content:"";position:absolute;inset:0;z-index:-3;
-  background:url("../img/<a mesma foto>") center 42%/cover no-repeat;
-  filter:blur(40px) brightness(.34) saturate(1.15);
-  transform:scale(1.15);   /* evita a borda clara que o desfoque cria */
+  background:
+    linear-gradient(rgba(28,14,3,.70), rgba(28,14,3,.84)),
+    url("../img/<a mesma foto>-fundo.jpg") center 42%/cover no-repeat;
 }
 ```
+
+> **Nunca fazer isso com `filter:blur()`.** A primeira versão usava
+> `filter:blur(40px)` mais `transform:scale(1.15)` numa camada de 375x1462. A camada de
+> composição do navegador se perdia e **a página inteira aparecia deslocada uns 19px para a
+> direita e cortada, cabeçalho fixo incluído**, com o crédito da foto duplicado. A Mallu viu e
+> reportou em 07/08/2026. Filtro pesado em camada grande de celular está proibido aqui.
 
 Isso é o que mantém a Lei 3 de pé quando a foto acaba: o título, a assinatura e os cartões de
 dado continuam pousados sobre a fotografia, e não sobre um retângulo marrom.

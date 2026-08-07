@@ -1733,11 +1733,20 @@ html:not(.js) .risca::after{transform:scaleX(1)}
      a faixa nítida em cima, o texto e os dados por baixo. Assim nada do hero
      pousa em cor chapada, e a Lei 3 continua valendo (o texto vive dentro da
      imagem) mesmo depois que a foto nítida termina. */
+  /* O desfoque NÃO é filtro. `agente-rio-barco-fundo.jpg` é a mesma foto salva
+     com 48x36 pixels (2 KB); o navegador estica para a tela inteira e o próprio
+     escalonamento produz o borrão, de graça.
+
+     A primeira versão usava `filter:blur(40px)` mais `transform:scale(1.15)`
+     numa camada de 375x1462. Isso é caríssimo, e a camada de composição do
+     navegador se perdia: a página inteira aparecia deslocada uns 19px para a
+     direita e cortada, INCLUSIVE o cabeçalho fixo, com o crédito duplicado.
+     Sem filtro e sem transform, o problema não existe. Não reintroduzir. */
   #hero::before{
     content:"";position:absolute;inset:0;z-index:-3;
-    background:url("../img/gerada/agente-rio-barco.jpg") center 42%/cover no-repeat;
-    filter:blur(40px) brightness(.34) saturate(1.15);
-    transform:scale(1.15);
+    background:
+      linear-gradient(rgba(28,14,3,.70), rgba(28,14,3,.84)),
+      url("../img/gerada/agente-rio-barco-fundo.jpg") center 42%/cover no-repeat;
   }
   #hero .sobre-foto__img{
     height:var(--foto-h);bottom:auto;

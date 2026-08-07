@@ -1647,7 +1647,21 @@ html:not(.js) .risca::after{transform:scaleX(1)}
   .tres,.quatro{grid-template-columns:1fr}
   .form{grid-template-columns:1fr}
   .mural{grid-template-columns:repeat(4,1fr)}
-  .sobre-foto .legenda{position:static;text-align:left;margin-top:22px;max-width:none}
+  /* CRÉDITO DE FOTO: uma linha só, no pé da própria foto, em toda foto do site.
+     É a regra das peças publicadas, onde o crédito roda a cerca de 6,5px na tela
+     do celular. A 9px o crédito mais longo do site (88 caracteres, o do hero)
+     fecha em uma linha em 351px, sem mexer em nenhuma palavra.
+
+     O `position:static` que estava aqui era um bug estrutural: `.sobre-foto` é
+     flex em linha, então a legenda estática virava uma SEGUNDA COLUNA e roubava
+     88px no hero e 147px no milharal, empurrando todo o texto para a esquerda.
+     Era a causa real do "o texto não está centralizado na tela". */
+  .sobre-foto > .legenda,
+  .foto-inteira .legenda,
+  .meia__foto .legenda{
+    position:absolute;left:0;right:0;bottom:0;top:auto;margin:0;padding:0 10px 9px;
+    text-align:left;max-width:none;font-size:8px;line-height:1.35;white-space:nowrap;
+  }
   .prova{grid-template-columns:1fr;gap:34px}
   .dado__prova{width:100%}
   .portas,.frente{grid-template-columns:1fr}
@@ -1694,6 +1708,109 @@ html:not(.js) .risca::after{transform:scaleX(1)}
   .servico__itens{display:none}
   .servico.aberto .servico__itens{display:block}
   .servico__mais-toggle{display:inline-block}
+
+  /* ====================================================================
+     HERO NO CELULAR : a foto ocupa a primeira tela, os dados caem fora dela
+     ====================================================================
+     No computador o hero é uma caixa de 1560px com os três dados espalhados
+     ao longo da água e do barco. No celular essa mesma caixa fazia a foto
+     deitada aparecer em 18% da largura: sumiam o barco, a mãe e as crianças.
+     Aqui a foto passa a cobrir exatamente uma tela e os dados descem para o
+     marrom, o que devolve o recorte para 35% mesmo com a foto atual.
+     Nada disso toca no computador: tudo vive dentro do bloco de 768px.  */
+
+  /* A ALTURA DA FOTO NÍTIDA É O LIMITE DO ZOOM, e sai de uma conta.
+     A foto é deitada (2000x1500) e as pessoas ocupam de x=545 (a mão da menina
+     de bolinhas) a x=1930 (o cotovelo erguido da agente): 1406px de largura.
+     Com object-fit:cover numa caixa de Lpx de largura, a janela visível da
+     foto tem L x 1500 / altura. Igualando a 1406: altura = largura x 1,067.
+     Daí 106vw: é o zoom máximo em que NINGUÉM é cortado, em qualquer celular.
+     Aumentar esse número corta a mão da menina e o braço da agente.
+     Medido e conferido recortando a foto em 07/08/2026. */
+  #hero{--foto-h:min(106vw,430px);min-height:0;background:var(--marrom)}
+
+  /* O FUNDO É A PRÓPRIA FOTO, desfocada e escurecida, cobrindo o hero inteiro:
+     a faixa nítida em cima, o texto e os dados por baixo. Assim nada do hero
+     pousa em cor chapada, e a Lei 3 continua valendo (o texto vive dentro da
+     imagem) mesmo depois que a foto nítida termina. */
+  /* O desfoque NÃO é filtro. `agente-rio-barco-fundo.jpg` é a mesma foto salva
+     com 48x36 pixels (2 KB); o navegador estica para a tela inteira e o próprio
+     escalonamento produz o borrão, de graça.
+
+     A primeira versão usava `filter:blur(40px)` mais `transform:scale(1.15)`
+     numa camada de 375x1462. Isso é caríssimo, e a camada de composição do
+     navegador se perdia: a página inteira aparecia deslocada uns 19px para a
+     direita e cortada, INCLUSIVE o cabeçalho fixo, com o crédito duplicado.
+     Sem filtro e sem transform, o problema não existe. Não reintroduzir. */
+  #hero::before{
+    content:"";position:absolute;inset:0;z-index:-3;
+    background:
+      linear-gradient(rgba(28,14,3,.70), rgba(28,14,3,.84)),
+      url("../img/gerada/agente-rio-barco-fundo.jpg") center 42%/cover no-repeat;
+  }
+  #hero .sobre-foto__img{
+    height:var(--foto-h);bottom:auto;
+    /* 90% na horizontal centra a janela nas pessoas: x de 535 a 1941. */
+    object-position:90% center;
+  }
+  /* O véu vive só na faixa nítida, e só nas pontas: o miolo da foto, onde
+     estão os rostos, fica com cor e luz cheias (Lei 5). O escurecimento do pé
+     costura a foto nítida com o desfoque que vem embaixo. */
+  #hero::after{
+    height:var(--foto-h);bottom:auto;
+    background:linear-gradient(180deg,
+      rgba(28,14,3,.52) 0%,      /* topo: só o bastante para o logo e o menu */
+      rgba(28,14,3,0)   26%,
+      rgba(28,14,3,0)   64%,     /* o miolo limpo */
+      rgba(28,14,3,.80) 100%);   /* o pé, costurando com o desfoque */
+  }
+  #hero .sobre-foto__c{min-height:0;padding-top:0;padding-bottom:clamp(36px,8vw,56px)}
+  #hero .hero__texto{
+    min-height:0;display:flex;flex-direction:column;
+    padding-top:calc(var(--foto-h) + clamp(26px,6vw,40px));
+    padding-bottom:clamp(30px,7vw,44px);
+  }
+  #hero > .legenda{top:var(--foto-h);bottom:auto;transform:translateY(-100%)}
+
+  /* A ASSINATURA: a linha da Rede desce para o pé da foto e vira o bloco que
+     fecha as peças do @paaps.brasil: logo com os pontinhos, descritivo miúdo. */
+  #hero h1{order:1}
+  #hero .hero__oferta{
+    order:2;font-size:1.1875rem;line-height:1.5;max-width:none;margin-top:1.1em;
+  }
+  #hero .hero__sub{
+    order:3;display:flex;flex-direction:column;align-items:center;gap:9px;
+    text-align:center;margin:0;padding-top:clamp(30px,7vw,46px);max-width:none;
+    font-size:.66rem;letter-spacing:.05em;color:rgba(245,241,225,.88);
+  }
+  #hero .hero__sub__pt{display:none}   /* os dois pontos ficam órfãos em assinatura */
+  #hero .hero__logo{height:40px;width:auto}
+
+  /* OS TRÊS DADOS, já fora da foto, em caixinhas leves sobre o marrom.
+     1,3rem a 1,5rem dá 21px em tela de 375px e 20,2px em tela de 360px. Foi
+     medido: é o maior corpo em que os três títulos fecham em no máximo duas
+     linhas. "Quase 10 em cada 10" fecha em uma. */
+  .sobre-foto--alto .prova{row-gap:14px;margin-top:0}
+  #hero .prova{
+    grid-template-columns:1fr;padding-top:clamp(34px,8vw,52px);padding-bottom:0;
+  }
+  #hero .prova .dado{
+    background:rgba(245,241,225,.055);border:1px solid rgba(245,241,225,.13);
+    border-radius:var(--raio);padding:clamp(24px,6vw,32px) 18px;text-align:center;
+  }
+  #hero .prova .dado__n{font-size:clamp(1.3rem,5.6vw,1.5rem)}
+  #hero .prova .dado__l{max-width:34ch;margin-left:auto;margin-right:auto}
+  #hero .prova .grad{justify-items:center}
+
+  /* FOTO DE TELA CHEIA (bloco das mulheres): a foto é deitada 3:2 e rendia só
+     251px de altura, enquanto o bloco de texto tem 384px. Sobravam 133px
+     sangrando para cima, por cima dos dados do bloco anterior. Foto documental
+     de terceiro não se regera, então segue o caminho combinado para o acervo do
+     Radilson: foto grande, título por cima, cedendo borda. */
+  .foto-inteira > img{
+    height:clamp(470px,66svh,560px);object-fit:cover;object-position:50% 34%;
+  }
+  .foto-inteira::after{height:72%}
 }
 @media (max-width:480px){
   .sobre-foto{min-height:100svh}
