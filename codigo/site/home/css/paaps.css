@@ -1719,30 +1719,49 @@ html:not(.js) .risca::after{transform:scaleX(1)}
      marrom, o que devolve o recorte para 35% mesmo com a foto atual.
      Nada disso toca no computador: tudo vive dentro do bloco de 768px.  */
 
-  #hero{min-height:0;background:var(--marrom)}
-  #hero .sobre-foto__img{
-    height:100svh;bottom:auto;
-    /* Enquadramento PROVISÓRIO da foto deitada: segura a agente, o remo, o
-       casco e uma das crianças. Some quando a foto em pé entrar (ver o
-       comentário no index.html). */
-    object-position:72% 42%;
+  /* A ALTURA DA FOTO NÍTIDA É O LIMITE DO ZOOM, e sai de uma conta.
+     A foto é deitada (2000x1500) e as pessoas ocupam de x=545 (a mão da menina
+     de bolinhas) a x=1930 (o cotovelo erguido da agente): 1406px de largura.
+     Com object-fit:cover numa caixa de Lpx de largura, a janela visível da
+     foto tem L x 1500 / altura. Igualando a 1406: altura = largura x 1,067.
+     Daí 106vw: é o zoom máximo em que NINGUÉM é cortado, em qualquer celular.
+     Aumentar esse número corta a mão da menina e o braço da agente.
+     Medido e conferido recortando a foto em 07/08/2026. */
+  #hero{--foto-h:min(106vw,430px);min-height:0;background:var(--marrom)}
+
+  /* O FUNDO É A PRÓPRIA FOTO, desfocada e escurecida, cobrindo o hero inteiro:
+     a faixa nítida em cima, o texto e os dados por baixo. Assim nada do hero
+     pousa em cor chapada, e a Lei 3 continua valendo (o texto vive dentro da
+     imagem) mesmo depois que a foto nítida termina. */
+  #hero::before{
+    content:"";position:absolute;inset:0;z-index:-3;
+    background:url("../img/gerada/agente-rio-barco.jpg") center 42%/cover no-repeat;
+    filter:blur(40px) brightness(.34) saturate(1.15);
+    transform:scale(1.15);
   }
-  /* O véu deixa de cobrir o quadro inteiro e passa a escurecer só onde o texto
-     pousa. É a Lei 5 do arquivo de regras: o meio da foto mantém cor e luz. */
+  #hero .sobre-foto__img{
+    height:var(--foto-h);bottom:auto;
+    /* 90% na horizontal centra a janela nas pessoas: x de 535 a 1941. */
+    object-position:90% center;
+  }
+  /* O véu vive só na faixa nítida, e só nas pontas: o miolo da foto, onde
+     estão os rostos, fica com cor e luz cheias (Lei 5). O escurecimento do pé
+     costura a foto nítida com o desfoque que vem embaixo. */
   #hero::after{
-    height:100svh;bottom:auto;
+    height:var(--foto-h);bottom:auto;
     background:linear-gradient(180deg,
-      rgba(28,14,3,.55) 0%,      /* topo: só o bastante para o logo e o menu */
-      rgba(28,14,3,0)   22%,
-      rgba(28,14,3,0)   42%,     /* o meio limpo */
-      rgba(28,14,3,.82) 100%);   /* o pé, onde o texto pousa */
+      rgba(28,14,3,.52) 0%,      /* topo: só o bastante para o logo e o menu */
+      rgba(28,14,3,0)   26%,
+      rgba(28,14,3,0)   64%,     /* o miolo limpo */
+      rgba(28,14,3,.80) 100%);   /* o pé, costurando com o desfoque */
   }
   #hero .sobre-foto__c{min-height:0;padding-top:0;padding-bottom:clamp(36px,8vw,56px)}
   #hero .hero__texto{
-    min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;
+    min-height:0;display:flex;flex-direction:column;
+    padding-top:calc(var(--foto-h) + clamp(26px,6vw,40px));
     padding-bottom:clamp(30px,7vw,44px);
   }
-  #hero > .legenda{top:100svh;bottom:auto;transform:translateY(-100%)}
+  #hero > .legenda{top:var(--foto-h);bottom:auto;transform:translateY(-100%)}
 
   /* A ASSINATURA: a linha da Rede desce para o pé da foto e vira o bloco que
      fecha as peças do @paaps.brasil: logo com os pontinhos, descritivo miúdo. */

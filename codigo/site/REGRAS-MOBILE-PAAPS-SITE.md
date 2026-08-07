@@ -50,6 +50,22 @@ que existe é a fotografia.
 
 Consequência obrigatória: **a foto precisa ser em pé**. Ver PARTE 2, onde está a conta.
 
+### Lei 1a : o zoom para no primeiro membro cortado
+
+Decisão da Mallu, 07/08/2026: *"Dá o zoom, mas eu quero todas as pessoas aparecendo. Na hora que
+começar a cortar qualquer membro de pessoas, você pausa o zoom e deixa a foto neste tamanho."*
+
+Quando a foto disponível é deitada e a tela é em pé, existe um ponto exato em que o `cover`
+começa a comer gente. **Esse ponto é o limite, e ele manda na altura do bloco, não o contrário.**
+
+A conta, para qualquer foto: se as pessoas ocupam `P` pixels de largura numa foto de `A` pixels
+de altura, a altura máxima do bloco numa tela de `L` de largura é `L x A / P`. Na foto do rio
+(2000x1500, pessoas de x=545 a x=1930, ou seja 1406px) isso dá `altura = largura x 1,067`, que
+em CSS vira **`106vw`**: o mesmo zoom máximo em qualquer celular.
+
+Cortar ninguém vale mais do que encher a tela. Quando a foto não permitir as duas coisas, a
+diferença é preenchida pela Lei 2a.
+
 ### Lei 2 : a foto sangra, sem moldura
 
 Sem margem, sem canto arredondado, sem borda, sem cartão em volta. Vale em 36 das 37 peças
@@ -58,6 +74,29 @@ publicadas.
 A única exceção publicada é um registro próprio: foto contida com margem, sobre preto sólido,
 com marcação de hora e autoria (`Mallu Vasconcellos · PAAPS · 10h04`). É o modo caderno de
 campo. Foto contida existe no vocabulário, mas como outro registro, nunca como padrão.
+
+### Lei 2a : o resto da tela é a própria foto, desfocada e escurecida
+
+Aprovada pela Mallu em 07/08/2026, olhando o resultado: *"gostei do efeito que ficou na caixa
+dos dados, com o blur e escuro degradê nesse fundo, mantenha isso."*
+
+Quando a faixa nítida para no limite da Lei 1a e ainda sobra tela, **o que preenche o resto
+nunca é cor chapada: é a mesma fotografia, em `cover`, desfocada e escurecida por baixo de
+tudo.** O bloco inteiro continua sendo uma imagem só, do topo ao último dado.
+
+Receita aplicada no hero da Home:
+
+```
+#hero::before{
+  content:"";position:absolute;inset:0;z-index:-3;
+  background:url("../img/<a mesma foto>") center 42%/cover no-repeat;
+  filter:blur(40px) brightness(.34) saturate(1.15);
+  transform:scale(1.15);   /* evita a borda clara que o desfoque cria */
+}
+```
+
+Isso é o que mantém a Lei 3 de pé quando a foto acaba: o título, a assinatura e os cartões de
+dado continuam pousados sobre a fotografia, e não sobre um retângulo marrom.
 
 ### Lei 3 : o texto mora dentro da foto
 
@@ -276,6 +315,7 @@ Mesma regra do catálogo de modelos de slide.
 |---|---|---|
 | 07/08/2026 | Claude Code | Criação do arquivo: 11 leis, a conta da foto e a dívida aberta, a partir de 37 peças publicadas e das decisões da Mallu na sessão |
 | 07/08/2026 | Claude Code | PARTE 2: proporção da foto em pé corrigida de 9:20 para 9:16, depois de a geração em 9:20 voltar com o barco duplicado. Cena essencial passa a viver nos 80% centrais da LARGURA |
+| 07/08/2026 | Claude Code | Leis 1a e 2a, decididas pela Mallu diante do resultado: o zoom para no primeiro membro cortado (daí o `106vw` do hero), e o que sobra de tela é a própria foto desfocada e escurecida, nunca cor chapada |
 
 ---
 
