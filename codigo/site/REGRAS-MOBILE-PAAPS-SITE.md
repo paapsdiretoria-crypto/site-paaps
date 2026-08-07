@@ -166,17 +166,23 @@ resolve foto deitada em tela cheia de celular.** A foto tem que ser em pé.
 ### Especificação da foto em pé
 
 As telas de celular mais comuns vão de 0,450 (Pixel, Galaxy) a 0,562 (iPhone SE) de proporção
-largura sobre altura. Para que a foto nunca seja cortada nas laterais em aparelho nenhum:
+largura sobre altura.
 
-- **Proporção do arquivo: 9:20, ou 0,45.** Referência: 1170 x 2600.
-- No aparelho mais largo dessa faixa, o corte cai na vertical e come cerca de 10% em cima e
-  10% embaixo. Por isso: **a cena essencial vive nos 80% centrais da altura.**
+- **Proporção do arquivo: 9:16, ou 0,5625.** Referência: **1170 x 2080**.
+- Nos aparelhos mais altos o corte cai nas laterais e come cerca de 20% da largura, 10% de cada
+  lado. Por isso: **a cena essencial vive nos 80% centrais da largura.**
 - As faixas de texto ficam nos 22% de cima e nos 30% de baixo. **Nada essencial da fotografia
   pode estar ali.**
 
-Se a ferramenta de geração só entregar 9:16 (0,5625), então nos aparelhos mais altos o corte
-volta para as laterais e come até 20% da largura. Nesse caso, compor a cena também dentro dos
-80% centrais da largura.
+> **Erro registrado em 07/08/2026: não peça 9:20.** A primeira versão desta especificação pedia
+> 9:20 (0,45) para que a foto nunca fosse cortada nas laterais. Isso está geometricamente
+> correto e na prática está errado: **proporção muito alongada faz o gerador de imagem duplicar
+> o assunto.** A Mallu gerou a foto do rio nesse formato e voltou com o barco duplicado, a mesma
+> menina repetida duas vezes e dois coletes AgSUS empilhados. Os modelos são treinados perto de
+> 9:16; acima disso eles ladrilham a composição em vez de esticá-la.
+>
+> Entre perder 20% da largura no recorte e receber um barco duplicado, perde-se os 20%. Daí a
+> regra da cena nos 80% centrais.
 
 ### Fotos que já existem no site
 
@@ -269,6 +275,7 @@ Mesma regra do catálogo de modelos de slide.
 | Data | Quem | O que mudou |
 |---|---|---|
 | 07/08/2026 | Claude Code | Criação do arquivo: 11 leis, a conta da foto e a dívida aberta, a partir de 37 peças publicadas e das decisões da Mallu na sessão |
+| 07/08/2026 | Claude Code | PARTE 2: proporção da foto em pé corrigida de 9:20 para 9:16, depois de a geração em 9:20 voltar com o barco duplicado. Cena essencial passa a viver nos 80% centrais da LARGURA |
 
 ---
 
