@@ -6,7 +6,7 @@
 <title>PAAPS Brasil : Cuidamos de Funcionários Públicos para um Território Transformado</title>
 <meta name="description" content="A Rede da Saúde Mental Coletiva para as Políticas Públicas do futuro. Cuidado em Saúde Mental, Integração para a Rede e Treinamentos para as equipes do município.">
 <link rel="icon" href="img/pontinhos.png">
-<link rel="stylesheet" href="css/paaps.css?v=7">
+<link rel="stylesheet" href="css/paaps.css?v=9">
 </head>
 <body>
 <a class="pular" href="#conteudo">Pular para o conteúdo</a>
@@ -72,6 +72,19 @@
 
   <!-- 1. HERO ------------------------------------------------------------ -->
   <section id="hero" data-tom="escuro" class="sobre-foto sobre-foto--alto sobre-foto--veu-marrom">
+    <!-- FOTO EM PÉ, QUANDO O ARQUIVO CHEGAR: esta foto é deitada (4:3), e no celular a caixa
+         é a tela inteira. Por geometria, só 35% da largura da cena aparece; o resto é cortado.
+         Enquanto isso, o enquadramento provisório vive no CSS (`object-position:72% 42%`).
+         Assim que existir `img/gerada/agente-rio-barco-vertical.jpg` (9:20, 1170x2600, cena
+         nos 80% centrais da altura: ver PARTE 2 de REGRAS-MOBILE-PAAPS-SITE.md), trocar o
+         bloco abaixo por:
+
+           <picture>
+             <source media="(max-width:768px)" srcset="img/gerada/agente-rio-barco-vertical.jpg">
+             <img class="sobre-foto__img" src="img/gerada/agente-rio-barco.jpg" ...>
+           </picture>
+
+         e apagar a linha do `object-position` provisório no CSS. -->
     <img class="sobre-foto__img" src="img/gerada/agente-rio-barco.jpg"
          width="2000" height="1500"
          alt="Agente de saúde rema uma canoa levando uma mãe e quatro crianças pelo rio">
@@ -79,9 +92,14 @@
 
       <div class="hero__texto">
         <h1>Cuidamos dos <span class="chave">Funcionários Públicos</span> para um Território Transformado</h1>
+        <!-- No celular esta linha desce e vira a ASSINATURA da página, no formato das peças
+             do @paaps.brasil: logo com os pontinhos e a linha descritiva embaixo. Por isso os
+             dois pontos e o texto vivem em spans próprios: no celular os dois pontos somem
+             (em assinatura ficam órfãos) e o texto vira uma linha centrada sob o logo.
+             No computador nada muda: os spans não têm estilo próprio fora do celular. -->
         <p class="hero__sub">
-          <img src="img/logo-claro.png" alt="PAAPS" class="hero__logo">:
-          a Rede da Saúde Mental Coletiva para as Políticas Públicas do futuro.
+          <img src="img/logo-claro.png" alt="PAAPS" class="hero__logo"><span class="hero__sub__pt">:</span>
+          <span class="hero__sub__t">a Rede da Saúde Mental Coletiva para as Políticas Públicas do futuro.</span>
         </p>
         <p class="hero__oferta">
           Cuidado em Saúde Mental, Integração para a Rede e Treinamentos para as equipes do Município.
