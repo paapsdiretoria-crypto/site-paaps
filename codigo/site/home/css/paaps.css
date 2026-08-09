@@ -1420,11 +1420,20 @@ html:not(.js) .risca::after{transform:scaleX(1)}
 .pessoa > img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;
   filter:grayscale(.25);transition:filter .3s var(--ease)}
 .pessoa:hover > img,.pessoa:focus-visible > img{filter:none}
+/* Nome + primeira frase do currículo: sempre visíveis em cima da própria
+   foto, com degradê para garantir leitura. O texto longo (parágrafos) só
+   aparece com o clique, no cartão abaixo. */
+.pessoa__legenda{
+  position:absolute;left:0;right:0;bottom:0;padding:40px 14px 14px;
+  background:linear-gradient(to top,rgba(46,24,6,.97) 0%,rgba(46,24,6,.86) 42%,rgba(46,24,6,0) 100%);
+}
 .pessoa__nome{
-  position:absolute;left:0;right:0;bottom:0;padding:34px 14px 12px;
-  font-family:var(--titulo);font-size:.8rem;font-weight:700;letter-spacing:.03em;
+  display:block;font-family:var(--titulo);font-size:.8rem;font-weight:700;letter-spacing:.03em;
   text-transform:uppercase;color:var(--bege);line-height:1.2;
-  background:linear-gradient(to top,rgba(46,24,6,.95) 0%,rgba(46,24,6,.7) 55%,rgba(46,24,6,0) 100%);
+}
+.pessoa__frase{
+  display:block;margin-top:.4em;font-style:italic;font-size:.76rem;
+  line-height:1.35;color:rgba(245,241,225,.88);
 }
 /* O cartão nasce EM CIMA DA PRÓPRIA FOTO, cobrindo ela, e cresce dali para os
    dois lados. Antes ele abria para cima: com as biografias longas ele passou de
@@ -1438,11 +1447,8 @@ html:not(.js) .risca::after{transform:scaleX(1)}
 }
 .pessoa:hover .pessoa__card,.pessoa:focus-within .pessoa__card,.pessoa.aberto .pessoa__card{
   opacity:1;visibility:visible;transform:translate(-50%,-50%)}
-.pessoa__card strong{display:block;text-align:center;font-family:var(--titulo);
-  text-transform:uppercase;font-size:.92rem;letter-spacing:.03em}
-.pessoa__card em{display:block;margin-top:.7em;font-style:italic;font-size:.94rem;
-  line-height:1.5;color:var(--marrom)}
 .pessoa__card p{margin-top:.8em;font-size:.86rem;line-height:1.55;color:var(--tinta-70)}
+.pessoa__card p:first-child{margin-top:0}
 .pessoa:focus{outline:none}
 .pessoa:focus-visible{outline:3px solid var(--amarelo);outline-offset:3px}
 
@@ -1616,6 +1622,15 @@ html:not(.js) .risca::after{transform:scaleX(1)}
     transform:translateY(-50%) perspective(2600px) rotateX(0);
   }
   .galeria{grid-template-columns:1fr 1fr;max-width:560px}
+  /* A caixa (aspect-ratio) não muda: só a letra encolhe até caber nela.
+     A referência é a que mais estoura (tem a citação mais longa), por isso
+     leva o maior corte. overflow:hidden é rede de segurança, não a solução. */
+  .obra__frente,.obra__verso{padding:11px 11px;overflow:hidden}
+  .obra__inst{font-size:.52rem;line-height:1.15;padding-bottom:.4em}
+  .obra__t{font-size:.64rem;line-height:1.1}
+  .obra__ref{font-size:.47rem;line-height:1.16;padding-top:.4em}
+  .obra__verso{font-size:.6rem;line-height:1.3}
+  .obra__verso-b{margin-top:.6em}
   .ods__grade{grid-template-columns:1fr;padding-right:var(--gutter);
     padding-left:var(--gutter);gap:clamp(28px,5vw,46px)}
   .ods__lista--off{width:100%}
@@ -1678,13 +1693,14 @@ html:not(.js) .risca::after{transform:scaleX(1)}
      prova por display, senão o conteúdo some quando o script falha. */
   /* .82rem dava 13px, miúdo demais para quem lê de óculos. Fica em 15px. */
   .dado__prova{padding:17px 18px;font-size:.94rem;line-height:1.55}
-  .pessoa__card{position:static;transform:none;opacity:1;visibility:visible;
-    width:auto;box-shadow:none;margin-top:8px}
 
   /* Os três cartões de serviço e os cinco retratos da equipe nunca tiveram
      regra de celular (só receberam a de tablet/desktop, repeat(3,1fr) e
      repeat(5,1fr)): a página inteira estourava a largura da tela e empurrava
      o botão do menu pra fora dela. Ver simulação de UX mobile, 07/08/2026. */
+  /* Parágrafo de abertura de Sigilo e Ética: no tamanho padrão do .lead
+     ficava grande demais para a coluna estreita do celular. */
+  #diferenciais .lead{font-size:.9rem;line-height:1.55;text-align:justify}
   .servicos{grid-template-columns:1fr}
   .equipe{grid-template-columns:repeat(2,1fr)}
   /* Com 5 pessoas em 2 colunas, a 5ª sobra sozinha na última linha: melhor
@@ -1816,7 +1832,11 @@ html:not(.js) .risca::after{transform:scaleX(1)}
   .sobre-foto{min-height:100svh}
   .rodape__grade{grid-template-columns:1fr}
   .mural{grid-template-columns:repeat(3,1fr)}
-  .equipe{grid-template-columns:1fr}
+  /* Rodapé: as 3 colunas empilhadas ficavam altas demais no celular. */
+  .rodape{padding-block:32px 24px}
+  .rodape__grade{gap:26px}
+  .rodape h4{margin-bottom:.8em}
+  .rodape ul{gap:7px}
 }
 
 @media print{
