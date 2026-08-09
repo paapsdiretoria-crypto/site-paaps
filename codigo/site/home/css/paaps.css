@@ -342,6 +342,18 @@ p + p{margin-top:1.05em}
   /* o topo já reserva a altura do menu fixo, que flutua por cima da foto */
   padding:clamp(112px,13vw,160px) var(--gutter) clamp(72px,9vw,104px);color:var(--bege);
 }
+/* Aviso de acolhimento no teto da foto: bloco próprio, separado do título
+   que fica ancorado embaixo. Existe só na página de Urgências, onde quem
+   chega pode estar lidando com algo acontecendo agora mesmo. */
+.sobre-foto__aviso{
+  position:absolute;top:0;left:0;right:0;z-index:1;
+  padding:clamp(100px,13vw,148px) var(--gutter) 0;
+  max-width:640px;margin-inline:auto;text-align:center;
+}
+.sobre-foto__aviso p{
+  color:rgba(245,241,225,.9);font-size:.94rem;line-height:1.6;
+}
+.sobre-foto__aviso p + p{margin-top:1em}
 /* O título fica onde está. O que muda é a distribuição: texto em cima, dados
    lá embaixo, na faixa da água e do barco, e imagem respirando no meio. */
 .sobre-foto--alto{min-height:min(1560px,212svh)}
@@ -477,6 +489,11 @@ p + p{margin-top:1.05em}
   .tempos{gap:4px}
   .tempo__t{font-size:.74rem;max-width:8ch}
   .tempo__n{width:28px;height:28px;font-size:.78rem}
+  /* Zigue-zague só no celular: número e texto trocam de lado a cada item
+     (2 e 4 invertem), abrindo mais espaço horizontal pra cada rótulo. A
+     trilha (JS) lê a posição real de cada bolinha, então a curva acompanha
+     o zigue-zague sozinha, sem precisar mexer no script. */
+  .tempo:nth-child(even){flex-direction:column-reverse}
 }
 
 /* ----- 8. LEGENDA DE FOTO : OBRIGATÓRIA EM TODA FOTO -------------------- */
@@ -1062,7 +1079,10 @@ figure{margin:0}
 }
 .epidemia__caps{text-transform:uppercase}
 .epidemia b{font-weight:700;color:var(--bege)}
-.risca{position:relative;display:inline-block;white-space:nowrap}
+/* line-height:1 é o que faz o sublinhado colar rente à palavra, não importa
+   o line-height do título ao redor (que existe para dar respiro ENTRE
+   linhas, um problema diferente e independente deste). */
+.risca{position:relative;display:inline-block;white-space:nowrap;line-height:1}
 .risca::after{
   content:"";position:absolute;left:0;right:0;bottom:-.14em;height:.09em;
   background:var(--amarelo);border-radius:2px;
