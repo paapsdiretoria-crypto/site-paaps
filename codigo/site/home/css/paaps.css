@@ -466,7 +466,7 @@ p + p{margin-top:1.05em}
              transform .35s var(--ease),color .35s var(--ease);
 }
 .tempo__t{
-  font-family:var(--corpo);font-weight:700;font-size:.84rem;line-height:1.35;
+  display:block;font-family:var(--corpo);font-weight:700;font-size:.84rem;line-height:1.35;
   color:var(--marrom);max-width:11ch;
 }
 .js .tempo__n{background:var(--bege)}
