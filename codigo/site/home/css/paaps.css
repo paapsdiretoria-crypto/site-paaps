@@ -1701,6 +1701,16 @@ html:not(.js) .risca::after{transform:scaleX(1)}
   /* Parágrafo de abertura de Sigilo e Ética: no tamanho padrão do .lead
      ficava grande demais para a coluna estreita do celular. */
   #diferenciais .lead{font-size:.9rem;line-height:1.55;text-align:justify}
+  /* Rede (foto das mulheres, Radilson): título e subtítulo centralizados no
+     celular, em vez de alinhados à esquerda. */
+  .foto-inteira__c{text-align:center}
+  .foto-inteira h2{margin-inline:auto}
+  .foto-inteira .lead{margin-inline:auto}
+  /* ODS: o texto de abertura centralizado, com a figurinha da ONU (que já é
+     inline no meio da frase) centralizando junto. A grade dos 17 objetivos
+     não muda. */
+  .ods__texto{text-align:center}
+  .ods__t1,.ods__t2,.ods__t3{margin-inline:auto}
   .servicos{grid-template-columns:1fr}
   .equipe{grid-template-columns:repeat(2,1fr)}
   /* Com 5 pessoas em 2 colunas, a 5ª sobra sozinha na última linha: melhor
@@ -1721,9 +1731,8 @@ html:not(.js) .risca::after{transform:scaleX(1)}
   /* A lista densa de itens (separados por "·") só aparece depois do toque no
      rótulo "Ver o que inclui", pelo mesmo mecanismo (classe .aberto) que já
      abre os cartões de dado e de pessoa da equipe. */
-  .servico__itens{display:none}
-  .servico.aberto .servico__itens{display:block}
-  .servico__mais-toggle{display:inline-block}
+  /* Itens sempre visíveis no celular também, igual ao desktop: sem botão
+     "Ver o que inclui" a mais, só a CTA que leva à página do serviço. */
 
   /* ====================================================================
      HERO NO CELULAR : a foto ocupa a primeira tela, os dados caem fora dela
