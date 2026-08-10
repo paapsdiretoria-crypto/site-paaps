@@ -12,6 +12,12 @@
       "runtimeExecutable": "python3",
       "runtimeArgs": ["-m", "http.server", "8081", "-d", "codigo/site/deploy-paaps-com-br"],
       "port": 8081
+    },
+    {
+      "name": "stories-preview",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8090", "-d", "conteudo/instagram/paaps.brasil/stories-servicos"],
+      "port": 8090
     }
   ]
 }

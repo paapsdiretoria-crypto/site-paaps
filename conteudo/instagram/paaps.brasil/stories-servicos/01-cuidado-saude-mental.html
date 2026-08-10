@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Story : Cuidado em Saúde Mental</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+  :root{
+    --cor-fundo:#f5f1e1;
+    --cor-marrom:#442309;
+    --cor-terracota:#cb4710;
+    --cor-oliva:#aea349;
+    --cor-amarelo:#f7c31c;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html,body{width:1080px; height:1920px; overflow:hidden; background:var(--cor-marrom); font-family:"Helvetica Neue","Nimbus Sans",Arial,sans-serif;}
+
+  .story{position:relative; width:1080px; height:1920px;}
+
+  .story__foto{position:absolute; top:0; left:0; width:1080px; height:880px; object-fit:cover;}
+
+  .story__gradiente{position:absolute; top:560px; left:0; width:1080px; height:340px;
+    background:linear-gradient(180deg, rgba(68,35,9,0) 0%, rgba(68,35,9,0.65) 45%, var(--cor-marrom) 100%);}
+
+  .story__painel{position:absolute; top:780px; left:0; width:1080px; height:1140px; background:var(--cor-marrom); padding:0 72px;}
+
+  .marcadores{display:flex; gap:10px; padding-top:48px; margin-bottom:24px;}
+  .marcador{width:14px; height:14px; border-radius:50%;}
+  .marcador--amarelo{background:var(--cor-amarelo);}
+  .marcador--terracota{background:var(--cor-terracota);}
+  .marcador--oliva{background:var(--cor-oliva);}
+
+  h1{font-family:"League Spartan",Arial,sans-serif; font-weight:700; font-size:76px; line-height:1.05; letter-spacing:0; color:#f5f1e1; margin-bottom:28px; text-transform:uppercase;}
+  h1 .destaque{color:var(--cor-amarelo);}
+
+  .story__intro{font-size:34px; line-height:1.45; color:rgba(245,241,225,0.88); max-width:880px; margin-bottom:44px;}
+
+  .story__subtitulo{font-family:"League Spartan",Arial,sans-serif; font-weight:700; font-size:30px; letter-spacing:0; text-transform:uppercase; color:#f5f1e1; margin-bottom:24px;}
+
+  .frente{display:flex; align-items:flex-start; gap:20px; margin-bottom:22px;}
+  .frente__ponto{width:16px; height:16px; border-radius:50%; background:var(--cor-amarelo); margin-top:10px; flex-shrink:0;}
+  .frente__texto{font-size:32px; line-height:1.35; color:#f5f1e1;}
+  .frente__texto strong{font-weight:700;}
+
+  .assinatura{position:absolute; bottom:80px; left:0; width:1080px; text-align:center;}
+  .assinatura img{height:96px; margin-bottom:20px;}
+  .assinatura__tagline{font-family:"League Spartan",Arial,sans-serif; font-weight:700; font-size:24px; letter-spacing:0.01em; text-transform:uppercase; color:rgba(245,241,225,0.75);}
+</style>
+</head>
+<body>
+  <div class="story">
+    <img class="story__foto" src="https://paaps.com.br/img/paaps/cuidado-farmacia.jpg" alt="">
+    <div class="story__gradiente"></div>
+
+    <div class="story__painel">
+      <div class="marcadores">
+        <span class="marcador marcador--amarelo"></span>
+        <span class="marcador marcador--terracota"></span>
+        <span class="marcador marcador--oliva"></span>
+      </div>
+
+      <h1>Cuidado em<br><span class="destaque">Saúde Mental</span></h1>
+
+      <p class="story__intro">Quando a equipe está adoecida e em sofrimento. Primeiro se interrompe o que está machucando as pessoas.</p>
+
+      <div class="story__subtitulo">Três coisas concretas</div>
+
+      <div class="frente">
+        <span class="frente__ponto"></span>
+        <span class="frente__texto"><strong>Grupos de Apoio</strong> à equipe</span>
+      </div>
+      <div class="frente">
+        <span class="frente__ponto"></span>
+        <span class="frente__texto"><strong>Plantão Psicológico</strong> nas unidades</span>
+      </div>
+      <div class="frente">
+        <span class="frente__ponto"></span>
+        <span class="frente__texto"><strong>Psicoterapia Online</strong> pro servidor</span>
+      </div>
+    </div>
+
+    <div class="assinatura">
+      <img src="https://paaps.com.br/img/logo-branco.png" alt="PAAPS">
+      <div class="assinatura__tagline">Cuidar da Ponta, Impactar o Mundo</div>
+    </div>
+  </div>
+</body>
+</html>
