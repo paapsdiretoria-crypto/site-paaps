@@ -122,4 +122,45 @@ Se não estiverem, avisar o porteiro logo no começo, e não no fim, para ele de
 reabre a sessão com o MCP ou se assume o cadastro. Essa limitação pode ter sido corrigida:
 checar antes de assumir que ainda vale.
 
+## 4ª leva, 10/08/2026: rodada semanal completa, 25 cartas em duas ondas
+
+**Onda 1 (16 municípios, Norte de Minas/Jequitinhonha), fechadas com e-mail e gancho verificados:**
+Itacarambi, Montezuma, Presidente Kubitschek, Gouveia, Rubelita, Pedras de Maria da Cruz,
+Indaiabira, Vargem Grande do Rio Pardo, Santo Antônio do Retiro, São Gonçalo do Rio Preto,
+Ninheira, Grão Mogol, Novorizonte, Fruta de Leite, Berizal, Congonhas do Norte.
+
+**Achado reaproveitável: a Carta de Serviços de um CAPS regional lista nominalmente os
+municípios atendidos.** Rendeu quase toda a onda 1: Diamantina lista 14 municípios (CAPS
+Renascer), Salinas lista 15 (CAPSi), Januária lista 4 (CAPS AD). É gancho verificável,
+específico e honesto para qualquer município da lista ainda não tocado, sem precisar achar
+notícia nenhuma (o que importa com o bloqueio eleitoral ativo). Da lista de Diamantina ainda
+sobram sem e-mail confirmado: Carbonita, Coluna, Alvorada, Couto de Magalhães de Minas, Felício
+dos Santos, Santo Antônio do Itambé, Senador Modestino Gonçalves.
+
+**Ficaram cadastrados como `0. Alvo` com contato de saúde confirmado mas sem gancho ainda**
+(prontos para a próxima rodada sem precisar buscar contato de novo): Nova Porteirinha, Mantena,
+Icaraí de Minas. Datas ficou cadastrada só com ouvidoria geral, sem nome.
+
+**Onda 2 (9 municípios, fora do Norte de Minas para variar o mapa):**
+- Vale do Rio Doce: Aimorés, Conselheiro Pena, Resplendor (gancho: Plano de Ação do Programa
+  Especial de Saúde do Rio Doce, jul/2025, cobre vários municípios da região pós-Fundão; mina
+  reaproveitável do mesmo jeito que os CAPS regionais).
+- Triângulo/Alto Paranaíba: São Gotardo, Rio Paranaíba (CISALP, consórcio regional de saúde),
+  Ibiá.
+- Sul de Minas: Piranguçu, Virgínia.
+- Zona da Mata: Rio Pomba (destinatário só institucional, sem nome confirmado).
+
+**Descartados na onda 2, por motivo:**
+- E-mail ofuscado por CMS ou só gabinete geral sem gancho à altura: Guiricema, Astolfo Dutra,
+  Ervália, Coimbra, Guidoval, Divino das Laranjeiras.
+- Já constava em `(EMP) Leads`: Mantena (pesquisa completa feita, mas descartada por duplicidade;
+  se Mantena voltar à fila, o material já está pronto: falta só achar o gancho, contato já
+  confirmado na 4ª leva, ver acima).
+
+**Why:** estoque de `Aprovada` zerado no início da rodada (todas as 20 cartas anteriores já
+tinham saído como `Enviada`); meta de 25 para a semana inteira (n8n dispara 5/dia, seg a sex).
+**How to apply:** para a próxima rodada, atacar primeiro a lista de Diamantina/Salinas/Januária
+que ainda sobra (município com CAPS regional já mapeado, só falta e-mail), depois Nova
+Porteirinha/Mantena/Icaraí de Minas (só falta gancho), antes de sair varrendo região nova.
+
 Rotas e fontes em [[reference-fontes-email-institucional]].
