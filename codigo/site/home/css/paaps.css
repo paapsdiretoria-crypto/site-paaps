@@ -1443,18 +1443,19 @@ html:not(.js) .risca::after{transform:scaleX(1)}
   display:block;margin-top:.4em;font-style:italic;font-size:.76rem;
   line-height:1.35;color:rgba(245,241,225,.88);
 }
-/* O cartão nasce EM CIMA DA PRÓPRIA FOTO, cobrindo ela, e cresce dali para os
-   dois lados. Antes ele abria para cima: com as biografias longas ele passou de
-   580px e seria cortado pelo topo da tela na maior parte das rolagens. */
+/* O cartão centraliza na TELA, não na foto: as biografias mais longas (a da
+   Mallu passa de 800px) são mais altas que boa parte dos celulares, e
+   centralizar num ponto fixo da página as cortava por cima e por baixo.
+   position:fixed resolve isso de vez, em qualquer scroll, em qualquer bio. */
 .pessoa__card{
-  position:absolute;left:50%;top:50%;transform:translate(-50%,calc(-50% - 6px));
-  z-index:60;width:min(38ch,80vw);pointer-events:none;
+  position:fixed;left:50%;top:50%;transform:translate(-50%,calc(-50% - 6px));
+  z-index:60;width:min(38ch,86vw);max-height:82vh;overflow-y:auto;pointer-events:none;
   background:var(--bege);color:var(--marrom);border-radius:var(--raio);
   padding:20px 22px;box-shadow:0 18px 50px rgba(0,0,0,.45);
   opacity:0;visibility:hidden;transition:opacity .24s var(--ease),transform .24s var(--ease),visibility .24s;
 }
 .pessoa:hover .pessoa__card,.pessoa:focus-within .pessoa__card,.pessoa.aberto .pessoa__card{
-  opacity:1;visibility:visible;transform:translate(-50%,-50%)}
+  opacity:1;visibility:visible;transform:translate(-50%,-50%);pointer-events:auto}
 .pessoa__card p{margin-top:.8em;font-size:.86rem;line-height:1.55;color:var(--tinta-70)}
 .pessoa__card p:first-child{margin-top:0}
 .pessoa:focus{outline:none}
