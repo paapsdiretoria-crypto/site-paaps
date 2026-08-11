@@ -217,6 +217,31 @@ ruído. Arquivos em `hyperframes/skills/hyperframes-media/assets/sfx/`
 Trilha: a faixa que a Mallu larga na pasta vence. Sem faixa na pasta, perguntar antes de
 sair caçando.
 
+### Os modelos não travam o resto (calibrado 11/08/2026)
+
+**Os modos (seção 2) e a paleta/tipografia (seção 1) são a única coisa fixa.** Eles dizem
+o FORMATO de como a legenda aparece, a fonte, a cor. Fora disso, nada aqui é teto: nível de
+criatividade na edição e riqueza de efeito sonoro **não são regidos pelo modo**, e prender a
+edição a só clique/datilografia/whoosh por excesso de cautela é o erro, não o cuidado.
+
+Ela pediu explicitamente mais camadas de som, amarradas ao que está acontecendo na tela e na
+fala, não só ao modo tipográfico:
+- **Som na palavra do grifo** (a que já leva a régua vinho), não só nos modos A/B/C.
+- **Som na virada de cabeça** ou gesto físico forte dela no vídeo bruto.
+- **Tratamento sonoro na entonação mais assertiva** da fala (não precisa ser SFX externo:
+  pode ser EQ/compressão pontual, um leve duck da trilha, o que servir o momento).
+
+Cada vídeo tem o próprio tema e os próprios gestos no bruto: o efeito certo nasce olhando
+pra ELE, não de um catálogo fixo. Testar, ir ao snapshot, ajustar — isso é o processo normal
+daqui, não uma exceção.
+
+**Carimbo (selo de diagnóstico/rótulo em cor Mallu):** existe desde o vídeo 2 e não é um dos
+5 modos formais, mas é um recurso válido sempre que o texto for um rótulo/código (igual ao
+selo DSM da versão @paaps.brasil). Errar pra pouco aqui já aconteceu: a primeira tentativa
+saiu uma caixinha comportada com borda fina, sem presença nenhuma de carimbo real. Um selo de
+verdade tem peso: mais contraste com o fundo, talvez leve rotação, borda mais grossa ou dupla,
+tipografia que ocupa a caixa. Não sair envergonhado.
+
 O áudio dela costuma chegar em **-0,1 dBTP**, colado no teto de clipe. Limitador leve na
 saída, `alimiter` em -1,0 dBTP.
 
