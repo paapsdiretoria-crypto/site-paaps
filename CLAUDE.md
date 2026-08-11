@@ -92,7 +92,7 @@ e de consumo.
 |---|---|
 | PAAPS | Solução de Psicologia Social para políticas públicas e programas sociais |
 | TEAtrar | Teatro conduzido por psicóloga para crianças e adolescentes autistas |
-| ECOA | Comunidade de aprendizagem e vivência prática em Psicologia Social Latina |
+| ECOA | Comunidade de aprendizagem e vivência prática em Psicologia Social Latina. Ver `ecoa/CLAUDE.md` |
 | Periódico da Rede PAAPS | Publicação periódica |
 | Plantão Psicológico | Psicoterapia para servidores públicos |
 | Bela Vista de Minas | Prova de conceito: 5 meses com servidores (case de impacto) |
@@ -228,6 +228,14 @@ SITE PAAPS/                          ← pasta raiz (renomear para PAAPS/ no Fin
 │   └── instagram/
 │       ├── amalluvasconcellos/      ← workspace do perfil pessoal de Mallu
 │       └── paaps.brasil/            ← workspace do perfil institucional
+│
+├── ecoa/                            ← Projeto: Comunidade ECOA (Psicologia Social Latina)
+│   ├── CLAUDE.md                    ← contexto do projeto, ler antes de qualquer tarefa sobre a ECOA
+│   ├── identidade-e-posicionamento/ ← o que a ECOA é, propósito, valores, tom de voz, acordos
+│   ├── estrutura-e-rituais/         ← grupos, rituais, jornada, canvas, boas-vindas
+│   ├── planejamento-de-conteudo/    ← Eras, personas, impacto, referências de comunidade
+│   ├── porta-voz/                   ← Programa Porta-Voz
+│   └── reunioes/                    ← atas de equipe, planejamento e pesquisa
 │
 ├── hyperframes/                     ← projeto de vídeo HyperFrames (render HTML→MP4)
 ├── projetos/                        ← projetos avulsos (Minerva, portfólios…), não commitado

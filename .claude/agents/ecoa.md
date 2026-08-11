@@ -15,6 +15,7 @@ Agente da Camada 3/4 do workflow de conteúdo PAAPS.
 Recebe o briefing do Narrador e produz conteúdo específico para o canal correspondente.
 
 Antes de construir este agente, ler:
+- `ecoa/CLAUDE.md` (contexto do projeto: o que é a ECOA, posicionamento, voz, governança)
 - `insumos-compartilhados/nucleo-comum/voz-paaps.md`
 - `insumos-compartilhados/nucleo-comum/identidade-aplicada.md`
 - `conteudo/CLAUDE.md`
