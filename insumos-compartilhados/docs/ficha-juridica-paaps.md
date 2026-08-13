@@ -255,19 +255,37 @@ Cláusula Terceira do contrato consolidado. É o que protege a metodologia em li
 
 Marcar o que já existe em mãos:
 
-- [x] Cartão CNPJ (emitido 14/12/2023, **reemitir**)
-- [x] Contrato social consolidado AC-08 (01/04/2026)
+- [x] Cartão CNPJ (reemitido 13/08/2026)
+- [x] Contrato social consolidado AC-08 (01/04/2026) : `DIGGING - AC 08_Certidão de Inteiro Teor`
 - [ ] Comprovante de arquivamento da AC-08 na JUCESP
-- [ ] Certidão Negativa de Débitos Federais e Dívida Ativa da União
-- [ ] CRF do FGTS
-- [ ] CNDT (débitos trabalhistas)
+- [x] Certidão Negativa de Débitos Federais e Dívida Ativa da União (emitida 13/08/2026, válida até 09/02/2027)
+- [x] CRF do FGTS (emitido 13/08/2026)
+- [x] CNDT : débitos trabalhistas (emitida 13/08/2026)
+- [x] Certidão Negativa Correcional CEPIM, CEIS, CNEP e CGU-PJ (emitida 13/08/2026)
 - [ ] Certidão negativa municipal (ISS, São Paulo)
 - [ ] Certidão negativa estadual (SP)
 - [ ] Certidão de falência e concordata
-- [ ] Balanço patrimonial e DRE do último exercício
+- [ ] Balanço patrimonial e DRE : **precisa de dois pares**, 2024/2023 e 2023/2022. Só o
+      contador da DIGGING tem esse documento, não é algo que se emite online.
 - [ ] Registro da responsável técnica no CRP e do serviço junto ao CRP, quando o edital exigir
 - [ ] Atestados de capacidade técnica dos contratos já executados (Bela Vista de Minas,
       PROINAPE/SME-RJ, Maré)
+
+### Duas pegadinhas de nomenclatura, aprendidas na rodada de 13/08/2026
+
+- **"CND Federal" = "Certidão Positiva Com Efeitos de Negativa de Débitos Relativos aos
+  Tributos Federais e à Dívida Ativa da União".** O nome do PDF emitido pela Receita/PGFN
+  começa com "positiva", mas o próprio documento cita os arts. 205 e 206 do CTN: "tem os
+  mesmos efeitos da certidão negativa". É o mesmo documento, não confundir e não estranhar
+  o nome quando reemitir em receita.fazenda.gov.br ou pgfn.gov.br.
+- **"Ata da última eleição" não existe para a DIGGING, porque é LTDA, não S/A.** Sociedade
+  limitada não elege diretoria por assembleia, a administração é nomeada direto no contrato
+  social (ver seção 3 acima: Cláusula que nomeia Fabiane e a Mallu sócias administradoras).
+  Em formulário que peça esse documento, sobe **o mesmo PDF da AC-08** usado para "Estatuto
+  Social", e se houver campo de observação, anotar "sociedade limitada, administração
+  definida em contrato social, não há ata de eleição". O QSA (Quadro de Sócios e
+  Administradores, emitido na Receita) serve de reforço se o campo aceitar mais de um anexo:
+  confirma Fabiane e Mallu como "49-Sócio-Administrador".
 
 ---
 
@@ -277,3 +295,13 @@ Não commitados. Ficam em `~/Downloads` e devem ser movidos para uma pasta priva
 
 - `DIGGING - AC08 - Alteração do Contrato Social.pdf`
 - `REGISTRO DIGGING CNPJ.pdf`
+
+Rodada de habilitação de 13/08/2026 (mesma regra, não commitar):
+
+- `DIGGING - AC 08_Certidão de Inteiro Teor_27.04.2026 (2).pdf` (Estatuto Social / Ata de eleição)
+- `DIGGING - CNPJ_13.08.2026.pdf` (Cartão CNPJ)
+- `DIGGING - CERTIDÃO POSITIVA COM EFEITOS DE NEGATIVA DE DÉBITOS RELATIVOS AOS TRIBUTOS_13.08.2026.pdf` (CND Federal)
+- `DIGGING - CERTIDÃO NEGATIVA DE DÉBITOS TRABALHISTAS_13.08.2026.pdf` (CNDT)
+- `DIGGING - Certificado de Regularidade do FGTS - CRF_13.08.2026.pdf` (CRF FGTS)
+- `DIGGING - Certidão Negativa Correcional - Entes Privados ePAD, CGU-PJ, CEIS, CNEP e CEPIM_13.08.2026.pdf` (CEPIM/CEIS/CNEP)
+- `DIGGING - QSA_13.08.2026.pdf` (reforço para Ata de eleição, sem campo próprio no formulário)
