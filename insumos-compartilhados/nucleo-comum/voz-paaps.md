@@ -34,6 +34,9 @@ Toda peça deve ser capaz de ser descrita por pelo menos três desses adjetivos.
 - ❌ Academicismo excessivo (fugir do lugar de quem "estuda" o outro)
 - ❌ Tom de ONG que pede compaixão, doação, projeto voluntário
 - ❌ Linguagem corporativa morna, sem brasilidade
+- ❌ Vazio de agência ("ninguém mediu", "ninguém preveniu"): nomeia sempre quem decidiu não fazer
+  ("a sociedade se negou a prevenir", "o Estado escolheu não medir"). Diagnosticado pela Mallu em
+  13/08/2026: frase sem sujeito estrutural soa a acidente, e nada disso é acidente.
 
 ---
 
@@ -92,7 +95,8 @@ Proibido fazer promessas, garantias ou afirmações de resultado determinado. Tr
 ### 4.6 Checagem de dado (responsabilidade do Crítico de Conteúdo)
 **Nenhum número entra numa peça sem fonte verificável.** Antes de publicar qualquer dado:
 - O número precisa ter origem rastreável (órgão oficial, pesquisa publicada, dado checável)
-- Dados próprios do PAAPS (ex: "+56% em Bela Vista de Minas") precisam de período e contexto confirmados
+- Dados próprios do PAAPS (ex: "+56% de adesão em 5 meses de programa") precisam de período e
+  contexto confirmados, e **nunca nomeiam o cliente ou a cidade** (ver 4.9)
 - Frases de relato/posicionamento ("quando a gestão ignora, a rede adoece") não precisam de fonte: são opinião declarada
 - Afirmações do tipo "1ª causa de afastamento" precisam de fonte: INSS/DATAPREV por CID
 
@@ -115,6 +119,44 @@ isso, e quem lê reconhece na hora. A PAAPS não pode parecer feita por robô.
 
 Critério de reprovação, objetivo: caixa alta, mais tracking largo, mais corpo pequeno, mais posição
 logo acima do título. Bateu nos quatro, reescreve. Detalhe visual em `criterios-design.md`.
+
+### 4.8 NR-1 : o que ela é e o que ela não é (Mallu, 13/08/2026)
+
+**A NR-1 é uma norma regulatória trabalhista, fiscalizável a partir de 26/05/2026. Ela não mede
+sofrimento psíquico, e a peça nunca pode dizer ou sugerir que ela mede.** A PAAPS não acredita que
+teste ou diagnóstico regulatório (a NR-1 incluída) capta a complexidade do sofrimento de uma
+trabalhadora. Confundir "obrigação de fiscalização" com "instrumento que mede sofrimento" é erro de
+conteúdo, não só de tom.
+
+**Uso correto, se a NR-1 entrar:** citar perto do fechamento da peça, como fato de fiscalização
+("a partir de agora, toda empresa é fiscalizada nesse quesito"), nunca como o que vai revelar ou
+quantificar o problema. Não é raro que a NR-1 nem precise entrar: o slide que fecha o argumento
+estrutural já tem peso suficiente sem ela.
+
+**Regra de repetição:** a NR-1 aparece no máximo uma vez por peça. Citá-la em mais de um slide é
+muleta, não argumento.
+
+- ❌ "A NR-1 é obrigada a tentar medir [o sofrimento]."
+- ✅ "A partir de agora, isso também é fiscalizado pela NR-1." (perto do fim, uma vez só, sem
+  prometer que a fiscalização mede sofrimento)
+
+### 4.9 Case e cliente : nunca nomear em conteúdo público (Mallu, 13/08/2026)
+
+**Regra de segurança interna. Nenhuma peça pública (carrossel, site, post, proposta pública) cita o
+nome de um cliente ou case da PAAPS.** Vale para nome de cidade, prefeitura, secretaria ou qualquer
+identificador que permita reconhecer o cliente. A regra já vale pro site.
+
+**No lugar do nome, anonimizar por porte e região:** "cidade do interior de Minas Gerais, X mil
+habitantes", "prefeitura de pequeno porte no interior", "secretaria de saúde de município do
+Sudeste". O período (ex.: "5 meses") pode continuar, porque não identifica ninguém sozinho.
+
+Exceção: os quatro parceiros com logo autorizado (Allos, Desterro do Melo, Refazenda, Motiva) podem
+ser nomeados, porque a autorização de marca já existe. Qualquer outro nome de cliente, mesmo que já
+tenha aparecido em documento interno ou versão antiga de conteúdo, sai da peça nova.
+
+- ❌ "Escrevemos de dentro: Bela Vista de Minas, 5 meses."
+- ✅ "A gente trabalha a prevenção de riscos psicossociais dentro do seu município." (sem nomear
+  nenhum município específico)
 
 ---
 
@@ -158,7 +200,7 @@ logo acima do título. Bateu nos quatro, reescreve. Detalhe visual em `criterios
 |---|---|
 | Manchete | Naming direto, sem retórica vazia |
 | Citação | Real ou conceitual: nunca inventada, sempre atribuída |
-| Dado | Territorial + tempo sempre ("em Bela Vista de Minas, em 5 meses") |
+| Dado | Territorial + tempo sempre, sem nomear o cliente ("em cidade do interior de Minas Gerais, em 5 meses", ver 4.9) |
 | CTA | Proposição, não apelo ("O que o seu município está fazendo?") |
 | Crédito | `@paaps.brasil · [tema do carrossel]` |
 

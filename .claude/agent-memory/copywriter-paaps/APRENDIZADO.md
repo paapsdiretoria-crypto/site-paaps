@@ -346,3 +346,92 @@ calibrou a regra, depois de ver que a estrutura existe na obra publicada dela.
 
 **Por quê:** o que soa como IA não é a estrutura em si, é o espantalho e a repetição. Antes de usar,
 nomeie por escrito quem é a pessoa que acredita no X. Se não conseguir nomear, não use.
+
+---
+
+## Situação: citar lei ou norma pelo número, sem dizer o que ela garante
+
+**Quando acontece:** o insumo tem uma lei/portaria com força argumentativa (ex.: Lei 11.350/2006),
+e a tentação é abrir o slide com o número, como se citar a lei já fosse a prova.
+
+**O que aconteceu:** 13/08/2026, carrossel de teste "de quem é esse trabalho". Abri o slide 4 com
+"Só a Agente Comunitária de Saúde tem lei própria, desde 2006, a Lei 11.350." A Mallu: "lei própria
+de quê? lei que garante o quê? não é o ponto citar a lei, e muito menos o número, se você não
+explicou pra quê que é essa lei."
+
+**Regra que fica:**
+- ❌ "A Lei 11.350 [nome/número], desde 2006."
+- ✅ Citar sempre o que a norma garante ou obriga, na mesma frase que a nomeia; se não sobrar espaço
+  pra explicar, a norma não entra nesse slide.
+
+**Por quê:** número de lei sem conteúdo é autoridade decorativa; quem lê não pode verificar nem
+sentir o que ela muda na vida de ninguém.
+
+---
+
+## Situação: frase comprimida demais, que exige o leitor completar a lacuna sozinho
+
+**Quando acontece:** eu encurto uma frase pra caber no teto de palavras da região, e a compressão
+apaga o sujeito ou a ligação entre duas ideias.
+
+**O que aconteceu:** 13/08/2026, mesmo teste. Escrevi "Da agente comunitária de saúde, a mais perto
+de quem mora no território, esse número nunca foi levantado." A Mallu: "às vezes você encurta
+frases e deixa elas confusas. As pessoas não têm habilidade de interpretação de texto. A gente
+precisa deixar mais na cara." Ela reescreveu como "Das Agentes Comunitárias de Saúde, as que estão
+mais perto de quem mora no território: pra elas, esse número nunca foi levantado."
+
+**Regra que fica:**
+- ❌ Cortar o sujeito ou o conectivo pra ganhar espaço, mesmo quando o sentido "ainda dá pra
+  entender" pra quem escreveu
+- ✅ Redundância de clareza vence economia de palavra. Se cortar gera qualquer chance de
+  ambiguidade, a frase fica mais longa, não mais críptica.
+
+**Por quê:** o leitor não tem o contexto que eu tenho na cabeça enquanto escrevo. Compressão que
+depende de inferência é o mesmo erro do texto "psicótico": faz sentido só pra quem já sabia.
+
+---
+
+## Situação: exigência de anotar negrito, sublinhado e amarelo na entrega
+
+**Quando acontece:** toda entrega de copy, a partir de 13/08/2026.
+
+**O que a Mallu pediu:** que eu já indique, na própria entrega de texto, quais palavras ou frases
+levam negrito, sublinhado, ou os três junto com amarelo (o destaque de marca, ver
+`identidade-aplicada.md`). Não deixar essa escolha implícita pro Aplicador Visual decidir sozinho.
+
+**Regra que fica:** toda entrega de carrossel marca explicitamente, frase por frase, se leva
+destaque e qual (negrito / sublinhado / amarelo+negrito+sublinhado). Exemplo real aprovado: "gênero
+e raça pesam dentro do SUS" (amarelo + negrito + sublinhado, slide 4, 13/08/2026); "mulheres"
+isolado (amarelo + negrito + sublinhado, slide 6, mesma peça).
+
+---
+
+## Situação: entrega que esconde o que mudou do original
+
+**Quando acontece:** eu digo "mantive quase igual" ou "mantive o essencial" sem mostrar o texto
+antes e depois lado a lado.
+
+**O que aconteceu:** 13/08/2026. Reescrevi o slide 2 e disse que tinha mantido, mas troquei palavras
+("extensão do corpo" virou "natureza de mulher"). A Mallu: "isso é uma péssima entrega pra mim, um
+péssimo formato de entrega. Você tem que colocar original e depois transcrito em todos."
+
+**Regra que fica:** toda entrega de reescrita mostra ORIGINAL e REESCRITA em todo slide, mesmo nos
+que eu não mudei uma palavra. Nunca resumir a mudança em prosa; mostrar o texto.
+
+**Por quê:** sem o antes e depois, a Mallu não consegue calibrar o corte, porque não sabe se está
+reagindo ao que eu escrevi ou ao que ela lembra de ter lido.
+
+---
+
+## Situação: NR-1 e case de cliente : regras cruzadas com `voz-paaps.md`
+
+**13/08/2026, duas regras novas que nascem nesta sessão e vivem em `voz-paaps.md` seções 4.8 e
+4.9, mas que este log registra porque doeram aqui primeiro:**
+
+1. **NR-1 nunca é apresentada como instrumento que mede sofrimento.** É norma de fiscalização
+   trabalhista. Entra no máximo uma vez por peça, perto do fechamento.
+2. **Nenhum case ou cliente é nomeado em peça pública**, nem por engano de continuidade com peça
+   antiga que já nomeava. Anonimizar por porte e região. Ver 4.9 pra exceções (parceiros com logo
+   autorizado).
+
+Registrado aqui porque as duas vieram do mesmo carrossel de teste, no mesmo slide (4 e 8).
