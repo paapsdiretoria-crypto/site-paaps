@@ -1,0 +1,273 @@
+/* ==========================================================================
+   PAAPS : Pitch Deck  ·  Impulsiona Startups (Serasa Experian)
+   Identidade do site institucional, aplicada a slide 16:9.
+
+   As 8 leis do slide PAAPS valem aqui:
+   foto em todos · foto em cor · crédito nomeado · creme+amarelo com UM
+   destaque por slide · camadas de escala · o meio da foto respira ·
+   português falado · dois pontos como conectivo.
+   ========================================================================== */
+
+/* ----- 1. FONTES LOCAIS (nunca CDN) -------------------------------------- */
+
+@font-face{font-family:'League Spartan';src:url('../home/fontes/LeagueSpartan-Regular.ttf') format('truetype');font-weight:400;font-display:swap}
+@font-face{font-family:'League Spartan';src:url('../home/fontes/LeagueSpartan-Medium.ttf') format('truetype');font-weight:500;font-display:swap}
+@font-face{font-family:'League Spartan';src:url('../home/fontes/LeagueSpartan-SemiBold.ttf') format('truetype');font-weight:600;font-display:swap}
+@font-face{font-family:'League Spartan';src:url('../home/fontes/LeagueSpartan-Bold.ttf') format('truetype');font-weight:700;font-display:swap}
+@font-face{font-family:'League Spartan';src:url('../home/fontes/LeagueSpartan-ExtraBold.ttf') format('truetype');font-weight:800;font-display:swap}
+@font-face{font-family:'Nimbus Sans';src:url('../home/fontes/NimbusSanL-Reg.otf') format('opentype');font-weight:400;font-display:swap}
+@font-face{font-family:'Nimbus Sans';src:url('../home/fontes/NimbusSanL-Bol.otf') format('opentype');font-weight:700;font-display:swap}
+
+/* ----- 2. TOKENS (hierarquia calibrada 02/08/2026) ----------------------- */
+
+:root{
+  --bege:#f5f1e1;
+  --marrom:#442309;
+  --amarelo:#f7c31c;
+  --oliva:#aea349;
+  --terracota:#cb4710;
+  --branco:#fff;
+
+  --creme-90:rgba(245,241,225,.90);
+  --creme-70:rgba(245,241,225,.70);
+  --creme-45:rgba(245,241,225,.45);
+  --tinta-70:rgba(68,35,9,.70);
+  --tinta-40:rgba(68,35,9,.40);
+
+  --titulo:'League Spartan',Helvetica,Arial,sans-serif;
+  --corpo:'Nimbus Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+
+  --raio:4px;
+  --pad:clamp(38px,4.4vw,80px);
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+
+/* ----- 3. RESET ---------------------------------------------------------- */
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-snap-type:y mandatory}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;scroll-snap-type:none}
+  *,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}
+}
+body{
+  font-family:var(--corpo);font-weight:400;line-height:1.6;letter-spacing:0;
+  background:var(--marrom);color:var(--bege);
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+}
+img{max-width:100%;display:block}
+::selection{background:var(--amarelo);color:var(--marrom)}
+:focus-visible{outline:3px solid var(--amarelo);outline-offset:3px}
+
+/* ----- 4. O SLIDE : 16:9, foto sangrando, texto por cima ------------------ */
+
+.slide{
+  position:relative;
+  width:100%;
+  aspect-ratio:16/9;
+  min-height:520px;
+  overflow:hidden;
+  scroll-snap-align:start;
+  display:flex;
+  isolation:isolate;
+  background:var(--marrom);
+}
+/* grão de impressão: o PAAPS é orgânico, não digital puro */
+.slide::before{
+  content:"";position:absolute;inset:0;z-index:6;pointer-events:none;opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.slide__foto{position:absolute;inset:0;z-index:0}
+.slide__foto img{width:100%;height:100%;object-fit:cover}
+
+/* Véus. O meio da foto respira: o escurecimento é de baixo, do topo, ou de um
+   lado. Nunca uma lona cinza cobrindo o rosto de quem foi fotografado.
+   Os valores são altos de propósito: em pitch o texto é longo e precisa ser
+   lido em projetor de sala clara, onde contraste baixo simplesmente some. */
+.veu-base::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(to top,rgba(30,14,3,.97) 0%,rgba(30,14,3,.93) 30%,rgba(30,14,3,.80) 52%,rgba(30,14,3,.42) 74%,rgba(30,14,3,.10) 100%)}
+.veu-topo::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(to bottom,rgba(30,14,3,.96) 0%,rgba(30,14,3,.90) 34%,rgba(30,14,3,.55) 60%,rgba(30,14,3,.12) 100%)}
+.veu-lado::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(100deg,rgba(30,14,3,.97) 0%,rgba(30,14,3,.94) 42%,rgba(30,14,3,.66) 62%,rgba(30,14,3,.22) 84%,rgba(30,14,3,.06) 100%)}
+/* Véu denso: onde o slide carrega grade e o texto precisa de chão inteiro. */
+.veu-denso::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(180deg,rgba(30,14,3,.94) 0%,rgba(30,14,3,.92) 100%)}
+
+.slide__c{
+  position:relative;z-index:3;width:100%;
+  padding:var(--pad);
+  display:flex;flex-direction:column;
+}
+.c--base{justify-content:flex-end}
+.c--topo{justify-content:flex-start}
+.c--centro{justify-content:center}
+.c--meia{max-width:62%}
+@media(max-width:820px){.c--meia{max-width:100%}}
+
+/* ----- 5. TIPOGRAFIA DO SLIDE -------------------------------------------- */
+
+.eyebrow{
+  font-family:var(--titulo);font-weight:700;font-size:clamp(.6rem,.78vw,.78rem);
+  text-transform:uppercase;letter-spacing:.18em;color:var(--amarelo);
+  display:block;margin-bottom:1.1em;
+}
+h1,h2,h3{font-family:var(--titulo);font-weight:700;line-height:1.03;letter-spacing:-.01em;
+  text-transform:uppercase;text-wrap:balance;color:var(--bege);
+  text-shadow:0 2px 22px rgba(20,9,2,.75)}
+
+.t-hero{font-size:clamp(2rem,4.5vw,4.4rem);max-width:17ch;text-transform:none;line-height:1.06}
+.t-g{font-size:clamp(1.6rem,3.5vw,3.4rem);max-width:19ch}
+.t-m{font-size:clamp(1.3rem,2.5vw,2.4rem);max-width:22ch}
+
+/* O número é o herói do slide de dado. Amarelo, e um só por slide. */
+.numerao{
+  font-family:var(--titulo);font-weight:800;line-height:.88;letter-spacing:-.03em;
+  font-size:clamp(3.4rem,9vw,9rem);color:var(--amarelo);display:block;
+}
+.numerao--m{font-size:clamp(2.6rem,6vw,6rem)}
+
+/* Escala em camadas (Lei 5): grande, médio, pequeno. O pequeno EXPLICA. */
+.lead{
+  font-family:var(--corpo);font-size:clamp(.95rem,1.32vw,1.32rem);line-height:1.5;
+  color:var(--creme-90);max-width:52ch;margin-top:.85em;
+  text-shadow:0 1px 14px rgba(20,9,2,.8);
+}
+.miudo{
+  font-family:var(--corpo);font-size:clamp(.78rem,.95vw,.95rem);line-height:1.55;
+  color:var(--creme-70);max-width:60ch;margin-top:.8em;
+  text-shadow:0 1px 12px rgba(20,9,2,.8);
+}
+.destaque{color:var(--amarelo)}
+.sub-am{text-decoration:underline;text-decoration-color:var(--amarelo);
+  text-underline-offset:.16em;text-decoration-thickness:.07em}
+
+/* Crédito nomeado (Lei 3): sempre presente, sempre discreto, canto inferior direito. */
+.credito{
+  position:absolute;right:var(--pad);bottom:14px;z-index:5;
+  font-family:var(--titulo);font-weight:500;font-size:clamp(.54rem,.66vw,.66rem);
+  letter-spacing:.05em;color:var(--creme-45);text-align:right;max-width:40ch;
+}
+.slide__n{
+  position:absolute;left:var(--pad);bottom:14px;z-index:5;
+  font-family:var(--titulo);font-weight:700;font-size:clamp(.54rem,.66vw,.66rem);
+  letter-spacing:.14em;color:var(--creme-45);
+}
+.marca{position:absolute;top:var(--pad);right:var(--pad);z-index:5;height:clamp(15px,1.7vw,22px);opacity:.85}
+
+/* divisor tricolor: assinatura editorial da casa */
+.tricolor{display:flex;width:clamp(90px,10vw,150px);margin:1.4em 0}
+.tricolor i{flex:1;height:3px}
+.tricolor i:nth-child(1){background:var(--oliva)}
+.tricolor i:nth-child(2){background:var(--terracota)}
+.tricolor i:nth-child(3){background:var(--amarelo)}
+
+/* ----- 6. GRADES (dado, produto, ODS, time) ------------------------------ */
+/* Bordas em vez de sombra: estética de periódico impresso. */
+
+.grade{display:grid;gap:1px;background:rgba(245,241,225,.2);
+  border:1px solid rgba(245,241,225,.2);border-radius:var(--raio);overflow:hidden;margin-top:1.6em}
+.grade--3{grid-template-columns:repeat(3,1fr)}
+.grade--4{grid-template-columns:repeat(4,1fr)}
+.cel{background:rgba(37,19,5,.86);padding:clamp(16px,1.9vw,30px);backdrop-filter:blur(2px)}
+.cel__n{font-family:var(--titulo);font-weight:800;font-size:clamp(1.3rem,2.6vw,2.5rem);
+  color:var(--amarelo);line-height:1;display:block;margin-bottom:.35em}
+.cel__t{font-family:var(--titulo);font-weight:700;font-size:clamp(.8rem,1.05vw,1.05rem);
+  color:var(--bege);text-transform:uppercase;letter-spacing:.02em;margin-bottom:.5em}
+.cel__l{font-size:clamp(.74rem,.9vw,.9rem);line-height:1.5;color:var(--creme-70)}
+.cel__d{display:block;font-family:var(--titulo);font-weight:700;font-size:clamp(.56rem,.68vw,.68rem);
+  text-transform:uppercase;letter-spacing:.1em;color:var(--oliva);margin-bottom:.7em}
+
+/* sequência de produtos: a seta conta que um puxa o próximo */
+.cel--seq{position:relative}
+.cel--seq:not(:last-child)::after{
+  content:"→";position:absolute;right:-9px;top:50%;transform:translateY(-50%);z-index:4;
+  width:20px;height:20px;display:grid;place-items:center;
+  background:var(--amarelo);color:var(--marrom);border-radius:50%;
+  font-family:var(--titulo);font-weight:800;font-size:.6rem;
+}
+
+/* ODS: os 8 selos oficiais, acesos sobre o oliva da casa */
+.ods-fila{display:grid;grid-template-columns:repeat(8,1fr);gap:clamp(6px,.8vw,14px);margin-top:1.5em;max-width:760px}
+.ods-fila img{width:100%;border-radius:2px}
+.ods-lista{display:grid;grid-template-columns:repeat(2,1fr);gap:.55em 2.2em;margin-top:1.5em;max-width:96ch}
+.ods-lista li{list-style:none;font-size:clamp(.72rem,.88vw,.88rem);line-height:1.45;color:var(--creme-90);
+  padding-left:1.5em;position:relative}
+.ods-lista b{font-family:var(--titulo);font-weight:700;color:var(--amarelo);
+  position:absolute;left:0;top:0;font-size:.9em}
+
+/* prova de campo: 4 cases, cada um com sua foto */
+.casos{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(245,241,225,.2);
+  border:1px solid rgba(245,241,225,.2);border-radius:var(--raio);overflow:hidden;margin-top:1.5em}
+.caso{position:relative;min-height:clamp(140px,17vw,220px);display:flex;flex-direction:column;justify-content:flex-end;
+  background:var(--marrom);overflow:hidden}
+.caso img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.42}
+.caso::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(37,19,5,.95),rgba(37,19,5,.3))}
+.caso__v{position:relative;z-index:2;padding:clamp(13px,1.5vw,22px)}
+.caso__ond{display:block;font-family:var(--titulo);font-weight:700;font-size:clamp(.54rem,.66vw,.66rem);
+  text-transform:uppercase;letter-spacing:.1em;color:var(--amarelo);margin-bottom:.5em}
+.caso__n{font-family:var(--titulo);font-weight:800;font-size:clamp(1.2rem,2.1vw,2rem);color:var(--bege);display:block;line-height:1}
+.caso__l{font-size:clamp(.7rem,.82vw,.82rem);color:var(--creme-70);margin-top:.35em;line-height:1.4}
+
+/* a soma, isolada, com o peso que ela merece */
+.soma{display:flex;align-items:baseline;gap:clamp(14px,1.6vw,26px);flex-wrap:wrap;margin-top:1.5em;
+  padding-top:1.2em;border-top:1px solid rgba(245,241,225,.25)}
+
+/* time: sócias grandes à esquerda, porta-vozes menores à direita.
+   Duas fileiras empilhadas estouravam o 16:9, então viram uma só linha
+   de cinco colunas com peso diferente: 2 largas, 3 estreitas. */
+.time-linha{display:grid;grid-template-columns:1.15fr 1.15fr .9fr .9fr .9fr;
+  gap:clamp(12px,1.5vw,26px);margin-top:1.2em;align-items:start}
+.pes img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center 22%;
+  border-radius:var(--raio);margin-bottom:.6em}
+.pes--socia img{aspect-ratio:1}
+.pes--socia .pes__nome{font-size:clamp(.92rem,1.22vw,1.22rem)}
+.pes__nome{font-family:var(--titulo);font-weight:700;font-size:clamp(.85rem,1.1vw,1.1rem);color:var(--bege);display:block}
+.pes__cargo{font-family:var(--titulo);font-weight:700;font-size:clamp(.56rem,.68vw,.68rem);
+  text-transform:uppercase;letter-spacing:.1em;color:var(--amarelo);display:block;margin:.25em 0 .5em}
+.pes__l{font-size:clamp(.7rem,.84vw,.84rem);line-height:1.45;color:var(--creme-70)}
+
+/* ----- 7. REVELAÇÃO (uma orquestração por slide, não micro-ruído) --------- */
+
+.rev{opacity:0;transform:translateY(22px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.slide.vis .rev{opacity:1;transform:none}
+.slide.vis .rev--1{transition-delay:.1s}
+.slide.vis .rev--2{transition-delay:.2s}
+.slide.vis .rev--3{transition-delay:.32s}
+/* a foto entra em escala lenta: dá vida sem distrair */
+.slide__foto img{transform:scale(1.06);transition:transform 2.4s var(--ease)}
+.slide.vis .slide__foto img{transform:scale(1)}
+
+/* ----- 8. RESPONSIVO ----------------------------------------------------- */
+
+@media(max-width:820px){
+  .slide{aspect-ratio:auto;min-height:100svh}
+  .grade--3,.grade--4,.casos,.time-linha{grid-template-columns:1fr 1fr}
+  .ods-lista{grid-template-columns:1fr}
+  .ods-fila{grid-template-columns:repeat(4,1fr)}
+  .cel--seq:not(:last-child)::after{display:none}
+}
+
+/* ----- 9. EXPORTAÇÃO PDF (16:9 exato, uma página por slide) -------------- */
+
+@media print{
+  @page{size:338.7mm 190.5mm;margin:0}
+  html,body{background:var(--marrom)}
+  .slide{aspect-ratio:auto;width:338.7mm;height:190.5mm;min-height:0;
+    page-break-after:always;break-after:page;scroll-snap-align:none}
+  .rev{opacity:1!important;transform:none!important}
+  .slide__foto img{transform:none!important}
+  .barra{display:none!important}
+}
+
+/* ----- 10. BARRA DE NAVEGAÇÃO (só na tela, some no PDF) ------------------ */
+
+.barra{
+  position:fixed;right:18px;top:50%;transform:translateY(-50%);z-index:100;
+  display:flex;flex-direction:column;gap:7px;
+}
+.barra a{width:7px;height:7px;border-radius:50%;background:rgba(245,241,225,.3);
+  transition:background .3s var(--ease),transform .3s var(--ease);display:block}
+.barra a:hover,.barra a.on{background:var(--amarelo);transform:scale(1.5)}
+@media(max-width:820px){.barra{display:none}}

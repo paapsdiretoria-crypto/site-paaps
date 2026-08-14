@@ -2,22 +2,10 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "site-paaps-home",
+      "name": "site-paaps",
       "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "8080", "-d", "codigo/site/home"],
+      "runtimeArgs": ["-m", "http.server", "8080", "--directory", "codigo/site"],
       "port": 8080
-    },
-    {
-      "name": "site-paaps-deploy",
-      "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "8081", "-d", "codigo/site/deploy-paaps-com-br"],
-      "port": 8081
-    },
-    {
-      "name": "stories-preview",
-      "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "8090", "-d", "conteudo/instagram/paaps.brasil/stories-servicos"],
-      "port": 8090
     }
   ]
 }
