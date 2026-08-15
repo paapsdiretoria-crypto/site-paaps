@@ -14,14 +14,19 @@
 <!-- ====================================================================== -->
 <section class="slide veu-base" id="s1">
   <div class="slide__foto"><img src="../home/img/radilson/hero-estrada.jpg" alt="Estrada de terra no interior, caminho da rede pública até as casas mais remotas"></div>
+  <div class="faixa rev">
+    <p class="faixa__t">Inscrição para o <b>Impulsiona Startups</b>, eixo Inovação em Saúde, 2026&nbsp;a&nbsp;2027.</p>
+    <span class="faixa__risco"></span>
+    <!-- Enquanto o PNG oficial não estiver salvo em img/, cai no nome escrito:
+         melhor um texto correto que um ícone de imagem quebrada na capa. -->
+    <img class="faixa__logo" src="img/serasa-experian.png" alt="Serasa Experian"
+         onerror="this.outerHTML='&lt;span class=\'faixa__t\'&gt;&lt;b&gt;Serasa Experian&lt;/b&gt;&lt;/span&gt;'">
+  </div>
   <div class="slide__c c--base">
-    <img class="marca" src="../home/img/logo-claro.png" alt="PAAPS">
+    <img class="capa-logo rev" src="../home/img/logo-claro.png" alt="PAAPS">
     <h1 class="t-hero rev">Cuidamos de Funcionários Públicos para uma <span class="destaque">Saúde Mental Coletiva</span>.</h1>
     <div class="tricolor rev rev--1"><i></i><i></i><i></i></div>
-    <p class="lead rev rev--1">A Rede de Saúde Mental para as Políticas Públicas do futuro.</p>
-    <p class="miudo rev rev--2" style="margin-top:2em;font-family:var(--titulo);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.72rem;color:var(--creme-45)">
-      Impulsiona Startups · Serasa Experian · Eixo Inovação em Saúde · 2026
-    </p>
+    <p class="lead rev rev--1">A Rede de <span class="destaque">Saúde Mental</span> para as Políticas Públicas do futuro.</p>
   </div>
   <span class="slide__n">01</span>
   <span class="credito">Foto: Radilson Carlos Gomes, fotógrafo do SUS.</span>
@@ -277,7 +282,7 @@
 <!-- 13 · O MODELO DE CAPTAÇÃO HÍBRIDO                                       -->
 <!-- ====================================================================== -->
 <section class="slide veu-base" id="s13">
-  <div class="slide__foto"><img src="../home/img/paaps/equipe-3.jpg" alt="Equipe da PAAPS em atividade"></div>
+  <div class="slide__foto"><img src="../home/img/paaps/integracao-agsus.jpg" alt="Equipe da rede reunida em atividade de integração conduzida pela PAAPS"></div>
   <div class="slide__c c--base">
     <span class="eyebrow rev">Nosso modelo de captação é híbrido</span>
     <h2 class="t-g rev rev--1">Uma empresa que fatura desde 2003 no mercado privado <span class="destaque">financia a transformação da rede pública</span>.</h2>
@@ -468,31 +473,30 @@
 </section>
 
 <!-- navegação lateral, some no PDF -->
-<nav class="barra" aria-label="Navegação entre slides">
-  <a href="#s1" aria-label="Slide 1"></a><a href="#s2" aria-label="Slide 2"></a>
-  <a href="#s3" aria-label="Slide 3"></a><a href="#s4" aria-label="Slide 4"></a>
-  <a href="#s5" aria-label="Slide 5"></a><a href="#s6" aria-label="Slide 6"></a>
-  <a href="#s7" aria-label="Slide 7"></a><a href="#s8" aria-label="Slide 8"></a>
-  <a href="#s9" aria-label="Slide 9"></a><a href="#s10" aria-label="Slide 10"></a>
-  <a href="#s11" aria-label="Slide 11"></a><a href="#s12" aria-label="Slide 12"></a>
-  <a href="#s13" aria-label="Slide 13"></a><a href="#s14" aria-label="Slide 14"></a>
-  <a href="#s15" aria-label="Slide 15"></a><a href="#s16" aria-label="Slide 16"></a>
-  <a href="#s17" aria-label="Slide 17"></a><a href="#s18" aria-label="Slide 18"></a>
-  <a href="#s19" aria-label="Slide 19"></a>
-</nav>
 
 <script>
-/* Revelação por slide: uma orquestração por tela, não micro-ruído espalhado. */
-const slides = document.querySelectorAll('.slide');
-const pontos = document.querySelectorAll('.barra a');
-const io = new IntersectionObserver((entradas)=>{
-  entradas.forEach(e=>{
-    if(e.isIntersecting){
-      e.target.classList.add('vis');
-      const i = [...slides].indexOf(e.target);
-      pontos.forEach((p,j)=>p.classList.toggle('on', j===i));
-    }
+const slides = [...document.querySelectorAll('.slide')];
+
+/* Régua de navegação: uma dentro de CADA slide, com o ponto da vez aceso.
+   Fica assim porque `position:fixed` não se repete na exportação em PDF, e a
+   noção de percurso precisa sobreviver ao papel. Montada aqui em vez de escrita
+   à mão 19 vezes no HTML. */
+slides.forEach((slide, i)=>{
+  const barra = document.createElement('nav');
+  barra.className = 'barra';
+  barra.setAttribute('aria-label','Navegação do pitch');
+  slides.forEach((_, j)=>{
+    const p = document.createElement(j===i ? 'i' : 'a');
+    if(j!==i){ p.href = '#s'+(j+1); p.setAttribute('aria-label','Slide '+(j+1)); }
+    else { p.className = 'on'; p.setAttribute('aria-current','true'); }
+    barra.appendChild(p);
   });
+  slide.appendChild(barra);
+});
+
+/* Revelação por slide: uma orquestração por tela, não micro-ruído espalhado. */
+const io = new IntersectionObserver((entradas)=>{
+  entradas.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('vis'); });
 },{threshold:.35});
 slides.forEach(s=>io.observe(s));
 
