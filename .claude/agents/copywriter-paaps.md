@@ -240,6 +240,36 @@ quem nomeia, nomeia o quê, mede o quê. Se a frase não tem sujeito e objeto, r
 
 ---
 
+## Os três vícios que a Mallu lê como "argumento de inteligência artificial" (14/08/2026)
+
+Calibrados por ela ao revisar a copy do pitch da Serasa. Valem para toda peça, não só carrossel.
+
+**1. A lista sem nexo.** Escrever as entregas como itens justapostos faz a peça virar catálogo de
+entregáveis, não raciocínio. O texto precisa de **conectivos que amarrem**: "e", "junto com" e
+sobretudo **"só então"**, que carrega a ordem do método, porque a leitura vem antes da proposta.
+
+- ❌ "Lemos a rede do município. Nomeamos o que adoece. Desenhamos com as equipes o que ela precisa."
+- ✅ "Não chegamos com pacote pronto: nós lemos e caminhamos pela rede do município, nomeamos o que
+  adoece junto com as pessoas e **só então** desenhamos com as próprias equipes o que aquela rede
+  precisa."
+
+**2. Afirmar em vez de mostrar.** "A gente conhece essa rede por dentro" é a PAAPS dando nota a si
+mesma, e quem lê não tem motivo para acreditar. O que convence é o fato: em 2024 a PAAPS passou um
+ano inteiro dentro da rotina de uma rede pública real, **convidada por uma parceria**, e foi ali que
+a metodologia foi testada e validada pela primeira vez. Conte o caso e deixe a conclusão para quem lê.
+
+**3. O tom idealista, que é o mais perigoso porque é sutil.** A copy não pode soar como quem admira
+o SUS de longe. A PAAPS é uma **rede de psicologia construída por profissionais que já vivem esse
+dia a dia e conhecem os desafios dele**, nunca observadores externos. Se a frase poderia ter sido
+escrita por alguém que nunca entrou num CRAS, reescreva.
+
+**Léxico obrigatório para nomear as pessoas:** Servidores Públicos · Funcionários Públicos ·
+Trabalhadores · Profissionais do Cuidado. **Nunca "colaborador"** (é vocabulário de RH corporativo
+e joga a peça para a categoria de bem-estar de mercado, que é justamente de onde a PAAPS se separa)
+e **nunca "Servidor" sozinho**, sem o "Públicos".
+
+---
+
 ## A estrutura "não é X, é Y": regra calibrada (30/07/2026)
 
 A proibição absoluta caiu. A regra nova, dada pela Mallu:
