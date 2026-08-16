@@ -132,17 +132,17 @@ img{max-width:100%;display:block}
   text-underline-offset:.14em;text-decoration-thickness:.06em;
 }
 
-/* Variante placa: em vez de confiar só na sombra para o texto sobreviver à foto,
-   a frase pousa sobre o marrom da casa. Legibilidade garantida sobre qualquer
-   imagem, e é a mesma solução das seções escuras do site. */
-.canto--placa{
-  background:var(--marrom);
-  padding:clamp(12px,1.25vw,20px) clamp(18px,1.9vw,30px);
-  border-radius:var(--raio);
+/* Variante tinta: onde a foto já é clara naquele canto (a janela branca do slide
+   04, por exemplo), o texto não precisa de faixa nem de sombra. Vai em marrom
+   direto sobre a imagem, que é como o periódico imprime: tinta sobre papel. */
+.canto--tinta{
+  color:var(--marrom);
   text-shadow:none;
-  /* a placa acompanha a mesma régua das outras frases: corre para a esquerda
-     em vez de quebrar em três linhas dentro de uma caixa estreita */
-  left:30%;max-width:none;width:max-content;margin-left:auto;
+}
+.canto--tinta .canto__d{color:var(--marrom)}
+.canto--tinta .canto__d--sub{
+  color:var(--terracota);
+  text-decoration-color:var(--terracota);
 }
 h1,h2,h3{font-family:var(--titulo);font-weight:700;line-height:1.03;letter-spacing:-.01em;
   text-transform:uppercase;text-wrap:balance;color:var(--bege);
