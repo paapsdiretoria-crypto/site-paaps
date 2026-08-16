@@ -266,7 +266,9 @@ h1,h2,h3{font-family:var(--titulo);font-weight:700;line-height:1.03;letter-spaci
   color:var(--amarelo);line-height:1;display:block;margin-bottom:.35em}
 .cel__t{font-family:var(--titulo);font-weight:700;font-size:clamp(.8rem,1.05vw,1.05rem);
   color:var(--bege);text-transform:uppercase;letter-spacing:.02em;margin-bottom:.5em}
-.cel__l{font-size:clamp(.74rem,.9vw,.9rem);line-height:1.5;color:var(--creme-70)}
+/* A explicação sob cada dado é leitura, não legenda: tem que ser lida de longe,
+   no mesmo corpo da Helvetica do resto do deck. */
+.cel__l{font-size:clamp(.92rem,1.18vw,1.18rem);line-height:1.45;color:var(--creme-90)}
 .cel__d{display:block;font-family:var(--titulo);font-weight:700;font-size:clamp(.56rem,.68vw,.68rem);
   text-transform:uppercase;letter-spacing:.1em;color:var(--oliva);margin-bottom:.7em}
 

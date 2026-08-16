@@ -141,6 +141,30 @@ peça**. Carrossel inteiro nessa forma vira assinatura de IA, que é o que ela r
 Antes de usar, nomeie por escrito quem é a pessoa que acredita no X. Se não conseguir, não use.
 Detalhe em `insumos-compartilhados/nucleo-comum/voz-paaps.md` seção 4.1.
 
+### Como nomear as pessoas da rede
+
+**Usamos:** Servidores Públicos · Funcionários Públicos · Trabalhadores · Profissionais do
+Cuidado. **Nunca "colaborador"** (vocabulário de RH corporativo, joga a peça para a categoria
+de bem-estar de mercado) e **nunca "Servidor" sozinho**, sem o "Públicos".
+
+### Copy se escreve com conectivos, não como lista
+
+Calibrado em 14/08/2026. Três vícios que a Mallu lê como "argumento de inteligência artificial":
+
+1. **A lista sem nexo.** Entregas justapostas viram catálogo, não raciocínio. O texto precisa de
+   conectivos que amarrem, sobretudo **"só então"**, que carrega a ordem do método.
+   ✅ "Não chegamos com pacote pronto: nós lemos e caminhamos pela rede do município, nomeamos o
+   que adoece junto com as pessoas e **só então** desenhamos com as próprias equipes o que
+   aquela rede precisa."
+2. **A estrutura binária** (afirmação, negação, dois pontos, nova afirmação). Mesmo com o
+   conteúdo certo, a forma é assinatura de máquina.
+3. **Afirmar em vez de mostrar.** "A gente conhece essa rede por dentro" é a PAAPS dando nota a
+   si mesma. O que convence é o fato: um ano inteiro dentro de uma rede pública real, em 2024,
+   a convite de uma parceria local.
+
+**Risco de tom que anda junto:** a copy não pode soar idealista, como quem admira o SUS de
+longe. A PAAPS é uma rede construída por profissionais que já vivem esse dia a dia.
+
 ### Forma do slide: os 8 modelos do carrossel PAAPS
 
 `insumos-compartilhados/nucleo-comum/modelos-slide-paaps.md` é o catálogo dos 8 modelos de slide e
@@ -152,6 +176,45 @@ Duas leis que revogam regras antigas: **foto em TODOS os slides** (inclusive cap
 ao fim de cada sessão, e **modelo novo só entra com aprovação explícita da Mallu**.
 
 ---
+
+## Em que negócio a PAAPS está: o reframe que decide todo argumento
+
+> Calibrado pela Mallu em 14/08/2026, escrevendo o pitch da Serasa. É a resposta ao
+> "What business are you in?" e vale para site, pitch, proposta, edital e carrossel.
+
+**A PAAPS não está no mercado de saúde nem no de bem-estar corporativo. Está no mercado do
+cuidado.** Essa distinção não é retórica: ela muda quem é o concorrente, qual é o tamanho do
+mercado e por que a solução é Psicologia e não plataforma.
+
+**Por que o cuidado é a maior demanda deste século, e não uma pauta de RH:**
+a população mundial inteira está envelhecendo, e as pessoas morrem mais velhas do que
+morriam antes, porém não mais saudáveis: passam mais anos debilitadas antes de morrer. Isso
+soma ao cuidado com crianças, ao cuidado com a população adulta que trabalha e também
+adoece, à população em situação de rua e à pobreza que só cresce. Alguém precisa cuidar de
+tudo isso, e esse alguém é a rede pública.
+
+**O erro de leitura que o mercado inteiro comete:** quando a instituição oferece terapia para
+um problema que ela mesma produz, a falha passa a ser de quem não aguentou. **Aguentar nunca
+foi o problema.** É por isso que equipes da assistência social reagem mal a programa de
+bem-estar: elas identificam a operação, e têm razão.
+
+**O que nunca entra:** bem-estar como categoria, palestra de setembro amarelo, vocabulário de
+coach. O problema de verdade é grande, e a peça precisa carregar esse tamanho.
+
+## A capilaridade do SUS é o ativo, não o tamanho do mercado
+
+Calibrado na mesma data. O SUS é **o maior e mais capilarizado sistema público de saúde do
+mundo**: chega a 5.570 municípios, das capitais às cidades mais remotas. Nenhuma outra
+estrutura no planeta alcança tanta gente e tanto território ao mesmo tempo.
+
+Consequência para o argumento: a PAAPS não está entrando num mercado grande, está entrando na
+**maior malha de cuidado já construída**, e é essa malha que precisa se abrir aos projetos
+sociais do mundo. Isso posiciona o Brasil como país à frente na própria concepção de políticas
+públicas, e é o que sustenta a ambição de internacionalização.
+
+> **Cuidado com a palavra:** é **capilarizado**, nunca "capitalizado". O Brasil gasta acima da
+> média da OCDE em saúde, mas só 45% é público, a menor fatia pública da OCDE. Afirmar que o
+> SUS é bem capitalizado é falso e derruba a credibilidade da peça inteira.
 
 ## Regras de execução por tipo de tarefa
 
