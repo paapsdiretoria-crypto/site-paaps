@@ -81,6 +81,18 @@ img{max-width:100%;display:block}
 .slide__foto{position:absolute;inset:0;z-index:0}
 .slide__foto img{width:100%;height:100%;object-fit:cover}
 
+/* Tela dividida: duas fotos ocupando 100% do slide, 50% cada, com um fio de
+   separação no bege da casa. Usado quando as duas imagens conversam entre si. */
+.slide__foto--dupla{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:rgba(245,241,225,.22)}
+.slide__foto--dupla img{width:100%;height:100%;object-fit:cover}
+@media(max-width:820px){.slide__foto--dupla{grid-template-columns:1fr;grid-template-rows:1fr 1fr}}
+
+/* Véu moderado: preserva a foto (cor, rosto, luz) e só assenta o rodapé, onde
+   o texto mora. Para imagem bonita que não deve ser encoberta. */
+.veu-leve::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(to top,rgba(30,14,3,.90) 0%,rgba(30,14,3,.72) 20%,
+    rgba(30,14,3,.34) 42%,rgba(30,14,3,.10) 62%,transparent 82%)}
+
 /* Véus. O meio da foto respira: o escurecimento é de baixo, do topo, ou de um
    lado. Nunca uma lona cinza cobrindo o rosto de quem foi fotografado.
    Os valores são altos de propósito: em pitch o texto é longo e precisa ser
