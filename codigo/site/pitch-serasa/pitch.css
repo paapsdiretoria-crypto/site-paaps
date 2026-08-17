@@ -91,6 +91,12 @@ img{max-width:100%;display:block}
   background:linear-gradient(to bottom,rgba(30,14,3,.96) 0%,rgba(30,14,3,.90) 34%,rgba(30,14,3,.55) 60%,rgba(30,14,3,.12) 100%)}
 .veu-lado::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
   background:linear-gradient(100deg,rgba(30,14,3,.97) 0%,rgba(30,14,3,.94) 42%,rgba(30,14,3,.66) 62%,rgba(30,14,3,.22) 84%,rgba(30,14,3,.06) 100%)}
+/* Véu forte: para foto clara (sala com luz de teto, parede branca), onde o
+   gradiente padrão não segura o texto. Marrom da casa, não cinza. */
+.veu-forte::after{background:linear-gradient(to top,
+  rgba(30,14,3,.985) 0%,rgba(30,14,3,.96) 34%,rgba(30,14,3,.86) 55%,
+  rgba(30,14,3,.60) 76%,rgba(30,14,3,.34) 100%)!important}
+
 /* Véu denso: onde o slide carrega grade e o texto precisa de chão inteiro. */
 .veu-denso::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
   background:linear-gradient(180deg,rgba(30,14,3,.94) 0%,rgba(30,14,3,.92) 100%)}
@@ -140,6 +146,12 @@ img{max-width:100%;display:block}
 
 /* Palavra em marrom dentro da frase de canto (o resto segue amarelo padrão). */
 .canto__marrom{color:var(--marrom)}
+/* Palavra em branco: destaque por contraste quando o resto da frase é amarelo. */
+.canto__branco{color:var(--bege)}
+
+/* Variante "junto": aproxima as PALAVRAS (word-spacing), nunca as letras, para
+   caber mais texto na mesma linha sem mexer no desenho da tipografia. */
+.t-fluxo--junto{word-spacing:-.06em}
 
 /* Frase flutuante: solta sobre a foto, centralizada na ALTURA do slide
    inteiro (não do bloco de texto), e deslocada para a metade sem coluna de
