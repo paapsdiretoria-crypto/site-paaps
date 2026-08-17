@@ -335,19 +335,136 @@ degrau 4 mexe no seu imposto.
 
 ## 6.3 Por que a sua contadora achou 7,49%
 
-Ela fez a conta certa, e ela fez a conta **de hoje**:
+Ela fez a conta certa:
 
 ```
-Você pagou de gente: R$ 18.937   (só o seu pró-labore de 1 salário mínimo)
+Você pagou de gente: R$ 18.937   (pró-labore de 1 salário mínimo × 12 meses)
 Você faturou:        R$ 252.834,60
 
 18.937 ÷ 252.834,60 = 7,49%
 7,49% é muito menos que 28%  →  Anexo V  →  16,22% de imposto
 ```
 
-Está tudo correto. Mas **ela descreveu a empresa como ela é hoje: praticamente
-só você, sem folha.** Ela não tinha o modelo de negócio na mão, então não tinha
-como calcular o que acontece quando ele começar a rodar.
+Você confirmou: o pró-labore registrado é mesmo 1 salário mínimo. Então a conta
+dela descreve a empresa como ela é hoje, e o 16,22% é real.
+
+O que ela não podia calcular é o que acontece quando você mudar duas coisas que
+já decidiu mudar: **o seu próprio pró-labore** (6.3.2) e **a folha do primeiro
+contrato** (6.4).
+
+## 6.3.1 Pró-labore não é a mesma coisa que o dinheiro que você recebe
+
+> **Existem dois canos por onde sai dinheiro da empresa para a sócia, e só um
+> deles conta no Fator R.**
+
+| | Pró-labore | Distribuição de lucros |
+|---|---|---|
+| O que é | o "salário" da sócia pelo trabalho que ela faz | a sua parte do lucro da empresa |
+| Você paga imposto pessoal? | **sim**: INSS de 11% e Imposto de Renda | **não**: no Simples é isento |
+| Conta no Fator R? | **SIM** | **NÃO** |
+
+Quase toda contabilidade do Brasil faz a mesma coisa por padrão: deixa o
+pró-labore em 1 salário mínimo e manda o resto como lucro, **porque assim a
+sócia paga menos imposto pessoal.** É o conselho certo para uma empresa comum.
+
+**É o conselho errado para uma empresa de serviço que quer o Anexo III**, porque
+o cano isento é justamente o que não conta no Fator R.
+
+Então, quando você diz "meu pró-labore é mais que um salário mínimo", pode ser
+que você esteja se referindo ao **dinheiro que chega em você**, e a contadora
+esteja se referindo à **linha chamada pró-labore na folha**. Se for isso, vocês
+duas estão certas e estão falando de coisas diferentes.
+
+**Pergunta exata para levar à ADR Contábil, escrita para não dar margem:**
+
+> "Do total que sai da empresa para mim por mês, quanto é registrado como
+> pró-labore com recolhimento de INSS, e quanto é distribuição de lucros?
+> E qual é o meu Fator R real hoje, com os valores efetivamente lançados nos
+> últimos 12 meses, não em cenário hipotético?"
+
+## 6.3.2 Você quer R$ 5.000 na mão, e isso cai bem em cima de uma fronteira
+
+Com o faturamento atual de R$ 252.834,60, a folha que fecha os 28% é:
+
+```
+R$ 252.834,60 × 28% = R$ 70.793,69 por ano  =  R$ 5.899 por mês
+```
+
+Ou seja: **a fronteira entre o imposto caro e o imposto barato passa em
+R$ 5.899 de pró-labore por mês.** O número que você falou está a menos de
+R$ 900 dela.
+
+| Pró-labore por mês | Fator R | Anexo | Imposto da empresa |
+|---|---|---|---|
+| R$ 1.621 (1 salário mínimo, hoje) | 7,5% | V | 16,22% |
+| R$ 3.000 | 14,2% | V | 16,22% |
+| **R$ 5.000** | **23,7%** | **V** ✗ | **16,22%** |
+| **R$ 5.899** | **28,0%** | **III** ✓ | **7,50%** |
+| R$ 6.350 | 30,1% | III | 7,50% |
+| R$ 8.000 | 38,0% | III | 7,50% |
+
+**R$ 5.000 de pró-labore para você ficaria a R$ 899 de distância do Anexo III.**
+É a pior posição possível: você já paga o imposto pessoal de um pró-labore
+razoável, e a empresa continua no anexo caro.
+
+## 6.3.3 Se você quer R$ 5.000 líquido, o número resolve sozinho
+
+Depende do que "R$ 5.000 bruto na mão" quer dizer:
+
+- **Se são R$ 5.000 registrados como pró-labore:** Fator R de 23,7%, Anexo V. Falta pouco e não adianta nada.
+- **Se são R$ 5.000 chegando na sua conta, já descontado:** o pró-labore bruto precisa ser em torno de **R$ 6.350** (o INSS de 11% e o Imposto de Renda comem a diferença). E R$ 6.350 dão Fator R de **30,1%: Anexo III.** ✓
+
+> **Se o que você quer é R$ 5.000 líquido, o seu instinto já te leva para o
+> lado certo da fronteira. Só é preciso garantir que os R$ 6.350 estejam
+> registrados como pró-labore, e não divididos entre pró-labore e lucro.**
+
+Números de INSS e Imposto de Renda aqui são aproximados. Quem fecha é a
+contadora, com a sua tabela de IR e a sua situação pessoal.
+
+## 6.3.4 Quanto isso vale, em dinheiro
+
+Na 2ª faixa a diferença entre os anexos é brutal em termos relativos:
+
+```
+Anexo V,   2ª faixa:  16,22%
+Anexo III, 2ª faixa:   7,50%
+Diferença: 8,72 pontos × R$ 252.834,60 = R$ 22.047 por ano
+```
+
+Comparando as duas maneiras de te pagar aproximadamente o mesmo dinheiro:
+
+| | Pró-labore mínimo + lucro | Pró-labore de R$ 6.350 |
+|---|---|---|
+| Seu imposto pessoal | ~R$ 180/mês | ~R$ 1.330/mês |
+| Imposto da empresa | R$ 3.418/mês (16,22%) | **R$ 1.580/mês (7,50%)** |
+| **Total que sai** | **R$ 3.598/mês** | **R$ 2.910/mês** |
+
+**Economia de ~R$ 688 por mês, ou R$ 8.256 por ano.** E, de quebra, você passa
+a contribuir para o INSS sobre um valor de gente adulta, o que conta para
+aposentadoria e para comprovação de renda em financiamento.
+
+## 6.3.5 O detalhe que muda a urgência: o Fator R olha 12 meses para trás
+
+Se você subir o pró-labore para R$ 5.899 hoje, **você não vira para o Anexo III
+amanhã.** O cálculo é sobre os últimos 12 meses, e os meses velhos de salário
+mínimo continuam puxando a média para baixo.
+
+Mantendo o faturamento como está:
+
+| Pró-labore novo | Quando cruza os 28% |
+|---|---|
+| R$ 5.899 | mês 12 |
+| R$ 7.340 | mês 9 |
+| R$ 10.221 | mês 6 |
+
+> **É por isso que essa decisão é urgente e não pode esperar o pitch: cada mês
+> que passa com o pró-labore no mínimo é um mês que vai continuar pesando na
+> média quando o primeiro contrato entrar.**
+
+E uma pergunta que ainda não fiz: **a Fabiane recebe pró-labore?** Ela também é
+administradora no contrato social. Se ela receber, o pró-labore dela soma no
+mesmo numerador, e a fronteira dos R$ 5.899 pode já estar coberta pelas duas
+juntas. Vale conferir com a ADR Contábil.
 
 ## 6.4 O que acontece no dia em que entra o primeiro município
 
@@ -357,7 +474,7 @@ mesmo tempo**.
 Embaixo (faturamento): **+R$ 77.000 por mês.**
 
 Em cima (gente): entram na folha 2 psicólogos, o supervisor, o customer success,
-e o seu pró-labore sobe de 1 salário mínimo para R$ 10.000.
+e o seu pró-labore sobe para R$ 10.000.
 
 ```
 Fator R depois de 1 município rodando 12 meses:
