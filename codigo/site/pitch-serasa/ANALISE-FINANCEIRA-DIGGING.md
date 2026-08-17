@@ -1,310 +1,329 @@
-# DIGGING: o que os balanços e DREs dizem de verdade
+# O que os documentos societários e contábeis dizem
 
-> Análise de 17/08/2026, feita sobre os documentos assinados pelo contador
-> André Conceição Silva (ADR Empresa de Serviços Contábeis, CRC 214145/O-9),
-> assinados digitalmente em 13/08/2026.
-> Fonte: DRE 2022-2023, 2023-2024, 2024-2025 e Balanço Patrimonial 2024-2025.
-> **Estes são dados auditáveis. Tudo aqui é verificável por terceiro.**
-
----
-
-## Parte 1 · A série histórica
-
-| Ano | Receita bruta | Simples pago | Alíquota efetiva | Lucro líquido | Margem |
-|---|---|---|---|---|---|
-| 2022 | R$ 119.928,00 | R$ 7.761,58 | 6,47% | **(R$ 643,44)** prejuízo | -0,5% |
-| 2023 | R$ 377.019,03 | R$ 28.228,37 | 7,49% | R$ 209.137,71 | 55,5% |
-| 2024 | R$ 372.036,00 | R$ 32.686,52 | 8,79% | R$ 205.899,51 | 55,3% |
-| 2025 | R$ 290.934,99 | R$ 24.801,48 | 8,52% | R$ 105.061,96 | 36,1% |
-| ago/25 a jul/26 | R$ 252.834,60 | | | | |
-
-Três leituras saltam daí, e as três importam para o pitch.
+> Versão 2, 17/08/2026. **Substitui a versão 1, que continha um erro.**
+> Fontes: AC-08 (8ª Alteração e Consolidação do Contrato Social, 01/04/2026),
+> DREs 2022 a 2025 e Balanço Patrimonial 2024-2025, assinados pelo contador
+> André Conceição Silva (ADR, CRC 214145/O-9), e certidões de 13/08/2026.
 
 ---
 
-## Parte 2 · A descoberta que derruba a premissa: a DIGGING JÁ está no Anexo III
+## Correção da versão 1
 
-Eu vinha trabalhando com a conclusão da contadora de que a empresa está no
-Anexo V pagando 16,22%. **Os DREs mostram que isso não é o que acontece.**
+Eu escrevi que "as fundadoras já investiram R$ 100.837 do próprio lucro para
+construir a PAAPS" e transformei isso em frase de pitch. **Estava errado.**
 
-Conferindo a alíquota efetivamente paga contra as duas tabelas:
+Inferi causa a partir de coincidência de datas: vi a receita cair em 2025, li no
+deck que 2024 foi o ano de Desterro do Melo, e liguei as duas coisas. A Mallu
+confirmou que não há relação. **A afirmação está descartada e não pode ser usada.**
 
-| Ano | Receita | Faixa | Anexo III daria | Anexo V daria | **Pagou** |
-|---|---|---|---|---|---|
-| 2024 | R$ 372.036 | 3ª | **8,76%** | 16,84% | **8,79%** |
-| 2025 | R$ 290.935 | 2ª | 7,98% | 16,22% | **8,52%** |
+A queda de receita de 2025 é da operação DIGGING e tem outra explicação, que
+não é minha para dar.
 
-**O número de 2024 casa com o Anexo III na terceira casa decimal.** Não é
-aproximação: é identidade. A empresa não está no Anexo V, e não esteve.
+---
 
-### 2.1 Por que, então, a contadora falou em Anexo V?
+## Parte 1 · A separação correta: o que é DIGGING e o que é PAAPS
 
-Reler a mensagem dela com atenção:
+Este é o enquadramento que faltava, e ele reorganiza tudo:
 
-> "Então, se **a Psicologia** permanecer com Fator R de 7,49%, o cálculo será
-> pelo Anexo V, 2ª faixa..."
+| | DIGGING | PAAPS |
+|---|---|---|
+| Quem conduz | Fabiane | Mallu |
+| Mercado | empresarial privado | rede pública |
+| Faturamento histórico | **100% do que está nos DREs** | **zero** |
+| Caixa em balanço | todo dela | nenhum |
+| Existe desde | 23/10/2003 | **objeto social a partir de 01/04/2026** |
 
-Ela escreveu **"a Psicologia"**. Ela não estava descrevendo a empresa: estava
-respondendo sobre uma **atividade específica que ainda vai entrar**.
+> **Nada do que está nos DREs e no balanço é PAAPS.** Aquilo é a operação da
+> Fabiane, no mercado privado. A PAAPS nunca faturou (fora R$ 350 brutos num
+> Dia da Família, sem nota).
 
-E ela está certa, porque as duas atividades têm regras diferentes:
+Os números contábeis servem para exatamente três coisas, e nenhuma delas é
+mostrar tração da PAAPS:
+
+1. **Determinar quanto de imposto a PAAPS vai pagar** dentro deste CNPJ (Parte 3)
+2. **Provar que existe um CNPJ ativo, limpo e habilitado** para assinar contrato público amanhã (Parte 4)
+3. **Sustentar o argumento da captação híbrida**, que é a DIGGING bancando o ciclo longo da venda pública (Parte 5)
+
+---
+
+## Parte 2 · O AC-08 é a certidão de nascimento comercial da PAAPS
+
+O contrato social foi alterado e consolidado em **01/04/2026**, e é essa
+alteração que coloca no objeto social:
+
+| Alínea | O que entrou |
+|---|---|
+| **g** | Prestação de serviços especializados em **Psicologia e Psicologia Social**: atenção psicossocial em rede, cuidado institucional e coletivo, condução de grupos, supervisão técnica, diagnóstico psicossocial |
+| **h** | Desenvolvimento e operação do **PAAPS**, como programa estruturante, metodologia própria e tecnologia social aplicada |
+| **j** | Atendimento psicológico individual ou coletivo em contratos institucionais, **incluindo grupos terapêuticos** |
+| **r** | **Licenciamento de direitos de uso** de metodologias proprietárias para entes públicos |
+| **s** | Atuação como **GovTech**, incluindo contratos por desempenho e por unidade de serviço |
+
+E a Cláusula Terceira inteira, "DA ATUAÇÃO GOVTECH E DA INOVAÇÃO PÚBLICA",
+é nova.
+
+### 2.1 Isso resolve o problema de "não temos contrato"
+
+> **A PAAPS tem 4 meses e meio de existência como negócio.**
+> O direito de vender serviço de Psicologia entrou no objeto social em
+> 01/04/2026. Antes disso, a empresa não podia contratar isso com prefeitura.
+
+Uma empresa que adquiriu há quatro meses e meio a capacidade jurídica de vender
+o seu produto **não tem contrato porque é cedo, não porque falhou.** Isso é uma
+linha do tempo, não um sinal de alerta, e é infinitamente mais forte do que
+qualquer coisa que eu tinha escrito antes.
+
+A frase, com o documento atrás:
+
+> "O direito de a empresa prestar serviço de Psicologia e operar o PAAPS entrou
+> no contrato social em 1º de abril de 2026, registrado na JUCESP. Comercialmente,
+> a PAAPS tem quatro meses. O método tem quatro territórios e mais de mil pessoas."
+
+---
+
+## Parte 3 · Quanto de imposto a PAAPS paga dentro deste CNPJ
+
+Esta é a pergunta útil, e agora dá para responder com precisão.
+
+### 3.1 Duas atividades, dois regimes, um CNPJ
 
 | Atividade | Enquadramento | Depende do Fator R? |
 |---|---|---|
-| **Treinamento** (CNAE 85.99-6-04, o da DIGGING) | Anexo III direto | **não** |
-| **Psicologia** (profissão regulamentada, a da PAAPS) | Anexo V | **sim**: vai para o III só se o Fator R ≥ 28% |
+| **Treinamento e capacitação** (alíneas a, e) | Anexo III direto | **não** |
+| **Psicologia** (alíneas g, j) | Anexo V | **sim**: vai ao III se o Fator R ≥ 28% |
 
-Um mesmo CNPJ pode ter atividades em anexos diferentes ao mesmo tempo. Cada
-receita é separada e tributada pelo seu anexo; a **faixa** é que vem do
-faturamento total.
+Comprovação de que a DIGGING está no Anexo III, tirada dos DREs:
 
-> **Confirmar com a ADR:** "O nosso CNAE de treinamento é Anexo III por
-> enquadramento direto, sem depender do Fator R? E a receita de psicologia
-> seria segregada e tributada pelo Anexo V enquanto o Fator R estiver abaixo
-> de 28%?"
+| Ano | Receita | Anexo III daria | Anexo V daria | **Pagou** |
+|---|---|---|---|---|
+| 2024 | R$ 372.036 | **8,76%** | 16,84% | **8,79%** |
+| 2025 | R$ 290.935 | 7,98% | 16,22% | **8,52%** |
 
-### 2.2 E isso torna o Fator R MAIS importante, não menos
+O de 2024 casa na terceira decimal. Por isso a resposta da contadora começava
+com **"se a Psicologia..."**: ela estava falando da atividade nova, não da
+empresa. Ela estava certa.
 
-Porque **100% da receita futura da PAAPS depende dele.**
+### 3.2 O que isso significa em dinheiro, no primeiro contrato
 
-Num município (R$ 924.000 por ano de receita PAAPS, RBT12 total de ~R$ 1,18 mi,
-4ª faixa):
+Um município: R$ 77.000/mês, R$ 924.000/ano. Somado à DIGGING, RBT12 de
+~R$ 1.177.000, que é a 4ª faixa.
 
-| | Alíquota | Imposto sobre a receita PAAPS |
+| | Alíquota sobre a receita PAAPS | Imposto/ano |
 |---|---|---|
-| Fator R abaixo de 28% (Anexo V) | 19,05% | R$ 176.022/ano |
-| Fator R acima de 28% (Anexo III) | 12,97% | R$ 119.843/ano |
-| **Diferença** | **6,08 pontos** | **R$ 56.179/ano · R$ 4.682/mês** |
+| Fator R < 28% (Anexo V) | 19,05% | R$ 176.022 |
+| Fator R ≥ 28% (Anexo III) | 12,97% | R$ 119.843 |
+| **Diferença** | **6,08 pontos** | **R$ 56.179/ano** |
 
-**A boa notícia:** com a folha do primeiro contrato (2 psicólogos + supervisor +
-customer success + pró-labore), o Fator R vai para 41,4% e o problema se resolve
-sozinho. O único cuidado é a janela de 3 a 4 meses do começo, porque o cálculo
-olha 12 meses para trás.
+**E ele se resolve sozinho:** com a folha do primeiro contrato (2 psicólogos +
+supervisor + customer success + pró-labore), o Fator R vai a ~41%. O único
+cuidado é a janela de 3 a 4 meses do começo, porque o cálculo olha 12 meses
+para trás. Daí a recomendação de subir o pró-labore desde já.
 
-### 2.3 O que fazer, e a conta honesta de se vale a pena
+### 3.3 Uma alavanca que o contrato social abre e o modelo não usa
 
-O Patrimônio Líquido é **idêntico** em 2024 e 2025 (R$ 56.074,97 nos dois anos),
-o que significa que **todo o lucro foi distribuído às sócias.** R$ 105.061,96
-saíram da empresa em 2025 como lucro isento.
+O objeto social separa **treinamento** (Anexo III direto) de **psicologia**
+(Anexo V sem Fator R). Isso significa que **a composição do contrato com a
+prefeitura afeta a alíquota.**
 
-Ou seja: já sai dinheiro suficiente da empresa. **É só mudar o rótulo de uma
-parte dele.** Se as duas passarem a receber R$ 2.500 cada de pró-labore
-(R$ 60.000 por ano a mais):
+Um contrato que combine grupos (psicologia) com capacitação de equipes
+(treinamento) tem parte da receita no anexo barato por enquadramento direto,
+sem depender do Fator R. **Isso é conversa técnica com a ADR antes de redigir o
+primeiro contrato, não algo para decidir sozinha, e não vai para o pitch.**
+Mas é dinheiro real e o momento de pensar nisso é antes da primeira proposta,
+não depois.
 
-```
-FS12 = 18.216 + 60.000 = R$ 78.216
-78.216 ÷ 252.834,60 = 30,9%    →  acima dos 28%   ✓
-```
+### 3.4 A DIGGING custa pouco imposto à PAAPS. O problema é o teto
 
-**Mas antecipar isso custa e não rende nada até o primeiro contrato:**
+Eu tinha sugerido que dividir o CNPJ resolveria imposto. Refiz a conta e **não
+resolve:**
 
-| | Valor |
-|---|---|
-| Custo de antecipar 6 meses (INSS + IR pessoal das duas) | ~R$ 4.500 |
-| Custo de NÃO antecipar: 3 a 4 meses de Anexo V sobre a receita PAAPS | R$ 14.000 a R$ 18.700 |
-
-**Compensa antecipar, desde que um contrato seja plausível em 6 a 12 meses.**
-Como hoje o pipeline é zero, essa é uma aposta, não uma certeza. Minha
-recomendação: **subir agora, mas moderadamente** (R$ 2.500 cada, não R$ 6.350
-cada), porque o custo é baixo, o relógio dos 12 meses já começa a correr, e se
-o contrato demorar você perdeu pouco.
-
----
-
-## Parte 3 · A receita está caindo há três períodos, e o investidor vai ver
-
-```
-2023: R$ 377.019    
-2024: R$ 372.036    −1,3%
-2025: R$ 290.935    −21,8%
-ago/25 a jul/26: R$ 252.835    −13,1%
-
-Queda acumulada desde o pico: −33%
-```
-
-**Isso é a primeira coisa que qualquer diligência da Serasa vai encontrar**, e
-é melhor você chegar com a resposta pronta do que ser perguntada.
-
-### 3.1 A hipótese que os números sustentam
-
-O deck diz: *"Em 2024 passamos um ano inteiro dentro da rotina de uma rede
-pública do SUS, em Desterro do Melo."*
-
-Um ano dentro de um município do interior é um ano sem prospectar cliente
-corporativo. E receita de consultoria cai com defasagem: quem parou de vender
-em 2024 sente em 2025. **A linha do tempo bate exatamente.**
-
-Se for isso, o número tem um nome muito melhor do que "queda de receita":
-
-| | Valor |
-|---|---|
-| Lucro de 2024 | R$ 205.899,51 |
-| Lucro de 2025 | R$ 105.061,96 |
-| **Lucro que as sócias abriram mão em 2025** | **R$ 100.837,55** |
-
-> **As fundadoras já investiram R$ 100.837 do próprio lucro para construir a
-> PAAPS. Está no DRE, assinado por contador, auditável.**
-
-Isso é a resposta mais forte possível para o problema de não haver contrato
-assinado. Não é discurso: é dinheiro que saiu do bolso delas, com documento.
-
-**Preciso que você confirme se é essa a causa.** Se a queda tiver outra
-explicação (perda de um cliente grande, mudança de mercado), o argumento muda e
-não pode ser usado assim.
-
-### 3.2 Como isso entra no pitch
-
-Um investidor bom não tem medo de queda de receita: tem medo de queda de receita
-**inexplicada**. Dita assim, ela vira ativo:
-
-> "Nossa receita corporativa caiu 22% em 2025. Não foi acidente: foi o ano em
-> que passamos dentro de uma rede pública real, em Desterro do Melo, validando
-> o método. Abrimos mão de R$ 100 mil de lucro para fazer isso, e está no DRE.
-> Agora precisamos que essa validação vire contrato."
-
----
-
-## Parte 4 · A estrutura fixa real, e por que a sua estimativa estava errada
-
-Você estimou R$ 14.500 por mês. O total real de 2025 foi **R$ 13.422 por mês**.
-Coincidentemente perto. **Mas a composição não tem nada a ver.**
-
-| Item | 2025 (ano) | Por mês | % |
+| | PAAPS sozinha | Junto com a DIGGING | Custo |
 |---|---|---|---|
-| **Assistência médica** | 118.690,79 | **9.891** | **74%** |
-| Pró-labore | 18.216,00 | 1.518 | 11% |
-| Cursos e treinamentos | 8.927,94 | 744 | 6% |
-| Honorários contábeis | 7.215,20 | 601 | 4% |
-| Serviços de terceiros PJ | 2.215,28 | **185** | 1% |
-| Pedágios | 1.970,01 | 164 | 1% |
-| Telefone | 840,71 | 70 | |
-| Energia elétrica | 602,46 | 50 | |
-| Financeiras e tributárias | 2.393,16 | 199 | 1% |
-| **TOTAL** | **161.071,55** | **13.422** | |
+| 1 município | 12,14% | 12,97% | R$ 7.669/ano |
+| 3 municípios | 16,47% | 16,85% | R$ 10.500/ano |
 
-### 4.1 Três correções
+**Menos de R$ 11 mil por ano.** Não é motivo para separar nada.
 
-**1. A assistência médica é 74% da despesa da empresa.** R$ 9.891 por mês, sem
-nenhum empregado. Isso não é estrutura: **é remuneração das sócias em outra
-forma.** Pela lógica das quatro camadas, pertence à camada 4 (resultado), não
-à camada 3 (estrutura).
-
-**2. Não existe equipe central hoje.** Você falou em R$ 5.000 de equipe e
-R$ 5.000 de PJ/freelancers. O DRE mostra **R$ 185 por mês** em serviços de
-terceiros. Esses R$ 10.000 são **planejados, não atuais**, e precisam entrar na
-conta como custo futuro, não como despesa que já existe.
-
-**3. Contabilidade custa R$ 601 por mês, não R$ 4.500.** E 2025 foi ano caro
-(a alteração contratual AC-08 e os balanços). A média de 2023 e 2024 é ~R$ 280
-por mês.
-
-### 4.2 A estrutura real, arrumada nas quatro camadas
-
-| Camada | Item | Por mês |
-|---|---|---|
-| **3 · Estrutura da empresa** | contabilidade, telefone, energia, pedágio, PJ, bancárias | **R$ 1.269** |
-| | cursos e treinamentos (discricionário) | R$ 744 |
-| | **subtotal** | **R$ 2.013** |
-| **4 · Remuneração das sócias** | assistência médica | R$ 9.891 |
-| | pró-labore | R$ 1.518 |
-| | **subtotal** | **R$ 11.409** |
-
-> **A estrutura fixa real da empresa é de cerca de R$ 2.000 por mês. Todo o
-> resto é remuneração das duas sócias.**
-
-Isso é muito melhor do que os R$ 14.500 que a gente vinha usando, e é auditável.
-
-### 4.3 O que isso faz com o ponto de equilíbrio
-
-| Cenário | Estrutura/mês | Equilíbrio |
-|---|---|---|
-| **Hoje, real** | R$ 2.013 | **0,04 município** |
-| Com equipe central e PJ contratados (o plano) | R$ 12.013 | **0,26 município** |
-| Incluindo a remuneração das sócias | R$ 23.422 | **0,51 município** |
-
-Escolha honesta para o pitch: **a do meio.** É o cenário do plano, não subestima
-o que ainda vai ser contratado, e mesmo assim diz:
-
-> **Um quarto de um contrato paga a estrutura da empresa.**
+O que continua valendo é o **teto de R$ 4,8 milhões**, que é compartilhado, e
+o **argumento do investidor** (Parte 6). O motivo de separar não é fiscal.
 
 ---
 
-## Parte 5 · O balanço: limpo, e apertado
+## Parte 4 · O que os números contábeis provam de fato
 
-| | 2024 | 2025 |
-|---|---|---|
-| Caixa e equivalentes | R$ 21.057,14 | **R$ 46.272,13** |
-| Clientes a receber | R$ 37.800,00 | R$ 12.086,90 |
-| Ativo total | R$ 61.465,51 | R$ 60.967,40 |
-| Passivo circulante | R$ 5.390,54 | **R$ 4.892,43** |
-| Patrimônio líquido | R$ 56.074,97 | R$ 56.074,97 |
-| Capital social | R$ 95.400,00 | R$ 95.400,00 |
-| Prejuízos acumulados | (R$ 39.325,03) | (R$ 39.325,03) |
+Não provam tração da PAAPS. Provam habilitação, e isso vale muito num edital:
 
-### 5.1 O que está bom
+| | 2025 |
+|---|---|
+| Caixa | R$ 46.272,13 |
+| Passivo circulante | **R$ 4.892,43** |
+| Patrimônio líquido | R$ 56.074,97 |
+| Capital social integralizado | R$ 95.400,00 |
 
-**Praticamente não há dívida.** Passivo circulante de R$ 4.892, quase todo
-imposto e fornecedor correntes. Balanço limpo, sem empréstimo, sem parcelamento
-de tributo. Isso é raro e é bom: numa diligência, passivo oculto é o que mais
-mata negócio.
+**Praticamente nenhuma dívida.** Sem empréstimo, sem parcelamento de tributo.
+Somado às certidões de 13/08/2026 (CND trabalhista negativa, FGTS regular,
+CGU/CEIS/CNEP/CEPIM negativa), o quadro é:
 
-E as certidões que você mandou confirmam: **CND trabalhista negativa, FGTS
-regular, CGU/CEIS/CNEP/CEPIM negativa.** A empresa está habilitada.
+> **CNPJ ativo há 23 anos, sem dívida, com todas as certidões limpas.
+> Está habilitado a assinar contrato público hoje.**
 
-### 5.2 O que aperta, e é a restrição operacional de verdade
+Numa diligência, passivo oculto é o que mais mata negócio. Não há nenhum.
 
-**Caixa de R$ 46.272.** A equipe de um município custa R$ 21.333 por mês.
+### 4.1 A restrição operacional que os números impõem
+
+Caixa de R$ 46.272. A equipe de um município custa R$ 21.333/mês.
 
 ```
 R$ 46.272 ÷ R$ 21.333 = 2,2 meses
 ```
 
-> **A empresa não tem caixa para contratar a equipe antes de o contrato existir.**
+> **Não há caixa para contratar a equipe antes de o contrato existir.**
 
-Não é um defeito: é o normal em serviço B2G. Mas define uma regra operacional
-dura e uma necessidade concreta:
+Não é defeito, é o normal em B2G. Mas define uma regra dura e um pedido
+concreto e legítimo para a aceleração:
 
-- **A equipe é contratada depois da assinatura, nunca antes.** O ramp-up precisa ser rápido, e é aí que a comunidade de 120 profissionais vale ouro: o recrutamento já está pronto.
-- **Capital de giro para o primeiro contrato é uma necessidade real**, porque prefeitura costuma pagar com 30 a 60 dias e a folha vence no dia 5. Isso é um pedido legítimo e específico para levar à aceleração, muito melhor que "precisamos de investimento".
-
-### 5.3 Uma coisa a esclarecer com o contador
-
-Os prejuízos acumulados são **exatamente iguais** em 2024 e 2025 (R$ 39.325,03),
-e o Patrimônio Líquido também (R$ 56.074,97), apesar de 2025 ter dado lucro de
-R$ 105.061,96.
-
-A leitura provável: o lucro foi integralmente distribuído às sócias, sem
-absorver o prejuízo acumulado antigo. Vale perguntar se está correto, porque
-**prejuízo acumulado no balanço é uma linha que um investidor lê**, e a resposta
-"é de anos antigos e já foi superado" precisa estar pronta e correta.
+- **Contrata depois da assinatura, nunca antes.** E é aqui que a comunidade de 120 profissionais vale ouro: o recrutamento já está pronto.
+- **Capital de giro para o primeiro contrato**, porque prefeitura paga em 30 a 60 dias e a folha vence no dia 5. Isso é um pedido específico e muito melhor que "precisamos de investimento".
 
 ---
 
-## Parte 6 · O que muda no pitch
+## Parte 5 · A captação híbrida, agora com base documental
 
-### 6.1 Três frases novas que agora têm documento atrás
+A Mallu descreveu assim: a DIGGING sustenta a PAAPS enquanto a PAAPS não se
+sustenta, e o objetivo é que a PAAPS fique sustentável sozinha.
 
-1. > "A empresa está ativa desde 2003 e faturou R$ 377 mil, R$ 372 mil e R$ 291 mil nos últimos três exercícios, com margem líquida acima de 55% em 2023 e 2024."
+Isso é o slide 12, e agora tem documento atrás. Mas a frase precisa ser precisa,
+porque a versão imprecisa vira problema na diligência:
 
-2. > "As fundadoras já investiram R$ 100.837 do próprio lucro para construir a PAAPS. Está no DRE de 2025, assinado por contador."
+> **Errado:** "a DIGGING fatura há 20 anos no mercado de bem-estar corporativo de US$ 1,53 bilhão"
+>
+> **Certo:** "PAAPS e DIGGING operam sob o mesmo CNPJ, ativo desde 2003. A DIGGING atende o mercado privado e é ela que banca a operação enquanto o ciclo de venda pública, de 4 a 8 meses, não fecha. A PAAPS ainda não faturou: entrou no objeto social em abril de 2026."
 
-3. > "Balanço sem dívida, certidões negativas, empresa habilitada para licitar hoje."
-
-O slide 12 atual diz que a DIGGING "fatura há mais de 20 anos". **Hoje essa
-frase está no deck sem número atrás. Agora ela tem três anos auditados.**
-
-### 6.2 Uma coisa que o deck precisa parar de dizer
-
-O slide 12 fala em "mercado de bem-estar corporativo de US$ 1,53 bilhão no
-Brasil". Com R$ 291 mil de faturamento, citar um mercado de bilhão como se
-fosse o seu terreno soa desproporcional. **O número que sustenta o argumento
-não é o tamanho do mercado: é a margem de 55% e os 23 anos de CNPJ ativo.**
+Sobre o slide 12 atual: com R$ 291 mil de faturamento, citar um mercado de
+US$ 1,53 bilhão como se fosse o seu terreno soa desproporcional e convida a
+comparação errada. **O que sustenta o argumento não é o tamanho do mercado da
+DIGGING: é o CNPJ de 23 anos, limpo e habilitado.**
 
 ---
 
-## Parte 7 · O que eu preciso de você
+## Parte 6 · Três coisas no contrato social que ninguém tinha visto
 
-1. **A queda de receita de 2025 é por causa do ano em Desterro do Melo?** Se for outra coisa, o argumento do "as fundadoras já investiram R$ 100 mil" não pode ser usado assim.
-2. **A assistência médica de R$ 118.690 por ano cobre quem?** Só as sócias, ou mais gente? Muda se ela é remuneração ou estrutura.
-3. **Confirmar com a ADR** as duas perguntas da Parte 2.1 e da Parte 5.3.
-4. **Quanto dos R$ 252.834 dos últimos 12 meses é PAAPS e quanto é DIGGING?** Se houver receita PAAPS aí dentro, a frase "a PAAPS nunca teve contrato" precisa de ajuste fino.
+### 6.1 A propriedade intelectual está blindada, e isso é argumento de investidor
+
+Cláusula Terceira, §2º: o PAAPS é declarado **ativo intangível pré-existente,
+de titularidade exclusiva da sociedade, insuscetível de alienação total em
+processos licitatórios**, podendo ser objeto apenas de licenciamento ou cessão
+de direito de uso. E §3º: manuais, códigos-fonte base e fluxos de processos
+protegidos como segredo industrial.
+
+Para um investidor isso responde a pergunta que ele sempre faz: **vender para
+o governo transfere o ativo?** Não. O valor fica na empresa a cada município,
+em vez de se dissolver em cada contrato. É o que faz o negócio acumular valor.
+
+E há a contrapartida a monitorar, que a Mallu já tinha mapeado: **edital que
+exija cessão total de direitos conflita com o contrato social e precisa ser
+sinalizado antes de submeter.**
+
+### 6.2 Existe um modelo de receita autorizado que o plano de negócio não usa
+
+Alínea **r**: *"Licenciamento de direitos de uso de metodologias proprietárias
+e tecnologias sociais para entes públicos, mantendo-se a titularidade da
+propriedade intelectual na empresa para garantir a escalabilidade e replicação
+do modelo em outros territórios."*
+
+**Licenciamento tem economia completamente diferente de vender grupo:** custo
+marginal perto de zero, sem equipe local, sem deslocamento. É o que faz um
+negócio de serviço parecer um negócio de tecnologia aos olhos de um investidor.
+
+O contrato social já autoriza. **O modelo de negócio que a gente construiu não
+menciona.** Isso não é para vender agora, mas é a resposta exata para a pergunta
+"como isso escala para mil municípios sem contratar dez mil psicólogos?".
+
+### 6.3 O compromisso de negócio social está no documento constitutivo
+
+Cláusula Sétima, Parágrafo Único: *"A empresa efetuará suas operações
+priorizando o impacto social, sendo que a distribuição de excedentes... pode ser
+limitada em favor do reinvestimento em Pesquisa, Desenvolvimento e Inovação."*
+
+Para uma aceleradora de impacto, isso vale mais do que qualquer manifesto:
+**está no contrato social registrado na JUCESP, não numa página do site.**
+
+---
+
+## Parte 7 · Duas questões societárias para resolver antes de chegar ao investidor
+
+Estas não vão para o pitch. Vão para a sua lista de coisas a checar com
+advogado, porque são o tipo de coisa que aparece na pior hora.
+
+### 7.1 A composição societária
+
+| Sócia | Quotas | % |
+|---|---|---|
+| Fabiane Quarez de Vasconcellos | 84.906 | **89%** |
+| Maria Luiza Vasconcellos Barbosa | 9.540 | **10%** |
+| Luiz Sergio Barbosa | 954 | 1% |
+
+**A fundadora e CEO da PAAPS detém 10% da empresa.** Para uma empresa familiar
+de 23 anos isso é absolutamente normal. Para um investidor avaliando uma
+startup liderada por fundadora, é uma pergunta certa, e ela vem em duas formas:
+
+- se entrar capital, de quem dilui?
+- a fundadora que opera tem participação suficiente para justificar os próximos dez anos de trabalho?
+
+Não estou dizendo que está errado. Estou dizendo que **você vai ser perguntada,
+e é melhor ter a resposta combinada com a Fabiane antes** do que improvisar na
+frente de alguém.
+
+Do lado bom, e isso é real: **99% do capital é feminino**, o que é critério
+pontuado em muitos editais e programas.
+
+### 7.2 A cláusula que pode travar um investimento
+
+Cláusula Quarta, Parágrafo 2º: *"as cotas sociais, inclusive com os aumentos de
+capital, seus frutos, rendimentos... ficam gravados com a cláusula de
+inalienabilidade, incomunicabilidade e impenhorabilidade."*
+
+E a Cláusula Nona dá direito de preferência aos demais sócios em qualquer cessão.
+
+**Quotas gravadas com inalienabilidade não podem ser transferidas.** Se o
+Impulsiona (ou qualquer investidor futuro) envolver participação societária,
+essa cláusula precisa ser tratada antes.
+
+Provavelmente há saída: emitir **quotas novas** por aumento de capital é
+diferente de alienar quotas existentes, e o texto pode não alcançar isso. **Mas
+essa é uma leitura que precisa de advogado, não minha.** É uma pergunta de dez
+minutos hoje e um problema de semanas se aparecer na assinatura.
+
+> **Pergunta para o advogado:** "A cláusula de inalienabilidade das quotas
+> (Cláusula Quarta, §2º do AC-08) impede a entrada de um investidor por aumento
+> de capital com emissão de quotas novas? E o direito de preferência da Cláusula
+> Nona se aplica nesse caso?"
+
+---
+
+## Parte 8 · O que muda no pitch
+
+**Entra:**
+
+1. > "O direito de operar Psicologia e o PAAPS entrou no contrato social em 1º de abril de 2026. Comercialmente, a PAAPS tem quatro meses."
+2. > "CNPJ ativo há 23 anos, sem dívida, todas as certidões negativas. Habilitado a assinar contrato público hoje."
+3. > "O PAAPS é ativo intangível de titularidade exclusiva da empresa, insuscetível de alienação em licitação. Vender para o governo não transfere o método."
+4. > "O compromisso com impacto social e reinvestimento em P,D&I está no contrato social registrado na JUCESP."
+
+**Sai:**
+
+- Qualquer número da DIGGING apresentado como tração da PAAPS
+- O mercado de US$ 1,53 bilhão do slide 12
+- A afirmação sobre R$ 100.837 investidos, que era minha inferência errada
+
+**Fica pendente de decisão:** o licenciamento (6.2) como resposta à pergunta de
+escala. É forte, e não sei se você quer abrir isso agora.
+
+---
+
+## O que eu preciso de você
+
+1. **A assistência médica de R$ 118.690/ano cobre quem?** É a maior despesa da empresa e muda se é estrutura ou remuneração.
+2. **Levar ao advogado** a pergunta da Parte 7.2. É a mais urgente das duas, porque é barata agora e cara depois.
+3. **Combinar com a Fabiane** a resposta da Parte 7.1, antes de alguém perguntar.
+4. **Decidir sobre o licenciamento (6.2):** entra no pitch ou fica guardado?
