@@ -136,6 +136,14 @@ img{max-width:100%;display:block}
 .canto--longa{left:6%;font-size:clamp(1rem,1.7vw,1.7rem)}
 @media(max-width:820px){.canto--longa{left:auto}}
 
+/* Duas linhas é o TETO da frase de canto: nunca três. Recua à esquerda e usa
+   largura controlada para quebrar em duas linhas equilibradas. */
+.canto--duas{
+  left:auto;width:min(52%,620px);margin-left:auto;
+  font-size:clamp(.98rem,1.5vw,1.5rem);line-height:1.16;
+}
+@media(max-width:820px){.canto--duas{width:auto;margin-left:0}}
+
 /* Palavra destacada dentro da frase de canto. */
 .canto__d{color:var(--branco)}
 .canto__d--sub{
