@@ -461,10 +461,129 @@ Mantendo o faturamento como está:
 > que passa com o pró-labore no mínimo é um mês que vai continuar pesando na
 > média quando o primeiro contrato entrar.**
 
-E uma pergunta que ainda não fiz: **a Fabiane recebe pró-labore?** Ela também é
-administradora no contrato social. Se ela receber, o pró-labore dela soma no
-mesmo numerador, e a fronteira dos R$ 5.899 pode já estar coberta pelas duas
-juntas. Vale conferir com a ADR Contábil.
+## 6.3.6 A Fabiane é a alavanca mais barata que sobrou
+
+Confirmado: **a Fabiane não recebe pró-labore.** Ela é administradora no contrato
+social, governa a operação DIGGING dentro do mesmo CNPJ, trabalha de fato, e
+recebe só distribuição de lucros, que não conta no Fator R.
+
+Isso é uma alavanca parada. Se as duas passarem a receber R$ 6.350 de pró-labore:
+
+```
+2 × R$ 6.350 × 12 = R$ 152.400 de folha
+152.400 ÷ 252.834,60 = 60,3%     →  ANEXO III, com folga enorme
+```
+
+**Dividir entre duas pessoas é melhor que concentrar numa só**, por dois motivos:
+
+1. **Imposto de renda é progressivo.** Duas pessoas recebendo R$ 6.350 pagam menos IR, somadas, do que uma pessoa recebendo R$ 12.700, porque cada uma fica numa faixa mais baixa.
+2. **O INSS tem teto.** Acima do teto, contribuir mais não gera Fator R proporcional nem benefício previdenciário. Duas contribuições abaixo do teto aproveitam melhor.
+
+E tem um ponto que é para levar à contadora como pergunta, não como afirmação:
+**administradora que trabalha de fato na empresa e recebe apenas lucro, sem
+pró-labore, é um ponto de atenção conhecido da Receita Federal.** Não estou
+dizendo que há irregularidade: estou dizendo que vale perguntar, porque a
+resposta pode ser que regularizar isso **melhore o Fator R de graça**.
+
+**Pergunta para a ADR Contábil:**
+
+> "A Fabiane é administradora e atua na operação. Hoje ela recebe só
+> distribuição de lucros. Há risco em não haver pró-labore para ela? E se
+> passarmos as duas para R$ 6.350 de pró-labore, qual fica o nosso Fator R?"
+
+## 6.3.7 E isso resolve o problema do terceiro município
+
+Lembra que no degrau 7 o Fator R cai para 27,5% no terceiro município e você
+perde o Anexo III por meio ponto? **O pró-labore da Fabiane resolve isso
+sozinho.**
+
+| No 3º município | Fator R | Anexo |
+|---|---|---|
+| Só você, pró-labore R$ 10.000 | 27,5% | V ✗ |
+| **Vocês duas, R$ 6.350 cada** | **28,6%** | **III** ✓ |
+
+Uma decisão que não custa dinheiro novo (é dinheiro que já sai da empresa, só
+com outro rótulo) evita uma queda de anexo que custaria **R$ 124 mil por ano**.
+
+---
+
+# DEGRAU 6B · Um CNPJ, duas empresas
+
+Este degrau não existia até você me contar. Ele muda coisas.
+
+## 6B.1 O que é o arranjo hoje
+
+Você governa a PAAPS e a Fabiane governa a DIGGING, **dentro do mesmo CNPJ**.
+Uma opera para a rede pública, a outra para o campo empresarial. Fazem coisas
+parecidas para clientes diferentes.
+
+Para efeito de imposto, **isso é uma empresa só.** Consequências:
+
+- Os **R$ 252.834,60 de faturamento são das duas somadas.** Não é "a base da PAAPS": é PAAPS mais DIGGING.
+- O **Fator R é um só** para as duas.
+- A **faixa do Simples é uma só**: quando a DIGGING fatura, ela empurra a PAAPS para uma faixa mais cara, e vice-versa.
+- O **teto de R$ 4,8 milhões é um só.**
+
+## 6B.2 A tensão que ninguém nomeou
+
+> **O crescimento da DIGGING come o espaço da PAAPS dentro do Simples, e o
+> crescimento da PAAPS come o espaço da DIGGING.**
+
+Enquanto as duas são pequenas isso não aparece. A partir do terceiro município,
+cada real que a DIGGING fatura a mais empurra as duas para uma alíquota maior.
+É uma conversa que você e a Fabiane vão ter que ter, e é melhor tê-la antes de
+o problema chegar.
+
+## 6B.3 A convergência: um movimento resolve dois problemas
+
+Eu tinha recomendado uma **segunda pessoa jurídica** como saída para o teto do
+Simples. Agora aparece um segundo motivo, completamente independente, para o
+mesmo movimento:
+
+> **Se a Serasa investir na PAAPS, ela está investindo num CNPJ que também faz
+> consultoria empresarial.** Isso é pergunta certa de diligência, e a resposta
+> "é a mesma empresa" é desconfortável.
+
+Os dois problemas têm a mesma solução:
+
+| Problema | Solução |
+|---|---|
+| Teto de R$ 4,8 milhões chega no 4º ou 5º município | separar em duas PJs: dobra o teto |
+| Investidor investindo num CNPJ que faz duas coisas | separar em duas PJs: define o que ele está comprando |
+
+**Isso não é para fazer agora.** Separar custa duas contabilidades, dois DAS,
+e a PAAPS ainda não tem contrato. Mas é **exatamente** o tipo de pergunta que
+se leva para a mentoria de uma aceleração, e demonstra que você enxerga dois
+passos à frente.
+
+## 6B.4 O que isso muda no pitch
+
+O slide 12 atual diz que a DIGGING financia a entrada da PAAPS na rede pública.
+**Isso agora é literalmente verdade em contabilidade, não só em narrativa:**
+é um caixa só, e o que a DIGGING fatura no privado paga a operação enquanto o
+ciclo de venda pública, que é de 4 a 8 meses, não fecha.
+
+Fortalece o argumento. Mas exige a frase honesta junto:
+
+> "PAAPS e DIGGING operam hoje sob o mesmo CNPJ, ativo desde 2003. A DIGGING
+> atende o mercado privado e é ela que banca o ciclo de venda pública, que é
+> longo. A separação societária é um dos itens que queremos estruturar na
+> aceleração."
+
+Dizer isso antes que perguntem transforma um ponto fraco de diligência num
+sinal de que você já mapeou.
+
+## 6B.5 O que eu ainda não tenho
+
+**Não tenho o histórico de faturamento da DIGGING.** Procurei no repositório e
+no Notion e achei só a menção a uma "Planilha de DRE" dentro do Checklist de
+Gestão, sem números. O único dado financeiro duro que tenho é o RBT12 de
+R$ 252.834,60 vindo da contadora.
+
+Preciso disso para duas coisas:
+
+1. **Separar quanto do faturamento é PAAPS e quanto é DIGGING.** Muda o que o pitch pode dizer sobre "a PAAPS nunca teve contrato".
+2. **Sustentar o "fatura desde 2003" do slide 12.** Hoje essa frase está no deck sem número atrás. Com a série histórica ela vira prova.
 
 ## 6.4 O que acontece no dia em que entra o primeiro município
 
