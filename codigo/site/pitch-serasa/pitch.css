@@ -138,18 +138,8 @@ img{max-width:100%;display:block}
   text-underline-offset:.14em;text-decoration-thickness:.06em;
 }
 
-/* Variante tinta: onde a foto já é clara naquele canto (a janela branca do slide
-   04, por exemplo), o texto não precisa de faixa nem de sombra. Vai em marrom
-   direto sobre a imagem, que é como o periódico imprime: tinta sobre papel. */
-.canto--tinta{
-  color:var(--marrom);
-  text-shadow:none;
-}
-.canto--tinta .canto__d{color:var(--marrom)}
-.canto--tinta .canto__d--sub{
-  color:var(--terracota);
-  text-decoration-color:var(--terracota);
-}
+/* Palavra em marrom dentro da frase de canto (o resto segue amarelo padrão). */
+.canto__marrom{color:var(--marrom)}
 h1,h2,h3{font-family:var(--titulo);font-weight:700;line-height:1.03;letter-spacing:-.01em;
   text-transform:uppercase;text-wrap:balance;color:var(--bege);
   text-shadow:0 2px 22px rgba(20,9,2,.75)}
