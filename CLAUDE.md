@@ -187,11 +187,18 @@ cuidado.** Essa distinção não é retórica: ela muda quem é o concorrente, q
 mercado e por que a solução é Psicologia e não plataforma.
 
 **Por que o cuidado é a maior demanda deste século, e não uma pauta de RH:**
-a população mundial inteira está envelhecendo, e as pessoas morrem mais velhas do que
-morriam antes, porém não mais saudáveis: passam mais anos debilitadas antes de morrer. Isso
-soma ao cuidado com crianças, ao cuidado com a população adulta que trabalha e também
-adoece, à população em situação de rua e à pobreza que só cresce. Alguém precisa cuidar de
-tudo isso, e esse alguém é a rede pública.
+a população mundial está envelhecendo. Isso soma ao cuidado com crianças e ao cuidado com a
+população adulta que trabalha e também adoece. Alguém precisa cuidar de tudo isso, e esse
+alguém é a rede pública.
+
+> **Nunca afirmar tendência sem verificar antes** (calibrado 17/08/2026, depois de eu
+> escrever "a pobreza cresce, a rua cresce" sem checar: a pobreza extrema mundial está
+> **caindo**, não subindo, só desacelerou; "a rua cresce" também não fazia sentido fora da
+> nossa conversa, "rua" não é sujeito que cresce). Toda alegação de tendência numérica ou
+> social entra na mesma régua de verificação da seção "Pesquisas" abaixo, mesmo dentro de
+> copy e pitch, mesmo sem fonte aparecendo no texto final. E nenhuma frase de efeito pode
+> depender de contexto que só quem já conversou sobre o projeto entende: escrever por
+> extenso o que a coisa é, sempre.
 
 **O erro de leitura que o mercado inteiro comete:** quando a instituição oferece terapia para
 um problema que ela mesma produz, a falha passa a ser de quem não aguentou. **Aguentar nunca

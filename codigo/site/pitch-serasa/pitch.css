@@ -109,6 +109,10 @@ img{max-width:100%;display:block}
   rgba(30,14,3,.985) 0%,rgba(30,14,3,.96) 34%,rgba(30,14,3,.86) 55%,
   rgba(30,14,3,.60) 76%,rgba(30,14,3,.34) 100%)!important}
 
+/* Véu suave: a foto já é escura por si só (corredor com pouca luz), não
+   precisa do reforço do véu denso. Só o bastante pra letra assentar. */
+.veu-suave::after{background:linear-gradient(180deg,rgba(30,14,3,.6) 0%,rgba(30,14,3,.56) 100%)}
+
 /* Véu denso: onde o slide carrega grade e o texto precisa de chão inteiro. */
 .veu-denso::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
   background:linear-gradient(180deg,rgba(30,14,3,.94) 0%,rgba(30,14,3,.92) 100%)}
@@ -390,6 +394,43 @@ h1,h2,h3{font-family:var(--titulo);font-weight:700;line-height:1.03;letter-spaci
 .pes__cargo{font-family:var(--titulo);font-weight:700;font-size:clamp(.56rem,.68vw,.68rem);
   text-transform:uppercase;letter-spacing:.1em;color:var(--amarelo);display:block;margin:.25em 0 .5em}
 .pes__l{font-size:clamp(.7rem,.84vw,.84rem);line-height:1.45;color:var(--creme-70)}
+
+/* ----- 6.1 TELA DIVIDIDA (slide 6: pauta orçamentária + business) -------- */
+/* Duas colunas soltas sobre a MESMA foto (não dividida), ancoradas em cantos
+   opostos, com a frase-síntese centralizada, sozinha, no meio do slide. */
+
+.split{
+  position:absolute;z-index:3;width:min(38%,420px);padding:var(--pad);
+  display:flex;flex-direction:column;
+}
+.split--esq{left:0;bottom:0;padding-bottom:calc(var(--pad) + 50px)}
+.split--dir{right:0;top:0;text-align:right;align-items:flex-end}
+
+/* pilha vertical de dados: mesma célula .cel, uma coluna só */
+.grade--vert{grid-template-columns:1fr;margin-top:1.3em}
+.grade--vert .cel{padding:clamp(12px,1.3vw,20px) clamp(14px,1.6vw,22px)}
+.grade--vert .cel__n{font-size:clamp(1.2rem,2.1vw,2.1rem);margin-bottom:.2em}
+.grade--vert .cel__l{font-size:clamp(.72rem,.86vw,.86rem)}
+
+/* a frase-síntese: sozinha, centralizada nas duas dimensões do slide inteiro,
+   nunca dentro de uma das colunas. */
+.centro-flut{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:4;
+  width:min(52%,540px);text-align:center;
+  font-family:var(--titulo);font-weight:700;text-transform:none;
+  font-size:clamp(1.3rem,2.6vw,2.6rem);line-height:1.18;color:var(--bege);
+  text-shadow:0 3px 26px rgba(15,7,2,.95);
+}
+/* .rev, definida mais abaixo no arquivo, também mexe em `transform` (para a
+   entrada com translateY) e empataria em especificidade com a regra acima,
+   cancelando a centralização assim que o slide revela. Esta combinação de
+   três classes desempata a favor do centro. */
+.slide.vis .centro-flut.rev{transform:translate(-50%,-50%)}
+@media(max-width:820px){
+  .split{position:static;width:100%;padding:var(--pad) var(--pad) 0}
+  .split--dir{text-align:left;align-items:flex-start}
+  .centro-flut{position:static;transform:none;width:100%;text-align:left;margin:1.4em 0;padding:0 var(--pad)}
+}
 
 /* ----- 7. REVELAÇÃO (uma orquestração por slide, não micro-ruído) --------- */
 

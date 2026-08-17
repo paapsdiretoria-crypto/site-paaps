@@ -8,7 +8,7 @@
 <!-- ?v= força o navegador a baixar de novo a cada rodada de ajuste: o arquivo
      muda de conteúdo várias vezes sob o mesmo nome, e sem isso o cache serve
      a versão velha (mesmo padrão de img/equipe/gabriela.jpg?v=2 no site). -->
-<link rel="stylesheet" href="pitch.css?v=6">
+<link rel="stylesheet" href="pitch.css?v=10">
 </head>
 <body>
 
@@ -84,8 +84,8 @@
 <!-- ====================================================================== -->
 <section class="slide veu-leve" id="s4">
   <div class="slide__foto slide__foto--dupla">
-    <img src="img/cras-melo-pessoa.jpg" alt="Senhora atendida pelo CRAS de Desterro do Melo, sentada com um buquê de flores laranja">
     <img src="img/cras-melo-05.jpg" alt="Senhora atendida pelo CRAS de Desterro do Melo, com flores laranja, em meio ao verde">
+    <img src="img/cras-melo-pessoa.jpg" alt="Senhora atendida pelo CRAS de Desterro do Melo, sentada com um buquê de flores laranja">
   </div>
   <p class="canto canto--longa rev">A rede que deveria cuidar está <span class="canto__branco">adoecendo</span></p>
   <div class="slide__c c--base" style="padding-bottom:calc(var(--pad) + 34px)">
@@ -102,7 +102,6 @@
 <!-- ====================================================================== -->
 <section class="slide veu-lado" id="s5">
   <div class="slide__foto"><img src="../home/img/radilson/escuta-ausculta.jpg" alt="Profissional de saúde ausculta um senhor idoso durante atendimento"></div>
-  <p class="canto canto--duas rev">O maior e mais abrangente sistema público de saúde do mundo, que chega às cidades mais remotas do país</p>
   <div class="slide__c c--centro c--meia">
     <h2 class="t-fluxo rev rev--1">Quando a equipe está <u>esgotada</u>, há <span class="numerao">o&nbsp;dobro</span> de chance de <u>erro</u> no atendimento.</h2>
     <p class="lead rev rev--2">De acordo com uma revisão sistemática de 35 estudos, com 41 mil médicos, publicada no <i>British Medical Journal</i>.</p>
@@ -116,12 +115,12 @@
 <!-- ====================================================================== -->
 <!-- 06 · POR QUE AGORA                                                      -->
 <!-- ====================================================================== -->
-<section class="slide veu-denso" id="s6">
+<section class="slide veu-suave" id="s6">
   <div class="slide__foto"><img src="../home/img/radilson/corredor-epi.jpg" alt="Corredor de unidade de saúde"></div>
-  <p class="canto rev">Por que agora</p>
-  <div class="slide__c c--centro">
-    <h2 class="t-fluxo rev rev--1">O adoecimento no trabalho já entrou na pauta <span class="destaque">orçamentária</span> do país.</h2>
-    <div class="grade grade--3 rev rev--2">
+
+  <div class="split split--esq">
+    <h2 class="t-fluxo rev rev--1" style="font-size:clamp(1.2rem,2.1vw,2rem);max-width:15ch">O adoecimento no trabalho já entrou na pauta <span class="destaque">orçamentária</span> do país.</h2>
+    <div class="grade grade--vert rev rev--2">
       <div class="cel">
         <span class="cel__n">546 mil</span>
         <p class="cel__l">afastamentos por transtornos mentais em 2025. Recorde da década, 15% acima de 2024.</p>
@@ -134,31 +133,30 @@
         <span class="cel__n">NR-1</span>
         <p class="cel__l">tornou obrigatório mapear risco psicossocial, com fiscalização punitiva desde maio de 2026.</p>
       </div>
+      <div class="cel">
+        <span class="cel__n">51%</span>
+        <p class="cel__l">dos trabalhadores brasileiros relatam mais estresse no ambiente de trabalho por causa da própria situação financeira.</p>
+      </div>
     </div>
   </div>
-  <span class="slide__n">06</span>
-  <span class="credito">Foto: Radilson Carlos Gomes, fotógrafo do SUS.</span>
-</section>
 
-<!-- ====================================================================== -->
-<!-- 07 · O ERRO QUE O MERCADO COMETE                                        -->
-<!-- ====================================================================== -->
-<section class="slide veu-base" id="s7">
-  <div class="slide__foto"><img src="../home/img/radilson/casal-porta.jpg" alt="Visita domiciliar na porta de uma casa"></div>
-  <p class="canto rev">O business em que estamos</p>
-  <div class="slide__c c--base">
-    <h2 class="t-fluxo rev rev--1">Quando a instituição oferece terapia para um problema que ela mesma produz, a falha passa a ser de quem <span class="destaque">não aguentou</span>.</h2>
-    <p class="lead rev rev--2">Aguentar nunca foi o problema, e não é esse o negócio em que estamos. O mundo inteiro está envelhecendo e vive mais anos debilitado antes de morrer, a pobreza cresce, a rua cresce, e a criança, o adulto que trabalha e o idoso em cuidado paliativo dependem todos de alguém que cuide.</p>
-    <p class="lead rev rev--2">A maior demanda deste século é <b>cuidado</b>, e cuidado não se resolve com palestra de setembro amarelo nem com coach. Resolve-se com Psicologia.</p>
+  <p class="centro-flut rev rev--2">A maior demanda deste <b>século</b> é <span class="destaque"><u>cuidado</u></span>.</p>
+
+  <div class="split split--dir">
+    <h2 class="t-fluxo rev rev--1" style="font-size:clamp(1.15rem,1.95vw,1.9rem);max-width:16ch;text-align:right">Quando a solução é individual para um problema criado pelo próprio trabalho, a falha passa a ser de quem <span class="destaque">não aguentou</span>.</h2>
+    <p class="lead rev rev--2" style="text-align:right">Aguentar nunca foi um problema para o <span class="destaque">povo brasileiro</span>, mas não é esse o business em que estamos.</p>
+    <p class="lead rev rev--3" style="text-align:right">A população mundial está envelhecendo. A criança, o adulto que trabalha e o idoso em cuidado paliativo dependem todos de alguém que cuide.</p>
   </div>
-  <span class="slide__n">07</span>
+
+  <span class="slide__n">06</span>
+  <span class="fonte">546 mil / R$ 3,5 bi / NR-1: Ministério da Previdência, INSS, Portaria MTE 1.419/2024 · 51%: Serasa Experian/SalaryFits, Saúde Financeira e Bem-Estar do Trabalhador Brasileiro, 5ª ed., 2025.</span>
   <span class="credito">Foto: Radilson Carlos Gomes, fotógrafo do SUS.</span>
 </section>
 
 <!-- ====================================================================== -->
-<!-- 08 · O QUE NOS TORNA ÚNICOS                                             -->
+<!-- 07 · O QUE NOS TORNA ÚNICOS                                             -->
 <!-- ====================================================================== -->
-<section class="slide veu-lado" id="s8">
+<section class="slide veu-lado" id="s7">
   <div class="slide__foto"><img src="../home/img/paaps/refazenda-onibus.jpg" alt="Chegada a Desterro do Melo, no interior de Minas Gerais, onde a rede pública alcança as casas mais distantes"></div>
   <p class="canto rev">Um ano dentro de uma rede real</p>
   <div class="slide__c c--centro c--meia">
@@ -166,14 +164,14 @@
     <p class="lead rev rev--1">Em 2024 passamos um ano inteiro dentro da rotina de uma rede pública do SUS, em Desterro do Melo, no interior de Minas. Fomos convidadas por uma parceria local, e foi ali que a metodologia da PAAPS foi testada e validada pela primeira vez numa cidade de verdade.</p>
     <p class="lead rev rev--2">Não chegamos com pacote pronto: nós lemos e caminhamos pela rede do município, nomeamos o que adoece junto com as pessoas que trabalham nela e só então desenhamos, com as próprias equipes, o que aquela rede precisa.</p>
   </div>
-  <span class="slide__n">08</span>
+  <span class="slide__n">07</span>
   <span class="credito">Refazenda Rio Xopotó, Desterro do Melo (MG), 2024.</span>
 </section>
 
 <!-- ====================================================================== -->
-<!-- 09 · AS TRÊS FRENTES                                                    -->
+<!-- 08 · AS TRÊS FRENTES                                                    -->
 <!-- ====================================================================== -->
-<section class="slide veu-denso" id="s9">
+<section class="slide veu-denso" id="s8">
   <div class="slide__foto"><img src="../home/img/paaps/treino-sala.jpg" alt="Equipe municipal reunida em sala durante treinamento da PAAPS"></div>
   <p class="canto rev">A solução</p>
   <div class="slide__c c--centro">
@@ -196,14 +194,14 @@
       </div>
     </div>
   </div>
-  <span class="slide__n">09</span>
+  <span class="slide__n">08</span>
   <span class="credito">PAAPS em campo, Minas Gerais.</span>
 </section>
 
 <!-- ====================================================================== -->
-<!-- 10 · OS TRÊS PRODUTOS                                                   -->
+<!-- 09 · OS TRÊS PRODUTOS                                                   -->
 <!-- ====================================================================== -->
-<section class="slide veu-denso" id="s10">
+<section class="slide veu-denso" id="s9">
   <div class="slide__foto"><img src="../home/img/paaps/cuidado-vivencia.jpg" alt="Vivência de cuidado conduzida pela PAAPS com trabalhadores da rede"></div>
   <p class="canto rev">Como entra no município</p>
   <div class="slide__c c--centro">
@@ -226,14 +224,14 @@
       </div>
     </div>
   </div>
-  <span class="slide__n">10</span>
+  <span class="slide__n">09</span>
   <span class="credito">Refazenda Rio Xopotó, Desterro do Melo (MG), 2024.</span>
 </section>
 
 <!-- ====================================================================== -->
-<!-- 11 · PROVA DE CAMPO                                                     -->
+<!-- 10 · PROVA DE CAMPO                                                     -->
 <!-- ====================================================================== -->
-<section class="slide veu-denso" id="s11">
+<section class="slide veu-denso" id="s10">
   <div class="slide__foto"><img src="../home/img/paaps/paaps-vivencia.jpg" alt="Encontro da PAAPS com trabalhadores da rede pública"></div>
   <p class="canto rev">Não é tese: já rodou</p>
   <div class="slide__c c--centro">
@@ -277,14 +275,14 @@
       <p class="lead" style="margin:0">pessoas impactadas diretamente. E os três candidatos a prefeito de Desterro do Melo assinando juntos a Carta Melo 2050, que alinha a visão de 50 anos do município aos ODS da ONU.</p>
     </div>
   </div>
-  <span class="slide__n">11</span>
+  <span class="slide__n">10</span>
   <span class="credito">PAAPS em campo, Minas Gerais.</span>
 </section>
 
 <!-- ====================================================================== -->
-<!-- 12 · MODELO DE NEGÓCIO                                                  -->
+<!-- 11 · MODELO DE NEGÓCIO                                                  -->
 <!-- ====================================================================== -->
-<section class="slide veu-lado" id="s12">
+<section class="slide veu-lado" id="s11">
   <div class="slide__foto"><img src="../home/img/paaps/refazenda-onibus.jpg" alt="Chegada da equipe PAAPS ao território rural"></div>
   <p class="canto rev">Modelo de negócio</p>
   <div class="slide__c c--centro c--meia">
@@ -293,14 +291,14 @@
     <p class="lead rev rev--2">Um contrato de prefeitura gira entre R$ 25 mil e R$ 35 mil mensais, chegando a R$ 70 mil a R$ 100 mil conforme o serviço contratado.</p>
     <p class="lead rev rev--2">Entrada por inexigibilidade, dispensa, licitação, CPSI, UST, edital e emenda parlamentar. Hoje a receita é por projeto: a linha de Sustentação é a virada para receita recorrente, e é ela que estruturamos na aceleração.</p>
   </div>
-  <span class="slide__n">12</span>
+  <span class="slide__n">11</span>
   <span class="credito">Refazenda Rio Xopotó, Desterro do Melo (MG), 2024.</span>
 </section>
 
 <!-- ====================================================================== -->
-<!-- 13 · O MODELO DE CAPTAÇÃO HÍBRIDO                                       -->
+<!-- 12 · O MODELO DE CAPTAÇÃO HÍBRIDO                                       -->
 <!-- ====================================================================== -->
-<section class="slide veu-base" id="s13">
+<section class="slide veu-base" id="s12">
   <div class="slide__foto"><img src="../home/img/paaps/integracao-agsus.jpg" alt="Equipe da rede reunida em atividade de integração conduzida pela PAAPS"></div>
   <p class="canto rev">Nosso modelo de captação é híbrido</p>
   <div class="slide__c c--base">
@@ -308,14 +306,14 @@
     <p class="lead rev rev--2">A DIGGING, que opera a PAAPS, fatura há mais de 20 anos em consultoria organizacional, dentro de um mercado de bem-estar corporativo de US$ 1,53 bilhão no Brasil, com projeção de US$ 2,58 bilhões até 2033.</p>
     <p class="lead rev rev--2">Esse caixa banca a tradução do método para dentro do serviço público, onde o ciclo de venda é mais lento e o retorno é impacto. Não é filantropia: é recurso do mercado privado alocado para transformar a ponta do Estado, e está escrito no contrato social da empresa, que prioriza o impacto social e o reinvestimento em pesquisa e inovação.</p>
   </div>
-  <span class="slide__n">13</span>
+  <span class="slide__n">12</span>
   <span class="credito">PAAPS em campo, Minas Gerais.</span>
 </section>
 
 <!-- ====================================================================== -->
-<!-- 14 · O TAMANHO DA OPORTUNIDADE                                          -->
+<!-- 13 · O TAMANHO DA OPORTUNIDADE                                          -->
 <!-- ====================================================================== -->
-<section class="slide veu-base" id="s14">
+<section class="slide veu-base" id="s13">
   <div class="slide__foto"><img src="../home/img/montanha-minas.jpg" alt="Serra de Minas Gerais ao amanhecer"></div>
   <p class="canto rev">A maior malha de cuidado do mundo</p>
   <div class="slide__c c--base">
@@ -323,15 +321,15 @@
     <p class="lead rev rev--2">Nenhuma outra estrutura no planeta alcança tanta gente e tanto território ao mesmo tempo, das capitais às cidades mais remotas do país. É essa malha que precisa se abrir aos projetos sociais do mundo, e é por dentro dela que a PAAPS trabalha.</p>
     <p class="lead rev rev--2">Hoje apenas 46% dos municípios têm programa de atenção a transtornos mentais, e a licença do servidor estatutário não entra em estatística nacional nenhuma, de modo que cada prefeitura só conhece o próprio problema quando alguém olha para os próprios dados.</p>
   </div>
-  <span class="slide__n">14</span>
+  <span class="slide__n">13</span>
   <span class="fonte">Municípios: IBGE · Programas de atenção a transtornos mentais: Série SmartLab de Trabalho Decente, 2025.</span>
   <span class="credito">Serra de Minas Gerais.</span>
 </section>
 
 <!-- ====================================================================== -->
-<!-- 15 · PONTO DE APOIO                                                     -->
+<!-- 14 · PONTO DE APOIO                                                     -->
 <!-- ====================================================================== -->
-<section class="slide veu-denso" id="s15">
+<section class="slide veu-denso" id="s14">
   <div class="slide__foto"><img src="../home/img/paaps/cuidado-farmacia.jpg" alt="Atendimento no balcão da farmácia de uma unidade pública"></div>
   <p class="canto rev">O que vamos construir com o investimento</p>
   <div class="slide__c c--centro">
@@ -352,14 +350,14 @@
       </div>
     </div>
   </div>
-  <span class="slide__n">15</span>
+  <span class="slide__n">14</span>
   <span class="credito">PAAPS em campo, Minas Gerais.</span>
 </section>
 
 <!-- ====================================================================== -->
-<!-- 16 · O QUE FAZEMOS NOS 7 MESES                                          -->
+<!-- 15 · O QUE FAZEMOS NOS 7 MESES                                          -->
 <!-- ====================================================================== -->
-<section class="slide veu-denso" id="s16">
+<section class="slide veu-denso" id="s15">
   <div class="slide__foto"><img src="../home/img/paaps/territorio-2.jpg" alt="Território atendido pela PAAPS no interior de Minas"></div>
   <p class="canto rev">Os sete meses de aceleração</p>
   <div class="slide__c c--centro">
@@ -387,14 +385,14 @@
       </div>
     </div>
   </div>
-  <span class="slide__n">16</span>
+  <span class="slide__n">15</span>
   <span class="credito">PAAPS em campo, Minas Gerais.</span>
 </section>
 
 <!-- ====================================================================== -->
-<!-- 17 · ODS                                                                -->
+<!-- 16 · ODS                                                                -->
 <!-- ====================================================================== -->
-<section class="slide veu-denso" id="s17">
+<section class="slide veu-denso" id="s16">
   <div class="slide__foto"><img src="../home/img/paaps/refazenda-milharal.jpg" alt="Agricultura familiar no território de Desterro do Melo"></div>
   <p class="canto rev">O que a PAAPS move</p>
   <div class="slide__c c--centro">
@@ -420,14 +418,14 @@
       <li><b>17</b>Operação por parceria formal com prefeituras, associações de municípios e organizações locais.</li>
     </ul>
   </div>
-  <span class="slide__n">17</span>
+  <span class="slide__n">16</span>
   <span class="credito">Refazenda Rio Xopotó, Desterro do Melo (MG), 2024.</span>
 </section>
 
 <!-- ====================================================================== -->
-<!-- 18 · TIME                                                               -->
+<!-- 17 · TIME                                                               -->
 <!-- ====================================================================== -->
-<section class="slide veu-denso" id="s18">
+<section class="slide veu-denso" id="s17">
   <div class="slide__foto"><img src="../home/img/paaps/mallu-portao.jpg" alt="Mallu Vasconcellos em campo, no interior de Minas Gerais"></div>
   <p class="canto rev">Quem faz a PAAPS acontecer</p>
   <div class="slide__c c--centro">
@@ -466,14 +464,14 @@
     </div>
     <p class="lead rev rev--3" style="margin-top:.6em">Mais de 120 membros na comunidade e mais de 500 pessoas no ecossistema. Todo profissional que entra passa pela formação da PAAPS antes de ir a campo.</p>
   </div>
-  <span class="slide__n">18</span>
+  <span class="slide__n">17</span>
   <span class="credito">PAAPS em campo, Minas Gerais.</span>
 </section>
 
 <!-- ====================================================================== -->
-<!-- 19 · CTA                                                                -->
+<!-- 18 · CTA                                                                -->
 <!-- ====================================================================== -->
-<section class="slide veu-base" id="s19">
+<section class="slide veu-base" id="s18">
   <div class="slide__foto"><img src="../home/img/radilson/afeto-idoso.jpg" alt="Gesto de afeto entre profissional de saúde e um idoso atendido"></div>
   <p class="canto rev">Cuidar da ponta, impactar o mundo</p>
   <div class="slide__c c--base">
@@ -487,7 +485,7 @@
       <span>relacionamento@paaps.com.br</span>
     </div>
   </div>
-  <span class="slide__n">19</span>
+  <span class="slide__n">18</span>
   <span class="credito">Foto: Radilson Carlos Gomes, fotógrafo do SUS.</span>
 </section>
 
