@@ -472,31 +472,63 @@ Quatro coisas, e as quatro juntas é que fazem a licença ter valor:
 
 **O item 4 é o que segura o modelo inteiro**, e explico por quê no 12.6.
 
-### 12.2 Estrutura de preço: duas partes
+### 12.2 Estrutura de preço: o limite legal decide, não o meu palpite
 
-| | O que é | Preço |
+Na versão anterior eu chutei R$ 10.000/mês a partir de uma ancoragem de mercado.
+**Havia uma resposta melhor, e ela é jurídica.**
+
+O Decreto nº 12.807/2025 atualizou os limites de **dispensa de licitação** da
+Lei 14.133/2021 para 2026:
+
+| Situação | Limite em 2026 |
+|---|---|
+| Serviços e compras em geral (art. 75, II) | **R$ 65.492,11** |
+| O mesmo, contratado por **consórcio público** (art. 75, §3º) | **R$ 130.984,22** |
+
+Abaixo desse valor, a prefeitura contrata por **dispensa**: sem licitação, sem
+parecer robusto, papelada mínima. Acima, precisa de **inexigibilidade**, que a
+PAAPS tem direito de usar (art. 74, I, fornecedor exclusivo, sustentado pela
+titularidade exclusiva do §2º da Cláusula Terceira), mas que exige justificativa,
+parecer jurídico e publicação.
+
+> **Em município pequeno, o setor de compras tem uma ou duas pessoas. A
+> diferença entre dispensa e inexigibilidade não é jurídica: é se a proposta
+> anda ou dorme numa gaveta.**
+
+Daí saem dois patamares, cada um com uma lógica legal por trás:
+
+| | **Licença Base** | **Licença Plena** |
 |---|---|---|
-| **Implantação** (uma vez) | formação e certificação de 4 a 6 psicólogos, entrega de protocolos, configuração | **R$ 30.000** |
-| **Licença anual** (recorrente) | direito de uso + supervisão + atualizações + plataforma | **R$ 10.000/mês · R$ 120.000/ano** |
+| Preço mensal | **R$ 5.400** | **R$ 10.900** |
+| Preço anual | **R$ 64.800** | **R$ 130.800** |
+| Caminho legal | **dispensa** (abaixo de R$ 65.492) | **inexigibilidade** |
+| Supervisão | mensal, em grupo | quinzenal |
+| Plataforma | registro e relatório padrão | completa, com painel de gestão |
+| A quem serve | município pequeno, compras enxuto | município médio, com procuradoria ativa |
+| Implantação | R$ 30.000 | R$ 30.000 |
 
-**Por que R$ 10.000/mês é o preço certo:**
+**A Base é o produto de volume**, e ela existe porque cabe na dispensa. Deixar o
+preço R$ 700 abaixo do limite não é timidez: é o que faz a venda acontecer sem
+depender do procurador do município.
+
+### 12.2.1 O consórcio não é linha de receita: é canal
+
+O §3º dobra o limite quando quem contrata é consórcio público. Isso abre uma
+porta diferente:
 
 ```
-R$ 120.000 por ano ÷ 12 ÷ 500 servidores = R$ 20 por servidor por mês
+1 contrato de R$ 130.984/ano com um consórcio, cobrindo 20 municípios
+= R$ 6.549 por município por ano
 ```
 
-Isso cai exatamente na faixa em que o mercado precifica benefício por vida
-(R$ 20 a R$ 50). É um número que o gestor reconhece e consegue aprovar.
+Comparado a vender 20 licenças Base individualmente (R$ 1.296.000), o consórcio
+rende 10% da receita. **Então ele não é o produto principal: é distribuição.**
+Uma venda coloca o método em 20 municípios, por dispensa, com custo de aquisição
+quase zero. Dali sobem os que engajam, para Base individual ou para execução
+própria.
 
-E comparado ao Caminho A:
-
-```
-Execução própria: R$ 924.000 por ano
-Licenciamento:    R$ 120.000 por ano
-A prefeitura paga 13% do preço
-```
-
-Isso é o que torna vendável para município que jamais aprovaria R$ 924 mil.
+É a mesma lógica de land and expand, e a AMM, que já está na sua base de leads,
+reúne 853 municípios mineiros.
 
 ### 12.3 O custo de uma licença
 
@@ -510,37 +542,42 @@ Isso é o que torna vendável para município que jamais aprovaria R$ 924 mil.
 | **Custo de implantação** | **R$ 16.000** |
 | **Margem da implantação** | **R$ 14.000 (47%)** |
 
-**Recorrente (mensal):**
+**Recorrente (mensal), nos dois patamares:**
 
-| Item | Conta | Valor |
+| Item | Base | Plena |
 |---|---|---|
-| Supervisão dos certificados | 8h/mês; 1 supervisor cobre 15 municípios | R$ 807 |
-| Plataforma e IA | | R$ 400 |
-| Customer success | 1 CS cobre 15 municípios | R$ 423 |
-| Conteúdo, atualizações, suporte de conta | | R$ 870 |
-| **Custo direto** | | **R$ 2.500** |
-| Imposto | 12,97% | R$ 1.297 |
-| **MARGEM** | | **R$ 6.203 · 62,0%** |
+| Supervisão dos certificados | 4h/mês, 1 supervisor para 30 municípios: R$ 403 | 8h/mês, 1 para 15: R$ 807 |
+| Plataforma e IA | R$ 400 | R$ 400 |
+| Customer success | 1 para 25: R$ 254 | 1 para 15: R$ 423 |
+| Conteúdo, atualizações, suporte de conta | R$ 400 | R$ 870 |
+| **Custo direto** | **R$ 1.457** | **R$ 2.500** |
+| Imposto (12,97%) | (700) | (1.414) |
+| **MARGEM** | **R$ 3.243 · 60,1%** | **R$ 6.986 · 64,1%** |
 
-> **Atenção, ponto em aberto:** o enquadramento tributário de receita de
-> licenciamento de metodologia dentro do Simples Nacional precisa de
-> confirmação da ADR. Modelei no Anexo III por analogia com licenciamento de
-> software. **Se for tratado como royalty, pode ficar fora do Simples**, e a
-> conta muda. É a primeira pergunta a fazer se você decidir seguir por aqui.
+> **Sobre o imposto do licenciamento:** modelei no Anexo III por analogia com
+> licenciamento de software, e essa não é só uma premissa conveniente: **é a
+> estrutura que você deve construir de propósito.** A alínea f do objeto social
+> já autoriza "licenciamento... de soluções tecnológicas, incluindo softwares,
+> plataformas digitais". Se a licença for redigida como **licença de uso da
+> plataforma mais serviços de formação e supervisão**, o enquadramento é limpo.
+> Se for redigida como **royalty pelo uso da metodologia**, fica ambígua e pode
+> sair do Simples. **Quem escreve o contrato escolhe o regime. Escolha o
+> primeiro.**
 
 ### 12.4 Quantas pessoas da PAAPS cada licença consome
 
-```
-1/15 de supervisor         = 0,067
-+ 1/15 de customer success = 0,067
-= 0,13 pessoa por município
-```
+| | Base | Plena |
+|---|---|---|
+| Fração de supervisor | 1/30 = 0,033 | 1/15 = 0,067 |
+| Fração de customer success | 1/25 = 0,040 | 1/15 = 0,067 |
+| **Pessoas por município** | **0,073** | **0,133** |
+| **Margem por pessoa da PAAPS** | **R$ 44.425/mês** | **R$ 52.526/mês** |
 
-```
-Margem por pessoa da PAAPS = R$ 6.203 ÷ 0,13 = R$ 47.715 por mês
-```
+**Contra R$ 19.521 da execução própria.** É de 2,3 a 2,7 vezes mais margem por
+pessoa da PAAPS.
 
-**Contra R$ 19.521 do Caminho A. É 2,4 vezes mais margem por pessoa da PAAPS.**
+E o número que resume: **cem municípios em licença Base exigem 7 pessoas.
+Cem municípios em execução própria exigem 234.**
 
 ### 12.5 Forças e limites
 
@@ -575,18 +612,18 @@ a contadora antes de qualquer proposta.
 
 ## DEGRAU 13 · Os dois lado a lado
 
-| | **A · Execução própria** | **B · Licenciamento** |
-|---|---|---|
-| Receita anual por município | R$ 924.000 | R$ 120.000 + R$ 30.000 na entrada |
-| Custo direto mensal | R$ 21.333 | R$ 2.500 |
-| **Margem mensal** | **R$ 45.680** | **R$ 6.203** |
-| **Margem %** | 59,3% | **62,0%** |
-| Pessoas da PAAPS por município | 2,34 | **0,13** |
-| **Margem por pessoa da PAAPS** | R$ 19.521 | **R$ 47.715** |
-| Para 100 municípios, quantas pessoas | **234** | **14** |
-| Receita a 100 municípios | R$ 92,4 milhões | R$ 12,0 milhões |
-| Margem a 100 municípios | R$ 54,8 milhões | R$ 7,4 milhões |
-| Quem cabe | municípios com orçamento | **quase todos** |
+| | **A · Execução própria** | **B · Licença Base** | **B · Licença Plena** |
+|---|---|---|---|
+| Receita anual por município | R$ 924.000 | R$ 64.800 | R$ 130.800 |
+| Entrada (implantação) | R$ 0 | R$ 30.000 | R$ 30.000 |
+| Custo direto mensal | R$ 21.333 | R$ 1.457 | R$ 2.500 |
+| **Margem mensal** | **R$ 45.680** | **R$ 3.243** | **R$ 6.986** |
+| **Margem %** | 59,3% | 60,1% | **64,1%** |
+| Pessoas da PAAPS por município | 2,34 | **0,073** | 0,133 |
+| **Margem por pessoa da PAAPS** | R$ 19.521 | **R$ 44.425** | R$ 52.526 |
+| Para 100 municípios, quantas pessoas | **234** | **7** | 13 |
+| Caminho legal | inexigibilidade | **dispensa** | inexigibilidade |
+| Quem cabe | com orçamento | **quase todos** | médio porte |
 
 ### 13.1 A frase que resume
 
@@ -703,41 +740,52 @@ voltado ao próprio servidor.
 **Premissas visíveis, que é o que separa modelo de chute:**
 
 - execução própria a R$ 924.000/ano por município, margem de 59,3%
-- licença a R$ 120.000/ano, margem de 62,0%, mais R$ 30.000 de implantação com 47% de margem
-- todo município de execução própria migra para licença após 12 meses e continua contando
-- a partir do ano 3 a empresa sai do Simples: imposto modelado a 17% (Degrau 17)
+- licenças no mix de 70% Base (R$ 64.800/ano) e 30% Plena (R$ 130.800/ano)
+- implantação de R$ 30.000 por licença nova, com R$ 14.000 de margem
+- a partir do ano 3 a empresa sai do Simples: imposto modelado a 17%
 - estrutura da PAAPS cresce de R$ 12 mil para R$ 150 mil por mês no ano 5
 
 | | Ano 1 | Ano 2 | Ano 3 | Ano 4 | Ano 5 |
 |---|---|---|---|---|---|
 | Municípios em execução própria | 1 | 3 | 5 | 6 | 8 |
-| Licenças ativas | 0 | 1 | 8 | 25 | 60 |
+| Licenças Base ativas | 0 | 1 | 6 | 18 | 42 |
+| Licenças Plena ativas | 0 | 0 | 2 | 7 | 18 |
 | Receita execução própria | 924 mil | 2,77 mi | 4,62 mi | 5,54 mi | **7,39 mi** |
-| Receita licenças | 0 | 120 mil | 960 mil | 3,00 mi | **7,20 mi** |
-| Receita implantações | 0 | 30 mil | 240 mil | 510 mil | **1,05 mi** |
-| **RECEITA TOTAL** | **924 mil** | **2,92 mi** | **5,82 mi** | **9,05 mi** | **15,64 mi** |
-| Pessoas na PAAPS | 4 | 9 | 15 | 20 | **27** |
-| **Receita por pessoa** | 231 mil | 324 mil | 388 mil | 453 mil | **579 mil** |
-| **Margem de contribuição** | 548 mil | 1,72 mi | 3,25 mi | 5,06 mi | **8,75 mi** |
+| Receita de licenças | 0 | 65 mil | 650 mil | 2,08 mi | **5,08 mi** |
+| Receita de implantações | 0 | 30 mil | 210 mil | 510 mil | **1,05 mi** |
+| **RECEITA TOTAL** | **924 mil** | **2,87 mi** | **5,48 mi** | **8,14 mi** | **13,52 mi** |
+| Pessoas na PAAPS | 4 | 9 | 15 | 19 | **28** |
+| **Receita por pessoa** | 231 mil | 319 mil | 365 mil | 428 mil | **483 mil** |
+| **Margem de contribuição** | 548 mil | 1,70 mi | 3,03 mi | 4,51 mi | **7,52 mi** |
 | Estrutura | (144 mil) | (360 mil) | (720 mil) | (1,20 mi) | **(1,80 mi)** |
-| **RESULTADO** | **404 mil** | **1,36 mi** | **2,53 mi** | **3,86 mi** | **6,95 mi** |
+| **RESULTADO** | **404 mil** | **1,34 mi** | **2,31 mi** | **3,31 mi** | **5,72 mi** |
+| **% de receita recorrente** | 0% | 2% | 12% | 26% | **38%** |
 
 ### 16.1 As três linhas que o investidor vai olhar
 
-**1. Receita por pessoa sobe de R$ 231 mil para R$ 579 mil.**
+**1. Receita por pessoa sobe de R$ 231 mil para R$ 483 mil.**
 Consultoria faz R$ 150 a R$ 250 mil por pessoa. Empresa de tecnologia faz
-R$ 400 mil para cima. **O modelo migra de consultoria para tecnologia sem
-mudar o que entrega**, e a linha que faz isso é o licenciamento.
+R$ 400 mil para cima. **O modelo migra de consultoria para tecnologia sem mudar
+o que entrega**, e a linha que faz isso é o licenciamento.
 
-**2. A receita recorrente cruza a receita de projeto no ano 5.**
-R$ 7,2 milhões de licença contra R$ 7,39 milhões de execução própria. É o ponto
-em que a empresa deixa de depender de vender de novo todo ano.
+**2. A receita recorrente vai de zero a 38% em cinco anos.**
+Sem licenciamento essa linha fica em zero e a empresa precisa vender tudo de
+novo todo ano. Com ela, mais de um terço da receita do ano 5 já está contratada
+antes do ano começar.
 
-**3. 27 pessoas para R$ 15,6 milhões.**
-Se tudo fosse execução própria, os mesmos R$ 15,6 milhões exigiriam cerca de
-40 pessoas e um teto operacional muito mais próximo.
+**3. 28 pessoas para R$ 13,5 milhões.**
+Se tudo fosse execução própria, os mesmos R$ 13,5 milhões exigiriam cerca de
+34 pessoas, e o teto operacional estaria muito mais perto.
 
----
+### 16.2 O que esta projeção NÃO é
+
+Ela não é previsão: é o modelo rodando com as premissas acima. **A variável que
+mais move o resultado não é preço nem custo: é quantos municípios entram por
+ano**, e isso depende inteiramente de um canal de venda que ainda não existe.
+
+Trocar "5 municípios no ano 3" por "3 municípios no ano 3" derruba o resultado
+daquele ano em quase 40%. **É por isso que o pedido para a aceleração é canal, e
+não dinheiro.**
 
 ## DEGRAU 17 · As duas travas de crescimento
 
