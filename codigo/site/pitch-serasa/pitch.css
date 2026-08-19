@@ -717,3 +717,10 @@ html{font-size:clamp(10px,calc(min(100vw,100vh * 16 / 9) / 80),16px)}
   html{font-size:16px!important}
   .slide{width:338.7mm!important;margin-inline:0!important}
 }
+/* Página de 25,4 x 14,29 cm: mesma proporção 16:9, metade da área de raster.
+   Em 33,87 cm o Chrome gerava PDF de 57 MB, grande demais para anexar em
+   formulário de inscrição. */
+@media print{
+  @page{size:254mm 142.9mm;margin:0}
+  .slide{width:254mm!important;height:142.9mm!important}
+}
