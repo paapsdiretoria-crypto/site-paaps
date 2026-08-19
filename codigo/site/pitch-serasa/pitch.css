@@ -692,3 +692,17 @@ h1,h2,h3{font-family:var(--titulo);font-weight:700;line-height:1.03;letter-spaci
 /* Slide 03: o crédito da Serasa vive no canto inferior esquerdo, então a linha
    de fontes recua para a direita para não escrever por cima dele. */
 #s3 .fonte{left:auto;right:var(--pad);width:min(50%,540px);text-align:right}
+
+/* ====================================================================== */
+/* O SLIDE CABE SEMPRE NA JANELA                                           */
+/* Com aspect-ratio 16/9 e largura 100%, numa janela mais baixa que 9/16   */
+/* da largura o slide fica MAIOR que a tela e o rodapé sai de vista: o     */
+/* leitor vê a célula cortada e pensa que é bug de layout. Limitando a     */
+/* largura pela altura disponível, o slide inteiro sempre aparece, com     */
+/* tarja lateral quando a janela é larga demais.                           */
+/* ====================================================================== */
+.slide{width:min(100%,calc(100vh * 16 / 9));margin-inline:auto}
+
+/* A tipografia passa a escalar pela largura REAL do slide, não da janela, */
+/* e nunca passa do tamanho de projeto (16px). */
+html{font-size:clamp(10px,calc(min(100vw,100vh * 16 / 9) / 80),16px)}
