@@ -18,6 +18,7 @@ O gate é diferente do da Fase 1 de propósito. A carta fria saiu sozinha porque
 - **Não escreve sem ler a resposta inteira, literal.** O aviso `RESPOSTA:` do n8n traz o texto. Resumo do aviso não basta: leia o que a pessoa escreveu, palavra por palavra, antes de formular qualquer coisa.
 - **Não promete o que não existe.** PDF, apresentação, material, portfólio, planilha, prazo ("até sexta") e valor só entram na resposta se o arquivo estiver pronto e você souber onde ele está. Se não está pronto, ou você não promete, ou constrói antes de responder.
 - **Não passa valor sem a unidade da entrada** (ver "A porta de entrada"). Nem tabela, nem "depende de vários fatores", nem faixa inventada.
+- **Confere o nome do município e da pessoa letra por letra, na última leitura.** Mantena vira Montana, Congonhal vira Congonhas, e o nome trocado desfaz numa linha toda a prova de que estudamos aquela cidade. Vale também para o nome do equipamento e do cargo.
 - **Não afirma nada sobre o município que você não checou nesta sessão.** A resposta costuma trazer fatos novos (equipamentos, cargos, projetos em curso): esses são dele, use os dele. Fato que você acrescentar precisa de fonte, como na Fase 1.
 
 ## Passo 1: ler quem respondeu, antes de escrever
@@ -36,11 +37,11 @@ Quando a pessoa conta o que o município já tem (equipamentos, cargo instituíd
 |---|---|
 | Interesse aberto ("queremos conhecer o trabalho") | Resposta curta, reconhece o que a rede já tem, nomeia a porta de entrada, oferece horários. |
 | Pede material ou apresentação | Manda o que existe hoje (site e páginas reais, conferidas nesta sessão). Se o material pedido não existe, não invente prazo: ofereça a conversa como o caminho mais curto, e sinalize à Mallu que falta a peça. |
-| Pede valores | Não foge e não inventa: nomeia o Diagnóstico NR-1 como unidade contratável e explica que o valor exato sai com o porte da rede. O número só sai com a Mallu tendo confirmado (ver "A porta de entrada"). |
+| Pede valores | Não foge e não inventa: nomeia o Diagnóstico 360 como unidade contratável e explica que o valor exato sai com o porte da rede. O número só sai com a Mallu tendo confirmado (ver "A porta de entrada"). |
 | Sou o setor errado / fale com fulano | Agradece, pede o encaminhamento e o contato certo, e cadastra a pessoa nova em (EMP) Contato. O lead continua em Aquecimento. |
 | Recusa clara | Agradece em duas linhas, sem insistir e sem "posso te mandar mais um material?". Status vai para `4. Perdido`. Volta ao pool frio só depois de 60 dias. |
 | Descadastro | Agradece, marca descadastro. Nunca mais entra em leva nenhuma. |
-| Autorresposta (férias, protocolo) | Ignora, não responde e não mexe no CRM. |
+| Autorresposta (férias, protocolo, "a prefeitura agradece seu contato") | Ignora, não responde. **Confere o CRM:** o filtro do n8n pode ter lido o protocolo como resposta de gente e movido o lead para Aquecimento. Se moveu, devolve para `1. Cadastrado`, desmarca `Respondeu?` e apaga a Atividade da falsa resposta, senão o lead sai do pool para sempre e a taxa de resposta do funil sobe sozinha. |
 | Erro de entrega | Não é resposta: corrige o endereço em (EMP) Contato antes do próximo toque. O lead volta a `0. Alvo` se a carta nunca chegou. |
 
 ## Passo 3: escrever a resposta
@@ -49,7 +50,7 @@ A carta fria já convenceu. A resposta não repete o argumento, ela marca a conv
 
 1. **Agradece nomeando o que ele disse.** Uma frase, específica ao que ele contou. Genérico ("agradecemos o contato") desperdiça a única prova de que você leu.
 2. **Reconhece o que a rede já construiu.** Quando o município já faz alguma coisa, esse é o ponto de partida do nosso trabalho, e dizer isso desarma a leitura de que viemos ensinar. Quando não faz, pule este movimento em vez de inventar elogio.
-3. **Nomeia a porta de entrada em duas ou três frases.** O que é o Diagnóstico NR-1 e o que a gestão tem na mão quando ele termina.
+3. **Nomeia a porta de entrada em duas ou três frases.** O que é o Diagnóstico 360 e o que a gestão tem na mão quando ele termina.
 4. **Convida com horário na mesa.** Ver o passo 4.
 
 Regras de escrita, todas herdadas da voz PAAPS Brasil:
@@ -73,17 +74,19 @@ O convite é a Conversa de Diagnóstico: 45 minutos, por vídeo, gratuita e sem 
 3. Nunca invente data. Use a data e a hora da sessão como referência para "esta semana", "terça", "amanhã".
 4. Confirmado o horário, o convite sai do Google Agenda com o link da chamada, e a Mallu marca `Teve reunião?` no CRM quando acontecer.
 
-## A porta de entrada: Diagnóstico NR-1
+## A porta de entrada: Diagnóstico 360
 
-A PAAPS Brasil entra pelo **Diagnóstico NR-1**, e essa é a unidade de precificação: valor unitário, contratação única, dentro do limite da **dispensa simples** (Decreto nº 12.807/2025, art. 75, II: R$ 65.492,11 em 2026 para serviços comuns). Entrar por dispensa é o que faz a venda acontecer sem depender do procurador do município, em duas a quatro semanas de papelada leve, em vez dos meses de um pregão.
+**O nome que vai para o lead é Diagnóstico 360.** "NR-1" é o driver legal que explica por que a demanda existe agora, e vive no nosso raciocínio interno e na conversa com quem cuida de gestão de pessoas. Nomear o produto pela norma encolhe o que a gente faz ao tamanho de uma obrigação, e trava na primeira prefeitura que perguntar se NR alcança estatutário.
 
-O que o Diagnóstico é, na frase que a gestão entende: a leitura do risco psicossocial daquela rede, feita com as equipes, que entrega à prefeitura o que a NR-1 passou a exigir desde maio de 2026 e, junto, o desenho do que precisa entrar depois. É por isso que ele abre porta: resolve uma obrigação que já existe e, só então, desenha o programa.
+O que o Diagnóstico 360 é, na frase que a rede entende: a leitura da rede, feita em diálogo profundo com as equipes, que devolve à gestão e aos técnicos o retrato dos riscos psicossociais, as prevalências e uma leitura honesta de como o trabalho daquela rede está em termos de saúde mental, junto com o desenho dos caminhos a considerar. Contratação única e simples, feita por psicólogos sistêmicos e sociais.
+
+Essa é também a unidade de precificação: valor unitário, contratação única, dentro do limite da **dispensa simples** (Decreto nº 12.807/2025, art. 75, II: R$ 65.492,11 em 2026 para serviços comuns). Entrar por dispensa é o que faz a venda acontecer sem depender do procurador do município, em duas a quatro semanas de papelada leve, em vez dos meses de um pregão.
 
 Depois do Diagnóstico vem a continuidade (execução própria ou licença), e isso não entra na resposta de Fase 2. Uma coisa por vez.
 
 > **Valor unitário: pendente de confirmação da Mallu.** Enquanto ela não fixar o número, a resposta nomeia a unidade e o caminho de dispensa, e o valor sai na conversa. Nenhum número vai por e-mail antes disso.
 
-> **Cuidado com o argumento da NR-1 diante de quadro estatutário.** As Normas Regulamentadoras alcançam o vínculo celetista, e boa parte do quadro municipal é estatutária. Antes de usar a NR-1 como obrigação legal com uma prefeitura específica, confirme como aquele município enquadra o próprio quadro. Se não se sustentar ali, o Diagnóstico continua sendo a porta, defendido pela leitura da rede, pelas faltas e afastamentos e pela qualidade do atendimento que chega ao cidadão.
+> **Cuidado com o argumento da NR-1 diante de quadro estatutário.** As Normas Regulamentadoras alcançam o vínculo celetista, e boa parte do quadro municipal é estatutária. Antes de usar a NR-1 como obrigação legal com uma prefeitura específica, confirme como aquele município enquadra o próprio quadro. O Diagnóstico 360 não depende disso para se defender: ele se sustenta pela leitura da rede, pelas faltas e afastamentos e pela qualidade do atendimento que chega ao cidadão.
 
 ## Passo 5: o CRM, depois que a resposta sai
 
@@ -107,7 +110,7 @@ O n8n já fez a parte dele quando a resposta chegou: moveu o lead para `Aquecime
 |---|---|
 | "Ele pediu material, mando o deck que já existe" | O deck de investidor tem 112 MB e foi escrito para outro leitor. Material que não existe para este leitor não se improvisa. |
 | "Prometo o PDF para sexta e a gente faz até lá" | Você acabou de criar um prazo para outra pessoa cumprir. Só promete o que está pronto. |
-| "Ele perguntou preço, respondo que depende de vários fatores" | Isso é evasiva com cara de resposta. Nomeie a unidade (Diagnóstico NR-1, dispensa) e puxe para a conversa. |
+| "Ele perguntou preço, respondo que depende de vários fatores" | Isso é evasiva com cara de resposta. Nomeie a unidade (Diagnóstico 360, dispensa) e puxe para a conversa. |
 | "Peço os dados por e-mail para já chegar com número" | Dever de casa para quem respondeu. Os dados saem da conversa, em 45 minutos, sem ele trabalhar. |
 | "Melhor ele escolher o horário que preferir" | Agenda em aberto adia. Dois ou três horários na mesa marcam. |
 | "É só um agradecimento curto, não precisa de gate" | Todo texto que sai assinado pela Mallu passa por ela nesta fase. |
