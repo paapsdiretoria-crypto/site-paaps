@@ -706,3 +706,14 @@ h1,h2,h3{font-family:var(--titulo);font-weight:700;line-height:1.03;letter-spaci
 /* A tipografia passa a escalar pela largura REAL do slide, não da janela, */
 /* e nunca passa do tamanho de projeto (16px). */
 html{font-size:clamp(10px,calc(min(100vw,100vh * 16 / 9) / 80),16px)}
+
+/* ====================================================================== */
+/* IMPRESSÃO: restaura o tamanho de página                                 */
+/* As regras de "caber na janela" acima usam vh e vêm depois da folha de   */
+/* impressão no arquivo, então venciam por ordem de origem e quebravam o   */
+/* PDF. Aqui elas são desfeitas no contexto de papel.                      */
+/* ====================================================================== */
+@media print{
+  html{font-size:16px!important}
+  .slide{width:338.7mm!important;margin-inline:0!important}
+}
