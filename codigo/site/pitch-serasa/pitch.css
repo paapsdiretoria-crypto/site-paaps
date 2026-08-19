@@ -647,3 +647,48 @@ h1,h2,h3{font-family:var(--titulo);font-weight:700;line-height:1.03;letter-spaci
   .org__linha{flex-wrap:wrap}
   .bolhas{max-width:100%}
 }
+
+/* ====================================================================== */
+/* ESCALA ÚNICA DO DECK                                                    */
+/* O slide é uma caixa 16:9 fixa: a altura vem da largura. Mas os tamanhos */
+/* de texto usam clamp() com piso em rem, que para de encolher e estoura a */
+/* caixa em janela estreita, cortando frase dentro da .grade (overflow     */
+/* hidden). Amarrando a raiz à largura, todo o deck encolhe junto, como    */
+/* um slide de verdade. Acima de 1280 nada muda.                           */
+/* ====================================================================== */
+@media (max-width:1279px){
+  html{font-size:calc(100vw / 80);}
+}
+
+/* --- Slide 02, o problema -------------------------------------------- */
+/* As duas colunas pousam na MESMA altura, abaixo da etiqueta de canto: a
+   esquerda estava ancorada no rodapé e caía sobre o rosto de quem está na
+   foto, a direita colidia com a palavra "Problema". */
+#s2 .split--esq,#s2 .split--dir{
+  top:calc(var(--pad) + 2.4em);bottom:auto;padding-bottom:var(--pad);
+}
+/* Foto mais assentada, para a frase do centro respirar sem depender de sombra
+   pesada. */
+#s2::after{background:linear-gradient(180deg,
+  rgba(30,14,3,.80) 0%,rgba(30,14,3,.70) 42%,
+  rgba(30,14,3,.74) 68%,rgba(30,14,3,.86) 100%)!important}
+/* Sombra em duas camadas: uma curta para desenhar a borda da letra, uma longa
+   e difusa para separar do fundo. É o que dá o assentamento sem borrar. */
+#s2 .centro-flut{
+  text-shadow:0 1px 3px rgba(15,7,2,.92),0 4px 10px rgba(15,7,2,.8),0 10px 40px rgba(15,7,2,.9);
+}
+
+/* --- Slide 06, as experiências --------------------------------------- */
+/* Quatro cartões numa linha ficavam pequenos demais para ler de longe. */
+#s6 .frag{grid-template-columns:repeat(2,1fr);gap:clamp(.6rem,1.3vw,1.2rem)}
+#s6 .frag__ond{font-size:clamp(.8rem,1.02vw,1.04rem)}
+#s6 .frag__q{font-size:clamp(.75rem,.94vw,.96rem);line-height:1.42}
+/* A coluna da esquerda pousa sobre parede clara e vazada: sem sombra, o corpo
+   do texto some. Mesma sombra em duas camadas da frase central. */
+#s2 .split h2{text-shadow:0 1px 3px rgba(15,7,2,.9),0 6px 22px rgba(15,7,2,.85)}
+/* A linha de fonte fica embaixo da coluna esquerda neste slide: recuada para a
+   direita, ela sai de baixo do texto. */
+#s2 .fonte{left:auto;right:var(--pad);width:min(52%,560px);text-align:right}
+/* Slide 03: o crédito da Serasa vive no canto inferior esquerdo, então a linha
+   de fontes recua para a direita para não escrever por cima dele. */
+#s3 .fonte{left:auto;right:var(--pad);width:min(50%,540px);text-align:right}
