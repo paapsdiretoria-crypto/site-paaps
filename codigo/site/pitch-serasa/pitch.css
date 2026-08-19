@@ -595,3 +595,55 @@ h1,h2,h3{font-family:var(--titulo);font-weight:700;line-height:1.03;letter-spaci
    Foi o defeito que apareceu ao adensar os slides na v2. */
 .slide:has(.fonte) .slide__c{padding-bottom:calc(var(--pad) + 2.6em)}
 .slide:has(.credito):not(:has(.fonte)) .slide__c{padding-bottom:calc(var(--pad) + 1.2em)}
+
+/* ====================================================================== */
+/* v3 · organograma, bolhas de método, esteira da comunidade              */
+/* ====================================================================== */
+
+/* --- ORGANOGRAMA ------------------------------------------------------ */
+.org{display:flex;flex-direction:column;gap:.5em;align-items:center;margin-top:.5em;width:100%}
+.org__linha{display:flex;gap:clamp(.5rem,1.6vw,1.5rem);justify-content:center;width:100%}
+.org__c{background:rgba(0,0,0,.42);border:1px solid rgba(245,241,225,.18);border-radius:4px;
+  padding:.5em .95em;text-align:center;display:flex;flex-direction:column;align-items:center}
+.org__c--topo{border-color:var(--amarelo);background:rgba(203,71,16,.26);padding:.6em 1.6em}
+.org__foto{width:clamp(34px,4.4vh,46px);height:clamp(34px,4.4vh,46px);border-radius:50%;
+  object-fit:cover;margin-bottom:.3em;border:1px solid rgba(245,241,225,.3)}
+.org__nome{font-family:var(--titulo);font-weight:700;line-height:1.12;color:#fff;
+  font-size:clamp(.7rem,.9vw,.92rem)}
+.org__cargo{font-size:clamp(.6rem,.75vw,.76rem);color:var(--amarelo);margin-top:.12em;line-height:1.2}
+.org__c--sup .org__cargo{color:var(--bege-rosa)}
+.org__ia{width:100%;border:1px dashed rgba(247,195,28,.6);border-radius:4px;
+  padding:.5em .9em;background:rgba(0,0,0,.34);display:flex;align-items:center;
+  justify-content:center;gap:clamp(.6rem,1.6vw,1.6rem);flex-wrap:wrap}
+.org__ia b{font-family:var(--titulo);font-weight:700;color:var(--amarelo);
+  font-size:clamp(.78rem,1vw,1.02rem);letter-spacing:.03em}
+.org__ia i{font-style:normal;font-size:clamp(.62rem,.78vw,.8rem);color:rgba(245,241,225,.9)}
+
+/* --- BOLHAS DO MÉTODO ------------------------------------------------- */
+.bolhas{display:flex;flex-wrap:wrap;gap:.45em .5em;justify-content:center;
+  margin:.9em auto 0;max-width:72ch}
+.bolha{background:rgba(0,0,0,.42);border:1px solid rgba(245,241,225,.2);border-radius:999px;
+  padding:.4em 1em;line-height:1.2;color:rgba(245,241,225,.95);
+  font-size:clamp(.7rem,.88vw,.9rem)}
+.bolha--f{background:rgba(203,71,16,.34);border-color:var(--amarelo);color:#fff;
+  font-weight:600;font-size:clamp(.78rem,1vw,1.02rem)}
+.bolha--m{background:rgba(247,195,28,.14);border-color:rgba(247,195,28,.45)}
+
+/* --- ESTEIRA DA COMUNIDADE -------------------------------------------- */
+.esteira{overflow:hidden;width:100%;margin-top:.6em;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);
+  mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+.esteira__t{display:flex;gap:.45rem;width:max-content;animation:correr 34s linear infinite}
+.esteira__t img{height:clamp(40px,6vh,64px);width:auto;border-radius:3px;object-fit:cover}
+@keyframes correr{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.esteira__t{animation:none}}
+.esteira__n{display:flex;gap:2.2em;justify-content:center;margin-top:.5em;flex-wrap:wrap}
+.esteira__n span{font-family:var(--titulo);font-weight:700;color:var(--amarelo);
+  font-size:clamp(.74rem,.95vw,.98rem)}
+.esteira__n span i{font-style:normal;font-weight:400;color:rgba(245,241,225,.88);
+  font-family:var(--corpo);font-size:.92em}
+
+@media(max-width:900px){
+  .org__linha{flex-wrap:wrap}
+  .bolhas{max-width:100%}
+}
