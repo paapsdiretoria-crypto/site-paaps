@@ -92,6 +92,5 @@ slide 06, citada como fato, sem os ODS pendurados nela.
 |---|---|
 | 1 | **Hierarquia e cargos da equipe**, para refazer o slide 14 |
 | 2 | Confirmar que não há PEP nem litígio pendente entre os sócios |
-| 3 | De onde veio o nome "PROSAMES/Allos", que não confirmei em nenhuma busca |
-| 4 | Revisar a redação slide a slide e aprovar |
-| 5 | Depois de aprovado o de 15, derivar o roteiro falado de 8 para o Pitch Day |
+| 3 | Revisar a redação slide a slide e aprovar |
+| 4 | Depois de aprovado o de 15, derivar o roteiro falado de 8 para o Pitch Day |

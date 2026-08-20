@@ -172,13 +172,21 @@ R$ 250 milhões de ARR, aplicativo, sessão individual, dado emocional para RH.
 É o produto que o slide 6 do deck já recusa: solução individual para problema
 criado pelo trabalho.
 
-## 2.3 O que eu não consegui confirmar
+## 2.3 O concorrente direto: PROSAMES, da Associação Allos
 
-**Não encontrei o "PROSAMES/Allos"** que está registrado como concorrente único
-nas nossas anotações. As buscas trouxeram a Rede SOMOS de São Paulo, o PROSM do
-DF e a PROSAM (Associação Pró-Saúde Mental, convênio da Secretaria de Saúde de
-SP), que são coisas diferentes. **Preciso que você me diga de onde veio esse
-nome** antes de eu colocar qualquer coisa sobre ele no deck.
+**Confirmado pela Mallu em 20/08/2026.** É o concorrente real e único em disputa
+de mercado: vende para o mesmo comprador, o município. Minhas buscas não acharam
+o nome e traziam Rede SOMOS, PROSM do DF e PROSAM de São Paulo, que são outras
+coisas; o que vale aqui é o conhecimento de dentro, porque a Mallu foi diretora
+da Allos.
+
+O que ele entrega: formação curta de psicoeducação, atendimento online e alguns
+grupos, começando pela camada individual. Sem leitura de território, sem
+articulação intersetorial.
+
+Onde a PAAPS se separa: a unidade de trabalho é a equipe dentro do horário de
+serviço, e o que se redesenha é a rede pública inteira, com quem conhece CAPS,
+CREAS, CRAS e postinho por dentro.
 
 ---
 
@@ -536,5 +544,4 @@ número grande, `destaque` é o realce, `lead` é o corpo, `fonte` é a origem.
 |---|---|---|
 | 1 | **Decidir: deck de 14 ou de 8?** Nada avança sem isso | você |
 | 2 | A hierarquia e os cargos da equipe | você vai mandar |
-| 3 | De onde veio o nome "PROSAMES/Allos", que não confirmei em nenhuma busca | você |
-| 4 | Aprovar ou recusar a redação de cada slide acima | você |
+| 3 | Aprovar ou recusar a redação de cada slide acima | você |
