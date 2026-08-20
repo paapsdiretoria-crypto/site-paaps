@@ -113,9 +113,11 @@ img{max-width:100%;display:block}
    precisa do reforço do véu denso. Só o bastante pra letra assentar. */
 .veu-suave::after{background:linear-gradient(180deg,rgba(30,14,3,.6) 0%,rgba(30,14,3,.56) 100%)}
 
-/* Véu denso: onde o slide carrega grade e o texto precisa de chão inteiro. */
+/* Véu denso: onde o slide carrega grade e o texto precisa de chão inteiro.
+   Afrouxado em 20/08 (era .94/.92, quase opaco): as fotos são pessoas reais
+   da PAAPS e precisam aparecer por trás do texto, não só sustentar contraste. */
 .veu-denso::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
-  background:linear-gradient(180deg,rgba(30,14,3,.94) 0%,rgba(30,14,3,.92) 100%)}
+  background:linear-gradient(180deg,rgba(30,14,3,.84) 0%,rgba(30,14,3,.80) 100%)}
 
 .slide__c{
   position:relative;z-index:3;width:100%;
