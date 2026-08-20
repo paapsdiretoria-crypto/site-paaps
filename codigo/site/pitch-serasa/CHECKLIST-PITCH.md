@@ -8,18 +8,21 @@
 
 ## A · O QUE VOCÊ JÁ SINALIZOU E AINDA NÃO RESOLVEMOS
 
-### A1 · O tamanho do mercado : DECIDIDO em 20/08/2026
-**É o número bruto de municípios do Brasil: 5.569/5.570, sem filtro nem fatia de SAM.**
-Ainda falta **aplicar** essa decisão nos slides que hoje usam esse número de outro jeito
-ou fatiado: checar Validação (06), Modelo de negócio (07), Go to market (08), Projeções
-(12) e Métricas (13) quando a revisão chegar neles.
+### A1 · O tamanho do mercado : TAM/SAM/SOM fica, TAM decidido, SAM ainda em aberto
+**TAM = 5.569/5.570 municípios do Brasil, bruto.** Isso é só a base: **a régua TAM/SAM/SOM
+inteira continua valendo**, ela confirmou explicitamente ("com certeza a gente precisa
+colocar o TAM, SAM e SOM"). Falta achar a fatia certa do **SAM** — a que eu tinha usado
+(54% dos municípios sem programa de atenção a transtornos mentais) está errada, porque é
+sobre saúde mental pública pro cidadão (CAPS/RAPS), não sobre o mercado real da PAAPS
+(cuidar de quem trabalha na rede). **É mudança estrutural**, nas palavras dela: mexe em
+Validação (06), Modelo de negócio (07), Go to market (08), Concorrência (09), Projeções
+(12) e Métricas (13).
 
-### A1b · NR-1 não vale como obrigatoriedade pra prefeitura/servidor estatutário
-**Erro grave identificado 20/08/2026** (norma é CLT, não vincula servidor público do
-mesmo jeito). Já foi tirada do slide 04. **Ainda aparece em 2 lugares, sem corrigir:**
-slide 08 (nome do produto "Relatório de Riscos Psicossociais (NR-1), R$ 10.000" — talvez
-possa ficar como nome, decidir) e slide 10 ("a NR-1 agora obriga a medir" — essa é a
-alegação errada, precisa reescrever).
+### A1b · NR-1 : RESOLVIDO em 20/08/2026, sem rastro no deck
+Norma do MTE sob CLT, não vincula servidor público estatutário do mesmo jeito — não pode
+mais aparecer como alegação de obrigatoriedade. Saiu do slide 04 (reescrito), do slide 08
+("Relatório de Riscos Psicossociais (NR-1)" virou **"Diagnóstico 360°"**, nome oficial do
+produto agora) e do slide 10 (frase da obrigatoriedade cortada, ficou só o fato verdadeiro).
 
 ### A2 · O logo da Serasa no slide 03
 Já aplicado, junto da frase de fecho. **Confirmar se o uso está adequado:** é o logo
