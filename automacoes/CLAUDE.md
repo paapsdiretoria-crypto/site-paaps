@@ -131,6 +131,7 @@ sempre deixar marca do que o agente fez, porque sem marca ele repete na semana s
 | ~~Gate por amostragem (corte 85)~~ revogado: **gate zero na prospecção** | 02/08/26 | Durou dois dias. Ela leu a primeira rodada automática, aprovou a escrita e tirou a aprovação carta a carta: as 5 do dia saem de segunda a sexta com qualquer nota. Ficam de pé só as 4 reprovações automáticas (integridade, não gosto). Único gate que sobra: resposta de gente |
 | Prospecção roda **só de segunda a sexta** | 02/08/26 | Em 01/08 um e-mail saiu num sábado. Prefeitura não lê fim de semana e primeiro toque de sábado se perde. Escrita 17h e 21h (dias úteis), disparo 07:30 (dias úteis) |
 | Todo e-mail enviado vira registro legível no Notion | 02/08/26 | O SMTP não deixa cópia na caixa de Enviados: sem esse registro a Mallu não tem como ler o que foi mandado em nome dela. A página da carta guarda o texto, o destinatário e a hora (`Enviada em`), e um aviso por e-mail resume o que saiu no dia |
+| Cópia de tudo que sai gravada na pasta Enviados do Titan | 20/08/26 | Descoberto que a pasta tinha 1 mensagem só: SMTP entrega ao destinatário e não grava cópia, e o n8n dispara por SMTP puro. O serviço `com.mallu.sincroniza-enviados` remonta cada carta a partir de (EMP) Cartas de Prospecção e grava em Enviados, com a data do disparo. Ver `codigo/prospeccao-enviados/` |
 | Notion como CRM, sem espelho Supabase | jul/26 | Fonte única. Supabase só quando o app exigir banco de verdade |
 | Cooldown de 60 dias via Atividade, sem campo novo | 14/07/26 | Usa o schema que já existe |
 
