@@ -1,18 +1,25 @@
 # Pente fino do pitch: tudo que ainda está aberto
 
-> 19/08/2026. Feito a partir de tudo que você levantou nesta construção.
+> 19/08/2026, atualizado 20/08/2026. Revisão slide a slide em andamento: 01 a 05 fechados
+> nesta rodada, retomar no **slide 06 (Validação)**.
 > Deck atual: `index-v4.html`, 15 slides (05 e 10 fundidos em 20/08). Prazo: 31/08, 20h59 de Brasília.
 
 ---
 
 ## A · O QUE VOCÊ JÁ SINALIZOU E AINDA NÃO RESOLVEMOS
 
-### A1 · O tamanho do mercado está medido errado
-**Você levantou isso e eu não mexi, porque não sei qual é a leitura certa.**
-Hoje o deck usa 5.570 municípios e uma projeção de 100 deles em 5 anos.
-O que precisa ser decidido: contamos município, servidor, equipe ou rede?
-Cada uma dá um número diferente e uma história diferente.
-**Isso afeta os slides 09, 12 e 13.** É o item mais pesado da lista.
+### A1 · O tamanho do mercado : DECIDIDO em 20/08/2026
+**É o número bruto de municípios do Brasil: 5.569/5.570, sem filtro nem fatia de SAM.**
+Ainda falta **aplicar** essa decisão nos slides que hoje usam esse número de outro jeito
+ou fatiado: checar Validação (06), Modelo de negócio (07), Go to market (08), Projeções
+(12) e Métricas (13) quando a revisão chegar neles.
+
+### A1b · NR-1 não vale como obrigatoriedade pra prefeitura/servidor estatutário
+**Erro grave identificado 20/08/2026** (norma é CLT, não vincula servidor público do
+mesmo jeito). Já foi tirada do slide 04. **Ainda aparece em 2 lugares, sem corrigir:**
+slide 08 (nome do produto "Relatório de Riscos Psicossociais (NR-1), R$ 10.000" — talvez
+possa ficar como nome, decidir) e slide 10 ("a NR-1 agora obriga a medir" — essa é a
+alegação errada, precisa reescrever).
 
 ### A2 · O logo da Serasa no slide 03
 Já aplicado, junto da frase de fecho. **Confirmar se o uso está adequado:** é o logo
@@ -38,10 +45,10 @@ da investidora ao lado de um dado dela, sem endosso implícito.
 
 | | O que ficou de fora | Onde caberia |
 |---|---|---|
-| C1 | **A palavra GovTech**, que está no contrato social e é o enquadramento jurídico da empresa | slide 11, Tecnologia |
-| C2 | **A ECOA**, a comunidade de aprendizagem | slide 15, junto da esteira |
+| C1 | **A palavra GovTech**, que está no contrato social e é o enquadramento jurídico da empresa | slide 10, Tecnologia |
+| C2 | **A ECOA**, a comunidade de aprendizagem | slide 14, junto da esteira |
 | C3 | **O TEAtrar** aparece só na linha da Gabriela | pode virar prova de que a casa cria produto |
-| C4 | **A cláusula de negócio social** do contrato social: prioriza impacto e limita distribuição de excedente em favor de P,D&I | slide 16, o pedido |
+| C4 | **A cláusula de negócio social** do contrato social: prioriza impacto e limita distribuição de excedente em favor de P,D&I | slide 15, o pedido |
 | C5 | **99% de capital feminino** | critério pontuado em muitos programas |
 | C6 | **CNPJ ativo há 23 anos, sem dívida, certidões negativas** | some do deck hoje; era prova de habilitação |
 
@@ -74,10 +81,10 @@ Relatório N01 como produto de entrada, plataforma que permite licenciar.
 
 | | Item | Situação |
 |---|---|---|
-| E1 | Slide 15, organograma | Funciona, mas o desenho fica pequeno e sobra vazio à esquerda. **Decidir se cresce ou se o título encolhe** |
-| E2 | Esteira de fotos do slide 15 | Usa fotos de campo da PAAPS, **não retratos dos 120 da comunidade**. Confirmar se está ok |
-| E3 | Slide 03 | Ainda é o mais apertado do deck |
-| E4 | Slide 10, bolhas | Bolhas centralizadas e texto alinhado à esquerda: leve descasamento visual |
+| E1 | Slide 14, organograma | Funciona, mas o desenho fica pequeno e sobra vazio à esquerda. **Decidir se cresce ou se o título encolhe** |
+| E2 | Esteira de fotos do slide 14 | Usa fotos de campo da PAAPS, **não retratos dos 120 da comunidade**. Confirmar se está ok |
+| E3 | Slide 03 | **Resolvido 20/08.** Título novo, dado maior, fecho com logos+pergunta em bloco separado |
+| E4 | Slide 05, bolhas | Bolhas do método migraram pro slide 05 na fusão de 20/08. Conferir alinhamento depois de ver o slide fundido |
 | E5 | Arquivos antigos | `index-v2.html` e `index-v3.html` ficaram na pasta. **Apagar depois que você aprovar o v4** |
 
 ---
@@ -86,7 +93,7 @@ Relatório N01 como produto de entrada, plataforma que permite licenciar.
 
 | | Decisão | Por que trava |
 |---|---|---|
-| F1 | **Deck de 16 é o de submissão?** | Se sim, depois eu derivo o roteiro falado de 8 para o Pitch Day presencial em SP |
+| F1 | **Deck de 15 é o de submissão?** | Se sim, depois eu derivo o roteiro falado de 8 para o Pitch Day presencial em SP |
 | F2 | **O licenciamento entra com esse peso?** | Ele aparece em 4 slides hoje. É a resposta de escala, e é um produto que ainda não existe |
 | F3 | **A projeção de 5 anos fica?** | Depende do A1, o tamanho do mercado |
 
