@@ -448,6 +448,14 @@ addEventListener('keydown',ev=>{
  const b=[...slides].reverse().find(s=>s.getBoundingClientRect().top<=5);
  if(['ArrowDown','ArrowRight',' ','PageDown'].includes(ev.key)&&a){ev.preventDefault();a.scrollIntoView();}
  if(['ArrowUp','ArrowLeft','PageUp'].includes(ev.key)&&b){ev.preventDefault();b.scrollIntoView();}});
+
+/* ?solo=N mostra apenas o slide N, em tela cheia. É o que permite fotografar
+   slide a slide para montar o PDF sem depender de folha de impressão. */
+(()=>{const n=new URLSearchParams(location.search).get('solo');
+ if(!n) return;
+ slides.forEach((s,i)=>{ s.style.display=(i+1==n)?'':'none'; s.classList.add('vis'); });
+ document.querySelectorAll('.barra').forEach(b=>b.remove());
+ document.documentElement.style.scrollBehavior='auto'; window.scrollTo(0,0);})();
 </script>
 </body>
 </html>

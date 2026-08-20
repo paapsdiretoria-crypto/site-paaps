@@ -164,3 +164,126 @@ Na mesma pasta da peça, com nome que diz o que é e para quem vai:
 
 Arquivo temporário de conversão (cópia do HTML, pasta de imagem reduzida) se
 apaga ao terminar.
+
+---
+
+## Quando a peça é DESIGN (pitch, carrossel, capa): fotografe, não imprima
+
+`@media print` cria um **segundo layout**, e todo segundo layout diverge do
+primeiro. Divergiu, o PDF sai deformado e você só descobre olhando.
+
+Para peça desenhada, o caminho seguro é outro: **fotografar cada tela e montar
+o PDF com as fotos.** Não existe folha de impressão, então não existe do que
+divergir. O PDF passa a ser, literalmente, o que se vê na tela.
+
+Custo: o texto deixa de ser selecionável. Para pitch e carrossel, não pesa.
+Para relatório e proposta que alguém vai copiar trecho, aí sim use `@media print`.
+
+### O passo a passo
+
+**1 · A peça precisa saber mostrar uma tela por vez.** Um parâmetro na URL:
+
+```js
+(()=>{const n=new URLSearchParams(location.search).get('solo');
+ if(!n) return;
+ slides.forEach((s,i)=>{ s.style.display=(i+1==n)?'':'none'; s.classList.add('vis'); });
+ document.querySelectorAll('.barra').forEach(b=>b.remove());
+ window.scrollTo(0,0);})();
+```
+
+`classList.add('vis')` é indispensável: sem ele, o que depende de
+IntersectionObserver sai invisível.
+
+**2 · Fotografe uma a uma:**
+
+```bash
+CH="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+mkdir -p .export
+for i in $(seq 1 16); do
+  "$CH" --headless=new --disable-gpu --no-sandbox --hide-scrollbars \
+    --virtual-time-budget=12000 --window-size=1920,1080 \
+    --screenshot=".export/p$(printf %02d $i).png" \
+    "http://localhost:8099/caminho/peca.html?solo=$i" >/dev/null 2>&1
+done
+```
+
+**3 · PNG pesa demais. Converta:**
+
+```bash
+cd .export && for f in p*.png; do
+  sips -s format jpeg -s formatOptions 88 "$f" --out "${f%.png}.jpg" >/dev/null
+done && rm -f p*.png
+```
+
+**4 · Monte uma página só de imagens e imprima ela:**
+
+```html
+<style>
+  @page{size:338.7mm 190.5mm;margin:0}
+  *{margin:0;padding:0}
+  .pg{width:338.7mm;height:190.5mm;page-break-after:always;overflow:hidden}
+  .pg img{width:338.7mm;height:190.5mm;object-fit:cover;display:block}
+</style>
+<div class="pg"><img src="p01.jpg"></div>
+```
+
+A proporção da imagem tem que ser a mesma da página, senão `object-fit:cover`
+corta. 1920×1080 casa com 338,7 × 190,5 mm.
+
+**Resultado no pitch da PAAPS: 16 páginas, 6,4 MB, idêntico à tela.**
+
+---
+
+## Se insistir em `@media print`, confira estes dois
+
+### Transform que POSICIONA, não anima
+
+A folha de impressão costuma trazer `.rev{transform:none!important}` para matar
+a animação de entrada. Só que elemento centralizado por
+`left:50%; transform:translate(-50%,-50%)` **usa transform para se posicionar**.
+Zerado, ele salta meia largura para a direita.
+
+Varra o CSS antes de exportar:
+
+```bash
+grep -nE "transform:\s*translate" arquivo.css
+```
+
+Todo achado precisa ser devolvido no print:
+
+```css
+@media print{ .centro-flut{transform:translate(-50%,-50%)!important} }
+```
+
+### A página em mm tem que casar com a largura de projeto
+
+A 96 dpi: **338,7 mm = 1280 px** e **254 mm = 960 px**.
+
+Se o layout foi desenhado para 1280 e a página é de 254 mm, a fonte de 1280 vai
+para uma caixa de 960 e **deforma tudo**. Descubra a largura de projeto antes de
+escolher a página.
+
+| Largura de projeto | Página que casa |
+|---|---|
+| 1280 px | 338,7 × 190,5 mm |
+| 1600 px | 423,3 × 238,1 mm |
+| 1920 px | 508 × 285,8 mm |
+
+---
+
+## Bibliotecas de terceiros: já verificadas, todas reprovadas
+
+Verificado em 19/08/2026, para não repetir a pesquisa:
+
+| Biblioteca | Veredito |
+|---|---|
+| **spipu/html2pdf** (PHP, TCPDF) | O próprio README desaconselha converter página web existente e avisa que **não dá suporte** para esse uso |
+| **angelobelchior/Html2Pdf** (C#) | Embrulha o **wkhtmltopdf**, arquivado em 2023, com **CVE-2022-35583 (SSRF, CVSS 9.8 crítico) sem correção possível**, porque o projeto está morto. **Reprovado por segurança** |
+| **xhtml2pdf** (Python, ReportLab) | Suporta **CSS 2.1** e um pouco de CSS 3. Sem grid, sem flexbox, sem variáveis |
+
+Todas são **geradoras de documento**, feitas para nota fiscal e relatório a
+partir de markup simples. Nenhuma é navegador. Peça com grid, flexbox,
+`clamp()`, variáveis ou `aspect-ratio` sai destruída nas três.
+
+**O renderizador que entende CSS moderno já está na máquina e chama Chrome.**
+Quando o PDF sai errado, o problema é o CSS de impressão, não o motor.
