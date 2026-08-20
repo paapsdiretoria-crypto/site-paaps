@@ -736,3 +736,14 @@ html{font-size:clamp(10px,calc(min(100vw,100vh * 16 / 9) / 80),16px)}
   .slide{width:338.7mm!important;height:190.5mm!important;margin-inline:0!important}
   html{font-size:16px!important}
 }
+/* Slide 02: as três zonas somavam mais de 100% da largura e se sobrepunham
+   (a frase central batia no "40,7%" da coluna direita). Agora 31 + 34 + 31
+   fecham em 96% e sobra corredor entre elas. */
+#s2 .split{width:min(31%,368px)}
+#s2 .centro-flut{width:min(34%,430px)}
+/* Véu mais firme: a porta clara atrás da frase central exigia mais chão. */
+#s2::after{background:linear-gradient(180deg,
+  rgba(30,14,3,.86) 0%,rgba(30,14,3,.80) 40%,
+  rgba(30,14,3,.82) 66%,rgba(30,14,3,.90) 100%)!important}
+/* A linha de fontes estava por baixo da coluna direita: desce e encolhe. */
+#s2 .fonte{left:var(--pad);right:auto;width:min(46%,520px);text-align:left}
