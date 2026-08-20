@@ -169,6 +169,22 @@ apaga ao terminar.
 
 ## Quando a peça é DESIGN (pitch, carrossel, capa): fotografe, não imprima
 
+### Atalho: já existe script pronto
+
+```bash
+.claude/skills/exporta-html-pdf/exportar-slides.sh \
+  "http://localhost:8099/caminho/peca.html" 16 saida.pdf
+```
+
+Argumentos: url base, quantas telas, arquivo de saída, e opcionalmente largura e
+altura da captura (padrão 1920×1080). Ele fotografa uma a uma, converte para
+JPEG, monta e confere. **A peça precisa entender `?solo=N`**, e o bloco para
+colar está logo abaixo.
+
+Testado no pitch da PAAPS: **16 páginas, 338,7 × 190,5 mm, 6,4 MB, idêntico à tela.**
+
+### Por que não usar `@media print`
+
 `@media print` cria um **segundo layout**, e todo segundo layout diverge do
 primeiro. Divergiu, o PDF sai deformado e você só descobre olhando.
 
