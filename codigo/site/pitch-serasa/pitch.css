@@ -776,3 +776,26 @@ html{font-size:clamp(10px,calc(min(100vw,100vh * 16 / 9) / 80),16px)}
    para o corredor central, o único vão livre do slide. */
 #s2 .fonte{left:50%;right:auto;transform:translateX(-50%);
   width:min(41%,520px);text-align:center}
+
+/* --- Slide 02: menos quebras de linha --------------------------------- */
+/* Cada quebra é uma pausa que o olho paga. Aqui se ganha largura útil
+   reduzindo o respiro interno das colunas, e o corpo desce um pouco, para
+   caber mais palavra por linha sem encolher a leitura. */
+#s2 .split{padding:var(--pad) clamp(20px,2vw,34px)}
+#s2 .split h2{font-size:clamp(1.12rem,1.86vw,1.86rem)!important;line-height:1.2;max-width:none!important;
+  text-shadow:0 1px 3px rgba(15,7,2,.9),0 6px 22px rgba(15,7,2,.85)}
+/* O corredor central ganha os 30px que sobraram de cada lado. */
+#s2 .centro-flut{width:min(38%,486px);font-size:clamp(1.15rem,2.15vw,2.15rem);line-height:1.16}
+/* Célula mais enxuta por dentro: é o que tira uma linha de cada descritivo. */
+#s2 .grade--vert .cel{padding:clamp(10px,1.05vw,15px) clamp(12px,1.25vw,18px)}
+#s2 .par .cel{padding:clamp(9px,.95vw,13px) clamp(10px,1.05vw,14px)}
+#s2 .par .cel__l{font-size:clamp(.72rem,.86vw,.86rem);line-height:1.34}
+#s2 .par .cel__n{font-size:clamp(1.15rem,1.95vw,1.95rem)}
+/* Fontes numa linha só, no rodapé, ao lado do crédito da foto. */
+#s2 .fonte{left:var(--pad);right:auto;transform:none;width:min(58%,760px);
+  text-align:left;font-size:clamp(.52rem,.66vw,.66rem);line-height:1.3;
+  text-shadow:0 1px 3px rgba(15,7,2,.95),0 2px 8px rgba(15,7,2,.9)}
+/* A linha de fontes cai sobre o colete branco do agente comunitário: sombra
+   sozinha não segura. Um respaldo discreto resolve sem virar caixa. */
+#s2 .fonte{background:rgba(20,10,2,.62);padding:.35em .7em;border-radius:3px;
+  backdrop-filter:blur(2px);bottom:calc(14px + .2em)}
