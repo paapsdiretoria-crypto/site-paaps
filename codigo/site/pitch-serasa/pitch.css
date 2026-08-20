@@ -747,3 +747,17 @@ html{font-size:clamp(10px,calc(min(100vw,100vh * 16 / 9) / 80),16px)}
   rgba(30,14,3,.82) 66%,rgba(30,14,3,.90) 100%)!important}
 /* A linha de fontes estava por baixo da coluna direita: desce e encolhe. */
 #s2 .fonte{left:var(--pad);right:auto;width:min(46%,520px);text-align:left}
+
+/* ====================================================================== */
+/* IMPRESSÃO: devolve os transforms que POSICIONAM                         */
+/* A folha de impressão zera `transform` para desligar a animação de       */
+/* entrada. Só que quatro elementos usam transform para se POSICIONAR, e   */
+/* não para animar: zerados, eles saltam meia largura ou meia altura do    */
+/* lugar. Era isso que deformava o PDF.                                    */
+/* ====================================================================== */
+@media print{
+  .centro-flut,.centro-flut.rev{transform:translate(-50%,-50%)!important}
+  .flutuante,.flutuante.rev{transform:translateY(-50%)!important}
+  .sus-logo,.sus-logo.rev{transform:translateY(-50%)!important}
+  .cel--seq::after{transform:translateY(-50%)!important}
+}
