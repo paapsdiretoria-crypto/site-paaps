@@ -736,7 +736,7 @@ h1,h2,h3{font-family:var(--titulo);font-weight:700;line-height:1.03;letter-spaci
   width:min(30%,230px);
 }
 .mini-caminho__svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none;z-index:0}
-.mini-caminho__linha{fill:none;stroke:var(--branco);stroke-width:2;stroke-linecap:round;opacity:.7}
+.mini-caminho__linha{stroke:var(--branco);stroke-width:1;opacity:.6}
 .mini-caminho__passos{
   list-style:none;margin:0;padding:0;position:relative;z-index:1;
   display:grid;gap:clamp(18px,2.4vw,30px);

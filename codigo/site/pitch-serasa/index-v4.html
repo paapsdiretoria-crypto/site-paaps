@@ -112,8 +112,8 @@
   <div class="slide__foto"><img src="../home/img/paaps/treino-sala.jpg" alt="Equipe municipal reunida em sala"></div>
   <p class="canto rev">Solução</p>
   <div class="mini-caminho rev rev--3">
-    <svg class="mini-caminho__svg" viewBox="0 0 60 208" preserveAspectRatio="none" aria-hidden="true">
-      <path class="mini-caminho__linha" d="M26 26 L26 182"/>
+    <svg class="mini-caminho__svg" aria-hidden="true">
+      <line class="mini-caminho__linha"/>
     </svg>
     <ol class="mini-caminho__passos">
       <li class="mini-caminho__passo"><span class="mini-caminho__pt"></span><span class="mini-caminho__t">Diagnóstico 360<i>°</i></span></li>
@@ -123,7 +123,7 @@
   </div>
   <div class="slide__c c--centro">
     <h2 class="t-fluxo rev rev--1" style="font-size:clamp(1.25rem,2.1vw,2.05rem);max-width:58ch">Rodas de Equipe: tudo que uma equipe precisa está nela mesma. <span class="destaque">A PAAPS desvela as potências.</span> A solução já existe, só precisa do contexto certo para emergir.</h2>
-    <p class="lead rev rev--2" style="margin-top:.5em;font-size:clamp(.86rem,1.05vw,1.05rem);line-height:1.44;max-width:108ch">Terapia individual trata o adoecimento que o trabalho produz como culpa de quem não aguentou. <b>Uma psicóloga alcança dez pessoas na mesma hora</b>, e resolve o que trava entre elas: o que a clínica nunca alcança sozinha.</p>
+    <p class="lead rev rev--2" style="margin-top:.5em;font-size:clamp(.86rem,1.05vw,1.05rem);line-height:1.44;max-width:108ch">Terapia individual trata o adoecimento que o trabalho produz como culpa de quem não aguentou. No método PAAPS: <b>uma psicóloga alcança dez pessoas na mesma hora</b> e resolve o que trava entre elas, um alcance e aproveitamento do trabalho, da psicologia, que a clínica individual sozinha nunca chega.</p>
     <div class="bolhas rev rev--2">
       <span class="bolha bolha--f">elaborar as cenas do próprio trabalho</span>
       <span class="bolha">elaboração de casos</span>
@@ -465,6 +465,30 @@ addEventListener('keydown',ev=>{
  slides.forEach((s,i)=>{ s.style.display=(i+1==n)?'':'none'; s.classList.add('vis'); });
  document.querySelectorAll('.barra').forEach(b=>b.remove());
  document.documentElement.style.scrollBehavior='auto'; window.scrollTo(0,0);})();
+
+/* Slide 05, o caminho em miniatura: a linha liga o CENTRO do primeiro ponto
+   ao CENTRO do último, medidos de verdade na tela (os pontos não caem numa
+   régua fixa porque o texto ao lado de cada um quebra em alturas diferentes).
+   Mesma lógica do .trilha-passos do site, só que sem o scroll: aqui é um
+   traço reto só, desenhado uma vez. */
+function desenharMiniCaminho(){
+ const caixa=document.querySelector('.mini-caminho');
+ if(!caixa) return;
+ const svg=caixa.querySelector('.mini-caminho__svg');
+ const linha=caixa.querySelector('.mini-caminho__linha');
+ const pontos=[...caixa.querySelectorAll('.mini-caminho__pt')];
+ if(!svg||!linha||pontos.length<2) return;
+ const cb=caixa.getBoundingClientRect();
+ svg.setAttribute('viewBox','0 0 '+cb.width+' '+cb.height);
+ const centro=el=>{const b=el.getBoundingClientRect();
+  return {x:b.left-cb.left+b.width/2, y:b.top-cb.top+b.height/2};};
+ const a=centro(pontos[0]), z=centro(pontos[pontos.length-1]);
+ linha.setAttribute('x1',a.x); linha.setAttribute('y1',a.y);
+ linha.setAttribute('x2',z.x); linha.setAttribute('y2',z.y);
+}
+desenharMiniCaminho();
+if(document.fonts&&document.fonts.ready) document.fonts.ready.then(desenharMiniCaminho);
+addEventListener('resize',desenharMiniCaminho);
 </script>
 </body>
 </html>
