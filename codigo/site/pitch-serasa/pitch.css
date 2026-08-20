@@ -761,3 +761,18 @@ html{font-size:clamp(10px,calc(min(100vw,100vh * 16 / 9) / 80),16px)}
   .sus-logo,.sus-logo.rev{transform:translateY(-50%)!important}
   .cel--seq::after{transform:translateY(-50%)!important}
 }
+
+/* --- Slide 02: corpo maior e o par de dados lado a lado ---------------- */
+/* A explicação sob cada número estava pequena demais: forçava a vista num
+   slide que é o primeiro contato do investidor com a tese. */
+#s2 .grade--vert .cel__l{font-size:clamp(.82rem,1vw,1rem);line-height:1.42}
+#s2 .grade--vert .cel__n{font-size:clamp(1.3rem,2.25vw,2.25rem)}
+/* Educação e saúde dividem a mesma faixa, para o contraste entre 97 e 81
+   acontecer no olho, sem precisar de texto explicando. */
+#s2 .par{display:grid;grid-template-columns:1fr 1fr;gap:1px;
+  background:rgba(245,241,225,.2)}
+#s2 .par .cel{background:rgba(37,19,5,.86)}
+/* As duas colunas ocupam os cantos inferiores, então a linha de fontes vai
+   para o corredor central, o único vão livre do slide. */
+#s2 .fonte{left:50%;right:auto;transform:translateX(-50%);
+  width:min(41%,520px);text-align:center}
