@@ -723,28 +723,38 @@ h1,h2,h3{font-family:var(--titulo);font-weight:700;line-height:1.03;letter-spaci
 #s3 .cel__l{font-size:clamp(.9rem,1.12vw,1.14rem);line-height:1.44}
 
 /* --- Slide 05, o caminho em miniatura ---------------------------------- */
-/* Fundiu Solução (05) e Método (10, removido): a sequência de entrada, que
-   antes era uma grade de 3 células, agora é só um lembrete de que o método
-   permanece no território, num cantinho abaixo da etiqueta de canto. Mesma
-   linguagem visual da trilha do site (linha curva + pontos acesos), sem
-   animação porque o deck sai em PDF. */
+/* Fundiu Solução (05) e Método (10, removido). Réplica fiel do componente
+   real do site (home/como-atuamos, .trilha-passos em home/css/paaps.css e o
+   desenho em home/js/site.js): curva de Bézier entre pontos empilhados na
+   mesma coluna x, desvio lateral alternando de lado a cada trecho
+   (min(34, Δy·0.42), sinal invertendo em i par/ímpar). Calculado à mão aqui
+   porque o deck sai em PDF estático, sem o scroll que acende os pontos no
+   site: todos os três já nascem acesos. Ocupa, de propósito, mais ou menos
+   a mesma altura que o título + o parágrafo de abertura somados. */
 .mini-caminho{
-  position:absolute;top:calc(var(--pad) + 3.2em);right:var(--pad);z-index:5;
-  width:150px;display:flex;flex-direction:column;gap:1.15em;
+  position:absolute;top:calc(var(--pad) + 3em);right:var(--pad);z-index:5;
+  width:min(30%,230px);
 }
-.mini-caminho__linha{position:absolute;left:5px;top:2px;bottom:2px;width:16px;height:auto}
-.mini-caminho__linha path{fill:none;stroke:var(--amarelo);stroke-width:2;stroke-linecap:round;opacity:.8}
-.mini-caminho__passo{display:flex;align-items:center;gap:.55em}
+.mini-caminho__svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none;z-index:0}
+.mini-caminho__linha{fill:none;stroke:var(--amarelo);stroke-width:2.5;stroke-linecap:round;opacity:.85}
+.mini-caminho__passos{
+  list-style:none;margin:0;padding:0;position:relative;z-index:1;
+  display:grid;gap:clamp(18px,2.4vw,30px);
+}
+.mini-caminho__passo{
+  display:grid;grid-template-columns:52px 1fr;align-items:center;
+  min-height:52px;
+}
 .mini-caminho__pt{
-  width:11px;height:11px;min-width:11px;border-radius:50%;background:var(--amarelo);
-  box-shadow:0 0 0 3px rgba(20,9,2,.6);position:relative;z-index:1;
+  width:14px;height:14px;border-radius:50%;justify-self:center;
+  background:var(--amarelo);box-shadow:0 0 0 3px rgba(20,9,2,.6);
 }
-.mini-caminho__passo p{
-  margin:0;font-family:var(--titulo);font-weight:700;
-  font-size:clamp(.62rem,.76vw,.76rem);line-height:1.18;color:var(--bege);
+.mini-caminho__t{
+  font-family:var(--corpo);font-weight:700;
+  font-size:clamp(.86rem,1.15vw,1.08rem);line-height:1.3;color:var(--bege);
   text-shadow:0 1px 5px rgba(15,7,2,.95);
 }
-.mini-caminho__passo p i{font-style:normal;font-size:.65em;vertical-align:top}
+.mini-caminho__t i{font-style:normal;font-size:.68em;vertical-align:top}
 @media(max-width:820px){.mini-caminho{display:none}}
 
 /* --- Slide 05, os dados de solidão em vidro fosco ----------------------- */
