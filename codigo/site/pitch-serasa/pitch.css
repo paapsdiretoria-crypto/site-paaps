@@ -728,3 +728,11 @@ html{font-size:clamp(10px,calc(min(100vw,100vh * 16 / 9) / 80),16px)}
    SVG não vetoriza: no PDF vira bitmap de página cheia, 16 vezes. Era o que
    fazia o arquivo passar de 50 MB. Some no papel, fica na tela. */
 @media print{ .slide::before{display:none!important;content:none!important} }
+/* CORREÇÃO: 338,7 mm = exatamente 1280px a 96dpi, que é a largura de projeto
+   deste deck. Com a raiz em 16px, o PDF sai idêntico à tela em 1280.
+   A página de 254 mm (960px) deformava tudo: fonte de 1280 numa caixa de 960. */
+@media print{
+  @page{size:338.7mm 190.5mm;margin:0}
+  .slide{width:338.7mm!important;height:190.5mm!important;margin-inline:0!important}
+  html{font-size:16px!important}
+}
