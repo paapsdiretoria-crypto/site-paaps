@@ -14,21 +14,7 @@ O que precisa ser decidido: contamos município, servidor, equipe ou rede?
 Cada uma dá um número diferente e uma história diferente.
 **Isso afeta os slides 09, 12 e 13.** É o item mais pesado da lista.
 
-### A2 · PROSAMES / Allos: confirmado como o concorrente
-**É o concorrente real, e isso está fechado.** O programa é da Associação Allos, e quem
-sabe disso é você, que foi diretora de lá: conhecimento de dentro vale mais do que busca
-na internet, que é onde eu tinha empacado.
-
-O que o concorrente faz: formação curta de psicoeducação, atendimento online e alguns
-grupos. Camada individual primeiro, sem território, sem articulação intersetorial.
-
-Falta só decidir **se ele aparece com nome no slide 09**. No site a regra é nunca nomear,
-mas deck de investidor é outro leitor: quem investe quer ver que você sabe contra quem
-disputa. Duas coisas pesam do outro lado: a Allos tem logo autorizado como parceira no
-site, e conteúdo pejorativo está fora da voz PAAPS. Dá para nomear em campo neutro,
-descrevendo o que ele entrega, sem adjetivo.
-
-### A3 · O logo da Serasa no slide 03
+### A2 · O logo da Serasa no slide 03
 Já aplicado, junto da frase de fecho. **Confirmar se o uso está adequado:** é o logo
 da investidora ao lado de um dado dela, sem endosso implícito.
 

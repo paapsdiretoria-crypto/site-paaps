@@ -172,22 +172,6 @@ R$ 250 milhões de ARR, aplicativo, sessão individual, dado emocional para RH.
 É o produto que o slide 6 do deck já recusa: solução individual para problema
 criado pelo trabalho.
 
-## 2.3 O concorrente direto: PROSAMES, da Associação Allos
-
-**Confirmado pela Mallu em 20/08/2026.** É o concorrente real e único em disputa
-de mercado: vende para o mesmo comprador, o município. Minhas buscas não acharam
-o nome e traziam Rede SOMOS, PROSM do DF e PROSAM de São Paulo, que são outras
-coisas; o que vale aqui é o conhecimento de dentro, porque a Mallu foi diretora
-da Allos.
-
-O que ele entrega: formação curta de psicoeducação, atendimento online e alguns
-grupos, começando pela camada individual. Sem leitura de território, sem
-articulação intersetorial.
-
-Onde a PAAPS se separa: a unidade de trabalho é a equipe dentro do horário de
-serviço, e o que se redesenha é a rede pública inteira, com quem conhece CAPS,
-CREAS, CRAS e postinho por dentro.
-
 ---
 
 # PARTE 3 · LTV, CAC, LTV/CAC e CHURN, projetados
