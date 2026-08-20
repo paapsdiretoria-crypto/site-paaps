@@ -692,13 +692,28 @@ h1,h2,h3{font-family:var(--titulo);font-weight:700;line-height:1.03;letter-spaci
 /* Slide 03: o crédito da Serasa vive no canto inferior esquerdo, então a linha
    de fontes recua para a direita para não escrever por cima dele. */
 #s3 .fonte{left:auto;right:var(--pad);width:min(50%,540px);text-align:right}
-/* Slide 03: a célula do meio carrega a queda de atenção e o dobro de erro
-   numa frase só, mais longa que as outras. Grade e fecho compactos para
-   caber o par de logos e a pergunta final sem estourar a altura do slide. */
-#s3 .grade{margin-top:1em}
-#s3 .cel{padding:clamp(11px,1.25vw,17px) clamp(13px,1.4vw,19px)}
-#s3 .cel__n{font-size:clamp(1.05rem,1.85vw,1.85rem);margin-bottom:.15em}
-#s3 .cel__l{font-size:clamp(.76rem,.92vw,.94rem);line-height:1.36}
+/* Slide 03: o fecho (logos PAAPS+Serasa e a pergunta) sai do fluxo central e
+   pousa numa linha só, rente ao rodapé, acima da linha de fontes, para que o
+   bloco de dados acima domine o slide em vez de dividir a altura com ele. */
+.fecho-serasa{
+  position:absolute;left:var(--pad);bottom:44px;z-index:4;max-width:62%;
+  display:flex;align-items:center;gap:.7em;flex-wrap:wrap;
+}
+.fecho-serasa img:first-child{height:clamp(14px,1.6vw,20px);width:auto}
+.fecho-serasa img:last-child{height:clamp(18px,2.2vw,26px);width:auto}
+.fecho-serasa__div{width:1px;align-self:stretch;background:rgba(245,241,225,.3)}
+.fecho-serasa h2{
+  font-family:var(--titulo);font-weight:700;margin:0;text-transform:none;
+  font-size:clamp(.86rem,1.3vw,1.3rem);line-height:1.24;color:var(--bege);
+}
+@media(max-width:820px){.fecho-serasa{position:static;margin-top:1.2em;padding:0 var(--pad);max-width:100%}}
+/* Dados maiores: a grade e a frase-lead ganham a altura que o fecho deixou
+   livre ao sair do fluxo. */
+#s3 .lead{font-size:clamp(1.15rem,1.85vw,1.85rem);line-height:1.48}
+#s3 .grade{margin-top:1.3em}
+#s3 .cel{padding:clamp(16px,1.9vw,28px) clamp(16px,1.8vw,26px)}
+#s3 .cel__n{font-size:clamp(1.4rem,2.5vw,2.6rem);margin-bottom:.25em}
+#s3 .cel__l{font-size:clamp(.9rem,1.12vw,1.14rem);line-height:1.44}
 #s3 h2.t-m{font-size:clamp(1.02rem,1.7vw,1.7rem);line-height:1.22;max-width:26ch}
 
 /* ====================================================================== */
