@@ -401,7 +401,7 @@ h1,h2,h3{font-family:var(--titulo);font-weight:700;line-height:1.03;letter-spaci
 
 .split{
   position:absolute;z-index:3;width:min(38%,420px);padding:var(--pad);
-  display:flex;flex-direction:column;
+  display:flex;flex-direction:column;justify-content:space-between;
 }
 .split--esq{left:0;bottom:0;padding-bottom:calc(var(--pad) + 50px)}
 .split--dir{right:0;top:0;text-align:right;align-items:flex-end}
@@ -665,7 +665,7 @@ h1,h2,h3{font-family:var(--titulo);font-weight:700;line-height:1.03;letter-spaci
    esquerda estava ancorada no rodapé e caía sobre o rosto de quem está na
    foto, a direita colidia com a palavra "Problema". */
 #s2 .split--esq,#s2 .split--dir{
-  top:calc(var(--pad) + 2.4em);bottom:auto;padding-bottom:var(--pad);
+  top:calc(var(--pad) + 2.4em);bottom:0;padding-bottom:var(--pad);
 }
 /* Foto mais assentada, para a frase do centro respirar sem depender de sombra
    pesada. */
@@ -692,6 +692,14 @@ h1,h2,h3{font-family:var(--titulo);font-weight:700;line-height:1.03;letter-spaci
 /* Slide 03: o crédito da Serasa vive no canto inferior esquerdo, então a linha
    de fontes recua para a direita para não escrever por cima dele. */
 #s3 .fonte{left:auto;right:var(--pad);width:min(50%,540px);text-align:right}
+/* Slide 03: a célula do meio carrega a queda de atenção e o dobro de erro
+   numa frase só, mais longa que as outras. Grade e fecho compactos para
+   caber o par de logos e a pergunta final sem estourar a altura do slide. */
+#s3 .grade{margin-top:1em}
+#s3 .cel{padding:clamp(11px,1.25vw,17px) clamp(13px,1.4vw,19px)}
+#s3 .cel__n{font-size:clamp(1.05rem,1.85vw,1.85rem);margin-bottom:.15em}
+#s3 .cel__l{font-size:clamp(.76rem,.92vw,.94rem);line-height:1.36}
+#s3 h2.t-m{font-size:clamp(1.02rem,1.7vw,1.7rem);line-height:1.22;max-width:26ch}
 
 /* ====================================================================== */
 /* O SLIDE CABE SEMPRE NA JANELA                                           */
