@@ -1,7 +1,7 @@
 # Pente fino do pitch: tudo que ainda está aberto
 
 > 19/08/2026. Feito a partir de tudo que você levantou nesta construção.
-> Deck atual: `index-v4.html`, 16 slides. Prazo: 31/08, 20h59 de Brasília.
+> Deck atual: `index-v4.html`, 15 slides (05 e 10 fundidos em 20/08). Prazo: 31/08, 20h59 de Brasília.
 
 ---
 

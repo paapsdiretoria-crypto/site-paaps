@@ -722,6 +722,51 @@ h1,h2,h3{font-family:var(--titulo);font-weight:700;line-height:1.03;letter-spaci
 #s3 .cel__n{font-size:clamp(1.4rem,2.5vw,2.6rem);margin-bottom:.25em}
 #s3 .cel__l{font-size:clamp(.9rem,1.12vw,1.14rem);line-height:1.44}
 
+/* --- Slide 05, o caminho em miniatura ---------------------------------- */
+/* Fundiu Solução (05) e Método (10, removido): a sequência de entrada, que
+   antes era uma grade de 3 células, agora é só um lembrete de que o método
+   permanece no território, num cantinho abaixo da etiqueta de canto. Mesma
+   linguagem visual da trilha do site (linha curva + pontos acesos), sem
+   animação porque o deck sai em PDF. */
+.mini-caminho{
+  position:absolute;top:calc(var(--pad) + 3.2em);right:var(--pad);z-index:5;
+  width:150px;display:flex;flex-direction:column;gap:1.15em;
+}
+.mini-caminho__linha{position:absolute;left:5px;top:2px;bottom:2px;width:16px;height:auto}
+.mini-caminho__linha path{fill:none;stroke:var(--amarelo);stroke-width:2;stroke-linecap:round;opacity:.8}
+.mini-caminho__passo{display:flex;align-items:center;gap:.55em}
+.mini-caminho__pt{
+  width:11px;height:11px;min-width:11px;border-radius:50%;background:var(--amarelo);
+  box-shadow:0 0 0 3px rgba(20,9,2,.6);position:relative;z-index:1;
+}
+.mini-caminho__passo p{
+  margin:0;font-family:var(--titulo);font-weight:700;
+  font-size:clamp(.62rem,.76vw,.76rem);line-height:1.18;color:var(--bege);
+  text-shadow:0 1px 5px rgba(15,7,2,.95);
+}
+.mini-caminho__passo p i{font-style:normal;font-size:.65em;vertical-align:top}
+@media(max-width:820px){.mini-caminho{display:none}}
+
+/* --- Slide 05, os dados de solidão em vidro fosco ----------------------- */
+/* Três cartões pequenos e quase transparentes (blur, sem card sólido como o
+   resto do deck), pra não competir com as bolhas do método logo acima. */
+.dados-solidao{display:flex;gap:.7em;margin-top:1em;flex-wrap:wrap;justify-content:center}
+.dado-solidao{
+  flex:1 1 0;min-width:150px;max-width:220px;text-align:center;
+  background:rgba(245,241,225,.07);backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);
+  border:1px solid rgba(245,241,225,.18);border-radius:9px;
+  padding:clamp(.7em,1.1vw,1.1em) clamp(.6em,1vw,1em);
+}
+.dado-solidao__n{
+  display:block;font-family:var(--titulo);font-weight:800;color:var(--amarelo);
+  font-size:clamp(1.5rem,2.5vw,2.3rem);line-height:1;margin-bottom:.28em;
+}
+.dado-solidao__l{
+  font-size:clamp(.68rem,.82vw,.82rem);line-height:1.36;color:rgba(245,241,225,.92);
+  max-width:22ch;margin:0 auto;
+}
+@media(max-width:820px){.dados-solidao{flex-direction:column;align-items:center}}
+
 /* ====================================================================== */
 /* O SLIDE CABE SEMPRE NA JANELA                                           */
 /* Com aspect-ratio 16/9 e largura 100%, numa janela mais baixa que 9/16   */
