@@ -805,9 +805,30 @@ h1,h2,h3{font-family:var(--titulo);font-weight:700;line-height:1.03;letter-spaci
 @media(max-width:820px){.tss{grid-template-columns:1fr;gap:1.1rem}}
 
 /* --- BARRAS: a projeção de faturamento -------------------------------- */
-.barras{display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(.6rem,1.6vw,1.6rem);
-  align-items:end;margin-top:1.2em}
-.barra-ano{display:flex;flex-direction:column;justify-content:flex-end;gap:.35em}
+/* O gráfico virou grade de verdade: uma coluna de rótulos à esquerda e cinco
+   colunas de ano, com as linhas alinhadas entre si. Sem os rótulos, "42%" e
+   "R$ 0,92 mi" eram números soltos, e ninguém tinha como saber o que cada
+   linha media. */
+.barras{
+  display:grid;
+  grid-template-columns:auto repeat(5,1fr);
+  column-gap:clamp(.5rem,1.4vw,1.4rem);row-gap:.28em;
+  align-items:center;margin-top:1.2em;
+}
+.brot{
+  grid-column:1;text-align:right;font-family:var(--titulo);font-weight:700;
+  color:var(--bege-rosa);line-height:1.12;padding-right:.2em;
+}
+.brot--rec{grid-row:1;color:var(--amarelo);font-size:clamp(.72rem,.94vw,.94rem);max-width:11ch;margin-left:auto}
+.brot--mar{grid-row:3;font-size:clamp(.8rem,1.02vw,1.02rem)}
+.brot--ano{grid-row:4;font-size:clamp(.8rem,1.02vw,1.02rem)}
+.brot--sub{grid-row:5;font-family:var(--corpo);font-weight:400;font-size:clamp(.62rem,.78vw,.78rem)}
+
+.bv{grid-row:1;font-family:var(--titulo);font-weight:700;color:var(--amarelo);text-align:center;line-height:1.05}
+.bz{grid-row:2;display:flex;align-items:flex-end;width:100%}
+.bm{grid-row:3;font-family:var(--titulo);font-weight:700;color:var(--bege);text-align:center;line-height:1}
+.ba{grid-row:4;font-family:var(--titulo);font-weight:700;color:var(--bege);text-align:center;line-height:1}
+.bs{grid-row:5;font-family:var(--corpo);font-weight:400;color:var(--creme-70);text-align:center;line-height:1.25}
 /* A área de plotagem tem altura PRÓPRIA, e é contra ela que a porcentagem de
    cada barra resolve. Sem essa zona, os rótulos vizinhos disputavam a altura no
    flex e as barras altas eram comprimidas: o ano 5 saía do mesmo tamanho do
@@ -1022,10 +1043,10 @@ h1,h2,h3{font-family:var(--titulo);font-weight:700;line-height:1.03;letter-spaci
    O resultado é o maior de todos, a receita vem logo abaixo, e o ano precisa
    ser lido de longe. As três caixas de dado cedem corpo para isso: elas são
    apoio, não o argumento principal. */
-#s13 .barra-ano__v{font-size:clamp(.92rem,1.42vw,1.42rem)}
-#s13 .barra-ano__r{font-size:clamp(1.1rem,1.85vw,1.85rem);margin-top:.22em}
-#s13 .barra-ano__l{font-size:clamp(.82rem,1.12vw,1.12rem);margin-top:.1em}
-#s13 .barra-ano__l span{font-size:clamp(.62rem,.78vw,.78rem);margin-top:.12em}
+#s13 .bv{font-size:clamp(.92rem,1.42vw,1.42rem)}
+#s13 .bm{font-size:clamp(1.1rem,1.85vw,1.85rem)}
+#s13 .ba{font-size:clamp(.86rem,1.15vw,1.15rem)}
+#s13 .bz{height:clamp(118px,18vh,195px)}
 #s13 .cel{padding:clamp(12px,1.4vw,20px)}
 #s13 .cel__n{font-size:clamp(1.05rem,2vw,2rem);margin-bottom:.22em}
 #s13 .cel__l{font-size:clamp(.76rem,.98vw,.98rem);line-height:1.38}
