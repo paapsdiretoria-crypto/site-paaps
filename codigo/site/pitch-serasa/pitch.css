@@ -541,9 +541,7 @@ h1,h2,h3{font-family:var(--titulo);font-weight:700;line-height:1.03;letter-spaci
    cede corpo para caber em UMA linha, sem deixar "milhões" órfão na segunda. O
    maior corpo fica reservado ao quadrado do meio, que é o preço, o herói do slide.
    Nesses dois, a data desce para linha própria em vez de empurrar a quebra. */
-.pilar--dado .pilar__n,
 .pilar--duplo .pilar__n{font-size:clamp(1.25rem,2.5vw,2.3rem)}
-.pilar--dado .pilar__ano,
 .pilar--duplo .pilar__ano{display:block;margin-left:0;margin-top:.15em}
 .pilar--duplo{gap:.3em}
 
@@ -755,11 +753,10 @@ h1,h2,h3{font-family:var(--titulo);font-weight:700;line-height:1.03;letter-spaci
 #s7 .lead.rev--3{font-size:clamp(1.08rem,1.62vw,1.62rem);line-height:1.42}
 
 /* Helvetica DENTRO das caixas: sobe de .9rem para 1.08rem, porque a .9 sumia ao
-   lado do amarelo grande e não se lê em projetor. A caixa do dado da ata sobe
-   mais um degrau: tem menos palavras que as outras e carrega o dado que abre o
-   argumento inteiro, então aguenta e merece corpo maior. */
+   lado do amarelo grande e não se lê em projetor. As caixas das pontas carregam
+   DOIS dados cada uma, então cedem um fio de corpo para caber sem estourar. */
 #s7 .pilar__l{font-size:clamp(.86rem,1.08vw,1.08rem);line-height:1.42}
-#s7 .pilar--dado .pilar__l{font-size:clamp(.98rem,1.26vw,1.26rem);line-height:1.4}
+#s7 .pilar--duplo .pilar__l{font-size:clamp(.8rem,1vw,1rem);line-height:1.38}
 /* Slide 03: o fecho (logos PAAPS+Serasa e a pergunta) sai do fluxo central e
    pousa rente ao rodapé, acima da linha de fontes, para que o bloco de dados
    acima domine o slide em vez de dividir a altura com ele. Pergunta grande,
