@@ -124,6 +124,48 @@ conhecimento, quem executa, por que a conta fecha e por que melhora com o tempo.
 
 ---
 
+# PARTE 0-A · FEITO: o slide 08 de Mercado existe, e o deck tem 17 slides
+
+Construído e verificado em 21/08/2026. A renumeração rodou por script: os antigos 08 a 16
+viraram 09 a 17, em id, número impresso, comentário de bloco e regras de CSS. Conferido que
+a sequência é contínua de 1 a 17 e que o id casa com o número impresso em todos.
+
+**Título (frase ditada pela Mallu, aplicada literal):** "Um mercado de impacto em ascensão e
+flexibilização, um formato que já é padrão licenciado na Europa, e uma profissão (psicologia)
+cada vez mais competitiva e precária."
+
+> **Precisão registrada:** os Schwartz Rounds rodam no **Reino Unido e na Irlanda**, e a
+> origem é norte-americana. "Na Europa" é geograficamente correto, só menos específico.
+
+**As três caixas:** US$ 1,571 trilhão sob gestão de impacto (21% ao ano desde 2019, 46% dos
+investidores querendo aumentar alocação na América Latina) · 55,2% da psicologia brasileira
+precisando de mais de um vínculo · 200+ organizações no Reino Unido e Irlanda sob licença do
+Schwartz Center desde 2009.
+
+**TAM, SAM e SOM em três colunas grandes na faixa de baixo**, com a sigla como herói em
+amarelo, e não como rótulo miúdo:
+
+| | | |
+|---|---|---|
+| **TAM** | 5.570 municípios | Todos os municípios do Brasil |
+| **SAM** | 2.550 municípios | Acima de 10 mil habitantes, **R$ 724 milhões por ano** |
+| **SOM** | 100 municípios | Meta de 5 anos, 1,8% do total, **R$ 13,5 milhões** no ano 5 |
+
+**Isso fecha a pendência A1 do `CHECKLIST-PITCH.md`**, aberta desde 20/08 e classificada como
+mudança estrutural: o SAM passa a ser o recorte de capacidade de pagamento (municípios acima
+de 10 mil habitantes), verificável no IBGE, e não mais o dado errado de CAPS/RAPS.
+
+**Medições:** título em 2 linhas, três células de 225px iguais, zero estouro, folgas de 18px,
+42px e 6px entre grade, faixa TAM/SAM/SOM, linha de fonte e número do slide.
+
+**Duas coisas para você decidir:**
+1. **A foto** (`visita-marajo.jpg`) foi escolha minha de padrão, e escolha de foto é sua.
+2. **O achado da seletividade do dinheiro** (investimento em saúde mental caiu porque
+   investidor passou a exigir validação clínica) ficou fora deste slide por decisão sua, e
+   vai para o slide 10, Concorrência.
+
+---
+
 # PARTE 1 · Decisões fechadas nesta sessão
 
 | | Decisão | Consequência |
