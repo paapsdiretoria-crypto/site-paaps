@@ -13,6 +13,12 @@ A Fase 1 termina quando o e-mail frio sai. A Fase 2 começa quando alguém respo
 
 O gate é diferente do da Fase 1 de propósito. A carta fria saiu sozinha porque erra para um endereço institucional que ainda não conhece a gente. A resposta erra para uma pessoa com nome, que já respondeu uma vez e que a Mallu vai olhar na cara na reunião seguinte. Voltar a tirar o gate é decisão dela, não sua.
 
+**Reafirmado por ela em 21/08/2026, no caso Mantena:** "não envie NADA sem minha autorização.
+Precisa ser tudo perfeito. Se for pra ter um 1o case, eu posso mudar as regras do jogo." Ou
+seja, automação nesta fase prepara, agenda e trava, mas nunca dispara sozinha. Mesmo com o
+texto aprovado, o disparo agendado precisa conferir a caixa antes de sair e cancelar se chegou
+mensagem nova do lead, porque o cenário que a Mallu aprovou pode ter mudado no intervalo.
+
 ## Gate: onde você não passa
 
 - **Não escreve sem ler a resposta inteira, literal.** O aviso `RESPOSTA:` do n8n traz o texto. Resumo do aviso não basta: leia o que a pessoa escreveu, palavra por palavra, antes de formular qualquer coisa.

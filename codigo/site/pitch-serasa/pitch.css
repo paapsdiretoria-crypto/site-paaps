@@ -748,6 +748,15 @@ h1,h2,h3{font-family:var(--titulo);font-weight:700;line-height:1.03;letter-spaci
    MAIS caracteres por linha, então o corpo pode CRESCER e ainda assim o texto
    ocupa menos linhas do que ocupava espremido. O de cima fecha em linha e meia,
    o de baixo em duas. */
+/* Slide 08: a foto da AgSUS é VERTICAL (1400x1800) num slide 16:9, então o
+   `object-fit:cover` padrão descartava mais da metade da altura e dava aquela
+   sensação de zoom estourado. `object-position` desce o enquadramento para as
+   pessoas de colete, que são o assunto, e o véu afrouxa muito: as quatro caixas
+   de texto já têm fundo escuro próprio, então quem segura o contraste são elas,
+   não uma lona marrom por cima da foto inteira. */
+#s8 .slide__foto img{object-position:center 58%}
+#s8.veu-denso::after{background:linear-gradient(180deg,rgba(30,14,3,.42) 0%,rgba(30,14,3,.5) 100%)}
+
 #s7 .lead{max-width:none}
 #s7 .lead.rev--1{font-size:clamp(1.35rem,2.2vw,2.2rem);line-height:1.4}
 #s7 .lead.rev--3{font-size:clamp(1.08rem,1.62vw,1.62rem);line-height:1.42}
