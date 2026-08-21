@@ -17,6 +17,9 @@
 @font-face{font-family:'League Spartan';src:url('../home/fontes/LeagueSpartan-ExtraBold.ttf') format('truetype');font-weight:800;font-display:swap}
 @font-face{font-family:'Nimbus Sans';src:url('../home/fontes/NimbusSanL-Reg.otf') format('opentype');font-weight:400;font-display:swap}
 @font-face{font-family:'Nimbus Sans';src:url('../home/fontes/NimbusSanL-Bol.otf') format('opentype');font-weight:700;font-display:swap}
+/* Evermore é a letra do logotipo. Uso raro e pontual, uma palavra por vez, nunca
+   frase inteira: é a mesma regra do `.olho` no site. */
+@font-face{font-family:'Evermore';src:url('../home/fontes/Evermore.ttf') format('truetype');font-weight:400;font-display:swap}
 
 /* ----- 2. TOKENS (hierarquia calibrada 02/08/2026) ----------------------- */
 
@@ -207,6 +210,13 @@ h1,h2,h3{font-family:var(--titulo);font-weight:700;line-height:1.03;letter-spaci
 .t-hero{font-size:clamp(2rem,4.5vw,4.4rem);max-width:17ch;text-transform:none;line-height:1.06}
 .t-g{font-size:clamp(1.6rem,3.5vw,3.4rem);max-width:19ch}
 .t-m{font-size:clamp(1.3rem,2.5vw,2.4rem);max-width:22ch}
+
+/* Palavra-chave em Evermore, a letra do logotipo: uso raro e pontual, UMA palavra.
+   `text-transform:none` porque a Evermore é desenhada em caixa mista e some quando
+   forçada em caixa alta pelos títulos. Corpo um pouco maior porque a Evermore tem
+   altura-x menor que a League Spartan e apequenaria ao lado dela. */
+.olho{font-family:'Evermore',var(--titulo),serif;font-weight:400;
+  text-transform:none;letter-spacing:.01em;font-size:1.18em;line-height:1}
 
 /* Frase corrida: o dado mora DENTRO da frase, não empilhado em cima dela.
    Caixa mista, porque o dado em caixa alta picotava o texto em tópicos soltos. */
