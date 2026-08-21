@@ -590,6 +590,59 @@ h1,h2,h3{font-family:var(--titulo);font-weight:700;line-height:1.03;letter-spaci
 .metricas--calc .metrica__l{text-align:left;margin-top:.4em}
 @media(max-width:820px){.metricas--calc{grid-template-columns:1fr}}
 
+/* --- LOCKUP DE PRODUTO: "app Ponto de Apoio" -----------------------------
+   Vive no canto superior esquerdo, na mesma linha da frase de canto, que mora
+   na direita. Duas letras conversando: "app" em League Spartan, minúscula e
+   sóbria, e o nome próprio do produto em Evermore, a letra do logotipo, aceso
+   no terracota da casa. O brilho vem de camadas de sombra, e não de filtro:
+   filtro SVG vira bitmap de página inteira na exportação em PDF. */
+.produto{
+  position:absolute;top:var(--pad);left:var(--pad);z-index:5;
+  font-family:var(--titulo);font-weight:700;text-transform:lowercase;
+  font-size:clamp(1.15rem,2.05vw,2.05rem);line-height:1;letter-spacing:-.01em;
+  color:var(--creme-70);
+  display:flex;align-items:baseline;gap:.3em;
+}
+.produto__nome{
+  font-family:'Evermore',var(--titulo),serif;font-weight:400;
+  text-transform:none;letter-spacing:.01em;
+  font-size:1.34em;line-height:1;
+  color:#e8622a;
+  text-shadow:
+    0 0 10px rgba(203,71,16,.95),
+    0 0 30px rgba(203,71,16,.65),
+    0 0 62px rgba(203,71,16,.34),
+    0 2px 14px rgba(20,9,2,.9);
+}
+@media(max-width:820px){.produto{position:static;margin-bottom:.6em}}
+
+/* --- ROADMAP: as faixas que delimitam as fases do trilho ----------------
+   Substituem os dois selos soltos, que não diziam QUAIS marcos pertenciam a
+   qual fase. Agora a faixa tem a mesma grade de 8 colunas do trilho, então
+   cada fase cobre exatamente os marcos que lhe pertencem: a aceleração vai do
+   contrato 01 ao Ponto de Apoio, e a faixa de cima marca os dois marcos que o
+   investimento constrói. */
+.trilho__faixas{
+  display:grid;grid-template-columns:repeat(8,1fr);
+  grid-template-rows:auto auto;gap:.4rem .5rem;margin-top:.3em;
+}
+.faixa-fase{
+  font-family:var(--titulo);font-weight:700;letter-spacing:.04em;
+  font-size:clamp(.6rem,.76vw,.76rem);text-transform:uppercase;
+  text-align:center;padding:.34em .6em;border-radius:2px;line-height:1.2;
+}
+.faixa-fase--invest{
+  grid-column:3 / span 2;grid-row:1;
+  background:transparent;color:var(--terracota);
+  border:1px dashed rgba(203,71,16,.85);
+}
+.faixa-fase--acel{grid-column:1 / span 4;grid-row:2;background:var(--amarelo);color:var(--marrom)}
+.faixa-fase--exec{grid-column:5 / span 4;grid-row:2;background:var(--terracota);color:#fff}
+@media(max-width:820px){
+  .trilho__faixas{grid-template-columns:1fr}
+  .faixa-fase--invest,.faixa-fase--acel,.faixa-fase--exec{grid-column:1;grid-row:auto}
+}
+
 /* --- RÉGUA DA OMS: as duas camadas de evidência, lado a lado -----------
    O árbitro é externo, então ele ganha faixa própria em vez de virar mais uma
    frase dentro da caixa da PAAPS. A camada forte acende, a fraca fica apagada:
