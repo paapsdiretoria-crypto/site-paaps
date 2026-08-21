@@ -36,13 +36,15 @@ commitado.
 
 ## O que dá para afirmar
 
+**Decisão da Mallu em 21/08/2026: o número de contatos não importa, o que importa são as
+regiões.** Então o dado que vai para o pitch é só a cobertura geográfica.
+
 | | |
 |---|---|
-| Contatos visíveis nos prints | **83** (amostra parcial: os prints são recortes de rolagem) |
 | DDDs distintos | **31** |
 | Unidades federativas | **16** (15 estados e o Distrito Federal) |
 | Regiões do Brasil | **5 de 5** |
-| Fora do Brasil | **1 contato em Portugal (+351)** |
+| Fora do Brasil | presença também em **Portugal** |
 
 **Os 16 estados, por região:**
 
@@ -57,19 +59,17 @@ faz sentido dado o campo em Minas. Mas a cauda é longa e chega ao Norte e ao No
 
 ## O que NÃO dá para afirmar, e é importante
 
-**Você pediu "quantos municípios".** Não dá para responder isso com DDD, e eu não vou
-inventar: **um DDD cobre dezenas ou centenas de municípios**. O DDD 31 sozinho cobre a
-região metropolitana de Belo Horizonte inteira. Dizer "a ECOA está em X municípios" a partir
-de DDD seria exatamente o tipo de alegação que cai numa diligência.
+**Não dá para dizer "X municípios" a partir de DDD**, e por isso o dado de município fica
+fora: um DDD cobre dezenas ou centenas de municípios, e o 31 sozinho cobre a região
+metropolitana de Belo Horizonte inteira.
 
-**Além disso, DDD é onde a linha foi habilitada, não onde a pessoa mora hoje.** Muita gente
-carrega o DDD de origem a vida inteira. Isso não invalida o dado, mas muda o que ele mede:
-ele mede **dispersão geográfica de origem**, não endereço atual.
+**DDD também é onde a linha foi habilitada, não onde a pessoa mora hoje.** Isso não invalida
+o dado, mas define o que ele mede: **dispersão geográfica**, não endereço atual. Como o que
+vai para o pitch é estado e região, e não município, a afirmação fica dentro do que o dado
+sustenta.
 
-**O caminho para ter o dado de município de verdade:** perguntar. Um formulário de uma
-pergunta para a comunidade ("de qual cidade você é?") resolve em uma semana e transforma
-uma estimativa em cadastro. **Recomendo fazer isso agora**, porque o número de municípios é
-muito mais forte do que o de estados e ainda dá tempo antes de 31/08.
+**Formulário para a comunidade: descartado pela Mallu em 21/08/2026.** Fica registrado como
+caminho disponível se um dia o número de municípios fizer falta.
 
 ## Como isso entra no pitch, com a redação segura
 
