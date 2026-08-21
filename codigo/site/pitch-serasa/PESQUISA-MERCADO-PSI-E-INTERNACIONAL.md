@@ -114,6 +114,63 @@ trabalho de cuidar. É a Roda de Equipe PAAPS, em outro país, dentro do sistema
    que o artigo reporta é o odds ratio de 0,197. **Recomendação: citar o odds ratio, ou
    voltar à tabela original antes de usar qualquer porcentagem.**
 
+### B.1.1 · ADENDO: a porcentagem foi confirmada, e ela é melhor do que a versão que circula
+
+**A ressalva 2 acima está resolvida.** A porcentagem do estudo mede o **GHQ-12 na versão
+binária de "caseness"**, que classifica cada pessoa acima ou abaixo de um limiar de
+sofrimento psíquico. Os números exatos:
+
+| Grupo | Antes | Depois |
+|---|---|---|
+| **Participantes regulares das Rounds** | **25%** acima do limiar | **12%** |
+| **Quem não participou** (controle) | 37% | 34% |
+
+**É por isso que se diz "caiu pela metade": entre quem participou, a proporção com sofrimento
+psíquico caiu de 25% para 12%. No grupo de controle, praticamente não se mexeu.**
+
+**A formulação para o slide, então, é esta, e ela é mais forte do que "redução de 50%",
+porque mostra o controle:**
+
+> Entre quem participava das rodas, a proporção com sofrimento psíquico caiu de **25% para
+> 12%**. Entre quem não participava, foi de 37% para 34%.
+
+> **A honestidade que precisa ir junto:** os participantes já começavam melhor (25% contra
+> 37% do controle), porque quem escolhe participar tende a estar menos adoecido. O odds ratio
+> de 0,197 é justamente o número ajustado por essas covariáveis, e é ele que sustenta a
+> comparação. Se alguém na banca perguntar sobre viés de seleção, essa é a resposta.
+
+### B.1.2 · O achado que eu não estava procurando: os Schwartz Rounds são LICENCIADOS
+
+Isto não estava na pergunta e é, para o modelo de negócio da PAAPS, mais importante do que
+a evidência clínica:
+
+| | |
+|---|---|
+| Origem | **Schwartz Center for Compassionate Healthcare**, Boston, EUA. O nome é de Kenneth Schwartz, paciente que morreu de câncer de pulmão em meados dos anos 1990 |
+| Chegada ao Reino Unido | **2009**, pela **Point of Care Foundation** |
+| **Modelo** | a fundação **detém a licença**, e **cada organização precisa de contrato com ela** para poder rodar as Rounds |
+| Alcance | **mais de 200 sites** no Reino Unido e na Irlanda, até 2025 |
+| **Setores** | saúde (serviços comunitários, saúde mental, hospices, atenção primária), **educação superior** e **assistência social** |
+| Condução | facilitadores treinados |
+| Mudança recente | em dezembro de 2025 os programas passaram da Point of Care Foundation de volta para o Schwartz Center |
+
+**Por que isso vale tanto:** o `CHECKLIST-PITCH.md` registra no item F2 a dúvida sobre o peso
+do licenciamento no deck, com a ressalva de que "é um produto que ainda não existe".
+
+> **Existe, e está rodando há dezesseis anos, em mais de 200 organizações, em três setores,
+> exatamente com a arquitetura que a PAAPS desenhou: uma casa detém o método, licencia o uso,
+> forma os facilitadores e mantém o vínculo contratual.**
+
+O licenciamento da PAAPS deixa de ser hipótese de escala e passa a ser **o modelo consagrado
+da categoria**. E a intersetorialidade também: as Rounds britânicas já atravessam saúde,
+educação e assistência, que são exatamente as três portas da PAAPS.
+
+**Sobre a premiação, e aqui preciso ser exato para não te entregar coisa errada:** o que
+existe são os **Schwartz Awards**, criados pela própria Point of Care Foundation para premiar
+as organizações que rodam as Rounds. **São prêmios que o programa concede, não prêmios que o
+programa recebeu.** Não achei premiação externa e independente concedida aos Schwartz Rounds.
+Se o pitch precisar de selo de reconhecimento internacional, isso continua em aberto.
+
 ## B.2 A régua da OMS e da OIT
 
 Em setembro de 2022 a OMS publicou as **Diretrizes sobre saúde mental no trabalho**, com
@@ -179,6 +236,68 @@ uma coisa que só podia nascer aqui.
 
 ---
 
+# FRENTE C · O mercado de impacto social no Brasil está crescendo
+
+> Frente acrescentada em 21/08/2026, a pedido da Mallu.
+
+## C.1 O tamanho e a forma do ecossistema
+
+**Fonte principal: 4º Mapa de Negócios de Impacto Socioambiental (2023), realizado por
+Pipe.Social e Quintessa.**
+
+| Dado | Valor |
+|---|---|
+| Negócios de impacto analisados | **1.011** |
+| Empreendedores engajados na coleta | 2.187 |
+| Organizações do ecossistema envolvidas | mais de 66 |
+| **Negócios em saúde e healthtech** | **17%** do total |
+| Negócios em Green Tech | 52% |
+| Negócios financeiramente sustentáveis | em crescimento (eram 20% em 2021) |
+
+A **Aliança pelos Investimentos e Negócios de Impacto** articula o ecossistema de finanças
+sociais no país há mais de dez anos, o que indica um campo já institucionalizado, com
+governança própria, e não uma moda recente.
+
+**Circula também a cifra de R$ 18 bilhões movimentados em investimentos por negócios sociais
+em 2023.** Não consegui rastrear até a fonte primária. **Não usar no pitch** enquanto não
+for confirmada; os números do Mapa bastam e são verificáveis.
+
+## C.2 A leitura crítica: onde a PAAPS se encaixa nesse mapa, e onde ela não se encaixa
+
+Três coisas que os dados acima dizem, e a terceira é a que interessa:
+
+**1. O campo é grande o bastante para ter régua própria.** Mil negócios mapeados, 66
+organizações de ecossistema e uma aliança de dez anos significam que existe vocabulário,
+existem métricas e existe uma banca acostumada a avaliar impacto. **O pitch não precisa
+explicar o que é negócio de impacto: pode ir direto ao mérito.**
+
+**2. Saúde é 17%, e é minoria.** Metade do ecossistema está em Green Tech. Isso é oportunidade
+e é risco ao mesmo tempo: há menos concorrência direta por atenção dentro do recorte de
+saúde, e há menos investidor especializado nele.
+
+**3. E aqui está a pergunta que o Mapa abre e que a PAAPS responde melhor do que quase
+todo mundo:** o Mapa mede quantos negócios de impacto são **financeiramente sustentáveis**
+justamente porque essa é a fragilidade histórica do setor. O campo inteiro é cobrado por
+provar que impacto e sustentação financeira cabem juntos.
+
+> **A PAAPS chega nessa conversa com uma resposta incomum: a operação que a financia é uma
+> consultoria de alto valor, no mercado privado, no mesmo CNPJ.** Ou seja, ela não está
+> pedindo dinheiro para descobrir se o impacto se paga. Ela já opera dentro de uma casa que
+> se paga, e está transpondo esse método para onde ele importa mais.
+
+Isso conecta a Frente C diretamente à tese da transposição, registrada na Parte 0 do
+`PLANO-REVISAO-ESTRUTURAL.md`.
+
+## C.3 Onde isso entra no deck
+
+Não como slide próprio, e sim como **contexto de mercado no slide 09**, junto do benchmark
+internacional: o ecossistema brasileiro de impacto existe, tem mil negócios mapeados e uma
+década de institucionalização, e dentro dele saúde é uma fatia pequena. **A PAAPS não está
+inventando uma categoria sozinha: está ocupando o pedaço menos povoado de um campo que já
+tem régua.**
+
+---
+
 # O que eu recomendo levar para cada slide
 
 ## Slide 08, caixa de Posicionamento (com a escada de carreira dentro)
@@ -227,6 +346,16 @@ cópia deles.
 | Custo global | **~US$ 1 trilhão** | OMS/OIT, 2022 | secundária |
 | Treinamento de gestores | recomendação **forte**, certeza **moderada** | Diretrizes da OMS, 2022 | primária |
 | Intervenção individual | recomendação condicional, certeza baixa a muito baixa | idem | primária |
+| **Schwartz Rounds, participantes acima do limiar de sofrimento** | **de 25% para 12%** | Dawson et al., 2021 | primária |
+| **Schwartz Rounds, grupo de controle** | **de 37% para 34%** | idem | primária |
+| Schwartz Rounds, sites no Reino Unido e Irlanda | **mais de 200**, até 2025 | Point of Care Foundation | primária |
+| Schwartz Rounds, chegada ao Reino Unido | **2009** | idem | primária |
+| Schwartz Rounds, modelo | **licença com contrato por organização** | idem | primária |
+| Schwartz Rounds, setores | saúde, educação superior e assistência social | idem | primária |
+| Negócios de impacto mapeados no Brasil | **1.011** | 4º Mapa de Negócios de Impacto, 2023, Pipe.Social e Quintessa | secundária confiável |
+| Negócios de impacto em saúde e healthtech | **17%** | idem | secundária confiável |
+| Negócios de impacto em Green Tech | 52% | idem | secundária confiável |
+| Investimentos movimentados por negócios sociais em 2023 | R$ 18 bilhões | fonte não rastreada | **NÃO USAR** |
 
 ## O que ficou em aberto
 
@@ -241,3 +370,30 @@ cópia deles.
    que a PAAPS não está atrasada em relação ao mundo, está na frente. **Mas provar
    inexistência exige busca mais larga do que a que eu fiz, e eu não vou afirmar isso sem
    ela.**
+
+---
+
+# Atualização de 21/08/2026: o que saiu da lista de aberto, e o que entrou
+
+**Resolvido, item 1:** a porcentagem dos Schwartz Rounds está confirmada, com o grupo de
+controle junto. Ver seção B.1.1. **Pode ir para o slide.**
+
+**Resolvido, item 2, mas com correção do enunciado:** a pergunta era qual premiação os
+Schwartz Rounds receberam. **A resposta é que não receberam: eles concedem.** Os Schwartz
+Awards são criados pela Point of Care Foundation para premiar as organizações que rodam as
+Rounds. Não achei premiação externa e independente. Ver o fim da seção B.1.2.
+
+**Continua aberto, item 3:** nenhum país achado que tenha feito disso política pública para
+trabalhador municipal.
+
+**Entrou como aberto, e é novo:**
+
+4. **Selo de reconhecimento internacional.** Se o pitch quiser citar um prêmio, ainda não há
+   um. O UNPSA continua sendo o lugar certo de procurar, e não achei vencedora que faça o
+   que a PAAPS faz.
+5. **A cifra de R$ 18 bilhões do mercado de impacto brasileiro.** Não rastreei até a fonte
+   primária. Marcada como NÃO USAR na tabela.
+6. **Preço da licença dos Schwartz Rounds.** A Point of Care Foundation não publica valores,
+   só um formulário de contato. Se conseguíssemos essa cifra, teríamos **uma âncora
+   internacional de preço para a licença da PAAPS**, que hoje está em R$ 64.800 por ano sem
+   nenhuma referência externa. Vale uma tentativa de contato direto.
