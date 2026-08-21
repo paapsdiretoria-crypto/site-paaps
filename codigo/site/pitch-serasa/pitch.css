@@ -527,6 +527,26 @@ h1,h2,h3{font-family:var(--titulo);font-weight:700;line-height:1.03;letter-spaci
   margin:0;color:#fff}
 .pilar__l{font-size:clamp(.72rem,.9vw,.9rem);line-height:1.45;color:rgba(245,241,225,.9);margin:0}
 
+/* A data do dado, colada no número: caixa mista e miúda, para datar sem competir
+   com o amarelo grande. Fica na mesma linha quando cabe. */
+.pilar__ano{display:inline-block;font-family:var(--corpo);font-style:normal;font-weight:400;
+  font-size:clamp(.6rem,.72vw,.72rem);color:var(--bege-rosa);letter-spacing:0;
+  margin-left:.5em;vertical-align:middle}
+
+/* Nota de rodapé do quadrado: o que é verdade e não precisa de destaque. */
+.pilar__nota{font-size:clamp(.62rem,.75vw,.75rem);line-height:1.4;
+  color:var(--bege-rosa);margin:.15em 0 0;font-style:italic}
+
+/* Quadrados de EVIDÊNCIA (a verba que já existe), à esquerda e à direita: o número
+   cede corpo para caber em UMA linha, sem deixar "milhões" órfão na segunda. O
+   maior corpo fica reservado ao quadrado do meio, que é o preço, o herói do slide.
+   Nesses dois, a data desce para linha própria em vez de empurrar a quebra. */
+.pilar--dado .pilar__n,
+.pilar--duplo .pilar__n{font-size:clamp(1.25rem,2.5vw,2.3rem)}
+.pilar--dado .pilar__ano,
+.pilar--duplo .pilar__ano{display:block;margin-left:0;margin-top:.15em}
+.pilar--duplo{gap:.3em}
+
 /* --- TRILHO: o roadmap, marcos alternando acima e abaixo da linha ------ */
 .trilho{position:relative;margin:1.4em 0 .4em;padding:5.2em 0 5.6em}
 .trilho::before{content:"";position:absolute;left:0;right:0;top:50%;height:2px;
@@ -720,6 +740,10 @@ h1,h2,h3{font-family:var(--titulo);font-weight:700;line-height:1.03;letter-spaci
 /* Slide 03: o crédito da Serasa vive no canto inferior esquerdo, então a linha
    de fontes recua para a direita para não escrever por cima dele. */
 #s3 .fonte{left:auto;right:var(--pad);width:min(50%,540px);text-align:right}
+/* Slide 07: são três origens a citar (contrato social, ata do MGI e informe do
+   MDS), e a 52ch padrão empilhava isso em oito linhas, por cima do parágrafo de
+   fecho. Alarga a faixa para caber em três, sem invadir o crédito da foto. */
+#s7 .fonte{max-width:none;width:min(70%,880px)}
 /* Slide 03: o fecho (logos PAAPS+Serasa e a pergunta) sai do fluxo central e
    pousa rente ao rodapé, acima da linha de fontes, para que o bloco de dados
    acima domine o slide em vez de dividir a altura com ele. Pergunta grande,
