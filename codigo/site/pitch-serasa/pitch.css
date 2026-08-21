@@ -784,12 +784,46 @@ h1,h2,h3{font-family:var(--titulo);font-weight:700;line-height:1.03;letter-spaci
 
 /* --- BARRAS: a projeção de faturamento -------------------------------- */
 .barras{display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(.6rem,1.6vw,1.6rem);
-  align-items:end;height:clamp(140px,20vh,230px);margin-top:1.2em}
-.barra-ano{display:flex;flex-direction:column;justify-content:flex-end;height:100%;gap:.4em}
+  align-items:end;margin-top:1.2em}
+.barra-ano{display:flex;flex-direction:column;justify-content:flex-end;gap:.35em}
+/* A área de plotagem tem altura PRÓPRIA, e é contra ela que a porcentagem de
+   cada barra resolve. Sem essa zona, os rótulos vizinhos disputavam a altura no
+   flex e as barras altas eram comprimidas: o ano 5 saía do mesmo tamanho do
+   ano 4, e o gráfico mentia. */
+.barra-ano__zona{
+  height:clamp(130px,20vh,215px);
+  display:flex;align-items:flex-end;width:100%;
+}
 .barra-ano__v{font-family:var(--titulo);font-weight:700;color:var(--amarelo);
   font-size:clamp(.78rem,1.15vw,1.15rem);text-align:center;line-height:1}
-.barra-ano__b{background:linear-gradient(180deg,var(--amarelo),var(--terracota));
-  border-radius:3px 3px 0 0;width:100%}
+/* A barra inteira é a receita, e ela fica APAGADA. O resultado é a parte de
+   baixo e é ela que acende. A ordem importa: aceso lê como "o que fica", e
+   apagado lê como "o que passa". Na primeira versão eu fiz o inverso, e a barra
+   dizia o contrário do que significava. */
+.barra-ano__b{
+  background:rgba(203,71,16,.22);
+  border:1px solid rgba(247,195,28,.5);border-bottom:0;
+  border-radius:3px 3px 0 0;width:100%;position:relative;overflow:hidden;
+}
+.barra-ano__res{
+  position:absolute;left:0;right:0;bottom:0;
+  background:linear-gradient(180deg,var(--amarelo),var(--terracota));
+}
+.barra-ano__r{
+  font-family:var(--titulo);font-weight:700;color:var(--bege);
+  font-size:clamp(.68rem,.92vw,.92rem);text-align:center;line-height:1;margin-top:.1em;
+}
+/* A chave que diz o que é cada parte da barra. Sem ela, barra de duas cores é
+   adivinhação: o leitor não tem como saber o que a base escura significa. */
+.barras__chave{
+  display:flex;align-items:center;justify-content:center;gap:.45em;flex-wrap:wrap;
+  font-family:var(--corpo);font-size:clamp(.66rem,.82vw,.82rem);
+  color:rgba(245,241,225,.82);margin:.8em 0 0;
+}
+.chave-p{display:inline-block;width:11px;height:11px;border-radius:2px;flex:0 0 auto}
+.chave-p--rec{background:rgba(203,71,16,.22);border:1px solid rgba(247,195,28,.5)}
+.chave-p--res{background:linear-gradient(180deg,var(--amarelo),var(--terracota))}
+.chave-p--res+*{margin-left:0}
 .barra-ano__l{font-family:var(--titulo);font-weight:700;text-align:center;
   font-size:clamp(.62rem,.78vw,.8rem);color:rgba(245,241,225,.85);
   border-top:1px solid rgba(245,241,225,.28);padding-top:.4em}
@@ -944,6 +978,23 @@ h1,h2,h3{font-family:var(--titulo);font-weight:700;line-height:1.03;letter-spaci
    crédito da foto no canto direito. Subir preserva as quatro linhas; estreitar
    criaria uma quinta e encostaria no número do slide. */
 #s13 .fonte{max-width:none;width:min(78%,1000px);bottom:48px}
+/* Ao virar barra dupla, o gráfico ganhou altura real (o ano 5 passou de 62px
+   para 144px) e empurrou o parágrafo de fecho por cima da linha de fonte.
+   Recupero a altura apertando as margens do bloco do gráfico, e não a altura
+   das barras: barra menor faria o ano 1 desaparecer. */
+#s13 .barras{margin-top:.5em}
+#s13 .barras__chave{margin-top:.5em}
+#s13 .grade{margin-top:.5em!important}
+/* O bloco é centralizado na vertical, então encolher margem só recentraliza e
+   devolve metade da altura ao rodapé. A correção que resolve de vez é reservar
+   rodapé no próprio bloco: assim o conteúdo centralizado nunca alcança a linha
+   de fonte, e o gráfico não precisa encolher mais. */
+#s13 .slide__c{padding-bottom:calc(var(--pad) + 46px)}
+#s13 .barra-ano__zona{height:clamp(118px,18vh,195px)}
+/* O parágrafo de fecho solta a trava de 52ch e ocupa a largura inteira: cai de
+   três linhas para duas, devolve altura ao slide e lê de forma mais corrida.
+   É o mesmo tratamento aplicado aos slides 07 e 09. */
+#s13 .lead{max-width:none;font-size:clamp(1rem,1.42vw,1.42rem)}
 
 /* Slide 07, os dois parágrafos de Helvetica: soltam a trava de 52ch e ocupam a
    largura inteira do slide. A conta é a mesma nos dois: largura cheia significa
