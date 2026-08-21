@@ -938,6 +938,12 @@ h1,h2,h3{font-family:var(--titulo);font-weight:700;line-height:1.03;letter-spaci
    seletividade do investimento e três citações, e a 52ch padrão picotava isso
    em oito linhas. Largura cheia deixa a leitura corrida, como nos parágrafos. */
 #s10 .fonte{max-width:none;width:min(74%,940px)}
+/* Slide 13: o título promete "com as premissas na mesa", então a linha de fonte
+   é onde as premissas de fato ficam. São sete, e a 52ch padrão as picotaria.
+   Sobe 14px do rodapé porque, com quatro linhas, a última cruzava a faixa do
+   crédito da foto no canto direito. Subir preserva as quatro linhas; estreitar
+   criaria uma quinta e encostaria no número do slide. */
+#s13 .fonte{max-width:none;width:min(78%,1000px);bottom:48px}
 
 /* Slide 07, os dois parágrafos de Helvetica: soltam a trava de 52ch e ocupam a
    largura inteira do slide. A conta é a mesma nos dois: largura cheia significa
