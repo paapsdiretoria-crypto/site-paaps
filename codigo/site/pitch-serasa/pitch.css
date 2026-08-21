@@ -567,28 +567,50 @@ h1,h2,h3{font-family:var(--titulo);font-weight:700;line-height:1.03;letter-spaci
 .trilho__selo--2{background:var(--terracota);color:#fff}
 .trilho__pes{display:flex;justify-content:space-around;margin-top:.2em}
 
-/* --- MÉTRICAS: quatro cartões grandes, leitura instantânea ------------- */
-.metricas{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(.6rem,1.4vw,1.4rem);
-  margin-top:1.1em}
-.metrica{background:rgba(245,241,225,.95);border-radius:5px;
-  padding:clamp(.7rem,1.35vw,1.15rem);text-align:center;
-  box-shadow:8px 8px 0 rgba(203,71,16,.55)}
-.metrica__d{display:inline-block;font-family:var(--titulo);font-weight:700;
-  letter-spacing:.05em;font-size:clamp(.6rem,.78vw,.78rem);color:#fff;
-  background:var(--marrom);padding:.24em .9em;border-radius:2px;text-transform:uppercase}
-.metrica__n{font-family:var(--titulo);font-weight:700;line-height:1;
-  font-size:clamp(1.15rem,2.35vw,2.15rem);color:var(--marrom);margin:.34em 0 .2em;
-  text-wrap:balance}
-.metrica__l{font-size:clamp(.65rem,.8vw,.8rem);line-height:1.35;color:#6a4b34;margin:0}
-.metrica__l b{color:var(--terracota)}
+/* --- MÉTRICAS: os números direto sobre a foto --------------------------
+   Antes eram cartões bege opacos com sombra dura, e eles tapavam a fotografia
+   inteira. A foto é o assunto tanto quanto o número, então some a caixa: fica o
+   número em bege, sobre a imagem, com sombra de texto para assentar.
+   Duas colunas e duas linhas, preenchidas por COLUNA e não por linha, para que
+   a esquerda receba LTV e margem e a direita receba equilíbrio e CAC. */
+.metricas{
+  display:grid;grid-template-columns:repeat(2,1fr);grid-template-rows:repeat(2,auto);
+  grid-auto-flow:column;
+  gap:clamp(1.4rem,3.2vw,3.2rem) clamp(2rem,5vw,5rem);
+  margin-top:1.1em;align-items:start;justify-items:center;
+}
+/* Largura generosa: com o número em corpo grande, 22ch quebrava "R$ 704 mil" e
+   "a construir" no meio. O número nunca deve quebrar. */
+.metrica{text-align:center;max-width:30ch}
+.metrica__n{white-space:nowrap}
+.metrica__n{
+  font-family:var(--titulo);font-weight:800;line-height:.95;letter-spacing:-.02em;
+  font-size:clamp(1.6rem,3.4vw,3.4rem);color:var(--bege);margin:0 0 .16em;
+  text-wrap:balance;text-shadow:0 2px 22px rgba(20,9,2,.92),0 0 46px rgba(20,9,2,.6);
+}
+.metrica__l{
+  font-family:var(--corpo);font-size:clamp(.78rem,1vw,1rem);line-height:1.4;
+  color:var(--creme-90);margin:0;text-shadow:0 1px 14px rgba(20,9,2,.9);
+}
+.metrica__l b{color:var(--amarelo)}
+@media(max-width:820px){.metricas{grid-template-columns:1fr;grid-auto-flow:row}}
+
+/* Nos dois slides de métrica o texto agora vive sobre a foto, então o véu
+   afrouxa: quem segura o contraste passa a ser a sombra do próprio texto. */
+#s14.veu-denso::after,#s17.veu-denso::after{
+  background:linear-gradient(180deg,rgba(30,14,3,.55) 0%,rgba(30,14,3,.62) 100%)}
 
 /* Variante do slide de anexo (o cálculo): 2 colunas em vez de 4, porque cada
    card carrega a conta inteira, não só uma linha de legenda. Texto do corpo
    alinhado à esquerda para ler como raciocínio, não como legenda de dado. */
-.metricas--calc{grid-template-columns:repeat(2,1fr);gap:clamp(.7rem,1.6vw,1.3rem)}
-.metricas--calc .metrica{padding:clamp(.85rem,1.6vw,1.3rem)}
-.metricas--calc .metrica__l{text-align:left;margin-top:.4em}
-@media(max-width:820px){.metricas--calc{grid-template-columns:1fr}}
+/* Variante do Anexo: mesma divisão em quatro, sobre a foto, mas o texto de
+   cada conta é longo, então ele afrouxa a largura e alinha à esquerda para ler
+   como raciocínio, e não como legenda centralizada. */
+.metricas--calc{gap:clamp(1.1rem,2.4vw,2.4rem) clamp(1.6rem,4vw,4rem)}
+.metricas--calc .metrica{max-width:34ch}
+.metricas--calc .metrica__n{font-size:clamp(1.3rem,2.6vw,2.6rem)}
+.metricas--calc .metrica__l{text-align:left;font-size:clamp(.72rem,.92vw,.92rem)}
+@media(max-width:820px){.metricas--calc{grid-auto-flow:row}}
 
 /* --- LOCKUP DE PRODUTO: "app Ponto de Apoio" -----------------------------
    Vive no canto superior esquerdo, na mesma linha da frase de canto, que mora
@@ -995,6 +1017,18 @@ h1,h2,h3{font-family:var(--titulo);font-weight:700;line-height:1.03;letter-spaci
    três linhas para duas, devolve altura ao slide e lê de forma mais corrida.
    É o mesmo tratamento aplicado aos slides 07 e 09. */
 #s13 .lead{max-width:none;font-size:clamp(1rem,1.42vw,1.42rem)}
+
+/* O gráfico é o assunto do slide, então os números dele mandam na hierarquia.
+   O resultado é o maior de todos, a receita vem logo abaixo, e o ano precisa
+   ser lido de longe. As três caixas de dado cedem corpo para isso: elas são
+   apoio, não o argumento principal. */
+#s13 .barra-ano__v{font-size:clamp(.92rem,1.42vw,1.42rem)}
+#s13 .barra-ano__r{font-size:clamp(1.1rem,1.85vw,1.85rem);margin-top:.22em}
+#s13 .barra-ano__l{font-size:clamp(.82rem,1.12vw,1.12rem);margin-top:.1em}
+#s13 .barra-ano__l span{font-size:clamp(.62rem,.78vw,.78rem);margin-top:.12em}
+#s13 .cel{padding:clamp(12px,1.4vw,20px)}
+#s13 .cel__n{font-size:clamp(1.05rem,2vw,2rem);margin-bottom:.22em}
+#s13 .cel__l{font-size:clamp(.76rem,.98vw,.98rem);line-height:1.38}
 
 /* Slide 07, os dois parágrafos de Helvetica: soltam a trava de 52ch e ocupam a
    largura inteira do slide. A conta é a mesma nos dois: largura cheia significa
