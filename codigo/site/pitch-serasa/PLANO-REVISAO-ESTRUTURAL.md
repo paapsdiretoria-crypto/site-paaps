@@ -135,6 +135,45 @@ conhecimento, quem executa, por que a conta fecha e por que melhora com o tempo.
 | 5 | **Sobrancelhas em caixa alta miúda: banidas** em todo o deck | Já removidas do slide 07; slide 08 pendente |
 | 6 | Foto do slide 08: **zoom corrigido, véu afrouxado, crédito para a AgSUS** | Feito |
 | 7 | Título do slide 08 **vem por último**, depois do conteúdo | Pendente |
+| 8 | **Slide novo de MERCADO entre o 07 e o 08.** Renumera todo o deck de 08 a 16, que passa a 09 a 17. Deck vai a **17 slides** | Estrutural |
+| 9 | O **mercado da psicologia** entra nesse slide novo, não no 08 nem antes da Tecnologia | Fecha a dúvida de onde citar o CFP |
+| 10 | **Slide de Concorrência em três blocos:** ampla (Brasil), direta (o modelo britânico licenciado) e a **régua da OMS como árbitro** | A OMS é quem julga, não a PAAPS |
+| 11 | O argumento de que a PAAPS **produz a evidência que falta no mundo** entra no slide de **Tecnologia** | Dá função científica à plataforma, que hoje é só operacional |
+
+## 1.1 Por que o slide de Mercado resolve três problemas de uma vez
+
+A Mallu identificou um conflito real de ordem: o exemplo britânico precisa estar de pé
+**antes** do Go to market, porque a expansão estratégica o cita, mas Concorrência vinha
+depois. O slide novo resolve isso e mais duas coisas:
+
+1. **dá casa ao mercado de impacto e ao mercado da psicologia**, que não tinham lugar;
+2. **estabelece a validação internacional** antes de o Go to market se apoiar nela;
+3. **é onde o TAM/SAM/SOM finalmente cabe**, que é a pendência A1 do `CHECKLIST-PITCH.md`,
+   aberta desde 20/08 e classificada por ela mesma como mudança estrutural.
+
+## 1.2 O que a universalidade da Roda acrescenta ao argumento de evidência
+
+Registro do raciocínio, porque ele virou decisão 11.
+
+No estudo britânico a participação era **voluntária**, e quem participou já começava melhor
+(25% acima do limiar de sofrimento, contra 37% de quem não participou). Isso obriga o estudo
+a usar odds ratio ajustado, para tentar descontar o fato de que quem se inscreve já é
+diferente de quem não se inscreve.
+
+**Na PAAPS não há inscrição: toda equipe tem a sua Roda.** Três consequências:
+
+- **alcança quem nunca se inscreveria**, que é justamente quem está mais sobrecarregado e
+  mais isolado, e que o estudo britânico não conseguiu nem medir;
+- **produz evidência mais limpa**, porque sem autosseleção na entrada a comparação antes e
+  depois vale mais. E o campo precisa: a OMS classifica quase tudo como certeza muito baixa,
+  e o estudo britânico tinha 51 participantes, enquanto **um município de 500 servidores tem
+  70 equipes**;
+- **os 17% de folga alocam intensidade por necessidade**, não por voluntarismo.
+
+> **Ressalva a resolver com a Mallu:** universalidade tem custo. Voluntariedade tem a
+> vantagem de a pessoa estar ali porque quis, e grupo com gente que não quer estar pode
+> gerar resistência. **Preciso saber se a Roda é oferta universal ou presença obrigatória**,
+> porque muda a formulação do argumento.
 
 ---
 
