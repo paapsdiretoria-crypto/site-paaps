@@ -74,6 +74,12 @@ verdadeira e verificável; a segunda não bate com o DRE.
 
 **Duas coisas que dependem de você antes disso ir para o slide:**
 
+> **Atualizado em 22/08/2026:** os três pares de DRE e balanço chegaram, e a série
+> completa de quatro exercícios (2022 a 2025) está em `ANALISE-FINANCEIRA-DIGGING.md`,
+> Parte 0. Total faturado no período: **R$ 1.159.918,02**. A conta abaixo continua
+> válida; o que mudou é que agora existe alternativa ao ano isolado, que é o acumulado
+> ou a média.
+
 1. **A receita caiu 22% de 2024 para 2025** (R$ 372 mil para R$ 291 mil). O
    `ANALISE-FINANCEIRA-DIGGING.md` registra que a explicação existe e **é sua para dar, não
    minha**. Se o pitch abrir com a consultoria, a banca vai olhar o DRE. Preciso saber o que

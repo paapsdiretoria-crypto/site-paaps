@@ -58,15 +58,24 @@ Consequência prática para editais, licitações e propostas:
 
 ### CNAEs
 
+Lista conferida no cartão emitido em **13/08/2026 às 12:12:26**, que já reflete a AC-08.
+
 - **Principal:** 85.99-6-04 : Treinamento em desenvolvimento profissional e gerencial
+- **86.50-0-03 : Atividades de psicologia e psicanálise**
+- 62.02-3-00 : Desenvolvimento e licenciamento de programas de computador customizáveis
+- 62.04-0-00 : Consultoria em tecnologia da informação
+- 63.11-9-00 : Tratamento de dados, provedores de serviços de aplicação e hospedagem
+- 63.19-4-00 : Portais, provedores de conteúdo e outros serviços de informação na internet
 - 82.11-3-00 : Serviços combinados de escritório e apoio administrativo
 - 82.30-0-01 : Serviços de organização de feiras, congressos, exposições e festas
 - 85.99-6-99 : Outras atividades de ensino não especificadas anteriormente
-- 63.19-4-00 : Portais, provedores de conteúdo e outros serviços de informação na internet
 
-> **Atenção:** o cartão em mãos é de 14/12/2023 e a AC-08 (01/04/2026) ampliou muito o objeto
-> social. Antes de anexar comprovante de CNPJ em qualquer edital, emitir um cartão novo em
-> solucoes.receita.fazenda.gov.br e conferir se os CNAEs foram atualizados.
+> **A dúvida que estava aberta aqui está resolvida.** A versão anterior desta ficha listava
+> cinco CNAEs, tirados do cartão de 14/12/2023, e alertava que a AC-08 podia não ter chegado
+> ao cadastro. Chegou: **o CNAE de psicologia e psicanálise já consta**, e com ele os três de
+> tecnologia que sustentam a autodefinição como GovTech (62.02, 62.04 e 63.11). Em edital que
+> exija CNAE compatível com o objeto contratado, a empresa está coberta para psicologia,
+> treinamento e desenvolvimento de software, sem precisar de aditivo.
 
 ---
 
@@ -246,8 +255,11 @@ Cláusula Terceira do contrato consolidado. É o que protege a metodologia em li
 | Alteração anterior | JUCESP, NIRE 3523399396-6 | 11/12/2023 |
 | **AC-08 (vigente)** | assinada em São Paulo, a levar/levada a registro na JUCESP | **01/04/2026** |
 
-> Confirmar se a AC-08 já foi arquivada na JUCESP e guardar o número da sessão. Edital costuma
-> pedir contrato social **com registro**, não só assinado.
+> **Confirmado em 22/08/2026:** existe Certidão de Inteiro Teor da AC-08 emitida em
+> **27/04/2026**, ou seja, o ato foi levado a registro em menos de um mês depois de assinado.
+> É esse PDF que se anexa quando o edital pede contrato social **com registro**, e não só
+> assinado. O número da sessão ainda precisa ser lido no corpo do documento: o PDF é digitalizado,
+> sem camada de texto, então não dá para extrair por busca.
 
 ---
 
@@ -257,7 +269,9 @@ Marcar o que já existe em mãos:
 
 - [x] Cartão CNPJ (reemitido 13/08/2026)
 - [x] Contrato social consolidado AC-08 (01/04/2026) : `DIGGING - AC 08_Certidão de Inteiro Teor`
-- [ ] Comprovante de arquivamento da AC-08 na JUCESP
+- [x] Comprovante de arquivamento da AC-08 na JUCESP : a **Certidão de Inteiro Teor de
+      27/04/2026** é o documento que a Junta emite reproduzindo o ato já arquivado, então ela
+      serve de prova de registro. Falta só ler no corpo dela o número da sessão e anotar aqui.
 - [x] Certidão Negativa de Débitos Federais e Dívida Ativa da União (emitida 13/08/2026, válida até 09/02/2027)
 - [x] CRF do FGTS (emitido 13/08/2026)
 - [x] CNDT : débitos trabalhistas (emitida 13/08/2026)
@@ -265,8 +279,10 @@ Marcar o que já existe em mãos:
 - [ ] Certidão negativa municipal (ISS, São Paulo)
 - [ ] Certidão negativa estadual (SP)
 - [ ] Certidão de falência e concordata
-- [ ] Balanço patrimonial e DRE : **precisa de dois pares**, 2024/2023 e 2023/2022. Só o
-      contador da DIGGING tem esse documento, não é algo que se emite online.
+- [x] Balanço patrimonial e DRE : **em mãos desde 22/08/2026, e são três pares, não dois**
+      (2023/2022, 2024/2023 e 2025/2024), todos assinados pela sócia Fabiane e pelo contador
+      André Conceição Silva (ADR, CRC 214145/O-9). Cobrem quatro exercícios fechados, de 2022
+      a 2025. Os valores estão consolidados em `codigo/site/pitch-serasa/ANALISE-FINANCEIRA-DIGGING.md`.
 - [ ] Registro da responsável técnica no CRP e do serviço junto ao CRP, quando o edital exigir
 - [ ] Atestados de capacidade técnica dos contratos já executados (Bela Vista de Minas,
       PROINAPE/SME-RJ, Maré)

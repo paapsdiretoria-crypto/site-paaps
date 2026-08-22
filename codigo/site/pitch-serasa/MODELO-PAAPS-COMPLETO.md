@@ -250,8 +250,13 @@ Prova de que a DIGGING está no Anexo III, tirada dos DREs:
 
 | Ano | Receita | Anexo III daria | Anexo V daria | **Pagou** |
 |---|---|---|---|---|
+| 2023 | R$ 377.019 | 8,79% | 16,87% | **7,13%** |
 | 2024 | R$ 372.036 | **8,76%** | 16,84% | **8,79%** |
 | 2025 | R$ 290.935 | 7,98% | 16,22% | **8,52%** |
+
+> Série completa dos quatro exercícios, incluindo 2022, em
+> `ANALISE-FINANCEIRA-DIGGING.md`, Parte 0. Este documento não é a fonte da verdade
+> financeira: aquele é.
 
 O de 2024 casa na terceira decimal. Por isso a resposta da contadora começava
 com **"se a Psicologia..."**: ela falava da atividade nova. Ela estava certa.

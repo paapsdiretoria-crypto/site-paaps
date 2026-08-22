@@ -1,9 +1,16 @@
 # O que os documentos societários e contábeis dizem
 
-> Versão 2, 17/08/2026. **Substitui a versão 1, que continha um erro.**
-> Fontes: AC-08 (8ª Alteração e Consolidação do Contrato Social, 01/04/2026),
-> DREs 2022 a 2025 e Balanço Patrimonial 2024-2025, assinados pelo contador
-> André Conceição Silva (ADR, CRC 214145/O-9), e certidões de 13/08/2026.
+> Versão 3, 22/08/2026. **Substitui a versão 2, que só tinha dois dos quatro anos.**
+> Fontes: AC-08 (Certidão de Inteiro Teor da JUCESP, 27/04/2026), DREs 2023-2022,
+> 2024-2023 e 2025-2024 e Balanços Patrimoniais dos mesmos pares, todos assinados
+> pela sócia Fabiane Quarez de Vasconcellos e pelo contador André Conceição Silva
+> (ADR Empresa de Serviços Contábeis S/S, CRC 214145/O-9), cartão CNPJ e QSA de
+> 13/08/2026 e as quatro certidões de 13/08/2026.
+>
+> **O que mudou da v2 para a v3:** a v2 dizia ter usado "DREs 2022 a 2025", mas só
+> transcreveu 2024 e 2025. Agora os quatro exercícios estão aqui, e cada linha foi
+> conferida refazendo a conta do lucro a partir da receita e das despesas do próprio
+> DRE. Os quatro fecham na casa dos centavos.
 
 ---
 
@@ -20,6 +27,129 @@ A queda de receita de 2025 é da operação DIGGING e tem outra explicação, qu
 não é minha para dar.
 
 ---
+
+## Parte 0 · A série completa, conferida linha a linha
+
+Os três DREs vêm em pares de anos, e a extração de texto embaralha a ordem das
+colunas. Para não errar de ano, refiz a conta de cada exercício: receita menos
+deduções menos cada grupo de despesa. **Os quatro batem na casa dos centavos**, e é
+essa checagem que garante a qual ano pertence cada número.
+
+### Receita e resultado
+
+| Exercício | Receita bruta de serviços | Lucro líquido | Margem líquida |
+|---|---|---|---|
+| 2022 | R$ 119.928,00 | **prejuízo de R$ 643,44** | -0,5% |
+| 2023 | R$ 377.019,03 | R$ 209.137,71 | 55,5% |
+| 2024 | R$ 372.036,00 | R$ 205.899,51 | 55,3% |
+| 2025 | R$ 290.934,99 | R$ 105.061,96 | 36,1% |
+| **4 exercícios** | **R$ 1.159.918,02** | **R$ 519.455,74** | **44,8%** |
+
+Médias, para quem for escrever copy:
+
+| Recorte | Média anual |
+|---|---|
+| 2022 a 2025 (4 anos) | R$ 289.979,51 |
+| 2023 a 2025 (3 anos) | R$ 346.663,34 |
+| 2024 a 2025 (2 anos) | R$ 331.485,50 |
+
+### Balanço patrimonial
+
+| | 2022 | 2023 | 2024 | 2025 |
+|---|---|---|---|---|
+| Ativo total | 59.283,04 | 70.753,87 | 61.465,51 | 60.967,40 |
+| Caixa e equivalentes | 38.638,67 | 68.145,50 | 21.057,14 | 46.272,13 |
+| Clientes a receber | 18.036,00 | 0,00 | 37.800,00 | 12.086,90 |
+| **Passivo circulante** | **3.208,07** | **14.678,90** | **5.390,54** | **4.892,43** |
+| Patrimônio líquido | 56.074,97 | 56.074,97 | 56.074,97 | 56.074,97 |
+| Capital social | 95.400,00 | 95.400,00 | 95.400,00 | 95.400,00 |
+| Prejuízos acumulados | (39.325,03) | (39.325,03) | (39.325,03) | (39.325,03) |
+
+### O que essa série diz, e o que ela não diz
+
+**Diz:** em quatro exercícios fechados o passivo circulante nunca passou de
+R$ 14,7 mil, e ele é só fornecedor, INSS e Simples a pagar. **Não há uma linha de
+empréstimo, financiamento ou parcelamento de tributo em nenhum dos quatro anos.**
+Numa diligência, passivo oculto é o que mais mata negócio, e aqui não há nenhum.
+
+**Diz também** que 2023 e 2024 fecharam com margem líquida na casa dos 55%, o que
+para consultoria é alto, e se explica: a estrutura é enxuta e o custo é o tempo das
+sócias.
+
+**Não diz** que houve reinvestimento. O patrimônio líquido é o mesmo R$ 56.074,97
+nos quatro anos e os prejuízos acumulados também não se mexem: **o lucro de cada
+exercício foi distribuído, não retido.** Isso é normal em LTDA pequena, mas convive
+mal com a cláusula da AC-08 que promete limitar distribuição de excedentes em favor
+de reinvestimento em P,D&I. A cláusula entrou em 01/04/2026, então vale daqui para
+frente; se alguém cruzar as duas coisas, a resposta é a data.
+
+### As três armadilhas de copy que esta série cria
+
+1. **A série ano a ano tem dois buracos.** 2022 fatura um terço dos outros anos e
+   fecha no vermelho; 2025 cai 22% em relação a 2024. Mostrar a série exposta convida
+   duas perguntas que precisam de resposta pronta. **O total acumulado e a média não
+   têm esse problema e são igualmente verdadeiros.**
+2. **"High-ticket" se sustenta por contrato, nunca por ano.** R$ 30 mil a R$ 50 mil
+   por contrato enquanto ele roda é verdade e é verificável. "Faturamos R$ 30 a 50 mil
+   por mês" não bate com nenhum dos quatro DREs.
+3. **Margem de 55% é um número forte, e por isso perigoso solto.** Ele existe porque
+   não há folha: o pró-labore somado dos quatro anos é de R$ 65.472. Dito sem esse
+   contexto, sugere uma operação maior do que é.
+
+---
+
+## Parte 0.1 · Os dados literais, para citar sem errar
+
+Tudo abaixo é transcrição de documento oficial, não é redação minha.
+
+### Cartão CNPJ, emitido em 13/08/2026 às 12:12:26
+
+| Campo | Valor literal |
+|---|---|
+| Número de inscrição | 05.983.700/0001-67 : MATRIZ |
+| Data de abertura | 23/10/2003 |
+| Nome empresarial | DIGGING DESENVOLVIMENTO E CAPACITACAO ORGANIZACIONAL E INDIVIDUAL LTDA |
+| Nome de fantasia | não consta |
+| Porte | ME |
+| Natureza jurídica | 206-2 : Sociedade Empresária Limitada |
+| CNAE principal | 85.99-6-04 : Treinamento em desenvolvimento profissional e gerencial |
+| CNAE de psicologia | **86.50-0-03 : Atividades de psicologia e psicanálise** |
+| Endereço | R Curuzu, 186, Alto da Lapa, São Paulo/SP, CEP 05.084-020 |
+| Situação cadastral | **ATIVA**, desde 23/10/2003 |
+
+> O cartão também traz e-mail e telefone cadastrais. Eles ficam registrados na ficha
+> jurídica e **não vão para peça pública**: são contato pessoal da Fabiane, e o canal
+> institucional é relacionamento@paaps.com.br.
+
+### QSA, emitido em 13/08/2026 às 12:12:54
+
+Capital social de R$ 95.400,00 (noventa e cinco mil e quatrocentos reais).
+
+| Nome | Qualificação na Receita |
+|---|---|
+| FABIANE QUAREZ DE VASCONCELLOS | 49 : Sócio-Administrador |
+| MARIA LUIZA VASCONCELLOS BARBOSA | 49 : Sócio-Administrador |
+| LUIZ SERGIO BARBOSA | 22 : Sócio |
+
+### As quatro certidões, todas de 13/08/2026
+
+| Documento | Número | Validade | Resultado |
+|---|---|---|---|
+| CNDT, débitos trabalhistas (TST) | 69263723/2026 | até 09/02/2027 | NÃO CONSTA como inadimplente |
+| CRF do FGTS (Caixa) | 2026080503251272387713 | 05/08/2026 a 03/09/2026 | situação regular |
+| Tributos federais e Dívida Ativa (RFB/PGFN) | : | : | sem inscrição em Dívida Ativa da União |
+| Correcional CGU (ePAD, CGU-PJ, CEIS, CNEP, CEPIM) | : | : | NÃO CONSTAM penalidades nem processos |
+
+**Dois cuidados de redação:**
+
+- A certidão federal chama-se **"Positiva com Efeitos de Negativa"**, porque existem
+  débitos com exigibilidade suspensa ou ainda não vencidos. Pelos arts. 205 e 206 do
+  CTN ela tem o mesmo efeito de uma negativa, e é assim que se escreve: "com efeitos
+  de negativa". Chamar de "certidão negativa federal" é impreciso e um avaliador
+  atento pega.
+- **O CRF do FGTS vence em 03/09/2026.** A inscrição da Serasa fecha em 31/08, então
+  cobre; qualquer envio depois disso precisa de reemissão.
+
 
 ## Parte 1 · A separação correta: o que é DIGGING e o que é PAAPS
 
@@ -96,8 +226,14 @@ Comprovação de que a DIGGING está no Anexo III, tirada dos DREs:
 
 | Ano | Receita | Anexo III daria | Anexo V daria | **Pagou** |
 |---|---|---|---|---|
+| 2023 | R$ 377.019 | 8,79% | 16,87% | **7,13%** |
 | 2024 | R$ 372.036 | **8,76%** | 16,84% | **8,79%** |
 | 2025 | R$ 290.935 | 7,98% | 16,22% | **8,52%** |
+
+> 2023 pagou abaixo do que o Anexo III daria porque naquele ano houve ISS destacado
+> à parte (R$ 1.337,80) e o Simples recolhido foi de R$ 26.890,57. Não muda a
+> conclusão: nos três anos a alíquota efetiva fica na faixa do Anexo III, longe dos
+> 16% do Anexo V.
 
 O de 2024 casa na terceira decimal. Por isso a resposta da contadora começava
 com **"se a Psicologia..."**: ela estava falando da atividade nova, não da
