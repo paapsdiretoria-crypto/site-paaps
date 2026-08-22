@@ -1818,3 +1818,65 @@ html{font-size:clamp(10px,calc(min(100vw,100vh * 16 / 9) / 80),16px)}
   top:36%;left:52%;
   text-shadow:0 6px 40px rgba(20,9,2,.75);
 }
+
+/* --- Ajustes da capa, rodada 2 -------------------------------------------
+   A palavra volta a ter transparencia: opaca ela competia com a manchete e
+   pesava demais. E DESCE ate a linha dos ombros, que e o unico jeito de as
+   duas passarem na frente dela. A profundidade vem da oclusao, nao da sombra:
+   sem cruzamento, o efeito 3D nao existe. */
+#s1 .capa-palavra{
+  color:rgba(247,195,28,.58);
+  top:48%;left:52%;
+  font-size:clamp(3.2rem,11.6vw,11.6rem);
+  text-shadow:0 6px 44px rgba(20,9,2,.62);
+}
+/* Sem viragem marrom no recorte: os pixels sao os originais da foto. Como o
+   fundo fica quente e elas ficam frias, a separacao aumenta sozinha. */
+
+/* --- Slide 12: o APP maior ainda -----------------------------------------
+   Fica menor que o BRASIL da capa, e um pouco maior que a Evermore ao lado.
+   Sao letras incomparaveis, entao a proporcao se resolve no olho, medindo a
+   altura de x de uma contra a outra. */
+#s11 .produto__app{
+  font-size:clamp(1.9rem,4.4vw,4.4rem);
+  border-bottom-width:5px;letter-spacing:.02em;
+}
+#s11 .produto{gap:.3em;align-items:baseline}
+#s11 .produto__nome{font-size:clamp(1.7rem,3.7vw,3.7rem)}
+
+/* --- Slide 16, Equipe: a foto desce --------------------------------------
+   A cabeca da fundadora sobe para a linha dos dois cartoes de founder, e o
+   portao vermelho fecha o pe do enquadramento. */
+#s15 .slide__foto img{object-position:center 24%}
+
+/* --- Capa, rodada 3: a palavra precisa CONTINUAR LEGIVEL -----------------
+   Com ela centrada, as duas cobriam o "IL" inteiro e sobrava "BRAS". Oclusao
+   demais deixa de ser profundidade e vira erro. Ela alarga e desloca: agora
+   cada uma cruza uma ponta da palavra, e o meio fica livre. */
+#s1 .capa-palavra{left:57%;font-size:clamp(3.4rem,13.2vw,13.2rem)}
+
+/* --- Slide 16: a foto sobe, nao desce ------------------------------------
+   Com 24% a cabeca dela foi parar no pe do slide. Object-position maior mostra
+   mais da base da foto, o que sobe o assunto: a cabeca vai para a faixa dos
+   dois cartoes de founder e o portao vermelho fecha o pe. */
+#s15 .slide__foto img{object-position:center 72%!important}
+
+/* --- Slide 10: o fluxo de go to market ocupa a caixa inteira -------------
+   Esse bloco e o caminho de aquisicao da casa, e estava usando um terco da
+   propria caixa, em corpo menor que o das celulas ao lado. Ele cresce ate
+   encostar nas bordas do cartao. */
+#s9 .gtm__fluxo{justify-content:space-between;padding:clamp(14px,1.7vw,26px)}
+#s9 .fluxo{gap:clamp(.7em,1.5vh,1.15em)}
+#s9 .fluxo__t{font-size:clamp(.86rem,1.16vw,1.16rem);line-height:1.24}
+#s9 .fluxo__s{font-size:clamp(.76rem,1.0vw,1rem);line-height:1.3}
+#s9 .fluxo__d{font-size:clamp(.74rem,.98vw,.98rem)}
+#s9 .fluxo__p{padding-left:1.35em}
+
+/* --- Slide 13: o trilho desce para a linha do horizonte ------------------
+   Na foto da serra o mar de montanhas termina mais ou menos na metade da
+   altura. Um eixo de roadmap apoiado nessa linha le como continuacao da
+   paisagem, e nao como grafico jogado por cima dela. */
+#s12 .slide__c{justify-content:center;padding-bottom:var(--pad)}
+#s12 .trilho{margin-top:0}
+#s12 .marco__txt{font-size:clamp(.76rem,1.0vw,1rem);line-height:1.28}
+#s12 .marco__txt b{font-size:1.2em;line-height:1.14}
