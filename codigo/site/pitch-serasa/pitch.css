@@ -1524,3 +1524,35 @@ html{font-size:clamp(10px,calc(min(100vw,100vh * 16 / 9) / 80),16px)}
   font-size:clamp(1rem,1.74vw,1.74rem);line-height:1.2;letter-spacing:-.01em;
   text-shadow:0 2px 20px rgba(20,9,2,.92);
 }
+
+/* O pedido concreto, dentro do fecho. Antes o slide terminava em duas perguntas
+   grandes e nenhum compromisso mensuravel: bonito e vago. Estes sao os quatro
+   indicadores que a PAAPS se compromete a mover e a medir pelo Ponto de Apoio.
+   O termo tecnico vem primeiro, em amarelo, porque e o que um avaliador de
+   aceleradora reconhece; a traducao vem colada, porque e o que o secretario
+   de municipio entende. */
+.pedido__i{
+  margin:.9em 0 .5em;font-family:var(--corpo);
+  font-size:clamp(.76rem,.96vw,.96rem);line-height:1.3;color:var(--creme-70);
+  text-shadow:0 1px 12px rgba(20,9,2,.9);
+}
+.pedido__i b{font-family:var(--titulo);font-weight:700;color:var(--bege)}
+.pedido{
+  display:flex;justify-content:center;flex-wrap:wrap;
+  gap:clamp(.5rem,1vw,1rem);margin-bottom:.3em;
+}
+.pedido span{
+  font-family:var(--corpo);font-size:clamp(.68rem,.84vw,.84rem);line-height:1.24;
+  color:var(--creme-70);border:1px solid rgba(232,98,42,.6);
+  background:rgba(203,71,16,.18);border-radius:3px;padding:.34em .72em;
+}
+.pedido b{
+  display:block;font-family:var(--titulo);font-weight:800;color:var(--amarelo);
+  font-size:1.14em;line-height:1.1;
+}
+@media(max-width:820px){ .pedido{flex-direction:column;align-items:stretch} }
+
+/* As duas colunas de ODS emolduram o slide de cima a baixo, entao tudo que
+   corre na largura cheia precisa parar antes delas. A linha de contato era a
+   unica que passava por baixo dos badges. */
+#s16 .fecho__contato{max-width:min(92%,1500px);margin-left:auto;margin-right:auto}
