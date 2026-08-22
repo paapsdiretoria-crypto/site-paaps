@@ -1634,3 +1634,178 @@ html{font-size:clamp(10px,calc(min(100vw,100vh * 16 / 9) / 80),16px)}
 #s11.veu-denso::after{
   background:linear-gradient(180deg,rgba(30,14,3,.54) 0%,rgba(30,14,3,.50) 100%)!important;
 }
+
+/* --- SLIDE 04: os dois numeros abrem, e a pergunta ocupa o meio ----------
+   Antes os dois dados ficavam colados no centro e a pergunta a Serasa morava
+   no slide 03, que ja carregava cinco dados e ficou entupido. Agora cada
+   numero vai para a sua borda, e o vao que se abre entre eles recebe os dois
+   logos e a pergunta, na mesma faixa de altura da legenda dos numeros. */
+.tripe{
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr) minmax(0,1fr);
+  gap:clamp(1rem,3vw,3.4rem);width:100%;align-items:end;
+}
+.tripe .numerao{white-space:nowrap;display:block}
+.tripe .grande-dado{min-width:0}
+/* Os numeros ganham escala: sao eles que carregam o slide, e agora tem borda
+   inteira para ocupar. */
+.tripe .numerao{font-size:clamp(2.4rem,5.4vw,5.4rem);line-height:.94}
+.tripe .grande-dado__l{font-size:clamp(.8rem,1.06vw,1.06rem);line-height:1.36;margin-top:.4em}
+.grande-dado--dir{text-align:right}
+/* A pergunta entra ABAIXO dos numeros, centrada, na altura em que a legenda
+   deles termina. Os logos vem juntos, porque e o encontro das duas casas que
+   a pergunta esta propondo. */
+/* A pergunta e a coluna do meio, nao um bloco abaixo. Alinhada pelo pe junto
+   com os dois numeros, ela cai exatamente na faixa da legenda deles, que e
+   onde a Mallu pediu: "na altura onde esta a palavra transtorno mental". */
+/* A pergunta e a coluna do meio da grade, nao um bloco flutuante. A regra
+   base da .fecho-serasa e absoluta, herdada de quando ela morava colada no
+   rodape do slide 03: aqui ela precisa voltar para o fluxo, senao sai da
+   grade e cai por cima da linha de fonte. */
+.fecho-serasa--centro{
+  position:static;max-width:none;left:auto;bottom:auto;
+  text-align:center;align-self:end;align-items:center;
+  padding-bottom:clamp(2px,.6vh,8px);
+}
+.fecho-serasa--centro .fecho-serasa__logos{justify-content:center}
+.fecho-serasa--centro .t-m{
+  max-width:24ch;margin-left:auto;margin-right:auto;
+  font-size:clamp(1.18rem,2.24vw,2.24rem);line-height:1.16;
+}
+
+/* "no centro e um pouquinho para baixo": o tripe fica logo abaixo da linha
+   media do slide, deixando o teto da foto respirar. */
+#s4 .tripe{margin-top:clamp(40px,9vh,110px)}
+
+/* --- CAPA: profundidade real, em tres camadas ----------------------------
+   Calibrado pela Mallu em 22/08/2026. O problema da capa nao era o texto:
+   era que o veu, necessario para a leitura, apagava as duas profissionais
+   que sao o assunto da foto.
+
+   A solucao nao e clarear o veu, que derrubaria a legibilidade. E furar o
+   veu so onde estao as pessoas. Tres camadas, de tras para frente:
+
+     1. a foto, com o veu por cima, como sempre foi
+     2. a palavra PUBLICOS, grande, deitada no meio da estrada
+     3. as duas mulheres recortadas, SEM veu nenhum, com sombra projetada
+
+   Como a camada 3 passa por cima da 2, os corpos delas cobrem parte da
+   palavra. E essa oclusao, e nao a sombra, que cria a profundidade: o olho
+   entende que a palavra esta atras porque alguem esta na frente dela.
+
+   A viragem quente do recorte foi feita na imagem, nao aqui: a foto do
+   Radilson e preto e branco, e colorir por IA uma agente identificavel
+   seria inventar informacao sobre ela. O que existe e deslocamento de curva
+   de cinza para o lado quente da paleta, como viragem de laboratorio. */
+.capa-palavra{
+  position:absolute;z-index:2;left:50%;top:46%;translate:-50% -50%;
+  font-family:var(--titulo);font-weight:800;text-transform:uppercase;
+  font-size:clamp(4rem,15.5vw,15.5rem);line-height:.8;letter-spacing:-.03em;
+  color:rgba(247,195,28,.30);
+  text-shadow:0 0 60px rgba(20,9,2,.6);
+  pointer-events:none;white-space:nowrap;
+}
+.capa-pessoas{
+  position:absolute;inset:0;z-index:3;
+  width:100%;height:100%;object-fit:cover;object-position:center;
+  pointer-events:none;
+  filter:drop-shadow(0 18px 26px rgba(14,6,1,.85)) drop-shadow(0 3px 6px rgba(14,6,1,.6));
+}
+/* O texto da capa sobe para a camada 4, acima das pessoas, porque a manchete
+   nunca pode ficar atras de ninguem. */
+#s1 .slide__c,#s1 .faixa,#s1 .capa-logo,#s1 .slide__n,#s1 .credito{z-index:4}
+/* Com as pessoas furando o veu, o veu pode ser mais leve: a estrada e o ceu
+   voltam a aparecer sem custar leitura, porque quem segura a manchete e o
+   gradiente do pe, nao o escurecimento geral. */
+#s1.veu-base::after{
+  background:linear-gradient(to top,
+    rgba(30,14,3,.94) 0%,rgba(30,14,3,.86) 26%,rgba(30,14,3,.58) 48%,
+    rgba(30,14,3,.24) 70%,rgba(30,14,3,.04) 100%)!important;
+}
+
+/* A palavra sobe para nao encostar na manchete, que mora no pe a esquerda. */
+#s1 .capa-palavra{top:38%;left:54%}
+
+/* --- SLIDE 12: o "app" vira titulo, nao prefixo ---------------------------
+   A Serasa esta pedindo solucao tecnologica, e a palavra que diz isso estava
+   em corpo 12 minusculo, ao lado do nome do produto. Agora ela tem a mesma
+   escala do rotulo de canto do slide (TECNOLOGIA, CONCORRENCIA), sublinhada
+   e em amarelo, e o nome proprio caminha para o centro. */
+.produto{display:flex;align-items:baseline;gap:.42em}
+.produto__app{
+  font-family:var(--titulo);font-weight:800;text-transform:uppercase;
+  font-size:clamp(1rem,1.62vw,1.62rem);letter-spacing:.04em;
+  color:var(--amarelo);
+  border-bottom:3px solid var(--amarelo);padding-bottom:.06em;
+  text-shadow:0 2px 16px rgba(20,9,2,.9);
+}
+#s11 .produto{left:50%;translate:-50% 0;right:auto}
+
+/* --- SLIDE 13, roadmap: titulo no alto, trilho no pe ---------------------
+   A caixa central concentrava titulo, trilho e chaveamento, e sobrava meio
+   slide vazio embaixo. O titulo sobe para a faixa do rotulo de canto, e o
+   trilho ganha a altura inteira que sobrou: a letra do marco pode crescer
+   sem que nada colida. */
+.titulo-topo{
+  position:absolute;z-index:4;left:var(--pad);top:var(--pad);
+  max-width:min(58%,900px);margin:0;
+  font-size:clamp(1.2rem,2.05vw,2.05rem);line-height:1.14;
+}
+#s12 .slide__c{justify-content:flex-end;padding-bottom:calc(var(--pad) + 30px)}
+#s12 .trilho{margin-top:0}
+/* Com o espaco livre, o texto do marco sobe de corpo: era o menor do deck. */
+#s12 .marco__txt{font-size:clamp(.68rem,.9vw,.9rem);line-height:1.3}
+#s12 .marco__txt b{font-size:1.16em;line-height:1.16}
+#s12 .chave__rotulo,#s12 .faixa-fase{font-size:clamp(.72rem,.94vw,.94rem)}
+/* Os marcos precisam de largura, senao a letra maior vira coluna de uma
+   palavra por linha, que e pior do que a letra pequena que havia antes. */
+#s12 .trilho__fila{gap:clamp(.4rem,1vw,1.1rem)}
+#s12 .marco{padding:0 .1rem;min-width:0}
+#s12 .marco__txt{font-size:clamp(.64rem,.83vw,.83rem);line-height:1.26}
+#s12 .marco__txt b{font-size:1.1em}
+#s12 .trilho__chave{margin-top:clamp(6px,1vh,12px)}
+
+/* --- SLIDE 17, o fecho: reordenado em 22/08/2026 -------------------------
+   A marca sobe, as duas perguntas encolhem e descem, e o rosto da agente
+   comunitaria fica livre. Ela e o assunto da pagina: nao pode ter texto
+   em cima dela. */
+#s16 .fecho__marca{margin-bottom:clamp(10px,2vh,26px)}
+#s16 .slide__c{justify-content:flex-end;padding-bottom:calc(var(--pad) + 8px)}
+.fecho__frase2{
+  margin-top:.18em;text-transform:none;max-width:34ch;
+  font-size:clamp(1.1rem,2.1vw,2.1rem);line-height:1.16;
+}
+/* O vermelho da casa e o terracota. Aqui ele vai um passo mais aceso, porque
+   sobre marrom escuro o terracota cheio fecha o contraste. */
+.vermelho{color:#e8622a}
+/* Evermore com grifo: a letra do logotipo tem hastes finas, entao o sublinhado
+   e desenhado a parte, com folga, em vez do underline nativo, que encostaria
+   nas descidas das letras. */
+.grifo{
+  color:var(--amarelo);font-style:italic;
+  border-bottom:2px solid rgba(247,195,28,.75);padding-bottom:.1em;
+}
+.azul-serasa{color:#2f9fd6}
+#s16 .fecho__cta{
+  text-transform:none;max-width:46ch;
+  font-size:clamp(.95rem,1.72vw,1.72rem);line-height:1.22;
+}
+/* A logo da Serasa sai de dentro da pergunta e vira selo, no alto a direita,
+   na mesma faixa do primeiro ODS. */
+.selo-serasa{
+  position:absolute;z-index:6;top:var(--pad);
+  right:calc(var(--pad) * .55 + clamp(52px,5.6vw,86px) + 14px);
+  height:clamp(22px,2.5vw,34px);width:auto;
+  background:var(--bege);border-radius:3px;padding:5px 8px;
+}
+/* O rosto dela e o assunto da pagina. A marca e as duas perguntas descem, a
+   marca encolhe, e o veu abre bem mais: da para ver as palafitas atras. */
+#s16 .fecho__marca{height:clamp(30px,3.4vw,46px);margin-bottom:clamp(6px,1.2vh,14px)}
+#s16 .fecho__frase{font-size:clamp(1.06rem,2.05vw,2.05rem);max-width:30ch}
+#s16 .fecho__frase2{font-size:clamp(.95rem,1.78vw,1.78rem)}
+#s16 .slide__c{padding-bottom:calc(var(--pad) + 2px)}
+#s16 .slide__foto img{object-position:center 34%}
+#s16.veu-denso::after{
+  background:linear-gradient(to top,
+    rgba(30,14,3,.93) 0%,rgba(30,14,3,.86) 34%,rgba(30,14,3,.62) 56%,
+    rgba(30,14,3,.30) 76%,rgba(30,14,3,.10) 100%)!important;
+}
