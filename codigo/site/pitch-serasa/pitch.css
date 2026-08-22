@@ -626,71 +626,98 @@ h1,h2,h3{font-family:var(--titulo);font-weight:700;line-height:1.03;letter-spaci
    níveis são ligados por um fio vertical desenhado com pseudoelemento, então a
    subordinação se lê sem legenda. Nada aqui anima: a exportação final é
    PowerPoint, e animação não sobrevive à conversão. */
-.eq{display:flex;flex-direction:column;align-items:center;margin-top:.9em}
-.eq__n1,.eq__n2,.eq__n3{display:flex;justify-content:center;gap:clamp(1.6rem,4.5vw,4.5rem);position:relative}
-/* fio que desce de um nível para o seguinte */
+.eq{--eqfoto:clamp(48px,6.1vh,72px);--eqfio:clamp(15px,2.1vh,25px);--eqgap:clamp(1.4rem,4vw,4rem);
+  display:flex;flex-direction:column;align-items:center;margin-top:.9em}
+.eq__n1,.eq__n2,.eq__n3{display:flex;justify-content:center;gap:var(--eqgap);position:relative}
+/* Cada nivel declara a largura do proprio cartao, porque e ela que decide onde
+   ficam os centros das duas fotos, e portanto onde o travessao tem de comecar
+   e terminar. Sem isso o fio era desenhado por porcentagem e nunca encostava
+   na foto. */
+.eq__n1{--cardw:min(36ch,340px)}
+.eq__n2{--cardw:min(29ch,285px)}
+.eq__n3{--cardw:min(21ch,210px)}
+.eq__n1 .eq__p{width:var(--cardw)}
+.eq__n2 .eq__p{width:var(--cardw)}
+.eq__n3 .eq__p{width:var(--cardw)}
+/* Travessao que une os dois irmaos do nivel: corre na altura do CENTRO das
+   fotos e vai de borda a borda delas, entao a linha nasce numa foto e morre na
+   outra. Nessa altura o cartao so tem a foto, logo nada e coberto. */
+.eq__n1::before,.eq__n2::before,.eq__n3::before{
+  content:"";position:absolute;left:50%;translate:-50% 0;
+  top:calc(var(--eqfoto) / 2);height:2px;
+  width:calc(var(--cardw) + var(--eqgap) - var(--eqfoto));
+  background:rgba(247,195,28,.62);
+}
+/* Espinha vertical que desce do centro de um nivel ate o centro do seguinte.
+   Ela corre pelo vao entre os dois cartoes, que e vazio em toda a altura. */
 .eq__n1::after,.eq__n2::after{
-  content:"";position:absolute;left:50%;top:100%;translate:-50% 0;
-  width:2px;height:clamp(14px,1.9vh,22px);background:rgba(247,195,28,.7);
+  content:"";position:absolute;left:50%;translate:-50% 0;
+  top:calc(var(--eqfoto) / 2);height:calc(100% + var(--eqfio));
+  width:2px;background:rgba(247,195,28,.62);
 }
-.eq__n2{margin-top:clamp(14px,1.9vh,22px)}
-.eq__n3{margin-top:clamp(14px,1.9vh,22px)}
-/* travessão horizontal que recolhe os dois irmãos de cada nível */
-.eq__n2::before,.eq__n3::before{
-  content:"";position:absolute;left:25%;right:25%;top:calc(-1 * clamp(14px,1.9vh,22px));
-  height:2px;background:rgba(247,195,28,.7);
-}
-.eq__p{display:flex;flex-direction:column;align-items:center;text-align:center;width:min(21ch,210px)}
+.eq__n2,.eq__n3{margin-top:var(--eqfio)}
+.eq__p{display:flex;flex-direction:column;align-items:center;text-align:center}
 .eq__foto{
-  width:clamp(44px,5.2vh,62px);height:clamp(44px,5.2vh,62px);
-  border-radius:50%;object-fit:cover;border:2px solid rgba(247,195,28,.8);margin-bottom:.35em;
+  width:var(--eqfoto);height:var(--eqfoto);
+  border-radius:50%;object-fit:cover;border:2px solid rgba(247,195,28,.8);margin-bottom:.32em;
 }
 .eq__p--sup .eq__foto{border-color:rgba(203,71,16,.85)}
 .eq__nome{
   font-family:var(--titulo);font-weight:700;line-height:1.12;color:var(--bege);
-  font-size:clamp(.76rem,.98vw,.98rem);text-shadow:0 2px 14px rgba(20,9,2,.9);
+  font-size:clamp(.82rem,1.08vw,1.08rem);text-shadow:0 2px 14px rgba(20,9,2,.9);
 }
 .eq__skill{
-  font-family:var(--corpo);font-size:clamp(.6rem,.76vw,.76rem);line-height:1.32;
-  color:var(--creme-70);margin-top:.16em;text-shadow:0 1px 12px rgba(20,9,2,.9);
+  font-family:var(--corpo);font-size:clamp(.64rem,.815vw,.815rem);line-height:1.31;
+  color:var(--creme-70);margin-top:.14em;text-shadow:0 1px 12px rgba(20,9,2,.9);
 }
 .eq__skill i{color:var(--bege-rosa);font-style:italic}
-/* As cadeiras que a IA ocupa: faixa própria, para não parecer que a máquina é
-   subordinada a alguém do organograma. */
+/* As cadeiras que a IA ocupa: faixa propria, para nao parecer que a maquina e
+   subordinada a alguem do organograma. */
 .eq__ia{
-  margin-top:clamp(14px,2vh,24px);display:flex;align-items:center;justify-content:center;
-  gap:.5em;flex-wrap:wrap;padding-top:.7em;border-top:1px dashed rgba(203,71,16,.7);
-  width:min(92%,940px);
+  margin-top:clamp(12px,1.8vh,22px);display:flex;align-items:center;justify-content:center;
+  gap:.55em;flex-wrap:wrap;padding-top:.66em;border-top:1px dashed rgba(203,71,16,.7);
+  width:100%;
 }
 .eq__ia__c{
-  font-family:var(--titulo);font-weight:800;font-size:clamp(.8rem,1.08vw,1.08rem);
+  font-family:var(--titulo);font-weight:800;font-size:clamp(.84rem,1.1vw,1.1rem);
   color:var(--amarelo);background:rgba(203,71,16,.3);
-  border:1px solid rgba(232,98,42,.75);border-radius:3px;padding:.2em .7em;
+  border:1px solid rgba(232,98,42,.75);border-radius:3px;padding:.18em .66em;
 }
 .eq__ia__l{
-  font-family:var(--corpo);font-size:clamp(.64rem,.8vw,.8rem);line-height:1.34;
+  font-family:var(--corpo);font-size:clamp(.67rem,.84vw,.84rem);line-height:1.33;
   color:var(--creme-70);margin:0;flex:1 1 22ch;min-width:22ch;
 }
 .eq__ia__l b{color:var(--bege)}
 
-/* Fila de fotos do ecossistema: ESTÁTICA. A esteira animada anterior ficava
-   cortada e não sobreviveria à exportação em PowerPoint. */
+/* Fila de fotos do ecossistema: ESTATICA. A esteira animada anterior ficava
+   cortada e nao sobreviveria a exportacao em PowerPoint. */
 .ecos{margin-top:clamp(12px,1.8vh,22px);width:100%}
 .ecos__fotos{display:grid;grid-template-columns:repeat(8,1fr);gap:3px}
 .ecos__fotos img{
-  width:100%;height:clamp(34px,4.6vh,54px);object-fit:cover;
+  width:100%;height:clamp(40px,6.6vh,76px);object-fit:cover;
   border-radius:2px;display:block;filter:saturate(.85);
 }
-.ecos__l{
-  text-align:center;margin:.55em 0 0;font-family:var(--corpo);
-  font-size:clamp(.7rem,.88vw,.88rem);color:var(--creme-90);
-  text-shadow:0 1px 12px rgba(20,9,2,.9);
+/* Os dois numeros do ecossistema. Cada par ocupa metade da largura da fila,
+   entao os dois juntos abrem o slide inteiro na horizontal, em vez de ficarem
+   apertados no meio. */
+.ecos__d{display:flex;width:100%;margin-top:.62em;justify-content:center;align-items:center;
+  gap:clamp(1.8rem,4.6vw,4.6rem);flex-wrap:wrap}
+.ecos__i{flex:0 1 auto;display:flex;align-items:center;gap:.52em;text-align:left}
+.ecos__n{
+  font-family:var(--titulo);font-weight:800;color:var(--amarelo);
+  font-size:clamp(2rem,3.9vw,3.9rem);line-height:.88;letter-spacing:-.015em;
+  text-shadow:0 2px 20px rgba(20,9,2,.95);
 }
-.ecos__l b{font-family:var(--titulo);font-weight:800;color:var(--amarelo);font-size:1.24em}
+.ecos__t{
+  margin:0;font-family:var(--corpo);line-height:1.26;color:var(--creme-90);
+  font-size:clamp(.76rem,1vw,1rem);text-shadow:0 1px 12px rgba(20,9,2,.95);
+}
 @media(max-width:820px){
-  .eq__n2,.eq__n3{flex-direction:column;gap:1rem}
-  .eq__n1::after,.eq__n2::after,.eq__n2::before,.eq__n3::before{display:none}
+  .eq__n1,.eq__n2,.eq__n3{flex-direction:column;gap:1rem}
+  .eq__n1 .eq__p,.eq__n2 .eq__p,.eq__n3 .eq__p{width:min(21ch,210px)}
+  .eq__n1::before,.eq__n2::before,.eq__n3::before,.eq__n1::after,.eq__n2::after{display:none}
   .ecos__fotos{grid-template-columns:repeat(4,1fr)}
+  .ecos__d{flex-direction:column;gap:.9rem}
 }
 
 /* --- LOCKUP DE PRODUTO: "app Ponto de Apoio" -----------------------------
@@ -1358,3 +1385,49 @@ html{font-size:clamp(10px,calc(min(100vw,100vh * 16 / 9) / 80),16px)}
    sozinha não segura. Um respaldo discreto resolve sem virar caixa. */
 #s2 .fonte{background:rgba(20,10,2,.62);padding:.35em .7em;border-radius:3px;
   backdrop-filter:blur(2px);bottom:calc(14px + .2em)}
+
+/* --- SLIDE 16, O FECHO ---------------------------------------------------
+   Deixou de ser slide de pedido escrito e virou slide de fecho: a marca no
+   centro, a pergunta que sustenta a tese inteira, e o convite direto a Serasa.
+   Os oito ODS sairam da fila horizontal, onde passavam por cima da linha de
+   contato, e viraram uma coluna quieta na borda direita. */
+.ods-lado{
+  position:absolute;right:var(--pad);top:50%;translate:0 -50%;z-index:5;
+  display:flex;flex-direction:column;gap:clamp(5px,.62vh,9px);
+  width:clamp(40px,4.2vw,60px);opacity:.92;
+}
+.ods-lado img{width:100%;display:block;border-radius:2px}
+/* O bloco central se centraliza no que sobra depois da coluna de ODS, para
+   nao ficar optically empurrado para a esquerda. */
+#s16 .slide__c{align-items:center;text-align:center}
+.fecho__marca{
+  height:clamp(66px,8.2vw,132px);width:auto;display:block;
+  filter:drop-shadow(0 4px 26px rgba(20,9,2,.85));
+}
+.fecho__frase{
+  margin-top:.7em;max-width:32ch;text-transform:none;
+  font-size:clamp(1.5rem,3.05vw,3.05rem);line-height:1.1;
+}
+.tricolor--centro{margin:1.15em auto}
+.fecho__cta{
+  max-width:26ch;text-transform:none;
+  font-size:clamp(1.2rem,2.42vw,2.42rem);line-height:1.14;
+}
+/* O logotipo da Serasa e azul escuro sobre fundo transparente, entao sobre o
+   veu do slide ele sumiria. Vai numa lasca clara, que e como se aplica marca de
+   terceiro sem recolorir a marca dos outros. */
+.chip-serasa{
+  display:inline-flex;align-items:center;vertical-align:-.16em;
+  background:var(--bege);border-radius:5px;padding:.2em .42em;
+  box-shadow:0 3px 18px rgba(20,9,2,.6);
+}
+.chip-serasa img{height:.86em;width:auto;display:block}
+.fecho__contato{
+  margin-top:1.3em;display:flex;justify-content:center;
+  gap:clamp(1.1rem,2.3vw,2.3rem);flex-wrap:wrap;
+  font-family:var(--titulo);font-weight:700;color:var(--amarelo);
+  font-size:clamp(.82rem,1.05vw,1.05rem);letter-spacing:.02em;
+}
+@media(max-width:820px){
+  .ods-lado{position:static;translate:none;flex-direction:row;width:100%;margin-top:1.4em}
+}
