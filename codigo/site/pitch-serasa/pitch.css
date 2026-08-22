@@ -1809,3 +1809,12 @@ html{font-size:clamp(10px,calc(min(100vw,100vh * 16 / 9) / 80),16px)}
     rgba(30,14,3,.93) 0%,rgba(30,14,3,.86) 34%,rgba(30,14,3,.62) 56%,
     rgba(30,14,3,.30) 76%,rgba(30,14,3,.10) 100%)!important;
 }
+/* A palavra deixa de ser marca d'agua: "PAAPS Brasil" se le com a marca logo
+   acima, entao ela e nome proprio e vem cheia, sem transparencia. Um pouco
+   menor que a anterior, porque opaca ela pesa muito mais. */
+#s1 .capa-palavra{
+  color:var(--amarelo);
+  font-size:clamp(3.4rem,12.4vw,12.4rem);
+  top:36%;left:52%;
+  text-shadow:0 6px 40px rgba(20,9,2,.75);
+}
