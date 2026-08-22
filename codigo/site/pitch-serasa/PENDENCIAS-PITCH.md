@@ -40,11 +40,16 @@ pedido concreto de contrapartida vive nele ou no fecho.
 
 ## 2. O que ficou pendente e não é estrutural
 
-- **Slide 17 continua precisando de mais trabalho.** Palavras dela: "ela precisa de muito
-  mais alteração do que isso". O que já foi feito nesta rodada: marca subiu para o topo,
-  todo o texto desceu para o terço de baixo, o rosto da agente ficou livre (95px de folga
-  entre o rosto e a primeira linha), o grifo saiu, o bloco de indicadores saiu. **Falta ela
-  olhar de novo e dizer o que ainda incomoda.**
+- **Slide 17: refeito em 22/08/2026, aguardando o olhar dela.** Ficaram três coisas e mais
+  nada. (1) No topo, sobre o guarda-chuva, a frase que aponta para a mulher da foto:
+  "Serasa, ela é agente comunitária de saúde. Ela merece e precisa ser cuidada.", com os
+  dois "ela" em vermelho e "Serasa," no azul da Serasa. (2) O meio vazio: o rosto dela,
+  230px livres até a primeira linha de texto. (3) Acima do filete, uma pergunta só, em
+  League Spartan caixa alta, duas linhas: "A PERGUNTA MAIS URGENTE DO SÉCULO XXI É / QUEM
+  CUIDA DE QUEM CUIDA?", com o primeiro "quem cuida" em vermelho. Abaixo do filete, a
+  marca pequena e a linha de contato, numa linha só. **Saíram deste slide:** a frase "A
+  maior demanda do século XXI é por cuidado", a Evermore, e o pedido "Serasa. As servidoras
+  públicas do cuidado precisam e merecem ser cuidadas".
 - **Redução das legendas de fonte no deck inteiro.** Era o item grande do plano de ajuste
   fino e só foi feito nos slides que a pesquisa obrigou a mexer (09, 10, 11). Regra dela:
   pode encurtar, mas **nenhuma informação pode ficar sem fonte**, e a fonte precisa ser

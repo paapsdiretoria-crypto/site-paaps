@@ -1951,3 +1951,56 @@ html{font-size:clamp(10px,calc(min(100vw,100vh * 16 / 9) / 80),16px)}
 #s16 .fecho__cta{margin-top:.5em}
 #s16 .fecho__contato{margin-top:1.1em}
 #s16 .fecho__contato{margin-top:1.5em}
+
+/* ==========================================================================
+   SLIDE 17, o fecho  ·  refeito em 22/08/2026
+   --------------------------------------------------------------------------
+   O slide estava com quatro blocos de texto espremidos no terco de baixo, e
+   era justamente o slide que fecha o pitch. Agora ele tem tres coisas e mais
+   nada: a frase que aponta para ela, la em cima; o rosto dela, livre, no
+   meio; e uma pergunta so, grande, logo acima do filete.
+   A Evermore saiu daqui: a pergunta inteira vai em League Spartan caixa alta,
+   com o primeiro "quem cuida" em vermelho, e o segundo em branco.
+   ========================================================================== */
+
+/* A frase ocupa o lugar onde estava a marca, sobre o guarda-chuva. Ela nomeia
+   quem e a mulher da foto, entao os dois "ela" vao em vermelho: quem le olha
+   a frase, olha a foto e fecha a conta sozinho. */
+.fecho__chamada{
+  position:absolute;z-index:6;top:calc(var(--pad) * .74);
+  left:50%;translate:-50% 0;width:min(58%,880px);margin:0;
+  text-align:center;text-wrap:balance;
+  font-family:var(--titulo);font-weight:700;text-transform:none;
+  font-size:clamp(.95rem,1.66vw,1.66rem);line-height:1.22;
+  letter-spacing:-.005em;color:var(--bege);
+  text-shadow:0 2px 7px rgba(15,7,2,.92),0 9px 34px rgba(15,7,2,.88);
+}
+
+/* A pergunta, unica coisa escrita na metade de baixo alem dos contatos.
+   A quebra e forcada depois do "e": a segunda linha fica sendo a pergunta
+   limpa, sem nenhuma palavra de apoio na frente dela. */
+#s16 .slide__c{justify-content:flex-end;padding-bottom:calc(var(--pad) * 1.95)}
+#s16 .fecho__frase{
+  margin:0 auto;max-width:none;
+  font-size:clamp(1.5rem,3.2vw,3.2rem);line-height:1.08;
+}
+#s16 .tricolor--centro{margin:.68em auto 0}
+
+/* A marca desce para o pe e entra na propria linha de contato, como primeiro
+   item dela: a assinatura fica junto de onde se acha a PAAPS. */
+#s16 .fecho__contato{gap:clamp(.9rem,1.9vw,1.9rem);align-items:center}
+.fecho__contato__marca{
+  height:clamp(17px,1.9vw,25px);width:auto;display:block;
+  filter:drop-shadow(0 3px 16px rgba(20,9,2,.8));
+}
+
+/* O topo do slide e a parte clara da foto: o guarda-chuva. Texto claro sobre
+   ele perde o contraste, entao a frase leva um respaldo proprio, em degrade
+   radial sem borda: escurece o que esta atras das letras e some antes de
+   virar caixa. */
+.fecho__chamada{isolation:isolate}
+.fecho__chamada::before{
+  content:'';position:absolute;z-index:-1;inset:-2.1em -3.4em;
+  background:radial-gradient(ellipse closest-side at center,
+    rgba(18,8,2,.82) 0%,rgba(18,8,2,.70) 38%,rgba(18,8,2,.34) 66%,rgba(18,8,2,0) 100%);
+}
