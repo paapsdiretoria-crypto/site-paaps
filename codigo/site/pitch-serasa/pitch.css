@@ -1880,3 +1880,27 @@ html{font-size:clamp(10px,calc(min(100vw,100vh * 16 / 9) / 80),16px)}
 #s12 .trilho{margin-top:0}
 #s12 .marco__txt{font-size:clamp(.76rem,1.0vw,1rem);line-height:1.28}
 #s12 .marco__txt b{font-size:1.2em;line-height:1.14}
+
+/* --- Slide 13, rodada 2: o eixo na linha do horizonte DE VERDADE ---------
+   Eu tinha posto no meio do slide por suposicao. Medindo a foto: a maior
+   transicao de brilho da serra, que e onde o ceu encontra a montanha, esta em
+   y=611 de 1067. Com o recorte que o object-fit faz, isso cai a 59% da altura
+   do slide, e nao a 50%. O eixo agora pousa exatamente ali.
+
+   E as duas placas de fase se desprendem do trilho e descem para o pe da
+   pagina, que e onde elas estavam e onde ficam melhor: a chave continua
+   acoplada ao roadmap, porque ela explica o roadmap; as placas nao, elas
+   marcam o tempo da pagina inteira. */
+#s12 .slide__c{justify-content:flex-start}
+#s12 .trilho{position:absolute;left:var(--pad);right:var(--pad);top:51.3%;margin:0}
+#s12 .trilho__chave{position:absolute;left:var(--pad);right:var(--pad);top:71.7%;margin:0}
+#s12 .trilho__faixas{
+  position:absolute;left:var(--pad);right:var(--pad);
+  bottom:calc(var(--pad) + 22px);margin:0;
+}
+
+/* --- Slide 16: a foto desce, sem cortar a testa --------------------------
+   A foto e retrato (900x1600) num slide deitado, entao o object-fit amplia
+   2,13 vezes e so cabe um terco da altura dela. Com 72% o corte batia na
+   testa. Em 62% a cabeca pousa na faixa dos dois cartoes de founder. */
+#s15 .slide__foto img{object-position:center 62%!important}
