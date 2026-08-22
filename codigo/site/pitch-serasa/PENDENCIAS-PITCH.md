@@ -40,16 +40,23 @@ pedido concreto de contrapartida vive nele ou no fecho.
 
 ## 2. O que ficou pendente e não é estrutural
 
-- **Slide 17: refeito em 22/08/2026, aguardando o olhar dela.** Ficaram três coisas e mais
-  nada. (1) No topo, sobre o guarda-chuva, a frase que aponta para a mulher da foto:
-  "Serasa, ela é agente comunitária de saúde. Ela merece e precisa ser cuidada.", com os
-  dois "ela" em vermelho e "Serasa," no azul da Serasa. (2) O meio vazio: o rosto dela,
-  230px livres até a primeira linha de texto. (3) Acima do filete, uma pergunta só, em
-  League Spartan caixa alta, duas linhas: "A PERGUNTA MAIS URGENTE DO SÉCULO XXI É / QUEM
-  CUIDA DE QUEM CUIDA?", com o primeiro "quem cuida" em vermelho. Abaixo do filete, a
-  marca pequena e a linha de contato, numa linha só. **Saíram deste slide:** a frase "A
-  maior demanda do século XXI é por cuidado", a Evermore, e o pedido "Serasa. As servidoras
-  públicas do cuidado precisam e merecem ser cuidadas".
+- **Slide 17: segunda versao, 22/08/2026.** O vermelho saiu do slide inteiro. O texto
+  virou uma carta curta, endereçada, toda em branco, em tres degraus: "Serasa Experian e
+  ACE Cortex," / "Essa é Celina. Ela é Agente Comunitária de Saúde, e caminha às mais
+  remotas casas do Brasil todos os dias, a 2 salários mínimos." / "NOS AJUDEM A CUIDAR
+  DELA?" em caixa alta. Abaixo do filete, a marca pequena e a linha de contato. Ficou so a
+  coluna de ODS da direita. **Sairam:** a frase "A PERGUNTA MAIS URGENTE DO SÉCULO XXI É
+  QUEM CUIDA DE QUEM CUIDA?", a chamada anterior sobre o guarda-chuva, todo o vermelho, e
+  a coluna de ODS da esquerda.
+  **PENDENTE DE CONFIRMACAO: o nome "Celina".** A foto e documental, de uma pessoa real,
+  do acervo do Radilson Carlos Gomes. Se o nome nao for o dela de verdade, a peca esta
+  atribuindo nome e salario a uma pessoa identificavel. Confirmar com a Mallu antes de
+  qualquer envio.
+  **Verificado:** o piso nacional do Agente Comunitario de Saude e de 2 salarios minimos
+  desde a EC 120/2022, entao "a 2 salarios minimos" se sustenta. Existe PEC na Camara para
+  subir a 3 para quem tem formacao, ainda nao aprovada.
+  **Verificado:** o parceiro se escreve **ACE Cortex**, sem acento (a Mallu ditou "Córtex").
+
 - **Redução das legendas de fonte no deck inteiro.** Era o item grande do plano de ajuste
   fino e só foi feito nos slides que a pesquisa obrigou a mexer (09, 10, 11). Regra dela:
   pode encurtar, mas **nenhuma informação pode ficar sem fonte**, e a fonte precisa ser

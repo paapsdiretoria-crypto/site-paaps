@@ -1864,13 +1864,25 @@ html{font-size:clamp(10px,calc(min(100vw,100vh * 16 / 9) / 80),16px)}
 /* --- Slide 10: o fluxo de go to market ocupa a caixa inteira -------------
    Esse bloco e o caminho de aquisicao da casa, e estava usando um terco da
    propria caixa, em corpo menor que o das celulas ao lado. Ele cresce ate
-   encostar nas bordas do cartao. */
+   encostar nas bordas do cartao.
+   CORRIGIDO em 22/08/2026: a primeira versao disto fez o contrario do pedido.
+   Cresceu o titulo, encolheu a linha amarela ("Chegamos de dentro") para menos
+   que o proprio subtitulo, e empurrou o rodape para o pe com space-between, o
+   que deixou 185px de vazio morto no meio da caixa. Agora o corpo cresce de
+   verdade, a hierarquia volta ao lugar (amarelo > titulo > cinza) e o vao entre
+   os passos e calculado para o caminho preencher a caixa inteira. */
 #s9 .gtm__fluxo{justify-content:space-between;padding:clamp(14px,1.7vw,26px)}
-#s9 .fluxo{gap:clamp(.7em,1.5vh,1.15em)}
-#s9 .fluxo__t{font-size:clamp(.86rem,1.16vw,1.16rem);line-height:1.24}
-#s9 .fluxo__s{font-size:clamp(.76rem,1.0vw,1rem);line-height:1.3}
-#s9 .fluxo__d{font-size:clamp(.74rem,.98vw,.98rem)}
-#s9 .fluxo__p{padding-left:1.35em}
+/* O vao entre os passos e a variavel que enche a caixa. O fio que liga um
+   passo ao outro le esse mesmo valor, senao ele para no meio do caminho. */
+#s9 .fluxo{--g:clamp(14px,5.5vh,62px);gap:var(--g)}
+#s9 .fluxo__p:not(:last-child)::after{bottom:calc(var(--g) * -1)}
+#s9 .fluxo__t{font-size:clamp(1.02rem,1.72vw,1.72rem);line-height:1.2}
+#s9 .fluxo__d{font-size:clamp(1.3rem,2.13vw,2.13rem);line-height:1.12;margin-top:.14em}
+#s9 .fluxo__s{font-size:clamp(.92rem,1.4vw,1.4rem);line-height:1.28;margin-top:.14em}
+#s9 .fluxo__pe{font-size:clamp(.8rem,1vw,1rem);line-height:1.34}
+#s9 .fluxo__p{padding-left:1.5em}
+#s9 .fluxo__p::before{width:10px;height:10px;top:.4em}
+#s9 .fluxo__p:not(:last-child)::after{left:calc(.22em + 4px);top:1.15em}
 
 /* --- Slide 13: o trilho desce para a linha do horizonte ------------------
    Na foto da serra o mar de montanhas termina mais ou menos na metade da
@@ -2003,4 +2015,63 @@ html{font-size:clamp(10px,calc(min(100vw,100vh * 16 / 9) / 80),16px)}
   content:'';position:absolute;z-index:-1;inset:-2.1em -3.4em;
   background:radial-gradient(ellipse closest-side at center,
     rgba(18,8,2,.82) 0%,rgba(18,8,2,.70) 38%,rgba(18,8,2,.34) 66%,rgba(18,8,2,0) 100%);
+}
+
+/* ==========================================================================
+   SLIDE 13, o roadmap  ·  dois consertos em 22/08/2026
+   --------------------------------------------------------------------------
+   1) O EIXO ESTAVA 18px ABAIXO DOS PONTOS. A linha era desenhada a 50% da
+      caixa do trilho, e a caixa tem preenchimento assimetrico (o de baixo
+      cresceu para caber o cartao do Ponto de Apoio). Metade de uma caixa
+      assimetrica nao e onde estao os pontos. Agora a linha se ancora na
+      fileira, que e onde os pontos vivem: os dois passam a coincidir sempre,
+      qualquer que seja a reserva de baixo. Ela pousa em 48,7% da altura, que
+      e a marca que a Mallu fez a caneta.
+   2) A CHAVE ESTAVA POR CIMA DA ESCRITA DO PONTO DE APOIO. Ela era posicionada
+      por porcentagem da altura da tela, enquanto o texto do marco tem altura
+      em pixel: em tela mais baixa a porcentagem sobe e a chave entra no texto.
+      Agora a chave e filha do trilho e vem depois da fileira, com uma reserva
+      em em. A reserva erra para o lado seguro: sobra ar, nunca falta.
+   ========================================================================== */
+.trilho::before{display:none}
+.trilho__fila::before{
+  content:"";position:absolute;left:0;right:0;top:50%;height:2px;
+  background:linear-gradient(90deg,var(--amarelo),var(--terracota));opacity:.85;
+}
+/* A fileira tem altura zero (o texto dos marcos e absoluto), entao a reserva
+   para o cartao mais alto de baixo e a margem da chave. */
+#s12 .trilho{padding-bottom:.7em}
+#s12 .trilho__chave{position:static;left:auto;right:auto;top:auto;margin:9.4em 0 0}
+
+/* ==========================================================================
+   SLIDE 17  ·  segunda versao, 22/08/2026
+   --------------------------------------------------------------------------
+   O vermelho saiu do slide inteiro a pedido da Mallu, e as duas frases viraram
+   uma carta curta, endereçada, toda em branco. Tres degraus: quem esta sendo
+   chamado, quem e a mulher da foto, e o pedido. O terceiro degrau e o unico em
+   caixa alta, porque e a unica coisa que a peca pede.
+   So sobrou a coluna de ODS da direita: com as duas, o slide ficava emoldurado
+   demais para uma pagina que e, no fim, um retrato de uma pessoa so.
+   ========================================================================== */
+#s16 .fecho__saud{
+  margin:0 auto;font-family:var(--titulo);font-weight:700;
+  font-size:clamp(.94rem,1.42vw,1.42rem);line-height:1.2;letter-spacing:.01em;
+  color:var(--bege);
+}
+#s16 .fecho__corpo{
+  /* text-wrap:balance distribui as tres linhas em vez de deixar a ultima com
+     uma palavra so pendurada. */
+  margin:.62em auto 0;max-width:52ch;text-wrap:balance;
+  font-family:var(--corpo);font-weight:400;
+  font-size:clamp(.92rem,1.44vw,1.44rem);line-height:1.42;
+  color:var(--bege);
+}
+#s16 .fecho__pedido{
+  margin:.62em auto 0;max-width:none;color:var(--bege);
+  font-size:clamp(1.5rem,3.1vw,3.1rem);line-height:1.08;
+}
+/* Tudo que e texto do fecho leva a mesma sombra: a foto por baixo tem a roupa
+   clara dela e o mato claro do fundo, e sem sombra a linha come a letra. */
+#s16 .fecho__saud,#s16 .fecho__corpo,#s16 .fecho__pedido{
+  text-shadow:0 2px 7px rgba(15,7,2,.92),0 9px 34px rgba(15,7,2,.86);
 }
