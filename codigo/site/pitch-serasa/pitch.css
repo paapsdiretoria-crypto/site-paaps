@@ -1514,3 +1514,13 @@ html{font-size:clamp(10px,calc(min(100vw,100vh * 16 / 9) / 80),16px)}
   .dig__dir{border-left:0;padding-left:0;border-top:1px solid rgba(203,71,16,.6);padding-top:.9em}
   .dig__logos{grid-template-columns:repeat(4,1fr);row-gap:14px}
 }
+
+/* A frase do pregao federal estava soterrada na linha de fonte, em cinza de
+   10px: 300 caracteres de tese no rodape. Subiu para o corpo, embaixo da regua
+   da OMS, que e onde o argumento fecha. */
+.comprador{
+  margin-top:clamp(15px,2.2vh,26px);max-width:none;
+  font-family:var(--titulo);font-weight:700;color:var(--branco);
+  font-size:clamp(1rem,1.74vw,1.74rem);line-height:1.2;letter-spacing:-.01em;
+  text-shadow:0 2px 20px rgba(20,9,2,.92);
+}
