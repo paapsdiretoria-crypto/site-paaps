@@ -112,6 +112,56 @@ exatamente a arquitetura que o slide 10 propõe, operando há dezessete anos.
 
 ---
 
+## 2.3 Por que a Point of Care Foundation fechou
+
+Acrescentado em 22/08/2026, depois que a Mallu perguntou. O relatório original registrava o
+fechamento e a data, mas não o motivo.
+
+**Motivo declarado, em uma frase do próprio comunicado:** dificuldade financeira. Richard Smith,
+presidente do conselho, assina o texto de **02/10/2025** e escreve: *"Like many small charities,
+the organisation has faced financial challenges in recent years."*
+
+E o registro oficial de charities confirma, porque publica a conta ano a ano:
+
+| Exercício encerrado em | Receita | Despesa | Resultado |
+|---|---|---|---|
+| 30/04/2021 | £697,86 mil | £517,99 mil | superávit |
+| 30/04/2022 | £1,07 milhão | £636,63 mil | superávit |
+| 30/04/2023 | **£1,29 milhão** (pico) | £994,80 mil | superávit |
+| 30/04/2024 | £1,10 milhão | £1,05 milhão | quase empatado |
+| 30/04/2025 | **£847,27 mil** | ~£1,08 milhão | **déficit de cerca de £233 mil** |
+
+A receita caiu **34% do pico** de 2022/23 para 2024/25, e **23% só no último exercício**, enquanto
+a despesa continuou acima de £1 milhão. O último ano fechado é o único com déficit da série.
+
+**Não foi falência nem cassação.** A saída do registro, em 15/06/2026, está classificada como
+*"Removed by application"*, ou seja, a própria entidade pediu. Os trustees decidiram transferir
+os programas para casas maiores em vez de simplesmente encerrar: as Schwartz Rounds foram para o
+Schwartz Center, e o programa Experiences of Care foi para o Picker Institute Europe em abril de
+2025. O patrimônio remanescente foi dividido entre Picker Institute Europe, Shine Cancer Support
+e National Voices.
+
+### O que isso significa para o argumento da PAAPS, nos dois sentidos
+
+**A favor:** o que quebrou foi a licenciada intermediária, não o método. As mais de 200
+organizações continuaram rodando, e outra instituição assumiu a licença em vez de deixar o
+programa morrer. **Uma licença que sobrevive à falência de quem a operava é uma licença com
+demanda real.** Isso é mais forte, e não mais fraco, do que dizer que o programa apenas existe.
+
+**Contra, e é a pergunta que um investidor vai fazer:** uma operação de licenciamento com mais de
+200 organizações contratantes não sustentou uma casa de £1 milhão por ano. Se o modelo de receita
+da PAAPS depende de licenciamento, esse é o precedente que a banca pode levantar. **Duas ressalvas
+que precisam ser ditas junto:** essas contas são da charity inteira, cobrindo os dois programas, e
+não dá para separar quanto era das Rounds; e charity britânica vive de doação e financiamento
+finalístico, não de venda de licença, então a estrutura de receita não é comparável à da PAAPS.
+
+**Como NÃO escrever isso no deck:** nunca afirmar que a fundação "faliu", porque não faliu, e
+nunca omitir que ela fechou ao mesmo tempo em que se cita o número de 200 organizações. Quem
+conferir vai achar a notícia em uma busca, e é melhor que o deck já tenha dito.
+
+
+---
+
 ## 3. Bloco 2: o formato
 
 ### 3.1 O que é uma Schwartz Round
