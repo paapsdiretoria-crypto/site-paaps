@@ -1556,3 +1556,81 @@ html{font-size:clamp(10px,calc(min(100vw,100vh * 16 / 9) / 80),16px)}
    corre na largura cheia precisa parar antes delas. A linha de contato era a
    unica que passava por baixo dos badges. */
 #s16 .fecho__contato{max-width:min(92%,1500px);margin-left:auto;margin-right:auto}
+
+/* ==========================================================================
+   SISTEMA DE VIDRO  ·  calibrado pela Mallu em 22/08/2026
+   --------------------------------------------------------------------------
+   Ate aqui o deck tinha tres linguagens de caixa convivendo: marrom quase
+   opaco, preto translucido e terracota chapado. Tres jeitos de resolver o
+   mesmo problema, o que e exatamente o que faz uma peca parecer poluida.
+
+   Passa a existir UM padrao, que ja estava certo nos cartoes de solidao do
+   slide 05: tinte creme quase invisivel, blur forte, borda creme fina. A
+   caixa deixa de ser um bloco por cima da foto e vira vidro fosco: a foto
+   continua atras, desfocada, e o texto assenta em cima dela.
+
+   Palavras dela: "eu prefiro muito mais quando e um blur da foto, voce tira
+   a nitidez desse fundo, dessa caixa, para o texto ter mais legibilidade.
+   Eu acho isso muito mais chique."
+
+   UNICA EXCECAO, e e proposital: o ROADMAP mantem fundo destacado, porque
+   ali o slide quer ar de tecnologia e nao de fotografia.
+   ========================================================================== */
+:root{
+  --vidro-fundo:rgba(245,241,225,.07);
+  --vidro-borda:rgba(245,241,225,.18);
+  --vidro-blur:blur(9px);
+}
+.cel,
+.pilar,
+.regua__c,
+.frag__c,
+.org__c,
+.bolha,
+.metrica--cx,
+.pedido span{
+  background:var(--vidro-fundo)!important;
+  backdrop-filter:var(--vidro-blur)!important;
+  -webkit-backdrop-filter:var(--vidro-blur)!important;
+  border-color:var(--vidro-borda);
+}
+/* Os destaques nao voltam a ser bloco chapado: viram o MESMO vidro, com um
+   fio de terracota e um sopro de cor. O que marca o destaque e a borda, nao
+   o preenchimento. */
+.pilar--centro,
+.regua__c--forte,
+.org__c--topo,
+.bolha--f{
+  background:rgba(203,71,16,.16)!important;
+  backdrop-filter:var(--vidro-blur)!important;
+  -webkit-backdrop-filter:var(--vidro-blur)!important;
+  border-color:var(--amarelo)!important;
+}
+#s2 .par .cel{background:var(--vidro-fundo)!important}
+/* O vidro so aparece se houver foto nitida atras dele. Onde o veu era quase
+   opaco, o blur nao tinha o que desfocar: por isso o veu tambem afrouxa. */
+.veu-denso::after{
+  background:linear-gradient(180deg,rgba(30,14,3,.62) 0%,rgba(30,14,3,.58) 100%)!important;
+}
+.veu-base::after{
+  background:linear-gradient(to top,
+    rgba(30,14,3,.90) 0%,rgba(30,14,3,.84) 30%,rgba(30,14,3,.64) 52%,
+    rgba(30,14,3,.30) 74%,rgba(30,14,3,.06) 100%)!important;
+}
+/* Slide 05, Solucao: o marrom passa a existir SO no topo e morre no meio.
+   Da metade para baixo e a foto, quase limpa, porque o que segura o texto
+   dali para baixo sao os proprios cartoes de vidro. */
+#s5.veu-denso::after{
+  background:linear-gradient(180deg,
+    rgba(30,14,3,.88) 0%,rgba(30,14,3,.72) 26%,rgba(30,14,3,.40) 48%,
+    rgba(30,14,3,.22) 68%,rgba(30,14,3,.16) 100%)!important;
+}
+/* Slides 13 e 14: paisagem verde, que e a cor que mais conversa com a paleta
+   da casa. Sao as fotos que mais perdiam com o veu. */
+#s12.veu-denso::after,#s13.veu-denso::after{
+  background:linear-gradient(180deg,rgba(30,14,3,.50) 0%,rgba(30,14,3,.46) 100%)!important;
+}
+/* Slide 12, app Ponto de Apoio: a foto do medico estava escura demais. */
+#s11.veu-denso::after{
+  background:linear-gradient(180deg,rgba(30,14,3,.54) 0%,rgba(30,14,3,.50) 100%)!important;
+}
