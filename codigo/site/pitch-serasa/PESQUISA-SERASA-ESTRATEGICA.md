@@ -104,18 +104,58 @@ confirmado**, mas é a pergunta que eu faria antes de submeter.
 
 ---
 
-## 3. O achado central: a Serasa já é fornecedora de 500 entes públicos
+## 3. O achado central: a Serasa já é fornecedora de mais de 600 órgãos públicos
 
-A Serasa Experian opera o **eConsig**, que ela descreve como a primeira e maior
-plataforma de consignações do Brasil, adquirida junto com a Salt Tecnologia.
+> **Este achado foi contestado pela Mallu e re-verificado em 23/08/2026.** A primeira
+> versão se apoiava numa fonte só, e conteúdo publicitário. Refiz com cinco fontes,
+> incluindo a página de produto da própria Serasa Experian. **O achado se confirma, mas a
+> história por trás dele era outra, e a diferença importa para não errar na frente deles.**
 
-Os números, com data de referência **fevereiro de 2026**:
+### A confirmação, na página de produto da própria Serasa
 
-| O que | Quanto |
-|---|---|
-| Entes públicos atendidos | **mais de 500**, nos três Poderes, nas esferas federal, estadual e municipal |
-| Crédito consignado público sob gestão | **mais de R$ 100 bilhões** |
-| Quem são os clientes | governos estaduais, capitais, **prefeituras do interior**, institutos de previdência e universidades |
+A prova mais dura não é notícia, é a Serasa vendendo o produto no site dela, em
+`serasaexperian.com.br/solucoes/gestao-de-consignado`:
+
+> "Gestão de Consignado é com eConsig da Serasa Experian"
+> "O eConsig é a solução de gestão de crédito consignado para órgãos públicos"
+> "O eConsig é voltado para órgãos públicos das esferas federal, estadual e municipal"
+
+### Mas não foi a Serasa que construiu isso, e isso não pode ser dito errado
+
+O eConsig é uma plataforma da **Zetra** (Zetrasoft), empresa de Belo Horizonte fundada em
+2000, uma das primeiras fintechs brasileiras, com **25 anos** nesse mercado.
+
+Em **julho de 2024**, numa operação de codinome **Projeto Salt**, a Serasa Experian
+comprou do **Grupo Zetra** a **SalaryFits e parte da Zetrasoft**. Valor não divulgado. A
+aquisição da SalaryFits foi anunciada oficialmente pela Serasa em **outubro de 2024**,
+mas, atenção: **essa nota oficial não menciona o eConsig nem a Zetra em nenhum momento.**
+Quem amarra as duas pontas é a descrição da operação pelo escritório de advocacia que a
+conduziu, mais a página de produto atual.
+
+**Como falar disso sem errar:** o eConsig **é hoje uma solução da Serasa Experian**, e é
+assim que ela mesma o apresenta. Mas ele **não nasceu lá**: veio da Zetra, por aquisição.
+Escrever "a Serasa criou" seria errado, e quem estiver do outro lado da mesa sabe disso.
+
+### Os números, e de onde vem cada um
+
+| O que | Quanto | Fonte |
+|---|---|---|
+| Órgãos públicos atendidos | **mais de 600** | página de produto da Serasa |
+| Entes públicos atendidos | mais de 500, nos três Poderes | conteúdo publicitário, fev/2026 |
+| Crédito consignado público sob gestão | **mais de R$ 100 bilhões** | conteúdo publicitário, fev/2026 |
+| Tempo de mercado da plataforma | **25 anos** | página de produto da Serasa |
+
+Onde os dois números divergem (600 e 500), **usar 600**, que é o da página oficial de
+produto, e é o mais recente.
+
+### Os clientes que a própria Serasa lista, com nome
+
+Exército Brasileiro, Força Aérea Brasileira, Marinha do Brasil, STJ, STF, MPDFT, Governo
+do Estado do Paraná, e as prefeituras de **Curitiba, Belo Horizonte, Vila Velha e
+Campinas**.
+
+> **Belo Horizonte está na lista.** É Minas Gerais, que é o território onde a PAAPS já
+> opera. Não é um argumento abstrato sobre canal: é a mesma cidade, na mesma lista.
 
 E, na descrição da própria Serasa, o eConsig **já faz programa de bem-estar para servidor
 público**: investe em "iniciativas de educação financeira voltadas aos servidores
@@ -129,8 +169,8 @@ nenhuma conversão por canal frio, quatro territórios que vieram por convite e 
 local. O slide 18 chama isso de "a construir".
 
 A pesquisa mostra que **o canal que a PAAPS precisa construir é um canal que a Serasa já
-opera**, com contrato vigente, em mais de 500 entes públicos, incluindo prefeituras do
-interior, que é literalmente o nosso recorte de prospecção em Minas.
+opera**, com contrato vigente, em mais de 600 órgãos públicos, incluindo a prefeitura de
+Belo Horizonte, que fica no território onde a PAAPS já trabalha.
 
 E a ponte não é só de distribuição, é de conteúdo:
 
@@ -297,7 +337,7 @@ Parceria de dados.
 
 **Enquadramento B, mais ambicioso.** A PAAPS se apresenta como a camada de cuidado
 psíquico que falta dentro de um programa de bem-estar do servidor que a Serasa já opera em
-mais de 500 entes públicos. Não é parceria de dados, é **produto conjunto**.
+mais de 600 órgãos públicos. Não é parceria de dados, é **produto conjunto**.
 
 O B é muito mais forte e é muito mais arriscado, porque presume que a Serasa queira somar
 uma frente de saúde mental a uma operação de crédito. O A cabe em qualquer resposta.
@@ -310,7 +350,12 @@ uma frente de saúde mental a uma operação de crédito. O A cabe em qualquer r
 - [Serasa Experian lança 4ª edição do Impulsiona Startups com R$ 800 mil em investimentos, Finsiders Brasil](https://finsidersbrasil.com.br/negocios-em-fintechs/aportes/programa-da-serasa-experian-oferecera-r-800-mil-saiba-como-participar/)
 - [Serasa Experian anuncia terceira edição do Impulsiona Startups, IT Forum](https://itforum.com.br/noticias/serasa-impulsiona-startups/)
 - [Descubra se a sua startup pode participar do Impulsiona Startups, Serasa Experian](https://www.serasaexperian.com.br/conteudos/descubra-se-a-sua-startup-pode-participar-do-impulsiona-startups/) *(desatualizada, descreve a edição anterior)*
-- [eConsig supera R$ 100 bi e consolida liderança no consignado público, conteúdo da Serasa na Gazeta do Povo](https://www.gazetadopovo.com.br/conteudo-publicitario/serasa/econsig-100-bilhoes-consignado-publico-serasa-experian/)
+- [Gestão de Consignado é com eConsig da Serasa Experian, página oficial de produto](https://www.serasaexperian.com.br/solucoes/gestao-de-consignado) *(a prova mais dura: a Serasa vendendo o eConsig como solução dela)*
+- [eConsig supera R$ 100 bi e consolida liderança no consignado público, conteúdo publicitário da Serasa na Gazeta do Povo](https://www.gazetadopovo.com.br/conteudo-publicitario/serasa/econsig-100-bilhoes-consignado-publico-serasa-experian/)
+- [Conheça a Zetra, quem construiu o eConsig](https://www.zetra.com.br/conheca-a-zetra/)
+- [eConsig, página da Zetra](https://www.zetra.com.br/econsig/)
+- [Projeto Salt, Grupo Zetra: descrição da operação pelo escritório Freitas Ferraz](https://www.freitasferraz.com.br/geral/projeto-salt-grupo-zetra/)
+- [Serasa Experian faz nova aquisição que deve fomentar mercado de crédito consignado, nota oficial de out/2024](https://www.serasaexperian.com.br/sala-de-imprensa/institucional/serasa-experian-faz-nova-aquisicao-que-deve-fomentar-mercado-de-credito-consignado/) *(fala da SalaryFits; não menciona eConsig nem Zetra)*
 - [Indicadores Econômicos, Serasa Experian](https://www.serasaexperian.com.br/conteudos/indicadores-economicos/)
 - [10 anos do Mapa da Inadimplência, Serasa](https://www.serasa.com.br/imprensa/10-anos-do-mapa-de-inadimplencia/)
 - [Quem Somos, Serasa Experian](https://www.serasaexperian.com.br/quem-somos/)
