@@ -1384,10 +1384,7 @@ html{font-size:clamp(10px,calc(min(100vw,100vh * 16 / 9) / 80),16px)}
 #s2 .fonte{left:var(--pad);right:auto;transform:none;width:min(58%,760px);
   text-align:left;font-size:clamp(.52rem,.66vw,.66rem);line-height:1.3;
   text-shadow:0 1px 3px rgba(15,7,2,.95),0 2px 8px rgba(15,7,2,.9)}
-/* A linha de fontes cai sobre o colete branco do agente comunitário: sombra
-   sozinha não segura. Um respaldo discreto resolve sem virar caixa. */
-#s2 .fonte{background:rgba(20,10,2,.62);padding:.35em .7em;border-radius:3px;
-  backdrop-filter:blur(2px);bottom:calc(14px + .2em)}
+
 
 /* --- SLIDE 16, O FECHO ---------------------------------------------------
    Deixou de ser slide de pedido escrito e virou slide de fecho: a marca no
