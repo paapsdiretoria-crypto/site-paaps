@@ -2122,3 +2122,23 @@ html{font-size:clamp(10px,calc(min(100vw,100vh * 16 / 9) / 80),16px)}
   padding:.72em 1.15em;border-radius:4px;
 }
 .pedido--g b{font-size:1.3em;margin-bottom:.16em}
+
+/* Slide 13 (A oportunidade). Dois ajustes pedidos pela Mallu em 23/08/2026:
+   1. as tres caixas ganham titulo. O titulo NAO vai em caixa alta, porque
+      "eConsig" e nome proprio com e minusculo, e caixa alta destruiria a marca.
+   2. as quatro caixas do que e medido crescem ate o mesmo peso visual da fileira
+      de cima, entao deixam de ser chips em linha e viram grade de quatro colunas. */
+#s13p .cel__t{text-transform:none;letter-spacing:0;color:var(--amarelo);
+  font-size:clamp(.95rem,1.32vw,1.32rem);margin-bottom:.45em}
+#s13p .pedido--g{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:clamp(.6rem,1.1vw,1.1rem);margin-top:clamp(.6rem,1.1vw,1.1rem);
+}
+#s13p .pedido--g span{
+  display:flex;flex-direction:column;justify-content:center;
+  min-height:clamp(110px,12.9vw,206px);
+  padding:clamp(14px,1.7vw,26px);border-radius:0;
+  font-size:clamp(.82rem,1.06vw,1.06rem);line-height:1.34;
+  color:var(--creme-90);
+}
+#s13p .pedido--g b{font-size:1.42em;margin-bottom:.2em}
