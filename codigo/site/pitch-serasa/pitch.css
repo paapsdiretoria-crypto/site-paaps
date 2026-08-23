@@ -2224,6 +2224,7 @@ html{font-size:clamp(10px,calc(min(100vw,100vh * 16 / 9) / 80),16px)}
   position:absolute;left:var(--pad);right:var(--pad);
   top:calc(var(--pad) + 6.6em);bottom:calc(var(--pad) + 34px);
   display:flex;align-items:stretch;gap:clamp(16px,2.2vw,32px);
+  z-index:3;
 }
 #s2 .s2-col{width:25%;display:flex;flex-direction:column;justify-content:center}
 #s2 .s2-col--dir{text-align:right}
@@ -2255,4 +2256,14 @@ html{font-size:clamp(10px,calc(min(100vw,100vh * 16 / 9) / 80),16px)}
   #s2 .s2-linha3{position:static;flex-direction:column;padding:1rem var(--pad)}
   #s2 .s2-col,#s2 .s2-foto{width:auto}
   #s2 .s2-col--dir{text-align:left}
+}
+
+/* Slide 02: entrou foto de fundo em tela cheia (Bela Vista de Minas), atras da
+   planilha comparativa. A foto central contida (.s2-foto) e OUTRA coisa, fica
+   intocada, por cima do fundo. O veu aqui usa o valor INTERMEDIARIO que ja
+   existia na historia deste arquivo: mais forte que o .62/.58 atual (afrouxado
+   em 20/08 para os cartoes de vidro respirarem), mas sem voltar ao .94/.92
+   antigo, quase opaco. A Mallu pediu exatamente esse meio-termo em 23/08. */
+#s2.veu-denso::after{
+  background:linear-gradient(180deg,rgba(30,14,3,.84) 0%,rgba(30,14,3,.80) 100%)!important;
 }
