@@ -370,7 +370,12 @@ h1,h2,h3{font-family:var(--titulo);font-weight:700;line-height:1.03;letter-spaci
   text-transform:uppercase;letter-spacing:.1em;color:var(--oliva);margin-bottom:.7em}
 
 /* sequência de produtos: a seta conta que um puxa o próximo */
-.cel--seq{position:relative}
+/* .cel tem backdrop-filter, que cria contexto de empilhamento proprio. Duas
+   celulas irmas com esse contexto (z-index:auto) empilham por ordem de DOM,
+   entao a celula seguinte pintava por cima da metade direita da seta, que
+   protrai para dentro do territorio dela. z-index:1 promove o contexto da
+   celula que tem a seta para cima da proxima, sem afetar mais nada. */
+.cel--seq{position:relative;z-index:1}
 .cel--seq:not(:last-child)::after{
   content:"→";position:absolute;right:-9px;top:50%;transform:translateY(-50%);z-index:4;
   width:20px;height:20px;display:grid;place-items:center;
@@ -2267,3 +2272,41 @@ html{font-size:clamp(10px,calc(min(100vw,100vh * 16 / 9) / 80),16px)}
 #s2.veu-denso::after{
   background:linear-gradient(180deg,rgba(30,14,3,.84) 0%,rgba(30,14,3,.80) 100%)!important;
 }
+
+/* Slide 08 (id=s7): com a grade da conta + os pilares da operacao no mesmo
+   16:9, o paragrafo final colidia 4px com a linha de fonte. So aperta margem
+   e padding; o corpo da letra nao cede, que e a regra da casa. */
+#s7 .grade{margin-top:.7em}
+/* Duas celulas seguidas tem .cel--seq (cada uma com seta apos ela), entao as
+   duas ficam empatadas em z-index:1, e o empate se resolve por ordem de DOM:
+   a segunda pinta por cima da primeira, cortando ao meio a seta da primeira.
+   A primeira precisa ficar por cima da segunda; a segunda ja fica por cima da
+   terceira (que nao tem stacking context proprio, por nao ter .cel--seq). */
+#s7 .grade .cel--seq:first-child{z-index:2}
+#s7 .pilares{margin-top:.6em}
+#s7 .cel{padding:clamp(13px,1.5vw,22px)}
+#s7 .pilar{padding:clamp(.75rem,1.4vw,1.25rem);gap:.4em}
+
+/* BUG DE VERDADE, nao aperto de conteudo: .grade tem overflow:hidden (para o
+   border-radius recortar limpo), e a spec CSS diz que um item flex com
+   overflow != visible tem "automatic minimum size" ZERO. Quando o slide 08
+   nao cabia inteiro, o flexbox encolheu a grade ate 2px (o conteudo INTEIRO
+   sumia, silenciosamente) em vez de encolher os outros irmaos, que tem
+   overflow:visible e por isso tem piso de min-content. Trava a grade no
+   tamanho de conteudo dela; se sobrar overflow, aparece visivel e vira corte
+   de conteudo de verdade, nao desaparecimento mudo. */
+#s7 .grade{flex-shrink:0}
+
+/* Slide 09 (id=s8): mesmo bug do slide 08. .grade tem overflow:hidden, que
+   zera o "automatic minimum size" dela num container flex, entao ela e a
+   primeira a ser espremida quando o conteudo nao cabe, silenciosamente. */
+#s8 .grade{flex-shrink:0}
+
+/* celula com dois numeros, no modelo do .pilar--duplo do slide 08 */
+.cel--duplo .cel__n{font-size:clamp(1.05rem,1.9vw,1.9rem);margin-bottom:.12em}
+.cel--duplo .cel__l{margin-bottom:.9em}
+.cel--duplo .cel__l:last-child{margin-bottom:0}
+
+/* o parentese da data, ao lado do numero */
+.cel__ano{display:block;font-family:var(--corpo);font-style:normal;font-weight:400;
+  font-size:clamp(.6rem,.72vw,.72rem);letter-spacing:0;color:var(--bege);margin-top:.15em}
