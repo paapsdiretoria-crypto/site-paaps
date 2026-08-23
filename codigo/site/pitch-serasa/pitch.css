@@ -2075,3 +2075,40 @@ html{font-size:clamp(10px,calc(min(100vw,100vh * 16 / 9) / 80),16px)}
 #s16 .fecho__saud,#s16 .fecho__corpo,#s16 .fecho__pedido{
   text-shadow:0 2px 7px rgba(15,7,2,.92),0 9px 34px rgba(15,7,2,.86);
 }
+
+/* ==========================================================================
+   SLIDE 12, o lockup do produto  ·  simplificado em 22/08/2026
+   --------------------------------------------------------------------------
+   A tentativa de dois degraus com a Evermore por cima nao deu certo: o bloco
+   invadia o rotulo de canto e o titulo, e o desalinho lia como erro, nao como
+   relevo. Uma linha so, centralizada, tudo em League Spartan caixa alta.
+   "app" amarelo com o filete, o nome do produto em bege.
+   ========================================================================== */
+#s11 .produto{
+  left:50%;translate:-50% 0;right:auto;
+  align-items:baseline;gap:.3em;justify-content:center;
+}
+#s11 .produto{white-space:nowrap;flex-wrap:nowrap}
+#s11 .produto__nome{
+  font-family:var(--titulo);font-weight:800;text-transform:uppercase;
+  font-size:clamp(1.1rem,3vw,3rem);letter-spacing:.005em;line-height:1;
+  color:var(--bege);
+  text-shadow:0 2px 14px rgba(20,9,2,.94),0 8px 34px rgba(20,9,2,.72);
+}
+#s11 .produto__app{
+  font-size:clamp(1.1rem,3vw,3rem);
+  border-bottom-width:4px;letter-spacing:.02em;
+}
+
+/* --- Slide 05: a terceira caixa deixa de ser dado de solidao e vira a regua
+   da OMS, que subiu do slide 11. Ela nao leva a moldura de vidro do cartao:
+   a propria regua ja tem borda, e duas molduras uma dentro da outra e ruido. */
+.dado-solidao--regua{
+  flex:3 1 520px;max-width:none;text-align:left;
+  padding:0;background:none;border:0;
+  backdrop-filter:none;-webkit-backdrop-filter:none;
+}
+.dado-solidao--regua .regua{margin-top:0;height:100%}
+/* O vermelho de alerta: usado so onde a peca precisa dizer que aquilo e o
+   lado fraco da comparacao. */
+.alerta,.regua__d b.alerta,.dado-solidao__p b.alerta{color:#e8622a}

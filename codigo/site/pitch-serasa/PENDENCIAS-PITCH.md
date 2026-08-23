@@ -102,3 +102,59 @@ pedido concreto de contrapartida vive nele ou no fecho.
   DIGGING. Precisa de advogado de propriedade industrial. Detalhe na seção 5 do arquivo de
   verificação.
 - **O CRF do FGTS vence em 03/09/2026.** Cobre a inscrição de 31/08, mas por pouco.
+
+---
+
+## 5. Revisao pagina a pagina, iniciada em 22/08/2026
+
+Status que a Mallu deu, slide a slide:
+
+| Slide | Status |
+|---|---|
+| 01 Capa | **Aprovado**, nada a fazer |
+| 02 Problema | **Pendente**: ver a caixa de alerta abaixo |
+| 03 Como a PAAPS e a Serasa se conversam | Ela tem alteracoes de copy, ainda nao ditadas |
+| 04 Por que agora | **Aprovado**, nada a mudar |
+| 05 Solucao | **Refeito nesta sessao** (titulo, subtitulo, terceira caixa) |
+| 10 Go to market | Layout aprovado; ela ainda tem alteracoes de copy |
+| 11 Concorrencia | Troca feita; ela quer reescrever o slide inteiro, e **nao quer citar Unimed, Conexa e Zenklub pelo nome** |
+| 12 Tecnologia | **Aprovado**: uma linha, League Spartan caixa alta, sem Evermore |
+| 13 Roadmap | **Aprovado** |
+| 17 Fecho | **Aprovado** |
+
+### A troca de argumentos entre o 05 e o 11 (feita)
+
+- **Subiu para o 05:** a regua da OMS (formar gestores e trabalhar a equipe = recomendacao
+  forte x intervencao individual = evidencia baixa a muito baixa), agora com a frase de
+  alerta em vermelho: "E o unico produto que o mercado vende hoje para a Rede Publica de
+  Cuidado brasileira."
+- **Desceu para o 11:** o argumento de que sessao individual trata o adoecimento que o
+  trabalho produz como culpa de quem nao aguentou. Entrou no titulo, **em carater
+  provisorio**: o titulo antigo citava a evidencia da OMS, que nao mora mais ali.
+- **Saiu do deck:** os dados 29% / 32% / 31% / 26% e as fontes Heart 2016, Nature Mental
+  Health 2024 e Holt-Lunstad 2015.
+
+### ALERTA sobre o slide 02
+
+Os numeros **97%** (educacao), **81%** (saude, Sao Paulo) e **60,3%** (afastamentos) nao tem
+rastro em nenhum documento do repositorio: existem so dentro do HTML. E a linha de fonte
+credita "Apeoesp, Sao Paulo, 2026", mas a **Apeoesp e o sindicato dos professores do estado
+de Sao Paulo**, entao ela nao pode ser a fonte do numero da saude. Item B1 do
+`CHECKLIST-PITCH.md`, aberto desde o comeco e nunca respondido.
+
+### Frase sem casa
+
+"Tudo que uma equipe precisa esta nela mesma. A PAAPS desvela as potencias: a solucao ja
+existe, so precisa do contexto certo para emergir." Saiu do titulo do slide 05 e a Mallu
+quer decidir para onde vai.
+
+### Riscos de afirmacao no novo subtitulo do slide 05
+
+Tres pontos que um avaliador tecnico pode cobrar, registrados para ela decidir:
+
+1. "O unico tratamento eficaz ... e a Roda de Equipe": a recomendacao forte da OMS e para a
+   **categoria** (formar gestores e trabalhar a equipe), nao para a Roda de Equipe da PAAPS.
+2. "impacta significativamente": "significativamente" e termo estatistico, e a PAAPS ainda
+   nao tem tamanho de efeito proprio medido.
+3. "o efeito cascata no cuidado prestado a populacao e direto e mensuravel": e justamente o
+   que o Ponto de Apoio vai medir, entao hoje e capacidade futura, nao resultado medido.
