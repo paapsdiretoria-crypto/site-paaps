@@ -7,6 +7,36 @@
 
 ---
 
+## 0. Decisões da rodada de domingo, 23/08/2026
+
+Quatro decisões tomadas por ela na abertura da rodada, depois de lida a
+`PESQUISA-SERASA-ESTRATEGICA.md`:
+
+1. **Prazo: assumir 30/08.** A pesquisa achou 30/08 em duas fontes independentes e tratou
+   o 31/08 como resíduo de edição anterior. Trabalhar com a data mais curta. **Ainda vale
+   conferir no formulário**, mas o planejamento não espera por isso. Faltam 7 dias.
+2. **A rodada começa pelo slide novo da parceria**, porque é o único que não existe e o
+   único que exige criação, não revisão.
+3. **Enquadramento B, produto conjunto.** A PAAPS se apresenta como a camada de cuidado
+   psíquico que falta dentro de um programa de bem-estar do servidor que a Serasa já opera.
+   O enquadramento A (parceria de dados) fica descartado.
+4. **O slide 11 deixa de ser de concorrência e vira slide de categoria.** O argumento passa
+   a ser que o mercado inteiro vende uma categoria só de intervenção, a individual, e que
+   ela é a de evidência mais fraca em saúde mental no trabalho. Ninguém é nomeado. O título
+   atual muda junto, porque a régua da OMS sobe para o 05.
+
+### O que já foi feito nesta rodada
+
+- **Slide 13, parceria Serasa: escrito, montado e medido no deck rodando.** Sem colisão e
+  sem estouro: título em 2 linhas, grade de 3 células, lead em 2 linhas, bloco de
+  indicadores no pé, com 236px de folga até o rodapé. Export em
+  `slide-13-parceria-serasa.png`. **Aguardando o gate dela.**
+- **O deck passou de 18 para 19 slides.** A numeração de 13 a 18 foi deslocada para 14 a
+  19. Toda referência a número de slide nos outros arquivos deste projeto está defasada em
+  um a partir do 13: o antigo 13 (Roadmap) agora é 14, o antigo 18 (Anexo) agora é 19.
+
+---
+
 ## 1. Onde o deck está
 
 | Slide | Estado |
