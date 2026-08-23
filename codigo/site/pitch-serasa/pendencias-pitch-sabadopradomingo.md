@@ -217,6 +217,11 @@ Duas correções na quarta métrica, a que hoje diz **"A construir"**:
 
 ## 4. O slide que ainda não existe: a parceria com a Serasa
 
+> **Não confundir com o slide 05.** São dois assuntos diferentes que andaram juntos na
+> conversa: o **05** é a Solução (Rodas de Equipe), e o que ele precisa é consertar a
+> colisão do subtítulo sobre o gráfico da jornada. **Este slide aqui é outro**, é novo, e
+> é o que depende da pesquisa estratégica sobre a Serasa.
+
 **Onde entra:** logo depois do slide 12 (Tecnologia, app Ponto de Apoio do Servidor).
 **Do que trata:** o que a PAAPS constrói junto com a Serasa nesta aceleração.
 
@@ -267,16 +272,41 @@ expandir rápido. As perguntas norteadoras:
 7. Endividamento do servidor é indicador que conversa com sofrimento no trabalho? Existe
    literatura que sustente essa ponte, ou ela é só operacional?
 
-**Bloco C · Tecnologia**
-8. Que tecnologia a Serasa tem que a PAAPS possa implementar no Ponto de Apoio:
-   identidade, antifraude, enriquecimento de base, score, infraestrutura de dados?
-9. Do que o Ponto de Apoio vai precisar quando escalar, e que a PAAPS não tem hoje?
+**Bloco C · A ACE Cortex e o próprio programa**
+8. A **ACE Cortex** é a aceleradora que conduz o Impulsiona Startups. O que ela traz
+   além do dinheiro: rede, mentoria, portfólio, acesso a cliente corporativo, acesso a
+   gestão pública?
+9. Que startups já passaram pelo Impulsiona Startups, e alguma delas toca rede pública,
+   saúde, educação ou assistência? Existe caso em que a startup acelerada virou
+   fornecedora ou parceira da própria Serasa?
+10. O que o programa diz que procura, com as palavras dele? Critério declarado de
+    seleção, tese de investimento, verticais prioritárias.
 
-**Bloco D · O caminho jurídico**
-10. Dá para mapear **procuradores municipais com experiência em inexigibilidade** e em
+**Bloco D · Tecnologia**
+11. Que tecnologia a Serasa tem que a PAAPS possa implementar no Ponto de Apoio:
+    identidade, antifraude, enriquecimento de base, score, infraestrutura de dados?
+12. Do que o Ponto de Apoio vai precisar quando escalar, e que a PAAPS não tem hoje?
+
+**Bloco E · O caminho jurídico**
+13. Dá para mapear **procuradores municipais com experiência em inexigibilidade** e em
     contratação de solução técnica singular? Onde essa informação vive, e é buscável?
-11. Isso encurta o gargalo de parecer e inexigibilidade, que hoje leva três semanas por
+14. Isso encurta o gargalo de parecer e inexigibilidade, que hoje leva três semanas por
     contrato?
+
+### A régua de prioridade da pesquisa
+
+**Achado vinculado a Serasa Experian, ao programa Impulsiona Startups ou à ACE Cortex
+vale mais do que achado genérico.** Essas três entidades são o que pontua na seleção, e
+um dado que se conecta nominalmente a elas é o que faz a peça ganhar ponto. Um dado
+verdadeiro mas solto, sem ponte com elas, é informação; um dado que amarra a PAAPS a uma
+capacidade que a Serasa ou a ACE Cortex já têm é argumento.
+
+Na hora de escolher o que entra no slide, a ordem é:
+
+1. Achado que liga a PAAPS a um ativo nominal da **Serasa Experian** (base, produto, dado).
+2. Achado que liga a PAAPS ao que a **ACE Cortex** faz como aceleradora.
+3. Achado que responde ao critério declarado do **Impulsiona Startups**.
+4. Achado bom, mas sem ponte com nenhuma das três: fica no arquivo, não no slide.
 
 **Regra de fonte, da casa:** 3 a 5 ciclos de busca, um por vez, cada um precedido de um
 parágrafo justificando a query. Fontes aceitas: material oficial da própria Serasa
