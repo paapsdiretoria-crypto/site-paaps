@@ -2214,27 +2214,30 @@ html{font-size:clamp(10px,calc(min(100vw,100vh * 16 / 9) / 80),16px)}
    esquerdo, no mesmo padrao nao-flutuante do titulo do slide 03, em vez de
    centralizado sobre a foto como estava na primeira tentativa. */
 #s2.s2-planilha{background:var(--marrom)}
+#s2 .s2-foto-bloco{
+  width:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:clamp(14px,1.8vw,22px);
+}
 #s2 .s2-titulo{
-  position:absolute;top:calc(var(--pad) + 2.2em);left:var(--pad);z-index:4;
-  width:min(46%,560px);text-align:left;
+  text-align:center;width:min(92%,620px);
   font-family:var(--titulo);font-weight:700;text-transform:none;
-  font-size:clamp(1.3rem,2.5vw,2.4rem);line-height:1.16;color:var(--bege);
+  font-size:clamp(1.02rem,1.6vw,1.5rem);line-height:1.28;color:var(--bege);
 }
 #s2 .s2-linha3{
   position:absolute;left:var(--pad);right:var(--pad);
-  top:calc(var(--pad) + 6.6em);bottom:calc(var(--pad) + 34px);
+  top:calc(var(--pad) + 3.2em);bottom:calc(var(--pad) + 34px);
   display:flex;align-items:stretch;gap:clamp(16px,2.2vw,32px);
   z-index:3;
 }
 #s2 .s2-col{width:25%;display:flex;flex-direction:column;justify-content:center}
 #s2 .s2-col--dir{text-align:right}
 #s2 .s2-h{
-  font-family:var(--titulo);font-weight:700;text-transform:none;
-  font-size:clamp(.9rem,1.28vw,1.28rem);line-height:1.24;color:var(--amarelo);
+  font-family:var(--titulo);font-weight:700;text-transform:uppercase;letter-spacing:.01em;
+  font-size:clamp(.9rem,1.28vw,1.28rem);line-height:1.24;color:var(--branco);
   margin:0 0 .7em;padding-bottom:.5em;border-bottom:1px solid var(--vidro-borda);
 }
 #s2 .s2-foto{
-  width:50%;display:flex;align-items:center;justify-content:center;
+  width:100%;flex:1;min-height:0;display:flex;align-items:center;justify-content:center;
 }
 #s2 .s2-foto img{
   max-width:100%;max-height:100%;width:auto;height:auto;
