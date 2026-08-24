@@ -6,6 +6,12 @@
       "runtimeExecutable": "python3",
       "runtimeArgs": ["-m", "http.server", "8080", "--directory", "codigo/site"],
       "port": 8080
+    },
+    {
+      "name": "pitch-paaps",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--prefix", "codigo/pitch-paaps"],
+      "port": 3210
     }
   ]
 }

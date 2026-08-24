@@ -18,6 +18,14 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        /* Primaria da PAAPS: Helvetica, em varios tamanhos e com negrito. */
+        sans: ["var(--font-helv)"],
+        /* Secundaria: League Spartan, so nos numeros. A Midday usa
+           `font-mono` nos numeros grandes, entao apontar `mono` para a
+           League Spartan converte todos eles de uma vez. */
+        mono: ["var(--font-spartan)"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

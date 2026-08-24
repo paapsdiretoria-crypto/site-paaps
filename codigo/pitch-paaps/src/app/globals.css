@@ -2,28 +2,161 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+/* =========================================================================
+   TOKENS PAAPS
+   A geometria, o espacamento e as proporcoes sao os da Midday. O que muda
+   aqui e a superficie: onde a Midday tem #0C0C0C solido, a PAAPS tem foto
+   de campo com o veu marrom da casa por cima.
+   ========================================================================= */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-    --background-rgb: 12, 12, 12;
-    --border: 0, 0%, 17%;
-  }
+:root {
+  /* Paleta da casa */
+  --bege: #f5f1e1;
+  --marrom: #442309;
+  --amarelo: #f7c31c;
+  --terracota: #cb4710;
+  --oliva: #aea349;
+
+  /* Marrom do veu. E mais profundo que o --marrom: e o mesmo rgb(30,14,3)
+     usado no pitch antigo, calibrado sobre estas fotos. */
+  --veu: 30, 14, 3;
+
+  /* Texto */
+  --tinta: var(--bege);
+  /* Sobre foto, 62% nao aguenta. A Midday usa #878787 sobre preto quase puro,
+     que e um contraste bem maior do que 62% de bege sobre imagem. */
+  --tinta-suave: rgba(245, 241, 225, 0.82);
+
+  /* Painel de vidro. A Midday desenha o card com uma BORDA de 1px e um
+     preenchimento de 2,4% que quase nao existe. Aqui vale a mesma regra:
+     quem legibiliza e o veu sobre a foto, nao o painel. */
+  --vidro: rgba(245, 241, 225, 0.04);
+  --vidro-borda: rgba(245, 241, 225, 0.2);
+
+  /* Herdado da Midday: `border-border` do Tailwind le esta variavel. */
+  --border: 45 39% 92%;
+
+  /* Tipografia. Helvetica e a primaria, em varios tamanhos e com negrito.
+     League Spartan e a secundaria, so nos numeros e rotulos. */
+  --font-helv: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 body {
-  background: rgb(var(--background-rgb));
-  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--veu));
+  color: var(--tinta);
+  font-family: var(--font-helv);
 }
 
+/* =========================================================================
+   VEU MARROM
+   Valores copiados do pitch.css do deck antigo, ja calibrados sobre estas
+   mesmas fotos. Nunca cinza: o marrom da casa.
+   ========================================================================= */
+
+.veu::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* Padrao: o slide carrega grade e o texto precisa de chao inteiro. */
+.veu-denso::after {
+  background: linear-gradient(
+    180deg,
+    rgba(var(--veu), 0.62) 0%,
+    rgba(var(--veu), 0.58) 100%
+  );
+}
+
+/* Capa: o marrom sobe do pe e some no topo, deixando o ceu da foto vivo. */
+.veu-base::after {
+  background: linear-gradient(
+    to top,
+    rgba(var(--veu), 0.9) 0%,
+    rgba(var(--veu), 0.84) 30%,
+    rgba(var(--veu), 0.64) 52%,
+    rgba(var(--veu), 0.3) 74%,
+    rgba(var(--veu), 0.06) 100%
+  );
+}
+
+/* Foto clara (parede branca, luz de teto, ceu aberto), onde o denso nao
+   segura a letra. Calibrado olhando os slides 5, 7, 9, 11, 14 e 15. */
+.veu-forte::after {
+  background: linear-gradient(
+    180deg,
+    rgba(var(--veu), 0.78) 0%,
+    rgba(var(--veu), 0.74) 100%
+  );
+}
+
+/* Foto ja escura por si so: so o bastante para a letra assentar. */
+.veu-suave::after {
+  background: linear-gradient(
+    180deg,
+    rgba(var(--veu), 0.5) 0%,
+    rgba(var(--veu), 0.46) 100%
+  );
+}
+
+/* =========================================================================
+   ESCALA TIPOGRAFICA
+   Papeis identicos aos da Midday. Dois desvios deliberados:
+   1. O corpo sobe de 14px para 16-18px. A Mallu nao le texto pequeno, e
+      sobre foto o 14px da Midday nao aguenta.
+   2. A menor letra da pagina e 12px. No deck antigo a linha de fonte
+      chegava a 8px, que ninguem le.
+   ========================================================================= */
+
 @layer utilities {
+  .t-capa {
+    font-size: clamp(2.6rem, 6.6vw, 7.4rem);
+    line-height: 0.98;
+    letter-spacing: -0.02em;
+  }
+  .t-visao {
+    font-size: clamp(2.2rem, 5.6vw, 6.6rem);
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+  .t-num {
+    font-size: clamp(3.4rem, 7vw, 7.6rem);
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+  }
+  .t-afirma {
+    font-size: clamp(1.5rem, 2.6vw, 3.4rem);
+    line-height: 1.14;
+    letter-spacing: -0.01em;
+  }
+  .t-cardnum {
+    font-size: clamp(2.1rem, 3.4vw, 4rem);
+    line-height: 0.92;
+    letter-spacing: -0.01em;
+  }
+  .t-cardtit {
+    font-size: clamp(1.05rem, 1.35vw, 1.5rem);
+    line-height: 1.2;
+  }
+  .t-rotulo {
+    font-size: clamp(0.82rem, 1vw, 1.12rem);
+    line-height: 1.2;
+  }
+  .t-corpo {
+    font-size: clamp(0.95rem, 1.05vw, 1.12rem);
+    line-height: 1.45;
+  }
+  .t-fonte {
+    font-size: clamp(0.75rem, 0.78vw, 0.85rem);
+    line-height: 1.4;
+  }
+  .txt-suave {
+    color: var(--tinta-suave);
+  }
+  .txt-amarelo {
+    color: var(--amarelo);
+  }
   .text-balance {
     text-wrap: balance;
   }

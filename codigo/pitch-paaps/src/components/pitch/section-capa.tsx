@@ -1,0 +1,65 @@
+import Image from "next/image";
+import { Fundo } from "./ui";
+
+export function SectionCapa() {
+  return (
+    <div className="min-h-screen relative w-screen overflow-hidden">
+      <Fundo
+        src="/fotos/01-capa.jpg"
+        veu="veu-base"
+        posicao="center 45%"
+        prioridade
+        alt="Estrada de terra no interior"
+      />
+
+      {/* Marca da casa, canto superior esquerdo. */}
+      <div className="absolute left-4 md:left-8 top-6 z-20">
+        <Image
+          src="/marca/paaps.png"
+          alt="PAAPS"
+          width={190}
+          height={54}
+          priority
+          className="w-[120px] md:w-[170px] h-auto"
+        />
+      </div>
+
+      {/* Onde este documento está sendo entregue, e com quem. */}
+      <div className="absolute right-4 md:right-8 top-6 z-20 flex flex-col items-end gap-3 max-w-[46vw]">
+        <p className="t-rotulo txt-suave text-right leading-snug">
+          Inscrição para o{" "}
+          <b className="text-[var(--bege)]">Impulsiona Startups</b>,
+          <br className="hidden md:block" /> eixo Inovação em Saúde, 2026 a 2027.
+        </p>
+        <div className="flex items-center gap-2">
+          <span className="inline-flex items-center bg-[var(--bege)] px-2 py-1">
+            <Image
+              src="/marca/serasa.webp"
+              alt="Serasa Experian"
+              width={120}
+              height={28}
+              className="h-[18px] md:h-[22px] w-auto"
+            />
+          </span>
+          <span className="inline-flex items-center bg-[var(--bege)] px-2 py-1">
+            <Image
+              src="/marca/ace-cortex.svg"
+              alt="ACE Cortex"
+              width={100}
+              height={24}
+              className="h-[14px] md:h-[17px] w-auto"
+            />
+          </span>
+        </div>
+      </div>
+
+      {/* A frase da capa é o único elemento grande do slide. */}
+      <div className="container min-h-screen relative z-10 flex flex-col justify-end pb-16 md:pb-20">
+        <h1 className="t-capa font-bold max-w-[19ch] text-balance">
+          A Rede de Saúde Mental para as Políticas Públicas do futuro.
+        </h1>
+        <p className="t-rotulo txt-suave mt-6">Baseado em evidências.</p>
+      </div>
+    </div>
+  );
+}

@@ -1,5 +1,14 @@
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
+/* =========================================================================
+   Card
+   Mesma geometria da Midday: flex coluna, centrado, px-6 pt-8 pb-6,
+   space-y-4, canto vivo. O que muda e a superficie. La o card e #121212
+   sobre #0C0C0C, 2,4% de diferenca, e quem desenha a caixa e a borda de
+   1px. Aqui vale a mesma regra sobre a foto: preenchimento de 4% e uma
+   borda fina. Quem legibiliza e o veu marrom, nao o painel.
+   ========================================================================= */
 export function Card({
   children,
   className,
@@ -10,7 +19,11 @@ export function Card({
   return (
     <div
       className={cn(
-        "flex border flex-col items-center justify-center border-border bg-[#121212] px-6 pt-8 pb-6 space-y-4",
+        "flex flex-col items-center justify-center px-6 pt-8 pb-6 space-y-4",
+        "border border-[rgba(245,241,225,.20)] bg-[rgba(245,241,225,.04)]",
+        // h-full mantem a altura igual entre os cards da mesma linha, que e o
+        // que da o ar de sistema. A Midday resolve isso com min-h fixo.
+        "backdrop-blur-[6px] h-full",
         className
       )}
     >
@@ -19,22 +32,129 @@ export function Card({
   );
 }
 
+/* Card de dado: titulo em Helvetica, corpo em Helvetica, numero em League
+   Spartan colado no pe da caixa. E a forma do slide de tracao da Midday. */
+export function Dado({
+  titulo,
+  numero,
+  children,
+  className,
+}: {
+  titulo: string;
+  numero?: string;
+  children?: React.ReactNode;
+  className?: string;
+}) {
+  return (
+    <Card className={className}>
+      <h2 className="t-cardtit font-bold">{titulo}</h2>
+      {children ? (
+        <p className="t-corpo text-center txt-suave">{children}</p>
+      ) : null}
+      {numero ? (
+        <span className="mt-auto font-mono t-cardnum font-bold">{numero}</span>
+      ) : null}
+    </Card>
+  );
+}
+
+/* =========================================================================
+   Fundo
+   A foto ocupa o slide inteiro e o veu marrom da casa entra por cima.
+   ========================================================================= */
+export function Fundo({
+  src,
+  veu = "veu-denso",
+  posicao,
+  alt = "",
+  prioridade = false,
+}: {
+  src: string;
+  veu?: "veu-denso" | "veu-base" | "veu-forte" | "veu-suave";
+  posicao?: string;
+  alt?: string;
+  prioridade?: boolean;
+}) {
+  return (
+    <div className={cn("absolute inset-0 z-0 overflow-hidden veu", veu)}>
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        priority={prioridade}
+        sizes="100vw"
+        quality={90}
+        className="object-cover"
+        style={posicao ? { objectPosition: posicao } : undefined}
+      />
+    </div>
+  );
+}
+
+/* =========================================================================
+   Slide
+   O chrome da Midday, medida por medida: rotulo no canto superior esquerdo,
+   endereco no direito, conteudo centrado na vertical dentro do container.
+   ========================================================================= */
+export function Slide({
+  rotulo,
+  foto,
+  veu,
+  posicao,
+  prioridade,
+  children,
+  fonte,
+}: {
+  rotulo: string;
+  foto: string;
+  veu?: "veu-denso" | "veu-base" | "veu-forte" | "veu-suave";
+  posicao?: string;
+  prioridade?: boolean;
+  children: React.ReactNode;
+  fonte?: React.ReactNode;
+}) {
+  return (
+    <div className="min-h-screen relative w-screen overflow-hidden">
+      <Fundo src={foto} veu={veu} posicao={posicao} prioridade={prioridade} />
+
+      <div className="absolute left-4 right-4 md:left-8 md:right-8 top-4 flex justify-between t-rotulo z-20 font-mono uppercase tracking-wide">
+        <span>{rotulo}</span>
+        <span className="txt-suave normal-case tracking-normal">
+          paaps.com.br
+        </span>
+      </div>
+
+      <div className="flex flex-col min-h-screen justify-center container relative z-10 py-24">
+        {children}
+      </div>
+
+      {fonte ? (
+        <p className="absolute left-4 right-4 md:left-8 md:right-8 bottom-16 md:bottom-6 t-fonte txt-suave z-20 max-w-[78ch]">
+          {fonte}
+        </p>
+      ) : null}
+    </div>
+  );
+}
+
+/* Grade estrutural da Midday: seis colunas e cinco reguas que a pessoa quase
+   nao ve. Sobre foto ela entra ainda mais fraca do que sobre o preto. */
 export function Grid() {
   return (
-    <div className="pointer-events-none absolute inset-0 flex justify-center">
+    <div className="pointer-events-none absolute inset-0 z-[5] flex justify-center">
       <div className="h-full w-full grid-cols-6 gap-3.5 px-4 grid">
-        <div className="border-r-[1px] border-[#161616]" />
-        <div className="border-r-[1px] border-[#161616]" />
-        <div className="border-r-[1px] border-[#161616]" />
-        <div className="border-r-[1px] border-[#161616]" />
-        <div className="border-r-[1px] border-[#161616]" />
+        <div className="border-r-[1px] border-[rgba(245,241,225,.06)]" />
+        <div className="border-r-[1px] border-[rgba(245,241,225,.06)]" />
+        <div className="border-r-[1px] border-[rgba(245,241,225,.06)]" />
+        <div className="border-r-[1px] border-[rgba(245,241,225,.06)]" />
+        <div className="border-r-[1px] border-[rgba(245,241,225,.06)]" />
       </div>
       <div className="h-full w-full absolute flex justify-between flex-col">
-        <div className="border-t-[1px] border-[#161616]" />
-        <div className="border-t-[1px] border-[#161616]" />
-        <div className="border-t-[1px] border-[#161616]" />
-        <div className="border-t-[1px] border-[#161616]" />
-        <div className="border-t-[1px] border-[#161616]" />
+        <div className="border-t-[1px] border-[rgba(245,241,225,.06)]" />
+        <div className="border-t-[1px] border-[rgba(245,241,225,.06)]" />
+        <div className="border-t-[1px] border-[rgba(245,241,225,.06)]" />
+        <div className="border-t-[1px] border-[rgba(245,241,225,.06)]" />
+        <div className="border-t-[1px] border-[rgba(245,241,225,.06)]" />
       </div>
     </div>
   );
