@@ -1222,16 +1222,17 @@ h1,h2,h3{font-family:var(--titulo);font-weight:700;line-height:1.03;letter-spaci
   position:absolute;left:var(--pad);bottom:26px;z-index:4;max-width:60%;
   display:flex;flex-direction:column;gap:.35em;
 }
-.fecho-serasa__logos{display:flex;align-items:center;gap:.8em;flex-wrap:wrap;justify-content:center}
-.fecho-serasa__logo--paaps{height:clamp(15px,1.7vw,21px);width:auto}
-.fecho-serasa__logo--serasa{height:clamp(19px,2.4vw,29px);width:auto}
-.fecho-serasa__div{width:1px;height:clamp(15px,1.7vw,21px);background:rgba(245,241,225,.3)}
-/* ACE Cortex e SVG de fill escuro, pensado pra fundo claro: ganha o mesmo
-   chip bege usado na capa e no slide 18, senao some sobre a foto escura. */
+/* Os 3 logos (PAAPS, Serasa, ACE Cortex) sobre o mesmo chip bege arredondado,
+   regra dela em 24/08: nenhum logo solto direto sobre a foto neste slide.
+   PAAPS usa a versao marrom + colorido (regra da casa: so os "+ colorido"
+   sao autorizados, nunca a versao com descritivo). */
+.fecho-serasa__logos{display:flex;align-items:center;gap:.7em;flex-wrap:wrap;justify-content:center}
 .fecho-serasa__chip{
   display:inline-flex;align-items:center;background:var(--bege);
-  border-radius:4px;padding:clamp(3px,.35vw,5px) clamp(6px,.7vw,10px);
+  border-radius:4px;padding:clamp(4px,.42vw,6px) clamp(7px,.8vw,11px);
 }
+.fecho-serasa__logo--paaps{height:clamp(15px,1.7vw,21px);width:auto}
+.fecho-serasa__logo--serasa{height:clamp(19px,2.4vw,29px);width:auto}
 .fecho-serasa__logo--cortex{height:clamp(13px,1.6vw,20px);width:auto}
 .fecho-serasa h2.t-m{margin:0;font-size:clamp(1.15rem,2vw,1.95rem);line-height:1.14}
 @media(max-width:820px){.fecho-serasa{position:static;margin-top:1.2em;padding:0 var(--pad);max-width:100%}}
