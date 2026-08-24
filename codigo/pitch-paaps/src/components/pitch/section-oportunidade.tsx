@@ -1,12 +1,20 @@
-import { Dado, Slide } from "./ui";
+import { Dado, FundoDuplo, Slide } from "./ui";
 
 export function SectionOportunidade() {
   return (
     <Slide
       rotulo="A oportunidade"
-      foto="/fotos/13-oportunidade.jpg"
-      veu="veu-denso"
-      posicao="center 44%"
+      fundo={
+        <FundoDuplo
+          esquerda="/fotos/13-oportunidade-a.jpg"
+          direita="/fotos/13-oportunidade-b.jpg"
+          veu="veu-forte"
+          alt={[
+            "Participante de roda da PAAPS",
+            "Participante de roda da PAAPS",
+          ]}
+        />
+      }
       fonte="Serasa Experian, Mapa da Inadimplência 2026 · SalaryFits, Saúde Financeira e Bem-Estar do Trabalhador Brasileiro · Ipea, Atlas do Estado Brasileiro · Erro no atendimento: BMJ, 2022, revisão de 35 estudos."
     >
       <h2 className="t-afirma font-bold max-w-[24ch] text-balance">

@@ -1,4 +1,4 @@
-import { Card, Slide } from "./ui";
+import { Card, FundoDuplo, Slide } from "./ui";
 
 const pessoas = [
   {
@@ -30,9 +30,22 @@ export function SectionEquipe() {
   return (
     <Slide
       rotulo="Equipe"
-      foto="/fotos/14-equipe.jpg"
-      veu="veu-forte"
-      posicao="center 34%"
+      fundo={
+        <FundoDuplo
+          esquerda="/fotos/14-equipe-a.jpg"
+          direita="/fotos/14-equipe-b.jpg"
+          veu="veu-forte"
+          /* 68% na esquerda: a psicologa fica na borda esquerda do original,
+             e o enquadramento precisa empurrar a janela para o centro-direita.
+             E o mesmo valor do deck antigo. */
+          posicaoEsquerda="68% center"
+          posicaoDireita="center center"
+          alt={[
+            "Roda de equipe conduzida pela PAAPS",
+            "Atividade de grupo da PAAPS ao ar livre",
+          ]}
+        />
+      }
     >
       <h2 className="t-afirma font-bold max-w-[24ch] text-balance">
         As core skills da PAAPS já estão cobertas pela equipe semente.
