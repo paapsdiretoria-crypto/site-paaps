@@ -2373,6 +2373,15 @@ html{font-size:clamp(10px,calc(min(100vw,100vh * 16 / 9) / 80),16px)}
    zera o "automatic minimum size" dela num container flex, entao ela e a
    primeira a ser espremida quando o conteudo nao cabe, silenciosamente. */
 #s8 .grade{flex-shrink:0}
+/* O titulo do slide saiu (24/08), entao o conteudo sobe e o TAM/SAM/SOM ganha
+   espaco. A unica sobrancelha que sobrevive e a da 3a caixa, de proposito: sem
+   ela o "200+" sozinho nao diz nada. Ela cresce para marcar que ali e tese. */
+#s8 .cel__t{font-size:clamp(1rem,1.32vw,1.32rem);margin-bottom:.4em}
+/* Numero, sigla e legenda do TAM/SAM/SOM crescem: nada de letra minuscula
+   escondida no rodape. */
+#s8 .tss__d{font-size:clamp(1.9rem,3.6vw,3.4rem)}
+#s8 .tss__n{font-size:clamp(1.1rem,1.5vw,1.5rem)}
+#s8 .tss__l{font-size:clamp(.88rem,1.14vw,1.14rem);line-height:1.42}
 
 /* celula com dois numeros, no modelo do .pilar--duplo do slide 08 */
 .cel--duplo .cel__n{font-size:clamp(1.05rem,1.9vw,1.9rem);margin-bottom:.12em}
