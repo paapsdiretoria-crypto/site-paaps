@@ -1003,16 +1003,27 @@ h1,h2,h3{font-family:var(--titulo);font-weight:700;line-height:1.03;letter-spaci
   background:rgba(203,71,16,.2)}
 .comparativo tbody tr:last-child td{border-bottom:none}
 
-/* --- FRAGMENTOS: os territórios, sem virar vitrine de case ------------- */
-.frag{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(.5rem,1.2vw,1.1rem);
-  margin-top:1em}
+/* --- FRAGMENTOS: os territórios, agora com foto ao lado do texto -------
+   5 experiencias (4 de campo + a DIGGING). Flex em vez de grid porque com
+   5 itens a fila quebra em 3+2, e flex com justify-content:center centra
+   a segunda fila sozinho, sem precisar posicionar manualmente. */
+.frag{display:flex;flex-wrap:wrap;justify-content:center;
+  gap:clamp(.5rem,1.2vw,1.1rem);margin-top:1em}
 .frag__c{background:rgba(0,0,0,.36);border-left:2px solid var(--amarelo);
-  padding:.7em .8em;display:flex;flex-direction:column;gap:.3em}
+  padding:.6em .7em;display:flex;flex-direction:column;gap:.3em;
+  flex:0 1 31%;min-width:0;}
+.frag__c--base{border-left-color:var(--bege)}
 .frag__ond{font-family:var(--titulo);font-weight:700;font-size:clamp(.68rem,.86vw,.88rem);
   color:var(--amarelo);line-height:1.2}
-.frag__q{font-size:clamp(.63rem,.78vw,.8rem);line-height:1.38;
+.frag__c--base .frag__ond{color:var(--bege)}
+.frag__corpo{display:flex;gap:.5em;align-items:stretch}
+.frag__foto{flex:0 0 38%;border-radius:2px;overflow:hidden;min-height:64px}
+.frag__foto img{width:100%;height:100%;object-fit:cover;display:block}
+.frag__q{flex:1;min-width:0;font-size:clamp(.63rem,.78vw,.8rem);line-height:1.38;
   color:rgba(245,241,225,.9);margin:0}
 .frag__q i{color:var(--bege-rosa);font-style:normal}
+/* A frase de fecho do slide, curta e em negrito, no lugar da legenda antiga. */
+.lead--fecho{font-family:var(--corpo);font-weight:700}
 
 /* --- responsivo ------------------------------------------------------- */
 @media (max-width:900px){
@@ -1190,6 +1201,19 @@ h1,h2,h3{font-family:var(--titulo);font-weight:700;line-height:1.03;letter-spaci
    DOIS dados cada uma, então cedem um fio de corpo para caber sem estourar. */
 #s7 .pilar__l{font-size:clamp(.86rem,1.08vw,1.08rem);line-height:1.42}
 #s7 .pilar--duplo .pilar__l{font-size:clamp(.8rem,1vw,1rem);line-height:1.38}
+/* A lista das 3 funcoes, compacta, sem decimal de gente. */
+#s7 .pilar__lista{
+  list-style:none;margin:.3em 0 0;padding:0;
+  font-size:clamp(.78rem,.98vw,.98rem);line-height:1.4;color:rgba(245,241,225,.9);
+}
+#s7 .pilar__lista li{padding-left:.9em;position:relative}
+#s7 .pilar__lista li::before{content:"–";position:absolute;left:0;color:var(--amarelo)}
+/* A nota da supervisao carrega tese agora, nao rodape: sai do italico e do
+   --bege-rosa (que nem existe como variavel), ganha corpo real. */
+#s7 .pilar__nota{
+  font-style:normal;font-size:clamp(.76rem,.96vw,.98rem);line-height:1.42;
+  color:var(--creme-90);margin-top:.5em;
+}
 /* Slide 03: o fecho (logos PAAPS+Serasa e a pergunta) sai do fluxo central e
    pousa rente ao rodapé, acima da linha de fontes, para que o bloco de dados
    acima domine o slide em vez de dividir a altura com ele. Pergunta grande,
@@ -1474,6 +1498,12 @@ html{font-size:clamp(10px,calc(min(100vw,100vh * 16 / 9) / 80),16px)}
   color:var(--creme-90);text-shadow:0 1px 12px rgba(20,9,2,.9);
 }
 .dig__fat b{font-family:var(--titulo);font-weight:800;color:var(--amarelo);font-size:1.18em}
+/* A lista de servicos da DIGGING: linha unica, corpo menor que o lead, so
+   para mostrar amplitude ao lado dos 12 logos de clientes. */
+.dig__servicos{
+  margin:.6em 0 0;font-family:var(--corpo);font-size:clamp(.72rem,.92vw,.94rem);
+  line-height:1.4;color:rgba(245,241,225,.78);
+}
 /* A coluna da direita sao as cadeiras que essas pessoas ja ocuparam. Uma
    frase por linha, com filete separando, para ler como credencial e nao
    como paragrafo corrido. */
