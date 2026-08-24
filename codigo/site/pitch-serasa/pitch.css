@@ -2772,3 +2772,29 @@ html{font-size:clamp(9px,calc(min(100vw,100vh * 16 / 9) / 120),24px)}
 /* O celular precisa comecar SEMPRE abaixo da faixa do cabecalho, inclusive
    em janela mais larga que 16:9, onde o slide encolhe mas a faixa nao. */
 #s11 .tec__app{padding-top:clamp(2.4rem,7vh,4.2rem)}
+
+/* ====== SLIDE 06: header do fecho, 24/08 ================================
+   Ele existe para dar o lastro da frase conclusiva: sem ele, "tudo que uma
+   equipe precisa esta nela mesma" e opiniao; com ele, e leitura das quatro
+   experiencias desenhadas logo acima. Nao e sobrancelha de dado (aquilo e
+   proibido): e conector de argumento entre dois blocos. */
+.chapeu-fecho{
+  font-family:var(--titulo);font-weight:800;text-transform:uppercase;
+  font-size:clamp(.9rem,1.28vw,1.28rem);letter-spacing:.03em;line-height:1.1;
+  color:var(--amarelo);text-align:center;
+  margin:clamp(.9rem,2vh,1.6rem) 0 .45em;
+  text-shadow:0 2px 14px rgba(20,9,2,.9);
+}
+/* Regra da casa: frase completa nunca quebra entre linhas. Cada uma das duas
+   do fecho ocupa a sua linha inteira, com o MESMO peso (escolha dela). */
+.lead--fecho .fecho__l{display:block}
+#s6 .lead--fecho{margin-top:0;text-align:center;max-width:none}
+
+/* ====== SLIDE 12: a frase isolada no pe da caixa 1 ======================
+   "A rede publica trabalha sem espelho" sai do corrido e vira linha propria,
+   em amarelo: e a unica imagem do quadrado e ela fecha com uma batida. */
+.cel__f{
+  margin:.55em 0 0;font-family:var(--titulo);font-weight:700;
+  font-size:clamp(.95rem,1.27vw,1.27rem);line-height:1.2;
+  color:var(--amarelo);
+}
