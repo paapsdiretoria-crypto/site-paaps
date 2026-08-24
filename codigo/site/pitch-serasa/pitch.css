@@ -2391,3 +2391,123 @@ html{font-size:clamp(10px,calc(min(100vw,100vh * 16 / 9) / 80),16px)}
 /* o parentese da data, ao lado do numero */
 .cel__ano{display:block;font-family:var(--corpo);font-style:normal;font-weight:400;
   font-size:clamp(.6rem,.72vw,.72rem);letter-spacing:0;color:var(--bege);margin-top:.15em}
+
+/* ============ SLIDE 10, GO TO MARKET: reformulado 24/08 ==================
+   O titulo do slide saiu. A grade passou de 2 colunas (1 alta + 3 empilhadas)
+   para 3 colunas iguais em cima, e o ciclo de venda desenhado atravessa o
+   slide inteiro embaixo, em faixa larga, para as 5 estacoes e a escada
+   caberem grandes e legiveis. */
+#s9 .gtm--duplo{grid-template-columns:repeat(3,1fr)}
+#s9 .gtm--duplo .gtm__fluxo{grid-row:auto}
+/* Os rotulos que voltaram: League Spartan caixa alta amarela. Nao sao
+   sobrancelha de dado (aquilo e proibido): sao nome de quadro, como o deck
+   ja usa no .canto. */
+.gtm__rot{
+  font-family:var(--titulo);font-weight:800;text-transform:uppercase;
+  font-size:clamp(.9rem,1.16vw,1.16rem);letter-spacing:.02em;line-height:1;
+  color:var(--amarelo);margin:0 0 .55em;
+}
+
+/* O ciclo: 5 estacoes ligadas por setas, e a ultima devolve para a primeira.
+   A seta de retorno e o ::after do .ciclo__volta, uma linha tracejada que
+   corre por baixo da fila inteira. */
+.ciclo{margin-top:clamp(.8rem,1.5vw,1.4rem);position:relative}
+.ciclo__rot{margin-bottom:.5em}
+.ciclo__fila{
+  list-style:none;margin:0;padding:0;
+  display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(1.4rem,2.6vw,2.6rem);
+}
+.ciclo__e{
+  position:relative;display:flex;flex-direction:column;gap:.22em;
+  background:var(--vidro-fundo);backdrop-filter:var(--vidro-blur);
+  -webkit-backdrop-filter:var(--vidro-blur);
+  border:1px solid var(--vidro-borda);border-radius:var(--raio);
+  padding:clamp(.7rem,1.2vw,1.1rem);
+}
+/* A seta entre uma estacao e a proxima, no vao do gap. */
+.ciclo__e:not(:last-child)::after{
+  content:"→";position:absolute;right:calc(-1 * clamp(1.4rem,2.6vw,2.6rem));
+  top:50%;transform:translate(-8%,-50%);
+  width:clamp(1.4rem,2.6vw,2.6rem);text-align:center;
+  font-family:var(--titulo);font-weight:800;
+  font-size:clamp(1rem,1.5vw,1.5rem);color:var(--amarelo);
+}
+.ciclo__e--fim{border-color:var(--amarelo);background:rgba(203,71,16,.16)}
+.ciclo__num{
+  font-family:var(--titulo);font-weight:800;font-size:clamp(.72rem,.9vw,.9rem);
+  color:var(--amarelo);line-height:1;letter-spacing:.04em;
+}
+.ciclo__t{
+  font-family:var(--titulo);font-weight:700;line-height:1.14;
+  font-size:clamp(.94rem,1.22vw,1.22rem);color:var(--bege);
+}
+.ciclo__t i{font-style:normal;font-size:.7em;vertical-align:top}
+/* A legenda de tempo/composicao: Helvetica branca, como ela pediu. */
+.ciclo__tempo{
+  font-family:var(--corpo);font-weight:400;line-height:1.3;
+  font-size:clamp(.76rem,.96vw,.96rem);color:var(--branco);opacity:.92;
+}
+/* A escada: tres degraus subindo, marcando a progressao de carreira dentro
+   da propria estacao 04. Desenhada em CSS, sem imagem. */
+.ciclo__escada{display:flex;align-items:flex-end;gap:3px;height:22px;margin:.2em 0 .1em}
+.ciclo__escada i{
+  display:block;width:10px;background:var(--amarelo);border-radius:1px;opacity:.9;
+}
+.ciclo__escada i:nth-child(1){height:8px}
+.ciclo__escada i:nth-child(2){height:15px}
+.ciclo__escada i:nth-child(3){height:22px}
+/* A volta do ciclo: linha tracejada correndo por baixo, com a seta de retorno
+   apontando para tras, e o texto centrado. */
+.ciclo__volta{
+  position:relative;margin:.9em 0 0;padding-top:.75em;
+  font-family:var(--corpo);font-size:clamp(.74rem,.92vw,.92rem);
+  color:var(--creme-70);text-align:center;
+}
+.ciclo__volta::before{
+  content:"";position:absolute;left:8%;right:8%;top:0;height:0;
+  border-top:1px dashed rgba(247,195,28,.55);
+}
+.ciclo__volta::after{
+  content:"↩";position:absolute;left:8%;top:-.62em;
+  font-family:var(--titulo);font-weight:800;
+  font-size:clamp(.9rem,1.2vw,1.2rem);color:var(--amarelo);
+  background:transparent;padding-right:.3em;
+}
+@media(max-width:900px){
+  #s9 .gtm--duplo{grid-template-columns:1fr}
+  .ciclo__fila{grid-template-columns:1fr;gap:.6rem}
+  .ciclo__e:not(:last-child)::after{content:"↓";right:auto;left:50%;top:auto;
+    bottom:calc(-1 * .6rem);transform:translate(-50%,10%);width:auto}
+}
+
+/* Slide 17 (id=s15): tela dividida entre duas fotos novas.
+   A da esquerda tem a CEO Founder no centro-direita do quadro e uma mulher
+   sentada na borda esquerda. object-position 68% empurra a janela para a
+   direita: a mulher da esquerda sai do corte e a CEO fica centralizada.
+   A da direita usa o centro, sem restricao. */
+#s15 .slide__foto--dupla img:first-child{object-position:68% center}
+#s15 .slide__foto--dupla img:last-child{object-position:center center}
+/* Veu marrom leve sobre as duas, so o bastante para o texto assentar. */
+#s15.veu-denso::after{
+  background:linear-gradient(180deg,rgba(30,14,3,.80) 0%,rgba(30,14,3,.76) 100%)!important;
+}
+
+/* Slide 13 (id=s13p): as duas fotos sao 1200x1350 (8:9), que e exatamente a
+   proporcao de meia tela 16:9. Encaixam sem corte. Veu marrom leve. */
+#s13p.veu-denso::after{
+  background:linear-gradient(180deg,rgba(30,14,3,.78) 0%,rgba(30,14,3,.74) 100%)!important;
+}
+
+/* Slide 13: a frase que da a liga entre as tres caixas de argumento (eConsig,
+   Superendividamento, Ponto de Apoio) e os quatro indicadores. Sem ela o
+   leitor pula de um assunto para o outro sem transicao. */
+#s13p .mensuraveis{
+  font-family:var(--titulo);font-weight:800;text-transform:uppercase;
+  letter-spacing:.03em;font-size:clamp(1rem,1.32vw,1.32rem);
+  color:var(--amarelo);margin:clamp(.9rem,1.6vw,1.5rem) 0 0;
+}
+#s13p .pedido--g{margin-top:.5em}
+/* Sem o titulo do slide, a fila de 3 colunas subia e o POSICIONAMENTO batia no
+   rotulo GO TO MARKET, no canto superior direito. Um respiro no topo resolve
+   sem mexer em corpo de letra. */
+#s9 .gtm--duplo{margin-top:2.1em}
