@@ -2798,3 +2798,60 @@ html{font-size:clamp(9px,calc(min(100vw,100vh * 16 / 9) / 120),24px)}
   font-size:clamp(.95rem,1.27vw,1.27rem);line-height:1.2;
   color:var(--amarelo);
 }
+
+/* ========================================================================= */
+/* REGRA DE DESIGN DA CASA: VIDRO NAO TEM COR.                               */
+/* Calibrada pela Mallu em 24/08/2026: "blur de vidro nao tem cor aplicada".  */
+/* O tingimento terracota/vermelho nos paineis de destaque le como            */
+/* antiprofissional. O que marca destaque e o CONTORNO AMARELO e a cor do     */
+/* TEXTO, nunca o preenchimento. Vale para o deck inteiro e vem por ultimo    */
+/* na folha, entao vence qualquer regra anterior.                             */
+/* ========================================================================= */
+.cel,.pilar,.regua__c,.frag__c,.org__c,.bolha,.metrica--cx,.pedido span,
+.pilar--centro,.regua__c--forte,.org__c--topo,.bolha--f,.bolha--m,
+.ciclo__e,.ciclo__e--fim,
+#s10 .regua__c,#s10 .regua__c--forte,#s10 .bolha,#s10 .bolha--f{
+  background:var(--vidro-fundo)!important;
+  backdrop-filter:var(--vidro-blur)!important;
+  -webkit-backdrop-filter:var(--vidro-blur)!important;
+}
+.pilar--centro,.regua__c--forte,.org__c--topo,.bolha--f,.ciclo__e--fim{
+  border-color:var(--amarelo)!important;
+}
+
+/* ====== SLIDE 05, reconstruido em 24/08 =================================
+   Decisao dela: o titulo vira DUAS linhas separadas, em League Spartan caixa
+   alta; a frase da OMS entra entre aspas e em amarelo; sai "e e exatamente o
+   que a Roda de Equipe faz"; e a parte do modelo que se sustenta e se paga
+   desce e vira SUBTITULO, em League Spartan caixa normal, antes da lista. */
+#s5 .t-fluxo--caps{
+  text-transform:uppercase;letter-spacing:.005em;
+  font-size:clamp(1.14rem,1.86vw,1.86rem);line-height:1.2;max-width:none;
+}
+/* Regra da casa: frase completa nunca quebra entre linhas. */
+#s5 .t-fluxo--caps .t__l{display:block}
+#s5 .t-fluxo--caps .t__l+.t__l{margin-top:.3em}
+.subt-fluxo{
+  font-family:var(--titulo);font-weight:700;
+  font-size:clamp(.98rem,1.4vw,1.4rem);line-height:1.28;
+  color:var(--bege);margin:.7em 0 0;max-width:none;
+  text-shadow:0 2px 14px rgba(20,9,2,.9);
+}
+/* A lista ganha marcador, como ela pediu. */
+#s5 .lista-topicos{margin-top:.85em;max-width:none}
+#s5 .lista-topicos li{position:relative;padding-left:1.05em}
+#s5 .lista-topicos li::before{
+  content:"";position:absolute;left:.08em;top:.6em;
+  width:7px;height:7px;border-radius:50%;background:var(--amarelo);
+}
+/* As tags e os dados de solidao descem, para abrir respiro entre o bloco de
+   argumento (titulo, subtitulo, lista) e o bloco de evidencia. */
+#s5 .bolhas{margin-top:clamp(1.3rem,3.4vh,2.8rem)}
+#s5 .dados-solidao{margin-top:clamp(1rem,2.6vh,2.2rem)}
+/* O titulo em duas linhas atravessava o caminho de 3 passos no canto direito
+   (medido: 179px de sobreposicao sobre "Rodas de Equipe PAAPS"). A largura
+   passa a parar antes dele. A segunda linha pode quebrar em duas visuais,
+   MAS a frase da OMS entre aspas nunca parte: e a parte de destaque, e a
+   regra da casa manda ela ficar inteira na mesma linha. */
+#s5 .t-fluxo--caps,#s5 .subt-fluxo,#s5 .lista-topicos{max-width:calc(100% - 330px)}
+#s5 .t-fluxo--caps .destaque{white-space:nowrap}
