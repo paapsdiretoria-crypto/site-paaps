@@ -1321,9 +1321,16 @@ h1,h2,h3{font-family:var(--titulo);font-weight:700;line-height:1.03;letter-spaci
 /* ====================================================================== */
 .slide{width:min(100%,calc(100vh * 16 / 9));margin-inline:auto}
 
-/* A tipografia passa a escalar pela largura REAL do slide, não da janela, */
-/* e nunca passa do tamanho de projeto (16px). */
-html{font-size:clamp(10px,calc(min(100vw,100vh * 16 / 9) / 80),16px)}
+/* A tipografia escala pela largura REAL do slide, não da janela.          */
+/* ⚠️ O DIVISOR IMPORTA: o projeto do deck é 1920px de largura, e nessa     */
+/* largura a raiz tem que dar exatamente 16px. Logo o divisor é 120         */
+/* (1920/120 = 16), não 80. Com 80, a raiz batia no teto de 16px já a       */
+/* 1280px de slide, e daí para cima a letra PARAVA DE ESCALAR: num slide de */
+/* 1564px (janela 1920x880, em que o 16:9 é limitado pela altura) o texto    */
+/* saía 23% maior do que deveria e o título do slide 12 subia por cima do   */
+/* rótulo do app. Era esse o bug, e ele valia para os 19 slides.            */
+/* O teto sobe para 24px para que monitor grande também escale.             */
+html{font-size:clamp(9px,calc(min(100vw,100vh * 16 / 9) / 120),24px)}
 
 /* ====================================================================== */
 /* IMPRESSÃO: restaura o tamanho de página                                 */
@@ -2643,7 +2650,7 @@ html{font-size:clamp(10px,calc(min(100vw,100vh * 16 / 9) / 80),16px)}
    Por isso o respiro aqui e em px, e a logo e dimensionada em % dela mesma. */
 .app__icone{
   display:grid;place-items:center;flex:0 0 auto;box-sizing:border-box;
-  width:clamp(58px,5vw,86px);height:clamp(58px,5vw,86px);
+  width:clamp(46px,5vw,5.4rem);height:clamp(46px,5vw,5.4rem);
   background:var(--bege);border-radius:23%;
   box-shadow:0 6px 22px rgba(20,9,2,.55);
 }
@@ -2657,7 +2664,7 @@ html{font-size:clamp(10px,calc(min(100vw,100vh * 16 / 9) / 80),16px)}
   font-family:var(--corpo);font-size:.82em;color:var(--creme-70);margin-top:.18em}
 
 .fone{
-  width:clamp(196px,16.9vw,311px);aspect-ratio:9/17.4;
+  width:clamp(150px,16.9vw,19.4rem);aspect-ratio:9/17.4;
   background:linear-gradient(160deg,#2b1707,#150a02);
   border:2px solid rgba(245,241,225,.34);border-radius:clamp(22px,2.2vw,34px);
   padding:clamp(7px,.62vw,11px);
@@ -2762,10 +2769,8 @@ html{font-size:clamp(10px,calc(min(100vw,100vh * 16 / 9) / 80),16px)}
    linha de fonte em 29px depois que a frase ganhou "ou na regiao". Medido,
    nao estimado. A folga sai do respiro entre os blocos, NUNCA do corpo da
    letra: a soma das tres margens dava 38px e sobrava 28px de conteudo. */
-@media (max-height:900px){
-  #s7 .grade{margin-top:.25em}
-  #s7 .pilares{margin-top:.25em}
-  #s7 .pilar{padding:12px}
-  #s7 .pilar__nota{margin-top:.2em}
-  #s7 .grade .cel{padding:13px}
-}
+/* [removido] O remendo de aperto do slide 08 em janela baixa saiu: ele
+   compensava a tipografia fora de escala, e a escala foi corrigida na raiz. */
+/* O celular precisa comecar SEMPRE abaixo da faixa do cabecalho, inclusive
+   em janela mais larga que 16:9, onde o slide encolhe mas a faixa nao. */
+#s11 .tec__app{padding-top:clamp(2.4rem,7vh,4.2rem)}
