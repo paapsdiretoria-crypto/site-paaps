@@ -18,7 +18,7 @@ type Props = {
 };
 
 export function SectionDemo({ playVideo }: Props) {
-  const playerRef = useRef();
+  const playerRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setPlaying] = useState(true);
   const isDesktop = useMediaQuery("(min-width: 768px)");
 
@@ -49,7 +49,9 @@ export function SectionDemo({ playVideo }: Props) {
   }, [playVideo, isDesktop]);
 
   const handleRestart = () => {
-    playerRef.current.currentTime = 0;
+    if (playerRef.current) {
+      playerRef.current.currentTime = 0;
+    }
   };
 
   const togglePlay = () => {

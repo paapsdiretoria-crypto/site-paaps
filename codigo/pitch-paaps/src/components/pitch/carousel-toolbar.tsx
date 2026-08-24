@@ -27,7 +27,17 @@ type Props = {
   views: number;
 };
 
-const popupCenter = ({ url, title, w, h }) => {
+const popupCenter = ({
+  url,
+  title,
+  w,
+  h,
+}: {
+  url: string;
+  title: string;
+  w: number;
+  h: number;
+}) => {
   const dualScreenLeft =
     window.screenLeft !== undefined ? window.screenLeft : window.screenX;
   const dualScreenTop =
@@ -67,6 +77,14 @@ export function CarouselToolbar({ views }: Props) {
 
   useHotkeys("arrowRight", () => api.scrollNext(), [api]);
   useHotkeys("arrowLeft", () => api.scrollPrev(), [api]);
+
+  // Vai direto para o ultimo slide. No repositorio original da Midday esta
+  // linha chamava api.scrollTo(100), que nao existe nesse objeto e quebrava
+  // com erro no console. O objeto do carrossel de verdade fica em api.api.
+  const handleGoToLastSlide = () => {
+    const carousel = api.api;
+    carousel?.scrollTo(carousel.scrollSnapList().length - 1);
+  };
 
   const handleOnShare = () => {
     const popup = popupCenter({
@@ -111,7 +129,7 @@ export function CarouselToolbar({ views }: Props) {
 
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <button type="button" onClick={() => api.scrollTo(100)}>
+                    <button type="button" onClick={handleGoToLastSlide}>
                       <Icons.Calendar size={18} className="text-[#878787]" />
                     </button>
                   </TooltipTrigger>
@@ -124,12 +142,17 @@ export function CarouselToolbar({ views }: Props) {
                 </Tooltip>
 
                 <Tooltip>
-                  <TooltipTrigger>
+                  {/* Os dois "asChild" fazem o balao e o dialogo reaproveitarem
+                      este mesmo <button>, em vez de cada um criar o seu. Sem
+                      isso o React acusava erro no console. */}
+                  <TooltipTrigger asChild>
                     <DialogTrigger asChild>
-                      <Icons.Share
-                        size={18}
-                        className="text-[#878787] -mt-[1px]"
-                      />
+                      <button type="button">
+                        <Icons.Share
+                          size={18}
+                          className="text-[#878787] -mt-[1px]"
+                        />
+                      </button>
                     </DialogTrigger>
                   </TooltipTrigger>
                   <TooltipContent
