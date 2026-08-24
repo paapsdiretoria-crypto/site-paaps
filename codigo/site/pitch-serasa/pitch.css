@@ -2978,8 +2978,8 @@ html{font-size:clamp(9px,calc(min(100vw,100vh * 16 / 9) / 120),24px)}
    normal (sem caixa alta), so "PAAPS" em amarelo, como ela pediu. */
 .bolhas__rot{
   font-family:var(--titulo);font-weight:700;text-align:center;
-  font-size:clamp(.92rem,1.2vw,1.2rem);color:var(--bege);
-  margin:0 0 .5em;text-shadow:0 2px 12px rgba(20,9,2,.85);
+  font-size:clamp(1.35rem,1.9vw,1.9rem);color:var(--bege);
+  margin:0 0 .6em;text-shadow:0 2px 12px rgba(20,9,2,.85);
 }
 
 /* ====== SLIDE 07, chave dos socios ========================================
