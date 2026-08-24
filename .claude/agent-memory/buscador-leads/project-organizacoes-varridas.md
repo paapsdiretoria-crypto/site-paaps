@@ -35,7 +35,7 @@ cargo + e-mail institucional + gancho, todos em página `.gov.br` do próprio mu
 
 - Prefeitura de Taiobeiras (MG)
 - Prefeitura de Porteirinha (MG)
-- Prefeitura de Monte Azul (MG)
+- Prefeitura de Monte Azul (MG): **exceção, ver abaixo, não reusar o e-mail sem checar**
 - Prefeitura de Espinosa (MG)
 - Prefeitura de Riacho dos Machados (MG)
 
@@ -43,6 +43,18 @@ cargo + e-mail institucional + gancho, todos em página `.gov.br` do próprio mu
 a meta de 5 cartas.
 **How to apply:** não varrer essas 5 de novo. Se voltarem à fila, revalidar só o nome do
 titular. As rotas de e-mail estão em [[reference-fontes-email-institucional]].
+
+**Atualização de 24/08/2026, só para Monte Azul (MG):** o e-mail fechado aqui
+(`smas.saude@monteazul.mg.gov.br`) voltou como bounce em 03/08 por falta de MX no
+domínio: o site `.gov.br` existe, mas o domínio não recebe e-mail de verdade. Lead voltou
+a `0. Alvo` no CRM. Quando Monte Azul (MG) voltar à fila, **não reaproveitar esse e-mail
+direto**: confirmar que o domínio tem MX antes de cadastrar de novo, e se não tiver,
+procurar canal alternativo (gmail pessoal do titular, telefone da secretaria). **Atenção
+ao nome:** existe também a "Associação Comunitária Monte Azul", ONG da zona sul de São
+Paulo (ver [[project_referral_politico_monte_azul]]), que é organização totalmente
+diferente, sem nenhuma relação com esta prefeitura de Minas Gerais: mesmo nome, cidades e
+instituições diferentes, não confundir os dois leads. As outras quatro desta leva
+(Taiobeiras, Porteirinha, Espinosa, Riacho dos Machados) não têm esse problema conhecido.
 
 ### Ficaram de fora, e por quê (não é lista morta, é lista com motivo)
 
