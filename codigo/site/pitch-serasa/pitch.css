@@ -1906,15 +1906,15 @@ html{font-size:clamp(10px,calc(min(100vw,100vh * 16 / 9) / 80),16px)}
 #s9 .gtm__fluxo{justify-content:space-between;padding:clamp(14px,1.7vw,26px)}
 /* O vao entre os passos e a variavel que enche a caixa. O fio que liga um
    passo ao outro le esse mesmo valor, senao ele para no meio do caminho. */
-#s9 .fluxo{--g:clamp(14px,5.5vh,62px);gap:var(--g)}
+#s9 .fluxo{--g:clamp(12px,3.2vh,36px);gap:var(--g)}
 #s9 .fluxo__p:not(:last-child)::after{bottom:calc(var(--g) * -1)}
-#s9 .fluxo__t{font-size:clamp(1.02rem,1.72vw,1.72rem);line-height:1.2}
-#s9 .fluxo__d{font-size:clamp(1.3rem,2.13vw,2.13rem);line-height:1.12;margin-top:.14em}
-#s9 .fluxo__s{font-size:clamp(.92rem,1.4vw,1.4rem);line-height:1.28;margin-top:.14em}
+#s9 .fluxo__t{font-size:clamp(.86rem,1.16vw,1.16rem);line-height:1.22}
+#s9 .fluxo__d{font-size:clamp(1rem,1.36vw,1.36rem);line-height:1.14;margin-top:.14em}
+#s9 .fluxo__s{font-size:clamp(.76rem,1vw,1rem);line-height:1.32;margin-top:.14em}
 #s9 .fluxo__pe{font-size:clamp(.8rem,1vw,1rem);line-height:1.34}
-#s9 .fluxo__p{padding-left:1.5em}
-#s9 .fluxo__p::before{width:10px;height:10px;top:.4em}
-#s9 .fluxo__p:not(:last-child)::after{left:calc(.22em + 4px);top:1.15em}
+#s9 .fluxo__p{padding-left:1.35em}
+#s9 .fluxo__p::before{width:8px;height:8px;top:.42em}
+#s9 .fluxo__p:not(:last-child)::after{left:calc(.22em + 3px);top:1.12em}
 
 /* --- Slide 13: o trilho desce para a linha do horizonte ------------------
    Na foto da serra o mar de montanhas termina mais ou menos na metade da
@@ -2511,3 +2511,207 @@ html{font-size:clamp(10px,calc(min(100vw,100vh * 16 / 9) / 80),16px)}
    rotulo GO TO MARKET, no canto superior direito. Um respiro no topo resolve
    sem mexer em corpo de letra. */
 #s9 .gtm--duplo{margin-top:2.1em}
+
+
+/* ====== SLIDE 10, correcoes de 24/08 ====================================
+   BUG 10.A: .gtm tem overflow:hidden. Como item de um container flex, isso
+   zera o tamanho minimo automatico dele, entao o flexbox espremia a caixa e
+   o INBOUND era cortado EM SILENCIO (medido: 605px de conteudo dentro de
+   366px de caixa, a 1440x820). Mesmo bug que ja mordeu .grade nos slides
+   08 e 09. flex-shrink:0 obriga a caixa a manter a altura do conteudo. */
+#s9 .gtm{flex-shrink:0}
+
+/* 10.C: POSICIONAMENTO vira lista com marcador. Pontinho, e nao numero:
+   o ciclo de venda logo abaixo ja numera 01 a 05, e numerar duas vezes no
+   mesmo slide cria duas hierarquias numericas competindo. */
+.pos{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.7em}
+.pos__i{
+  position:relative;padding-left:1.05em;
+  font-size:clamp(.92rem,1.18vw,1.18rem);line-height:1.45;
+  color:var(--creme-90);
+}
+.pos__i::before{
+  content:"";position:absolute;left:.1em;top:.55em;
+  width:7px;height:7px;border-radius:50%;background:var(--amarelo);
+}
+.pos__r{
+  display:block;font-family:var(--titulo);font-weight:800;
+  text-transform:uppercase;letter-spacing:.02em;
+  font-size:clamp(.8rem,1.02vw,1.02rem);line-height:1;
+  color:var(--amarelo);margin-bottom:.28em;
+}
+
+/* 10.D: o texto "e a rede seguinte recomeca o ciclo" saiu, porque e obvio.
+   A linha tracejada e a seta de retorno ficam: sao elas que fazem o desenho
+   ler como ciclo, e nao como fila. O <p> continua existindo so como suporte
+   desses dois pseudo-elementos. */
+.ciclo__volta{margin-top:.55em;padding-top:.6em;min-height:0}
+
+/* ====== SLIDE 11, reconstruido em 24/08 =================================
+   O slide deixou de nomear concorrente. O adversario agora e um FORMATO,
+   consulta individual remota por aplicativo, e nao uma empresa: e a mesma
+   coisa que a Ata do Ministerio comprou. Ordem da pagina, decidida por ela:
+   regua da OMS no topo (evidencia externa antes de qualquer autoelogio),
+   diferenciais em tags no meio, fecho de duas linhas embaixo. */
+
+/* O X entre as duas colunas da regua: e ele que faz a regua ler como
+   comparacao de times, e nao como duas caixas vizinhas. Fica no vao de 1px
+   entre as colunas, por cima da divisa. */
+.regua--x{position:relative}
+.regua--x::after{
+  content:"✕";position:absolute;left:50%;top:50%;translate:-50% -50%;
+  z-index:3;width:clamp(2rem,2.9vw,2.9rem);height:clamp(2rem,2.9vw,2.9rem);
+  display:flex;align-items:center;justify-content:center;border-radius:50%;
+  font-family:var(--titulo);font-weight:800;
+  font-size:clamp(.95rem,1.35vw,1.35rem);line-height:1;
+  color:var(--amarelo);background:rgba(30,14,3,.92);
+  border:1px solid var(--amarelo);
+}
+#s10 .regua{margin-top:0}
+#s10 .regua__t{font-size:clamp(1.4rem,2.2vw,2.2rem);line-height:1.08}
+#s10 .regua__d{font-size:clamp(1.02rem,1.4vw,1.4rem);line-height:1.44}
+/* A coluna direita cede espaco para o X nao encostar no texto. */
+#s10 .regua__c{padding:clamp(1.1rem,1.9vw,1.9rem)}
+#s10 .regua__c--forte{padding-right:clamp(2.2rem,3vw,3rem)}
+#s10 .regua__c:not(.regua__c--forte){padding-left:clamp(1.9rem,2.6vw,2.6rem)}
+
+/* As 6 tags de diferencial. Sao 6 e nao 9 porque supervisao semanal ja e
+   dita nos slides 08 e 10, e registro em prontuario e o slide 12 inteiro:
+   repetir aqui so obrigaria a diminuir a letra. */
+.bolhas--dif{
+  display:grid;grid-template-columns:repeat(3,auto);justify-content:center;
+  align-items:stretch;max-width:none;margin-top:clamp(1.2rem,3vh,2.6rem);
+  gap:.7em .7em;
+}
+.bolhas--dif .bolha{display:flex;align-items:center;justify-content:center;text-align:center}
+#s10 .bolha{font-size:clamp(1.15rem,1.58vw,1.58rem);padding:.72em 1.5em}
+#s10 .bolha--f{font-size:clamp(1.22rem,1.68vw,1.68rem)}
+
+/* O fecho em duas linhas: a primeira branca, a segunda toda em caixa alta e
+   amarela, numa linha so, como ela pediu. */
+#s10 .comprador{max-width:none;text-align:center}
+#s10 .comprador:first-of-type{margin-top:clamp(1.3rem,3.4vh,3rem);font-size:clamp(1.18rem,2.08vw,2.08rem)}
+.comprador--caixa{
+  text-transform:uppercase;color:var(--amarelo)!important;
+  white-space:nowrap;letter-spacing:.005em;font-size:clamp(1.12rem,2.08vw,2.08rem);
+  margin-top:clamp(.35rem,.9vh,.7rem)!important;
+}
+
+/* A foto do slide 11 e muito clara (janela ao fundo), e o vidro padrao tem so
+   7% de preenchimento: a coluna direita da regua estava sumindo. Veu e vidro
+   ganham densidade SO neste slide. */
+#s10.veu-denso::after{
+  background:linear-gradient(180deg,rgba(30,14,3,.74) 0%,rgba(30,14,3,.70) 100%)!important;
+}
+#s10 .regua__c{background:rgba(30,14,3,.66)!important}
+#s10 .regua__c--forte{background:rgba(203,71,16,.30)!important}
+#s10 .bolha{background:rgba(30,14,3,.62)!important}
+#s10 .bolha--f{background:rgba(203,71,16,.34)!important}
+
+/* ====== SLIDE 12, TECNOLOGIA: reconstruido em 24/08 =====================
+   Decisao dela: o celular ganha coluna propria a direita, e o texto todo se
+   reorganiza a esquerda com as tres celulas EMPILHADAS em vez de lado a lado.
+   E o unico arranjo em que o mockup fica grande o bastante para a tela ser
+   legivel sem colidir com a linha de fonte, e a pilha vertical e o que libera
+   o corpo de letra maior que ela pediu. A copy nao mudou uma palavra. */
+.tec{
+  display:grid;grid-template-columns:minmax(0,1.42fr) minmax(0,1fr);
+  gap:clamp(1.4rem,3vw,3.4rem);align-items:center;width:100%;
+}
+.tec__txt{display:flex;flex-direction:column;min-width:0}
+/* 12.1: a fonte sobe, do titulo ao pe. Nenhuma palavra foi reescrita. */
+#s11 .t-fluxo{font-size:clamp(1.24rem,2.08vw,2.08rem);line-height:1.16;max-width:none}
+#s11 .tec__cels{grid-template-columns:1fr;gap:.7em;margin-top:.9em}
+#s11 .cel__l{font-size:clamp(1rem,1.34vw,1.34rem);line-height:1.44}
+#s11 .tec__pe{
+  font-size:clamp(1rem,1.38vw,1.38rem);line-height:1.42;max-width:none;
+  margin-top:.7em;padding:clamp(.85rem,1.4vw,1.35rem) clamp(1rem,1.6vw,1.5rem);
+  background:var(--vidro-fundo);backdrop-filter:var(--vidro-blur);
+  -webkit-backdrop-filter:var(--vidro-blur);
+  border:1px solid var(--vidro-borda);border-radius:var(--raio);
+}
+/* 12.2: a area de vidro desce. Cada celula empilhada carrega o proprio
+   respiro, entao o bloco escuro acompanha a letra maior em vez de virar
+   uma faixa fina no meio do slide. */
+#s11 .tec__cels .cel{padding:clamp(.85rem,1.4vw,1.35rem) clamp(1rem,1.6vw,1.5rem)}
+
+/* --- O mockup do app, em CSS puro, sem imagem de tela ------------------- */
+.tec__app{display:flex;flex-direction:column;align-items:center;gap:clamp(.8rem,1.6vh,1.3rem)}
+.app__cab{display:flex;align-items:center;gap:.75em;align-self:stretch;justify-content:center}
+/* ATENCAO: padding em % dentro deste quadrado resolve contra a LARGURA DO
+   CONTAINER PAI, nao contra o proprio quadrado. Com padding:14% o icone
+   ganhava 98px de respiro dentro de 80px de caixa e a logo ficava com 0px.
+   Por isso o respiro aqui e em px, e a logo e dimensionada em % dela mesma. */
+.app__icone{
+  display:grid;place-items:center;flex:0 0 auto;box-sizing:border-box;
+  width:clamp(58px,5vw,86px);height:clamp(58px,5vw,86px);
+  background:var(--bege);border-radius:23%;
+  box-shadow:0 6px 22px rgba(20,9,2,.55);
+}
+.app__icone img{width:78%;height:auto;display:block}
+.app__nome{
+  font-family:var(--titulo);font-weight:800;line-height:1.02;
+  font-size:clamp(.95rem,1.32vw,1.32rem);color:var(--bege);
+  text-shadow:0 2px 14px rgba(20,9,2,.9);
+}
+.app__nome i{display:block;font-style:normal;font-weight:400;
+  font-family:var(--corpo);font-size:.82em;color:var(--creme-70);margin-top:.18em}
+
+.fone{
+  width:clamp(196px,16.9vw,311px);aspect-ratio:9/17.4;
+  background:linear-gradient(160deg,#2b1707,#150a02);
+  border:2px solid rgba(245,241,225,.34);border-radius:clamp(22px,2.2vw,34px);
+  padding:clamp(7px,.62vw,11px);
+  box-shadow:0 22px 60px rgba(12,5,1,.72),inset 0 0 0 1px rgba(0,0,0,.6);
+}
+.fone__tela{
+  height:100%;border-radius:clamp(15px,1.5vw,24px);overflow:hidden;
+  background:linear-gradient(180deg,rgba(37,19,5,.97),rgba(24,12,3,.99));
+  padding:clamp(9px,.85vw,15px);display:flex;flex-direction:column;
+  gap:clamp(5px,.5vw,9px);
+}
+.fone__topo{display:flex;align-items:baseline;justify-content:space-between;
+  border-bottom:1px solid rgba(245,241,225,.16);padding-bottom:.42em}
+.fone__rede{font-family:var(--titulo);font-weight:800;
+  font-size:clamp(.68rem,.92vw,.92rem);color:var(--bege);letter-spacing:.01em}
+.fone__periodo{font-family:var(--corpo);font-size:clamp(.54rem,.72vw,.72rem);
+  color:var(--amarelo)}
+.fone__rot{font-family:var(--corpo);margin:.5em 0 0;
+  font-size:clamp(.52rem,.7vw,.7rem);letter-spacing:.06em;
+  text-transform:uppercase;color:rgba(245,241,225,.62)}
+.fone__rot--2{margin-top:.7em}
+/* A serie historica: 12 barras subindo, uma por mes. Sao proporcoes de
+   desenho, nao dado de cliente: o mockup nao imprime numero nenhum. */
+.fone__serie{display:flex;align-items:flex-end;gap:clamp(2px,.22vw,5px);
+  height:clamp(56px,5.6vw,100px);margin-top:.32em}
+.fone__serie i{flex:1;background:rgba(247,195,28,.42);border-radius:1px}
+.fone__serie .fone__hoje{background:var(--amarelo)}
+.fone__ind{list-style:none;margin:.25em 0 0;padding:0;
+  display:flex;flex-direction:column;gap:clamp(4px,.42vw,8px)}
+.fone__ind li{display:flex;flex-direction:column;gap:2px}
+.fone__ind span{font-family:var(--corpo);font-size:clamp(.6rem,.8vw,.8rem);
+  color:rgba(245,241,225,.86);line-height:1.15}
+.fone__ind b{display:block;height:clamp(4px,.36vw,6px);border-radius:99px;
+  background:linear-gradient(90deg,var(--amarelo),rgba(203,71,16,.85))}
+
+@media(max-width:900px){
+  .tec{grid-template-columns:1fr}
+  .tec__app{margin-top:1.2rem}
+}
+
+/* O cabecalho do app (icone + descritivo) desceu para DEBAIXO do celular:
+   la em cima ele colidia com o titulo central "APP PONTO DE APOIO DO
+   SERVIDOR" e encostava a 3px do rotulo TECNOLOGIA. Embaixo, vira ficha de
+   app, que e a leitura que ela pediu. */
+#s11 .app__cab{align-self:auto;margin-top:.2em}
+/* A coluna do celular nao pode comecar acima da faixa do cabecalho: com 704px
+   de altura ela subia ate y=114 e cruzava o titulo central e o rotulo
+   TECNOLOGIA. Medido, nao estimado. O celular encolhe para caber inteiro
+   entre o cabecalho e a linha de fonte. */
+#s11 .tec{align-items:center}
+#s11 .tec__app{padding-top:clamp(1.2rem,3vh,2.6rem)}
+/* A tela sobrava um terco vazio embaixo: o conteudo se distribui na altura
+   inteira, como painel de verdade, em vez de ficar empoleirado no topo. */
+.fone__tela{justify-content:space-between}
+#s11 .fone__serie{height:clamp(60px,6.2vw,112px)}
+#s11 .fone__ind{gap:clamp(6px,.62vw,12px)}
