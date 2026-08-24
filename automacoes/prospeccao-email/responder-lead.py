@@ -58,6 +58,15 @@ def corpo_html(fragmento: str, sem_descadastro: bool) -> str:
     return html
 
 
+def _sem_dobra(valor):
+    """Um header IMAP com References longa (3+ ids) chega dobrado em várias linhas
+    (RFC 2822 folding). email.message_from_bytes preserva a quebra crua no valor, e
+    gravar isso de volta num header novo derruba o EmailMessage (policy estrita não
+    aceita CR/LF dentro do valor). Colapsa para uma linha só, como um header deveria
+    ser lido."""
+    return " ".join(valor.split()) if valor is not None else None
+
+
 def achar_original(imap, remetente_lead):
     """Message-ID e References da última mensagem do lead na INBOX."""
     imap.select("INBOX")
@@ -71,7 +80,11 @@ def achar_original(imap, remetente_lead):
         return None, None, None
     ok, dados = imap.fetch(ids[-1], "(BODY.PEEK[HEADER])")
     cab = email.message_from_bytes(dados[0][1])
-    return cab.get("Message-ID"), cab.get("References"), cab.get("Subject")
+    return (
+        _sem_dobra(cab.get("Message-ID")),
+        _sem_dobra(cab.get("References")),
+        _sem_dobra(cab.get("Subject")),
+    )
 
 
 def pasta_enviados(imap):
