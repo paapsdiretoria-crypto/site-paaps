@@ -2627,15 +2627,13 @@ html{font-size:clamp(9px,calc(min(100vw,100vh * 16 / 9) / 120),24px)}
 .tec__txt{display:flex;flex-direction:column;min-width:0}
 /* 12.1: a fonte sobe, do titulo ao pe. Nenhuma palavra foi reescrita. */
 #s11 .t-fluxo{font-size:clamp(1.24rem,2.08vw,2.08rem);line-height:1.16;max-width:none}
-#s11 .tec__cels{grid-template-columns:1fr;gap:.7em;margin-top:.9em}
-#s11 .cel__l{font-size:clamp(1rem,1.34vw,1.34rem);line-height:1.44}
-#s11 .tec__pe{
-  font-size:clamp(1rem,1.38vw,1.38rem);line-height:1.42;max-width:none;
-  margin-top:.7em;padding:clamp(.85rem,1.4vw,1.35rem) clamp(1rem,1.6vw,1.5rem);
-  background:var(--vidro-fundo);backdrop-filter:var(--vidro-blur);
-  -webkit-backdrop-filter:var(--vidro-blur);
-  border:1px solid var(--vidro-borda);border-radius:var(--raio);
-}
+/* Grade 2x2: as caixas saem de 9,5:1 (faixas de 999x105) para perto de 2:1,
+   que foi o que ela pediu ao dizer "menos retangulares, mais quadradas". */
+#s11 .tec__cels{grid-template-columns:1fr 1fr;gap:.95em;margin-top:.9em;align-items:stretch}
+#s11 .cel__l{font-size:clamp(.92rem,1.23vw,1.23rem);line-height:1.45}
+/* O paragrafo final virou a 4a caixa da grade: herda o vidro de .cel e so
+   guarda o corpo um tico maior, porque e a conclusao do bloco. */
+#s11 .tec__pe .cel__l{font-size:clamp(.95rem,1.27vw,1.27rem)}
 /* 12.2: a area de vidro desce. Cada celula empilhada carrega o proprio
    respiro, entao o bloco escuro acompanha a letra maior em vez de virar
    uma faixa fina no meio do slide. */
