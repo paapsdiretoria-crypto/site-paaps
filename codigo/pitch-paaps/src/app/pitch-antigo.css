@@ -1,0 +1,401 @@
+/* =========================================================================
+   PECAS IMPORTADAS DO PITCH ANTIGO
+   Copiadas de `codigo/site/pitch-serasa/pitch.css` sem redesenho: o mockup
+   do app Ponto de Apoio e o grafico de projecoes ja estavam calibrados la,
+   e a decisao foi trazer os dois exatamente como estavam.
+   As unicas trocas sao de nome de variavel, para casar com os tokens deste
+   projeto: --titulo vira League Spartan e --corpo vira Helvetica.
+   ========================================================================= */
+
+/* ---------- Lockup do produto: "APP PONTO DE APOIO DO SERVIDOR" ---------- */
+
+.produto {
+  display: flex;
+  align-items: baseline;
+  /* 0.3em no deck antigo. Aqui sobe para 0.55em porque o filete embaixo do
+     "APP" encosta no "PONTO" e as duas palavras leem como uma so. */
+  gap: 0.55em;
+  justify-content: center;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+  font-family: var(--titulo);
+  font-weight: 700;
+  margin-bottom: 0.6em;
+}
+.produto__app {
+  font-family: var(--titulo);
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: clamp(1.1rem, 3vw, 3rem);
+  letter-spacing: 0.02em;
+  line-height: 1;
+  color: var(--amarelo);
+  border-bottom: 4px solid var(--amarelo);
+}
+.produto__nome {
+  font-family: var(--titulo);
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: clamp(1.1rem, 3vw, 3rem);
+  letter-spacing: 0.005em;
+  line-height: 1;
+  color: var(--bege);
+}
+
+/* ---------- O mockup do app, em CSS puro, sem imagem de tela ------------ */
+
+.tec__app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(0.8rem, 1.6vh, 1.3rem);
+}
+.app__cab {
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+  justify-content: center;
+  margin-top: 0.2em;
+}
+/* ATENCAO: padding em % dentro deste quadrado resolve contra a LARGURA DO
+   CONTAINER PAI, nao contra o proprio quadrado. Com padding:14% o icone
+   ganhava 98px de respiro dentro de 80px de caixa e a logo ficava com 0px.
+   Por isso o respiro aqui e em px, e a logo e dimensionada em % dela mesma. */
+.app__icone {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  box-sizing: border-box;
+  width: clamp(46px, 5vw, 5.4rem);
+  height: clamp(46px, 5vw, 5.4rem);
+  background: var(--bege);
+  border-radius: clamp(10px, 1.1vw, 18px);
+}
+.app__icone img {
+  width: 78%;
+  height: auto;
+  display: block;
+}
+.app__nome {
+  font-family: var(--titulo);
+  font-weight: 800;
+  line-height: 1.02;
+  font-size: clamp(0.95rem, 1.32vw, 1.32rem);
+  color: var(--bege);
+  text-shadow: 0 2px 14px rgba(20, 9, 2, 0.85);
+}
+.app__nome i {
+  display: block;
+  font-style: normal;
+  font-weight: 400;
+  font-family: var(--corpo);
+  font-size: 0.82em;
+  color: var(--creme-70);
+  margin-top: 0.18em;
+}
+
+.fone {
+  width: clamp(150px, 16.9vw, 19.4rem);
+  aspect-ratio: 9 / 17.4;
+  background: linear-gradient(160deg, #2b1707, #150a02);
+  border: 2px solid rgba(245, 241, 225, 0.34);
+  border-radius: clamp(18px, 1.8vw, 28px);
+  padding: clamp(4px, 0.4vw, 7px);
+  box-shadow: 0 18px 46px rgba(20, 9, 2, 0.55);
+}
+.fone__tela {
+  height: 100%;
+  border-radius: clamp(15px, 1.5vw, 24px);
+  overflow: hidden;
+  background: linear-gradient(
+    180deg,
+    rgba(37, 19, 5, 0.97),
+    rgba(24, 12, 3, 0.99)
+  );
+  padding: clamp(0.5rem, 0.72vw, 0.85rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.fone__topo {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(245, 241, 225, 0.16);
+  padding-bottom: 0.42em;
+}
+.fone__rede {
+  font-family: var(--titulo);
+  font-weight: 800;
+  font-size: clamp(0.68rem, 0.92vw, 0.92rem);
+  color: var(--bege);
+  letter-spacing: 0.01em;
+}
+.fone__periodo {
+  font-family: var(--corpo);
+  font-size: clamp(0.54rem, 0.72vw, 0.72rem);
+  color: var(--amarelo);
+}
+.fone__rot {
+  font-family: var(--corpo);
+  margin: 0.5em 0 0;
+  font-size: clamp(0.52rem, 0.7vw, 0.7rem);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(245, 241, 225, 0.6);
+}
+
+/* As abas Area do gestor / Area do servidor, cada uma com cadeado: o cadeado
+   sinaliza que a area exige login, sem precisar de texto extra. */
+.fone__abas {
+  display: flex;
+  gap: clamp(4px, 0.4vw, 7px);
+  margin-top: 0.4em;
+}
+.fone__aba {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.32em;
+  padding: clamp(4px, 0.42vw, 7px) clamp(3px, 0.3vw, 5px);
+  border-radius: 5px;
+  font-family: var(--titulo);
+  font-weight: 700;
+  font-size: clamp(0.5rem, 0.66vw, 0.66rem);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: rgba(245, 241, 225, 0.72);
+  border: 1px solid rgba(245, 241, 225, 0.16);
+}
+.fone__aba--ativa {
+  color: #1e0e03;
+  background: var(--amarelo);
+  border-color: var(--amarelo);
+}
+.fone__cadeado {
+  font-style: normal;
+  font-size: 0.92em;
+  line-height: 1;
+}
+
+/* A serie historica: 12 barras, uma por mes. Sao proporcoes de desenho, nao
+   dado de cliente: o mockup nao imprime numero nenhum. */
+.fone__serie {
+  display: flex;
+  align-items: flex-end;
+  gap: clamp(2px, 0.22vw, 5px);
+  height: clamp(60px, 6.2vw, 112px);
+  margin-top: 0.32em;
+}
+.fone__serie i {
+  flex: 1;
+  background: rgba(247, 195, 28, 0.42);
+  border-radius: 1px;
+}
+.fone__serie .fone__hoje {
+  background: var(--amarelo);
+}
+
+/* Os dois mini-indicadores ao lado das Rodas por mes: contexto, nao dado
+   central, entao ficam num corpo bem menor que o grafico principal. */
+.fone__mini {
+  display: flex;
+  gap: clamp(5px, 0.5vw, 9px);
+  margin-top: 0.4em;
+}
+.fone__mini__i {
+  flex: 1;
+  padding: clamp(4px, 0.44vw, 7px);
+  border-radius: 5px;
+  background: rgba(245, 241, 225, 0.05);
+  border: 1px solid rgba(245, 241, 225, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.fone__mini__n {
+  font-family: var(--titulo);
+  font-weight: 800;
+  color: var(--amarelo);
+  font-size: clamp(0.68rem, 0.9vw, 0.9rem);
+  line-height: 1;
+}
+.fone__mini__l {
+  font-family: var(--corpo);
+  font-size: clamp(0.44rem, 0.56vw, 0.56rem);
+  line-height: 1.18;
+  color: rgba(245, 241, 225, 0.68);
+}
+
+.fone__ind {
+  list-style: none;
+  margin: 0.35em 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(6px, 0.62vw, 12px);
+}
+.fone__ind li {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.fone__ind span {
+  font-family: var(--corpo);
+  font-size: clamp(0.56rem, 0.74vw, 0.74rem);
+  color: rgba(245, 241, 225, 0.86);
+  line-height: 1.15;
+}
+.fone__ind b {
+  display: block;
+  height: clamp(4px, 0.34vw, 5.5px);
+  border-radius: 99px;
+}
+.fone__ind__rot {
+  font-family: var(--titulo);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: clamp(0.5rem, 0.64vw, 0.64rem);
+  color: rgba(245, 241, 225, 0.55);
+}
+/* As duas naturezas de dado nunca dividem a mesma barra de cor: vermelho
+   quando alto e ruim (alerta da rede), amarelo quando alto e bom
+   (satisfacao). E a separacao que impede comparar coisas de sentido oposto
+   na mesma escala visual. */
+.fone__ind--alerta {
+  padding-top: 0.4em;
+  border-top: 1px solid rgba(245, 241, 225, 0.14);
+}
+.fone__ind--alerta b {
+  background: linear-gradient(90deg, #e8622a, rgba(232, 98, 42, 0.4));
+}
+.fone__ind--nps {
+  padding-top: 0.45em;
+  border-top: 1px solid rgba(245, 241, 225, 0.14);
+  margin-top: 0.15em;
+}
+.fone__ind--nps b {
+  background: linear-gradient(90deg, var(--amarelo), rgba(247, 195, 28, 0.4));
+}
+
+/* ---------- Projecoes: o grafico de receita, ano a ano ------------------ */
+
+/* O grafico e grade de verdade: uma coluna de rotulos a esquerda e cinco
+   colunas de ano, com as linhas alinhadas entre si. Sem os rotulos, "42%" e
+   "R$ 0,92 mi" seriam numeros soltos. */
+.barras {
+  display: grid;
+  grid-template-columns: auto repeat(5, 1fr);
+  column-gap: clamp(0.5rem, 1.4vw, 1.4rem);
+  row-gap: 0.28em;
+  align-items: center;
+  margin-top: 0.5em;
+  width: 100%;
+}
+.brot {
+  grid-column: 1;
+  text-align: right;
+  font-family: var(--titulo);
+  font-weight: 700;
+  color: var(--bege-rosa);
+  line-height: 1.12;
+  padding-right: 0.2em;
+}
+.brot--rec {
+  grid-row: 1;
+  color: var(--amarelo);
+  font-size: clamp(0.72rem, 0.94vw, 0.94rem);
+  max-width: 11ch;
+  margin-left: auto;
+}
+.brot--mar {
+  grid-row: 3;
+  font-size: clamp(0.8rem, 1.02vw, 1.02rem);
+}
+.brot--ano {
+  grid-row: 4;
+  font-size: clamp(0.8rem, 1.02vw, 1.02rem);
+}
+.brot--sub {
+  grid-row: 5;
+  font-family: var(--corpo);
+  font-weight: 400;
+  font-size: clamp(0.62rem, 0.78vw, 0.78rem);
+}
+.bv {
+  grid-row: 1;
+  font-family: var(--titulo);
+  font-weight: 700;
+  color: var(--amarelo);
+  text-align: center;
+  line-height: 1.05;
+  font-size: clamp(0.92rem, 1.42vw, 1.42rem);
+}
+.bz {
+  grid-row: 2;
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  height: clamp(118px, 18vh, 195px);
+}
+.bm {
+  grid-row: 3;
+  font-family: var(--titulo);
+  font-weight: 700;
+  color: var(--bege);
+  text-align: center;
+  line-height: 1;
+  font-size: clamp(1.1rem, 1.85vw, 1.85rem);
+}
+.ba {
+  grid-row: 4;
+  font-family: var(--titulo);
+  font-weight: 700;
+  color: var(--bege);
+  text-align: center;
+  line-height: 1;
+  font-size: clamp(0.86rem, 1.15vw, 1.15rem);
+}
+.bs {
+  grid-row: 5;
+  font-family: var(--corpo);
+  font-weight: 400;
+  color: var(--creme-70);
+  text-align: center;
+  line-height: 1.25;
+  font-size: clamp(0.62rem, 0.78vw, 0.78rem);
+}
+/* A barra inteira e a receita, e ela fica APAGADA. O resultado e a parte de
+   baixo e e ela que acende. A ordem importa: aceso le como "o que fica", e
+   apagado le como "o que passa". */
+.barra-ano__b {
+  background: rgba(203, 71, 16, 0.22);
+  border: 1px solid rgba(247, 195, 28, 0.5);
+  border-bottom: 0;
+  border-radius: 3px 3px 0 0;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.barra-ano__res {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, var(--amarelo), var(--terracota));
+}
+/* A chave que diz o que e cada parte da barra. Sem ela, barra de duas cores
+   e adivinhacao. */
+.barras__chave {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45em;
+  flex-wrap: wrap;
+  font-family: var(--corpo);
+  font-size: clamp(0.66rem, 0.82vw, 0.82rem);
+  color: var(--creme-70);
+  margin-top: 0.5em;
+}

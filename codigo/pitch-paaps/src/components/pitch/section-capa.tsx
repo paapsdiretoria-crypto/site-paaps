@@ -6,8 +6,8 @@ export function SectionCapa() {
     <div className="min-h-screen relative w-screen overflow-hidden">
       <Fundo
         src="/fotos/01-capa.jpg"
-        veu="veu-base"
-        posicao="center 45%"
+        veu="veu-capa"
+        posicao="center 52%"
         prioridade
         alt="Estrada de terra no interior"
       />
@@ -55,8 +55,9 @@ export function SectionCapa() {
 
       {/* A frase da capa é o único elemento grande do slide. */}
       <div className="container min-h-screen relative z-10 flex flex-col justify-end pb-16 md:pb-20">
-        <h1 className="t-capa font-bold max-w-[19ch] text-balance">
-          A Rede de Saúde Mental para as Políticas Públicas do futuro.
+        <h1 className="t-capa font-bold max-w-[17ch] text-balance">
+          A Rede de <span className="txt-amarelo">Saúde Mental</span> para as
+          Políticas Públicas do futuro.
         </h1>
         <p className="t-rotulo txt-suave mt-6">Baseado em evidências.</p>
       </div>

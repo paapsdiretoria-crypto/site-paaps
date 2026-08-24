@@ -4,7 +4,7 @@ export function SectionConcorrencia() {
   return (
     <Slide
       rotulo="Concorrência"
-      foto="/fotos/11-concorrencia.jpg"
+      foto="/fotos/12-concorrencia.jpg"
       veu="veu-forte"
       posicao="center 30%"
       fonte="Ata de Registro de Preços nº 41/2026, Central de Compras do Ministério da Gestão e da Inovação em Serviços Públicos · Diretrizes da OMS sobre saúde mental no trabalho, 2022."

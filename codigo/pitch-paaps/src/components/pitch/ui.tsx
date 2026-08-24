@@ -70,7 +70,7 @@ export function Fundo({
   prioridade = false,
 }: {
   src: string;
-  veu?: "veu-denso" | "veu-base" | "veu-forte" | "veu-suave";
+  veu?: "veu-denso" | "veu-base" | "veu-capa" | "veu-forte" | "veu-suave";
   posicao?: string;
   alt?: string;
   prioridade?: boolean;
@@ -105,7 +105,7 @@ export function FundoDuplo({
 }: {
   esquerda: string;
   direita: string;
-  veu?: "veu-denso" | "veu-base" | "veu-forte" | "veu-suave";
+  veu?: "veu-denso" | "veu-base" | "veu-capa" | "veu-forte" | "veu-suave";
   posicaoEsquerda?: string;
   posicaoDireita?: string;
   alt?: [string, string];
@@ -156,7 +156,7 @@ export function Slide({
   rotulo: string;
   foto?: string;
   fundo?: React.ReactNode;
-  veu?: "veu-denso" | "veu-base" | "veu-forte" | "veu-suave";
+  veu?: "veu-denso" | "veu-base" | "veu-capa" | "veu-forte" | "veu-suave";
   posicao?: string;
   prioridade?: boolean;
   children: React.ReactNode;

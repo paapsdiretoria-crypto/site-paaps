@@ -1,3 +1,6 @@
+/* O @import precisa vir antes de qualquer outra regra. */
+@import "./pitch-antigo.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -39,6 +42,12 @@
   /* Tipografia. Helvetica e a primaria, em varios tamanhos e com negrito.
      League Spartan e a secundaria, so nos numeros e rotulos. */
   --font-helv: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  /* Apelidos que o CSS importado do pitch antigo espera pelo nome antigo. */
+  --titulo: var(--font-spartan);
+  --corpo: var(--font-helv);
+  --bege-rosa: #bbada2;
+  --creme-70: rgba(245, 241, 225, 0.7);
 }
 
 body {
@@ -91,6 +100,20 @@ body {
   );
 }
 
+/* Capa: variante mais leve que a .veu-base. As duas mulheres caminhando ficam
+   na metade de baixo da foto, exatamente onde a base fechava em 90%. Aqui o pe
+   para em 68%, e quem segura a frase e o corpo maior da letra, nao o veu. */
+.veu-capa::after {
+  background: linear-gradient(
+    to top,
+    rgba(var(--veu), 0.68) 0%,
+    rgba(var(--veu), 0.6) 26%,
+    rgba(var(--veu), 0.42) 52%,
+    rgba(var(--veu), 0.2) 76%,
+    rgba(var(--veu), 0.04) 100%
+  );
+}
+
 /* Foto ja escura por si so: so o bastante para a letra assentar. */
 .veu-suave::after {
   background: linear-gradient(
@@ -111,7 +134,7 @@ body {
 
 @layer utilities {
   .t-capa {
-    font-size: clamp(2.6rem, 6.6vw, 7.4rem);
+    font-size: clamp(2rem, 5.1vw, 5.7rem);
     line-height: 0.98;
     letter-spacing: -0.02em;
   }

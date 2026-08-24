@@ -9,6 +9,7 @@ import { SectionModelo } from "@/components/pitch/section-modelo";
 import { SectionOportunidade } from "@/components/pitch/section-oportunidade";
 import { SectionPedido } from "@/components/pitch/section-pedido";
 import { SectionProblema } from "@/components/pitch/section-problema";
+import { SectionProjecoes } from "@/components/pitch/section-projecoes";
 import { SectionProduto } from "@/components/pitch/section-produto";
 import { SectionSolucao } from "@/components/pitch/section-solucao";
 import { SectionTecnologia } from "@/components/pitch/section-tecnologia";
@@ -28,6 +29,7 @@ export const slides = [
   { nome: "Quem opera", Componente: SectionDigging },
   { nome: "Modelo de negocio", Componente: SectionModelo },
   { nome: "Mercado", Componente: SectionMercado },
+  { nome: "Projecoes", Componente: SectionProjecoes },
   { nome: "Concorrencia", Componente: SectionConcorrencia },
   { nome: "Tecnologia", Componente: SectionTecnologia },
   { nome: "A oportunidade", Componente: SectionOportunidade },
