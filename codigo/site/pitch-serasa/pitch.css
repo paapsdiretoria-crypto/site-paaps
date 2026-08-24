@@ -2579,13 +2579,12 @@ html{font-size:clamp(10px,calc(min(100vw,100vh * 16 / 9) / 80),16px)}
    dita nos slides 08 e 10, e registro em prontuario e o slide 12 inteiro:
    repetir aqui so obrigaria a diminuir a letra. */
 .bolhas--dif{
-  display:grid;grid-template-columns:repeat(3,auto);justify-content:center;
-  align-items:stretch;max-width:none;margin-top:clamp(1.2rem,3vh,2.6rem);
-  gap:.7em .7em;
+  display:flex;flex-wrap:wrap;justify-content:center;align-items:stretch;
+  max-width:none;margin-top:clamp(1.2rem,3vh,2.6rem);gap:.6em .6em;
 }
 .bolhas--dif .bolha{display:flex;align-items:center;justify-content:center;text-align:center}
-#s10 .bolha{font-size:clamp(1.15rem,1.58vw,1.58rem);padding:.72em 1.5em}
-#s10 .bolha--f{font-size:clamp(1.22rem,1.68vw,1.68rem)}
+#s10 .bolha{font-size:clamp(.8rem,1.1vw,1.1rem);padding:.62em 1.15em}
+#s10 .bolha--f{font-size:clamp(.86rem,1.18vw,1.18rem)}
 
 /* O fecho em duas linhas: a primeira branca, a segunda toda em caixa alta e
    amarela, numa linha so, como ela pediu. */
@@ -2715,3 +2714,58 @@ html{font-size:clamp(10px,calc(min(100vw,100vh * 16 / 9) / 80),16px)}
 .fone__tela{justify-content:space-between}
 #s11 .fone__serie{height:clamp(60px,6.2vw,112px)}
 #s11 .fone__ind{gap:clamp(6px,.62vw,12px)}
+
+/* ====== SLIDE 11, ajustes de 24/08 (segunda rodada) =====================
+   Ela tirou o fundo avermelhado e amarronzado da comparacao e das tags: o
+   destaque passa a ser SO a cor do texto (amarelo de um lado, vermelho do
+   outro), e todo painel usa o MESMO vidro. O que sustenta a legibilidade
+   nesta foto clara e o veu do slide, nao um fundo colorido por caixa. */
+#s10 .regua__c,
+#s10 .regua__c--forte,
+#s10 .bolha,
+#s10 .bolha--f{
+  background:var(--vidro-fundo)!important;
+  backdrop-filter:var(--vidro-blur)!important;
+  -webkit-backdrop-filter:var(--vidro-blur)!important;
+}
+#s10.veu-denso::after{
+  background:linear-gradient(180deg,rgba(30,14,3,.86) 0%,rgba(30,14,3,.82) 100%)!important;
+}
+/* Sem fundo colorido por caixa, quem sustenta a leitura e o veu mais o
+   respaldo de sombra. O vermelho do .alerta e o que mais sofria. */
+#s10 .regua__t,#s10 .regua__d,#s10 .bolha{text-shadow:0 1px 10px rgba(20,9,2,.95)}
+#s10 .alerta{color:#f07a3e}
+
+/* A referencia ABNT curta, colada na citacao. */
+.regua__ref{
+  font-style:normal;font-family:var(--corpo);font-weight:400;
+  font-size:.62em;color:var(--creme-70);margin-left:.45em;white-space:nowrap;
+}
+
+/* O fecho agora sao dois blocos. O primeiro e o diagnostico do mercado, em
+   branco; o segundo e a afirmacao da PAAPS, em amarelo. Os dois em caixa
+   alta, como ela escreveu, mas com hierarquia de cor entre eles: dois blocos
+   amarelos seguidos nao teriam ordem de leitura. */
+#s10 .comprador--diag{
+  text-transform:uppercase;color:var(--branco)!important;
+  font-size:clamp(1rem,1.72vw,1.72rem);line-height:1.16;
+  letter-spacing:.005em;white-space:normal;
+  max-width:min(96%,1500px);margin-left:auto;margin-right:auto;
+}
+#s10 .comprador--caixa{
+  white-space:normal;font-size:clamp(1.02rem,1.78vw,1.78rem);line-height:1.16;
+  max-width:min(96%,1560px);margin-left:auto;margin-right:auto;
+  margin-top:clamp(.6rem,1.5vh,1.1rem)!important;
+}
+
+/* Slide 08 em janela baixa (a dela, 1440x820): o paragrafo final invadia a
+   linha de fonte em 29px depois que a frase ganhou "ou na regiao". Medido,
+   nao estimado. A folga sai do respiro entre os blocos, NUNCA do corpo da
+   letra: a soma das tres margens dava 38px e sobrava 28px de conteudo. */
+@media (max-height:900px){
+  #s7 .grade{margin-top:.25em}
+  #s7 .pilares{margin-top:.25em}
+  #s7 .pilar{padding:12px}
+  #s7 .pilar__nota{margin-top:.2em}
+  #s7 .grade .cel{padding:13px}
+}
