@@ -1,0 +1,3072 @@
+/* ==========================================================================
+   PAAPS : Pitch Deck  ·  Impulsiona Startups (Serasa Experian)
+   Identidade do site institucional, aplicada a slide 16:9.
+
+   As 8 leis do slide PAAPS valem aqui:
+   foto em todos · foto em cor · crédito nomeado · creme+amarelo com UM
+   destaque por slide · camadas de escala · o meio da foto respira ·
+   português falado · dois pontos como conectivo.
+   ========================================================================== */
+
+/* ----- 1. FONTES LOCAIS (nunca CDN) -------------------------------------- */
+
+@font-face{font-family:'League Spartan';src:url('../home/fontes/LeagueSpartan-Regular.ttf') format('truetype');font-weight:400;font-display:swap}
+@font-face{font-family:'League Spartan';src:url('../home/fontes/LeagueSpartan-Medium.ttf') format('truetype');font-weight:500;font-display:swap}
+@font-face{font-family:'League Spartan';src:url('../home/fontes/LeagueSpartan-SemiBold.ttf') format('truetype');font-weight:600;font-display:swap}
+@font-face{font-family:'League Spartan';src:url('../home/fontes/LeagueSpartan-Bold.ttf') format('truetype');font-weight:700;font-display:swap}
+@font-face{font-family:'League Spartan';src:url('../home/fontes/LeagueSpartan-ExtraBold.ttf') format('truetype');font-weight:800;font-display:swap}
+@font-face{font-family:'Nimbus Sans';src:url('../home/fontes/NimbusSanL-Reg.otf') format('opentype');font-weight:400;font-display:swap}
+@font-face{font-family:'Nimbus Sans';src:url('../home/fontes/NimbusSanL-Bol.otf') format('opentype');font-weight:700;font-display:swap}
+/* Evermore é a letra do logotipo. Uso raro e pontual, uma palavra por vez, nunca
+   frase inteira: é a mesma regra do `.olho` no site. */
+@font-face{font-family:'Evermore';src:url('../home/fontes/Evermore.ttf') format('truetype');font-weight:400;font-display:swap}
+
+/* ----- 2. TOKENS (hierarquia calibrada 02/08/2026) ----------------------- */
+
+:root{
+  --bege:#f5f1e1;
+  --marrom:#442309;
+  --amarelo:#f7c31c;
+  --oliva:#aea349;
+  --terracota:#cb4710;
+  --branco:#fff;
+
+  --creme-90:rgba(245,241,225,.90);
+  --creme-70:rgba(245,241,225,.70);
+  --creme-45:rgba(245,241,225,.45);
+  --tinta-70:rgba(68,35,9,.70);
+  --tinta-40:rgba(68,35,9,.40);
+
+  --titulo:'League Spartan',Helvetica,Arial,sans-serif;
+  --corpo:'Nimbus Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+
+  --raio:4px;
+  --pad:clamp(38px,4.4vw,80px);
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+
+/* ----- 3. RESET ---------------------------------------------------------- */
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-snap-type:y mandatory}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;scroll-snap-type:none}
+  *,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}
+}
+body{
+  font-family:var(--corpo);font-weight:400;line-height:1.6;letter-spacing:0;
+  background:var(--marrom);color:var(--bege);
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+}
+img{max-width:100%;display:block}
+::selection{background:var(--amarelo);color:var(--marrom)}
+:focus-visible{outline:3px solid var(--amarelo);outline-offset:3px}
+
+/* ----- 4. O SLIDE : 16:9, foto sangrando, texto por cima ------------------ */
+
+.slide{
+  position:relative;
+  width:100%;
+  aspect-ratio:16/9;
+  min-height:520px;
+  overflow:hidden;
+  scroll-snap-align:start;
+  display:flex;
+  isolation:isolate;
+  background:var(--marrom);
+}
+/* grão de impressão: o PAAPS é orgânico, não digital puro */
+.slide::before{
+  content:"";position:absolute;inset:0;z-index:6;pointer-events:none;opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.slide__foto{position:absolute;inset:0;z-index:0}
+.slide__foto img{width:100%;height:100%;object-fit:cover}
+
+/* Tela dividida: duas fotos ocupando 100% do slide, 50% cada, com um fio de
+   separação no bege da casa. Usado quando as duas imagens conversam entre si. */
+.slide__foto--dupla{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:rgba(245,241,225,.22)}
+.slide__foto--dupla img{width:100%;height:100%;object-fit:cover}
+@media(max-width:820px){.slide__foto--dupla{grid-template-columns:1fr;grid-template-rows:1fr 1fr}}
+
+/* Véu moderado: preserva a foto (cor, rosto, luz) e só assenta o rodapé, onde
+   o texto mora. Para imagem bonita que não deve ser encoberta. */
+.veu-leve::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(to top,rgba(30,14,3,.90) 0%,rgba(30,14,3,.72) 20%,
+    rgba(30,14,3,.34) 42%,rgba(30,14,3,.10) 62%,transparent 82%)}
+
+/* Véus. O meio da foto respira: o escurecimento é de baixo, do topo, ou de um
+   lado. Nunca uma lona cinza cobrindo o rosto de quem foi fotografado.
+   Os valores são altos de propósito: em pitch o texto é longo e precisa ser
+   lido em projetor de sala clara, onde contraste baixo simplesmente some. */
+.veu-base::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(to top,rgba(30,14,3,.97) 0%,rgba(30,14,3,.93) 30%,rgba(30,14,3,.80) 52%,rgba(30,14,3,.42) 74%,rgba(30,14,3,.10) 100%)}
+.veu-topo::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(to bottom,rgba(30,14,3,.96) 0%,rgba(30,14,3,.90) 34%,rgba(30,14,3,.55) 60%,rgba(30,14,3,.12) 100%)}
+.veu-lado::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(100deg,rgba(30,14,3,.97) 0%,rgba(30,14,3,.94) 42%,rgba(30,14,3,.66) 62%,rgba(30,14,3,.22) 84%,rgba(30,14,3,.06) 100%)}
+/* Véu forte: para foto clara (sala com luz de teto, parede branca), onde o
+   gradiente padrão não segura o texto. Marrom da casa, não cinza. */
+.veu-forte::after{background:linear-gradient(to top,
+  rgba(30,14,3,.985) 0%,rgba(30,14,3,.96) 34%,rgba(30,14,3,.86) 55%,
+  rgba(30,14,3,.60) 76%,rgba(30,14,3,.34) 100%)!important}
+
+/* Véu suave: a foto já é escura por si só (corredor com pouca luz), não
+   precisa do reforço do véu denso. Só o bastante pra letra assentar. */
+.veu-suave::after{background:linear-gradient(180deg,rgba(30,14,3,.6) 0%,rgba(30,14,3,.56) 100%)}
+
+/* Véu denso: onde o slide carrega grade e o texto precisa de chão inteiro.
+   Afrouxado em 20/08 (era .94/.92, quase opaco): as fotos são pessoas reais
+   da PAAPS e precisam aparecer por trás do texto, não só sustentar contraste. */
+.veu-denso::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(180deg,rgba(30,14,3,.84) 0%,rgba(30,14,3,.80) 100%)}
+
+.slide__c{
+  position:relative;z-index:3;width:100%;
+  padding:var(--pad);
+  display:flex;flex-direction:column;
+}
+.c--base{justify-content:flex-end}
+.c--topo{justify-content:flex-start}
+.c--centro{justify-content:center}
+.c--meia{max-width:62%}
+@media(max-width:820px){.c--meia{max-width:100%}}
+
+/* ----- 5. TIPOGRAFIA DO SLIDE -------------------------------------------- */
+
+/* A frase de canto substitui a antiga "sobrancelha". Não é label em caixa alta
+   espaçada acima do título (padrão de IA, banido na casa): é uma frase legível,
+   no canto superior direito, que diz de que trata o slide. */
+.canto{
+  position:absolute;top:var(--pad);right:var(--pad);z-index:5;
+  font-family:var(--titulo);font-weight:700;text-transform:uppercase;
+  font-size:clamp(1.15rem,2.05vw,2.05rem);line-height:1.08;letter-spacing:-.01em;
+  color:var(--amarelo);text-align:right;
+  /* Larga de propósito: a frase deve caber em UMA linha sempre que der, e para
+     isso ela avança para a esquerda em vez de quebrar. O left segura o limite. */
+  left:38%;max-width:none;
+  text-shadow:0 2px 18px rgba(20,9,2,.9);
+  text-wrap:balance;
+}
+@media(max-width:820px){.canto{position:static;text-align:left;margin-bottom:1em;left:auto}}
+
+/* Frase de canto mais longa que o normal (caso do slide 2, com a menção ao
+   SUS): recua bem mais à esquerda e aceita corpo levemente menor, mas
+   continua em uma linha só, na mesma régua das demais. */
+.canto--longa{left:6%;font-size:clamp(1rem,1.7vw,1.7rem)}
+@media(max-width:820px){.canto--longa{left:auto}}
+
+/* Duas linhas é o TETO da frase de canto: nunca três. Recua à esquerda e usa
+   largura controlada para quebrar em duas linhas equilibradas. */
+.canto--duas{
+  left:auto;width:min(52%,620px);margin-left:auto;
+  font-size:clamp(.98rem,1.5vw,1.5rem);line-height:1.16;
+}
+@media(max-width:820px){.canto--duas{width:auto;margin-left:0}}
+
+/* Palavra destacada dentro da frase de canto. */
+.canto__d{color:var(--branco)}
+.canto__d--sub{
+  color:var(--amarelo);
+  text-decoration:underline;text-decoration-color:var(--amarelo);
+  text-underline-offset:.14em;text-decoration-thickness:.06em;
+}
+
+/* Palavra em marrom dentro da frase de canto (o resto segue amarelo padrão). */
+.canto__marrom{color:var(--marrom)}
+/* Palavra em branco: destaque por contraste quando o resto da frase é amarelo. */
+.canto__branco{color:var(--bege)}
+
+/* Variante "junto": aproxima as PALAVRAS (word-spacing), nunca as letras, para
+   caber mais texto na mesma linha sem mexer no desenho da tipografia. */
+.t-fluxo--junto{word-spacing:-.06em}
+
+/* Frase flutuante: solta sobre a foto, centralizada na ALTURA do slide
+   inteiro (não do bloco de texto), e deslocada para a metade sem coluna de
+   texto, para nunca coincidir com o bloco principal. Helvetica, não título:
+   é comentário, não headline. */
+.flutuante{
+  position:absolute;top:50%;left:60%;right:var(--pad);
+  transform:translateY(-50%);z-index:2;
+  font-family:var(--corpo);font-weight:400;
+  font-size:clamp(1.05rem,1.7vw,1.7rem);line-height:1.4;
+  color:var(--creme-90);text-align:center;
+  text-shadow:0 1px 16px rgba(20,9,2,.9);
+}
+@media(max-width:820px){.flutuante{position:static;left:auto;right:auto;transform:none;margin-top:1.2em;text-align:left}}
+
+/* Variante baixa: pousa sobre a estampa da camiseta na foto, não mais no meio
+   vertical do slide (posição marcada por ela em print, circulando o local certo). */
+.flutuante--baixa{
+  top:auto;bottom:86px;left:6%;right:6%;transform:none;text-align:center;
+  font-size:clamp(.92rem,1.35vw,1.35rem);
+}
+@media(max-width:820px){.flutuante--baixa{position:static;text-align:left}}
+h1,h2,h3{font-family:var(--titulo);font-weight:700;line-height:1.03;letter-spacing:-.01em;
+  text-transform:uppercase;text-wrap:balance;color:var(--bege);
+  text-shadow:0 2px 22px rgba(20,9,2,.75)}
+
+.t-hero{font-size:clamp(2rem,4.5vw,4.4rem);max-width:17ch;text-transform:none;line-height:1.06}
+.t-g{font-size:clamp(1.6rem,3.5vw,3.4rem);max-width:19ch}
+.t-m{font-size:clamp(1.3rem,2.5vw,2.4rem);max-width:22ch}
+
+/* Palavra-chave em Evermore, a letra do logotipo: uso raro e pontual, UMA palavra.
+   `text-transform:none` porque a Evermore é desenhada em caixa mista e some quando
+   forçada em caixa alta pelos títulos. Corpo um pouco maior porque a Evermore tem
+   altura-x menor que a League Spartan e apequenaria ao lado dela. */
+.olho{font-family:'Evermore',var(--titulo),serif;font-weight:400;
+  text-transform:none;letter-spacing:.01em;font-size:1.18em;line-height:1}
+
+/* Frase corrida: o dado mora DENTRO da frase, não empilhado em cima dela.
+   Caixa mista, porque o dado em caixa alta picotava o texto em tópicos soltos. */
+.t-fluxo{
+  font-size:clamp(1.5rem,2.9vw,2.9rem);max-width:20ch;
+  text-transform:none;line-height:1.14;
+}
+.t-fluxo .numerao{
+  display:inline;font-size:1.42em;line-height:1;
+  /* o número desce um fio para assentar na linha de base da frase */
+  vertical-align:-.02em;
+}
+
+/* O número é o herói do slide de dado. Amarelo, e um só por slide. */
+.numerao{
+  font-family:var(--titulo);font-weight:800;line-height:.88;letter-spacing:-.03em;
+  font-size:clamp(3.4rem,9vw,9rem);color:var(--amarelo);display:block;
+}
+.numerao--m{font-size:clamp(2.6rem,6vw,6rem)}
+
+/* Slide de números grandes e pouca informação: o dado é a peça inteira, sem
+   caixa, sem card, direto sobre a foto. */
+.grande-dados{display:flex;gap:clamp(2.4rem,6vw,6rem);flex-wrap:wrap;justify-content:center;text-align:center}
+.grande-dado{max-width:24ch}
+.grande-dado .numerao{font-size:clamp(2.8rem,6.6vw,6.6rem)}
+.grande-dado__l{font-size:clamp(.95rem,1.3vw,1.35rem);line-height:1.42;color:var(--creme-90);margin-top:.35em}
+@media(max-width:820px){.grande-dados{flex-direction:column;align-items:center;gap:1.6em}}
+
+/* Duas letras para ler, e só duas: League Spartan grande e Helvetica de leitura.
+   O salto brutal entre uma fonte enorme e outra minúscula é erro típico de peça
+   gerada por IA e deixa o slide ilegível em projetor. Aqui a Helvetica é grande
+   o bastante para ser lida de longe. */
+.lead{
+  font-family:var(--corpo);font-size:clamp(1.05rem,1.62vw,1.62rem);line-height:1.5;
+  color:var(--creme-90);max-width:52ch;margin-top:.9em;
+  text-shadow:0 1px 14px rgba(20,9,2,.8);
+}
+.lead b,.lead strong{font-weight:700;color:var(--bege)}
+/* A fonte da pesquisa é aparato, não leitura: vive rente ao rodapé do slide,
+   junto do crédito da foto, e nunca no corpo do argumento. */
+.fonte{
+  position:absolute;left:var(--pad);bottom:34px;z-index:5;
+  font-family:var(--corpo);font-size:clamp(.68rem,.8vw,.8rem);line-height:1.4;
+  color:var(--creme-45);
+  /* A fonte de pesquisa usa a largura do slide, em vez de se espremer numa
+     coluna estreita e virar sete linhas empilhadas. Calibrado em 22/08. */
+  max-width:none;width:min(72%,1240px);
+}
+.destaque{color:var(--amarelo)}
+.sub-am{text-decoration:underline;text-decoration-color:var(--amarelo);
+  text-underline-offset:.16em;text-decoration-thickness:.07em}
+
+/* Crédito nomeado (Lei 3): sempre presente, sempre discreto, canto inferior direito. */
+.credito{
+  position:absolute;right:var(--pad);bottom:14px;z-index:5;
+  font-family:var(--titulo);font-weight:500;font-size:clamp(.54rem,.66vw,.66rem);
+  letter-spacing:.05em;color:var(--creme-45);text-align:right;max-width:40ch;
+}
+.slide__n{
+  position:absolute;left:var(--pad);bottom:14px;z-index:5;
+  font-family:var(--titulo);font-weight:700;font-size:clamp(.54rem,.66vw,.66rem);
+  letter-spacing:.14em;color:var(--creme-45);
+}
+.marca{position:absolute;top:var(--pad);right:var(--pad);z-index:5;height:clamp(15px,1.7vw,22px);opacity:.85}
+
+/* Faixa de contexto do topo da capa: uma linha só, em caixa mista e tamanho de
+   leitura. Nada de caps-lock miúdo espaçado, que é assinatura de peça gerada
+   por IA e está banido nas peças da casa. */
+.faixa{
+  position:absolute;top:var(--pad);left:var(--pad);right:var(--pad);z-index:5;
+  display:flex;align-items:center;gap:clamp(12px,1.4vw,22px);flex-wrap:wrap;
+}
+.faixa__t{
+  font-family:var(--corpo);font-weight:400;
+  font-size:clamp(.82rem,1.05vw,1.05rem);line-height:1.3;color:var(--creme-90);
+  text-shadow:0 1px 12px rgba(20,9,2,.85);
+}
+.faixa__t b{font-weight:700;color:var(--bege)}
+.faixa__logo{height:clamp(20px,2.2vw,30px);width:auto;opacity:.95;
+  /* o logo da Serasa é colorido sobre branco: aqui ele entra sem fundo,
+     e o mix-blend garante que o PNG com fundo branco não vire um bloco */
+  mix-blend-mode:screen}
+.faixa__risco{flex:1;height:1px;background:rgba(245,241,225,.3);min-width:24px}
+@media(max-width:820px){.faixa{position:static;margin-bottom:2em}}
+
+/* Logo PAAPS na capa: grande, centralizado no alto, acima da araucária da foto.
+   Centralizado por margin e não por translateX: a classe .rev anima transform, e
+   um translateY na animação apagaria o translateX(-50%), jogando o logo para a
+   direita do centro. Com left/right/margin auto o centro não depende de transform. */
+.capa-logo{
+  position:absolute;top:15%;left:0;right:0;margin-inline:auto;z-index:4;
+  height:clamp(52px,7vw,104px);width:auto;
+}
+@media(max-width:820px){.capa-logo{top:11%;height:clamp(42px,10vw,64px)}}
+
+/* Selo do SUS, centralizado na tela: mesma lógica de centro por margem do
+   capa-logo, mas fixado no meio vertical do slide, não perto do topo. */
+.sus-logo{
+  position:absolute;top:50%;left:0;right:0;margin-inline:auto;
+  transform:translateY(-50%);z-index:2;
+  /* proporção real do recorte (só SUS + cruz, sem o texto miúdo): 512×283 */
+  width:clamp(170px,20vw,300px);height:auto;
+}
+@media(max-width:820px){.sus-logo{width:clamp(140px,40vw,220px)}}
+
+/* "uma" em branco sublinhado, destacando-se do resto da frase em amarelo. */
+.branco-sub{
+  color:var(--bege);
+  text-decoration:underline;text-decoration-color:var(--bege);
+  text-underline-offset:.14em;text-decoration-thickness:.06em;
+}
+
+/* Os cinco pontinhos da marca, no lugar do antigo filete tricolor.
+   Mesma ordem e mesma contagem do logo: amarelo, terracota, oliva, branco, branco. */
+.pontinhos{display:flex;gap:clamp(7px,.8vw,12px);margin:1.5em 0 .2em;align-self:flex-start}
+.pontinhos i{
+  width:clamp(9px,1.05vw,15px);aspect-ratio:1;border-radius:50%;display:block;
+}
+.pontinhos i:nth-child(1){background:var(--amarelo)}
+.pontinhos i:nth-child(2){background:var(--terracota)}
+.pontinhos i:nth-child(3){background:var(--oliva)}
+.pontinhos i:nth-child(4){background:var(--branco)}
+.pontinhos i:nth-child(5){background:var(--branco)}
+
+/* divisor tricolor: assinatura editorial da casa */
+.tricolor{display:flex;width:clamp(90px,10vw,150px);margin:1.4em 0}
+.tricolor i{flex:1;height:3px}
+.tricolor i:nth-child(1){background:var(--oliva)}
+.tricolor i:nth-child(2){background:var(--terracota)}
+.tricolor i:nth-child(3){background:var(--amarelo)}
+
+/* ----- 6. GRADES (dado, produto, ODS, time) ------------------------------ */
+/* Bordas em vez de sombra: estética de periódico impresso. */
+
+.grade{display:grid;gap:1px;background:rgba(245,241,225,.2);
+  border:1px solid rgba(245,241,225,.2);border-radius:var(--raio);overflow:hidden;margin-top:1.6em}
+.grade--3{grid-template-columns:repeat(3,1fr)}
+.grade--4{grid-template-columns:repeat(4,1fr)}
+/* 2×2: quando a grade vive dentro de uma coluna estreita (c--meia, 62%),
+   4 células numa linha só ficam apertadas demais pra ler. */
+.grade--2x2{grid-template-columns:repeat(2,1fr)}
+.cel{background:rgba(37,19,5,.86);padding:clamp(16px,1.9vw,30px);backdrop-filter:blur(2px)}
+.cel__n{font-family:var(--titulo);font-weight:800;font-size:clamp(1.3rem,2.6vw,2.5rem);
+  color:var(--amarelo);line-height:1;display:block;margin-bottom:.35em}
+.cel__t{font-family:var(--titulo);font-weight:700;font-size:clamp(.8rem,1.05vw,1.05rem);
+  color:var(--bege);text-transform:uppercase;letter-spacing:.02em;margin-bottom:.5em}
+/* A explicação sob cada dado é leitura, não legenda: tem que ser lida de longe,
+   no mesmo corpo da Helvetica do resto do deck. */
+.cel__l{font-size:clamp(.92rem,1.18vw,1.18rem);line-height:1.45;color:var(--creme-90)}
+.cel__d{display:block;font-family:var(--titulo);font-weight:700;font-size:clamp(.56rem,.68vw,.68rem);
+  text-transform:uppercase;letter-spacing:.1em;color:var(--oliva);margin-bottom:.7em}
+
+/* sequência de produtos: a seta conta que um puxa o próximo */
+/* .cel tem backdrop-filter, que cria contexto de empilhamento proprio. Duas
+   celulas irmas com esse contexto (z-index:auto) empilham por ordem de DOM,
+   entao a celula seguinte pintava por cima da metade direita da seta, que
+   protrai para dentro do territorio dela. z-index:1 promove o contexto da
+   celula que tem a seta para cima da proxima, sem afetar mais nada. */
+.cel--seq{position:relative;z-index:1}
+.cel--seq:not(:last-child)::after{
+  content:"→";position:absolute;right:-9px;top:50%;transform:translateY(-50%);z-index:4;
+  width:20px;height:20px;display:grid;place-items:center;
+  background:var(--amarelo);color:var(--marrom);border-radius:50%;
+  font-family:var(--titulo);font-weight:800;font-size:.6rem;
+}
+
+/* ODS: os 8 selos oficiais, acesos sobre o oliva da casa */
+.ods-fila{display:grid;grid-template-columns:repeat(8,1fr);gap:clamp(6px,.8vw,14px);margin-top:1.5em;max-width:760px}
+.ods-fila img{width:100%;border-radius:2px}
+.ods-lista{display:grid;grid-template-columns:repeat(2,1fr);gap:.55em 2.2em;margin-top:1.5em;max-width:96ch}
+.ods-lista li{list-style:none;font-size:clamp(.72rem,.88vw,.88rem);line-height:1.45;color:var(--creme-90);
+  padding-left:1.5em;position:relative}
+.ods-lista b{font-family:var(--titulo);font-weight:700;color:var(--amarelo);
+  position:absolute;left:0;top:0;font-size:.9em}
+
+/* prova de campo: 4 cases, cada um com sua foto */
+.casos{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(245,241,225,.2);
+  border:1px solid rgba(245,241,225,.2);border-radius:var(--raio);overflow:hidden;margin-top:1.5em}
+.caso{position:relative;min-height:clamp(140px,17vw,220px);display:flex;flex-direction:column;justify-content:flex-end;
+  background:var(--marrom);overflow:hidden}
+.caso img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.42}
+.caso::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(37,19,5,.95),rgba(37,19,5,.3))}
+.caso__v{position:relative;z-index:2;padding:clamp(13px,1.5vw,22px)}
+.caso__ond{display:block;font-family:var(--titulo);font-weight:700;font-size:clamp(.54rem,.66vw,.66rem);
+  text-transform:uppercase;letter-spacing:.1em;color:var(--amarelo);margin-bottom:.5em}
+.caso__n{font-family:var(--titulo);font-weight:800;font-size:clamp(1.2rem,2.1vw,2rem);color:var(--bege);display:block;line-height:1}
+.caso__l{font-size:clamp(.7rem,.82vw,.82rem);color:var(--creme-70);margin-top:.35em;line-height:1.4}
+
+/* a soma, isolada, com o peso que ela merece */
+.soma{display:flex;align-items:baseline;gap:clamp(14px,1.6vw,26px);flex-wrap:wrap;margin-top:1.5em;
+  padding-top:1.2em;border-top:1px solid rgba(245,241,225,.25)}
+
+/* time: sócias grandes à esquerda, porta-vozes menores à direita.
+   Duas fileiras empilhadas estouravam o 16:9, então viram uma só linha
+   de cinco colunas com peso diferente: 2 largas, 3 estreitas. */
+.time-linha{display:grid;grid-template-columns:1.15fr 1.15fr .9fr .9fr .9fr;
+  gap:clamp(12px,1.5vw,26px);margin-top:1.2em;align-items:start}
+.pes img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center 22%;
+  border-radius:var(--raio);margin-bottom:.6em}
+.pes--socia img{aspect-ratio:1}
+.pes--socia .pes__nome{font-size:clamp(.92rem,1.22vw,1.22rem)}
+.pes__nome{font-family:var(--titulo);font-weight:700;font-size:clamp(.85rem,1.1vw,1.1rem);color:var(--bege);display:block}
+.pes__cargo{font-family:var(--titulo);font-weight:700;font-size:clamp(.56rem,.68vw,.68rem);
+  text-transform:uppercase;letter-spacing:.1em;color:var(--amarelo);display:block;margin:.25em 0 .5em}
+.pes__l{font-size:clamp(.7rem,.84vw,.84rem);line-height:1.45;color:var(--creme-70)}
+
+/* ----- 6.1 TELA DIVIDIDA (slide 6: pauta orçamentária + business) -------- */
+/* Duas colunas soltas sobre a MESMA foto (não dividida), ancoradas em cantos
+   opostos, com a frase-síntese centralizada, sozinha, no meio do slide. */
+
+.split{
+  position:absolute;z-index:3;width:min(38%,420px);padding:var(--pad);
+  display:flex;flex-direction:column;justify-content:space-between;
+}
+.split--esq{left:0;bottom:0;padding-bottom:calc(var(--pad) + 50px)}
+.split--dir{right:0;top:0;text-align:right;align-items:flex-end}
+
+/* pilha vertical de dados: mesma célula .cel, uma coluna só */
+.grade--vert{grid-template-columns:1fr;margin-top:1.3em}
+.grade--vert .cel{padding:clamp(12px,1.3vw,20px) clamp(14px,1.6vw,22px)}
+.grade--vert .cel__n{font-size:clamp(1.2rem,2.1vw,2.1rem);margin-bottom:.2em}
+.grade--vert .cel__l{font-size:clamp(.72rem,.86vw,.86rem)}
+
+/* a frase-síntese: sozinha, centralizada nas duas dimensões do slide inteiro,
+   nunca dentro de uma das colunas. */
+.centro-flut{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:4;
+  width:min(52%,540px);text-align:center;
+  font-family:var(--titulo);font-weight:700;text-transform:none;
+  font-size:clamp(1.3rem,2.6vw,2.6rem);line-height:1.18;color:var(--bege);
+  text-shadow:0 3px 26px rgba(15,7,2,.95);
+}
+/* .rev, definida mais abaixo no arquivo, também mexe em `transform` (para a
+   entrada com translateY) e empataria em especificidade com a regra acima,
+   cancelando a centralização assim que o slide revela. Esta combinação de
+   três classes desempata a favor do centro. */
+.slide.vis .centro-flut.rev{transform:translate(-50%,-50%)}
+@media(max-width:820px){
+  .split{position:static;width:100%;padding:var(--pad) var(--pad) 0}
+  .split--dir{text-align:left;align-items:flex-start}
+  .centro-flut{position:static;transform:none;width:100%;text-align:left;margin:1.4em 0;padding:0 var(--pad)}
+}
+
+/* ----- 7. REVELAÇÃO (uma orquestração por slide, não micro-ruído) --------- */
+
+.rev{opacity:0;transform:translateY(22px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.slide.vis .rev{opacity:1;transform:none}
+.slide.vis .rev--1{transition-delay:.1s}
+.slide.vis .rev--2{transition-delay:.2s}
+.slide.vis .rev--3{transition-delay:.32s}
+/* a foto entra em escala lenta: dá vida sem distrair */
+.slide__foto img{transform:scale(1.06);transition:transform 2.4s var(--ease)}
+.slide.vis .slide__foto img{transform:scale(1)}
+
+/* ----- 8. RESPONSIVO ----------------------------------------------------- */
+
+@media(max-width:820px){
+  .slide{aspect-ratio:auto;min-height:100svh}
+  .grade--3,.grade--4,.casos,.time-linha{grid-template-columns:1fr 1fr}
+  .ods-lista{grid-template-columns:1fr}
+  .ods-fila{grid-template-columns:repeat(4,1fr)}
+  .cel--seq:not(:last-child)::after{display:none}
+}
+
+/* ----- 9. EXPORTAÇÃO PDF (16:9 exato, uma página por slide) -------------- */
+
+@media print{
+  @page{size:338.7mm 190.5mm;margin:0}
+  html,body{background:var(--marrom)}
+  .slide{aspect-ratio:auto;width:338.7mm;height:190.5mm;min-height:0;
+    page-break-after:always;break-after:page;scroll-snap-align:none}
+  .rev{opacity:1!important;transform:none!important}
+  .slide__foto img{transform:none!important}
+  /* A régua de navegação continua impressa: é o que dá noção de percurso a
+     quem lê o PDF. Cores forçadas porque navegador descarta fundo ao imprimir. */
+  .barra{position:absolute!important}
+  .barra a,.barra i{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+
+/* ----- 10. BARRA DE NAVEGAÇÃO (só na tela, some no PDF) ------------------ */
+
+/* A barra vive DENTRO de cada slide, não fixa na janela: assim ela sobrevive à
+   exportação em PDF, onde `position:fixed` não se repete página a página. Cada
+   página carrega sua própria régua, com o ponto amarelo na posição atual. */
+.barra{
+  position:absolute;right:clamp(14px,1.5vw,24px);top:50%;transform:translateY(-50%);z-index:7;
+  display:flex;flex-direction:column;gap:clamp(5px,.55vw,8px);
+}
+.barra a,.barra i{
+  width:clamp(5px,.52vw,7px);height:clamp(5px,.52vw,7px);border-radius:50%;
+  background:rgba(245,241,225,.28);display:block;
+  transition:background .3s var(--ease),transform .3s var(--ease);
+}
+.barra a:hover{background:var(--creme-70)}
+.barra .on{background:var(--amarelo);transform:scale(1.6)}
+@media(max-width:820px){.barra{display:none}}
+
+/* ====================================================================== */
+/* v2 · componentes novos: pilares, trilho, métricas, barras, comparativo  */
+/* Nada aqui altera o que já existia. Só acrescenta.                       */
+/* ====================================================================== */
+
+/* --- PILARES: o modelo de negócio em três colunas, a do meio acesa ----- */
+.pilares{display:grid;grid-template-columns:1fr 1.15fr 1fr;gap:clamp(.8rem,2vw,2rem);
+  align-items:stretch;margin-top:1.2em}
+.pilar{background:rgba(0,0,0,.34);backdrop-filter:blur(3px);
+  border:1px solid rgba(245,241,225,.16);border-radius:4px;
+  padding:clamp(.9rem,1.8vw,1.6rem);display:flex;flex-direction:column;gap:.5em}
+.pilar--centro{background:rgba(203,71,16,.24);border-color:var(--amarelo)}
+.pilar__d{font-family:var(--titulo);font-weight:700;letter-spacing:.06em;
+  font-size:clamp(.58rem,.72vw,.72rem);color:var(--bege-rosa);text-transform:uppercase}
+.pilar__n{font-family:var(--titulo);font-weight:700;line-height:.9;
+  font-size:clamp(1.7rem,3.6vw,3.4rem);color:var(--amarelo)}
+.pilar--centro .pilar__n{font-size:clamp(2.1rem,4.6vw,4.4rem)}
+.pilar__t{font-family:var(--titulo);font-weight:700;font-size:clamp(.85rem,1.15vw,1.1rem);
+  margin:0;color:#fff}
+.pilar__l{font-size:clamp(.72rem,.9vw,.9rem);line-height:1.45;color:rgba(245,241,225,.9);margin:0}
+
+/* A data do dado, colada no número: caixa mista e miúda, para datar sem competir
+   com o amarelo grande. Fica na mesma linha quando cabe. */
+.pilar__ano{display:inline-block;font-family:var(--corpo);font-style:normal;font-weight:400;
+  font-size:clamp(.6rem,.72vw,.72rem);color:var(--bege-rosa);letter-spacing:0;
+  margin-left:.5em;vertical-align:middle}
+
+/* Nota de rodapé do quadrado: o que é verdade e não precisa de destaque. */
+.pilar__nota{font-size:clamp(.62rem,.75vw,.75rem);line-height:1.4;
+  color:var(--bege-rosa);margin:.15em 0 0;font-style:italic}
+
+/* Quadrados de EVIDÊNCIA (a verba que já existe), à esquerda e à direita: o número
+   cede corpo para caber em UMA linha, sem deixar "milhões" órfão na segunda. O
+   maior corpo fica reservado ao quadrado do meio, que é o preço, o herói do slide.
+   Nesses dois, a data desce para linha própria em vez de empurrar a quebra. */
+.pilar--duplo .pilar__n{font-size:clamp(1.25rem,2.5vw,2.3rem)}
+.pilar--duplo .pilar__ano{display:block;margin-left:0;margin-top:.15em}
+.pilar--duplo{gap:.3em}
+
+/* --- TRILHO: o roadmap, marcos alternando acima e abaixo da linha ------ */
+.trilho{position:relative;margin:1.4em 0 .4em;padding:5.2em 0 5.6em}
+.trilho::before{content:"";position:absolute;left:0;right:0;top:50%;height:2px;
+  background:linear-gradient(90deg,var(--amarelo),var(--terracota));opacity:.85}
+.trilho__fila{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:.5rem;position:relative}
+.marco{position:relative;text-align:center;padding:0 .3rem}
+.marco::after{content:"";position:absolute;left:50%;top:50%;translate:-50% -50%;
+  width:13px;height:13px;border-radius:50%;background:var(--amarelo);
+  box-shadow:0 0 0 4px rgba(0,0,0,.45)}
+.marco--baixo::after{background:var(--terracota)}
+.marco__txt{position:absolute;left:50%;translate:-50% 0;width:min(16ch,110%);
+  font-size:clamp(.66rem,.82vw,.84rem);line-height:1.32;color:rgba(245,241,225,.94)}
+.marco--alto .marco__txt{bottom:calc(50% + 20px)}
+.marco--baixo .marco__txt{top:calc(50% + 20px)}
+.marco__txt b{font-family:var(--titulo);font-weight:700;color:var(--amarelo);display:block}
+.marco--baixo .marco__txt b{color:var(--terracota)}
+.trilho__selo{display:inline-block;font-family:var(--titulo);font-weight:700;
+  letter-spacing:.06em;font-size:clamp(.62rem,.8vw,.8rem);padding:.3em 1.1em;
+  background:var(--amarelo);color:var(--marrom);border-radius:2px;text-transform:uppercase}
+.trilho__selo--2{background:var(--terracota);color:#fff}
+.trilho__pes{display:flex;justify-content:space-around;margin-top:.2em}
+
+/* --- MÉTRICAS: os números direto sobre a foto --------------------------
+   Antes eram cartões bege opacos com sombra dura, e eles tapavam a fotografia
+   inteira. A foto é o assunto tanto quanto o número, então some a caixa: fica o
+   número em bege, sobre a imagem, com sombra de texto para assentar.
+   Duas colunas e duas linhas, preenchidas por COLUNA e não por linha, para que
+   a esquerda receba LTV e margem e a direita receba equilíbrio e CAC. */
+.metricas{
+  display:grid;grid-template-columns:repeat(2,1fr);grid-template-rows:repeat(2,auto);
+  grid-auto-flow:column;
+  gap:clamp(1.4rem,3.2vw,3.2rem) clamp(2rem,5vw,5rem);
+  margin-top:1.1em;align-items:start;justify-items:center;
+}
+/* Largura generosa: com o número em corpo grande, 22ch quebrava "R$ 704 mil" e
+   "a construir" no meio. O número nunca deve quebrar. */
+.metrica{text-align:center;max-width:30ch}
+.metrica__n{white-space:nowrap}
+/* O nome da métrica volta, mas GRANDE e em amarelo, nunca como etiqueta miúda
+   em caixa alta: era exatamente esse padrão que saiu do deck inteiro. Aqui ele
+   é título de verdade, na escala de leitura. */
+.metrica__k{
+  display:block;font-family:var(--titulo);font-weight:700;text-transform:uppercase;
+  font-size:clamp(.86rem,1.15vw,1.15rem);letter-spacing:.01em;line-height:1.1;
+  color:var(--amarelo);margin-bottom:.22em;
+  text-shadow:0 2px 16px rgba(20,9,2,.9);
+}
+.metrica__n{
+  font-family:var(--titulo);font-weight:800;line-height:.95;letter-spacing:-.02em;
+  font-size:clamp(1.6rem,3.4vw,3.4rem);color:var(--bege);margin:0 0 .16em;
+  text-wrap:balance;text-shadow:0 2px 22px rgba(20,9,2,.92),0 0 46px rgba(20,9,2,.6);
+}
+.metrica__l{
+  font-family:var(--corpo);font-size:clamp(.78rem,1vw,1rem);line-height:1.4;
+  color:var(--creme-90);margin:0;text-shadow:0 1px 14px rgba(20,9,2,.9);
+}
+.metrica__l b{color:var(--amarelo)}
+@media(max-width:820px){.metricas{grid-template-columns:1fr;grid-auto-flow:row}}
+
+/* Nos dois slides de métrica o texto agora vive sobre a foto, então o véu
+   afrouxa: quem segura o contraste passa a ser a sombra do próprio texto. */
+#s14.veu-denso::after,#s17.veu-denso::after{
+  background:linear-gradient(180deg,rgba(30,14,3,.55) 0%,rgba(30,14,3,.62) 100%)}
+
+/* Variante do slide de anexo (o cálculo): 2 colunas em vez de 4, porque cada
+   card carrega a conta inteira, não só uma linha de legenda. Texto do corpo
+   alinhado à esquerda para ler como raciocínio, não como legenda de dado. */
+/* Variante do Anexo: mesma divisão em quatro, sobre a foto, mas o texto de
+   cada conta é longo, então ele afrouxa a largura e alinha à esquerda para ler
+   como raciocínio, e não como legenda centralizada. */
+.metricas--calc{gap:clamp(1.1rem,2.4vw,2.4rem) clamp(1.6rem,4vw,4rem)}
+.metricas--calc .metrica{max-width:34ch}
+.metricas--calc .metrica__n{font-size:clamp(1.3rem,2.6vw,2.6rem)}
+.metricas--calc .metrica__l{text-align:left;font-size:clamp(.72rem,.92vw,.92rem)}
+@media(max-width:820px){.metricas--calc{grid-auto-flow:row}}
+
+/* --- EQUIPE: esquema em três níveis, ligados por fio ---------------------
+   Antes eram três fileiras soltas, e nada dizia quem se liga a quem. Agora os
+   níveis são ligados por um fio vertical desenhado com pseudoelemento, então a
+   subordinação se lê sem legenda. Nada aqui anima: a exportação final é
+   PowerPoint, e animação não sobrevive à conversão. */
+.eq{--eqfoto:clamp(48px,6.1vh,72px);--eqfio:clamp(15px,2.1vh,25px);--eqgap:clamp(1.4rem,4vw,4rem);
+  display:flex;flex-direction:column;align-items:center;margin-top:.9em}
+.eq__n1,.eq__n2,.eq__n3{display:flex;justify-content:center;gap:var(--eqgap);position:relative}
+/* Cada nivel declara a largura do proprio cartao, porque e ela que decide onde
+   ficam os centros das duas fotos, e portanto onde o travessao tem de comecar
+   e terminar. Sem isso o fio era desenhado por porcentagem e nunca encostava
+   na foto. */
+.eq__n1{--cardw:min(36ch,340px)}
+.eq__n2{--cardw:min(29ch,285px)}
+.eq__n3{--cardw:min(21ch,210px)}
+.eq__n1 .eq__p{width:var(--cardw)}
+.eq__n2 .eq__p{width:var(--cardw)}
+.eq__n3 .eq__p{width:var(--cardw)}
+/* Travessao que une os dois irmaos do nivel: corre na altura do CENTRO das
+   fotos e vai de borda a borda delas, entao a linha nasce numa foto e morre na
+   outra. Nessa altura o cartao so tem a foto, logo nada e coberto. */
+.eq__n1::before,.eq__n2::before,.eq__n3::before{
+  content:"";position:absolute;left:50%;translate:-50% 0;
+  top:calc(var(--eqfoto) / 2);height:2px;
+  width:calc(var(--cardw) + var(--eqgap) - var(--eqfoto));
+  background:rgba(247,195,28,.62);
+}
+/* Espinha vertical que desce do centro de um nivel ate o centro do seguinte.
+   Ela corre pelo vao entre os dois cartoes, que e vazio em toda a altura. */
+.eq__n1::after,.eq__n2::after{
+  content:"";position:absolute;left:50%;translate:-50% 0;
+  top:calc(var(--eqfoto) / 2);height:calc(100% + var(--eqfio));
+  width:2px;background:rgba(247,195,28,.62);
+}
+.eq__n2,.eq__n3{margin-top:var(--eqfio)}
+.eq__p{display:flex;flex-direction:column;align-items:center;text-align:center}
+.eq__foto{
+  width:var(--eqfoto);height:var(--eqfoto);
+  border-radius:50%;object-fit:cover;border:2px solid rgba(247,195,28,.8);margin-bottom:.32em;
+}
+.eq__p--sup .eq__foto{border-color:rgba(203,71,16,.85)}
+.eq__nome{
+  font-family:var(--titulo);font-weight:700;line-height:1.12;color:var(--bege);
+  font-size:clamp(.82rem,1.08vw,1.08rem);text-shadow:0 2px 14px rgba(20,9,2,.9);
+}
+.eq__skill{
+  font-family:var(--corpo);font-size:clamp(.64rem,.815vw,.815rem);line-height:1.31;
+  color:var(--creme-70);margin-top:.14em;text-shadow:0 1px 12px rgba(20,9,2,.9);
+}
+.eq__skill i{color:var(--bege-rosa);font-style:italic}
+/* As cadeiras que a IA ocupa: faixa propria, para nao parecer que a maquina e
+   subordinada a alguem do organograma. */
+.eq__ia{
+  margin-top:clamp(12px,1.8vh,22px);display:flex;align-items:center;justify-content:center;
+  gap:.55em;flex-wrap:wrap;padding-top:.66em;border-top:1px dashed rgba(203,71,16,.7);
+  width:100%;
+}
+.eq__ia__c{
+  font-family:var(--titulo);font-weight:800;font-size:clamp(.84rem,1.1vw,1.1rem);
+  color:var(--amarelo);background:rgba(203,71,16,.3);
+  border:1px solid rgba(232,98,42,.75);border-radius:3px;padding:.18em .66em;
+}
+.eq__ia__l{
+  font-family:var(--corpo);font-size:clamp(.67rem,.84vw,.84rem);line-height:1.33;
+  color:var(--creme-70);margin:0;flex:1 1 22ch;min-width:22ch;
+}
+.eq__ia__l b{color:var(--bege)}
+
+/* Fila de fotos do ecossistema: ESTATICA. A esteira animada anterior ficava
+   cortada e nao sobreviveria a exportacao em PowerPoint. */
+.ecos{margin-top:clamp(12px,1.8vh,22px);width:100%}
+.ecos__fotos{display:grid;grid-template-columns:repeat(8,1fr);gap:3px}
+.ecos__fotos img{
+  width:100%;height:clamp(40px,6.6vh,76px);object-fit:cover;
+  border-radius:2px;display:block;filter:saturate(.85);
+}
+/* Os dois numeros do ecossistema. Cada par ocupa metade da largura da fila,
+   entao os dois juntos abrem o slide inteiro na horizontal, em vez de ficarem
+   apertados no meio. */
+.ecos__d{display:flex;width:100%;margin-top:.62em;justify-content:center;align-items:center;
+  gap:clamp(1.8rem,4.6vw,4.6rem);flex-wrap:wrap}
+.ecos__i{flex:0 1 auto;display:flex;align-items:center;gap:.52em;text-align:left}
+.ecos__n{
+  font-family:var(--titulo);font-weight:800;color:var(--amarelo);
+  font-size:clamp(2rem,3.9vw,3.9rem);line-height:.88;letter-spacing:-.015em;
+  text-shadow:0 2px 20px rgba(20,9,2,.95);
+}
+.ecos__t{
+  margin:0;font-family:var(--corpo);line-height:1.26;color:var(--creme-90);
+  font-size:clamp(.76rem,1vw,1rem);text-shadow:0 1px 12px rgba(20,9,2,.95);
+}
+@media(max-width:820px){
+  .eq__n1,.eq__n2,.eq__n3{flex-direction:column;gap:1rem}
+  .eq__n1 .eq__p,.eq__n2 .eq__p,.eq__n3 .eq__p{width:min(21ch,210px)}
+  .eq__n1::before,.eq__n2::before,.eq__n3::before,.eq__n1::after,.eq__n2::after{display:none}
+  .ecos__fotos{grid-template-columns:repeat(4,1fr)}
+  .ecos__d{flex-direction:column;gap:.9rem}
+}
+
+/* --- LOCKUP DE PRODUTO: "app Ponto de Apoio" -----------------------------
+   Vive no canto superior esquerdo, na mesma linha da frase de canto, que mora
+   na direita. Duas letras conversando: "app" em League Spartan, minúscula e
+   sóbria, e o nome próprio do produto em Evermore, a letra do logotipo, aceso
+   no terracota da casa. O brilho vem de camadas de sombra, e não de filtro:
+   filtro SVG vira bitmap de página inteira na exportação em PDF. */
+.produto{
+  position:absolute;top:var(--pad);left:var(--pad);z-index:5;
+  font-family:var(--titulo);font-weight:700;text-transform:lowercase;
+  font-size:clamp(1.15rem,2.05vw,2.05rem);line-height:1;letter-spacing:-.01em;
+  color:var(--creme-70);
+  display:flex;align-items:baseline;gap:.3em;
+}
+.produto__nome{
+  font-family:'Evermore',var(--titulo),serif;font-weight:400;
+  text-transform:none;letter-spacing:.01em;
+  font-size:1.34em;line-height:1;
+  color:#e8622a;
+  text-shadow:
+    0 0 10px rgba(203,71,16,.95),
+    0 0 30px rgba(203,71,16,.65),
+    0 0 62px rgba(203,71,16,.34),
+    0 2px 14px rgba(20,9,2,.9);
+}
+@media(max-width:820px){.produto{position:static;margin-bottom:.6em}}
+
+/* --- ROADMAP: as faixas que delimitam as fases do trilho ----------------
+   Substituem os dois selos soltos, que não diziam QUAIS marcos pertenciam a
+   qual fase. Agora a faixa tem a mesma grade de 8 colunas do trilho, então
+   cada fase cobre exatamente os marcos que lhe pertencem: a aceleração vai do
+   contrato 01 ao Ponto de Apoio, e a faixa de cima marca os dois marcos que o
+   investimento constrói. */
+.trilho__faixas{
+  display:grid;grid-template-columns:repeat(8,1fr);
+  grid-template-rows:auto auto;gap:.4rem .5rem;margin-top:.3em;
+}
+.faixa-fase{
+  font-family:var(--titulo);font-weight:700;letter-spacing:.04em;
+  font-size:clamp(.6rem,.76vw,.76rem);text-transform:uppercase;
+  text-align:center;padding:.34em .6em;border-radius:2px;line-height:1.2;
+}
+.faixa-fase--acel{grid-column:1 / span 4;grid-row:2;background:var(--amarelo);color:var(--marrom)}
+.faixa-fase--exec{grid-column:5 / span 4;grid-row:2;background:var(--terracota);color:#fff}
+@media(max-width:820px){
+  .trilho__faixas{grid-template-columns:1fr}
+  .faixa-fase--acel,.faixa-fase--exec{grid-column:1;grid-row:auto}
+}
+
+/* --- Os dois marcos que o investimento constrói ------------------------
+   Cada um acende sozinho, e uma chave por baixo recolhe os dois e leva ao
+   rótulo. Como eles ficam em lados opostos da linha do tempo (um acima, um
+   abaixo), a chave é o que os declara como par: o fundo aceso sozinho não
+   diria que os dois são a mesma frente. */
+.marco--invest .marco__txt{
+  background:rgba(203,71,16,.30);
+  border:1px solid rgba(232,98,42,.75);
+  border-radius:3px;
+  padding:.42em .5em;
+  width:min(19ch,150%);
+  box-shadow:0 0 18px rgba(203,71,16,.28);
+}
+.marco--invest .marco__txt b{color:#f7c31c}
+.marco--invest::after{background:#e8622a;box-shadow:0 0 0 4px rgba(0,0,0,.45),0 0 14px rgba(232,98,42,.9)}
+
+/* O marco de baixo é posicionado por absoluto, então texto mais comprido NÃO
+   empurra o rodapé do trilho: ele transborda por cima da chave. A caixa acesa
+   do Ponto de Apoio é a mais alta do slide, e o espaço reservado embaixo tem
+   que caber nela. */
+#s12 .trilho{padding-bottom:7.5em}
+
+.trilho__chave{
+  display:grid;grid-template-columns:repeat(8,1fr);
+  margin-top:.15em;
+}
+.chave__marca{
+  grid-column:3 / span 2;grid-row:1;
+  height:11px;
+  border-left:2px solid rgba(232,98,42,.9);
+  border-right:2px solid rgba(232,98,42,.9);
+  border-bottom:2px solid rgba(232,98,42,.9);
+  border-radius:0 0 4px 4px;
+  position:relative;
+}
+/* a haste que desce do meio da chave até o rótulo */
+.chave__marca::after{
+  content:"";position:absolute;left:50%;top:100%;
+  width:2px;height:7px;background:rgba(232,98,42,.9);translate:-50% 0;
+}
+.chave__rotulo{
+  grid-column:2 / span 4;grid-row:2;
+  margin-top:8px;text-align:center;
+  font-family:var(--titulo);font-weight:700;letter-spacing:.03em;
+  font-size:clamp(.6rem,.76vw,.76rem);text-transform:uppercase;
+  color:#e8622a;line-height:1.2;
+}
+@media(max-width:820px){
+  .trilho__chave{grid-template-columns:1fr}
+  .chave__marca{display:none}
+  .chave__rotulo{grid-column:1;grid-row:auto;margin-top:.4em}
+}
+
+/* --- RÉGUA DA OMS: as duas camadas de evidência, lado a lado -----------
+   O árbitro é externo, então ele ganha faixa própria em vez de virar mais uma
+   frase dentro da caixa da PAAPS. A camada forte acende, a fraca fica apagada:
+   a hierarquia é da OMS, e o desenho só a torna visível. */
+.regua{
+  display:grid;grid-template-columns:1fr 1fr;gap:1px;margin-top:.9em;
+  background:rgba(245,241,225,.2);border:1px solid rgba(245,241,225,.2);
+  border-radius:var(--raio);overflow:hidden;
+}
+.regua__c{background:rgba(37,19,5,.86);padding:clamp(.7rem,1.25vw,1.1rem);
+  display:flex;flex-direction:column;gap:.22em}
+.regua__c--forte{background:rgba(203,71,16,.26)}
+.regua__t{
+  font-family:var(--titulo);font-weight:700;line-height:1.12;
+  font-size:clamp(.88rem,1.22vw,1.22rem);color:var(--bege);
+}
+.regua__c--forte .regua__t{color:var(--amarelo)}
+.regua__d{
+  font-family:var(--corpo);font-size:clamp(.68rem,.85vw,.85rem);
+  line-height:1.36;color:rgba(245,241,225,.82);
+}
+.regua__d b{color:var(--bege)}
+@media(max-width:820px){.regua{grid-template-columns:1fr}}
+
+/* --- GO TO MARKET: o esquema de canais ocupa a coluna esquerda inteira -
+   A caixa de canais deixou de ser parágrafo e virou esquema em passos, então
+   ela precisa de altura. As outras três encolhem e empilham à direita, o que
+   também força o texto delas a ser curto. */
+.gtm{
+  display:grid;grid-template-columns:1.08fr 1fr;gap:1px;
+  background:rgba(245,241,225,.2);border:1px solid rgba(245,241,225,.2);
+  border-radius:var(--raio);overflow:hidden;margin-top:1.1em;
+}
+.gtm__fluxo{grid-row:span 3;display:flex;flex-direction:column;justify-content:center}
+@media(max-width:820px){.gtm{grid-template-columns:1fr}.gtm__fluxo{grid-row:auto}}
+
+/* O esquema em passos: cada bloco puxa o próximo por um fio vertical, para o
+   olho ler como sequência e não como três frases soltas. */
+.fluxo{list-style:none;display:flex;flex-direction:column;gap:.75em;margin:0;padding:0}
+.fluxo__p{position:relative;padding-left:1.15em}
+.fluxo__p::before{
+  content:"";position:absolute;left:.22em;top:.42em;
+  width:8px;height:8px;border-radius:50%;background:var(--amarelo);
+}
+.fluxo__p:not(:last-child)::after{
+  content:"";position:absolute;left:calc(.22em + 3px);top:1.1em;bottom:-.75em;
+  width:2px;background:linear-gradient(180deg,var(--amarelo),rgba(247,195,28,.25));
+}
+.fluxo__t{
+  display:block;font-family:var(--titulo);font-weight:700;
+  font-size:clamp(.82rem,1.02vw,1.02rem);line-height:1.2;color:var(--bege);
+}
+.fluxo__d{
+  display:block;font-family:var(--titulo);font-weight:800;
+  font-size:clamp(.92rem,1.18vw,1.18rem);line-height:1.15;
+  color:var(--amarelo);margin-top:.16em;
+}
+.fluxo__s{
+  display:block;font-family:var(--corpo);font-weight:400;
+  font-size:clamp(.7rem,.86vw,.86rem);line-height:1.34;
+  color:rgba(245,241,225,.82);margin-top:.1em;
+}
+.fluxo__pe{
+  font-size:clamp(.7rem,.86vw,.86rem);line-height:1.36;
+  color:rgba(245,241,225,.82);margin:.9em 0 0;
+  padding-top:.7em;border-top:1px solid rgba(245,241,225,.18);
+}
+.fluxo__pe b{color:var(--bege)}
+
+/* --- TAM / SAM / SOM: a faixa de mercado no rodapé do slide 08 ---------
+   A sigla é o herói e vem GRANDE, não miúda num cantinho: rótulo em caixa alta
+   e corpo pequeno é o chapéu banido na casa, e aqui a sigla é o conteúdo, não a
+   etiqueta. Três colunas ocupando a largura inteira, separadas por fio. */
+.tss{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:clamp(1rem,2.4vw,2.4rem);margin-top:1.1em;
+  padding-top:1em;border-top:1px solid rgba(245,241,225,.24);
+}
+.tss__c{display:flex;flex-direction:column;gap:.16em}
+.tss__d{
+  font-family:var(--titulo);font-weight:800;letter-spacing:-.01em;line-height:.9;
+  font-size:clamp(1.5rem,3vw,2.8rem);color:var(--amarelo);
+}
+.tss__n{
+  font-family:var(--titulo);font-weight:700;line-height:1.05;
+  font-size:clamp(.92rem,1.25vw,1.25rem);color:#fff;
+}
+.tss__l{font-size:clamp(.72rem,.92vw,.92rem);line-height:1.38;color:rgba(245,241,225,.9);margin:.1em 0 0}
+.tss__l b{font-weight:700;color:var(--bege)}
+@media(max-width:820px){.tss{grid-template-columns:1fr;gap:1.1rem}}
+
+/* --- BARRAS: a projeção de faturamento -------------------------------- */
+/* O gráfico virou grade de verdade: uma coluna de rótulos à esquerda e cinco
+   colunas de ano, com as linhas alinhadas entre si. Sem os rótulos, "42%" e
+   "R$ 0,92 mi" eram números soltos, e ninguém tinha como saber o que cada
+   linha media. */
+.barras{
+  display:grid;
+  grid-template-columns:auto repeat(5,1fr);
+  column-gap:clamp(.5rem,1.4vw,1.4rem);row-gap:.28em;
+  align-items:center;margin-top:1.2em;
+}
+.brot{
+  grid-column:1;text-align:right;font-family:var(--titulo);font-weight:700;
+  color:var(--bege-rosa);line-height:1.12;padding-right:.2em;
+}
+.brot--rec{grid-row:1;color:var(--amarelo);font-size:clamp(.72rem,.94vw,.94rem);max-width:11ch;margin-left:auto}
+.brot--mar{grid-row:3;font-size:clamp(.8rem,1.02vw,1.02rem)}
+.brot--ano{grid-row:4;font-size:clamp(.8rem,1.02vw,1.02rem)}
+.brot--sub{grid-row:5;font-family:var(--corpo);font-weight:400;font-size:clamp(.62rem,.78vw,.78rem)}
+
+.bv{grid-row:1;font-family:var(--titulo);font-weight:700;color:var(--amarelo);text-align:center;line-height:1.05}
+.bz{grid-row:2;display:flex;align-items:flex-end;width:100%}
+.bm{grid-row:3;font-family:var(--titulo);font-weight:700;color:var(--bege);text-align:center;line-height:1}
+.ba{grid-row:4;font-family:var(--titulo);font-weight:700;color:var(--bege);text-align:center;line-height:1}
+.bs{grid-row:5;font-family:var(--corpo);font-weight:400;color:var(--creme-70);text-align:center;line-height:1.25}
+/* A área de plotagem tem altura PRÓPRIA, e é contra ela que a porcentagem de
+   cada barra resolve. Sem essa zona, os rótulos vizinhos disputavam a altura no
+   flex e as barras altas eram comprimidas: o ano 5 saía do mesmo tamanho do
+   ano 4, e o gráfico mentia. */
+.barra-ano__zona{
+  height:clamp(130px,20vh,215px);
+  display:flex;align-items:flex-end;width:100%;
+}
+.barra-ano__v{font-family:var(--titulo);font-weight:700;color:var(--amarelo);
+  font-size:clamp(.78rem,1.15vw,1.15rem);text-align:center;line-height:1}
+/* A barra inteira é a receita, e ela fica APAGADA. O resultado é a parte de
+   baixo e é ela que acende. A ordem importa: aceso lê como "o que fica", e
+   apagado lê como "o que passa". Na primeira versão eu fiz o inverso, e a barra
+   dizia o contrário do que significava. */
+.barra-ano__b{
+  background:rgba(203,71,16,.22);
+  border:1px solid rgba(247,195,28,.5);border-bottom:0;
+  border-radius:3px 3px 0 0;width:100%;position:relative;overflow:hidden;
+}
+.barra-ano__res{
+  position:absolute;left:0;right:0;bottom:0;
+  background:linear-gradient(180deg,var(--amarelo),var(--terracota));
+}
+.barra-ano__r{
+  font-family:var(--titulo);font-weight:700;color:var(--bege);
+  font-size:clamp(.68rem,.92vw,.92rem);text-align:center;line-height:1;margin-top:.1em;
+}
+/* A chave que diz o que é cada parte da barra. Sem ela, barra de duas cores é
+   adivinhação: o leitor não tem como saber o que a base escura significa. */
+.barras__chave{
+  display:flex;align-items:center;justify-content:center;gap:.45em;flex-wrap:wrap;
+  font-family:var(--corpo);font-size:clamp(.66rem,.82vw,.82rem);
+  color:rgba(245,241,225,.82);margin:.8em 0 0;
+}
+.chave-p{display:inline-block;width:11px;height:11px;border-radius:2px;flex:0 0 auto}
+.chave-p--rec{background:rgba(203,71,16,.22);border:1px solid rgba(247,195,28,.5)}
+.chave-p--res{background:linear-gradient(180deg,var(--amarelo),var(--terracota))}
+.chave-p--res+*{margin-left:0}
+.barra-ano__l{font-family:var(--titulo);font-weight:700;text-align:center;
+  font-size:clamp(.62rem,.78vw,.8rem);color:rgba(245,241,225,.85);
+  border-top:1px solid rgba(245,241,225,.28);padding-top:.4em}
+.barra-ano__l span{display:block;font-weight:400;font-family:var(--corpo);
+  font-size:.86em;color:var(--bege-rosa)}
+
+/* --- COMPARATIVO: a tabela de concorrentes ---------------------------- */
+.comparativo{width:100%;border-collapse:collapse;margin-top:1em;
+  font-size:clamp(.68rem,.86vw,.88rem)}
+.comparativo th,.comparativo td{padding:.52em .7em;text-align:left;
+  border-bottom:1px solid rgba(245,241,225,.16);vertical-align:top;line-height:1.35}
+.comparativo thead th{font-family:var(--titulo);font-weight:700;
+  font-size:clamp(.66rem,.84vw,.86rem);color:var(--bege-rosa);
+  border-bottom:2px solid rgba(245,241,225,.3)}
+.comparativo thead th:last-child{color:var(--amarelo)}
+.comparativo tbody td:first-child{color:var(--bege-rosa)}
+.comparativo tbody td:last-child{color:#fff;font-weight:600;
+  background:rgba(203,71,16,.2)}
+.comparativo tbody tr:last-child td{border-bottom:none}
+
+/* --- FRAGMENTOS: os territórios, agora com foto ao lado do texto -------
+   5 experiencias (4 de campo + a DIGGING). Flex em vez de grid porque com
+   5 itens a fila quebra em 3+2, e flex com justify-content:center centra
+   a segunda fila sozinho, sem precisar posicionar manualmente. */
+.frag{display:flex;flex-wrap:wrap;justify-content:center;
+  gap:clamp(.5rem,1.2vw,1.1rem);margin-top:1em}
+.frag__c{background:rgba(0,0,0,.36);border-left:2px solid var(--amarelo);
+  padding:.6em .7em;display:flex;flex-direction:column;gap:.3em;
+  flex:0 1 31%;min-width:0;}
+.frag__c--base{border-left-color:var(--bege)}
+.frag__ond{font-family:var(--titulo);font-weight:700;font-size:clamp(.68rem,.86vw,.88rem);
+  color:var(--amarelo);line-height:1.2}
+.frag__c--base .frag__ond{color:var(--bege)}
+.frag__corpo{display:flex;gap:.5em;align-items:stretch}
+.frag__foto{flex:0 0 38%;border-radius:2px;overflow:hidden;min-height:64px}
+.frag__foto img{width:100%;height:100%;object-fit:cover;display:block}
+.frag__q{flex:1;min-width:0;font-size:clamp(.63rem,.78vw,.8rem);line-height:1.38;
+  color:rgba(245,241,225,.9);margin:0}
+.frag__q i{color:var(--bege-rosa);font-style:normal}
+/* A frase de fecho do slide, curta e em negrito, no lugar da legenda antiga. */
+.lead--fecho{font-family:var(--corpo);font-weight:700}
+
+/* --- responsivo ------------------------------------------------------- */
+@media (max-width:900px){
+  .pilares,.metricas{grid-template-columns:1fr}
+  .frag{grid-template-columns:repeat(2,1fr)}
+  .trilho__fila{grid-auto-flow:row;grid-auto-columns:auto}
+  .barras{grid-template-columns:repeat(5,1fr)}
+}
+
+/* Slide com linha de fonte reserva o espaço dela, para o corpo nunca encavalar.
+   Foi o defeito que apareceu ao adensar os slides na v2. */
+.slide:has(.fonte) .slide__c{padding-bottom:calc(var(--pad) + 2.6em)}
+.slide:has(.credito):not(:has(.fonte)) .slide__c{padding-bottom:calc(var(--pad) + 1.2em)}
+
+/* ====================================================================== */
+/* v3 · organograma, bolhas de método, esteira da comunidade              */
+/* ====================================================================== */
+
+/* --- ORGANOGRAMA ------------------------------------------------------ */
+.org{display:flex;flex-direction:column;gap:.5em;align-items:center;margin-top:.5em;width:100%}
+.org__linha{display:flex;gap:clamp(.5rem,1.6vw,1.5rem);justify-content:center;width:100%}
+.org__c{background:rgba(0,0,0,.42);border:1px solid rgba(245,241,225,.18);border-radius:4px;
+  padding:.5em .95em;text-align:center;display:flex;flex-direction:column;align-items:center}
+.org__c--topo{border-color:var(--amarelo);background:rgba(203,71,16,.26);padding:.6em 1.6em}
+.org__foto{width:clamp(34px,4.4vh,46px);height:clamp(34px,4.4vh,46px);border-radius:50%;
+  object-fit:cover;margin-bottom:.3em;border:1px solid rgba(245,241,225,.3)}
+.org__nome{font-family:var(--titulo);font-weight:700;line-height:1.12;color:#fff;
+  font-size:clamp(.7rem,.9vw,.92rem)}
+.org__cargo{font-size:clamp(.6rem,.75vw,.76rem);color:var(--amarelo);margin-top:.12em;line-height:1.2}
+.org__c--sup .org__cargo{color:var(--bege-rosa)}
+.org__ia{width:100%;border:1px dashed rgba(247,195,28,.6);border-radius:4px;
+  padding:.5em .9em;background:rgba(0,0,0,.34);display:flex;align-items:center;
+  justify-content:center;gap:clamp(.6rem,1.6vw,1.6rem);flex-wrap:wrap}
+.org__ia b{font-family:var(--titulo);font-weight:700;color:var(--amarelo);
+  font-size:clamp(.78rem,1vw,1.02rem);letter-spacing:.03em}
+.org__ia i{font-style:normal;font-size:clamp(.62rem,.78vw,.8rem);color:rgba(245,241,225,.9)}
+
+/* --- BOLHAS DO MÉTODO ------------------------------------------------- */
+.bolhas{display:flex;flex-wrap:wrap;gap:.45em .5em;justify-content:center;
+  margin:.9em auto 0;max-width:72ch}
+.bolha{background:rgba(0,0,0,.42);border:1px solid rgba(245,241,225,.2);border-radius:999px;
+  padding:.4em 1em;line-height:1.2;color:rgba(245,241,225,.95);font-weight:700;
+  font-size:clamp(.84rem,1.05vw,1.08rem)}
+.bolha--f{background:rgba(203,71,16,.34);border-color:var(--amarelo);color:var(--amarelo);
+  font-weight:700;font-size:clamp(.9rem,1.12vw,1.15rem)}
+.bolha--m{background:rgba(247,195,28,.14);border-color:rgba(247,195,28,.45)}
+
+/* --- ESTEIRA DA COMUNIDADE -------------------------------------------- */
+.esteira{overflow:hidden;width:100%;margin-top:.6em;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);
+  mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+.esteira__t{display:flex;gap:.45rem;width:max-content;animation:correr 34s linear infinite}
+.esteira__t img{height:clamp(40px,6vh,64px);width:auto;border-radius:3px;object-fit:cover}
+@keyframes correr{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.esteira__t{animation:none}}
+.esteira__n{display:flex;gap:2.2em;justify-content:center;margin-top:.5em;flex-wrap:wrap}
+.esteira__n span{font-family:var(--titulo);font-weight:700;color:var(--amarelo);
+  font-size:clamp(.74rem,.95vw,.98rem)}
+.esteira__n span i{font-style:normal;font-weight:400;color:rgba(245,241,225,.88);
+  font-family:var(--corpo);font-size:.92em}
+
+@media(max-width:900px){
+  .org__linha{flex-wrap:wrap}
+  .bolhas{max-width:100%}
+}
+
+/* ====================================================================== */
+/* ESCALA ÚNICA DO DECK                                                    */
+/* O slide é uma caixa 16:9 fixa: a altura vem da largura. Mas os tamanhos */
+/* de texto usam clamp() com piso em rem, que para de encolher e estoura a */
+/* caixa em janela estreita, cortando frase dentro da .grade (overflow     */
+/* hidden). Amarrando a raiz à largura, todo o deck encolhe junto, como    */
+/* um slide de verdade. Acima de 1280 nada muda.                           */
+/* ====================================================================== */
+@media (max-width:1279px){
+  html{font-size:calc(100vw / 80);}
+}
+
+/* --- Slide 02, o problema -------------------------------------------- */
+/* As duas colunas pousam na MESMA altura, abaixo da etiqueta de canto: a
+   esquerda estava ancorada no rodapé e caía sobre o rosto de quem está na
+   foto, a direita colidia com a palavra "Problema". */
+#s2 .split--esq,#s2 .split--dir{
+  top:calc(var(--pad) + 2.4em);bottom:0;padding-bottom:var(--pad);
+}
+/* Foto mais assentada, para a frase do centro respirar sem depender de sombra
+   pesada. */
+#s2::after{background:linear-gradient(180deg,
+  rgba(30,14,3,.80) 0%,rgba(30,14,3,.70) 42%,
+  rgba(30,14,3,.74) 68%,rgba(30,14,3,.86) 100%)!important}
+/* Sombra em duas camadas: uma curta para desenhar a borda da letra, uma longa
+   e difusa para separar do fundo. É o que dá o assentamento sem borrar. */
+#s2 .centro-flut{
+  text-shadow:0 1px 3px rgba(15,7,2,.92),0 4px 10px rgba(15,7,2,.8),0 10px 40px rgba(15,7,2,.9);
+}
+
+/* --- Slide 06, as experiências --------------------------------------- */
+/* Quatro cartões numa linha ficavam pequenos demais para ler de longe. */
+#s6 .frag{grid-template-columns:repeat(2,1fr);gap:clamp(.6rem,1.3vw,1.2rem)}
+#s6 .frag__ond{font-size:clamp(.8rem,1.02vw,1.04rem)}
+#s6 .frag__q{font-size:clamp(.75rem,.94vw,.96rem);line-height:1.42}
+/* A coluna da esquerda pousa sobre parede clara e vazada: sem sombra, o corpo
+   do texto some. Mesma sombra em duas camadas da frase central. */
+#s2 .split h2{text-shadow:0 1px 3px rgba(15,7,2,.9),0 6px 22px rgba(15,7,2,.85)}
+/* A linha de fonte fica embaixo da coluna esquerda neste slide: recuada para a
+   direita, ela sai de baixo do texto. */
+#s2 .fonte{left:auto;right:var(--pad);width:min(52%,560px);text-align:right}
+/* Slide 03: o crédito da Serasa vive no canto inferior esquerdo, então a linha
+   de fontes recua para a direita para não escrever por cima dele. */
+#s3 .fonte{left:auto;right:var(--pad);width:min(50%,540px);text-align:right}
+/* Slide 07: são três origens a citar (contrato social, ata do MGI e informe do
+   MDS), e a 52ch padrão empilhava isso em oito linhas, por cima do parágrafo de
+   fecho. Alarga a faixa para caber em três, sem invadir o crédito da foto. */
+
+/* Slide 10: a linha de fonte carrega o pregão do Ministério da Gestão, a
+   seletividade do investimento e três citações, e a 52ch padrão picotava isso
+   em oito linhas. Largura cheia deixa a leitura corrida, como nos parágrafos. */
+
+/* Slide 13: o título promete "com as premissas na mesa", então a linha de fonte
+   é onde as premissas de fato ficam. São sete, e a 52ch padrão as picotaria.
+   Sobe 14px do rodapé porque, com quatro linhas, a última cruzava a faixa do
+   crédito da foto no canto direito. Subir preserva as quatro linhas; estreitar
+   criaria uma quinta e encostaria no número do slide. */
+#s13 .fonte{bottom:48px}
+/* Ao virar barra dupla, o gráfico ganhou altura real (o ano 5 passou de 62px
+   para 144px) e empurrou o parágrafo de fecho por cima da linha de fonte.
+   Recupero a altura apertando as margens do bloco do gráfico, e não a altura
+   das barras: barra menor faria o ano 1 desaparecer. */
+#s13 .barras{margin-top:.5em}
+#s13 .barras__chave{margin-top:.5em}
+#s13 .grade{margin-top:.5em!important}
+/* O bloco é centralizado na vertical, então encolher margem só recentraliza e
+   devolve metade da altura ao rodapé. A correção que resolve de vez é reservar
+   rodapé no próprio bloco: assim o conteúdo centralizado nunca alcança a linha
+   de fonte, e o gráfico não precisa encolher mais. */
+#s13 .slide__c{padding-bottom:calc(var(--pad) + 46px)}
+#s13 .barra-ano__zona{height:clamp(118px,18vh,195px)}
+/* O parágrafo de fecho solta a trava de 52ch e ocupa a largura inteira: cai de
+   três linhas para duas, devolve altura ao slide e lê de forma mais corrida.
+   É o mesmo tratamento aplicado aos slides 07 e 09. */
+#s13 .lead{max-width:none;font-size:clamp(1rem,1.42vw,1.42rem)}
+
+/* O gráfico é o assunto do slide, então os números dele mandam na hierarquia.
+   O resultado é o maior de todos, a receita vem logo abaixo, e o ano precisa
+   ser lido de longe. As três caixas de dado cedem corpo para isso: elas são
+   apoio, não o argumento principal. */
+#s13 .bv{font-size:clamp(.92rem,1.42vw,1.42rem)}
+#s13 .bm{font-size:clamp(1.1rem,1.85vw,1.85rem)}
+#s13 .ba{font-size:clamp(.86rem,1.15vw,1.15rem)}
+#s13 .bz{height:clamp(118px,18vh,195px)}
+#s13 .cel{padding:clamp(12px,1.4vw,20px)}
+#s13 .cel__n{font-size:clamp(1.05rem,2vw,2rem);margin-bottom:.22em}
+#s13 .cel__l{font-size:clamp(.76rem,.98vw,.98rem);line-height:1.38}
+
+/* Slide 07, os dois parágrafos de Helvetica: soltam a trava de 52ch e ocupam a
+   largura inteira do slide. A conta é a mesma nos dois: largura cheia significa
+   MAIS caracteres por linha, então o corpo pode CRESCER e ainda assim o texto
+   ocupa menos linhas do que ocupava espremido. O de cima fecha em linha e meia,
+   o de baixo em duas. */
+/* Slide 08: a foto da AgSUS é VERTICAL (1400x1800) num slide 16:9, então o
+   `object-fit:cover` padrão descartava mais da metade da altura e dava aquela
+   sensação de zoom estourado. `object-position` desce o enquadramento para as
+   pessoas de colete, que são o assunto, e o véu afrouxa muito: as quatro caixas
+   de texto já têm fundo escuro próprio, então quem segura o contraste são elas,
+   não uma lona marrom por cima da foto inteira. */
+#s9 .slide__foto img{object-position:center 58%}
+#s9.veu-denso::after{background:linear-gradient(180deg,rgba(30,14,3,.42) 0%,rgba(30,14,3,.5) 100%)}
+
+#s7 .lead{max-width:none}
+#s7 .lead.rev--1{font-size:clamp(1.35rem,2.2vw,2.2rem);line-height:1.4}
+#s7 .lead.rev--3{font-size:clamp(1.08rem,1.62vw,1.62rem);line-height:1.42}
+
+/* Helvetica DENTRO das caixas: sobe de .9rem para 1.08rem, porque a .9 sumia ao
+   lado do amarelo grande e não se lê em projetor. As caixas das pontas carregam
+   DOIS dados cada uma, então cedem um fio de corpo para caber sem estourar. */
+#s7 .pilar__l{font-size:clamp(.86rem,1.08vw,1.08rem);line-height:1.42}
+#s7 .pilar--duplo .pilar__l{font-size:clamp(.8rem,1vw,1rem);line-height:1.38}
+/* A lista das 3 funcoes, compacta, sem decimal de gente. */
+#s7 .pilar__lista{
+  list-style:none;margin:.3em 0 0;padding:0;
+  font-size:clamp(.78rem,.98vw,.98rem);line-height:1.4;color:rgba(245,241,225,.9);
+}
+#s7 .pilar__lista li{padding-left:.9em;position:relative}
+#s7 .pilar__lista li::before{content:"–";position:absolute;left:0;color:var(--amarelo)}
+/* A nota da supervisao carrega tese agora, nao rodape: sai do italico e do
+   --bege-rosa (que nem existe como variavel), ganha corpo real. */
+#s7 .pilar__nota{
+  font-style:normal;font-size:clamp(.76rem,.96vw,.98rem);line-height:1.42;
+  color:var(--creme-90);margin-top:.5em;
+}
+/* Slide 03: o fecho (logos PAAPS+Serasa e a pergunta) sai do fluxo central e
+   pousa rente ao rodapé, acima da linha de fontes, para que o bloco de dados
+   acima domine o slide em vez de dividir a altura com ele. Pergunta grande,
+   League Spartan, caixa alta: mesmo peso visual de um título de slide. */
+.fecho-serasa{
+  position:absolute;left:var(--pad);bottom:26px;z-index:4;max-width:60%;
+  display:flex;flex-direction:column;gap:.35em;
+}
+/* Os 3 logos (PAAPS, Serasa, ACE Cortex) sobre o mesmo chip bege arredondado,
+   regra dela em 24/08: nenhum logo solto direto sobre a foto neste slide.
+   PAAPS usa a versao marrom + colorido (regra da casa: so os "+ colorido"
+   sao autorizados, nunca a versao com descritivo). */
+.fecho-serasa__logos{display:flex;align-items:center;gap:.7em;flex-wrap:wrap;justify-content:center}
+.fecho-serasa__chip{
+  display:inline-flex;align-items:center;background:var(--bege);
+  border-radius:4px;padding:clamp(4px,.42vw,6px) clamp(7px,.8vw,11px);
+}
+.fecho-serasa__logo--paaps{height:clamp(15px,1.7vw,21px);width:auto}
+.fecho-serasa__logo--serasa{height:clamp(19px,2.4vw,29px);width:auto}
+.fecho-serasa__logo--cortex{height:clamp(13px,1.6vw,20px);width:auto}
+.fecho-serasa h2.t-m{margin:0;font-size:clamp(1.15rem,2vw,1.95rem);line-height:1.14}
+@media(max-width:820px){.fecho-serasa{position:static;margin-top:1.2em;padding:0 var(--pad);max-width:100%}}
+/* Dados maiores: a grade e a frase-lead ganham a altura que o fecho deixou
+   livre ao sair do fluxo. */
+#s3 .lead{font-size:clamp(1.15rem,1.85vw,1.85rem);line-height:1.48}
+#s3 .grade{margin-top:1em}
+#s3 .cel{padding:clamp(14px,1.6vw,23px) clamp(15px,1.7vw,24px)}
+#s3 .cel__n{font-size:clamp(1.4rem,2.5vw,2.6rem);margin-bottom:.25em}
+#s3 .cel__l{font-size:clamp(.9rem,1.12vw,1.14rem);line-height:1.44}
+
+/* --- Slide 05, o caminho em miniatura ---------------------------------- */
+/* Fundiu Solução (05) e Método (10, removido). Réplica fiel do componente
+   real do site (home/como-atuamos, .trilha-passos em home/css/paaps.css e o
+   desenho em home/js/site.js): curva de Bézier entre pontos empilhados na
+   mesma coluna x, desvio lateral alternando de lado a cada trecho
+   (min(34, Δy·0.42), sinal invertendo em i par/ímpar). Calculado à mão aqui
+   porque o deck sai em PDF estático, sem o scroll que acende os pontos no
+   site: todos os três já nascem acesos. Ocupa, de propósito, mais ou menos
+   a mesma altura que o título + o parágrafo de abertura somados. */
+.mini-caminho{
+  position:absolute;top:calc(var(--pad) + 3em);right:var(--pad);z-index:5;
+  width:min(30%,230px);
+}
+.mini-caminho__svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none;z-index:0}
+.mini-caminho__linha{stroke:var(--branco);stroke-width:1;opacity:.6}
+.mini-caminho__passos{
+  list-style:none;margin:0;padding:0;position:relative;z-index:1;
+  display:grid;gap:clamp(18px,2.4vw,30px);
+}
+.mini-caminho__passo{
+  display:grid;grid-template-columns:52px 1fr;align-items:center;
+  min-height:52px;
+}
+.mini-caminho__pt{
+  width:14px;height:14px;border-radius:50%;justify-self:center;
+  background:var(--amarelo);box-shadow:0 0 0 3px rgba(20,9,2,.6);
+}
+.mini-caminho__t{
+  font-family:var(--corpo);font-weight:700;
+  font-size:clamp(.86rem,1.15vw,1.08rem);line-height:1.3;color:var(--bege);
+  text-shadow:0 1px 5px rgba(15,7,2,.95);
+}
+.mini-caminho__t i{font-style:normal;font-size:.68em;vertical-align:top}
+.mini-caminho__sub{
+  display:block;font-family:var(--corpo);font-weight:400;
+  font-size:.72em;line-height:1.3;color:var(--bege-rosa);margin-top:.15em;
+}
+@media(max-width:820px){.mini-caminho{display:none}}
+
+/* --- Slide 05, os dados de solidão em vidro fosco ----------------------- */
+/* Três cartões pequenos e quase transparentes (blur, sem card sólido como o
+   resto do deck), pra não competir com as bolhas do método logo acima. */
+.dados-solidao{display:flex;gap:.7em;margin-top:1em;flex-wrap:wrap;justify-content:center}
+.dado-solidao{
+  flex:1 1 0;min-width:150px;max-width:220px;text-align:center;
+  background:rgba(245,241,225,.07);backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);
+  border:1px solid rgba(245,241,225,.18);border-radius:9px;
+  padding:clamp(.7em,1.1vw,1.1em) clamp(.6em,1vw,1em);
+}
+.dado-solidao__n{
+  display:block;font-family:var(--titulo);font-weight:800;color:var(--amarelo);
+  font-size:clamp(1.5rem,2.5vw,2.3rem);line-height:1;margin-bottom:.28em;
+}
+.dado-solidao__l{
+  font-size:clamp(.68rem,.82vw,.82rem);line-height:1.36;color:rgba(245,241,225,.92);
+  max-width:22ch;margin:0 auto;
+}
+/* O terceiro cartão virou texto corrido (Helvetica, só as porcentagens em
+   negrito e amarelo), então precisa de mais largura que os outros dois. */
+.dado-solidao--texto{
+  flex:1.7 1 260px;max-width:360px;text-align:left;
+  padding:clamp(.85em,1.2vw,1.2em) clamp(.95em,1.35vw,1.3em);
+}
+.dado-solidao__p{
+  font-family:var(--corpo);font-weight:400;text-align:justify;
+  font-size:clamp(.74rem,.92vw,.92rem);line-height:1.5;
+  color:rgba(245,241,225,.94);margin:0;
+}
+.dado-solidao__p b{color:var(--amarelo);font-weight:700}
+.dado-solidao__cite{
+  font-family:var(--corpo);font-style:italic;font-weight:400;
+  font-size:.68rem;color:rgba(245,241,225,.58);margin:.55em 0 0;text-align:right;
+}
+@media(max-width:820px){.dados-solidao{flex-direction:column;align-items:center}}
+
+/* ====================================================================== */
+/* O SLIDE CABE SEMPRE NA JANELA                                           */
+/* Com aspect-ratio 16/9 e largura 100%, numa janela mais baixa que 9/16   */
+/* da largura o slide fica MAIOR que a tela e o rodapé sai de vista: o     */
+/* leitor vê a célula cortada e pensa que é bug de layout. Limitando a     */
+/* largura pela altura disponível, o slide inteiro sempre aparece, com     */
+/* tarja lateral quando a janela é larga demais.                           */
+/* ====================================================================== */
+.slide{width:min(100%,calc(100vh * 16 / 9));margin-inline:auto}
+
+/* A tipografia escala pela largura REAL do slide, não da janela.          */
+/* ⚠️ O DIVISOR IMPORTA: o projeto do deck é 1920px de largura, e nessa     */
+/* largura a raiz tem que dar exatamente 16px. Logo o divisor é 120         */
+/* (1920/120 = 16), não 80. Com 80, a raiz batia no teto de 16px já a       */
+/* 1280px de slide, e daí para cima a letra PARAVA DE ESCALAR: num slide de */
+/* 1564px (janela 1920x880, em que o 16:9 é limitado pela altura) o texto    */
+/* saía 23% maior do que deveria e o título do slide 12 subia por cima do   */
+/* rótulo do app. Era esse o bug, e ele valia para os 19 slides.            */
+/* O teto sobe para 24px para que monitor grande também escale.             */
+html{font-size:clamp(9px,calc(min(100vw,100vh * 16 / 9) / 120),24px)}
+
+/* ====================================================================== */
+/* IMPRESSÃO: restaura o tamanho de página                                 */
+/* As regras de "caber na janela" acima usam vh e vêm depois da folha de   */
+/* impressão no arquivo, então venciam por ordem de origem e quebravam o   */
+/* PDF. Aqui elas são desfeitas no contexto de papel.                      */
+/* ====================================================================== */
+@media print{
+  html{font-size:16px!important}
+  .slide{width:338.7mm!important;margin-inline:0!important}
+}
+/* Página de 25,4 x 14,29 cm: mesma proporção 16:9, metade da área de raster.
+   Em 33,87 cm o Chrome gerava PDF de 57 MB, grande demais para anexar em
+   formulário de inscrição. */
+@media print{
+  @page{size:254mm 142.9mm;margin:0}
+  .slide{width:254mm!important;height:142.9mm!important}
+}
+/* A textura de ruído é um filtro SVG (feTurbulence) em página inteira. Filtro
+   SVG não vetoriza: no PDF vira bitmap de página cheia, 16 vezes. Era o que
+   fazia o arquivo passar de 50 MB. Some no papel, fica na tela. */
+@media print{ .slide::before{display:none!important;content:none!important} }
+/* CORREÇÃO: 338,7 mm = exatamente 1280px a 96dpi, que é a largura de projeto
+   deste deck. Com a raiz em 16px, o PDF sai idêntico à tela em 1280.
+   A página de 254 mm (960px) deformava tudo: fonte de 1280 numa caixa de 960. */
+@media print{
+  @page{size:338.7mm 190.5mm;margin:0}
+  .slide{width:338.7mm!important;height:190.5mm!important;margin-inline:0!important}
+  html{font-size:16px!important}
+}
+/* Slide 02: as três zonas somavam mais de 100% da largura e se sobrepunham
+   (a frase central batia no "40,7%" da coluna direita). Agora 31 + 34 + 31
+   fecham em 96% e sobra corredor entre elas. */
+#s2 .split{width:min(31%,368px)}
+#s2 .centro-flut{width:min(34%,430px)}
+/* Véu mais firme: a porta clara atrás da frase central exigia mais chão. */
+#s2::after{background:linear-gradient(180deg,
+  rgba(30,14,3,.86) 0%,rgba(30,14,3,.80) 40%,
+  rgba(30,14,3,.82) 66%,rgba(30,14,3,.90) 100%)!important}
+/* A linha de fontes estava por baixo da coluna direita: desce e encolhe. */
+#s2 .fonte{left:var(--pad);right:auto;width:min(46%,520px);text-align:left}
+
+/* ====================================================================== */
+/* IMPRESSÃO: devolve os transforms que POSICIONAM                         */
+/* A folha de impressão zera `transform` para desligar a animação de       */
+/* entrada. Só que quatro elementos usam transform para se POSICIONAR, e   */
+/* não para animar: zerados, eles saltam meia largura ou meia altura do    */
+/* lugar. Era isso que deformava o PDF.                                    */
+/* ====================================================================== */
+@media print{
+  .centro-flut,.centro-flut.rev{transform:translate(-50%,-50%)!important}
+  .flutuante,.flutuante.rev{transform:translateY(-50%)!important}
+  .sus-logo,.sus-logo.rev{transform:translateY(-50%)!important}
+  .cel--seq::after{transform:translateY(-50%)!important}
+}
+
+/* --- Slide 02: corpo maior e o par de dados lado a lado ---------------- */
+/* A explicação sob cada número estava pequena demais: forçava a vista num
+   slide que é o primeiro contato do investidor com a tese. */
+#s2 .grade--vert .cel__l{font-size:clamp(.82rem,1vw,1rem);line-height:1.42}
+#s2 .grade--vert .cel__n{font-size:clamp(1.3rem,2.25vw,2.25rem)}
+/* Educação e saúde dividem a mesma faixa, para o contraste entre 97 e 81
+   acontecer no olho, sem precisar de texto explicando. */
+#s2 .par{display:grid;grid-template-columns:1fr 1fr;gap:1px;
+  background:rgba(245,241,225,.2)}
+#s2 .par .cel{background:rgba(37,19,5,.86)}
+/* As duas colunas ocupam os cantos inferiores, então a linha de fontes vai
+   para o corredor central, o único vão livre do slide. */
+#s2 .fonte{left:50%;right:auto;transform:translateX(-50%);
+  width:min(41%,520px);text-align:center}
+
+/* --- Slide 02: menos quebras de linha --------------------------------- */
+/* Cada quebra é uma pausa que o olho paga. Aqui se ganha largura útil
+   reduzindo o respiro interno das colunas, e o corpo desce um pouco, para
+   caber mais palavra por linha sem encolher a leitura. */
+#s2 .split{padding:var(--pad) clamp(20px,2vw,34px)}
+#s2 .split h2{font-size:clamp(1.12rem,1.86vw,1.86rem)!important;line-height:1.2;max-width:none!important;
+  text-shadow:0 1px 3px rgba(15,7,2,.9),0 6px 22px rgba(15,7,2,.85)}
+/* O corredor central ganha os 30px que sobraram de cada lado. */
+#s2 .centro-flut{width:min(38%,486px);font-size:clamp(1.15rem,2.15vw,2.15rem);line-height:1.16}
+/* Célula mais enxuta por dentro: é o que tira uma linha de cada descritivo. */
+#s2 .grade--vert .cel{padding:clamp(10px,1.05vw,15px) clamp(12px,1.25vw,18px)}
+#s2 .par .cel{padding:clamp(9px,.95vw,13px) clamp(10px,1.05vw,14px)}
+#s2 .par .cel__l{font-size:clamp(.72rem,.86vw,.86rem);line-height:1.34}
+#s2 .par .cel__n{font-size:clamp(1.15rem,1.95vw,1.95rem)}
+/* Fontes numa linha só, no rodapé, ao lado do crédito da foto. */
+#s2 .fonte{left:var(--pad);right:auto;transform:none;width:min(58%,760px);
+  text-align:left;font-size:clamp(.52rem,.66vw,.66rem);line-height:1.3;
+  text-shadow:0 1px 3px rgba(15,7,2,.95),0 2px 8px rgba(15,7,2,.9)}
+
+
+/* --- SLIDE 16, O FECHO ---------------------------------------------------
+   Deixou de ser slide de pedido escrito e virou slide de fecho: a marca no
+   centro, a pergunta que sustenta a tese inteira, e o convite direto a Serasa.
+   Os ODS sairam da fila horizontal, onde passavam por cima da linha de contato,
+   e viraram duas colunas que emolduram o slide de cima a baixo. Sao os mesmos
+   oito, repetidos nos dois lados: quem le nao conta, le a moldura. */
+.ods-lado{
+  position:absolute;top:var(--pad);bottom:calc(var(--pad) * .55);z-index:5;
+  display:flex;flex-direction:column;justify-content:space-between;
+  width:clamp(52px,5.6vw,86px);opacity:.94;
+}
+.ods-lado--esq{left:calc(var(--pad) * .55)}
+.ods-lado--dir{right:calc(var(--pad) * .55)}
+.ods-lado img{width:100%;display:block;border-radius:2px}
+/* O bloco central se centraliza no que sobra depois da coluna de ODS, para
+   nao ficar optically empurrado para a esquerda. */
+#s16 .slide__c{align-items:center;text-align:center}
+.fecho__marca{
+  height:clamp(66px,8.2vw,132px);width:auto;display:block;
+  filter:drop-shadow(0 4px 26px rgba(20,9,2,.85));
+}
+.fecho__frase{
+  margin-top:.72em;max-width:38ch;
+  font-size:clamp(1.42rem,2.86vw,2.86rem);line-height:1.12;
+}
+.tricolor--centro{margin:1.15em auto}
+.fecho__cta{
+  max-width:30ch;
+  font-size:clamp(1.12rem,2.26vw,2.26rem);line-height:1.18;
+}
+/* O logotipo da Serasa e azul escuro sobre fundo transparente, entao sobre o
+   veu do slide ele sumiria. Vai numa lasca clara, que e como se aplica marca de
+   terceiro sem recolorir a marca dos outros. */
+.chip-serasa{
+  display:inline-flex;align-items:center;vertical-align:-.16em;
+  background:var(--bege);border-radius:5px;padding:.2em .42em;
+  box-shadow:0 3px 18px rgba(20,9,2,.6);
+}
+.chip-serasa img{height:.86em;width:auto;display:block}
+.fecho__contato b{font-weight:700;color:var(--branco)}
+.fecho__contato{
+  position:absolute;left:var(--pad);right:var(--pad);bottom:calc(var(--pad) * .82);
+  display:flex;justify-content:center;
+  gap:clamp(1.1rem,2.3vw,2.3rem);flex-wrap:wrap;
+  font-family:var(--titulo);font-weight:700;color:var(--amarelo);
+  font-size:clamp(.84rem,1.08vw,1.08rem);letter-spacing:.02em;
+}
+@media(max-width:820px){
+  .ods-lado{position:static;flex-direction:row;width:100%;margin-top:1.4em;gap:5px}
+  .ods-lado--dir{display:none}
+}
+
+/* --- FONTES DE PESQUISA: LARGURA CHEIA -----------------------------------
+   Calibrado em 22/08. A fonte se espremia numa coluna estreita e virava cinco,
+   seis, sete linhas empilhadas no pe do slide. Cada quebra e uma pausa que o
+   olho paga, e citacao de fonte nao merece esse peso. A regra base ja abriu
+   para 1240px; estes dois slides tem geometria propria e precisam do ajuste
+   um a um. */
+/* Slide 02: a faixa comeca depois do numero do slide, senao a primeira linha
+   passa por cima dele. */
+#s2 .fonte{left:calc(var(--pad) + 32px);right:auto;transform:none;
+  width:min(62%,1180px);text-align:left}
+/* Slide 03: continua ancorada a direita, so que agora com largura de leitura. */
+#s3 .fonte{left:auto;right:var(--pad);width:min(66%,1160px);text-align:right}
+
+/* --- SLIDE 07, SOBRE NOS: A DIGGING --------------------------------------
+   O slide existe para desarmar uma objecao especifica que veio da analise
+   externa: "a PAAPS nao tem tracao, e nao faturar ha mais de dois anos e
+   eliminatorio". A resposta e documental, entao o slide carrega numero de
+   CNPJ, data de abertura e CNAE, coisas que ninguem inventa, e fecha com a
+   fila de clientes da consultoria, que prova a maturidade do metodo. */
+.dig__topo{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);
+  gap:clamp(1.6rem,3.4vw,3.4rem);align-items:start}
+.dig .t-g{font-size:clamp(1.5rem,2.92vw,2.92rem);max-width:26ch}
+.dig .lead{margin-top:.68em;font-size:clamp(.94rem,1.22vw,1.22rem);line-height:1.5;max-width:none}
+/* A linha do faturamento e a resposta direta ao criterio eliminatorio:
+   ganha filete e respiro, para nao se perder no meio do paragrafo. */
+.dig__fat{
+  margin:.85em 0 0;padding-left:.85em;border-left:3px solid var(--amarelo);
+  font-family:var(--corpo);font-size:clamp(.98rem,1.3vw,1.3rem);line-height:1.44;
+  color:var(--creme-90);text-shadow:0 1px 12px rgba(20,9,2,.9);
+}
+.dig__fat b{font-family:var(--titulo);font-weight:800;color:var(--amarelo);font-size:1.18em}
+/* A lista de servicos da DIGGING: linha unica, corpo menor que o lead, so
+   para mostrar amplitude ao lado dos 12 logos de clientes. */
+.dig__servicos{
+  margin:.6em 0 0;font-family:var(--corpo);font-size:clamp(.72rem,.92vw,.94rem);
+  line-height:1.4;color:rgba(245,241,225,.78);
+}
+/* A coluna da direita sao as cadeiras que essas pessoas ja ocuparam. Uma
+   frase por linha, com filete separando, para ler como credencial e nao
+   como paragrafo corrido. */
+.dig__dir{display:flex;flex-direction:column;gap:.62em;
+  border-left:1px solid rgba(203,71,16,.6);padding-left:clamp(1rem,1.5vw,1.5rem)}
+.dig__cargo{
+  margin:0;font-family:var(--corpo);font-size:clamp(.87rem,1.12vw,1.12rem);
+  line-height:1.42;color:var(--creme-70);text-shadow:0 1px 12px rgba(20,9,2,.9);
+}
+.dig__cargo b{font-family:var(--titulo);font-weight:700;color:var(--bege)}
+/* Faixa dos dados cadastrais: tres blocos, chamada em caixa alta pequena
+   dentro da propria frase, nunca como etiqueta solta acima. */
+.dig__dados{
+  display:flex;flex-wrap:wrap;gap:clamp(1rem,2.4vw,2.4rem);
+  margin-top:clamp(14px,2vh,24px);padding-top:.7em;
+  border-top:1px dashed rgba(203,71,16,.7);
+}
+.dig__dados span{
+  font-family:var(--corpo);font-size:clamp(.82rem,1.04vw,1.04rem);line-height:1.34;
+  color:var(--amarelo);text-shadow:0 1px 12px rgba(20,9,2,.9);
+}
+.dig__dados b{font-family:var(--titulo);font-weight:700;color:var(--bege)}
+.dig__fecho{
+  margin-top:clamp(16px,2.3vh,28px);text-transform:none;max-width:56ch;
+  font-size:clamp(1.1rem,1.86vw,1.86rem);line-height:1.24;
+}
+/* Os logos sao escuros sobre branco, entao vao numa banda clara. Recolorir
+   marca de terceiro nao se faz, e sombra sozinha nao resolveria. */
+.dig__logos{
+  margin-top:clamp(16px,2.3vh,28px);background:var(--bege);border-radius:4px;
+  padding:clamp(11px,1.5vh,19px) clamp(14px,1.6vw,26px);
+  display:grid;grid-template-columns:repeat(12,1fr);align-items:center;
+  gap:clamp(8px,1.1vw,20px);box-shadow:0 6px 30px rgba(20,9,2,.55);
+}
+.dig__logos img{
+  width:100%;height:auto;display:block;object-fit:contain;
+}
+@media(max-width:820px){
+  .dig__topo{grid-template-columns:1fr}
+  .dig__dir{border-left:0;padding-left:0;border-top:1px solid rgba(203,71,16,.6);padding-top:.9em}
+  .dig__logos{grid-template-columns:repeat(4,1fr);row-gap:14px}
+}
+
+/* A frase do pregao federal estava soterrada na linha de fonte, em cinza de
+   10px: 300 caracteres de tese no rodape. Subiu para o corpo, embaixo da regua
+   da OMS, que e onde o argumento fecha. */
+.comprador{
+  margin-top:clamp(15px,2.2vh,26px);max-width:none;
+  font-family:var(--titulo);font-weight:700;color:var(--branco);
+  font-size:clamp(1rem,1.74vw,1.74rem);line-height:1.2;letter-spacing:-.01em;
+  text-shadow:0 2px 20px rgba(20,9,2,.92);
+}
+
+/* O pedido concreto, dentro do fecho. Antes o slide terminava em duas perguntas
+   grandes e nenhum compromisso mensuravel: bonito e vago. Estes sao os quatro
+   indicadores que a PAAPS se compromete a mover e a medir pelo Ponto de Apoio.
+   O termo tecnico vem primeiro, em amarelo, porque e o que um avaliador de
+   aceleradora reconhece; a traducao vem colada, porque e o que o secretario
+   de municipio entende. */
+.pedido__i{
+  margin:.9em 0 .5em;font-family:var(--corpo);
+  font-size:clamp(.76rem,.96vw,.96rem);line-height:1.3;color:var(--creme-70);
+  text-shadow:0 1px 12px rgba(20,9,2,.9);
+}
+.pedido__i b{font-family:var(--titulo);font-weight:700;color:var(--bege)}
+.pedido{
+  display:flex;justify-content:center;flex-wrap:wrap;
+  gap:clamp(.5rem,1vw,1rem);margin-bottom:.3em;
+}
+.pedido span{
+  font-family:var(--corpo);font-size:clamp(.68rem,.84vw,.84rem);line-height:1.24;
+  color:var(--creme-70);border:1px solid rgba(232,98,42,.6);
+  background:rgba(203,71,16,.18);border-radius:3px;padding:.34em .72em;
+}
+.pedido b{
+  display:block;font-family:var(--titulo);font-weight:800;color:var(--amarelo);
+  font-size:1.14em;line-height:1.1;
+}
+@media(max-width:820px){ .pedido{flex-direction:column;align-items:stretch} }
+
+/* As duas colunas de ODS emolduram o slide de cima a baixo, entao tudo que
+   corre na largura cheia precisa parar antes delas. A linha de contato era a
+   unica que passava por baixo dos badges. */
+#s16 .fecho__contato{max-width:min(92%,1500px);margin-left:auto;margin-right:auto}
+
+/* ==========================================================================
+   SISTEMA DE VIDRO  ·  calibrado pela Mallu em 22/08/2026
+   --------------------------------------------------------------------------
+   Ate aqui o deck tinha tres linguagens de caixa convivendo: marrom quase
+   opaco, preto translucido e terracota chapado. Tres jeitos de resolver o
+   mesmo problema, o que e exatamente o que faz uma peca parecer poluida.
+
+   Passa a existir UM padrao, que ja estava certo nos cartoes de solidao do
+   slide 05: tinte creme quase invisivel, blur forte, borda creme fina. A
+   caixa deixa de ser um bloco por cima da foto e vira vidro fosco: a foto
+   continua atras, desfocada, e o texto assenta em cima dela.
+
+   Palavras dela: "eu prefiro muito mais quando e um blur da foto, voce tira
+   a nitidez desse fundo, dessa caixa, para o texto ter mais legibilidade.
+   Eu acho isso muito mais chique."
+
+   UNICA EXCECAO, e e proposital: o ROADMAP mantem fundo destacado, porque
+   ali o slide quer ar de tecnologia e nao de fotografia.
+   ========================================================================== */
+:root{
+  --vidro-fundo:rgba(245,241,225,.07);
+  --vidro-borda:rgba(245,241,225,.18);
+  --vidro-blur:blur(9px);
+}
+.cel,
+.pilar,
+.regua__c,
+.frag__c,
+.org__c,
+.bolha,
+.metrica--cx,
+.pedido span{
+  background:var(--vidro-fundo)!important;
+  backdrop-filter:var(--vidro-blur)!important;
+  -webkit-backdrop-filter:var(--vidro-blur)!important;
+  border-color:var(--vidro-borda);
+}
+/* Os destaques nao voltam a ser bloco chapado: viram o MESMO vidro, com um
+   fio de terracota e um sopro de cor. O que marca o destaque e a borda, nao
+   o preenchimento. */
+.pilar--centro,
+.regua__c--forte,
+.org__c--topo,
+.bolha--f{
+  background:rgba(203,71,16,.16)!important;
+  backdrop-filter:var(--vidro-blur)!important;
+  -webkit-backdrop-filter:var(--vidro-blur)!important;
+  border-color:var(--amarelo)!important;
+}
+#s2 .par .cel{background:var(--vidro-fundo)!important}
+/* O vidro so aparece se houver foto nitida atras dele. Onde o veu era quase
+   opaco, o blur nao tinha o que desfocar: por isso o veu tambem afrouxa. */
+.veu-denso::after{
+  background:linear-gradient(180deg,rgba(30,14,3,.62) 0%,rgba(30,14,3,.58) 100%)!important;
+}
+.veu-base::after{
+  background:linear-gradient(to top,
+    rgba(30,14,3,.90) 0%,rgba(30,14,3,.84) 30%,rgba(30,14,3,.64) 52%,
+    rgba(30,14,3,.30) 74%,rgba(30,14,3,.06) 100%)!important;
+}
+/* Slide 05, Solucao: o marrom passa a existir SO no topo e morre no meio.
+   Da metade para baixo e a foto, quase limpa, porque o que segura o texto
+   dali para baixo sao os proprios cartoes de vidro. */
+#s5.veu-denso::after{
+  background:linear-gradient(180deg,
+    rgba(30,14,3,.88) 0%,rgba(30,14,3,.72) 26%,rgba(30,14,3,.40) 48%,
+    rgba(30,14,3,.22) 68%,rgba(30,14,3,.16) 100%)!important;
+}
+/* Slides 13 e 14: paisagem verde, que e a cor que mais conversa com a paleta
+   da casa. Sao as fotos que mais perdiam com o veu. */
+#s12.veu-denso::after,#s13.veu-denso::after{
+  background:linear-gradient(180deg,rgba(30,14,3,.50) 0%,rgba(30,14,3,.46) 100%)!important;
+}
+/* Slide 12, app Ponto de Apoio: a foto do medico estava escura demais. */
+#s11.veu-denso::after{
+  background:linear-gradient(180deg,rgba(30,14,3,.54) 0%,rgba(30,14,3,.50) 100%)!important;
+}
+
+/* --- SLIDE 04: os dois numeros abrem, e a pergunta ocupa o meio ----------
+   Antes os dois dados ficavam colados no centro e a pergunta a Serasa morava
+   no slide 03, que ja carregava cinco dados e ficou entupido. Agora cada
+   numero vai para a sua borda, e o vao que se abre entre eles recebe os dois
+   logos e a pergunta, na mesma faixa de altura da legenda dos numeros. */
+.tripe{
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr) minmax(0,1fr);
+  gap:clamp(1rem,3vw,3.4rem);width:100%;align-items:end;
+}
+.tripe .numerao{white-space:nowrap;display:block}
+.tripe .grande-dado{min-width:0}
+/* Os numeros ganham escala: sao eles que carregam o slide, e agora tem borda
+   inteira para ocupar. */
+.tripe .numerao{font-size:clamp(2.4rem,5.4vw,5.4rem);line-height:.94}
+.tripe .grande-dado__l{font-size:clamp(.8rem,1.06vw,1.06rem);line-height:1.36;margin-top:.4em}
+.grande-dado--dir{text-align:right}
+/* A pergunta entra ABAIXO dos numeros, centrada, na altura em que a legenda
+   deles termina. Os logos vem juntos, porque e o encontro das duas casas que
+   a pergunta esta propondo. */
+/* A pergunta e a coluna do meio, nao um bloco abaixo. Alinhada pelo pe junto
+   com os dois numeros, ela cai exatamente na faixa da legenda deles, que e
+   onde a Mallu pediu: "na altura onde esta a palavra transtorno mental". */
+/* A pergunta e a coluna do meio da grade, nao um bloco flutuante. A regra
+   base da .fecho-serasa e absoluta, herdada de quando ela morava colada no
+   rodape do slide 03: aqui ela precisa voltar para o fluxo, senao sai da
+   grade e cai por cima da linha de fonte. */
+.fecho-serasa--centro{
+  position:static;max-width:none;left:auto;bottom:auto;
+  text-align:center;align-self:end;align-items:center;
+  padding-bottom:clamp(2px,.6vh,8px);
+}
+.fecho-serasa--centro .fecho-serasa__logos{justify-content:center}
+.fecho-serasa--centro .t-m{
+  max-width:24ch;margin-left:auto;margin-right:auto;
+  font-size:clamp(1.18rem,2.24vw,2.24rem);line-height:1.16;
+}
+
+/* "no centro e um pouquinho para baixo": o tripe fica logo abaixo da linha
+   media do slide, deixando o teto da foto respirar. */
+#s4 .tripe{margin-top:clamp(40px,9vh,110px)}
+
+/* --- CAPA: profundidade real, em tres camadas ----------------------------
+   Calibrado pela Mallu em 22/08/2026. O problema da capa nao era o texto:
+   era que o veu, necessario para a leitura, apagava as duas profissionais
+   que sao o assunto da foto.
+
+   A solucao nao e clarear o veu, que derrubaria a legibilidade. E furar o
+   veu so onde estao as pessoas. Tres camadas, de tras para frente:
+
+     1. a foto, com o veu por cima, como sempre foi
+     2. a palavra PUBLICOS, grande, deitada no meio da estrada
+     3. as duas mulheres recortadas, SEM veu nenhum, com sombra projetada
+
+   Como a camada 3 passa por cima da 2, os corpos delas cobrem parte da
+   palavra. E essa oclusao, e nao a sombra, que cria a profundidade: o olho
+   entende que a palavra esta atras porque alguem esta na frente dela.
+
+   A viragem quente do recorte foi feita na imagem, nao aqui: a foto do
+   Radilson e preto e branco, e colorir por IA uma agente identificavel
+   seria inventar informacao sobre ela. O que existe e deslocamento de curva
+   de cinza para o lado quente da paleta, como viragem de laboratorio. */
+.capa-palavra{
+  position:absolute;z-index:2;left:50%;top:46%;translate:-50% -50%;
+  font-family:var(--titulo);font-weight:800;text-transform:uppercase;
+  font-size:clamp(4rem,15.5vw,15.5rem);line-height:.8;letter-spacing:-.03em;
+  color:rgba(247,195,28,.30);
+  text-shadow:0 0 60px rgba(20,9,2,.6);
+  pointer-events:none;white-space:nowrap;
+}
+.capa-pessoas{
+  position:absolute;inset:0;z-index:3;
+  width:100%;height:100%;object-fit:cover;object-position:center;
+  pointer-events:none;
+  filter:drop-shadow(0 18px 26px rgba(14,6,1,.85)) drop-shadow(0 3px 6px rgba(14,6,1,.6));
+}
+/* O texto da capa sobe para a camada 4, acima das pessoas, porque a manchete
+   nunca pode ficar atras de ninguem. */
+#s1 .slide__c,#s1 .faixa,#s1 .capa-logo,#s1 .slide__n,#s1 .credito{z-index:4}
+/* Com as pessoas furando o veu, o veu pode ser mais leve: a estrada e o ceu
+   voltam a aparecer sem custar leitura, porque quem segura a manchete e o
+   gradiente do pe, nao o escurecimento geral. */
+#s1.veu-base::after{
+  background:linear-gradient(to top,
+    rgba(30,14,3,.94) 0%,rgba(30,14,3,.86) 26%,rgba(30,14,3,.58) 48%,
+    rgba(30,14,3,.24) 70%,rgba(30,14,3,.04) 100%)!important;
+}
+
+/* A palavra sobe para nao encostar na manchete, que mora no pe a esquerda. */
+#s1 .capa-palavra{top:38%;left:54%}
+
+/* --- SLIDE 12: o "app" vira titulo, nao prefixo ---------------------------
+   A Serasa esta pedindo solucao tecnologica, e a palavra que diz isso estava
+   em corpo 12 minusculo, ao lado do nome do produto. Agora ela tem a mesma
+   escala do rotulo de canto do slide (TECNOLOGIA, CONCORRENCIA), sublinhada
+   e em amarelo, e o nome proprio caminha para o centro. */
+.produto{display:flex;align-items:baseline;gap:.42em}
+.produto__app{
+  font-family:var(--titulo);font-weight:800;text-transform:uppercase;
+  font-size:clamp(1rem,1.62vw,1.62rem);letter-spacing:.04em;
+  color:var(--amarelo);
+  border-bottom:3px solid var(--amarelo);padding-bottom:.06em;
+  text-shadow:0 2px 16px rgba(20,9,2,.9);
+}
+#s11 .produto{left:50%;translate:-50% 0;right:auto}
+
+/* --- SLIDE 13, roadmap: titulo no alto, trilho no pe ---------------------
+   A caixa central concentrava titulo, trilho e chaveamento, e sobrava meio
+   slide vazio embaixo. O titulo sobe para a faixa do rotulo de canto, e o
+   trilho ganha a altura inteira que sobrou: a letra do marco pode crescer
+   sem que nada colida. */
+.titulo-topo{
+  position:absolute;z-index:4;left:var(--pad);top:var(--pad);
+  max-width:min(58%,900px);margin:0;
+  font-size:clamp(1.2rem,2.05vw,2.05rem);line-height:1.14;
+}
+#s12 .slide__c{justify-content:flex-end;padding-bottom:calc(var(--pad) + 30px)}
+#s12 .trilho{margin-top:0}
+/* Com o espaco livre, o texto do marco sobe de corpo: era o menor do deck. */
+#s12 .marco__txt{font-size:clamp(.68rem,.9vw,.9rem);line-height:1.3}
+#s12 .marco__txt b{font-size:1.16em;line-height:1.16}
+#s12 .chave__rotulo,#s12 .faixa-fase{font-size:clamp(.72rem,.94vw,.94rem)}
+/* Os marcos precisam de largura, senao a letra maior vira coluna de uma
+   palavra por linha, que e pior do que a letra pequena que havia antes. */
+#s12 .trilho__fila{gap:clamp(.4rem,1vw,1.1rem)}
+#s12 .marco{padding:0 .1rem;min-width:0}
+#s12 .marco__txt{font-size:clamp(.64rem,.83vw,.83rem);line-height:1.26}
+#s12 .marco__txt b{font-size:1.1em}
+#s12 .trilho__chave{margin-top:clamp(6px,1vh,12px)}
+
+/* --- SLIDE 17, o fecho: reordenado em 22/08/2026 -------------------------
+   A marca sobe, as duas perguntas encolhem e descem, e o rosto da agente
+   comunitaria fica livre. Ela e o assunto da pagina: nao pode ter texto
+   em cima dela. */
+#s16 .fecho__marca{margin-bottom:clamp(10px,2vh,26px)}
+#s16 .slide__c{justify-content:flex-end;padding-bottom:calc(var(--pad) + 8px)}
+.fecho__frase2{
+  margin-top:.18em;text-transform:none;max-width:34ch;
+  font-size:clamp(1.1rem,2.1vw,2.1rem);line-height:1.16;
+}
+/* O vermelho da casa e o terracota. Aqui ele vai um passo mais aceso, porque
+   sobre marrom escuro o terracota cheio fecha o contraste. */
+.vermelho{color:#e8622a}
+/* Evermore com grifo: a letra do logotipo tem hastes finas, entao o sublinhado
+   e desenhado a parte, com folga, em vez do underline nativo, que encostaria
+   nas descidas das letras. */
+.grifo{
+  color:var(--amarelo);font-style:italic;
+  border-bottom:2px solid rgba(247,195,28,.75);padding-bottom:.1em;
+}
+.azul-serasa{color:#2f9fd6}
+#s16 .fecho__cta{
+  text-transform:none;max-width:46ch;
+  font-size:clamp(.95rem,1.72vw,1.72rem);line-height:1.22;
+}
+/* A logo da Serasa sai de dentro da pergunta e vira selo, no alto a direita,
+   na mesma faixa do primeiro ODS. */
+/* O selo da Serasa ganhou companhia: a ACE Cortex desce logo abaixo, colada,
+   mesmo estilo (fundo bege, cantos arredondados), formando uma coluna de
+   dois selos no lugar de um so. O container assumiu o posicionamento
+   absoluto que .selo-serasa tinha sozinha; os dois filhos so empilham. */
+.selos-parceiros{
+  position:absolute;z-index:6;top:var(--pad);
+  right:calc(var(--pad) * .55 + clamp(52px,5.6vw,86px) + 14px);
+  display:flex;flex-direction:column;align-items:flex-end;gap:8px;
+}
+.selo-serasa{
+  height:clamp(22px,2.5vw,34px);width:auto;
+  background:var(--bege);border-radius:3px;padding:5px 8px;
+}
+/* A ACE Cortex e SVG de fill escuro (#212121), entao sobre o mesmo bege ela
+   fica legivel sem blend nenhum. Tamanho: largura de um icone de ODS, que e
+   a mesma referencia clamp(52px,5.6vw,86px) usada em .ods-lado. */
+.selo-cortex{
+  width:clamp(52px,5.6vw,86px);
+  background:var(--bege);border-radius:3px;padding:6px 8px;
+  display:flex;align-items:center;justify-content:center;
+}
+.selo-cortex img{width:100%;height:auto;display:block}
+/* O rosto dela e o assunto da pagina. A marca e as duas perguntas descem, a
+   marca encolhe, e o veu abre bem mais: da para ver as palafitas atras. */
+#s16 .fecho__marca{height:clamp(30px,3.4vw,46px);margin-bottom:clamp(6px,1.2vh,14px)}
+#s16 .fecho__frase{font-size:clamp(1.06rem,2.05vw,2.05rem);max-width:30ch}
+#s16 .fecho__frase2{font-size:clamp(.95rem,1.78vw,1.78rem)}
+#s16 .slide__c{padding-bottom:calc(var(--pad) + 2px)}
+#s16 .slide__foto img{object-position:center 34%}
+#s16.veu-denso::after{
+  background:linear-gradient(to top,
+    rgba(30,14,3,.93) 0%,rgba(30,14,3,.86) 34%,rgba(30,14,3,.62) 56%,
+    rgba(30,14,3,.30) 76%,rgba(30,14,3,.10) 100%)!important;
+}
+/* A palavra deixa de ser marca d'agua: "PAAPS Brasil" se le com a marca logo
+   acima, entao ela e nome proprio e vem cheia, sem transparencia. Um pouco
+   menor que a anterior, porque opaca ela pesa muito mais. */
+#s1 .capa-palavra{
+  color:var(--amarelo);
+  font-size:clamp(3.4rem,12.4vw,12.4rem);
+  top:36%;left:52%;
+  text-shadow:0 6px 40px rgba(20,9,2,.75);
+}
+
+/* --- Ajustes da capa, rodada 2 -------------------------------------------
+   A palavra volta a ter transparencia: opaca ela competia com a manchete e
+   pesava demais. E DESCE ate a linha dos ombros, que e o unico jeito de as
+   duas passarem na frente dela. A profundidade vem da oclusao, nao da sombra:
+   sem cruzamento, o efeito 3D nao existe. */
+#s1 .capa-palavra{
+  color:rgba(247,195,28,.58);
+  top:48%;left:52%;
+  font-size:clamp(3.2rem,11.6vw,11.6rem);
+  text-shadow:0 6px 44px rgba(20,9,2,.62);
+}
+/* Sem viragem marrom no recorte: os pixels sao os originais da foto. Como o
+   fundo fica quente e elas ficam frias, a separacao aumenta sozinha. */
+
+/* --- Slide 12: o APP maior ainda -----------------------------------------
+   Fica menor que o BRASIL da capa, e um pouco maior que a Evermore ao lado.
+   Sao letras incomparaveis, entao a proporcao se resolve no olho, medindo a
+   altura de x de uma contra a outra. */
+#s11 .produto__app{
+  font-size:clamp(1.9rem,4.4vw,4.4rem);
+  border-bottom-width:5px;letter-spacing:.02em;
+}
+#s11 .produto{gap:.3em;align-items:baseline}
+#s11 .produto__nome{font-size:clamp(1.7rem,3.7vw,3.7rem)}
+
+/* --- Slide 16, Equipe: a foto desce --------------------------------------
+   A cabeca da fundadora sobe para a linha dos dois cartoes de founder, e o
+   portao vermelho fecha o pe do enquadramento. */
+#s15 .slide__foto img{object-position:center 24%}
+
+/* --- Capa, rodada 3: a palavra precisa CONTINUAR LEGIVEL -----------------
+   Com ela centrada, as duas cobriam o "IL" inteiro e sobrava "BRAS". Oclusao
+   demais deixa de ser profundidade e vira erro. Ela alarga e desloca: agora
+   cada uma cruza uma ponta da palavra, e o meio fica livre. */
+#s1 .capa-palavra{left:57%;font-size:clamp(3.4rem,13.2vw,13.2rem)}
+
+/* --- Slide 16: a foto sobe, nao desce ------------------------------------
+   Com 24% a cabeca dela foi parar no pe do slide. Object-position maior mostra
+   mais da base da foto, o que sobe o assunto: a cabeca vai para a faixa dos
+   dois cartoes de founder e o portao vermelho fecha o pe. */
+#s15 .slide__foto img{object-position:center 72%!important}
+
+/* --- Slide 10: o fluxo de go to market ocupa a caixa inteira -------------
+   Esse bloco e o caminho de aquisicao da casa, e estava usando um terco da
+   propria caixa, em corpo menor que o das celulas ao lado. Ele cresce ate
+   encostar nas bordas do cartao.
+   CORRIGIDO em 22/08/2026: a primeira versao disto fez o contrario do pedido.
+   Cresceu o titulo, encolheu a linha amarela ("Chegamos de dentro") para menos
+   que o proprio subtitulo, e empurrou o rodape para o pe com space-between, o
+   que deixou 185px de vazio morto no meio da caixa. Agora o corpo cresce de
+   verdade, a hierarquia volta ao lugar (amarelo > titulo > cinza) e o vao entre
+   os passos e calculado para o caminho preencher a caixa inteira. */
+#s9 .gtm__fluxo{justify-content:space-between;padding:clamp(14px,1.7vw,26px)}
+/* O vao entre os passos e a variavel que enche a caixa. O fio que liga um
+   passo ao outro le esse mesmo valor, senao ele para no meio do caminho. */
+#s9 .fluxo{--g:clamp(12px,3.2vh,36px);gap:var(--g)}
+#s9 .fluxo__p:not(:last-child)::after{bottom:calc(var(--g) * -1)}
+#s9 .fluxo__t{font-size:clamp(.86rem,1.16vw,1.16rem);line-height:1.22}
+#s9 .fluxo__d{font-size:clamp(1rem,1.36vw,1.36rem);line-height:1.14;margin-top:.14em}
+#s9 .fluxo__s{font-size:clamp(.76rem,1vw,1rem);line-height:1.32;margin-top:.14em}
+#s9 .fluxo__pe{font-size:clamp(.8rem,1vw,1rem);line-height:1.34}
+#s9 .fluxo__p{padding-left:1.35em}
+#s9 .fluxo__p::before{width:8px;height:8px;top:.42em}
+#s9 .fluxo__p:not(:last-child)::after{left:calc(.22em + 3px);top:1.12em}
+
+/* --- Slide 13: o trilho desce para a linha do horizonte ------------------
+   Na foto da serra o mar de montanhas termina mais ou menos na metade da
+   altura. Um eixo de roadmap apoiado nessa linha le como continuacao da
+   paisagem, e nao como grafico jogado por cima dela. */
+#s12 .slide__c{justify-content:center;padding-bottom:var(--pad)}
+#s12 .trilho{margin-top:0}
+#s12 .marco__txt{font-size:clamp(.76rem,1.0vw,1rem);line-height:1.28}
+#s12 .marco__txt b{font-size:1.2em;line-height:1.14}
+
+/* --- Slide 13, rodada 2: o eixo na linha do horizonte DE VERDADE ---------
+   Eu tinha posto no meio do slide por suposicao. Medindo a foto: a maior
+   transicao de brilho da serra, que e onde o ceu encontra a montanha, esta em
+   y=611 de 1067. Com o recorte que o object-fit faz, isso cai a 59% da altura
+   do slide, e nao a 50%. O eixo agora pousa exatamente ali.
+
+   E as duas placas de fase se desprendem do trilho e descem para o pe da
+   pagina, que e onde elas estavam e onde ficam melhor: a chave continua
+   acoplada ao roadmap, porque ela explica o roadmap; as placas nao, elas
+   marcam o tempo da pagina inteira. */
+#s12 .slide__c{justify-content:flex-start}
+#s12 .trilho{position:absolute;left:var(--pad);right:var(--pad);top:51.3%;margin:0}
+#s12 .trilho__chave{position:absolute;left:var(--pad);right:var(--pad);top:71.7%;margin:0}
+#s12 .trilho__faixas{
+  position:absolute;left:var(--pad);right:var(--pad);
+  bottom:calc(var(--pad) + 22px);margin:0;
+}
+
+/* --- Slide 16: a foto desce, sem cortar a testa --------------------------
+   A foto e retrato (900x1600) num slide deitado, entao o object-fit amplia
+   2,13 vezes e so cabe um terco da altura dela. Com 72% o corte batia na
+   testa. Em 62% a cabeca pousa na faixa dos dois cartoes de founder. */
+#s15 .slide__foto img{object-position:center 62%!important}
+
+/* ==========================================================================
+   RODADA DE CORRECAO, 22/08/2026 (fim do dia)
+   ========================================================================== */
+
+/* CAPA: o recorte 3D foi abandonado. A pasta da agente e escura contra o chao
+   escuro, e ali nao existe borda para achar: nem o modelo nem eu. Qualquer
+   contorno seria adivinhado. A capa volta a ser a foto do Radilson inteira,
+   com o veu mais leve, que ja entrega a visibilidade que se queria. */
+#s1 .capa-palavra,#s1 .capa-pessoas{display:none!important}
+#s1.veu-base::after{
+  background:linear-gradient(to top,
+    rgba(30,14,3,.93) 0%,rgba(30,14,3,.80) 24%,rgba(30,14,3,.44) 44%,
+    rgba(30,14,3,.16) 66%,rgba(30,14,3,0) 100%)!important;
+}
+
+/* SLIDE 13: a linha sobe. Eu tinha calculado o horizonte pelo brilho medio da
+   foto e caiu baixo demais; a marcacao a caneta dela poe o eixo na altura do
+   meio da caixa "Metodo escrito". A chave sobe junto, porque explica o
+   trilho; as placas de fase ficam no pe, que foi o que deu certo. */
+#s12 .trilho{top:41%!important}
+#s12 .trilho__chave{top:61.5%!important}
+
+/* SLIDE 16: o marrom volta a pesar. Nao ao ponto de antes, que apagava a
+   foto, mas o suficiente para o organograma ter chao. */
+#s15.veu-denso::after{
+  background:linear-gradient(180deg,rgba(30,14,3,.80) 0%,rgba(30,14,3,.76) 100%)!important;
+}
+/* Sem os tres chips de cargo, a faixa da IA vira uma linha de texto so. */
+#s15 .eq__ia{justify-content:center;text-align:center}
+#s15 .eq__ia__l{flex:1 1 auto;min-width:0;max-width:74ch;text-align:center}
+
+/* SLIDE 17: a marca sobe para a faixa dos ODS e TODO o texto desce para o
+   terco de baixo. O meio do slide fica vazio de proposito: e onde esta o
+   rosto dela, e ele e o assunto da pagina, nao o fundo dela.
+   O grifo saiu: a Evermore amarela em italico ja se destaca sozinha no meio
+   de League Spartan branca, e o sublinhado brigava com o filete tricolor. */
+#s16 .fecho__marca{
+  position:absolute;left:50%;translate:-50% 0;top:calc(var(--pad) * .8);
+  height:clamp(26px,2.9vw,40px);margin:0;
+}
+#s16 .slide__c{justify-content:flex-end;padding-bottom:calc(var(--pad) + 4px)}
+#s16 .fecho__frase{margin-top:0}
+#s16 .tricolor--centro{margin:.45em auto}
+#s16 .fecho__cta{margin-top:.5em}
+#s16 .fecho__contato{margin-top:1.1em}
+#s16 .fecho__contato{margin-top:1.5em}
+
+/* ==========================================================================
+   SLIDE 17, o fecho  ·  refeito em 22/08/2026
+   --------------------------------------------------------------------------
+   O slide estava com quatro blocos de texto espremidos no terco de baixo, e
+   era justamente o slide que fecha o pitch. Agora ele tem tres coisas e mais
+   nada: a frase que aponta para ela, la em cima; o rosto dela, livre, no
+   meio; e uma pergunta so, grande, logo acima do filete.
+   A Evermore saiu daqui: a pergunta inteira vai em League Spartan caixa alta,
+   com o primeiro "quem cuida" em vermelho, e o segundo em branco.
+   ========================================================================== */
+
+/* A frase ocupa o lugar onde estava a marca, sobre o guarda-chuva. Ela nomeia
+   quem e a mulher da foto, entao os dois "ela" vao em vermelho: quem le olha
+   a frase, olha a foto e fecha a conta sozinho. */
+.fecho__chamada{
+  position:absolute;z-index:6;top:calc(var(--pad) * .74);
+  left:50%;translate:-50% 0;width:min(58%,880px);margin:0;
+  text-align:center;text-wrap:balance;
+  font-family:var(--titulo);font-weight:700;text-transform:none;
+  font-size:clamp(.95rem,1.66vw,1.66rem);line-height:1.22;
+  letter-spacing:-.005em;color:var(--bege);
+  text-shadow:0 2px 7px rgba(15,7,2,.92),0 9px 34px rgba(15,7,2,.88);
+}
+
+/* A pergunta, unica coisa escrita na metade de baixo alem dos contatos.
+   A quebra e forcada depois do "e": a segunda linha fica sendo a pergunta
+   limpa, sem nenhuma palavra de apoio na frente dela. */
+#s16 .slide__c{justify-content:flex-end;padding-bottom:calc(var(--pad) * 1.95)}
+#s16 .fecho__frase{
+  margin:0 auto;max-width:none;
+  font-size:clamp(1.5rem,3.2vw,3.2rem);line-height:1.08;
+}
+#s16 .tricolor--centro{margin:.68em auto 0}
+
+/* A marca desce para o pe e entra na propria linha de contato, como primeiro
+   item dela: a assinatura fica junto de onde se acha a PAAPS. */
+#s16 .fecho__contato{gap:clamp(.9rem,1.9vw,1.9rem);align-items:center}
+.fecho__contato__marca{
+  height:clamp(17px,1.9vw,25px);width:auto;display:block;
+  filter:drop-shadow(0 3px 16px rgba(20,9,2,.8));
+}
+
+/* O topo do slide e a parte clara da foto: o guarda-chuva. Texto claro sobre
+   ele perde o contraste, entao a frase leva um respaldo proprio, em degrade
+   radial sem borda: escurece o que esta atras das letras e some antes de
+   virar caixa. */
+.fecho__chamada{isolation:isolate}
+.fecho__chamada::before{
+  content:'';position:absolute;z-index:-1;inset:-2.1em -3.4em;
+  background:radial-gradient(ellipse closest-side at center,
+    rgba(18,8,2,.82) 0%,rgba(18,8,2,.70) 38%,rgba(18,8,2,.34) 66%,rgba(18,8,2,0) 100%);
+}
+
+/* ==========================================================================
+   SLIDE 13, o roadmap  ·  dois consertos em 22/08/2026
+   --------------------------------------------------------------------------
+   1) O EIXO ESTAVA 18px ABAIXO DOS PONTOS. A linha era desenhada a 50% da
+      caixa do trilho, e a caixa tem preenchimento assimetrico (o de baixo
+      cresceu para caber o cartao do Ponto de Apoio). Metade de uma caixa
+      assimetrica nao e onde estao os pontos. Agora a linha se ancora na
+      fileira, que e onde os pontos vivem: os dois passam a coincidir sempre,
+      qualquer que seja a reserva de baixo. Ela pousa em 48,7% da altura, que
+      e a marca que a Mallu fez a caneta.
+   2) A CHAVE ESTAVA POR CIMA DA ESCRITA DO PONTO DE APOIO. Ela era posicionada
+      por porcentagem da altura da tela, enquanto o texto do marco tem altura
+      em pixel: em tela mais baixa a porcentagem sobe e a chave entra no texto.
+      Agora a chave e filha do trilho e vem depois da fileira, com uma reserva
+      em em. A reserva erra para o lado seguro: sobra ar, nunca falta.
+   ========================================================================== */
+.trilho::before{display:none}
+.trilho__fila::before{
+  content:"";position:absolute;left:0;right:0;top:50%;height:2px;
+  background:linear-gradient(90deg,var(--amarelo),var(--terracota));opacity:.85;
+}
+/* A fileira tem altura zero (o texto dos marcos e absoluto), entao a reserva
+   para o cartao mais alto de baixo e a margem da chave. */
+#s12 .trilho{padding-bottom:.7em}
+#s12 .trilho__chave{position:static;left:auto;right:auto;top:auto;margin:9.4em 0 0}
+
+/* ==========================================================================
+   SLIDE 17  ·  segunda versao, 22/08/2026
+   --------------------------------------------------------------------------
+   O vermelho saiu do slide inteiro a pedido da Mallu, e as duas frases viraram
+   uma carta curta, endereçada, toda em branco. Tres degraus: quem esta sendo
+   chamado, quem e a mulher da foto, e o pedido. O terceiro degrau e o unico em
+   caixa alta, porque e a unica coisa que a peca pede.
+   So sobrou a coluna de ODS da direita: com as duas, o slide ficava emoldurado
+   demais para uma pagina que e, no fim, um retrato de uma pessoa so.
+   ========================================================================== */
+#s16 .fecho__saud{
+  margin:0 auto;font-family:var(--titulo);font-weight:700;
+  font-size:clamp(.94rem,1.42vw,1.42rem);line-height:1.2;letter-spacing:.01em;
+  color:var(--bege);
+}
+#s16 .fecho__corpo{
+  /* text-wrap:balance distribui as tres linhas em vez de deixar a ultima com
+     uma palavra so pendurada. */
+  margin:.62em auto 0;max-width:52ch;text-wrap:balance;
+  font-family:var(--corpo);font-weight:400;
+  font-size:clamp(.92rem,1.44vw,1.44rem);line-height:1.42;
+  color:var(--bege);
+}
+#s16 .fecho__pedido{
+  margin:.62em auto 0;max-width:none;color:var(--bege);
+  font-size:clamp(1.5rem,3.1vw,3.1rem);line-height:1.08;
+}
+/* Tudo que e texto do fecho leva a mesma sombra: a foto por baixo tem a roupa
+   clara dela e o mato claro do fundo, e sem sombra a linha come a letra. */
+#s16 .fecho__saud,#s16 .fecho__corpo,#s16 .fecho__pedido{
+  text-shadow:0 2px 7px rgba(15,7,2,.92),0 9px 34px rgba(15,7,2,.86);
+}
+
+/* ==========================================================================
+   SLIDE 12, o lockup do produto  ·  simplificado em 22/08/2026
+   --------------------------------------------------------------------------
+   A tentativa de dois degraus com a Evermore por cima nao deu certo: o bloco
+   invadia o rotulo de canto e o titulo, e o desalinho lia como erro, nao como
+   relevo. Uma linha so, centralizada, tudo em League Spartan caixa alta.
+   "app" amarelo com o filete, o nome do produto em bege.
+   ========================================================================== */
+#s11 .produto{
+  left:50%;translate:-50% 0;right:auto;
+  align-items:baseline;gap:.3em;justify-content:center;
+}
+#s11 .produto{white-space:nowrap;flex-wrap:nowrap}
+#s11 .produto__nome{
+  font-family:var(--titulo);font-weight:800;text-transform:uppercase;
+  font-size:clamp(1.1rem,3vw,3rem);letter-spacing:.005em;line-height:1;
+  color:var(--bege);
+  text-shadow:0 2px 14px rgba(20,9,2,.94),0 8px 34px rgba(20,9,2,.72);
+}
+#s11 .produto__app{
+  font-size:clamp(1.1rem,3vw,3rem);
+  border-bottom-width:4px;letter-spacing:.02em;
+}
+
+/* --- Slide 05: a terceira caixa deixa de ser dado de solidao e vira a regua
+   da OMS, que subiu do slide 11. Ela nao leva a moldura de vidro do cartao:
+   a propria regua ja tem borda, e duas molduras uma dentro da outra e ruido. */
+.dado-solidao--regua{
+  flex:3 1 520px;max-width:none;text-align:left;
+  padding:0;background:none;border:0;
+  backdrop-filter:none;-webkit-backdrop-filter:none;
+}
+.dado-solidao--regua .regua{margin-top:0;height:100%}
+/* O vermelho de alerta: usado so onde a peca precisa dizer que aquilo e o
+   lado fraco da comparacao. */
+.alerta,.regua__d b.alerta,.dado-solidao__p b.alerta{color:#e8622a}
+
+/* Variante maior do bloco de indicadores. Usada no slide 13 (A oportunidade),
+   onde as quatro caixas entram sozinhas, sem linha de chamada, e por isso
+   precisam sustentar o pé do slide por conta própria. */
+.pedido--g{gap:clamp(.7rem,1.3vw,1.3rem);margin-top:1.1em}
+.pedido--g span{
+  font-size:clamp(.8rem,1.02vw,1.02rem);line-height:1.3;
+  padding:.72em 1.15em;border-radius:4px;
+}
+.pedido--g b{font-size:1.3em;margin-bottom:.16em}
+
+/* Slide 13 (A oportunidade). Dois ajustes pedidos pela Mallu em 23/08/2026:
+   1. as tres caixas ganham titulo. O titulo NAO vai em caixa alta, porque
+      "eConsig" e nome proprio com e minusculo, e caixa alta destruiria a marca.
+   2. as quatro caixas do que e medido crescem ate o mesmo peso visual da fileira
+      de cima, entao deixam de ser chips em linha e viram grade de quatro colunas. */
+#s13p .cel__t{text-transform:none;letter-spacing:0;color:var(--amarelo);
+  font-size:clamp(1.34rem,1.92vw,1.92rem);margin-bottom:.4em;line-height:1.1}
+#s13p .cel__l{font-size:clamp(1.16rem,1.56vw,1.56rem);line-height:1.38}
+#s13p .pedido--g{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:clamp(.6rem,1.1vw,1.1rem);margin-top:clamp(.6rem,1.1vw,1.1rem);
+}
+#s13p .pedido--g span{
+  display:flex;flex-direction:column;justify-content:center;
+  min-height:clamp(110px,12.9vw,206px);
+  padding:clamp(14px,1.7vw,26px);border-radius:0;
+  font-size:clamp(1.14rem,1.52vw,1.52rem);line-height:1.28;
+  color:var(--creme-90);
+}
+#s13p .pedido--g b{font-size:1.5em;margin-bottom:.22em;line-height:1.08}
+
+/* Slide 05. O diagrama da jornada (.mini-caminho) e absoluto no canto superior
+   direito, com width:min(30%,230px) e right:var(--pad). O titulo e o subtitulo
+   corriam em largura cheia por baixo dele, e as duas ultimas linhas do titulo
+   colapsavam sobre "Rodas de Equipe PAAPS" e "Ponto de Apoio". Aqui eles param
+   antes da coluna do diagrama, com folga. Abaixo de 820px o diagrama some, e a
+   largura cheia volta. */
+#s5 .t-fluxo,
+#s5 .lead{max-width:calc(100% - 268px)}
+@media(max-width:820px){ #s5 .t-fluxo, #s5 .lead{max-width:none} }
+
+/* Slide 06. O titulo agora abre com numero grande. .numerao solta e display:block
+   e quebraria a frase em duas, entao aqui ela volta a correr na linha, como ja faz
+   em .t-fluxo. E o titulo cresceu, entao 22ch da .t-m derrubaria para 5 linhas. */
+#s6 .t-m{max-width:30ch}
+#s6 .t-m .numerao{display:inline;font-size:1.34em;line-height:1;color:var(--amarelo)}
+/* As caixas de vidro sobem de corpo: legibilidade e valor da casa. */
+#s6 .frag__ond{font-size:clamp(.86rem,1.1vw,1.12rem)}
+#s6 .frag__q{font-size:clamp(.82rem,1.04vw,1.06rem);line-height:1.4}
+
+/* ============ SLIDE 02, REARQUITETURA (23/08/2026) ============
+   O slide tinha CINCO zonas de leitura competindo (dois titulos nos cantos, uma
+   frase flutuante no centro geometrico, e duas grades no pe), com 186px de vazio
+   morto dentro de cada coluna, porque .split usava justify-content:space-between.
+   E as duas grades tinham ritmos diferentes: 1+1+1 a esquerda, 2+1+1 a direita.
+
+   Agora: a frase-tese sobe e vira o TITULO do slide, os dois titulos antigos
+   descem e viram cabeca de cada coluna, colados na propria grade, e as sete
+   celulas tem largura e peso identicos. Tres zonas em vez de cinco.
+
+   Nao uso transform para centrar a tese: .rev tambem escreve transform na
+   animacao de entrada, e uma sobrescreve a outra. left/right/margin resolve. */
+#s2 .s2-tese{
+  position:absolute;top:calc(var(--pad) + 2.6em);left:0;right:0;margin:0 auto;
+  width:min(64%,880px);text-align:center;z-index:4;
+  font-family:var(--titulo);font-weight:700;text-transform:none;
+  font-size:clamp(1.34rem,2.72vw,2.72rem);line-height:1.16;color:var(--bege);
+  text-shadow:0 3px 26px rgba(15,7,2,.95);
+}
+#s2 .s2-colunas{
+  position:absolute;left:0;right:0;bottom:calc(var(--pad) + 42px);z-index:3;
+  display:flex;justify-content:space-between;align-items:flex-end;
+  padding:0 var(--pad);gap:var(--pad);
+}
+#s2 .s2-col{width:min(38%,420px)}
+#s2 .s2-col--dir{text-align:right}
+#s2 .s2-cab{
+  font-family:var(--titulo);font-weight:700;text-transform:none;
+  font-size:clamp(.98rem,1.46vw,1.46rem);line-height:1.24;color:var(--branco);
+  text-shadow:0 2px 18px rgba(15,7,2,.9);margin:0 0 .55em;
+}
+/* .numerao e display:block por padrao e quebraria a frase da cabeca em duas. */
+#s2 .s2-cab .numerao{display:inline;font-size:1.5em;line-height:1;color:var(--amarelo)}
+#s2 .grade--vert{margin-top:0;gap:clamp(6px,.7vw,10px)}
+@media(max-width:820px){
+  #s2 .s2-colunas{position:static;flex-direction:column;gap:1rem}
+  #s2 .s2-col,#s2 .s2-col--dir{width:auto;text-align:left}
+}
+
+/* ============ SLIDE 02, SEGUNDA REARQUITETURA: PLANILHA COMPARATIVA ========
+   Pedido da Mallu em 23/08/2026, depois de reprovar a primeira reforma: ela
+   nao gostou do blur pesado sobre a foto, e teve uma ideia melhor no meio da
+   propria fala. Este e o UNICO slide do deck em que a foto NAO ocupa a tela
+   inteira. Ela fica inteira, sem corte (object-fit:contain), centralizada,
+   ladeada por duas colunas de dados em formato de planilha (linhas com
+   trago fino embaixo, como uma tabela de verdade). Sem blur: a foto e nitida,
+   e o fundo fora dela e o marrom solido da casa, nao precisa de veu.
+   O titulo "Nao existe plano B..." sobe e fica ancorado no canto superior
+   esquerdo, no mesmo padrao nao-flutuante do titulo do slide 03, em vez de
+   centralizado sobre a foto como estava na primeira tentativa. */
+#s2.s2-planilha{background:var(--marrom)}
+#s2 .s2-foto-bloco{
+  width:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:clamp(14px,1.8vw,22px);
+}
+#s2 .s2-titulo{
+  text-align:center;width:min(92%,620px);
+  font-family:var(--titulo);font-weight:700;text-transform:none;
+  font-size:clamp(1.02rem,1.6vw,1.5rem);line-height:1.28;color:var(--bege);
+}
+#s2 .s2-linha3{
+  position:absolute;left:var(--pad);right:var(--pad);
+  top:calc(var(--pad) + 2.2em);bottom:calc(var(--pad) + 34px);
+  display:flex;align-items:stretch;gap:clamp(16px,2.2vw,32px);
+  z-index:3;
+}
+#s2 .s2-col{width:25%;display:flex;flex-direction:column;justify-content:center}
+#s2 .s2-col--dir{text-align:right}
+#s2 .s2-h{
+  font-family:var(--titulo);font-weight:700;text-transform:uppercase;letter-spacing:.01em;
+  font-size:clamp(.9rem,1.28vw,1.28rem);line-height:1.24;color:var(--branco);
+  margin:0 0 .35em;
+}
+/* Subtitulo em Helvetica, sob o cabecalho da coluna. So a coluna direita tem;
+   a esquerda fica assimetrica de proposito. */
+#s2 .s2-sub{
+  font-family:var(--corpo);font-weight:400;
+  font-size:clamp(.86rem,1.12vw,1.12rem);line-height:1.34;color:var(--creme-90);
+  margin:0 0 .7em;padding-bottom:.5em;border-bottom:1px solid var(--vidro-borda);
+}
+#s2 .s2-col:not(.s2-col--dir) .s2-h{
+  padding-bottom:.5em;border-bottom:1px solid var(--vidro-borda);
+}
+
+/* Slide 03: .veu-lado e o unico veu quase opaco (.97 a .94) onde a grade de
+   dados fica, entao o vidro (blur:9px) nao tinha foto nitida atras pra
+   desfocar, e a caixa lia como cinza solido, nao vidro. Afrouxado no mesmo
+   espirito do veu-denso, so aqui, porque veu-lado so e usado neste slide. */
+/* Slide 05: as tres frases do subtitulo antigo viram lista de topicos, cada
+   um com rotulo. Mesma familia tipografica do .lead, corpo generoso porque
+   legibilidade e valor da casa. */
+#s5 .lista-topicos{
+  list-style:none;margin:.6em 0 0;padding:0;max-width:64ch;
+  display:flex;flex-direction:column;gap:.5em;
+}
+#s5 .lista-topicos li{
+  font-family:var(--corpo);font-size:clamp(1rem,1.3vw,1.32rem);line-height:1.42;
+  color:rgba(245,241,225,.94);
+}
+/* As caixas de solidao perderam a regua (foi pro slide 11): sobram duas,
+   centralizadas, e podem crescer bastante. A legenda estava ilegivel de
+   proposito baixa; aqui sobe para o tamanho que a casa exige. */
+#s5 .dado-solidao{
+  flex:0 1 340px;max-width:340px;
+  padding:clamp(1.1em,1.8vw,1.6em) clamp(1em,1.6vw,1.5em);
+}
+#s5 .dado-solidao__n{font-size:clamp(2.4rem,4vw,4rem)}
+#s5 .dado-solidao__l{
+  font-size:clamp(1.02rem,1.32vw,1.34rem);line-height:1.4;max-width:none;
+}
+
+#s3.veu-lado::after{
+  background:linear-gradient(100deg,rgba(30,14,3,.72) 0%,rgba(30,14,3,.62) 42%,
+    rgba(30,14,3,.44) 62%,rgba(30,14,3,.18) 84%,rgba(30,14,3,.05) 100%)!important;
+}
+#s2 .s2-foto{
+  width:100%;flex:1;min-height:0;display:flex;align-items:center;justify-content:center;
+}
+#s2 .s2-foto img{
+  max-width:100%;max-height:100%;width:auto;height:auto;
+  object-fit:contain;
+}
+#s2 .s2-tabela{display:flex;flex-direction:column}
+#s2 .s2-l{
+  padding:clamp(10px,1.3vw,18px) 0;
+  border-bottom:1px solid var(--vidro-borda);
+}
+#s2 .s2-l:last-child{border-bottom:none}
+#s2 .s2-l .cel__n{
+  font-family:var(--titulo);font-weight:800;color:var(--amarelo);
+  font-size:clamp(1.15rem,2vw,1.9rem);line-height:1;display:block;margin-bottom:.15em;
+}
+#s2 .s2-l .cel__l{font-size:clamp(.78rem,.98vw,.98rem);line-height:1.4;color:var(--creme-90)}
+@media(max-width:820px){
+  #s2 .s2-titulo{position:static;width:auto;padding:var(--pad) var(--pad) 0}
+  #s2 .s2-linha3{position:static;flex-direction:column;padding:1rem var(--pad)}
+  #s2 .s2-col,#s2 .s2-foto{width:auto}
+  #s2 .s2-col--dir{text-align:left}
+}
+
+/* Slide 02: entrou foto de fundo em tela cheia (Bela Vista de Minas), atras da
+   planilha comparativa. A foto central contida (.s2-foto) e OUTRA coisa, fica
+   intocada, por cima do fundo. O veu aqui usa o valor INTERMEDIARIO que ja
+   existia na historia deste arquivo: mais forte que o .62/.58 atual (afrouxado
+   em 20/08 para os cartoes de vidro respirarem), mas sem voltar ao .94/.92
+   antigo, quase opaco. A Mallu pediu exatamente esse meio-termo em 23/08. */
+#s2.veu-denso::after{
+  background:linear-gradient(180deg,rgba(30,14,3,.84) 0%,rgba(30,14,3,.80) 100%)!important;
+}
+
+/* Slide 08 (id=s7): com a grade da conta + os pilares da operacao no mesmo
+   16:9, o paragrafo final colidia 4px com a linha de fonte. So aperta margem
+   e padding; o corpo da letra nao cede, que e a regra da casa. */
+#s7 .grade{margin-top:.7em}
+/* Duas celulas seguidas tem .cel--seq (cada uma com seta apos ela), entao as
+   duas ficam empatadas em z-index:1, e o empate se resolve por ordem de DOM:
+   a segunda pinta por cima da primeira, cortando ao meio a seta da primeira.
+   A primeira precisa ficar por cima da segunda; a segunda ja fica por cima da
+   terceira (que nao tem stacking context proprio, por nao ter .cel--seq). */
+#s7 .grade .cel--seq:first-child{z-index:2}
+#s7 .pilares{margin-top:.6em}
+#s7 .cel{padding:clamp(13px,1.5vw,22px)}
+#s7 .pilar{padding:clamp(.75rem,1.4vw,1.25rem);gap:.4em}
+
+/* BUG DE VERDADE, nao aperto de conteudo: .grade tem overflow:hidden (para o
+   border-radius recortar limpo), e a spec CSS diz que um item flex com
+   overflow != visible tem "automatic minimum size" ZERO. Quando o slide 08
+   nao cabia inteiro, o flexbox encolheu a grade ate 2px (o conteudo INTEIRO
+   sumia, silenciosamente) em vez de encolher os outros irmaos, que tem
+   overflow:visible e por isso tem piso de min-content. Trava a grade no
+   tamanho de conteudo dela; se sobrar overflow, aparece visivel e vira corte
+   de conteudo de verdade, nao desaparecimento mudo. */
+#s7 .grade{flex-shrink:0}
+
+/* Slide 09 (id=s8): mesmo bug do slide 08. .grade tem overflow:hidden, que
+   zera o "automatic minimum size" dela num container flex, entao ela e a
+   primeira a ser espremida quando o conteudo nao cabe, silenciosamente. */
+#s8 .grade{flex-shrink:0}
+/* O titulo do slide saiu (24/08), entao o conteudo sobe e o TAM/SAM/SOM ganha
+   espaco. A unica sobrancelha que sobrevive e a da 3a caixa, de proposito: sem
+   ela o "200+" sozinho nao diz nada. Ela cresce para marcar que ali e tese. */
+#s8 .cel__t{font-size:clamp(1rem,1.32vw,1.32rem);margin-bottom:.4em}
+/* Numero, sigla e legenda do TAM/SAM/SOM crescem: nada de letra minuscula
+   escondida no rodape. */
+#s8 .tss__d{font-size:clamp(1.9rem,3.6vw,3.4rem)}
+#s8 .tss__n{font-size:clamp(1.1rem,1.5vw,1.5rem)}
+#s8 .tss__l{font-size:clamp(.88rem,1.14vw,1.14rem);line-height:1.42}
+
+/* celula com dois numeros, no modelo do .pilar--duplo do slide 08 */
+.cel--duplo .cel__n{font-size:clamp(1.05rem,1.9vw,1.9rem);margin-bottom:.12em}
+.cel--duplo .cel__l{margin-bottom:.9em}
+.cel--duplo .cel__l:last-child{margin-bottom:0}
+
+/* o parentese da data, ao lado do numero */
+.cel__ano{display:block;font-family:var(--corpo);font-style:normal;font-weight:400;
+  font-size:clamp(.6rem,.72vw,.72rem);letter-spacing:0;color:var(--bege);margin-top:.15em}
+
+/* ============ SLIDE 10, GO TO MARKET: reformulado 24/08 ==================
+   O titulo do slide saiu. A grade passou de 2 colunas (1 alta + 3 empilhadas)
+   para 3 colunas iguais em cima, e o ciclo de venda desenhado atravessa o
+   slide inteiro embaixo, em faixa larga, para as 5 estacoes e a escada
+   caberem grandes e legiveis. */
+#s9 .gtm--duplo{grid-template-columns:repeat(3,1fr)}
+#s9 .gtm--duplo .gtm__fluxo{grid-row:auto}
+/* Os rotulos que voltaram: League Spartan caixa alta amarela. Nao sao
+   sobrancelha de dado (aquilo e proibido): sao nome de quadro, como o deck
+   ja usa no .canto. */
+.gtm__rot{
+  font-family:var(--titulo);font-weight:800;text-transform:uppercase;
+  font-size:clamp(1.03rem,1.6vw,1.6rem);letter-spacing:.015em;line-height:1;
+  color:var(--amarelo);margin:0 0 .55em;
+}
+
+/* O ciclo: 5 estacoes ligadas por setas, e a ultima devolve para a primeira.
+   A seta de retorno e o ::after do .ciclo__volta, uma linha tracejada que
+   corre por baixo da fila inteira. */
+.ciclo{margin-top:clamp(.8rem,1.5vw,1.4rem);position:relative}
+.ciclo__rot{margin-bottom:.6em;font-size:clamp(1.3rem,2vw,2rem)}
+.ciclo__fila{
+  list-style:none;margin:0;padding:0;
+  display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(1.4rem,2.6vw,2.6rem);
+}
+.ciclo__e{
+  position:relative;display:flex;flex-direction:column;gap:.22em;
+  background:var(--vidro-fundo);backdrop-filter:var(--vidro-blur);
+  -webkit-backdrop-filter:var(--vidro-blur);
+  border:1px solid var(--vidro-borda);border-radius:var(--raio);
+  padding:clamp(.7rem,1.2vw,1.1rem);
+}
+/* A seta entre uma estacao e a proxima, no vao do gap. */
+.ciclo__e:not(:last-child)::after{
+  content:"→";position:absolute;right:calc(-1 * clamp(1.4rem,2.6vw,2.6rem));
+  top:50%;transform:translate(-8%,-50%);
+  width:clamp(1.4rem,2.6vw,2.6rem);text-align:center;
+  font-family:var(--titulo);font-weight:800;
+  font-size:clamp(1rem,1.5vw,1.5rem);color:var(--amarelo);
+}
+.ciclo__e--fim{border-color:var(--amarelo);background:rgba(203,71,16,.16)}
+.ciclo__num{
+  font-family:var(--titulo);font-weight:800;font-size:clamp(.72rem,.9vw,.9rem);
+  color:var(--amarelo);line-height:1;letter-spacing:.04em;
+}
+.ciclo__t{
+  font-family:var(--titulo);font-weight:700;line-height:1.12;
+  font-size:clamp(1.3rem,1.9vw,1.9rem);color:var(--bege);
+}
+.ciclo__t i{font-style:normal;font-size:.7em;vertical-align:top}
+.ciclo__sub{
+  font-family:var(--corpo);font-weight:400;line-height:1.25;
+  font-size:clamp(.72rem,.92vw,.92rem);color:rgba(245,241,225,.78);
+  margin-top:.2em;
+}
+/* A legenda de tempo/composicao: Helvetica branca, como ela pediu. */
+.ciclo__tempo{
+  font-family:var(--titulo);font-weight:700;line-height:1.3;
+  font-size:clamp(.76rem,.96vw,.96rem);color:var(--branco);opacity:.95;
+  margin-top:auto;padding-top:.6em;border-top:1px solid rgba(245,241,225,.16);
+}
+/* A escada: tres degraus subindo, marcando a progressao de carreira dentro
+   da propria estacao 04. Desenhada em CSS, sem imagem. */
+.ciclo__escada{display:flex;align-items:flex-end;gap:3px;height:22px;margin:.2em 0 .1em}
+.ciclo__escada i{
+  display:block;width:10px;background:var(--amarelo);border-radius:1px;opacity:.9;
+}
+.ciclo__escada i:nth-child(1){height:8px}
+.ciclo__escada i:nth-child(2){height:15px}
+.ciclo__escada i:nth-child(3){height:22px}
+/* A volta do ciclo: linha tracejada correndo por baixo, com a seta de retorno
+   apontando para tras, e o texto centrado. */
+.ciclo__volta{
+  position:relative;margin:.9em 0 0;padding-top:.75em;
+  font-family:var(--corpo);font-size:clamp(.74rem,.92vw,.92rem);
+  color:var(--creme-70);text-align:center;
+}
+.ciclo__volta::before{
+  content:"";position:absolute;left:8%;right:8%;top:0;height:0;
+  border-top:1px dashed rgba(247,195,28,.55);
+}
+.ciclo__volta::after{
+  content:"↩";position:absolute;left:8%;top:-.62em;
+  font-family:var(--titulo);font-weight:800;
+  font-size:clamp(.9rem,1.2vw,1.2rem);color:var(--amarelo);
+  background:transparent;padding-right:.3em;
+}
+@media(max-width:900px){
+  #s9 .gtm--duplo{grid-template-columns:1fr}
+  .ciclo__fila{grid-template-columns:1fr;gap:.6rem}
+  .ciclo__e:not(:last-child)::after{content:"↓";right:auto;left:50%;top:auto;
+    bottom:calc(-1 * .6rem);transform:translate(-50%,10%);width:auto}
+}
+
+/* Slide 17 (id=s15): tela dividida entre duas fotos novas.
+   A da esquerda tem a CEO Founder no centro-direita do quadro e uma mulher
+   sentada na borda esquerda. object-position 68% empurra a janela para a
+   direita: a mulher da esquerda sai do corte e a CEO fica centralizada.
+   A da direita usa o centro, sem restricao. */
+#s15 .slide__foto--dupla img:first-child{object-position:68% center}
+#s15 .slide__foto--dupla img:last-child{object-position:center center}
+/* Veu marrom leve sobre as duas, so o bastante para o texto assentar. */
+#s15.veu-denso::after{
+  background:linear-gradient(180deg,rgba(30,14,3,.80) 0%,rgba(30,14,3,.76) 100%)!important;
+}
+
+/* Slide 13 (id=s13p): as duas fotos sao 1200x1350 (8:9), que e exatamente a
+   proporcao de meia tela 16:9. Encaixam sem corte. Veu marrom leve. */
+#s13p.veu-denso::after{
+  background:linear-gradient(180deg,rgba(30,14,3,.78) 0%,rgba(30,14,3,.74) 100%)!important;
+}
+
+/* Slide 13: a frase que da a liga entre as tres caixas de argumento (eConsig,
+   Superendividamento, Ponto de Apoio) e os quatro indicadores. Sem ela o
+   leitor pula de um assunto para o outro sem transicao. */
+#s13p .mensuraveis{
+  font-family:var(--titulo);font-weight:800;text-transform:uppercase;
+  letter-spacing:.03em;font-size:clamp(1rem,1.32vw,1.32rem);
+  color:var(--amarelo);margin:clamp(.9rem,1.6vw,1.5rem) 0 0;
+}
+#s13p .pedido--g{margin-top:.5em}
+/* Sem o titulo do slide, a fila de 3 colunas subia e o POSICIONAMENTO batia no
+   rotulo GO TO MARKET, no canto superior direito. Um respiro no topo resolve
+   sem mexer em corpo de letra. */
+#s9 .gtm--duplo{margin-top:2.1em}
+
+
+/* ====== SLIDE 10, correcoes de 24/08 ====================================
+   BUG 10.A: .gtm tem overflow:hidden. Como item de um container flex, isso
+   zera o tamanho minimo automatico dele, entao o flexbox espremia a caixa e
+   o INBOUND era cortado EM SILENCIO (medido: 605px de conteudo dentro de
+   366px de caixa, a 1440x820). Mesmo bug que ja mordeu .grade nos slides
+   08 e 09. flex-shrink:0 obriga a caixa a manter a altura do conteudo. */
+#s9 .gtm{flex-shrink:0}
+
+/* 10.C: POSICIONAMENTO vira lista com marcador. Pontinho, e nao numero:
+   o ciclo de venda logo abaixo ja numera 01 a 05, e numerar duas vezes no
+   mesmo slide cria duas hierarquias numericas competindo. */
+.pos{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.7em}
+.pos__i{
+  position:relative;padding-left:1.05em;
+  font-size:clamp(.92rem,1.18vw,1.18rem);line-height:1.45;
+  color:var(--creme-90);
+}
+.pos__i::before{
+  content:"";position:absolute;left:.1em;top:.55em;
+  width:7px;height:7px;border-radius:50%;background:var(--amarelo);
+}
+.pos__r{
+  display:block;font-family:var(--titulo);font-weight:800;
+  text-transform:uppercase;letter-spacing:.02em;
+  font-size:clamp(.8rem,1.02vw,1.02rem);line-height:1;
+  color:var(--amarelo);margin-bottom:.28em;
+}
+
+/* 10.D: o texto "e a rede seguinte recomeca o ciclo" saiu, porque e obvio.
+   A linha tracejada e a seta de retorno ficam: sao elas que fazem o desenho
+   ler como ciclo, e nao como fila. O <p> continua existindo so como suporte
+   desses dois pseudo-elementos. */
+.ciclo__volta{margin-top:.55em;padding-top:.6em;min-height:0}
+
+/* ====== SLIDE 11, reconstruido em 24/08 =================================
+   O slide deixou de nomear concorrente. O adversario agora e um FORMATO,
+   consulta individual remota por aplicativo, e nao uma empresa: e a mesma
+   coisa que a Ata do Ministerio comprou. Ordem da pagina, decidida por ela:
+   regua da OMS no topo (evidencia externa antes de qualquer autoelogio),
+   diferenciais em tags no meio, fecho de duas linhas embaixo. */
+
+/* O X entre as duas colunas da regua: e ele que faz a regua ler como
+   comparacao de times, e nao como duas caixas vizinhas. Fica no vao de 1px
+   entre as colunas, por cima da divisa. */
+.regua--x{position:relative}
+.regua--x::after{
+  content:"✕";position:absolute;left:50%;top:50%;translate:-50% -50%;
+  z-index:3;width:clamp(2rem,2.9vw,2.9rem);height:clamp(2rem,2.9vw,2.9rem);
+  display:flex;align-items:center;justify-content:center;border-radius:50%;
+  font-family:var(--titulo);font-weight:800;
+  font-size:clamp(.95rem,1.35vw,1.35rem);line-height:1;
+  color:var(--amarelo);background:rgba(30,14,3,.92);
+  border:1px solid var(--amarelo);
+}
+#s10 .regua{margin-top:0}
+#s10 .regua__t{font-size:clamp(1.4rem,2.2vw,2.2rem);line-height:1.08}
+#s10 .regua__d{font-size:clamp(1.02rem,1.4vw,1.4rem);line-height:1.44}
+/* A coluna direita cede espaco para o X nao encostar no texto. */
+#s10 .regua__c{padding:clamp(1.1rem,1.9vw,1.9rem)}
+#s10 .regua__c--forte{padding-right:clamp(2.2rem,3vw,3rem)}
+#s10 .regua__c:not(.regua__c--forte){padding-left:clamp(1.9rem,2.6vw,2.6rem)}
+
+/* As 6 tags de diferencial. Sao 6 e nao 9 porque supervisao semanal ja e
+   dita nos slides 08 e 10, e registro em prontuario e o slide 12 inteiro:
+   repetir aqui so obrigaria a diminuir a letra. */
+.bolhas--dif{
+  display:flex;flex-wrap:wrap;justify-content:center;align-items:stretch;
+  max-width:none;margin-top:clamp(1.2rem,3vh,2.6rem);gap:.6em .6em;
+}
+.bolhas--dif .bolha{display:flex;align-items:center;justify-content:center;text-align:center}
+#s10 .bolha{font-size:clamp(.8rem,1.1vw,1.1rem);padding:.62em 1.15em}
+#s10 .bolha--f{font-size:clamp(.86rem,1.18vw,1.18rem)}
+
+/* O fecho em duas linhas: a primeira branca, a segunda toda em caixa alta e
+   amarela, numa linha so, como ela pediu. */
+#s10 .comprador{max-width:none;text-align:center}
+#s10 .comprador:first-of-type{margin-top:clamp(1.3rem,3.4vh,3rem);font-size:clamp(1.18rem,2.08vw,2.08rem)}
+.comprador--caixa{
+  text-transform:uppercase;color:var(--amarelo)!important;
+  white-space:nowrap;letter-spacing:.005em;font-size:clamp(1.12rem,2.08vw,2.08rem);
+  margin-top:clamp(.35rem,.9vh,.7rem)!important;
+}
+
+/* A foto do slide 11 e muito clara (janela ao fundo), e o vidro padrao tem so
+   7% de preenchimento: a coluna direita da regua estava sumindo. Veu e vidro
+   ganham densidade SO neste slide. */
+#s10.veu-denso::after{
+  background:linear-gradient(180deg,rgba(30,14,3,.74) 0%,rgba(30,14,3,.70) 100%)!important;
+}
+#s10 .regua__c{background:rgba(30,14,3,.66)!important}
+#s10 .regua__c--forte{background:rgba(203,71,16,.30)!important}
+#s10 .bolha{background:rgba(30,14,3,.62)!important}
+#s10 .bolha--f{background:rgba(203,71,16,.34)!important}
+
+/* ====== SLIDE 12, TECNOLOGIA: reconstruido em 24/08 =====================
+   Decisao dela: o celular ganha coluna propria a direita, e o texto todo se
+   reorganiza a esquerda com as tres celulas EMPILHADAS em vez de lado a lado.
+   E o unico arranjo em que o mockup fica grande o bastante para a tela ser
+   legivel sem colidir com a linha de fonte, e a pilha vertical e o que libera
+   o corpo de letra maior que ela pediu. A copy nao mudou uma palavra. */
+.tec{
+  display:grid;grid-template-columns:minmax(0,1.42fr) minmax(0,1fr);
+  gap:clamp(1.4rem,3vw,3.4rem);align-items:center;width:100%;
+}
+.tec__txt{display:flex;flex-direction:column;min-width:0}
+/* 12.1: a fonte sobe, do titulo ao pe. Nenhuma palavra foi reescrita. */
+#s11 .t-fluxo{font-size:clamp(1.24rem,2.08vw,2.08rem);line-height:1.16;max-width:none}
+/* Grade 2x2: as caixas saem de 9,5:1 (faixas de 999x105) para perto de 2:1,
+   que foi o que ela pediu ao dizer "menos retangulares, mais quadradas". */
+#s11 .tec__cels{grid-template-columns:1fr 1fr;gap:.95em;margin-top:.9em;align-items:stretch}
+#s11 .cel__l{font-size:clamp(.92rem,1.23vw,1.23rem);line-height:1.45}
+/* O paragrafo final virou a 4a caixa da grade: herda o vidro de .cel e so
+   guarda o corpo um tico maior, porque e a conclusao do bloco. */
+#s11 .tec__pe .cel__l{font-size:clamp(.95rem,1.27vw,1.27rem)}
+/* 12.2: a area de vidro desce. Cada celula empilhada carrega o proprio
+   respiro, entao o bloco escuro acompanha a letra maior em vez de virar
+   uma faixa fina no meio do slide. */
+#s11 .tec__cels .cel{padding:clamp(.85rem,1.4vw,1.35rem) clamp(1rem,1.6vw,1.5rem)}
+
+/* --- O mockup do app, em CSS puro, sem imagem de tela ------------------- */
+.tec__app{display:flex;flex-direction:column;align-items:center;gap:clamp(.8rem,1.6vh,1.3rem)}
+.app__cab{display:flex;align-items:center;gap:.75em;align-self:stretch;justify-content:center}
+/* ATENCAO: padding em % dentro deste quadrado resolve contra a LARGURA DO
+   CONTAINER PAI, nao contra o proprio quadrado. Com padding:14% o icone
+   ganhava 98px de respiro dentro de 80px de caixa e a logo ficava com 0px.
+   Por isso o respiro aqui e em px, e a logo e dimensionada em % dela mesma. */
+.app__icone{
+  display:grid;place-items:center;flex:0 0 auto;box-sizing:border-box;
+  width:clamp(46px,5vw,5.4rem);height:clamp(46px,5vw,5.4rem);
+  background:var(--bege);border-radius:23%;
+  box-shadow:0 6px 22px rgba(20,9,2,.55);
+}
+.app__icone img{width:78%;height:auto;display:block}
+.app__nome{
+  font-family:var(--titulo);font-weight:800;line-height:1.02;
+  font-size:clamp(.95rem,1.32vw,1.32rem);color:var(--bege);
+  text-shadow:0 2px 14px rgba(20,9,2,.9);
+}
+.app__nome i{display:block;font-style:normal;font-weight:400;
+  font-family:var(--corpo);font-size:.82em;color:var(--creme-70);margin-top:.18em}
+
+.fone{
+  width:clamp(150px,16.9vw,19.4rem);aspect-ratio:9/17.4;
+  background:linear-gradient(160deg,#2b1707,#150a02);
+  border:2px solid rgba(245,241,225,.34);border-radius:clamp(22px,2.2vw,34px);
+  padding:clamp(7px,.62vw,11px);
+  box-shadow:0 22px 60px rgba(12,5,1,.72),inset 0 0 0 1px rgba(0,0,0,.6);
+}
+.fone__tela{
+  height:100%;border-radius:clamp(15px,1.5vw,24px);overflow:hidden;
+  background:linear-gradient(180deg,rgba(37,19,5,.97),rgba(24,12,3,.99));
+  padding:clamp(9px,.85vw,15px);display:flex;flex-direction:column;
+  gap:clamp(5px,.5vw,9px);
+}
+.fone__topo{display:flex;align-items:baseline;justify-content:space-between;
+  border-bottom:1px solid rgba(245,241,225,.16);padding-bottom:.42em}
+.fone__rede{font-family:var(--titulo);font-weight:800;
+  font-size:clamp(.68rem,.92vw,.92rem);color:var(--bege);letter-spacing:.01em}
+.fone__periodo{font-family:var(--corpo);font-size:clamp(.54rem,.72vw,.72rem);
+  color:var(--amarelo)}
+.fone__rot{font-family:var(--corpo);margin:.5em 0 0;
+  font-size:clamp(.52rem,.7vw,.7rem);letter-spacing:.06em;
+  text-transform:uppercase;color:rgba(245,241,225,.62)}
+.fone__rot--2{margin-top:.7em}
+/* A serie historica: 12 barras subindo, uma por mes. Sao proporcoes de
+   desenho, nao dado de cliente: o mockup nao imprime numero nenhum. */
+.fone__serie{display:flex;align-items:flex-end;gap:clamp(2px,.22vw,5px);
+  height:clamp(56px,5.6vw,100px);margin-top:.32em}
+.fone__serie i{flex:1;background:rgba(247,195,28,.42);border-radius:1px}
+.fone__serie .fone__hoje{background:var(--amarelo)}
+.fone__ind{list-style:none;margin:.35em 0 0;padding:0;
+  display:flex;flex-direction:column;gap:clamp(4px,.4vw,7px)}
+.fone__ind li{display:flex;flex-direction:column;gap:2px}
+.fone__ind span{font-family:var(--corpo);font-size:clamp(.56rem,.74vw,.74rem);
+  color:rgba(245,241,225,.86);line-height:1.15}
+.fone__ind b{display:block;height:clamp(4px,.34vw,5.5px);border-radius:99px}
+/* As duas naturezas de dado nunca dividem a mesma barra de cor: vermelho
+   quando alto e ruim (alerta da rede), amarelo quando alto e bom
+   (satisfacao). E' a separacao que ela pediu para nao comparar coisas de
+   sentido oposto na mesma escala visual. */
+.fone__ind__rot{
+  font-family:var(--titulo);font-weight:800;text-transform:uppercase;
+  letter-spacing:.05em;font-size:clamp(.5rem,.64vw,.64rem);
+  color:rgba(245,241,225,.5);margin-bottom:.1em;
+}
+.fone__ind--alerta{padding-top:.4em;border-top:1px solid rgba(245,241,225,.14)}
+.fone__ind--alerta b{background:linear-gradient(90deg,#e8622a,rgba(232,98,42,.4))}
+.fone__ind--nps{padding-top:.45em;border-top:1px solid rgba(245,241,225,.14);margin-top:.15em}
+.fone__ind--nps b{background:linear-gradient(90deg,var(--amarelo),rgba(247,195,28,.4))}
+
+/* As abas Area do gestor / Area do servidor, cada uma com cadeado: o
+   cadeado sinaliza que a area exige login, sem precisar de texto extra. */
+.fone__abas{display:flex;gap:clamp(4px,.4vw,7px);margin-top:.4em}
+.fone__aba{
+  flex:1;display:flex;align-items:center;justify-content:center;gap:.32em;
+  padding:clamp(4px,.42vw,7px) clamp(3px,.3vw,5px);border-radius:5px;
+  font-family:var(--titulo);font-weight:700;
+  font-size:clamp(.46rem,.6vw,.6rem);letter-spacing:.01em;
+  color:rgba(245,241,225,.55);background:rgba(245,241,225,.06);
+  border:1px solid rgba(245,241,225,.12);white-space:nowrap;
+}
+.fone__aba--ativa{
+  color:#1e0e03;background:var(--amarelo);border-color:var(--amarelo);
+}
+.fone__cadeado{font-style:normal;font-size:.92em;line-height:1}
+
+/* Os dois mini-indicadores ao lado das Rodas por mes: contexto, nao dado
+   central, entao ficam num corpo bem menor que o grafico principal. */
+.fone__mini{display:flex;gap:clamp(5px,.5vw,9px);margin-top:.4em}
+.fone__mini__i{
+  flex:1;padding:clamp(4px,.44vw,7px);border-radius:5px;
+  background:rgba(245,241,225,.05);border:1px solid rgba(245,241,225,.12);
+  display:flex;flex-direction:column;gap:1px;
+}
+.fone__mini__n{font-family:var(--titulo);font-weight:800;color:var(--amarelo);
+  font-size:clamp(.68rem,.9vw,.9rem);line-height:1}
+.fone__mini__l{font-family:var(--corpo);font-size:clamp(.44rem,.56vw,.56rem);
+  line-height:1.18;color:rgba(245,241,225,.68)}
+
+@media(max-width:900px){
+  .tec{grid-template-columns:1fr}
+  .tec__app{margin-top:1.2rem}
+}
+
+/* O cabecalho do app (icone + descritivo) desceu para DEBAIXO do celular:
+   la em cima ele colidia com o titulo central "APP PONTO DE APOIO DO
+   SERVIDOR" e encostava a 3px do rotulo TECNOLOGIA. Embaixo, vira ficha de
+   app, que e a leitura que ela pediu. */
+#s11 .app__cab{align-self:auto;margin-top:.2em}
+/* A coluna do celular nao pode comecar acima da faixa do cabecalho: com 704px
+   de altura ela subia ate y=114 e cruzava o titulo central e o rotulo
+   TECNOLOGIA. Medido, nao estimado. O celular encolhe para caber inteiro
+   entre o cabecalho e a linha de fonte. */
+#s11 .tec{align-items:center}
+#s11 .tec__app{padding-top:clamp(1.2rem,3vh,2.6rem)}
+/* A tela sobrava um terco vazio embaixo: o conteudo se distribui na altura
+   inteira, como painel de verdade, em vez de ficar empoleirado no topo. */
+.fone__tela{justify-content:space-between}
+#s11 .fone__serie{height:clamp(60px,6.2vw,112px)}
+#s11 .fone__ind{gap:clamp(6px,.62vw,12px)}
+
+/* ====== SLIDE 11, ajustes de 24/08 (segunda rodada) =====================
+   Ela tirou o fundo avermelhado e amarronzado da comparacao e das tags: o
+   destaque passa a ser SO a cor do texto (amarelo de um lado, vermelho do
+   outro), e todo painel usa o MESMO vidro. O que sustenta a legibilidade
+   nesta foto clara e o veu do slide, nao um fundo colorido por caixa. */
+#s10 .regua__c,
+#s10 .regua__c--forte,
+#s10 .bolha,
+#s10 .bolha--f{
+  background:var(--vidro-fundo)!important;
+  backdrop-filter:var(--vidro-blur)!important;
+  -webkit-backdrop-filter:var(--vidro-blur)!important;
+}
+#s10.veu-denso::after{
+  background:linear-gradient(180deg,rgba(30,14,3,.86) 0%,rgba(30,14,3,.82) 100%)!important;
+}
+/* Sem fundo colorido por caixa, quem sustenta a leitura e o veu mais o
+   respaldo de sombra. O vermelho do .alerta e o que mais sofria. */
+#s10 .regua__t,#s10 .regua__d,#s10 .bolha{text-shadow:0 1px 10px rgba(20,9,2,.95)}
+#s10 .alerta{color:#f07a3e}
+
+/* A referencia ABNT curta, colada na citacao. */
+.regua__ref{
+  font-style:normal;font-family:var(--corpo);font-weight:400;
+  font-size:.62em;color:var(--creme-70);margin-left:.45em;white-space:nowrap;
+}
+
+/* O fecho agora sao dois blocos. O primeiro e o diagnostico do mercado, em
+   branco; o segundo e a afirmacao da PAAPS, em amarelo. Os dois em caixa
+   alta, como ela escreveu, mas com hierarquia de cor entre eles: dois blocos
+   amarelos seguidos nao teriam ordem de leitura. */
+#s10 .comprador--diag{
+  text-transform:uppercase;color:var(--branco)!important;
+  font-size:clamp(1rem,1.72vw,1.72rem);line-height:1.16;
+  letter-spacing:.005em;white-space:normal;
+  max-width:min(96%,1500px);margin-left:auto;margin-right:auto;
+}
+#s10 .comprador--caixa{
+  white-space:normal;font-size:clamp(1.02rem,1.78vw,1.78rem);line-height:1.16;
+  max-width:min(96%,1560px);margin-left:auto;margin-right:auto;
+  margin-top:clamp(.6rem,1.5vh,1.1rem)!important;
+}
+
+/* Slide 08 em janela baixa (a dela, 1440x820): o paragrafo final invadia a
+   linha de fonte em 29px depois que a frase ganhou "ou na regiao". Medido,
+   nao estimado. A folga sai do respiro entre os blocos, NUNCA do corpo da
+   letra: a soma das tres margens dava 38px e sobrava 28px de conteudo. */
+/* [removido] O remendo de aperto do slide 08 em janela baixa saiu: ele
+   compensava a tipografia fora de escala, e a escala foi corrigida na raiz. */
+/* O celular precisa comecar SEMPRE abaixo da faixa do cabecalho, inclusive
+   em janela mais larga que 16:9, onde o slide encolhe mas a faixa nao. */
+#s11 .tec__app{padding-top:clamp(2.4rem,7vh,4.2rem)}
+
+/* ====== SLIDE 06: header do fecho, 24/08 ================================
+   Ele existe para dar o lastro da frase conclusiva: sem ele, "tudo que uma
+   equipe precisa esta nela mesma" e opiniao; com ele, e leitura das quatro
+   experiencias desenhadas logo acima. Nao e sobrancelha de dado (aquilo e
+   proibido): e conector de argumento entre dois blocos. */
+.chapeu-fecho{
+  font-family:var(--titulo);font-weight:800;text-transform:uppercase;
+  font-size:clamp(.9rem,1.28vw,1.28rem);letter-spacing:.03em;line-height:1.1;
+  color:var(--amarelo);text-align:center;
+  margin:clamp(.9rem,2vh,1.6rem) 0 .45em;
+  text-shadow:0 2px 14px rgba(20,9,2,.9);
+}
+/* Regra da casa: frase completa nunca quebra entre linhas. Cada uma das duas
+   do fecho ocupa a sua linha inteira, com o MESMO peso (escolha dela). */
+.lead--fecho .fecho__l{display:block}
+#s6 .lead--fecho{margin-top:0;text-align:center;max-width:none}
+
+/* ====== SLIDE 12: a frase isolada no pe da caixa 1 ======================
+   "A rede publica trabalha sem espelho" sai do corrido e vira linha propria,
+   em amarelo: e a unica imagem do quadrado e ela fecha com uma batida. */
+.cel__f{
+  margin:.55em 0 0;font-family:var(--titulo);font-weight:700;
+  font-size:clamp(.95rem,1.27vw,1.27rem);line-height:1.2;
+  color:var(--amarelo);
+}
+
+/* ========================================================================= */
+/* REGRA DE DESIGN DA CASA: VIDRO NAO TEM COR.                               */
+/* Calibrada pela Mallu em 24/08/2026: "blur de vidro nao tem cor aplicada".  */
+/* O tingimento terracota/vermelho nos paineis de destaque le como            */
+/* antiprofissional. O que marca destaque e o CONTORNO AMARELO e a cor do     */
+/* TEXTO, nunca o preenchimento. Vale para o deck inteiro e vem por ultimo    */
+/* na folha, entao vence qualquer regra anterior.                             */
+/* ========================================================================= */
+.cel,.pilar,.regua__c,.frag__c,.org__c,.bolha,.metrica--cx,.pedido span,
+.pilar--centro,.regua__c--forte,.org__c--topo,.bolha--f,.bolha--m,
+.ciclo__e,.ciclo__e--fim,
+#s10 .regua__c,#s10 .regua__c--forte,#s10 .bolha,#s10 .bolha--f{
+  background:var(--vidro-fundo)!important;
+  backdrop-filter:var(--vidro-blur)!important;
+  -webkit-backdrop-filter:var(--vidro-blur)!important;
+}
+.pilar--centro,.regua__c--forte,.org__c--topo,.bolha--f,.ciclo__e--fim{
+  border-color:var(--amarelo)!important;
+}
+
+/* ====== SLIDE 05, reconstruido em 24/08 =================================
+   Decisao dela: o titulo vira DUAS linhas separadas, em League Spartan caixa
+   alta; a frase da OMS entra entre aspas e em amarelo; sai "e e exatamente o
+   que a Roda de Equipe faz"; e a parte do modelo que se sustenta e se paga
+   desce e vira SUBTITULO, em League Spartan caixa normal, antes da lista. */
+#s5 .t-fluxo--caps{
+  text-transform:uppercase;letter-spacing:.005em;
+  font-size:clamp(1.14rem,1.86vw,1.86rem);line-height:1.2;max-width:none;
+}
+/* Regra da casa: frase completa nunca quebra entre linhas. */
+#s5 .t-fluxo--caps .t__l{display:block}
+#s5 .t-fluxo--caps .t__l+.t__l{margin-top:.3em}
+.subt-fluxo{
+  font-family:var(--titulo);font-weight:700;
+  font-size:clamp(.98rem,1.4vw,1.4rem);line-height:1.28;
+  color:var(--bege);margin:.7em 0 0;max-width:none;
+  text-shadow:0 2px 14px rgba(20,9,2,.9);
+}
+/* A lista ganha marcador, como ela pediu. */
+#s5 .lista-topicos{margin-top:.85em;max-width:none}
+#s5 .lista-topicos li{position:relative;padding-left:1.05em}
+#s5 .lista-topicos li::before{
+  content:"";position:absolute;left:.08em;top:.6em;
+  width:7px;height:7px;border-radius:50%;background:var(--amarelo);
+}
+/* As tags e os dados de solidao descem, para abrir respiro entre o bloco de
+   argumento (titulo, subtitulo, lista) e o bloco de evidencia. */
+#s5 .bolhas{margin-top:clamp(1.3rem,3.4vh,2.8rem)}
+#s5 .dados-solidao{margin-top:clamp(1rem,2.6vh,2.2rem)}
+/* O titulo em duas linhas atravessava o caminho de 3 passos no canto direito
+   (medido: 179px de sobreposicao sobre "Rodas de Equipe PAAPS"). A largura
+   passa a parar antes dele. A segunda linha pode quebrar em duas visuais,
+   MAS a frase da OMS entre aspas nunca parte: e a parte de destaque, e a
+   regra da casa manda ela ficar inteira na mesma linha. */
+#s5 .t-fluxo--caps,#s5 .subt-fluxo,#s5 .lista-topicos{max-width:calc(100% - 330px)}
+#s5 .t-fluxo--caps .destaque{white-space:nowrap}
+
+/* ====== SLIDE 10 (id s9), continuação da reconstrução de 24/08 ==========
+   Faltava o CSS de tres classes novas do HTML: .lista-out (outbound em
+   lista), .cel--pos (posicionamento em coluna larga) e .fluxo__rede (o
+   incentivo de Instagram/LinkedIn dentro do INBOUND). */
+
+/* A lista do outbound: 8 itens, cada um uma linha, marcador discreto. */
+.lista-out{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;
+  gap:.5em;flex:1;justify-content:space-between}
+.lista-out li{
+  position:relative;padding-left:1.05em;
+  font-family:var(--corpo);font-weight:400;line-height:1.36;
+  font-size:clamp(.86rem,1.1vw,1.1rem);color:rgba(245,241,225,.92);
+}
+.lista-out li::before{
+  content:"";position:absolute;left:.08em;top:.52em;
+  width:6px;height:6px;border-radius:50%;background:var(--amarelo);
+}
+
+/* O incentivo de rede (Instagram no primeiro passo, LinkedIn no terceiro):
+   linha propria, League Spartan, cor de link. */
+.fluxo__rede{
+  display:block;margin-top:.3em;font-family:var(--titulo);font-weight:700;
+  font-size:clamp(.76rem,.96vw,.96rem);color:var(--amarelo);letter-spacing:.01em;
+}
+
+/* .cel--pos: a celula do Posicionamento e a unica das tres que so tem 2
+   itens, entao ela pode crescer mais que as vizinhas sem desequilibrar a
+   leitura. As colunas em si (INBOUND/OUTBOUND/POSICIONAMENTO) continuam do
+   mesmo tamanho pela grade .gtm--duplo: aqui e so o texto INTERNO que ganha
+   corpo maior, porque tem menos linha para preencher a mesma altura. */
+.cel--pos .pos__i{font-size:clamp(1.02rem,1.32vw,1.32rem);line-height:1.5}
+.cel--pos .pos__r{font-size:clamp(.88rem,1.14vw,1.14rem)}
+.cel--pos .pos{flex:1;justify-content:space-between}
+
+/* As celulas do OUTBOUND e do POSICIONAMENTO precisam ser flex-column para a
+   lista/pos interna esticar ate o pe da caixa (regra dela: "cheguem até o
+   final"). A do INBOUND (.gtm__fluxo) ja e flex column por outra regra. */
+#s9 .gtm--duplo > .cel{display:flex;flex-direction:column}
+
+/* Slide 08: MRR e ~60,1% estavam em .pilar__ano (0,6-0,72rem), ilegiveis ao
+   lado dos numeros de 2,5-3,4rem que eles qualificam. Os dois usos de
+   .pilar__ano no deck inteiro sao exclusivos deste slide, entao sobe aqui
+   sem risco de afetar outra peca. */
+#s7 .cel__n .pilar__ano{font-size:clamp(1.1rem,2.15vw,2.05rem);color:var(--amarelo);
+  font-family:var(--titulo);font-weight:700;margin-left:.28em}
+#s7 .pilar__n .pilar__ano{font-size:clamp(1.35rem,2.85vw,2.7rem);color:var(--amarelo);
+  font-family:var(--titulo);font-weight:700;margin-left:.22em}
+
+/* Slide 05: rotulo "Roda de Equipe PAAPS" acima das tags, League Spartan
+   normal (sem caixa alta), so "PAAPS" em amarelo, como ela pediu. */
+.bolhas__rot{
+  font-family:var(--titulo);font-weight:700;text-align:center;
+  font-size:clamp(1.35rem,1.9vw,1.9rem);color:var(--bege);
+  margin:0 0 .6em;text-shadow:0 2px 12px rgba(20,9,2,.85);
+}
+
+/* ====== SLIDE 07, chave dos socios ========================================
+   As duas linhas de cargo (Pao de Acucar, FEBRABAN) ganham um colchete
+   vertical a direita, igual em cor e peso a chave do slide 14 (so girada de
+   horizontal para vertical), com o rotulo SOCIOS DO MESMO CNPJ ao lado. A
+   terceira linha, que citava 99% de participacao feminina e "socios", vira
+   so "Fundada e liderada por duas mulheres.": nao expoe participacao
+   societaria (que pode mudar apos a diligencia da aceleradora) e nao cita
+   Luiz Sergio como socio, so como equipe (ele so aparece no dig__servicos,
+   nunca nomeado individualmente neste slide). */
+.dig__par{display:flex;align-items:stretch;gap:.7em}
+.dig__par__txt{display:flex;flex-direction:column;gap:.62em;flex:1;min-width:0}
+.dig__par__chave{
+  flex:0 0 auto;width:9px;align-self:stretch;
+  border-top:2px solid rgba(232,98,42,.9);
+  border-bottom:2px solid rgba(232,98,42,.9);
+  border-right:2px solid rgba(232,98,42,.9);
+  border-radius:0 5px 5px 0;
+}
+.dig__par__rot{
+  flex:0 0 auto;align-self:center;
+  font-family:var(--titulo);font-weight:700;letter-spacing:.02em;
+  text-transform:uppercase;font-size:clamp(.6rem,.75vw,.75rem);
+  line-height:1.28;color:#e8622a;white-space:nowrap;
+}
+.dig__cargo--founders{margin-top:.62em}
+
+/* ====== CAPA, ajustes de 24/08 ============================================
+   Dois logos na mesma faixa (Serasa + ACE Cortex), lado a lado, com a linha
+   guia encurtando naturalmente por causa do flex (nao precisou de max-width
+   manual). O logo da ACE Cortex e SVG com fill quase preto (#212121),
+   pensado pra fundo claro: sobre a foto escura da capa ele some, entao ganha
+   um chip bege, do mesmo jeito que o selo da Serasa ja usa no slide 18. */
+.faixa__logos{display:flex;align-items:center;gap:clamp(10px,1.1vw,16px)}
+.faixa__div{width:1px;height:clamp(16px,1.8vw,24px);background:rgba(245,241,225,.3)}
+.faixa__chip{
+  display:inline-flex;align-items:center;background:var(--bege);
+  border-radius:4px;padding:clamp(3px,.35vw,5px) clamp(6px,.7vw,10px);
+}
+.faixa__logo--cortex{
+  height:clamp(13px,1.5vw,20px);width:auto;
+  mix-blend-mode:normal;opacity:1;
+}
+
+/* O subtitulo pequeno "Baseado em evidencias", no corpo da faixa do topo. */
+.lead--sub{
+  font-family:var(--corpo);font-weight:400;
+  font-size:clamp(.82rem,1.05vw,1.05rem);line-height:1.3;
+  color:var(--creme-70);margin-top:.4em;
+  text-shadow:0 1px 12px rgba(20,9,2,.85);
+}
+
+/* ====== SLIDE 06, texto das experiencias preenchendo a caixa =============
+   Medido: o texto de cada card parava 44 a 84px antes do fim da caixa
+   (a caixa ja estica ate a altura da foto via align-items:stretch, so o
+   TEXTO nao preenchia essa altura). Aumentar o corpo fecha essa distancia,
+   porque a caixa recalcula a propria altura pelo conteudo mais alto: texto
+   maior = caixa mais alta = foto mais alta, os tres amarrados pelo mesmo
+   flex. Justificado para as linhas baterem nas duas margens, nao so a
+   esquerda. */
+#s6 .frag__q{
+  font-size:clamp(1.12rem,1.44vw,1.44rem);line-height:1.4;
+  text-align:justify;text-align-last:left;
+}
+
+/* ====== SLIDE 06, selos de midia ==========================================
+   Badge discreto no canto superior da foto de cada card, so nos dois
+   territorios que tiveram cobertura de TV. O de Bandeirantes e link real
+   (o video que ela mandou); o da Globo fica so texto, porque nao veio URL,
+   e link quebrado no PDF/PPT e pior que nenhum link. */
+.frag__foto{position:relative}
+.frag__midia{
+  position:absolute;top:4px;left:4px;z-index:2;
+  display:flex;align-items:center;gap:.4em;
+  background:rgba(20,9,2,.82);border:1px solid rgba(245,241,225,.28);
+  border-radius:3px;padding:.22em .45em;
+  text-decoration:none;color:inherit;
+}
+a.frag__midia:hover{border-color:var(--amarelo)}
+.frag__midia__ic{
+  font-style:normal;color:var(--amarelo);font-size:.62rem;line-height:1;
+}
+.frag__midia__t{display:flex;flex-direction:column;gap:0;line-height:1.05}
+.frag__midia__t b{
+  font-family:var(--titulo);font-weight:800;text-transform:uppercase;
+  letter-spacing:.03em;font-size:.5rem;color:var(--amarelo);
+}
+.frag__midia__t{font-family:var(--corpo);font-size:.58rem;color:var(--creme-90)}
