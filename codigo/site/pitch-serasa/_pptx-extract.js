@@ -38,28 +38,65 @@
     return /spartan/i.test(ff) ? "League Spartan" : "Helvetica";
   }
 
-  function trechos(el) {
-    var out = [];
+  /* Devolve as LINHAS do bloco como o navegador as quebrou, cada uma com seu
+     retangulo. E a correcao de raiz: se o PowerPoint receber a linha pronta,
+     ele nao tem o que requebrar, e a peca nao pode desalinhar. */
+  function linhas(el) {
+    var tokens = [];
     var w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null);
     var n;
     while ((n = w.nextNode())) {
       var bruto = n.textContent;
-      if (!bruto.trim()) {
-        if (out.length && !/ $/.test(out[out.length - 1].t)) out[out.length - 1].t += " ";
-        continue;
-      }
+      if (!bruto) continue;
       var p = n.parentElement;
       var cs = getComputedStyle(p);
-      out.push({
-        t: transformar(caixa(bruto), cs.textTransform),
+      var est = {
         b: parseInt(cs.fontWeight, 10) >= 600,
         i: cs.fontStyle === "italic",
         c: cs.color,
         f: familia(cs.fontFamily),
         s: parseFloat(cs.fontSize),
-      });
+        tt: cs.textTransform,
+      };
+      var re = /\s+|[^\s]+/g, m;
+      while ((m = re.exec(bruto))) {
+        tokens.push({ no: n, ini: m.index, fim: m.index + m[0].length, txt: m[0], est: est });
+      }
     }
-    return out;
+
+    var rg = document.createRange();
+    var linhas = [], atual = null;
+    tokens.forEach(function (t) {
+      var branco = !t.txt.trim();
+      rg.setStart(t.no, t.ini);
+      rg.setEnd(t.no, t.fim);
+      var r = rg.getBoundingClientRect();
+      if (branco || r.width < 0.5) {
+        /* espaco: nao abre linha, so separa dois trechos da mesma linha */
+        if (atual) atual.pend = " ";
+        return;
+      }
+      if (!atual || Math.abs(r.top - atual.top) > 3) {
+        atual = { top: r.top, esq: r.left, dir: r.right, base: r.bottom, runs: [], pend: "" };
+        linhas.push(atual);
+      }
+      atual.esq = Math.min(atual.esq, r.left);
+      atual.dir = Math.max(atual.dir, r.right);
+      atual.top = Math.min(atual.top, r.top);
+      atual.base = Math.max(atual.base, r.bottom);
+      var texto = transformar(t.txt, t.est.tt);
+      var ult = atual.runs[atual.runs.length - 1];
+      if (ult && ult.b === t.est.b && ult.i === t.est.i && ult.c === t.est.c &&
+          ult.f === t.est.f && ult.s === t.est.s) {
+        ult.t += atual.pend + texto;
+      } else {
+        atual.runs.push({ t: (ult ? atual.pend : "") + texto, b: t.est.b, i: t.est.i,
+                          c: t.est.c, f: t.est.f, s: t.est.s });
+      }
+      atual.pend = "";
+    });
+
+    return linhas.filter(function (l) { return l.runs.length; });
   }
 
   function visivel(el, cs) {
@@ -83,10 +120,17 @@
         blocos.forEach(function (el) {
           var cs = getComputedStyle(el);
           if (!visivel(el, cs)) return;
-          var r = el.getBoundingClientRect();
-          if (r.width < 2 || r.height < 2) return;
-          var tr = trechos(el);
-          if (!tr.length) return;
+          var cx = el.getBoundingClientRect();
+          if (cx.width < 2 || cx.height < 2) return;
+          /* O retangulo da CAIXA nao e o retangulo da TINTA: um container
+             flex centralizado e muito maior que a linha de texto. O Range
+             devolve a uniao das linhas, que e onde a letra esta de fato. */
+          var rg = document.createRange();
+          rg.selectNodeContents(el);
+          var r = rg.getBoundingClientRect();
+          if (r.width < 2 || r.height < 2) r = cx;
+          var lns = linhas(el);
+          if (!lns.length) return;
           var lh = cs.lineHeight === "normal"
             ? parseFloat(cs.fontSize) * 1.2
             : parseFloat(cs.lineHeight);
@@ -95,11 +139,28 @@
             y: Math.round((r.top - sr.top) * 100) / 100,
             w: Math.round(r.width * 100) / 100,
             h: Math.round(r.height * 100) / 100,
-            align: cs.textAlign,
+            align: (function () {
+              /* Se o texto esta centrado dentro do container por flex, o
+                 text-align diz "start" e mente. Comparar as folgas. */
+              var eg = r.left - cx.left, dg = cx.right - r.right;
+              if (Math.abs(eg - dg) < 4 && eg > 4) return "center";
+              if (/center/.test(cs.textAlign)) return "center";
+              if (/right|end/.test(cs.textAlign)) return "right";
+              if (dg < eg - 4) return "right";
+              return "left";
+            })(),
             lh: Math.round(lh * 100) / 100,
             fs: parseFloat(cs.fontSize),
             ls: parseFloat(cs.letterSpacing) || 0,
-            runs: tr,
+            linhas: lns.map(function (l) {
+              return {
+                x: Math.round((l.esq - sr.left) * 100) / 100,
+                y: Math.round((l.top - sr.top) * 100) / 100,
+                w: Math.round((l.dir - l.esq) * 100) / 100,
+                h: Math.round((l.base - l.top) * 100) / 100,
+                runs: l.runs,
+              };
+            }),
           });
           el.setAttribute("data-pptx", "1");
         });
