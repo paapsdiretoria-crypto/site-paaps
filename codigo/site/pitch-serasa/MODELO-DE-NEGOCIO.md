@@ -1,3 +1,9 @@
+> **SUPERADO em 25/08/2026.** Este arquivo descreve um modelo anterior, com ticket de
+> R$ 360 mil por município ao ano e SOM de R$ 36 milhões. O modelo vigente está em
+> `MODELO-PAAPS-COMPLETO.md` (Degrau 16) e a conta de mercado em `CALCULO-TAM-SAM-SOM.md`:
+> execução própria a R$ 924 mil, licença Base a R$ 64,8 mil, licença Plena a R$ 130,8 mil,
+> e SOM de 68 municípios com R$ 13,52 milhões no ano 5. Não usar os números daqui.
+
 # Modelo de negócio da PAAPS: contas, estrutura e o que o pitch pode dizer
 
 > Documento de trabalho, versão 2, 17/08/2026.

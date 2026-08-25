@@ -19,7 +19,7 @@ export function SectionProjecoes() {
       veu="veu-forte"
       posicao="center 50%"
       credito="Desterro do Melo, Minas Gerais."
-      fonte="Projeção com as premissas abertas: R$ 1.100 por Roda de Equipe, prefeitura atendida diretamente a ~R$ 924 mil ao ano, licença anual do método a R$ 64,8 mil e margem de contribuição de 60,1% por município."
+      fonte="Projeção com as premissas abertas. A receita tem quatro linhas: execução própria a R$ 924 mil por município ao ano, que são 70 Rodas de Equipe por mês a R$ 1.100 · licença Base a R$ 64,8 mil ao ano · licença Plena a R$ 130,8 mil ao ano · implantação de R$ 30 mil por licença nova. Margem de contribuição de 60,1% por município. No ano 5: 8 execuções próprias, 42 licenças Base, 18 licenças Plena e 35 implantações."
     >
       <div className="barras">
         <span className="brot brot--rec">Receita bruta projetada</span>

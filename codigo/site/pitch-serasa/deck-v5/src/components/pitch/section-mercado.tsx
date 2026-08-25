@@ -27,9 +27,9 @@ export function SectionMercado() {
           municípios acima de 10 mil habitantes, que comportam contrato direto
           ou licença: cerca de R$ 724 milhões por ano.
         </Dado>
-        <Dado titulo="SOM" numero="100">
-          municípios em cinco anos, com cerca de R$ 13,5 milhões de receita no
-          ano 5.
+        <Dado titulo="SOM" numero="68">
+          municípios no ano 5, 1,2% do total: 8 em execução própria e 60 com o
+          método licenciado, somando cerca de R$ 13,5 milhões de receita.
         </Dado>
       </div>
     </Slide>

@@ -43,8 +43,19 @@ número que o slide 09 já usa. **A fórmula fecha perfeitamente com o que estav
   porque é contagem, não mercado endereçável em ticket misto.
 - **SAM** = 2.550 municípios (acima de 10 mil habitantes) = **R$ 724 milhões/ano**. É a
   soma dos dois primeiros segmentos da tabela acima.
-- **SOM** = 100 municípios, meta de 5 anos, 1,8% do total = **R$ 13,5 milhões** de receita
-  no ano 5 (bate com o Degrau 18 da mesma página: projeção do ano 5 = R$ 13,52 milhões).
+- **SOM** = **68 municípios no ano 5, 1,2% do total** = **R$ 13,5 milhões** de receita no
+  ano 5. São 8 em execução própria mais 60 com o método licenciado (42 Base e 18 Plena),
+  que é exatamente a composição do Degrau 16: R$ 7,39 mi de execução própria, R$ 5,08 mi de
+  licenças e R$ 1,05 mi de implantações = **R$ 13,52 milhões**.
+
+> **Correção de 25/08/2026.** Até esta data o SOM estava escrito como "100 municípios,
+> 1,8% do total, R$ 13,5 milhões no ano 5", e a frase afirmava que o número batia com a
+> projeção. Não batia: a projeção chega aos R$ 13,52 milhões com **68** municípios, e o
+> próprio card de Projeções já dizia "28 pessoas, atendendo 68 prefeituras". O deck
+> declarava dois números de município para a mesma receita, em dois slides. Decisão da
+> Mallu: **alinhar o SOM à projeção**. Os 100 municípios eram meta de ambição, não
+> resultado do modelo, e por isso saíram. Corrigido também em `MANUAL-MODELO-E-PITCH.md`
+> e nos slides de Mercado e Roadmap do deck v5.
 
 ## Dependência do preço da Roda (R$ 1.100)
 

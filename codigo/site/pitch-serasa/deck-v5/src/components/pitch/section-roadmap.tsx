@@ -37,7 +37,7 @@ const marcos = [
     titulo: "Consórcio",
     texto: "um contrato, dezenas de cidades",
   },
-  { lado: "alto", titulo: "100 municípios", texto: "1,8% do Brasil" },
+  { lado: "alto", titulo: "68 municípios", texto: "1,2% do Brasil, no ano 5" },
   {
     lado: "baixo",
     titulo: "Fora do Brasil",

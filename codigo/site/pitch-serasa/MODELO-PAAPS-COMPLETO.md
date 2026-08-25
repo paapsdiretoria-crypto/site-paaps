@@ -738,6 +738,13 @@ voltado ao próprio servidor.
 
 **Meta de 5 anos: 100 municípios. 1,8% do total.** Defensável, não gulosa.
 
+> **Nota de 25/08/2026.** Os 100 municípios continuam sendo a **ambição** do recorte de
+> mercado, mas **não são o que o modelo produz em cinco anos**. A projeção do Degrau 16
+> chega a 68 municípios no ano 5 (8 em execução própria e 60 licenciados), e é dela que
+> saem os R$ 13,52 milhões. Decisão da Mallu: o deck declara 68. Ver
+> `CALCULO-TAM-SAM-SOM.md`.
+
+
 ---
 
 ## DEGRAU 16 · Projeção de 5 anos
