@@ -3,10 +3,8 @@ import { Card, Slide } from "./ui";
 export function SectionConcorrencia() {
   return (
     <Slide
+      claro
       rotulo="Concorrência"
-      foto="/fotos/12-concorrencia.jpg"
-      veu="veu-forte"
-      posicao="center 30%"
       fonte="Ata de Registro de Preços nº 41/2026, Central de Compras do Ministério da Gestão e da Inovação em Serviços Públicos · Diretrizes da OMS sobre saúde mental no trabalho, 2022."
     >
       <h2 className="t-afirma font-bold max-w-[26ch] text-balance">

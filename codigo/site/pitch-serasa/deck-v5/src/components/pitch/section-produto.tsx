@@ -31,7 +31,7 @@ export function SectionProduto() {
       credito="Vivência PAAPS, Minas Gerais."
       fonte="A supervisão semanal está na metodologia."
     >
-      <div className="grid md:grid-cols-[minmax(0,1fr)_minmax(0,.82fr)] gap-10 md:gap-16 items-center">
+      <div className="grid md:grid-cols-[minmax(0,1fr)_minmax(0,1.08fr)] gap-10 md:gap-14 items-center">
         {/* Esquerda: o texto empilhado, sem moldura, so as regras finas. */}
         <div>
           <h2 className="t-afirma font-bold max-w-[20ch] text-balance">
@@ -52,10 +52,10 @@ export function SectionProduto() {
         </div>
 
         {/* Direita: o abraco, grande e nitido, na frente do veu. */}
-        <div className="relative w-full aspect-[3/4] max-h-[76vh] justify-self-end">
+        <div className="relative w-full aspect-[4/3] max-h-[70vh] justify-self-end">
           <Image
-            src="/fotos/05-abraco.jpg"
-            alt="Duas mulheres se abraçando ao fim de uma vivência da PAAPS"
+            src="/fotos/05-produto-direita.jpg"
+            alt="Atividade de grupo da PAAPS ao ar livre"
             fill
             sizes="(max-width: 768px) 100vw, 40vw"
             quality={92}

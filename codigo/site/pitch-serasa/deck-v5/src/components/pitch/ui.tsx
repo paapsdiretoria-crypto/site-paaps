@@ -164,6 +164,7 @@ export function Slide({
   children,
   fonte,
   credito,
+  claro,
 }: {
   rotulo: string;
   foto?: string;
@@ -175,9 +176,18 @@ export function Slide({
   children: React.ReactNode;
   fonte?: React.ReactNode;
   credito?: string;
+  /* Sai da fotografia e vai para o bege da paleta, com a textura da casa. */
+  claro?: boolean;
 }) {
   return (
-    <div className="min-h-screen relative w-screen overflow-hidden">
+    <div
+      className={cn(
+        "min-h-screen relative w-screen overflow-hidden",
+        claro && "slide-claro"
+      )}
+    >
+      {claro ? <div className="slide-claro__textura" /> : null}
+
       {/* Slide sem foto definida fica no marrom do veu, liso. */}
       {fundo ??
         (foto ? (

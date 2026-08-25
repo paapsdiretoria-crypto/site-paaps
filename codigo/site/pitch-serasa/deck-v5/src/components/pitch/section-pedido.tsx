@@ -21,10 +21,8 @@ const etapas = [
 export function SectionPedido() {
   return (
     <Slide
+      claro
       rotulo="O pedido"
-      foto="/fotos/18-pedido.jpg"
-      veu="veu-forte"
-      posicao="center 30%"
     >
       <h2 className="t-afirma font-bold max-w-[26ch] text-balance">
         Entramos no programa para sair dele com o canal de prospecção construído

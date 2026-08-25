@@ -1094,3 +1094,58 @@
     grid-column: 1;
   }
 }
+
+/* ---------- Slide claro: bege da paleta com a textura da casa ----------- */
+/* Dois slides do deck saem da fotografia e vao para o bege. A textura e a
+   "Textura 2 marrom" da identidade, que e a mais fina das cinco: linhas
+   organicas de contorno. Entra a 5% de opacidade, entao ela existe na
+   impressao e no olho, mas nunca disputa com a letra. */
+.slide-claro {
+  background: var(--bege);
+  color: var(--marrom);
+}
+.slide-claro__textura {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: url("/texturas/textura-2-marrom.png");
+  /* Escala grande e opacidade baixa: os tracos leem como sombra larga do
+     papel, nao como padrao. Ela existe, mas nao se anuncia. */
+  background-size: 175% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.035;
+}
+
+/* Tudo que era bege sobre foto vira marrom sobre bege. */
+.slide-claro .t-afirma,
+.slide-claro h2,
+.slide-claro h3,
+.slide-claro .t-corpo,
+.slide-claro .t-rotulo,
+.slide-claro .t-cardtit,
+.slide-claro .font-mono {
+  color: var(--marrom);
+}
+.slide-claro .txt-suave {
+  color: rgba(68, 35, 9, 0.68);
+}
+.slide-claro .txt-amarelo {
+  color: var(--terracota);
+}
+.slide-claro .t-fonte {
+  color: rgba(68, 35, 9, 0.55);
+}
+.slide-claro .credito {
+  color: rgba(68, 35, 9, 0.45);
+}
+/* O card perde o vidro: sobre bege nao ha o que desfocar. Fica a borda fina
+   em marrom, que e quem desenhava a caixa desde o inicio. */
+.slide-claro .border-\[rgba\(245\,241\,225\,\.20\)\] {
+  border-color: rgba(68, 35, 9, 0.22) !important;
+}
+.slide-claro .bg-\[rgba\(245\,241\,225\,\.04\)\] {
+  background: rgba(68, 35, 9, 0.03) !important;
+  backdrop-filter: none !important;
+}
