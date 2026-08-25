@@ -58,7 +58,7 @@ export function SectionAnexo() {
       veu="veu-forte"
       posicao="center 36%"
       credito="PAAPS em campo."
-      fonte="Premissas do modelo: estrutura fixa de R$ 12 mil por mês, crescendo até R$ 150 mil no ano 5 · pró-labore de R$ 10 mil por mês para a sócia que conduz a PAAPS · saída do Simples Nacional no ano 3 · o Diagnóstico 360° a R$ 10 mil é porta de entrada, contabilizada como investimento comercial · Modelo de negócio completo mediante solicitação."
+      fonte="Premissas do modelo: estrutura fixa de R$ 12 mil por mês · pró-labore de R$ 10 mil por mês para a sócia que conduz a PAAPS · saída do Simples Nacional no ano 3 · o Diagnóstico 360° a R$ 10 mil é porta de entrada, contabilizada como investimento comercial · Modelo de negócio completo mediante solicitação."
     >
       <h2 className="t-afirma font-bold">Como chegamos nesses números.</h2>
 

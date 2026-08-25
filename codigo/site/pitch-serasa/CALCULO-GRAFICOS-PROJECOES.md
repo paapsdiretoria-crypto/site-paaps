@@ -226,12 +226,22 @@ e o serviço que chega ao cidadão, que é o que a gestão apresenta ao eleitor.
 
 ---
 
-## Pendência aberta, que não é deste slide
+## A estrutura fixa não entra em nenhum destes números
 
-A estrutura fixa da empresa cresce de R$ 12 mil para R$ 150 mil por mês no ano
-5 e **nunca foi reconstruída linha a linha**. É ela que produz a margem
-operacional de 41% a 46%, o ponto de equilíbrio de 0,26 e a métrica do Anexo.
-Enquanto não for reconstruída, esses três números carregam a mesma incerteza.
+Registrado em 25/08/2026, corrigindo o que eu tinha escrito antes.
+
+As três métricas do Anexo se apoiam na **estrutura real de hoje, R$ 12 mil por
+mês**, e não em estrutura projetada:
+
+- ponto de equilíbrio: R$ 12 mil ÷ R$ 46,31 mil de margem mensal de um
+  município = **0,26 município**
+- LTV de ~R$ 711 mil: margem de contribuição, não passa por estrutura
+- margem de 60,1%: custo da Roda, não passa por estrutura
+
+A linha de estrutura crescente que existia no Degrau 16 **saiu do deck** por
+decisão da Mallu, e com ela saiu a margem operacional de 41% a 46%, que era o
+único número do deck que dependia dela. Os cinco gráficos deste slide não usam
+estrutura em nenhuma conta.
 
 ---
 
