@@ -163,6 +163,7 @@ export function Slide({
   prioridade,
   children,
   fonte,
+  credito,
 }: {
   rotulo: string;
   foto?: string;
@@ -173,6 +174,7 @@ export function Slide({
   prioridade?: boolean;
   children: React.ReactNode;
   fonte?: React.ReactNode;
+  credito?: string;
 }) {
   return (
     <div className="min-h-screen relative w-screen overflow-hidden">
@@ -204,6 +206,10 @@ export function Slide({
           {fonte}
         </p>
       ) : null}
+
+      {/* Credito de foto: so onde a imagem e mesmo da PAAPS. Foto de terceiro
+          nunca leva credito nosso. */}
+      {credito ? <span className="credito">{credito}</span> : null}
     </div>
   );
 }

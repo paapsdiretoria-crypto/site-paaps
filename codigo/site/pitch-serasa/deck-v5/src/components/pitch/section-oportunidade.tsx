@@ -15,6 +15,7 @@ export function SectionOportunidade() {
           ]}
         />
       }
+      credito="Roda de escuta conduzida pela PAAPS, Minas Gerais."
       fonte="Serasa Experian, Mapa da Inadimplência 2026 · SalaryFits, Saúde Financeira e Bem-Estar do Trabalhador Brasileiro · Ipea, Atlas do Estado Brasileiro · Erro no atendimento: BMJ, 2022, revisão de 35 estudos."
     >
       <h2 className="t-afirma font-bold max-w-[24ch] text-balance">

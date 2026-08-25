@@ -18,6 +18,7 @@ export function SectionProjecoes() {
       foto="/fotos/11-projecoes.jpg"
       veu="veu-forte"
       posicao="center 50%"
+      credito="Desterro do Melo, Minas Gerais."
       fonte="Projeção com as premissas abertas: R$ 1.100 por Roda de Equipe, prefeitura atendida diretamente a ~R$ 924 mil ao ano, licença anual do método a R$ 64,8 mil e margem de contribuição de 60,1% por município."
     >
       <div className="barras">

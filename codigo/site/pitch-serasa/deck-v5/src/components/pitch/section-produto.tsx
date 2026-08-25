@@ -28,6 +28,7 @@ export function SectionProduto() {
       foto="/fotos/05-produto.jpg"
       veu="veu-forte"
       posicao="center 40%"
+      credito="Vivência PAAPS, Minas Gerais."
       fonte="A supervisão semanal está na metodologia."
     >
       <div className="grid md:grid-cols-[minmax(0,1fr)_minmax(0,.82fr)] gap-10 md:gap-16 items-center">

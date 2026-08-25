@@ -7,6 +7,7 @@ export function SectionModelo() {
       foto="/fotos/09-modelo.jpg"
       veu="veu-forte"
       posicao="center 38%"
+      credito="PAAPS em campo."
       fonte="Folha calculada sobre salário de R$ 6.000, Simples Nacional, Anexo III, 4ª faixa · Modelo de negócio completo mediante solicitação."
     >
       <span className="font-mono t-num font-bold block">60,1%</span>

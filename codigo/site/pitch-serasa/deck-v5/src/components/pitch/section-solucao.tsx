@@ -7,8 +7,30 @@ export function SectionSolucao() {
       foto="/fotos/04-solucao.jpg"
       veu="veu-denso"
       posicao="center 38%"
+      credito="PAAPS em campo, Minas Gerais."
       fonte="Organização Mundial da Saúde. Diretrizes da OMS sobre saúde mental no trabalho. Genebra: OMS, 2022."
     >
+      {/* O caminho em miniatura, trazido do slide 05 do pitch antigo. */}
+      <ol className="mini-caminho">
+        <li className="mini-caminho__passo">
+          <span className="mini-caminho__pt" />
+          <span className="mini-caminho__t">
+            Diagnóstico 360<i>°</i>
+          </span>
+        </li>
+        <li className="mini-caminho__passo">
+          <span className="mini-caminho__pt" />
+          <span className="mini-caminho__t">Rodas de Equipe PAAPS</span>
+        </li>
+        <li className="mini-caminho__passo">
+          <span className="mini-caminho__pt" />
+          <span className="mini-caminho__t">
+            Ponto de Apoio
+            <span className="mini-caminho__sub">dados em tempo real</span>
+          </span>
+        </li>
+      </ol>
+
       <h2 className="t-afirma font-bold max-w-[24ch] text-balance">
         “Formar gestores e trabalhar a equipe” é a única recomendação forte da
         OMS em saúde mental no trabalho.

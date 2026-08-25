@@ -76,6 +76,7 @@ export function SectionEquipe() {
       foto="/fotos/14-equipe-a.jpg"
       veu="veu-forte"
       posicao="68% center"
+      credito="PAAPS em campo, Minas Gerais e Rio de Janeiro."
     >
       <h2 className="t-afirma font-bold text-center mx-auto max-w-[28ch] text-balance">
         As core skills da PAAPS já estão cobertas pela equipe semente.

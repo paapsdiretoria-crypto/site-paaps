@@ -4,13 +4,24 @@
     {
       "name": "site-paaps",
       "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "8080", "--directory", "codigo/site"],
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8080",
+        "--directory",
+        "codigo/site"
+      ],
       "port": 8080
     },
     {
-      "name": "pitch-paaps",
+      "name": "pitch-serasa-v5",
       "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "dev", "--prefix", "codigo/pitch-paaps"],
+      "runtimeArgs": [
+        "run",
+        "dev",
+        "--prefix",
+        "codigo/site/pitch-serasa/deck-v5"
+      ],
       "port": 3210
     }
   ]
