@@ -1,0 +1,9 @@
+/* Congela o deck no estado final: sem animacao de entrada, sem transicao.
+   Sem isso, a captura da geometria e a captura da foto pegam a animacao em
+   estados diferentes e a peca sai desalinhada em 22px. Arquivo temporario. */
+*, *::before, *::after {
+  animation: none !important;
+  transition: none !important;
+}
+.rev { opacity: 1 !important; transform: none !important; }
+.centro-flut, .centro-flut.rev { transform: translate(-50%, -50%) !important; }
