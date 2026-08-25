@@ -3,7 +3,7 @@
 Todo o texto que existe hoje nos 19 slides, palavra por palavra, sem descrição de
 elemento visual. É o material bruto sobre o qual vamos cortar.
 
-Versão congelada em `index-v4-ESTUDO-COMPLETO.html` + `pitch-v4-ESTUDO-COMPLETO.css`.
+Versão congelada no **pitch handout**, `pitch-handout.html` + `pitch-handout.css`.
 Data da transcrição: 24/08/2026.
 
 ---

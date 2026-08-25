@@ -7,7 +7,8 @@ versões do mesmo deck, vivas ao mesmo tempo, para poder comparar.
 
 **Versão 4, a de estudo.** `index-v4.html` mais `pitch.css`. Dezenove slides em
 HTML e CSS puro. É onde está toda a pesquisa e todas as fontes. Congelada como
-`index-v4-ESTUDO-COMPLETO.html`, que roda sozinha e não muda mais.
+**pitch handout**, em `pitch-handout.html` mais `pitch-handout.css`, que roda
+sozinha e não muda mais.
 
 Para abrir:
 
