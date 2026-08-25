@@ -46,6 +46,10 @@ export function SectionTecnologia() {
             A PAAPS vai estar dentro da rede todo mês, e cada Roda vira
             registro.
           </h2>
+          <p className="t-corpo txt-suave mt-4 max-w-[34ch]">
+            Dados coletados pelas Psicólogas PAAPS, atualizados mensalmente,
+            sem dados sensíveis individuais.
+          </p>
         </div>
 
         {/* O mockup do app, trazido do deck antigo sem redesenho. */}

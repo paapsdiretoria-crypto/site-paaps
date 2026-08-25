@@ -31,13 +31,14 @@ export function SectionOportunidade() {
           dos brasileiros inadimplentes ganham até dois salários mínimos. O
           servidor municipal ganha R$ 2.640.
         </Dado>
-        <Dado titulo="Consequência" numero="2×">
-          a chance de erro no atendimento quando quem atende está esgotado.
+        <Dado titulo="Exaustão" numero="46%">
+          dos trabalhadores endividados relatam exaustão extrema.
         </Dado>
       </div>
 
       <p className="t-corpo mt-8">
-        46% dos trabalhadores endividados relatam exaustão extrema.
+        <b>Consequência.</b> 2× a chance de erro no atendimento quando quem
+        atende está esgotado.
       </p>
     </Slide>
   );

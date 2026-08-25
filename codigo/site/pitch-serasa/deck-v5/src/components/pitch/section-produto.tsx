@@ -5,19 +5,19 @@ import { Slide } from "./ui";
    elas ganharam ordem, e a ordem e que mostra que existe metodo. */
 const grupos = [
   {
-    titulo: "Sobre o caso",
+    titulo: "Ao trabalho",
     praticas:
       "elaboração de casos · relação e vínculo com quem é atendido · demandas coletivas da equipe",
   },
   {
-    titulo: "Sobre a equipe",
+    titulo: "À equipe",
     praticas:
-      "manejo coletivo e mediação de conflitos · acordos de comunicação · aprendizagem entre pares",
+      "manejo coletivo e mediação de conflitos · acordos de comunicação · aprendizagem entre pares, Saúde Social e cooperação",
   },
   {
-    titulo: "Sobre a pessoa",
+    titulo: "À mim",
     praticas:
-      "autorregulação emocional · compartilhamento seguro · vínculo profissional protetivo",
+      "autorregulação emocional · compartilhamento seguro · vínculo profissional protetivo em casos mais graves de saúde mental",
   },
 ];
 
@@ -29,13 +29,36 @@ export function SectionProduto() {
       veu="veu-forte"
       posicao="center 40%"
       credito="Vivência PAAPS, Minas Gerais."
-      fonte="A supervisão semanal está na metodologia."
     >
       <div className="grid md:grid-cols-[minmax(0,1fr)_minmax(0,1.08fr)] gap-10 md:gap-14 items-center">
         {/* Esquerda: o texto empilhado, sem moldura, so as regras finas. */}
         <div>
-          <h2 className="t-afirma font-bold max-w-[20ch] text-balance">
-            A equipe elabora as cenas do próprio trabalho, junto.
+          {/* O caminho em miniatura, trazido do slide 04 para o slide 05,
+              exatamente como estava no pitch antigo. */}
+          <ol className="mini-caminho">
+            <li className="mini-caminho__passo">
+              <span className="mini-caminho__pt" />
+              <span className="mini-caminho__t">
+                Diagnóstico 360<i>°</i>
+              </span>
+            </li>
+            <li className="mini-caminho__passo">
+              <span className="mini-caminho__pt" />
+              <span className="mini-caminho__t">Rodas de Equipe PAAPS</span>
+            </li>
+            <li className="mini-caminho__passo">
+              <span className="mini-caminho__pt" />
+              <span className="mini-caminho__t">
+                Ponto de Apoio
+                <span className="mini-caminho__sub">
+                  app e dados em tempo real
+                </span>
+              </span>
+            </li>
+          </ol>
+
+          <h2 className="t-afirma font-bold mt-6 max-w-[22ch] text-balance">
+            Rodas de equipe PAAPS possuem 3 fases.
           </h2>
 
           <dl className="mt-10 md:mt-12 border-t border-[rgba(245,241,225,.20)]">
@@ -49,6 +72,11 @@ export function SectionProduto() {
               </div>
             ))}
           </dl>
+
+          <p className="t-corpo txt-suave mt-5 max-w-[52ch]">
+            A 4ª fase é a Supervisão semanal para as Psicólogas PAAPS. A
+            qualidade e impacto estão na metodologia.
+          </p>
         </div>
 
         {/* Direita: o abraco, grande e nitido, na frente do veu. */}

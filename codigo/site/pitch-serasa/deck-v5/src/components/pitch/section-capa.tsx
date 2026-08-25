@@ -59,7 +59,9 @@ export function SectionCapa() {
           A Rede de <span className="txt-amarelo">Saúde Mental</span> para as
           Políticas Públicas do futuro.
         </h1>
-        <p className="t-rotulo txt-suave mt-6">Baseado em evidências.</p>
+        <p className="t-rotulo txt-suave mt-6">
+          Baseado em <u className="italic">evidências</u>.
+        </p>
       </div>
     </div>
   );

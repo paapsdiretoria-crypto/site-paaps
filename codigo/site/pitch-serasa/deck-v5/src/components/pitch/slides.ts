@@ -1,6 +1,7 @@
 import { SectionAgora } from "@/components/pitch/section-agora";
 import { SectionAnexo } from "@/components/pitch/section-anexo";
 import { SectionCapa } from "@/components/pitch/section-capa";
+import { SectionCapaCelina } from "@/components/pitch/section-capa-celina";
 import { SectionConcorrencia } from "@/components/pitch/section-concorrencia";
 import { SectionDigging } from "@/components/pitch/section-digging";
 import { SectionEquipe } from "@/components/pitch/section-equipe";
@@ -9,7 +10,6 @@ import { SectionMercado } from "@/components/pitch/section-mercado";
 import { SectionMetricas } from "@/components/pitch/section-metricas";
 import { SectionModelo } from "@/components/pitch/section-modelo";
 import { SectionOportunidade } from "@/components/pitch/section-oportunidade";
-import { SectionPedido } from "@/components/pitch/section-pedido";
 import { SectionProblema } from "@/components/pitch/section-problema";
 import { SectionProjecoes } from "@/components/pitch/section-projecoes";
 import { SectionRoadmap } from "@/components/pitch/section-roadmap";
@@ -22,7 +22,8 @@ import { SectionValidacao } from "@/components/pitch/section-validacao";
 /* A ordem do deck. Uma lista so, lida pelo carrossel e pela rota /slide/[n],
    para que as duas nunca saiam de sincronia. */
 export const slides = [
-  { nome: "Capa", Componente: SectionCapa },
+  { nome: "Capa", Componente: SectionCapaCelina },
+  { nome: "Contra-capa", Componente: SectionCapa },
   { nome: "Problema", Componente: SectionProblema },
   { nome: "Por que agora", Componente: SectionAgora },
   { nome: "Solucao", Componente: SectionSolucao },
@@ -39,7 +40,6 @@ export const slides = [
   { nome: "Tecnologia", Componente: SectionTecnologia },
   { nome: "A oportunidade", Componente: SectionOportunidade },
   { nome: "Equipe", Componente: SectionEquipe },
-  { nome: "O pedido", Componente: SectionPedido },
   { nome: "Fecho", Componente: SectionFecho },
   { nome: "Anexo", Componente: SectionAnexo },
 ];
