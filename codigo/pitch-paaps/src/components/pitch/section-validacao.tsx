@@ -7,6 +7,7 @@ export function SectionValidacao() {
       foto="/fotos/06-validacao.jpg"
       veu="veu-forte"
       posicao="center 46%"
+      quente
       fonte="Schwartz Center for Compassionate Healthcare, licenciador; a Point of Care Foundation conduziu o programa de 2009 a 2025 · Diretrizes da OMS sobre saúde mental no trabalho, 2022."
     >
       <h2 className="t-afirma font-bold max-w-[24ch] text-balance">

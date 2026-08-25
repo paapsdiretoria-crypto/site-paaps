@@ -68,15 +68,25 @@ export function Fundo({
   posicao,
   alt = "",
   prioridade = false,
+  quente = false,
 }: {
   src: string;
   veu?: "veu-denso" | "veu-base" | "veu-capa" | "veu-forte" | "veu-suave";
   posicao?: string;
   alt?: string;
   prioridade?: boolean;
+  /* Viragem quente: leva a foto fria para o mesmo marrom da foto do slide
+     "Onde ja estivemos", que e quente por natureza. */
+  quente?: boolean;
 }) {
   return (
-    <div className={cn("absolute inset-0 z-0 overflow-hidden veu", veu)}>
+    <div
+      className={cn(
+        "absolute inset-0 z-0 overflow-hidden veu",
+        veu,
+        quente && "foto-quente"
+      )}
+    >
       <Image
         src={src}
         alt={alt}
@@ -147,6 +157,7 @@ export function Slide({
   rotulo,
   foto,
   fundo,
+  quente,
   veu,
   posicao,
   prioridade,
@@ -156,6 +167,7 @@ export function Slide({
   rotulo: string;
   foto?: string;
   fundo?: React.ReactNode;
+  quente?: boolean;
   veu?: "veu-denso" | "veu-base" | "veu-capa" | "veu-forte" | "veu-suave";
   posicao?: string;
   prioridade?: boolean;
@@ -164,14 +176,17 @@ export function Slide({
 }) {
   return (
     <div className="min-h-screen relative w-screen overflow-hidden">
-      {fundo ?? (
-        <Fundo
-          src={foto as string}
-          veu={veu}
-          posicao={posicao}
-          prioridade={prioridade}
-        />
-      )}
+      {/* Slide sem foto definida fica no marrom do veu, liso. */}
+      {fundo ??
+        (foto ? (
+          <Fundo
+            src={foto}
+            veu={veu}
+            posicao={posicao}
+            prioridade={prioridade}
+            quente={quente}
+          />
+        ) : null)}
 
       <div className="absolute left-4 right-4 md:left-8 md:right-8 top-4 flex justify-between t-rotulo z-20 font-mono uppercase tracking-wide">
         <span>{rotulo}</span>

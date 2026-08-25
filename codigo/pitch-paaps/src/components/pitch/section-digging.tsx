@@ -6,7 +6,7 @@ export function SectionDigging() {
       rotulo="Quem opera"
       foto="/fotos/08-digging.jpg"
       veu="veu-forte"
-      posicao="center 34%"
+      posicao="center 42%"
       fonte="DREs e balanços dos exercícios de 2022 a 2025 · Certidão de Inteiro Teor da 8ª alteração contratual, JUCESP, 27/04/2026."
     >
       <div className="grid md:grid-cols-[minmax(0,.9fr)_minmax(0,1.1fr)] gap-8 md:gap-14 items-end">

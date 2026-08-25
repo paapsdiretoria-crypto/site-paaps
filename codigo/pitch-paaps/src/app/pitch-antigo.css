@@ -399,3 +399,350 @@
   color: var(--creme-70);
   margin-top: 0.5em;
 }
+
+/* ---------- Equipe: os tres niveis de hierarquia ------------------------ */
+/* Estrutura copiada do slide 17 do pitch antigo. A unica troca: os fios e os
+   contornos das fotos eram amarelos e terracota, e passam a ser bege, que foi
+   o que ela pediu ao dizer "contornos em branco". */
+
+.eq {
+  --eqfoto: clamp(48px, 6.1vh, 72px);
+  --eqfio: clamp(15px, 2.1vh, 25px);
+  --eqgap: clamp(1.4rem, 4vw, 4rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0.9em;
+}
+.eq__n1,
+.eq__n2,
+.eq__n3 {
+  display: flex;
+  justify-content: center;
+  gap: var(--eqgap);
+  position: relative;
+}
+/* Cada nivel declara a largura do proprio cartao, porque e ela que decide onde
+   ficam os centros das duas fotos, e portanto onde o travessao comeca e
+   termina. Sem isso o fio seria desenhado por porcentagem e nunca encostaria
+   na foto. */
+.eq__n1 {
+  --cardw: min(36ch, 340px);
+}
+.eq__n2 {
+  --cardw: min(29ch, 285px);
+}
+.eq__n3 {
+  --cardw: min(21ch, 210px);
+}
+.eq__n1 .eq__p,
+.eq__n2 .eq__p,
+.eq__n3 .eq__p {
+  width: var(--cardw);
+}
+/* Travessao que une os dois irmaos do nivel: corre na altura do CENTRO das
+   fotos e vai de borda a borda delas. Nessa altura o cartao so tem a foto,
+   entao nada e coberto. */
+.eq__n1::before,
+.eq__n2::before,
+.eq__n3::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  translate: -50% 0;
+  top: calc(var(--eqfoto) / 2);
+  height: 2px;
+  width: calc(var(--cardw) + var(--eqgap) - var(--eqfoto));
+  background: rgba(245, 241, 225, 0.62);
+}
+/* Espinha vertical que desce do centro de um nivel ate o centro do seguinte,
+   pelo vao entre os dois cartoes, que e vazio em toda a altura. */
+.eq__n1::after,
+.eq__n2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  translate: -50% 0;
+  top: calc(var(--eqfoto) / 2);
+  height: calc(100% + var(--eqfio));
+  width: 2px;
+  background: rgba(245, 241, 225, 0.62);
+}
+.eq__n2,
+.eq__n3 {
+  margin-top: var(--eqfio);
+}
+.eq__p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.eq__foto {
+  width: var(--eqfoto);
+  height: var(--eqfoto);
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(245, 241, 225, 0.85);
+  margin-bottom: 0.32em;
+}
+.eq__p--sup .eq__foto {
+  border-color: rgba(245, 241, 225, 0.5);
+}
+.eq__nome {
+  font-family: var(--titulo);
+  font-weight: 700;
+  line-height: 1.12;
+  color: var(--bege);
+  font-size: clamp(0.86rem, 1.12vw, 1.12rem);
+  text-shadow: 0 2px 14px rgba(20, 9, 2, 0.9);
+}
+.eq__skill {
+  font-family: var(--corpo);
+  font-size: clamp(0.72rem, 0.88vw, 0.88rem);
+  line-height: 1.31;
+  color: var(--creme-70);
+  margin-top: 0.14em;
+  text-shadow: 0 1px 12px rgba(20, 9, 2, 0.9);
+}
+.eq__skill i {
+  color: var(--bege-rosa);
+  font-style: italic;
+}
+/* As cadeiras que a IA ocupa: faixa propria, para nao parecer que a maquina e
+   subordinada a alguem do organograma. */
+.eq__ia {
+  margin-top: clamp(12px, 1.8vh, 22px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55em;
+  flex-wrap: wrap;
+  padding-top: 0.66em;
+  border-top: 1px dashed rgba(245, 241, 225, 0.5);
+  width: 100%;
+}
+.eq__ia__l {
+  font-family: var(--corpo);
+  font-size: clamp(0.75rem, 0.9vw, 0.9rem);
+  line-height: 1.33;
+  color: var(--creme-70);
+  margin: 0;
+}
+.eq__ia__l b {
+  color: var(--bege);
+}
+
+/* Fila de fotos do ecossistema: ESTATICA. A esteira animada nao sobreviveria
+   a exportacao em PDF. */
+.ecos {
+  margin-top: clamp(12px, 1.8vh, 22px);
+  width: 100%;
+}
+.ecos__fotos {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 3px;
+}
+.ecos__fotos span {
+  position: relative;
+  display: block;
+  height: clamp(40px, 6.6vh, 76px);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.ecos__fotos img {
+  object-fit: cover;
+  filter: saturate(0.85);
+}
+/* Os dois numeros do ecossistema. Cada par ocupa metade da largura da fila,
+   entao os dois juntos abrem o slide inteiro na horizontal. */
+.ecos__d {
+  display: flex;
+  width: 100%;
+  margin-top: 0.62em;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(1.8rem, 4.6vw, 4.6rem);
+  flex-wrap: wrap;
+}
+.ecos__i {
+  flex: 0 1 auto;
+  display: flex;
+  align-items: center;
+  gap: 0.52em;
+  text-align: left;
+}
+.ecos__n {
+  font-family: var(--titulo);
+  font-weight: 800;
+  color: var(--amarelo);
+  font-size: clamp(2rem, 3.9vw, 3.9rem);
+  line-height: 0.88;
+  letter-spacing: -0.015em;
+  text-shadow: 0 2px 20px rgba(20, 9, 2, 0.95);
+}
+.ecos__t {
+  margin: 0;
+  font-family: var(--corpo);
+  line-height: 1.26;
+  color: rgba(245, 241, 225, 0.9);
+  font-size: clamp(0.82rem, 1.02vw, 1.02rem);
+  text-shadow: 0 1px 12px rgba(20, 9, 2, 0.95);
+}
+@media (max-width: 820px) {
+  .eq__n1,
+  .eq__n2,
+  .eq__n3 {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .eq__n1 .eq__p,
+  .eq__n2 .eq__p,
+  .eq__n3 .eq__p {
+    width: min(21ch, 210px);
+  }
+  .eq__n1::before,
+  .eq__n2::before,
+  .eq__n3::before,
+  .eq__n1::after,
+  .eq__n2::after {
+    display: none;
+  }
+  .ecos__fotos {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .ecos__d {
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+}
+
+/* ---------- Fecho: a coluna de ODS e os selos dos parceiros ------------- */
+
+.ods-lado {
+  position: absolute;
+  top: clamp(1.4rem, 3vh, 2.6rem);
+  bottom: clamp(0.8rem, 1.8vh, 1.5rem);
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: clamp(52px, 5.6vw, 86px);
+  right: clamp(0.8rem, 1.8vw, 1.6rem);
+  opacity: 0.94;
+}
+.ods-lado span {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.selos-parceiros {
+  position: absolute;
+  z-index: 6;
+  top: clamp(1.4rem, 3vh, 2.6rem);
+  right: calc(clamp(0.8rem, 1.8vw, 1.6rem) + clamp(52px, 5.6vw, 86px) + 14px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+.selo-serasa,
+.selo-cortex {
+  background: var(--bege);
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.selo-serasa {
+  padding: 5px 8px;
+}
+.selo-serasa img {
+  height: clamp(18px, 2vw, 26px);
+  width: auto;
+}
+.selo-cortex {
+  width: clamp(52px, 5.6vw, 86px);
+  padding: 6px 8px;
+}
+.selo-cortex img {
+  width: 100%;
+  height: auto;
+}
+/* O rosto dela e o assunto da pagina: a marca encolhe e as duas frases descem. */
+.fecho__marca {
+  height: clamp(30px, 3.4vw, 46px);
+  width: auto;
+  filter: drop-shadow(0 4px 26px rgba(20, 9, 2, 0.85));
+  margin-bottom: clamp(6px, 1.2vh, 14px);
+}
+.fecho__frase {
+  margin-top: 0.72em;
+  max-width: 30ch;
+  font-size: clamp(1.06rem, 2.05vw, 2.05rem);
+  line-height: 1.12;
+}
+.fecho__frase2 {
+  margin-top: 0.18em;
+  max-width: 34ch;
+  font-size: clamp(0.95rem, 1.78vw, 1.78rem);
+  line-height: 1.16;
+}
+.fecho__cta {
+  max-width: 46ch;
+  font-size: clamp(0.95rem, 1.72vw, 1.72rem);
+  line-height: 1.22;
+}
+.tricolor {
+  display: flex;
+  width: clamp(90px, 10vw, 150px);
+  margin: 1.15em auto;
+}
+.tricolor i {
+  flex: 1;
+  height: clamp(5px, 0.62vw, 8px);
+}
+.tricolor i:nth-child(1) {
+  background: var(--terracota);
+}
+.tricolor i:nth-child(2) {
+  background: var(--amarelo);
+}
+.tricolor i:nth-child(3) {
+  background: var(--oliva);
+}
+.fecho__contato {
+  position: absolute;
+  left: clamp(1rem, 2vw, 2rem);
+  right: clamp(1rem, 2vw, 2rem);
+  bottom: clamp(1rem, 2.2vh, 2rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(1.1rem, 2.3vw, 2.3rem);
+  flex-wrap: wrap;
+  font-family: var(--titulo);
+  font-weight: 700;
+  color: var(--amarelo);
+  font-size: clamp(0.84rem, 1.08vw, 1.08rem);
+  letter-spacing: 0.02em;
+  max-width: min(92%, 1500px);
+  margin: 0 auto;
+  z-index: 6;
+}
+.fecho__contato b {
+  font-weight: 700;
+  color: #fff;
+}
+
+/* ---------- Foto com viragem quente ------------------------------------ */
+/* O calor da foto do slide "Onde ja estivemos" e da propria imagem. Para
+   levar o mesmo tom a uma foto fria, a viragem entra por filtro. */
+.foto-quente img {
+  filter: sepia(0.42) saturate(1.35) hue-rotate(-14deg) contrast(1.04)
+    brightness(0.98);
+}
