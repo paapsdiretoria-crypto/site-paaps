@@ -841,12 +841,10 @@ window.addEventListener('load', function () {
   setTimeout(function () {
     var d = window.__pptxEsconder();
     var s = document.createElement('script');
-    s.type = 'application/json';
-    s.id = 'pptxdata';
+    s.type = 'application/json'; s.id = 'pptxdata';
     s.textContent = JSON.stringify(d);
     document.body.appendChild(s);
-    document.documentElement.setAttribute('data-pptx-pronto', '1');
-  }, 900);
+  }, 1200);
 });
 </script>
 </body>

@@ -2,26 +2,40 @@
    posição, tamanho e formatação. Serve para remontar a peça no PowerPoint com
    caixa de texto de verdade, em vez de figura. Arquivo temporário. */
 (function () {
+  /* Bloco de verdade: o que gera caixa de bloco no CSS. inline-block NAO
+     entra: ele flui dentro da linha do pai, e tratar como bloco era o que
+     arrancava o texto do lugar. */
   function ehBloco(el) {
     var d = getComputedStyle(el).display;
-    return !/^(inline|contents)$/.test(d);
+    return /^(block|flex|grid|list-item|table|flow-root)/.test(d) && !/^inline/.test(d);
   }
 
-  /* Um "bloco de texto" e o elemento mais interno que ainda contem texto e
-     cujos filhos sao todos de linha. Assim negrito e destaque em cor viram
-     trechos DENTRO da mesma caixa, e nao caixas separadas. */
+  /* Mesma regra do CSS: quando um elemento mistura texto solto com filhos de
+     bloco, o texto solto vira uma caixa anonima. Antes esse texto era
+     simplesmente descartado, ficava aceso no fundo e o resto caia por cima. */
   function coletar(raiz, saida) {
-    var kids = Array.prototype.slice.call(raiz.children);
-    var temFilhoBloco = kids.some(function (k) {
-      return ehBloco(k) && k.textContent.trim() !== "";
-    });
-    if (!temFilhoBloco) {
-      if (raiz.textContent.trim()) saida.push(raiz);
-      return;
+    var grupo = [];
+    function fechar() {
+      if (!grupo.length) return;
+      var tem = grupo.some(function (n) { return n.textContent.trim(); });
+      if (tem) {
+        var sp = document.createElement("span");
+        sp.setAttribute("data-pptx-anon", "1");
+        grupo[0].parentNode.insertBefore(sp, grupo[0]);
+        grupo.forEach(function (n) { sp.appendChild(n); });
+        saida.push(sp);
+      }
+      grupo = [];
     }
-    kids.forEach(function (k) {
-      if (k.textContent.trim()) coletar(k, saida);
+    Array.prototype.slice.call(raiz.childNodes).forEach(function (n) {
+      if (n.nodeType === 1 && ehBloco(n)) {
+        fechar();
+        if (n.textContent.trim()) coletar(n, saida);
+      } else {
+        grupo.push(n);
+      }
     });
+    fechar();
   }
 
   function caixa(t) {
@@ -120,8 +134,21 @@
         blocos.forEach(function (el) {
           var cs = getComputedStyle(el);
           if (!visivel(el, cs)) return;
-          var cx = el.getBoundingClientRect();
-          if (cx.width < 2 || cx.height < 2) return;
+          /* Para julgar centralizacao, a referencia e a caixa de BLOCO que
+             contem a linha, descontado o padding. A caixa anonima e inline:
+             ela mede a propria tinta e nao serviria de regua. */
+          var pai = el;
+          while (pai && !ehBloco(pai)) pai = pai.parentElement;
+          pai = pai || el;
+          var pr = pai.getBoundingClientRect();
+          var ps = getComputedStyle(pai);
+          var cx = {
+            left: pr.left + parseFloat(ps.paddingLeft || 0),
+            right: pr.right - parseFloat(ps.paddingRight || 0),
+            width: pr.width,
+            height: pr.height,
+          };
+          if (pr.width < 2 || pr.height < 2) return;
           /* O retangulo da CAIXA nao e o retangulo da TINTA: um container
              flex centralizado e muito maior que a linha de texto. O Range
              devolve a uniao das linhas, que e onde a letra esta de fato. */

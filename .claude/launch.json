@@ -23,6 +23,18 @@
         "codigo/site/pitch-serasa/deck-v5"
       ],
       "port": 3210
+    },
+    {
+      "name": "pitch-v4-estatico",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8123",
+        "--directory",
+        "codigo/site"
+      ],
+      "port": 8123
     }
   ]
 }
