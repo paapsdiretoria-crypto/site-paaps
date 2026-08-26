@@ -44,21 +44,13 @@ export function SectionCapaCelina() {
           height={57}
         />
 
-        <p className="fecho__frase t-corpo txt-suave">
-          Serasa Experian e ACE Cortex,
-        </p>
-        <p className="fecho__frase2">
+        <p className="capa0__saud">Serasa Experian e ACE Cortex,</p>
+        <p className="capa0__corpo">
           Essa é Celina. Ela é Agente Comunitária de Saúde, e caminha às mais
           remotas casas do Brasil todos os dias, a 2 salários mínimos.
         </p>
 
-        <h2 className="fecho__cta font-bold mt-6">Nos ajudem a cuidar dela?</h2>
-
-        <div className="tricolor">
-          <i />
-          <i />
-          <i />
-        </div>
+        <h2 className="capa0__pedido font-bold">Nos ajudem a cuidar dela?</h2>
       </div>
     </div>
   );

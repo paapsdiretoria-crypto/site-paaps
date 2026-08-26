@@ -48,11 +48,11 @@ export function Dado({
   return (
     <Card className={className}>
       <h2 className="t-cardtit font-bold">{titulo}</h2>
+      {numero ? (
+        <span className="font-mono t-cardnum font-bold">{numero}</span>
+      ) : null}
       {children ? (
         <p className="t-corpo text-center txt-suave">{children}</p>
-      ) : null}
-      {numero ? (
-        <span className="mt-auto font-mono t-cardnum font-bold">{numero}</span>
       ) : null}
     </Card>
   );
