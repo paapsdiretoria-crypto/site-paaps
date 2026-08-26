@@ -18,7 +18,7 @@ export function SectionAgora() {
       {/* Uma coluna so, a esquerda: a foto respira do lado direito, onde
           estao os dois profissionais. */}
       <div className="mt-28 md:mt-36 max-w-[30ch]">
-        <span className="font-mono font-bold block text-[clamp(2rem,4.2vw,4.6rem)]">
+        <span className="font-mono font-bold block whitespace-nowrap text-[clamp(2rem,4.2vw,4.6rem)]">
           ~0,5 mi
         </span>
         <p className="t-corpo mt-2 text-balance">
@@ -27,7 +27,7 @@ export function SectionAgora() {
       </div>
 
       <div className="mt-6 max-w-[30ch]">
-        <span className="font-mono font-bold block text-[clamp(2rem,4.2vw,4.6rem)]">
+        <span className="font-mono font-bold block whitespace-nowrap text-[clamp(2rem,4.2vw,4.6rem)]">
           ~R$ 3,5 bi
         </span>
         <p className="t-corpo mt-2 text-balance">
