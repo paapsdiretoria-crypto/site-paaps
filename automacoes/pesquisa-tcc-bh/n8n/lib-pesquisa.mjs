@@ -30,10 +30,14 @@ export function lerEnv() {
 const MARCA = '{{CORPO}}';
 
 function corpoParaHtml(texto) {
+  // **assim** vira negrito. Serve para a ênfase que a Mallu digita em CAPS LOCK no rascunho:
+  // caps dela é ênfase de quem escreve, não instrução de tipografia, e caixa alta no corpo de
+  // um e-mail formal soa como grito.
+  const negrito = (s) => s.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
   return texto
     .trim()
     .split(/\n\s*\n/)
-    .map((p) => `<p style="margin:0 0 16px 0;">${p.trim().replace(/\n/g, '<br>')}</p>`)
+    .map((p) => `<p style="margin:0 0 16px 0;">${negrito(p.trim().replace(/\n/g, '<br>'))}</p>`)
     .join('\n');
 }
 
