@@ -7,10 +7,10 @@ export function SectionFecho() {
   return (
     <div className="min-h-screen relative w-screen overflow-hidden">
       <Fundo
-        src="/fotos/hero-territorio.jpg"
+        src="/fotos/agente-rio-barco.jpg"
         veu="veu-base"
-        posicao="center"
-        alt="Território de Bela Vista de Minas, MG"
+        posicao="72% 42%"
+        alt="Agente de saúde rema uma canoa levando uma mãe e quatro crianças pelo rio"
       />
 
       {/* A fileira de ODS emoldura o slide de cima a baixo. */}

@@ -9,14 +9,9 @@ export function SectionSolucao() {
       posicao="center 38%"
       credito="PAAPS em campo, Minas Gerais."
     >
-      <p className="t-corpo txt-suave italic max-w-[54ch]">
-        Conectamos Equipes do Serviço Público, com Psicóloga treinada no
-        Método PAAPS. <u>Psicologia de Qualidade</u> presente para cuidar das
-        equipes das Políticas Públicas do Futuro.
-      </p>
-
-      <h2 className="t-afirma font-bold mt-6 max-w-[26ch] text-balance">
-        <u>Roda de Equipe PAAPS:</u> Cuidar da ponta, impactar o mundo.
+      <h2 className="t-afirma font-bold max-w-[28ch] text-balance">
+        Conectamos equipes do serviço público com psicólogas treinadas no
+        método PAAPS.
       </h2>
 
       <div className="grid md:grid-cols-3 gap-6 md:gap-8 mt-10 md:mt-14">
@@ -30,6 +25,12 @@ export function SectionSolucao() {
           O cuidado prestado à população melhora junto, e isso é mensurável.
         </Dado>
       </div>
+
+      <p className="t-afirma font-bold mt-10 md:mt-14 text-center text-balance">
+        Cuidar da ponta, impactar o mundo:{" "}
+        <u>Psicologia de Qualidade</u> presente para cuidar e integrar as
+        equipes.
+      </p>
     </Slide>
   );
 }
