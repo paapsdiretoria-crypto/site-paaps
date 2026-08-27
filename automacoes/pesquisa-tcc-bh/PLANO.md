@@ -161,13 +161,13 @@ endereço acadêmico, e o e-mail inteiro passa a ser coerente. É meia hora de t
 | Molde do e-mail | **pronto.** `template-email-pesquisa.html`, sem logo, sem perfil de rede social, sem rodapé de descadastro |
 | Texto da carta | **pronto.** Escrito pela Mallu (rascunho 3), CAAE preenchido, cita a anuência anexada, duração de uma hora, prazo segunda 31/08 |
 | Rodada de verificação por dispositivo | **feita, seção 7.** 3 sem incongruência, 2 em revisão |
-| Workflow da leva | **ATIVO.** `Pesquisa TCC - Leva 2026-08-28 (09:00)`, id `VmfbLa2jWgLimuBV`. Dispara sozinho sexta 28/08 09:00, 8 min entre uma unidade e outra |
+| Workflow da leva | **PAUSADO por precaução.** `Pesquisa TCC - Leva 2026-08-28 (09:00)`, id `VmfbLa2jWgLimuBV`, montado mas desativado. Nada sai até a Mallu reler e confirmar de novo |
 | Quem está na leva ativa | CRAS Pedreira Prado Lopes, CRAS Vila Califórnia, CREAS Noroeste — as três sem incongruência, autorizadas pela Mallu em 27/08/2026 |
 | Fora da leva, em revisão | Proteção Social Básica Regional Noroeste e DEAC (seção 7); Hospedagem Social Além Paraíba, sem e-mail (seção 8) |
 | Aviso de resposta | **no ar,** cobrindo os 7 endereços conhecidos (as 5 unidades + a indicação), sem tocar o CRM |
 
-**Para cancelar a leva já armada:** desativar o workflow `Pesquisa TCC - Leva 2026-08-28
-(09:00)` no n8n antes de sexta 09:00.
+**Já pausado.** Para retomar: reativar o workflow `Pesquisa TCC - Leva 2026-08-28 (09:00)`
+no n8n, só depois que a Mallu confirmar a releitura dos três e-mails e destinatários.
 
 ## 7. A rodada de verificação por dispositivo (27/08/2026)
 
@@ -186,22 +186,30 @@ frase que denunciasse lote ou pedido que não fizesse sentido para aquele tipo d
 Noroeste e DEAC antes de enviar. As duas ficaram marcadas `pular: true` em
 `unidades-bh.json`, aguardando a escolha feita via pergunta no chat.
 
-**As duas escolhas, e os dois rascunhos escritos:**
+**DEAC → "pedir caminho de acesso".** `carta-deac.md`. Não convida o DEAC para a própria
+roda: pede autorização e indicação de qual unidade de alta complexidade (a começar pela
+Hospedagem Social Além Paraíba) pode receber a pesquisa, e já pede o e-mail de contato no
+mesmo texto. Resolve, no mesmo e-mail, a incongruência e o bloqueio da seção 8. Segue
+`pular: true`, sem retorno dela ainda.
 
-- **PSB Regional Noroeste → "nome oficial preciso".** `carta-psb-regional-noroeste.md`.
-  Cumprimento vira "Prezada Coordenação de Proteção Social Básica e Cidadania Regional
-  Noroeste" (nome oficial, não a paráfrase genérica de antes), ganha uma frase reconhecendo
-  o recorte diferente do CRAS (Serviço de Proteção Social Básica Regional + Cadastro Único),
-  e troca "unidade"/"equipe" por "sede da Coordenação"/"equipe técnica". Resto idêntico ao
-  corpo padrão.
-- **DEAC → "pedir caminho de acesso".** `carta-deac.md`. Não convida o DEAC para a própria
-  roda: pede autorização e indicação de qual unidade de alta complexidade (a começar pela
-  Hospedagem Social Além Paraíba) pode receber a pesquisa, e já pede o e-mail de contato no
-  mesmo texto. Resolve, no mesmo e-mail, a incongruência e o bloqueio da seção 8.
+**PSB Regional Noroeste: reescrita de novo, rascunho 2 (27/08/2026, noite).** O rascunho 1
+("nome oficial preciso") não bastou. A Mallu corrigiu dizendo que não confia no meu critério
+sozinho para decidir apropriação, e ditou um pedido mais específico: citar nominalmente as
+três unidades da regional já contatadas (CRAS Pedreira Prado Lopes, CRAS Vila Califórnia,
+CREAS Noroeste, as três confirmadas via busca como sendo de fato da Regional Noroeste),
+pedir apoio da Coordenação na indicação, oferecer devolutiva a ela, deixar explícito que o
+e-mail é para ciência e anuência da execução nas unidades já contatadas, e fechar com nota
+pessoal: ela é da região Noroeste. `carta-psb-regional-noroeste.md`, rascunho 2, transcrito o
+mais literal possível do ditado dela. Duas dúvidas assinaladas nas notas do próprio arquivo,
+para ela decidir: (1) o que exatamente "ajudar na indicação" deveria pedir, e (2) se a
+Hospedagem Social Além Paraíba (mesma regional, sem e-mail, fora da leva) deveria ser citada
+junto. Ainda `pular: true`.
 
-Os dois estão em `unidades-bh.json` apontando para a carta certa via o campo `carta`, ainda
-`pular: true`. Prévias em `previa/protecao-social-basica-regional-noroeste.html` e
-`previa/deac.html`, aguardando leitura da Mallu antes de entrar na leva.
+**PAUSA DE SEGURANÇA, 27/08/2026 noite:** a Mallu pediu para reler os três e-mails aprovados
+e os destinatários antes de confirmar qualquer coisa. Desativei o workflow
+`Pesquisa TCC - Leva 2026-08-28 (09:00)` (id `VmfbLa2jWgLimuBV`) por precaução, mesmo com a
+autorização anterior de enviar. **Nada foi enviado**, o horário marcado (sexta 09:00) nem
+tinha chegado. Ele volta a disparar só depois que ela confirmar de novo, depois da releitura.
 
 ## 8. A Hospedagem Social Além Paraíba: o que os e-mails que você mandou NÃO são
 
