@@ -222,9 +222,21 @@ no meu critério sozinho. Três coisas resolvidas:
    (tirou o pedido de anuência, entrou o pedido de incentivo à adesão com a frase exata que
    ela ditou sobre os funcionários que já participaram, CTA de contato alternativo).
 
-**Estado agora: as duas cartas estão completas, sem lacuna, prontas para revisão final.**
-Continuam `pular: true` — não reativei o envio de ninguém sozinho. Workflow da leva das três
-originais segue desativado. Só reativo quando ela confirmar de novo.
+**28/08/2026, 07:20: ENVIO ARMADO E ATIVO.** A Mallu confirmou explicitamente
+("TODOS os 5 devem sair amanhã 07:20"): PSB Regional Noroeste e DEAC saíram de `pular`,
+horário mudou de 09:00 para 07:20, workflow antigo (`VmfbLa2jWgLimuBV`, 3 unidades, 09:00)
+permanece desativado e não será usado. Workflow novo `Pesquisa TCC - Leva 2026-08-28 (07:20)`
+(id `RcGxbk8co4RuhbtT`), com as 5 unidades, criado e **ATIVADO**. Dispara sozinho amanhã,
+8 min entre cada uma: ~07:20, 07:28, 07:36, 07:44, 07:52. Aviso resumo por e-mail para
+`paapsdiretoria@gmail.com` logo depois do último envio, ~07:53.
+
+**Cópia em Enviados no Titan:** construído `codigo/pesquisa-tcc-enviados/`
+(`sincroniza-titan-pesquisa.py` + LaunchAgent `com.mallu.sincroniza-titan-pesquisa`, a cada
+15 min). Só grava por IMAP APPEND, nunca por SMTP — estruturalmente não pode duplicar
+envio. Pipeline testado com dados simulados: casa por e-mail, ignora desconhecido, dedup
+por cabeçalho. **BLOQUEADO por uma permissão do macOS (Acesso Total ao Disco) que também
+afeta o serviço já existente da prospecção** — ver detalhe no README daquela pasta. Preciso
+que a Mallu resolva isso; não posso mexer em configuração do sistema.
 
 ## 8. A Hospedagem Social Além Paraíba: o que os e-mails que você mandou NÃO são
 
