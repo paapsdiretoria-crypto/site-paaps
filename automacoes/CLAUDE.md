@@ -134,6 +134,9 @@ sempre deixar marca do que o agente fez, porque sem marca ele repete na semana s
 | Cópia de tudo que sai gravada na pasta Enviados do Titan | 20/08/26 | Descoberto que a pasta tinha 1 mensagem só: SMTP entrega ao destinatário e não grava cópia, e o n8n dispara por SMTP puro. O serviço `com.mallu.sincroniza-enviados` remonta cada carta a partir de (EMP) Cartas de Prospecção e grava em Enviados, com a data do disparo. Ver `codigo/prospeccao-enviados/` |
 | Notion como CRM, sem espelho Supabase | jul/26 | Fonte única. Supabase só quando o app exigir banco de verdade |
 | Cooldown de 60 dias via Atividade, sem campo novo | 14/07/26 | Usa o schema que já existe |
+| Pesquisa de TCC fora do fluxo de prospecção | 27/08/26 | Unidade do SUAS não é lead. Passando pelo disparo comercial, um CRAS viraria Atividade PROSPECÇÃO no CRM, entraria na contagem do funil e ficaria travado 60 dias pelo cooldown. Workflow próprio em `pesquisa-tcc-bh/`, sem nenhum nó de Notion |
+| Uma caixa, um gatilho IMAP | 27/08/26 | O aviso de resposta do TCC entrou como desvio dentro do workflow de retorno que já existe, não como workflow novo. Dois gatilhos IMAP na mesma conta do Titan disputam a marcação de lido e um dos dois perde mensagem |
+| Assinatura acadêmica separada da institucional | 27/08/26 | Convite de pesquisa assinado com o cartão de uma empresa que vende para prefeitura é lido como venda disfarçada. Asset próprio em `/webhook/assinatura-pesquisa`: URL compartilhada faria regenerar uma trocar a outra sem ninguém ver |
 
 ---
 

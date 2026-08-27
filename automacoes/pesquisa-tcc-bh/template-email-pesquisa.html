@@ -1,0 +1,53 @@
+<!--
+  Molde HTML do e-mail da pesquisa de TCC.
+
+  NÃO é o molde da prospecção. Aqui não entra logo, marca, perfil de rede social, linha de
+  posicionamento nem rodapé de descadastro: quem escreve é a pesquisadora, não a PAAPS.
+  O molde comercial vive em automacoes/prospeccao-email/template-email.html e continua lá.
+
+  Lacuna única: a marca do corpo, entre chaves duplas, mais abaixo, trocada pelo corpo da
+  carta já convertido em <p>...</p>. Ela precisa aparecer UMA vez só no arquivo. Se for
+  citada também aqui em cima, o script troca a citação e o e-mail sai com a marca crua no
+  corpo. Aconteceu no primeiro teste da prospecção, em 26/07/2026.
+
+  Tabela com estilo inline porque webmail de prefeitura ignora folha de estilo.
+  Assinatura embutida por cid:assinatura, nunca por link externo: imagem de fora costuma
+  vir bloqueada no Outlook do gov e chegaria como quadrado vazio. Por isso o contato
+  também vai em texto logo abaixo dela.
+-->
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:0; padding:0; background-color:#f0ece2;">
+  <tr>
+    <td align="center" style="padding:28px 12px;">
+
+      <table role="presentation" width="640" cellpadding="0" cellspacing="0" border="0" style="width:640px; max-width:100%; background-color:#ffffff; border-radius:6px; overflow:hidden;">
+
+        <tr>
+          <td style="padding:44px 46px 30px 46px; font-family:Helvetica,Arial,sans-serif; font-size:15px; line-height:1.68; color:#3b2109;">
+            {{CORPO}}
+          </td>
+        </tr>
+
+        <tr>
+          <td style="padding:0 46px 34px 46px;">
+            <img src="cid:assinatura"
+                 width="560"
+                 alt="Maria Luiza Vasconcellos Barbosa, Pesquisadora, Psicologia PUC Minas. relacionamento@paaps.com.br, +55 11 99523-1724"
+                 style="display:block; width:100%; max-width:560px; height:auto; border:0; outline:none; text-decoration:none;">
+          </td>
+        </tr>
+
+        <!-- mesmo contato em texto: sobrevive ao bloqueio de imagem e é clicável -->
+        <tr>
+          <td style="padding:16px 46px 20px 46px; background-color:#f5f1e1; font-family:Helvetica,Arial,sans-serif; font-size:12px; line-height:1.7; color:#6b4a2c; text-align:center;">
+            <a href="mailto:relacionamento@paaps.com.br" style="color:#6b4a2c; text-decoration:none;">relacionamento@paaps.com.br</a>
+            &nbsp;&middot;&nbsp;
+            <a href="tel:+5511995231724" style="color:#6b4a2c; text-decoration:none;">(11) 99523-1724</a>
+            <br>
+            <span style="color:#8a6a4c;">Pesquisa de conclusão de curso &middot; Psicologia &middot; PUC Minas</span>
+          </td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>

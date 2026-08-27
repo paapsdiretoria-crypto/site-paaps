@@ -46,3 +46,9 @@ codigo/dashboard/js/config.js
 # Constelação: deps e chave da ponte
 codigo/dashboard-agentes/ponte/node_modules/
 codigo/dashboard-agentes/ponte/.env
+
+# Pesquisa de TCC: lista de endereços das unidades e e-mails montados.
+# Regra de automacoes/CLAUDE.md: lista de órgãos não entra no repo. O molde da forma
+# fica em unidades-bh.example.json.
+automacoes/pesquisa-tcc-bh/unidades-bh.json
+automacoes/pesquisa-tcc-bh/previa/

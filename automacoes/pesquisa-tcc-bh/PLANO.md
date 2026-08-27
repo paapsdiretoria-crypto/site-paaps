@@ -151,11 +151,21 @@ login que temos. Se você tiver e-mail de aluna da PUC Minas, dá para pôr ele 
 como `Reply-To`: o disparo continua saindo pelo Titan, mas a resposta do gestor vai para o
 endereço acadêmico, e o e-mail inteiro passa a ser coerente. É meia hora de trabalho.
 
-## Estado de hoje
+## Estado de hoje (27/08/2026, fim da tarde)
 
 | Item | Situação |
 |---|---|
-| Assinatura de pesquisa | pronta, cartão acadêmico limpo. Falta só seu texto exato |
-| Lista de unidades | aguardando você |
-| Texto do e-mail | bloqueado nos dados da seção 5 |
-| Workflow n8n | não montado ainda, monto depois do texto aprovado |
+| Assinatura acadêmica | **pronta.** Cartão limpo, nome completo `MARIA LUIZA VASCONCELLOS BARBOSA`, para bater com os documentos do CEP e do TCLE |
+| Asset da assinatura no n8n | **no ar e conferido.** `/webhook/assinatura-pesquisa`, separado do da PAAPS. Devolve os mesmos bytes do arquivo local |
+| Molde do e-mail | **pronto.** `template-email-pesquisa.html`, sem logo, sem perfil de rede social, sem rodapé de descadastro |
+| Texto da carta | **pronto, falta o CAAE.** Duração (uma hora), prazo (segunda 31/08) e devolutiva já dentro |
+| Lista de unidades | **5 de 6 prontas.** Falta o e-mail da Hospedagem Social Além Paraíba |
+| Prévia | **gerada.** Uma por unidade, em `previa/` |
+| Aviso de resposta | **no ar.** Desvio dentro do workflow de retorno que já existia: 7 endereços viram `RESPOSTA TCC`, sem tocar o CRM. Caminho da prospecção conferido intacto |
+| Workflow da leva | **montador pronto, workflow não criado.** A trava recusa enquanto o CAAE faltar |
+
+**Para sair:** o CAAE, o e-mail da Hospedagem Social, e a sua leitura da prévia. Depois,
+um comando monta a leva e você liga a chave no n8n.
+
+**Decisão de cadência:** 6 unidades, 28/08 (sexta) às 09:00, 8 minutos entre uma e outra.
+Horário diferente do disparo da prospecção, que sai 07:00 do mesmo domínio.

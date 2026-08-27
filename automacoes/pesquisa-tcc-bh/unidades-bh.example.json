@@ -1,0 +1,57 @@
+{
+  "campanha": "Pesquisa TCC - rede socioassistencial de BH",
+  "dataDisparo": "2026-08-28",
+  "hora": "09:00",
+  "intervaloMinutos": 8,
+  "remetente": "Maria Luiza Vasconcellos Barbosa <relacionamento@paaps.com.br>",
+  "unidades": [
+    {
+      "unidade": "CRAS Pedreira Prado Lopes",
+      "nivel": "Proteção Social Básica",
+      "email": "endereco.da.unidade@pbh.gov.br",
+      "tratamento": "Prezada coordenação do CRAS Pedreira Prado Lopes"
+    },
+    {
+      "unidade": "CRAS Vila Califórnia",
+      "nivel": "Proteção Social Básica",
+      "email": "endereco.da.unidade@pbh.gov.br",
+      "tratamento": "Prezada coordenação do CRAS Vila Califórnia"
+    },
+    {
+      "unidade": "Proteção Social Básica Regional Noroeste",
+      "nivel": "Proteção Social Básica",
+      "email": "endereco.da.unidade@pbh.gov.br",
+      "tratamento": "Prezada coordenação da Proteção Social Básica Regional Noroeste"
+    },
+    {
+      "unidade": "CREAS Noroeste",
+      "nivel": "Proteção Social Especial de Média Complexidade",
+      "email": "endereco.da.unidade@pbh.gov.br",
+      "tratamento": "Prezada coordenação do CREAS Noroeste"
+    },
+    {
+      "unidade": "DEAC",
+      "nivel": "Proteção Social Especial de Alta Complexidade",
+      "email": "endereco.da.unidade@pbh.gov.br",
+      "tratamento": "Prezada equipe do DEAC",
+      "conferir": "confirmar com a Mallu o nome por extenso e o tratamento certo"
+    },
+    {
+      "unidade": "Hospedagem Social Além Paraíba",
+      "nivel": "Proteção Social Especial de Alta Complexidade",
+      "email": "",
+      "tratamento": "Prezada coordenação da Hospedagem Social Além Paraíba",
+      "conferir": "FALTA O E-MAIL. Sem ele esta unidade não entra na leva."
+    }
+  ],
+  "indicacao": {
+    "quem": "Assessoria de Educação Permanente do SUAS",
+    "emails": [
+      "endereco1@pbh.gov.br",
+      "endereco2@pbh.gov.br"
+    ],
+    "conferir": "o segundo endereço veio como epsuas@pbh.gov.b, sem o r final. Confirmar antes de usar.",
+    "entramEmCopia": null
+  },
+  "_leia": "Molde. O arquivo de verdade é unidades-bh.json, que fica fora do git por conter a lista de endereços das unidades. Copiar este, renomear e preencher."
+}
