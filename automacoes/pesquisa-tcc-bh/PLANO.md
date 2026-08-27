@@ -208,8 +208,23 @@ junto. Ainda `pular: true`.
 **PAUSA DE SEGURANÇA, 27/08/2026 noite:** a Mallu pediu para reler os três e-mails aprovados
 e os destinatários antes de confirmar qualquer coisa. Desativei o workflow
 `Pesquisa TCC - Leva 2026-08-28 (09:00)` (id `VmfbLa2jWgLimuBV`) por precaução, mesmo com a
-autorização anterior de enviar. **Nada foi enviado**, o horário marcado (sexta 09:00) nem
-tinha chegado. Ele volta a disparar só depois que ela confirmar de novo, depois da releitura.
+autorização anterior de enviar. Confirmei no histórico do n8n: **zero execuções, nada saiu**.
+
+**Terceira rodada de correção, mesma noite:** ela corrigiu de novo, dizendo que não confia
+no meu critério sozinho. Três coisas resolvidas:
+1. O parágrafo mal escrito ("o saber como é o trabalhar") saiu dos três arquivos onde
+   aparecia (`carta-unidades.md`, `carta-psb-regional-noroeste.md`, `carta-deac.md`).
+2. **Bug de segurança corrigido:** a trava de lacuna só reconhecia colchete em CAIXA ALTA.
+   Um placeholder com explicação em minúscula escaparia dela. Regex generalizada para
+   qualquer `[...]`, testada contra a leva real.
+3. `carta-deac.md` virou rascunho 3 (texto literal dela + a frase do NUMEP/Hospedagem
+   Social, que ela confirmou entrar ali). `carta-psb-regional-noroeste.md` virou rascunho 4
+   (tirou o pedido de anuência, entrou o pedido de incentivo à adesão com a frase exata que
+   ela ditou sobre os funcionários que já participaram, CTA de contato alternativo).
+
+**Estado agora: as duas cartas estão completas, sem lacuna, prontas para revisão final.**
+Continuam `pular: true` — não reativei o envio de ninguém sozinho. Workflow da leva das três
+originais segue desativado. Só reativo quando ela confirmar de novo.
 
 ## 8. A Hospedagem Social Além Paraíba: o que os e-mails que você mandou NÃO são
 

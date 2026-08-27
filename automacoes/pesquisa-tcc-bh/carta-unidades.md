@@ -17,7 +17,7 @@ Meu nome é Maria Luiza Vasconcellos Barbosa, sou graduanda em Psicologia na PUC
 
 Chego até vocês pela Assessoria de Educação Permanente do SUAS, a Alessandra e Patrícia que indicaram as unidades para este contato. A pesquisa já está em situação **Aprovada para coleta** na plataforma do SUAS, já passou pela análise e pela autorização institucional, e foi aprovada pelo Comitê de Ética em Pesquisa (CAAE nº 97975526.2.0000.5137). A carta de Anuência foi emitida pela Diretoria de Gestão do Trabalho e Educação Permanente, e segue anexada a este e-mail.
 
-A pesquisa é feita com servidores públicos, que trabalham no Cuidado com a População. O que ela investiga é o saber como é o trabalhar com Cuidado à População. O SUAS de Belo Horizonte foi escolhido por ser um exemplo de espaço ativo, cultural, que abrange o Cuidado de forma ampla no dia a dia. A pesquisa visa escutar sobre a experiência de Cuidar no SUAS.
+A pesquisa é feita com servidores públicos, que trabalham no Cuidado com a População. O que ela investiga é como é trabalhar com Cuidado à População. O SUAS de Belo Horizonte foi escolhido por ser um exemplo de espaço ativo, cultural, que abrange o Cuidado de forma ampla no dia a dia. A pesquisa visa escutar sobre a experiência de Cuidar no SUAS.
 
 Na prática: é um encontro de cerca de uma hora, não ultrapassa isso. Na própria unidade e em horário combinado com vocês: uma roda de conversa com quem da equipe quiser participar. Não é entrevista individual nem questionário, e ninguém precisa preparar nada antes. Falaremos sobre o próprio trabalho, e eu conduzo.
 

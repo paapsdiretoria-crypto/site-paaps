@@ -57,7 +57,11 @@ function lerCarta(arquivo) {
   return { assunto: secao('Assunto').split('\n')[0].trim(), corpo: secao('Corpo') };
 }
 
-const LACUNA = /\[[A-ZÀ-Ú_]{3,}\]/;
+// Pega tanto o estilo antigo `[CAAE]` (só caixa alta) quanto `[PENDENTE_MALLU: explicação em
+// minúscula]`: um placeholder com explicação escapava da regex antiga, que só reconhecia
+// colchete com CAIXA ALTA por dentro, e um texto pela metade poderia viajar até uma unidade
+// pública sem a trava disparar. Agora qualquer `[...]` com 2+ caracteres é lacuna.
+const LACUNA = /\[[^\]]{2,}\]/;
 
 /**
  * Monta um e-mail por unidade. Recusa a leva inteira se algo estiver por fechar: é muito
