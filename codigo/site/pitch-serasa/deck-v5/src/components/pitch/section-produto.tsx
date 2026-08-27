@@ -30,34 +30,10 @@ export function SectionProduto() {
       posicao="center 40%"
       credito="Vivência PAAPS, Minas Gerais."
     >
-      <div className="grid md:grid-cols-[minmax(0,1fr)_minmax(0,1.08fr)] gap-10 md:gap-14 items-center">
+      <div className="grid md:grid-cols-[minmax(0,1fr)_minmax(0,.62fr)] gap-10 md:gap-14 items-center">
         {/* Esquerda: o texto empilhado, sem moldura, so as regras finas. */}
         <div>
-          {/* O caminho em miniatura, trazido do slide 04 para o slide 05,
-              exatamente como estava no pitch antigo. */}
-          <ol className="mini-caminho">
-            <li className="mini-caminho__passo">
-              <span className="mini-caminho__pt" />
-              <span className="mini-caminho__t">
-                Diagnóstico 360<i>°</i>
-              </span>
-            </li>
-            <li className="mini-caminho__passo">
-              <span className="mini-caminho__pt" />
-              <span className="mini-caminho__t">Rodas de Equipe PAAPS</span>
-            </li>
-            <li className="mini-caminho__passo">
-              <span className="mini-caminho__pt" />
-              <span className="mini-caminho__t">
-                Ponto de Apoio
-                <span className="mini-caminho__sub">
-                  app e dados em tempo real
-                </span>
-              </span>
-            </li>
-          </ol>
-
-          <h2 className="t-afirma font-bold mt-6 max-w-[22ch] text-balance">
+          <h2 className="t-afirma font-bold max-w-[22ch] text-balance">
             Rodas de equipe PAAPS possuem 3 fases.
           </h2>
 
@@ -79,16 +55,47 @@ export function SectionProduto() {
           </p>
         </div>
 
-        {/* Direita: o abraco, grande e nitido, na frente do veu. */}
-        <div className="relative w-full aspect-[4/3] max-h-[70vh] justify-self-end">
-          <Image
-            src="/fotos/05-produto-direita.jpg"
-            alt="Atividade de grupo da PAAPS ao ar livre"
-            fill
-            sizes="(max-width: 768px) 100vw, 40vw"
-            quality={92}
-            className="object-cover"
-          />
+        {/* Direita: a jornada primeiro, maior, e a foto recortada embaixo. */}
+        <div className="flex flex-col gap-8 md:gap-10">
+          <div>
+            <h3 className="t-cardtit font-bold mb-6">
+              Jornada do Cliente da PAAPS
+            </h3>
+            <ol className="caminho-jornada__passos">
+              <li className="caminho-jornada__passo">
+                <span className="caminho-jornada__pt" />
+                <span className="caminho-jornada__t">
+                  Diagnóstico 360<i>°</i>
+                </span>
+              </li>
+              <li className="caminho-jornada__passo">
+                <span className="caminho-jornada__pt" />
+                <span className="caminho-jornada__t">
+                  Rodas de Equipe PAAPS
+                </span>
+              </li>
+              <li className="caminho-jornada__passo">
+                <span className="caminho-jornada__pt" />
+                <span className="caminho-jornada__t">
+                  Ponto de Apoio
+                  <span className="caminho-jornada__sub">
+                    app e dados em tempo real
+                  </span>
+                </span>
+              </li>
+            </ol>
+          </div>
+
+          <div className="relative w-full aspect-square max-h-[36vh] max-w-[320px]">
+            <Image
+              src="/fotos/05-produto-direita.jpg"
+              alt="Roda de equipe da PAAPS ao ar livre"
+              fill
+              sizes="(max-width: 768px) 60vw, 24vw"
+              quality={92}
+              className="object-cover"
+            />
+          </div>
         </div>
       </div>
     </Slide>
