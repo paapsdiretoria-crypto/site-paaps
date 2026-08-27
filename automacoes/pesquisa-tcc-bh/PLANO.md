@@ -157,15 +157,37 @@ endereço acadêmico, e o e-mail inteiro passa a ser coerente. É meia hora de t
 |---|---|
 | Assinatura acadêmica | **pronta.** Cartão limpo, nome completo `MARIA LUIZA VASCONCELLOS BARBOSA`, para bater com os documentos do CEP e do TCLE |
 | Asset da assinatura no n8n | **no ar e conferido.** `/webhook/assinatura-pesquisa`, separado do da PAAPS. Devolve os mesmos bytes do arquivo local |
+| Carta de anuência (DGTE) | **anexada de verdade.** PDF em `anuencia-suas.pdf` (fora do git), servido por `/webhook/anuencia-tcc`, conferido byte a byte, entra em todo e-mail via `attachments: "assinatura,anuencia"` |
 | Molde do e-mail | **pronto.** `template-email-pesquisa.html`, sem logo, sem perfil de rede social, sem rodapé de descadastro |
-| Texto da carta | **pronto, falta o CAAE.** Duração (uma hora), prazo (segunda 31/08) e devolutiva já dentro |
-| Lista de unidades | **5 de 6 prontas.** Falta o e-mail da Hospedagem Social Além Paraíba |
-| Prévia | **gerada.** Uma por unidade, em `previa/` |
-| Aviso de resposta | **no ar.** Desvio dentro do workflow de retorno que já existia: 7 endereços viram `RESPOSTA TCC`, sem tocar o CRM. Caminho da prospecção conferido intacto |
-| Workflow da leva | **montador pronto, workflow não criado.** A trava recusa enquanto o CAAE faltar |
+| Texto da carta | **pronto.** Escrito pela Mallu (rascunho 3), CAAE preenchido, cita a anuência anexada, duração de uma hora, prazo segunda 31/08 |
+| Lista de unidades | **5 confirmadas, 1 pendente.** Hospedagem Social Além Paraíba (Rua Além Paraíba 951, Lagoinha, BH) sem e-mail publicado; marcada `pular: true`, entra numa segunda rodada |
+| Prévia | **gerada, com aviso do anexo.** Uma por unidade, em `previa/` |
+| Aviso de resposta | **no ar.** Desvio dentro do workflow de retorno que já existia: endereços das 5 unidades viram `RESPOSTA TCC`, sem tocar o CRM. Caminho da prospecção conferido intacto |
+| Workflow da leva | **monta sem erro com as 5 unidades.** Falta só ativar |
 
-**Para sair:** o CAAE, o e-mail da Hospedagem Social, e a sua leitura da prévia. Depois,
-um comando monta a leva e você liga a chave no n8n.
+**Para sair:** sua leitura da prévia, e a decisão sobre a Hospedagem (seção 7). Depois, um
+comando monta a leva e você liga a chave no n8n.
 
-**Decisão de cadência:** 6 unidades, 28/08 (sexta) às 09:00, 8 minutos entre uma e outra.
+**Decisão de cadência:** 5 unidades, 28/08 (sexta) às 09:00, 8 minutos entre uma e outra.
 Horário diferente do disparo da prospecção, que sai 07:00 do mesmo domínio.
+
+## 7. A Hospedagem Social Além Paraíba: o que os e-mails que você mandou NÃO são
+
+Você passou `psb@alemparaiba.mg.gov.br` e `apoio.smas@alemparaiba.mg.gov.br`. Fui checar antes
+de colocar na leva, porque endereço de órgão público muda e um contexto errado é fácil de
+confundir. **Os dois são da Secretaria Municipal de Assistência Social do MUNICÍPIO de Além
+Paraíba, em Minas Gerais, a cerca de 300 km de Belo Horizonte** (Praça Coronel Breves 164,
+telefone (32) 3466-5150). Não é a mesma coisa que a Hospedagem Social Além Paraíba de BH: ali
+"Além Paraíba" é o nome da rua (Rua Além Paraíba 951, Lagoinha, 120 vagas, uma das quatro
+Hospedagens Sociais da PBH). Escrever para lá seria pedir a um SUAS de outra cidade, fora do
+que a anuência da DGTE cobre, então não usei.
+
+A PBH não publica e-mail das Hospedagens Sociais na página institucional. Dois caminhos:
+
+- **Perguntar à Alessandra e à Patrícia**, da Assessoria de Educação Permanente, que já
+  indicaram as outras cinco unidades.
+- **Perguntar direto ao DEAC**, que é a diretoria de alta complexidade e já está na leva: a
+  Hospedagem Social é subordinada a ela.
+
+Marquei a unidade como `pular: true` em `unidades-bh.json`, sem apagar o registro: a leva sai
+com as cinco confirmadas, e quando o e-mail vier é só tirar a marca e rodar o montador de novo.

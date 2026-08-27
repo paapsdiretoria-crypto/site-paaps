@@ -22,7 +22,11 @@ for (const c of cartas) {
   const ALVO = 'src="cid:assinatura"';
   if (!c.html.includes(ALVO)) throw new Error(`o molde perdeu ${ALVO}; a assinatura não entraria no e-mail`);
   const html = c.html.replaceAll(ALVO, 'src="../../../insumos-compartilhados/assinatura-email/assinatura-pesquisa-mallu.jpg"');
-  writeFileSync(resolve(pasta, `${arquivo}.html`), `<!doctype html><meta charset="utf-8"><title>${c.assunto}</title>\n<div style="font:13px Helvetica,Arial;padding:10px 14px;background:#fffbe6;border-bottom:1px solid #e6d9a8"><b>Para:</b> ${c.para || '<span style=\"background:#ffe27a;padding:1px 5px\">FALTA O E-MAIL</span>'} &nbsp;&nbsp; <b>Assunto:</b> ${c.assunto}</div>\n${html}`);
+  // A prévia é HTML puro, sem cliente de e-mail de verdade por trás, então não há como
+  // mostrar um anexo de PDF de fato. Uma faixa avisa que ele vai junto, para não parecer
+  // que a carta de anuência ficou de fora do envio real.
+  const avisoAnexo = `<div style="font:12px Helvetica,Arial;padding:8px 14px;background:#eef6ea;border-top:1px solid #cfe3c7;color:#3b6b2c">📎 Vai anexado como PDF: <b>Carta de Anuência - SUAS BH.pdf</b> (a prévia não mostra o anexo, só o e-mail)</div>`;
+  writeFileSync(resolve(pasta, `${arquivo}.html`), `<!doctype html><meta charset="utf-8"><title>${c.assunto}</title>\n<div style="font:13px Helvetica,Arial;padding:10px 14px;background:#fffbe6;border-bottom:1px solid #e6d9a8"><b>Para:</b> ${c.para || '<span style=\"background:#ffe27a;padding:1px 5px\">FALTA O E-MAIL</span>'} &nbsp;&nbsp; <b>Assunto:</b> ${c.assunto}</div>\n${html}\n${avisoAnexo}`);
   console.log(`${c.unidade}  ->  ${c.para}`);
 }
 console.log(`\n${cartas.length} prévias em automacoes/pesquisa-tcc-bh/previa/`);

@@ -3,7 +3,7 @@
 > Rascunho 3, 27/08/2026. Texto reescrito pela Mallu, transcrito literalmente.
 > `{{TRATAMENTO}}` e `{{UNIDADE}}` saem de `unidades-bh.json`.
 > Lacuna em `[COLCHETES]` trava o disparo: o montador recusa a leva se sobrar alguma.
-> **Falta só `[CAAE]`.**
+> CAAE preenchido em 27/08/2026 a partir do parecer consubstanciado nº 8.511.470.
 
 ## Assunto
 
@@ -15,7 +15,7 @@ Convite ao {{UNIDADE}}: roda de conversa da pesquisa da PUC Minas
 
 Meu nome é Maria Luiza Vasconcellos Barbosa, sou graduanda em Psicologia na PUC Minas, orientada pelo Prof. Alexandre Frank Kaitel.
 
-Chego até vocês pela Assessoria de Educação Permanente do SUAS, a Alessandra e Patrícia que indicaram as unidades para este contato. A pesquisa já está em situação **Aprovada para coleta** na plataforma do SUAS, já passou pela análise e pela autorização institucional, e foi aprovada pelo Comitê de Ética em Pesquisa (CAAE nº [CAAE]).
+Chego até vocês pela Assessoria de Educação Permanente do SUAS, a Alessandra e Patrícia que indicaram as unidades para este contato. A pesquisa já está em situação **Aprovada para coleta** na plataforma do SUAS, já passou pela análise e pela autorização institucional, e foi aprovada pelo Comitê de Ética em Pesquisa (CAAE nº 97975526.2.0000.5137). A carta de Anuência foi emitida pela Diretoria de Gestão do Trabalho e Educação Permanente, e segue anexada a este e-mail.
 
 A pesquisa é feita com servidores públicos, que trabalham no Cuidado com a População. O que ela investiga é o saber como é o trabalhar com Cuidado à População. O SUAS de Belo Horizonte foi escolhido por ser um exemplo de espaço ativo, cultural, que abrange o Cuidado de forma ampla no dia a dia. A pesquisa visa escutar sobre a experiência de Cuidar no SUAS.
 
@@ -67,4 +67,4 @@ trabalham no Cuidado com a População"). Para quem coordena um CRAS, isso diz m
 título. E a devolutiva deixou de ser uma síntese escrita e virou duas ofertas concretas, uma
 delas dirigida à própria coordenação: é o que responde "o que eu ganho com isso".
 
-**Lacuna aberta:** `[CAAE]`. Sem ela o disparo não roda.
+**Nenhuma lacuna aberta no texto.** O CAAE veio do parecer consubstanciado nº 8.511.470 (situação Aprovado, sem necessidade de apreciação da CONEP). A carta de anuência é da Diretoria de Gestão do Trabalho e Educação Permanente (DGTE), de 24/04/2026, e condiciona a coleta à entrega desse parecer, que já existe.

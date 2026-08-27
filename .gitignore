@@ -52,3 +52,4 @@ codigo/dashboard-agentes/ponte/.env
 # fica em unidades-bh.example.json.
 automacoes/pesquisa-tcc-bh/unidades-bh.json
 automacoes/pesquisa-tcc-bh/previa/
+automacoes/pesquisa-tcc-bh/anuencia-suas.pdf

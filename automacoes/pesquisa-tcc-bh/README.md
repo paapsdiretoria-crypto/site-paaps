@@ -12,8 +12,9 @@ O raciocínio inteiro está em `PLANO.md`. Este arquivo é só o passo a passo p
 | `template-email-pesquisa.html` | O molde visual, sem marca PAAPS |
 | `previa/` | O e-mail montado, para abrir no navegador antes de aprovar |
 | `n8n/` | Os scripts que falam com o n8n |
+| `anuencia-suas.pdf` | A carta de anuência da DGTE, anexada em todo e-mail. Fora do git |
 
-## Os quatro comandos
+## Os cinco comandos
 
 Copiar e colar no Terminal, um de cada vez.
 
@@ -29,13 +30,19 @@ cd "/Users/mac/Documents/SITE PAAPS" && node automacoes/pesquisa-tcc-bh/n8n/prev
 cd "/Users/mac/Documents/SITE PAAPS" && node automacoes/pesquisa-tcc-bh/n8n/criar-asset-assinatura-pesquisa.mjs
 ```
 
-**3. Montar a leva no n8n.** Cria o workflow **desligado**. Nada sai por causa deste comando.
+**3. Atualizar o anexo da carta de anuência no n8n,** se o PDF mudar.
+
+```bash
+cd "/Users/mac/Documents/SITE PAAPS" && node automacoes/pesquisa-tcc-bh/n8n/criar-asset-anuencia.mjs
+```
+
+**4. Montar a leva no n8n.** Cria o workflow **desligado**. Nada sai por causa deste comando.
 
 ```bash
 cd "/Users/mac/Documents/SITE PAAPS" && node automacoes/pesquisa-tcc-bh/n8n/montar-leva-pesquisa.mjs
 ```
 
-**4. Avisar a lista de endereços que geram "RESPOSTA TCC",** depois de mudar o JSON.
+**5. Avisar a lista de endereços que geram "RESPOSTA TCC",** depois de mudar o JSON.
 
 ```bash
 cd "/Users/mac/Documents/SITE PAAPS" && node automacoes/pesquisa-tcc-bh/n8n/ligar-aviso-resposta-tcc.mjs

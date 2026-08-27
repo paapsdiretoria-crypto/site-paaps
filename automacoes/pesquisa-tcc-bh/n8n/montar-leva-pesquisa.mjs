@@ -79,6 +79,18 @@ const workflow = {
       notes: 'Vem do workflow "Pesquisa TCC - Asset: assinatura acadêmica". É o cartão SEM marca PAAPS. Entra embutida no e-mail por cid.'
     },
     {
+      id: 'anuencia',
+      name: 'Buscar anuência',
+      type: 'n8n-nodes-base.httpRequest',
+      typeVersion: 4.2,
+      position: [530, 320],
+      parameters: {
+        url: `${API}/webhook/anuencia-tcc`,
+        options: { response: { response: { responseFormat: 'file', outputPropertyName: 'anuencia' } } }
+      },
+      notes: 'Vem do workflow "Pesquisa TCC - Asset: carta de anuência". Encadeado depois da assinatura para o item chegar em "Preparar fila" com os dois binários juntos. PDF da DGTE, anexado em todo e-mail da leva.'
+    },
+    {
       id: 'fila',
       name: 'Preparar fila',
       type: 'n8n-nodes-base.code',
@@ -107,7 +119,7 @@ const workflow = {
         subject: `={{ ${item}.assunto }}`,
         emailFormat: 'html',
         html: `={{ ${item}.html }}`,
-        options: { appendAttribution: false, attachments: 'assinatura' }
+        options: { appendAttribution: false, attachments: 'assinatura,anuencia' }
       },
       credentials: SMTP,
       onError: 'continueErrorOutput',
@@ -183,7 +195,8 @@ return [{
   ],
   connections: {
     [NOME_AGENDA]: { main: [[{ node: 'Buscar assinatura', type: 'main', index: 0 }]] },
-    'Buscar assinatura': { main: [[{ node: 'Preparar fila', type: 'main', index: 0 }]] },
+    'Buscar assinatura': { main: [[{ node: 'Buscar anuência', type: 'main', index: 0 }]] },
+    'Buscar anuência': { main: [[{ node: 'Preparar fila', type: 'main', index: 0 }]] },
     'Preparar fila': { main: [[{ node: NOME_LOTE, type: 'main', index: 0 }]] },
     [NOME_LOTE]: {
       main: [

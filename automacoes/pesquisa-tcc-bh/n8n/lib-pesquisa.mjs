@@ -73,9 +73,10 @@ export function montarCartas(opcoes = {}) {
   const lacuna = (moldeAssunto + moldeCorpo).match(LACUNA);
   if (lacuna && !opcoes.permitirLacunas) throw new Error(`a carta ainda tem a lacuna ${lacuna[0]} sem preencher`);
 
-  const unidades = opcoes.permitirLacunas
-    ? leva.unidades
-    : leva.unidades.filter(() => true);
+  // "pular": true tira a unidade da leva sem apagar o registro dela do JSON. Serve para a
+  // unidade cujo endereço ainda não temos: a leva sai com as outras, e ela entra depois numa
+  // segunda rodada, sem ninguém ter que reescrever a lista.
+  const unidades = leva.unidades.filter((u) => !u.pular);
 
   const semEmail = unidades.filter((u) => !u.email || !u.email.includes('@'));
   if (semEmail.length && !opcoes.permitirLacunas) {
@@ -112,14 +113,22 @@ export function codigoDoNo(cartas) {
 // script de novo, senão o repositório e o n8n divergem.
 const cartas = ${JSON.stringify(cartas, null, 2)};
 
-// A URL da assinatura não termina em .jpg, então o HTTP Request não deduz o tipo e o anexo
-// sai como application/octet-stream, que o cliente de e-mail pendura como anexo misterioso
-// em vez de desenhar embutido. Tipo e nome forçados aqui.
+// Nenhuma das duas URLs termina na extensão certa, então o HTTP Request não deduz o tipo e
+// os anexos saem como application/octet-stream, que o cliente de e-mail pendura como anexo
+// misterioso em vez de desenhar embutido (a assinatura) ou nomear direito (a anuência).
+// Tipo e nome forçados aqui, lendo de quem entregou cada um: "Buscar assinatura" e
+// "Buscar anuência" rodam em sequência e cada item chega com os dois binários somados.
 const assinatura = {
   ...$input.first().binary.assinatura,
   mimeType: "image/jpeg",
   fileName: "assinatura-pesquisa.jpg",
   fileExtension: "jpg"
 };
-return cartas.map((c) => ({ json: c, binary: { assinatura } }));`;
+const anuencia = {
+  ...$input.first().binary.anuencia,
+  mimeType: "application/pdf",
+  fileName: "Carta de Anuencia - SUAS BH.pdf",
+  fileExtension: "pdf"
+};
+return cartas.map((c) => ({ json: c, binary: { assinatura, anuencia } }));`;
 }
