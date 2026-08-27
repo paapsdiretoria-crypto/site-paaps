@@ -9,7 +9,7 @@ import { writeFileSync, mkdirSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { montarCartas, base } from './lib-pesquisa.mjs';
 
-const { cartas } = montarCartas({ permitirLacunas: true });
+const { cartas } = montarCartas({ permitirLacunas: true, incluirPulados: true });
 const pasta = resolve(base, 'previa');
 mkdirSync(pasta, { recursive: true });
 

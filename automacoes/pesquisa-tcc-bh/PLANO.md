@@ -151,7 +151,7 @@ login que temos. Se você tiver e-mail de aluna da PUC Minas, dá para pôr ele 
 como `Reply-To`: o disparo continua saindo pelo Titan, mas a resposta do gestor vai para o
 endereço acadêmico, e o e-mail inteiro passa a ser coerente. É meia hora de trabalho.
 
-## Estado de hoje (27/08/2026, fim da tarde)
+## Estado de hoje (27/08/2026, noite)
 
 | Item | Situação |
 |---|---|
@@ -160,18 +160,50 @@ endereço acadêmico, e o e-mail inteiro passa a ser coerente. É meia hora de t
 | Carta de anuência (DGTE) | **anexada de verdade.** PDF em `anuencia-suas.pdf` (fora do git), servido por `/webhook/anuencia-tcc`, conferido byte a byte, entra em todo e-mail via `attachments: "assinatura,anuencia"` |
 | Molde do e-mail | **pronto.** `template-email-pesquisa.html`, sem logo, sem perfil de rede social, sem rodapé de descadastro |
 | Texto da carta | **pronto.** Escrito pela Mallu (rascunho 3), CAAE preenchido, cita a anuência anexada, duração de uma hora, prazo segunda 31/08 |
-| Lista de unidades | **5 confirmadas, 1 pendente.** Hospedagem Social Além Paraíba (Rua Além Paraíba 951, Lagoinha, BH) sem e-mail publicado; marcada `pular: true`, entra numa segunda rodada |
-| Prévia | **gerada, com aviso do anexo.** Uma por unidade, em `previa/` |
-| Aviso de resposta | **no ar.** Desvio dentro do workflow de retorno que já existia: endereços das 5 unidades viram `RESPOSTA TCC`, sem tocar o CRM. Caminho da prospecção conferido intacto |
-| Workflow da leva | **monta sem erro com as 5 unidades.** Falta só ativar |
+| Rodada de verificação por dispositivo | **feita, seção 7.** 3 sem incongruência, 2 em revisão |
+| Workflow da leva | **ATIVO.** `Pesquisa TCC - Leva 2026-08-28 (09:00)`, id `VmfbLa2jWgLimuBV`. Dispara sozinho sexta 28/08 09:00, 8 min entre uma unidade e outra |
+| Quem está na leva ativa | CRAS Pedreira Prado Lopes, CRAS Vila Califórnia, CREAS Noroeste — as três sem incongruência, autorizadas pela Mallu em 27/08/2026 |
+| Fora da leva, em revisão | Proteção Social Básica Regional Noroeste e DEAC (seção 7); Hospedagem Social Além Paraíba, sem e-mail (seção 8) |
+| Aviso de resposta | **no ar,** cobrindo os 7 endereços conhecidos (as 5 unidades + a indicação), sem tocar o CRM |
 
-**Para sair:** sua leitura da prévia, e a decisão sobre a Hospedagem (seção 7). Depois, um
-comando monta a leva e você liga a chave no n8n.
+**Para cancelar a leva já armada:** desativar o workflow `Pesquisa TCC - Leva 2026-08-28
+(09:00)` no n8n antes de sexta 09:00.
 
-**Decisão de cadência:** 5 unidades, 28/08 (sexta) às 09:00, 8 minutos entre uma e outra.
-Horário diferente do disparo da prospecção, que sai 07:00 do mesmo domínio.
+## 7. A rodada de verificação por dispositivo (27/08/2026)
 
-## 7. A Hospedagem Social Além Paraíba: o que os e-mails que você mandou NÃO são
+A pedido da Mallu, simulei a leitura do e-mail padrão como cada dispositivo leria, procurando
+frase que denunciasse lote ou pedido que não fizesse sentido para aquele tipo de unidade.
+
+| Unidade | Resultado |
+|---|---|
+| CRAS Pedreira Prado Lopes | Sem incongruência. Equipe de linha de frente, roda na própria unidade é formato normal |
+| CRAS Vila Califórnia | Sem incongruência, mesmo perfil |
+| CREAS Noroeste | Sem incongruência. Equipe multiprofissional que atende PAEFI (violação de direitos): é o encaixe mais forte com o tema violência-cuidado da pesquisa |
+| Proteção Social Básica Regional Noroeste | **Nuance, não incongruência dura.** É a Coordenação de Proteção Social Básica e Cidadania Regional Noroeste, na sede da DRAS-NO (mesmo prédio do CREAS Noroeste, Rua Peçanha 144), e executa o Serviço de Proteção Social Básica Regional e o Cadastro Único com equipe técnica própria. Tem equipe de linha de frente, mas está um degrau acima do CRAS: mais perto de coordenação do que de unidade pura |
+| DEAC | **Incongruência real.** Diretoria de Proteção Social Especial de Alta Complexidade (Av. Afonso Pena 342, 1º andar, Centro), gerencia gerências (GDIAF, GFARP) e unidades como as Hospedagens Sociais. Não tem equipe de linha de frente fazendo plantão de cuidado direto: "uma roda de conversa com quem da equipe quiser participar, na própria unidade" não descreve o trabalho de lá |
+
+**Decisão da Mallu, 27/08/2026:** enviar as três sem incongruência, reescrever PSB Regional
+Noroeste e DEAC antes de enviar. As duas ficaram marcadas `pular: true` em
+`unidades-bh.json`, aguardando a escolha feita via pergunta no chat.
+
+**As duas escolhas, e os dois rascunhos escritos:**
+
+- **PSB Regional Noroeste → "nome oficial preciso".** `carta-psb-regional-noroeste.md`.
+  Cumprimento vira "Prezada Coordenação de Proteção Social Básica e Cidadania Regional
+  Noroeste" (nome oficial, não a paráfrase genérica de antes), ganha uma frase reconhecendo
+  o recorte diferente do CRAS (Serviço de Proteção Social Básica Regional + Cadastro Único),
+  e troca "unidade"/"equipe" por "sede da Coordenação"/"equipe técnica". Resto idêntico ao
+  corpo padrão.
+- **DEAC → "pedir caminho de acesso".** `carta-deac.md`. Não convida o DEAC para a própria
+  roda: pede autorização e indicação de qual unidade de alta complexidade (a começar pela
+  Hospedagem Social Além Paraíba) pode receber a pesquisa, e já pede o e-mail de contato no
+  mesmo texto. Resolve, no mesmo e-mail, a incongruência e o bloqueio da seção 8.
+
+Os dois estão em `unidades-bh.json` apontando para a carta certa via o campo `carta`, ainda
+`pular: true`. Prévias em `previa/protecao-social-basica-regional-noroeste.html` e
+`previa/deac.html`, aguardando leitura da Mallu antes de entrar na leva.
+
+## 8. A Hospedagem Social Além Paraíba: o que os e-mails que você mandou NÃO são
 
 Você passou `psb@alemparaiba.mg.gov.br` e `apoio.smas@alemparaiba.mg.gov.br`. Fui checar antes
 de colocar na leva, porque endereço de órgão público muda e um contexto errado é fácil de
@@ -186,8 +218,9 @@ A PBH não publica e-mail das Hospedagens Sociais na página institucional. Dois
 
 - **Perguntar à Alessandra e à Patrícia**, da Assessoria de Educação Permanente, que já
   indicaram as outras cinco unidades.
-- **Perguntar direto ao DEAC**, que é a diretoria de alta complexidade e já está na leva: a
-  Hospedagem Social é subordinada a ela.
+- **Perguntar direto ao DEAC**, que é a diretoria de alta complexidade: a Hospedagem Social é
+  subordinada a ela. O e-mail do DEAC ainda está em revisão (seção 7), então essa pergunta
+  pode entrar no mesmo contato, depois de reescrito.
 
-Marquei a unidade como `pular: true` em `unidades-bh.json`, sem apagar o registro: a leva sai
-com as cinco confirmadas, e quando o e-mail vier é só tirar a marca e rodar o montador de novo.
+Marquei a unidade como `pular: true` em `unidades-bh.json`, sem apagar o registro: quando o
+e-mail vier é só tirar a marca e rodar o montador de novo, numa segunda rodada.

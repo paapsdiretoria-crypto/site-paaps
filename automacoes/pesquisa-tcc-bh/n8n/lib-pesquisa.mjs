@@ -41,15 +41,23 @@ function corpoParaHtml(texto) {
     .join('\n');
 }
 
-function lerCarta() {
-  const texto = readFileSync(resolve(base, 'carta-unidades.md'), 'utf8');
+/**
+ * Lê Assunto e Corpo de um arquivo de carta. A maioria das unidades usa a mesma
+ * (`carta-unidades.md`), mas uma unidade cujo dispositivo não é um CRAS/CREAS padrão (uma
+ * diretoria, uma coordenação regional) pode ter a sua própria, apontada pelo campo `carta`
+ * em unidades-bh.json. Sem esse campo, cai na compartilhada.
+ */
+function lerCarta(arquivo) {
+  const texto = readFileSync(resolve(base, arquivo), 'utf8');
   const secao = (titulo) => {
     const m = texto.match(new RegExp(`^## ${titulo}\\s*$([\\s\\S]*?)(?=^## |\\Z)`, 'm'));
-    if (!m) throw new Error(`seção "## ${titulo}" não encontrada em carta-unidades.md`);
+    if (!m) throw new Error(`seção "## ${titulo}" não encontrada em ${arquivo}`);
     return m[1].trim();
   };
   return { assunto: secao('Assunto').split('\n')[0].trim(), corpo: secao('Corpo') };
 }
+
+const LACUNA = /\[[A-ZÀ-Ú_]{3,}\]/;
 
 /**
  * Monta um e-mail por unidade. Recusa a leva inteira se algo estiver por fechar: é muito
@@ -64,19 +72,13 @@ export function montarCartas(opcoes = {}) {
     throw new Error(`template-email-pesquisa.html precisa conter a marca do corpo exatamente 1 vez; encontrei ${ocorrencias}`);
   }
 
-  const { assunto: moldeAssunto, corpo: moldeCorpo } = lerCarta();
-
-  // Lacuna em COLCHETES MAIÚSCULOS jamais pode viajar até uma unidade pública.
-  // A prévia é a única que pode vê-las, e mesmo assim marcadas em amarelo, para a Mallu
-  // conseguir ler o e-mail montado antes de ter todos os dados na mão.
-  const LACUNA = /\[[A-ZÀ-Ú_]{3,}\]/;
-  const lacuna = (moldeAssunto + moldeCorpo).match(LACUNA);
-  if (lacuna && !opcoes.permitirLacunas) throw new Error(`a carta ainda tem a lacuna ${lacuna[0]} sem preencher`);
-
-  // "pular": true tira a unidade da leva sem apagar o registro dela do JSON. Serve para a
-  // unidade cujo endereço ainda não temos: a leva sai com as outras, e ela entra depois numa
-  // segunda rodada, sem ninguém ter que reescrever a lista.
-  const unidades = leva.unidades.filter((u) => !u.pular);
+  // "pular": true tira a unidade da leva sem apagar o registro dela do JSON. Serve tanto para
+  // a unidade cujo endereço ainda não temos quanto para a que está em revisão de texto: a leva
+  // sai com as outras, e ela entra depois numa segunda rodada, sem reescrever a lista.
+  // opcoes.incluirPulados existe só para a prévia poder mostrar o rascunho de quem está em
+  // revisão: montar-leva-pesquisa.mjs NUNCA passa essa opção, então o disparo real continua
+  // respeitando o pular à risca.
+  const unidades = leva.unidades.filter((u) => !u.pular || opcoes.incluirPulados);
 
   const semEmail = unidades.filter((u) => !u.email || !u.email.includes('@'));
   if (semEmail.length && !opcoes.permitirLacunas) {
@@ -91,6 +93,15 @@ export function montarCartas(opcoes = {}) {
     : t;
 
   const cartas = unidades.map((u) => {
+    const { assunto: moldeAssunto, corpo: moldeCorpo } = lerCarta(u.carta || 'carta-unidades.md');
+
+    // Lacuna em COLCHETES MAIÚSCULOS jamais pode viajar até uma unidade pública. Checada por
+    // unidade agora, porque cada uma pode ler um arquivo de carta diferente.
+    const lacuna = (moldeAssunto + moldeCorpo).match(LACUNA);
+    if (lacuna && !opcoes.permitirLacunas) {
+      throw new Error(`a carta de ${u.unidade} ainda tem a lacuna ${lacuna[0]} sem preencher`);
+    }
+
     const preencher = (t) => t.replaceAll('{{UNIDADE}}', u.unidade).replaceAll('{{TRATAMENTO}}', u.tratamento);
     const corpo = marcar(preencher(moldeCorpo));
     if (corpo.includes('{{')) throw new Error(`sobrou marca sem trocar em ${u.unidade}`);

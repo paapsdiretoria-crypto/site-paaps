@@ -7,8 +7,9 @@ O raciocínio inteiro está em `PLANO.md`. Este arquivo é só o passo a passo p
 
 | Arquivo | O que é |
 |---|---|
-| `carta-unidades.md` | O texto do e-mail. É aqui que se escreve, em lugar nenhum mais |
-| `unidades-bh.json` | Quem recebe, em que dia, de quanto em quanto tempo |
+| `carta-unidades.md` | O texto padrão, usado por CRAS e CREAS |
+| `carta-<unidade>.md` | Texto personalizado para um dispositivo que não é padrão (ex.: `carta-deac.md`). Ligado à unidade pelo campo `carta` em `unidades-bh.json` |
+| `unidades-bh.json` | Quem recebe, em que dia, de quanto em quanto tempo, e qual carta usa |
 | `template-email-pesquisa.html` | O molde visual, sem marca PAAPS |
 | `previa/` | O e-mail montado, para abrir no navegador antes de aprovar |
 | `n8n/` | Os scripts que falam com o n8n |
