@@ -5,11 +5,12 @@
 | `assinatura-paaps-a-montanha.png` / `.jpg` | **A - Montanha.** Foto da serra de Minas em cor cheia, lockup centrado, na mesma linguagem do banner institucional do site | Padrão. Prospecção, apresentação, primeiro contato |
 | `assinatura-email-640.jpg` | **A comprimida para envio automático.** Mesmo desenho, compressão mais firme (106 KB contra 247 KB) | É esta que a automação usa. Não trocar por engano pelas de cima |
 | `assinatura-paaps-b-editorial.png` / `.jpg` | **B - Editorial.** Sem foto: painel marrom com o logo branco, dados no off-white arenoso | Conversa já em andamento, e-mail curto do dia a dia, quando a assinatura grande pesa |
+| `assinatura-pesquisa-mallu.png` / `.jpg` | **Pesquisa (acadêmica).** Não é assinatura PAAPS: sem logo, sem @paaps.brasil, sem LinkedIn da empresa, sem as linhas de posicionamento. Marrom sobre papel, filete vertical, `PESQUISADORA · PSICOLOGIA PUC MINAS` | **Só** nos e-mails da pesquisa de TCC da Mallu. Nunca em e-mail institucional ou de prospecção. Ver `automacoes/pesquisa-tcc-bh/PLANO.md` |
 
 > **Aprovada em 26/07/2026** como assinatura padrão dos e-mails, inclusive os da
 > prospecção fria disparada pelo n8n.
 
-Tamanho de tela: 640 × 348 px (A) e 620 × 222 px (B). Exportado em 2× para não serrilhar em
+Tamanho de tela: 640 × 348 px (A), 620 × 222 px (B) e 480 × 184 px (pesquisa). Exportado em 2× para não serrilhar em
 tela retina.
 
 **Use o `.jpg` no e-mail.** É o mesmo desenho, muito mais leve (A: 247 KB contra 1,1 MB do PNG).
@@ -107,11 +108,20 @@ CH="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 "$CH" --headless=new --disable-gpu --hide-scrollbars --allow-file-access-from-files \
   --force-device-scale-factor=2 --default-background-color=00000000 \
   --window-size=622,224 --screenshot=assinatura-paaps-b-editorial.png assinatura-b-editorial.html
+"$CH" --headless=new --disable-gpu --hide-scrollbars --allow-file-access-from-files \
+  --force-device-scale-factor=2 --default-background-color=00000000 \
+  --window-size=482,186 --screenshot=assinatura-pesquisa-mallu.png assinatura-pesquisa-mallu.html
 sips -s format jpeg -s formatOptions 82 assinatura-paaps-a-montanha.png --out assinatura-paaps-a-montanha.jpg
 sips -s format jpeg -s formatOptions 88 assinatura-paaps-b-editorial.png --out assinatura-paaps-b-editorial.jpg
+sips -s format jpeg -s formatOptions 88 assinatura-pesquisa-mallu.png --out assinatura-pesquisa-mallu.jpg
 ```
 
 Se a altura do cartão mudar no CSS, mudar também o `--window-size`.
+
+> **Armadilha do cartão de pesquisa:** o filete horizontal (`.risco`) é um `div` de 1px dentro
+> de um flex column. Se a altura do cartão ficar menor que o conteúdo, ele encolhe para zero e
+> some do render, sem erro nenhum. Por isso ele leva `flex:none`. Ao mexer no texto, conferir
+> se a linha continua aparecendo antes de dar por pronto.
 
 ### Trocar nome, cargo, contato ou a chamada
 

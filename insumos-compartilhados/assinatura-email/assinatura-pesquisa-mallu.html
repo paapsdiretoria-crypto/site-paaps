@@ -1,0 +1,53 @@
+<meta charset="utf-8">
+<title>Assinatura de pesquisa - Mallu Vasconcellos (TCC)</title>
+<!--
+  Assinatura ACADÊMICA, de uso exclusivo nos e-mails da pesquisa de TCC.
+  Decidida com a Mallu em 27/08/2026: sem logo PAAPS, sem @paaps.brasil, sem LinkedIn da
+  empresa, sem "Saúde mental coletiva" e sem "Políticas públicas do futuro". Um convite de
+  pesquisa assinado com o cartão de uma empresa que vende para prefeitura é lido como
+  abordagem comercial, e aí nem a pesquisa nem a PAAPS ganham.
+
+  NÃO é a assinatura institucional. Aquela continua em assinatura-a-montanha.html e
+  assinatura-b-editorial.html, e é ela que a prospecção fria dispara.
+
+  Herda de base.css só a paleta e as fontes. Sem divisor tricolor, sem marcadores
+  coloridos, sem grão: os três são assinatura visual da PAAPS.
+-->
+<link rel="stylesheet" href="base.css">
+<style>
+  .cartao {
+    position:relative; width:480px; height:184px; overflow:hidden;
+    background:var(--cor-fundo); border:1px solid var(--linha); border-radius:var(--raio);
+    display:flex;
+  }
+  /* filete vertical no lugar do painel do logo: dá eixo ao cartão sem marcar empresa */
+  .filete { flex:none; width:3px; background:var(--cor-marrom); }
+
+  .dados { flex:1; padding:26px 30px 22px; display:flex; flex-direction:column; }
+
+  /* monocromático marrom sobre papel. O terracota é cor de acento da PAAPS e sai daqui. */
+  .cargo-academico {
+    font-family:var(--fonte-titulo); font-weight:400; font-size:10.5px;
+    letter-spacing:0; text-transform:uppercase; color:rgba(68,35,9,0.74);
+    margin-top:8px;
+  }
+  .risco { flex:none; height:1px; background:var(--linha); margin:16px 0 14px; }
+  .contatos .ln { margin-top:7px; }
+  .rodape { margin-top:16px; }
+</style>
+
+<div class="cartao">
+  <span class="filete"></span>
+  <div class="dados">
+    <div class="nome">Mallu Vasconcellos</div>
+    <div class="cargo-academico">Pesquisadora &middot; Psicologia PUC Minas</div>
+    <div class="risco"></div>
+    <div class="contatos">
+      <div class="ln">relacionamento@paaps.com.br</div>
+      <div class="ln">+55 11 99523-1724</div>
+    </div>
+    <div class="rodape">
+      <span class="posicionamento">Pesquisa de conclusão de curso</span>
+    </div>
+  </div>
+</div>
