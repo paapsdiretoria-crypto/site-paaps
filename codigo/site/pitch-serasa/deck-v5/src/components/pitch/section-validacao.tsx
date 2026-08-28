@@ -25,8 +25,9 @@ export function SectionValidacao() {
       </ol>
       <p className="t-fonte txt-suave mt-2">(OMS, 2022, p. 44)</p>
 
-      <h3 className="t-afirma font-bold mt-10 max-w-[24ch] text-balance">
-        O método já é licenciado no Reino Unido e na Irlanda desde 2009.
+      <h3 className="t-afirma font-bold mt-10 max-w-[26ch] text-balance">
+        Modelo semelhante já é licenciado no Reino Unido e na Irlanda desde
+        2009.
       </h3>
 
       <div className="grid md:grid-cols-2 gap-6 md:gap-8 mt-6 md:mt-8 md:max-w-[62%]">
@@ -34,7 +35,7 @@ export function SectionValidacao() {
           organizações conduzindo o <u>encontro mensal</u> de equipe.
         </Dado>
         <Dado titulo="Schwartz Center" numero="Boston">
-          licencia o método anualmente às organizações que o conduzem.
+          licencia o modelo anualmente às organizações que o conduzem.
         </Dado>
       </div>
     </Slide>
