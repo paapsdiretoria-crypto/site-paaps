@@ -62,7 +62,7 @@ Desafio Regenera | Soluções para o Rio - 2026...".
 
 | Campo | Status |
 |---|---|
-| Pitch Deck (PDF, até 10 MB) | **vazio.** Aguardando o deck-v5 fechar as correções em andamento antes de gerar o PDF final. Não gerar rascunho: ela pediu explicitamente para não apressar. |
+| Pitch Deck (PDF, até 10 MB) | `PAAPS-pitch-impulsiona-serasa.pdf` entregue em 28/08/2026 (19 páginas, 7,1 MB), gerado do deck-v5 já com as correções fechadas. |
 | Documento sobre o produto (PDF, até 10 MB) | `PAAPS-handout-produto-serasa.pdf` entregue em 28/08 (19 páginas, 9,0 MB). Troca a Certidão de Inteiro Teor da JUCESP que estava no campo. |
 
 ---
@@ -70,6 +70,5 @@ Desafio Regenera | Soluções para o Rio - 2026...".
 ## Pendências antes de submeter
 
 1. Confirmar inscrição × seleção no Regenera.
-2. Fechar as correções do deck-v5 (ver [[project_pitch_serasa_rodada_final]]) e só então gerar o Pitch Deck em PDF.
-3. Reler a resposta de Impacto Social depois de qualquer nova calibração de voz.
-4. Checar se o handout (9,0 MB) precisa recomprimir caso o formulário rejeite por peso.
+2. Reler a resposta de Impacto Social depois de qualquer nova calibração de voz.
+3. Checar se o handout (9,0 MB) precisa recomprimir caso o formulário rejeite por peso.

@@ -34,6 +34,15 @@
       "port": 3211
     },
     {
+      "name": "pitch-serasa-v5-verify2",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": [
+        "-c",
+        "PORT=3212 npm run dev --prefix codigo/site/pitch-serasa/deck-v5"
+      ],
+      "port": 3212
+    },
+    {
       "name": "pitch-v4-estatico",
       "runtimeExecutable": "python3",
       "runtimeArgs": [

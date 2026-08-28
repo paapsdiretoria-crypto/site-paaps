@@ -5,10 +5,10 @@ import { Slide } from "./ui";
 const metricas = [
   {
     chave: "LTV",
-    numero: "~R$ 711 mil",
+    numero: "~R$ 672 mil",
     texto: (
       <>
-        de <b>margem acumulada</b> por prefeitura, ao longo de cinco anos
+        de <b>margem acumulada</b> por prefeitura, ao longo de quatro anos
       </>
     ),
   },
@@ -27,7 +27,7 @@ const metricas = [
     texto: <>de uma única prefeitura já paga a estrutura inteira da empresa</>,
   },
   {
-    chave: "Prospecção",
+    chave: "CAC",
     numero: "a construir",
     texto: (
       <>
@@ -47,8 +47,8 @@ export function SectionMetricas() {
       posicao="center 42%"
       fonte={
         <span className="whitespace-nowrap">
-          LTV em margem bruta sobre cinco anos, com atendimento direto no ano
-          1 e licença nos anos 2 a 5.
+          LTV em margem bruta sobre quatro anos, com atendimento direto no
+          ano 1 e licença nos anos 2 a 4.
         </span>
       }
     >

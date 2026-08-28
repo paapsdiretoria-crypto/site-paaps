@@ -2,7 +2,6 @@ import { SectionAgora } from "@/components/pitch/section-agora";
 import { SectionAnexo } from "@/components/pitch/section-anexo";
 import { SectionCapa } from "@/components/pitch/section-capa";
 import { SectionCapaCelina } from "@/components/pitch/section-capa-celina";
-import { SectionConcorrencia } from "@/components/pitch/section-concorrencia";
 import { SectionDigging } from "@/components/pitch/section-digging";
 import { SectionEquipe } from "@/components/pitch/section-equipe";
 import { SectionFecho } from "@/components/pitch/section-fecho";
@@ -36,7 +35,6 @@ export const slides = [
   { nome: "Projecoes", Componente: SectionProjecoes },
   { nome: "Metricas projetadas", Componente: SectionMetricas },
   { nome: "Roadmap", Componente: SectionRoadmap },
-  { nome: "Concorrencia", Componente: SectionConcorrencia },
   { nome: "Tecnologia", Componente: SectionTecnologia },
   { nome: "A oportunidade", Componente: SectionOportunidade },
   { nome: "Equipe", Componente: SectionEquipe },

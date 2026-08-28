@@ -5,12 +5,12 @@ import { Slide } from "./ui";
 const contas = [
   {
     chave: "LTV",
-    numero: "~R$ 711 mil",
+    numero: "~R$ 672 mil",
     texto: (
       <>
-        Ano 1 (execução própria): R$ 924 mil × 60,1% = R$ 555 mil. Anos 2 a 5
-        (licença Base): R$ 64,8 mil × 4 anos × 60,1% = R$ 156 mil.{" "}
-        <b>Soma: R$ 711 mil em 5 anos.</b>
+        Ano 1 (execução própria): R$ 924 mil × 60,1% = R$ 555 mil. Anos 2 a 4
+        (licença Base): R$ 64,8 mil × 3 anos × 60,1% = R$ 117 mil.{" "}
+        <b>Soma: R$ 672 mil em 4 anos.</b>
       </>
     ),
   },
@@ -37,14 +37,17 @@ const contas = [
     ),
   },
   {
-    chave: "Prospecção",
-    numero: "A construir",
+    chave: "Premissas do modelo",
+    numero: "",
     texto: (
       <>
-        Anúncios pagos, e-mail marketing com IA, marketing e branding, viagens
-        de visita e assinatura, materiais físicos. Os 4 territórios vieram por
-        convite e relação local.{" "}
-        <b>É esse canal que a aceleração ajuda a construir.</b>
+        Estrutura fixa de R$ 12 mil por mês, crescendo até R$ 150 mil no ano
+        5. Pró-labore de R$ 10 mil por mês para a sócia que conduz a PAAPS.
+        Saída do Simples Nacional no ano 3.{" "}
+        <b>
+          Diagnóstico 360° a R$ 10 mil: porta de entrada, contabilizado como
+          investimento comercial.
+        </b>
       </>
     ),
   },
@@ -58,7 +61,6 @@ export function SectionAnexo() {
       veu="veu-forte"
       posicao="center 36%"
       credito="PAAPS em campo."
-      fonte="Premissas do modelo: estrutura fixa de R$ 12 mil por mês, crescendo até R$ 150 mil no ano 5 · pró-labore de R$ 10 mil por mês para a sócia que conduz a PAAPS · saída do Simples Nacional no ano 3 · o Diagnóstico 360° a R$ 10 mil é porta de entrada, contabilizada como investimento comercial · Modelo de negócio completo mediante solicitação."
     >
       <h2 className="t-afirma font-bold">Como chegamos nesses números.</h2>
 
@@ -66,11 +68,16 @@ export function SectionAnexo() {
         {contas.map((c) => (
           <div key={c.chave} className="metrica">
             <span className="metrica__k">{c.chave}</span>
-            <p className="metrica__n">{c.numero}</p>
+            {c.numero ? <p className="metrica__n">{c.numero}</p> : null}
             <p className="metrica__l">{c.texto}</p>
           </div>
         ))}
       </div>
+
+      <p className="t-corpo txt-suave text-center mt-10 mx-auto max-w-[52ch]">
+        Buscamos a ampla expertise da ACE Cortex e Serasa Experian para
+        projeções ainda melhores, e mais precisas.
+      </p>
     </Slide>
   );
 }
