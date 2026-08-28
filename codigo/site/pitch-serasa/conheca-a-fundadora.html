@@ -1,0 +1,380 @@
+<meta charset="utf-8">
+<title>Conheça a fundadora — Mallu Vasconcellos</title>
+<style>
+  @font-face { font-family:'League Spartan'; src:url('../../../insumos-compartilhados/assinatura-email/assets/fonts/LeagueSpartan-Bold.ttf') format('truetype'); font-weight:700; }
+  @font-face { font-family:'League Spartan'; src:url('../../../insumos-compartilhados/assinatura-email/assets/fonts/LeagueSpartan-ExtraBold.ttf') format('truetype'); font-weight:800; }
+  @font-face { font-family:'League Spartan'; src:url('../../../insumos-compartilhados/assinatura-email/assets/fonts/LeagueSpartan-Medium.ttf') format('truetype'); font-weight:500; }
+
+  :root{
+    --cor-fundo:#f5f1e1; --cor-marrom:#442309; --cor-terracota:#cb4710;
+    --cor-oliva:#aea349; --cor-amarelo:#f7c31c; --cor-bege-rosa:#bbada2;
+    --fonte-titulo:'League Spartan', Helvetica, Arial, sans-serif;
+    --fonte-corpo:Helvetica, Arial, sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  @page{size:210mm 297mm;margin:0}
+  html,body{background:var(--cor-fundo)}
+  body{-webkit-font-smoothing:antialiased}
+
+  .pagina{
+    width:210mm;height:297mm;position:relative;
+    display:flex;flex-direction:column;
+    padding:26mm 24mm;
+  }
+
+  .topo{display:flex;align-items:center;gap:12px}
+  .topo img{height:34px;display:block}
+
+  .tricolor{display:flex;height:2px;margin-top:16mm}
+  .tricolor i{flex:1}
+  .tricolor i:nth-child(1){background:var(--cor-oliva)}
+  .tricolor i:nth-child(2){background:var(--cor-terracota)}
+  .tricolor i:nth-child(3){background:var(--cor-amarelo)}
+
+  .label{
+    font-family:var(--fonte-titulo);font-weight:700;font-size:11px;
+    letter-spacing:0.04em;text-transform:uppercase;color:var(--cor-oliva);
+    margin-top:14mm;
+  }
+  h1{
+    font-family:var(--fonte-titulo);font-weight:800;font-size:34px;
+    text-transform:uppercase;color:var(--cor-marrom);line-height:1.05;
+    margin-top:6px;
+  }
+  .cargo{
+    font-family:var(--fonte-titulo);font-weight:500;font-size:13px;
+    text-transform:uppercase;letter-spacing:0.01em;color:var(--cor-terracota);
+    margin-top:8px;
+  }
+
+  p{
+    font-family:var(--fonte-corpo);font-weight:400;font-size:14.5px;
+    line-height:1.6;color:var(--cor-marrom);max-width:62ch;
+  }
+  .corpo{margin-top:12mm}
+  .corpo p + p{margin-top:10px}
+
+  .caixa{
+    margin-top:14mm;border:1px solid rgba(68,35,9,0.18);border-radius:6px;
+    padding:16px 18px;background:rgba(255,255,255,0.4);
+  }
+  .caixa .rot{
+    font-family:var(--fonte-titulo);font-weight:700;font-size:10px;
+    letter-spacing:0.04em;text-transform:uppercase;color:var(--cor-oliva);
+  }
+  .caixa a{
+    display:block;margin-top:6px;font-family:var(--fonte-corpo);font-size:13.5px;
+    color:var(--cor-terracota);word-break:break-all;text-decoration:none;
+  }
+
+  .rodape{margin-top:auto}
+  .rodape .tricolor{margin-bottom:10px}
+  .rodape .linha{
+    display:flex;justify-content:space-between;align-items:center;
+    font-family:var(--fonte-titulo);font-weight:400;font-size:9.5px;
+    letter-spacing:0.02em;text-transform:uppercase;color:rgba(68,35,9,0.55);
+  }
+
+  /* =====================================================================
+     PÁGINA 2 · cinco telas do app, A4 paisagem
+     Página nomeada à parte: o retrato acima usa o @page sem nome, esta usa
+     o @page "telas". Unidade sempre mm/px aqui dentro, nunca vw: em
+     contexto de impressão o vw resolve contra a caixa da PÁGINA, não
+     contra o cartão do telefone, e a letra sairia enorme dentro de um
+     telefone de 52mm de largura.
+     ===================================================================== */
+  @page telas{size:297mm 210mm;margin:0}
+  .pagina--telas{
+    page:telas; page-break-before:always;
+    width:297mm;height:210mm;position:relative;
+    display:flex;flex-direction:column;
+    padding:12mm 16mm;
+  }
+  .pagina--telas .topo{justify-content:space-between}
+  .pagina--telas .topo .tit{text-align:right}
+  .pagina--telas .topo .label{margin-top:0}
+  .pagina--telas .topo h2{
+    font-family:var(--fonte-titulo);font-weight:800;font-size:15px;
+    text-transform:uppercase;color:var(--cor-marrom);margin-top:2px;
+  }
+  .pagina--telas .tricolor{margin-top:6mm;margin-bottom:0}
+
+  .telas{
+    flex:1;display:flex;align-items:center;justify-content:space-between;
+    gap:7mm;margin-top:8mm;
+  }
+  .tela-card{display:flex;flex-direction:column;align-items:center;width:52mm}
+  .tela-card .legenda{
+    margin-top:4mm;font-family:var(--fonte-corpo);font-size:8.5px;
+    line-height:1.35;color:var(--cor-marrom);text-align:center;
+  }
+  .tela-card .legenda b{
+    display:block;font-family:var(--fonte-titulo);font-weight:700;
+    font-size:9px;text-transform:uppercase;letter-spacing:0.02em;
+    color:var(--cor-terracota);margin-bottom:2px;
+  }
+
+  /* ---------- o telefone, em mini ---------- */
+  .tel{
+    width:52mm;aspect-ratio:9/17.4;
+    background:linear-gradient(160deg,#2b1707,#150a02);
+    border:1.4px solid rgba(245,241,225,0.34);border-radius:5mm;
+    padding:2mm;box-shadow:0 4mm 8mm rgba(20,9,2,0.4);
+  }
+  .tel__tela{
+    height:100%;border-radius:4mm;overflow:hidden;
+    background:linear-gradient(180deg,rgba(37,19,5,.97),rgba(24,12,3,.99));
+    padding:3mm 2.6mm;display:flex;flex-direction:column;gap:2mm;
+  }
+  .tel__topo{
+    display:flex;align-items:baseline;justify-content:space-between;
+    border-bottom:0.4mm solid rgba(245,241,225,.16);padding-bottom:1.4mm;
+  }
+  .tel__app{
+    font-family:var(--fonte-titulo);font-weight:800;font-size:6.4px;
+    color:var(--cor-fundo);letter-spacing:.01em;
+  }
+  .tel__periodo{font-family:var(--fonte-corpo);font-size:5.6px;color:var(--cor-amarelo)}
+
+  .tel__abas{display:flex;gap:1mm}
+  .tel__aba{
+    flex:1;text-align:center;padding:1mm;border-radius:1mm;
+    font-family:var(--fonte-titulo);font-weight:700;font-size:5.2px;
+    text-transform:uppercase;letter-spacing:.02em;
+    color:rgba(245,241,225,.7);border:.3mm solid rgba(245,241,225,.16);
+  }
+  .tel__aba--ativa{color:#1e0e03;background:var(--cor-amarelo);border-color:var(--cor-amarelo)}
+
+  .tel__rot{
+    font-family:var(--fonte-corpo);font-size:5px;letter-spacing:.05em;
+    text-transform:uppercase;color:rgba(245,241,225,.55);
+  }
+
+  /* gráfico simplificado: 8 barras */
+  .tel__grafico{display:flex;align-items:flex-end;gap:.8mm;height:11mm}
+  .tel__grafico i{flex:1;background:rgba(247,195,28,.4);border-radius:.4mm}
+  .tel__grafico i.hoje{background:var(--cor-amarelo)}
+
+  .tel__mini{display:flex;gap:1.4mm}
+  .tel__mini div{
+    flex:1;padding:1.4mm;border-radius:1mm;background:rgba(245,241,225,.05);
+    border:.3mm solid rgba(245,241,225,.12);
+  }
+  .tel__mini b{
+    display:block;font-family:var(--fonte-titulo);font-weight:800;
+    color:var(--cor-amarelo);font-size:7.5px;line-height:1;
+  }
+  .tel__mini span{
+    display:block;font-family:var(--fonte-corpo);font-size:4.6px;
+    line-height:1.15;color:rgba(245,241,225,.65);margin-top:.6mm;
+  }
+
+  .tel__ind{list-style:none;display:flex;flex-direction:column;gap:1.4mm;padding-top:1.4mm;border-top:.3mm solid rgba(245,241,225,.14)}
+  .tel__ind li{display:flex;flex-direction:column;gap:.5mm}
+  .tel__ind span{font-family:var(--fonte-corpo);font-size:5px;color:rgba(245,241,225,.85);line-height:1.1}
+  .tel__ind b{display:block;height:.9mm;border-radius:2mm}
+  .tel__ind--alerta b{background:linear-gradient(90deg,#e8622a,rgba(232,98,42,.4))}
+  .tel__ind--nps b{background:linear-gradient(90deg,var(--cor-amarelo),rgba(247,195,28,.4))}
+
+  /* linhas de registro: usadas em Rodas efetivadas */
+  .tel__linhas{display:flex;flex-direction:column;gap:1.6mm;margin-top:.5mm}
+  .tel__linha{
+    display:flex;flex-direction:column;gap:.4mm;padding-bottom:1.6mm;
+    border-bottom:.3mm solid rgba(245,241,225,.1);
+  }
+  .tel__linha .data{
+    font-family:var(--fonte-titulo);font-weight:700;font-size:5.6px;
+    color:var(--cor-amarelo);
+  }
+  .tel__linha .desc{font-family:var(--fonte-corpo);font-size:5px;color:rgba(245,241,225,.8);line-height:1.2}
+  .tel__linha .ok{
+    align-self:flex-start;margin-top:.3mm;font-family:var(--fonte-titulo);
+    font-weight:700;font-size:4.4px;letter-spacing:.03em;text-transform:uppercase;
+    color:#1e0e03;background:var(--cor-amarelo);padding:.4mm 1.2mm;border-radius:1mm;
+  }
+
+  /* chips de tema: usados no prontuário */
+  .tel__chips{display:flex;flex-wrap:wrap;gap:1mm;margin-top:.5mm}
+  .tel__chip{
+    font-family:var(--fonte-corpo);font-size:4.6px;color:var(--cor-fundo);
+    border:.3mm solid rgba(245,241,225,.3);border-radius:2mm;padding:.6mm 1.6mm;
+  }
+  .tel__flag{
+    margin-top:1.4mm;font-family:var(--fonte-corpo);font-size:5px;
+    color:rgba(245,241,225,.85);padding-top:1.4mm;
+    border-top:.3mm solid rgba(245,241,225,.14);
+  }
+  .tel__flag b{color:var(--cor-amarelo);font-family:var(--fonte-titulo)}
+  .tel__nota{
+    margin-top:auto;font-family:var(--fonte-corpo);font-style:italic;
+    font-size:4.4px;line-height:1.25;color:rgba(245,241,225,.55);
+  }
+
+  /* estatísticas grandes: usadas em Dados agregados */
+  .tel__stats{display:flex;flex-direction:column;gap:1.8mm}
+  .tel__stat b{
+    display:block;font-family:var(--fonte-titulo);font-weight:800;
+    color:var(--cor-amarelo);font-size:8.5px;line-height:1;
+  }
+  .tel__stat span{
+    display:block;font-family:var(--fonte-corpo);font-size:4.8px;
+    color:rgba(245,241,225,.7);margin-top:.5mm;
+  }
+</style>
+
+<div class="pagina">
+  <div class="topo">
+    <img src="../../../insumos-compartilhados/assinatura-email/assets/logo-marrom-colorido.png" alt="PAAPS">
+  </div>
+
+  <div class="tricolor"><i></i><i></i><i></i></div>
+
+  <span class="label">Anexo complementar · Impulsiona Startups</span>
+  <h1>Conheça a fundadora</h1>
+  <span class="cargo">Mallu Vasconcellos · CEO e Founder do PAAPS Brasil</span>
+
+  <div class="corpo">
+    <p>Este vídeo institucional, de cerca de dois minutos e em plano único, traz a fundadora apresentando a PAAPS: o problema que atravessa o Serviço Público, o método das Rodas de Equipe e o caminho de campo que trouxe a PAAPS até aqui.</p>
+    <p>Ele complementa a inscrição no Impulsiona Startups, da Serasa Experian, como material de apoio ao Pitch Deck e ao Documento sobre o Produto já enviados.</p>
+  </div>
+
+  <div class="caixa">
+    <span class="rot">Assista ao vídeo</span>
+    <a href="https://drive.google.com/file/d/1rDwyVh3y-AaeHoE_khGblshLtfx8Ie6K/view?usp=sharing">https://drive.google.com/file/d/1rDwyVh3y-AaeHoE_khGblshLtfx8Ie6K/view?usp=sharing</a>
+  </div>
+
+  <div class="rodape">
+    <div class="tricolor"><i></i><i></i><i></i></div>
+    <div class="linha">
+      <span>PAAPS Brasil</span>
+      <span>paaps.com.br</span>
+    </div>
+  </div>
+</div>
+
+<div class="pagina pagina--telas">
+  <div class="topo">
+    <img src="../../../insumos-compartilhados/assinatura-email/assets/logo-marrom-colorido.png" alt="PAAPS" style="height:26px">
+    <div class="tit">
+      <span class="label">Ponto de Apoio do Servidor</span>
+      <h2>Cinco telas do aplicativo</h2>
+    </div>
+  </div>
+  <div class="tricolor"><i></i><i></i><i></i></div>
+
+  <div class="telas">
+
+    <div class="tela-card">
+      <div class="tel"><div class="tel__tela">
+        <div class="tel__topo"><span class="tel__app">Rede municipal</span><span class="tel__periodo">12 meses</span></div>
+        <div class="tel__abas">
+          <span class="tel__aba tel__aba--ativa">Gestor</span>
+          <span class="tel__aba">Servidor</span>
+        </div>
+        <span class="tel__rot">Rodas por mês</span>
+        <div class="tel__grafico">
+          <i style="height:62%"></i><i style="height:70%"></i><i style="height:58%"></i>
+          <i style="height:78%"></i><i style="height:66%"></i><i style="height:74%"></i>
+          <i style="height:69%"></i><i class="hoje" style="height:88%"></i>
+        </div>
+        <div class="tel__mini">
+          <div><b>8</b><span>casos intersetoriais/mês</span></div>
+          <div><b>100%</b><span>acesso aos dados</span></div>
+        </div>
+        <ul class="tel__ind tel__ind--alerta">
+          <li><span>Faltas e afastamentos</span><b style="width:72%"></b></li>
+          <li><span>Presenteísmo</span><b style="width:58%"></b></li>
+        </ul>
+      </div></div>
+      <div class="legenda"><b>Gestor</b>A rede em série histórica, mês a mês.</div>
+    </div>
+
+    <div class="tela-card">
+      <div class="tel"><div class="tel__tela">
+        <div class="tel__topo"><span class="tel__app">Minha equipe</span><span class="tel__periodo">Servidor</span></div>
+        <div class="tel__abas">
+          <span class="tel__aba">Gestor</span>
+          <span class="tel__aba tel__aba--ativa">Servidor</span>
+        </div>
+        <div class="tel__mini">
+          <div><b>12/09</b><span>próxima Roda de Equipe</span></div>
+        </div>
+        <ul class="tel__ind">
+          <li><span>Rodas realizadas pela equipe este ano</span><b style="width:80%;background:linear-gradient(90deg,var(--cor-amarelo),rgba(247,195,28,.4))"></b></li>
+          <li><span>Presença da equipe</span><b style="width:92%;background:linear-gradient(90deg,var(--cor-amarelo),rgba(247,195,28,.4))"></b></li>
+        </ul>
+        <div class="tel__flag">Precisa de apoio individual?<br><b>Solicitar Plantão Psicológico →</b></div>
+        <div class="tel__nota">Sem dado clínico individual exposto nesta área.</div>
+      </div></div>
+      <div class="legenda"><b>Servidor</b>Participação e acesso ao cuidado, sem exposição individual.</div>
+    </div>
+
+    <div class="tela-card">
+      <div class="tel"><div class="tel__tela">
+        <div class="tel__topo"><span class="tel__app">Rodas efetivadas</span><span class="tel__periodo">Rede</span></div>
+        <span class="tel__rot">Registro por Roda</span>
+        <div class="tel__linhas">
+          <div class="tel__linha">
+            <span class="data">24/07 · Secretaria de Saúde</span>
+            <span class="desc">Psic. Gabriela Diniz</span>
+            <span class="ok">Concluída</span>
+          </div>
+          <div class="tel__linha">
+            <span class="data">31/07 · Secretaria de Educação</span>
+            <span class="desc">Psic. Lucas Pimenta</span>
+            <span class="ok">Concluída</span>
+          </div>
+          <div class="tel__linha">
+            <span class="data">07/08 · Assistência Social</span>
+            <span class="desc">Psic. Gabriela Diniz</span>
+            <span class="ok">Concluída</span>
+          </div>
+        </div>
+      </div></div>
+      <div class="legenda"><b>Rodas efetivadas</b>Cada Roda vira registro: data, equipe, presença e psicóloga responsável.</div>
+    </div>
+
+    <div class="tela-card">
+      <div class="tel"><div class="tel__tela">
+        <div class="tel__topo"><span class="tel__app">Registro pós-Roda</span><span class="tel__periodo">24/07</span></div>
+        <div class="tel__mini">
+          <div><b>14</b><span>participantes · Secretaria de Saúde</span></div>
+        </div>
+        <span class="tel__rot">Temas emergentes</span>
+        <div class="tel__chips">
+          <span class="tel__chip">Sobrecarga</span>
+          <span class="tel__chip">Comunicação com a gestão</span>
+          <span class="tel__chip">Reconhecimento</span>
+        </div>
+        <div class="tel__flag">Encaminhamento intersetorial<br><b>1 encaminhamento · Assistência Social</b></div>
+        <div class="tel__nota">Sem identificação individual: registro é sempre por equipe.</div>
+      </div></div>
+      <div class="legenda"><b>Prontuário pós-Roda</b>Temas e encaminhamentos por equipe, nunca por nome.</div>
+    </div>
+
+    <div class="tela-card">
+      <div class="tel"><div class="tel__tela">
+        <div class="tel__topo"><span class="tel__app">Rede PAAPS</span><span class="tel__periodo">Agregado</span></div>
+        <div class="tel__stats">
+          <div class="tel__stat"><b>4</b><span>territórios ativos</span></div>
+          <div class="tel__stat"><b>1.150+</b><span>pessoas diretamente impactadas</span></div>
+          <div class="tel__stat"><b>500+</b><span>profissionais formados, atendidos ou mobilizados</span></div>
+        </div>
+        <span class="tel__rot">Territórios, por Roda/mês</span>
+        <div class="tel__grafico">
+          <i style="height:55%"></i><i style="height:80%"></i><i class="hoje" style="height:66%"></i>
+        </div>
+      </div></div>
+      <div class="legenda"><b>Dados agregados</b>O que a rede de territórios está mostrando, cruzado.</div>
+    </div>
+
+  </div>
+
+  <div class="rodape">
+    <div class="tricolor"><i></i><i></i><i></i></div>
+    <div class="linha">
+      <span>PAAPS Brasil</span>
+      <span>paaps.com.br</span>
+    </div>
+  </div>
+</div>
