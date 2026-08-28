@@ -1,4 +1,5 @@
-import { Dado, Slide } from "./ui";
+import Image from "next/image";
+import { Card, Dado, Slide } from "./ui";
 
 export function SectionModelo() {
   return (
@@ -14,25 +15,56 @@ export function SectionModelo() {
       <p className="t-afirma mt-4 max-w-[26ch]">
         de margem de contribuição por Roda de Equipe.
       </p>
-      <p className="t-corpo txt-suave mt-2 italic">
-        Para 1 prefeitura de 500 Servidores Públicos.
-      </p>
 
-      <div className="grid md:grid-cols-2 gap-6 md:gap-8 mt-10 md:mt-14 md:max-w-[62%]">
+      <div className="grid md:grid-cols-2 gap-6 md:gap-8 mt-8 md:mt-10 md:max-w-[70%]">
         <Dado titulo="Preço" numero="R$ 1.100">
           por Roda de Equipe, 1h30.
         </Dado>
-        <Dado titulo="Contrato" numero="R$ 924 mil">
-          por ano · R$ 77 mil de MRR, num município com 500 Servidores
-          Públicos.
-        </Dado>
+
+        {/* Fora do componente Dado, que centraliza tudo: aqui a premissa entra
+            como rotulo no canto superior esquerdo, e o "por ano" precisa ficar
+            colado no numero. */}
+        <Card className="!items-stretch !justify-start text-left !pt-5 space-y-2">
+          <span className="t-fonte txt-suave">
+            1 município, 500 Servidores Públicos contemplados
+          </span>
+          <h2 className="t-cardtit font-bold text-center">Contrato</h2>
+          <p className="flex items-baseline justify-center gap-2">
+            <span className="font-mono t-cardnum font-bold whitespace-nowrap">
+              R$ 924 mil
+            </span>
+            <span className="t-corpo txt-suave whitespace-nowrap">por ano</span>
+          </p>
+          <p className="t-corpo txt-suave text-center">R$ 77 mil de MRR</p>
+        </Card>
       </div>
 
-      <div className="t-corpo mt-8 max-w-[70ch] space-y-3">
+      {/* Cabecalho de revista para a metade de baixo. */}
+      {/* O PNG do logo traz as bolinhas acima do wordmark, entao a altura total
+          precisa ser maior que a da letra para que "paaps" leia do mesmo
+          tamanho da palavra ao lado. */}
+      <h3 className="t-cardtit font-bold mt-8 md:mt-10 flex items-baseline gap-2">
+        Modelo de Negócio
+        <Image
+          src="/marca/paaps-branco.png"
+          alt="PAAPS"
+          width={160}
+          height={45}
+          className="h-[1.75em] w-auto translate-y-[.18em]"
+        />
+      </h3>
+
+      {/* Duas colunas alinhadas com os cards: Entregaveis ao lado de Escala e
+          retencao, Equipe ao lado de Qualidade e impacto. */}
+      <div className="grid md:grid-cols-2 gap-x-6 md:gap-x-8 gap-y-3 mt-3 t-corpo md:max-w-[70%]">
         <p>
           <b>Entregáveis.</b> 70 Rodas por mês (1 roda mensal por equipe,
           garantida), encontros estratégicos com lideranças e um treinamento
           mensal ou rodas extras.
+        </p>
+        <p>
+          <b>Escala e retenção.</b> PAAPS supervisiona, licencia o método.
+          Possível progressão de carreira interna da Psicóloga Local.
         </p>
         <p>
           <b>Equipe.</b> 2 psicólogas locais ou da região.{" "}
@@ -42,10 +74,6 @@ export function SectionModelo() {
         <p>
           <b>Qualidade e impacto.</b> 1 supervisor clínico para 7 municípios.
           1 customer success para 10.
-        </p>
-        <p>
-          <b>Escala e retenção.</b> PAAPS supervisiona, licencia o método.
-          Possível progressão de carreira interna da Psicóloga Local.
         </p>
       </div>
     </Slide>
