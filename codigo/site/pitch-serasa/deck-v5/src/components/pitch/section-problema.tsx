@@ -7,7 +7,7 @@ export function SectionProblema() {
       foto="/fotos/02-problema.jpg"
       veu="veu-denso"
       posicao="center 40%"
-      fonte="ANS mai/2026 · CNES · Apeoesp, São Paulo, 2026."
+      fonte="ANS mai/2026 · CNES/Ministério da Saúde, 2025 · Apeoesp, São Paulo, 2026."
     >
       <h2 className="t-afirma font-bold max-w-[26ch] text-balance">
         O maior sistema de saúde público do mundo{" "}

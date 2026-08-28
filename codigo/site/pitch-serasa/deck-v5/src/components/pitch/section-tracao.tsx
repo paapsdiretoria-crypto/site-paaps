@@ -62,11 +62,11 @@ export function SectionTracao() {
       foto="/fotos/07-tracao.jpg"
       veu="veu-forte"
       posicao="center 38%"
-      fonte="Contagem interna da PAAPS, somando as quatro pesquisas de campo."
     >
       <span className="font-mono t-num font-bold block">+1.150</span>
       <p className="t-afirma mt-3 max-w-[26ch] text-balance">
-        pessoas diretamente impactadas pelas pesquisas de campo da PAAPS.
+        pessoas diretamente impactadas pelas{" "}
+        <span className="txt-amarelo">pesquisas de campo</span> da PAAPS.
       </p>
 
       <div className="grid md:grid-cols-4 gap-5 md:gap-6 mt-8 md:mt-10">
@@ -87,7 +87,11 @@ export function SectionTracao() {
         ))}
       </div>
 
-      <p className="t-corpo mt-7">Os quatro territórios vieram por convite.</p>
+      <p className="t-corpo mt-7 max-w-[86ch]">
+        As quatro pesquisas de campo foram conduzidas por valor simbólico, em
+        parceria com projetos de pesquisa universitária, projetos locais e
+        turismo comunitário.
+      </p>
     </Slide>
   );
 }

@@ -18,7 +18,11 @@ export function SectionValidacao() {
         é a única recomendação forte da OMS em saúde mental no trabalho.
       </h2>
 
-      <ol className="grid md:grid-cols-3 gap-4 md:gap-8 mt-6 t-corpo txt-suave list-decimal list-inside max-w-[70ch]">
+      <p className="t-corpo txt-suave mt-6 max-w-[70ch]">
+        A OMS indica intervenções psicossociais universais a trabalhadores de
+        saúde, humanitários e de emergência para:
+      </p>
+      <ol className="grid md:grid-cols-3 gap-4 md:gap-8 mt-3 t-corpo txt-suave list-decimal list-inside max-w-[70ch]">
         <li>Desenvolver Habilidades em Manejo do Estresse</li>
         <li>Reduzir Sofrimento Emocional</li>
         <li>Melhorar a Efetividade do Trabalho</li>
