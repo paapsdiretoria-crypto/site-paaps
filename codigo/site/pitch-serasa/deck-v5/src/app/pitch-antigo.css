@@ -15,7 +15,9 @@
   /* 0.3em no deck antigo. Aqui sobe para 0.55em porque o filete embaixo do
      "APP" encosta no "PONTO" e as duas palavras leem como uma so. */
   gap: 0.55em;
-  justify-content: center;
+  /* Alinhado a esquerda, no mesmo ponto do "0" do bloco abaixo, pedido da
+     Mallu em 28/08/2026: centralizado no slide o texto ficava boiando. */
+  justify-content: flex-start;
   white-space: nowrap;
   flex-wrap: nowrap;
   font-family: var(--titulo);
@@ -70,6 +72,11 @@
   height: clamp(46px, 5vw, 5.4rem);
   background: var(--bege);
   border-radius: clamp(10px, 1.1vw, 18px);
+  /* Contorno mais forte pedido pela Mallu em 28/08/2026: o quadrado bege
+     em cima do fundo bege texturizado ficava sem definicao nenhuma. */
+  box-shadow:
+    0 6px 22px rgba(20, 9, 2, 0.55),
+    0 1px 0 rgba(20, 9, 2, 0.3);
 }
 .app__icone img {
   width: 78%;
@@ -82,7 +89,12 @@
   line-height: 1.02;
   font-size: clamp(0.95rem, 1.32vw, 1.32rem);
   color: var(--bege);
-  text-shadow: 0 2px 14px rgba(20, 9, 2, 0.85);
+  /* Sombra mais forte pedida pela Mallu em 28/08/2026: uma camada curta e
+     escura pra recortar a letra, e a camada difusa antiga por baixo pra
+     nao deixar serrilhado. */
+  text-shadow:
+    0 1px 3px rgba(10, 4, 1, 0.95),
+    0 2px 14px rgba(20, 9, 2, 0.85);
 }
 .app__nome i {
   display: block;

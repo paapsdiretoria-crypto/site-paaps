@@ -32,8 +32,7 @@ export function SectionDigging() {
         <div>
           <span className="font-mono t-num font-bold block">R$ 1,16 mi</span>
           <p className="t-corpo txt-suave mt-4 max-w-[34ch]">
-            faturados pela DIGGING nos quatro exercícios fechados, de 2022 a
-            2025.
+            faturados pela DIGGING nos últimos quatro anos.
           </p>
         </div>
         <h2 className="t-afirma font-bold max-w-[30ch] text-balance">
@@ -56,7 +55,8 @@ export function SectionDigging() {
           <p className="t-corpo txt-suave">
             Consultoria em Desenvolvimento Organizacional, Facilitação de
             Diálogo e Comunicação Não Violenta, Mediação de Conflitos, Projetos
-            de Cultura, Educação Corporativa.
+            de Cultura (Barrett), Educação Corporativa, Teambuildings,
+            Mentoring e Coaching Executivo.
           </p>
         </Card>
         <Card className="items-start justify-start text-left">

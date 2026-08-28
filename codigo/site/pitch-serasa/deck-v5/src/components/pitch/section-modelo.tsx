@@ -58,9 +58,9 @@ export function SectionModelo() {
           retencao, Equipe ao lado de Qualidade e impacto. */}
       <div className="grid md:grid-cols-2 gap-x-6 md:gap-x-8 gap-y-3 mt-3 t-corpo md:max-w-[70%]">
         <p>
-          <b>Entregáveis.</b> 70 Rodas por mês (1 roda mensal por equipe,
-          garantida), encontros estratégicos com lideranças e um treinamento
-          mensal ou rodas extras.
+          <b>Entregáveis.</b> Uma Roda mensal por equipe, no mínimo, com
+          margem para mais; encontros estratégicos com lideranças e um
+          treinamento mensal ou rodas extras.
         </p>
         <p>
           <b>Escala e retenção.</b> PAAPS supervisiona, licencia o método.

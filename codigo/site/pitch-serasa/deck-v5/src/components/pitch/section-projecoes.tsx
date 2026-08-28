@@ -108,7 +108,6 @@ export function SectionProjecoes() {
       veu="veu-forte"
       posicao="center 50%"
       credito="Desterro do Melo, Minas Gerais."
-      fonte="70 Rodas de Equipe por município ao mês, 840 ao ano, mantidas também nas redes que licenciam o método · 500 Servidores Públicos por prefeitura, que é a prefeitura de referência do modelo, não uma média medida · receita de execução própria a R$ 924 mil por município ao ano, licença Base a R$ 64,8 mil, licença Plena a R$ 130,8 mil e implantação de R$ 30 mil por licença nova · afastamento evitado sobre custo verificado de R$ 14.490 por afastamento (Ipea, Atlas do Estado Brasileiro; INSS), com redução de 20%, que é premissa nossa e não resultado medido. No ano 5, 38% da receita é recorrente e cada pessoa da equipe responde por R$ 483 mil."
     >
       <div className="mini5">
         {series.map((s) => (
@@ -121,12 +120,6 @@ export function SectionProjecoes() {
         conduzido pela equipe da PAAPS
         <span className="mini5__amostra mini5__amostra--lic ml-3" />
         conduzido pelas redes que licenciam o método
-      </p>
-
-      <p className="t-corpo mt-7 max-w-[76ch]">
-        A equipe multiplica por 7 e os Servidores Públicos alcançados, por 68.
-        Quem abre essa distância é o licenciamento, e é ele que leva a receita
-        recorrente de zero a <b>38% no ano 5</b>.
       </p>
     </Slide>
   );

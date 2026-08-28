@@ -15,8 +15,14 @@ export function SectionOportunidade() {
           ]}
         />
       }
-      credito="Roda de escuta conduzida pela PAAPS, Minas Gerais."
-      fonte="Serasa Experian, Mapa da Inadimplência 2026 · SalaryFits, Saúde Financeira e Bem-Estar do Trabalhador Brasileiro · Ipea, Atlas do Estado Brasileiro · Erro no atendimento: BMJ, 2022, revisão de 35 estudos."
+      fonte={
+        <span className="whitespace-nowrap">
+          Serasa Experian, Mapa da Inadimplência 2026 · SalaryFits, Saúde
+          Financeira e Bem-Estar do Trabalhador Brasileiro · Ipea, Atlas do
+          Estado Brasileiro · Erro no atendimento: BMJ, 2022, revisão de 35
+          estudos.
+        </span>
+      }
     >
       <h2 className="t-afirma font-bold max-w-[24ch] text-balance">
         A Serasa já alcança o servidor público pelo eConsig. Falta o dado da
@@ -36,9 +42,9 @@ export function SectionOportunidade() {
         </Dado>
       </div>
 
-      <p className="t-corpo mt-8">
-        <b>Consequência.</b> 2× a chance de erro no atendimento quando quem
-        atende está esgotado.
+      <p className="mt-8 text-[clamp(1.1rem,1.9vw,2rem)] leading-snug max-w-[46ch]">
+        <b>Consequência.</b> O dobro da chance de erro no atendimento quando
+        quem atende está <span className="txt-amarelo font-bold">esgotado</span>.
       </p>
     </Slide>
   );

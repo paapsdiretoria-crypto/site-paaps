@@ -45,7 +45,12 @@ export function SectionMetricas() {
       foto="/fotos/12-metricas.jpg"
       veu="veu-forte"
       posicao="center 42%"
-      fonte="LTV em margem bruta sobre cinco anos, com atendimento direto no ano 1 e licença nos anos 2 a 5."
+      fonte={
+        <span className="whitespace-nowrap">
+          LTV em margem bruta sobre cinco anos, com atendimento direto no ano
+          1 e licença nos anos 2 a 5.
+        </span>
+      }
     >
       <div className="metricas">
         {metricas.map((m) => (

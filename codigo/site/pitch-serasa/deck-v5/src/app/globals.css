@@ -196,8 +196,8 @@ body {
 
 .mini5 {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: clamp(0.7rem, 1.5vw, 1.8rem);
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.2rem, 2.4vw, 2.6rem);
   width: 100%;
 }
 @media (max-width: 900px) {
@@ -219,7 +219,7 @@ body {
   font-family: var(--titulo);
   font-weight: 700;
   color: var(--amarelo);
-  font-size: clamp(1.15rem, 2.05vw, 2.05rem);
+  font-size: clamp(1.4rem, 2.7vw, 2.7rem);
   line-height: 0.95;
   letter-spacing: -0.01em;
 }
@@ -227,18 +227,18 @@ body {
   font-family: var(--corpo);
   font-weight: 700;
   color: var(--bege);
-  font-size: clamp(0.78rem, 0.94vw, 0.98rem);
+  font-size: clamp(0.9rem, 1.15vw, 1.2rem);
   line-height: 1.22;
   margin-top: 0.34em;
-  /* Duas linhas reservadas sempre: e isso que mantem as cinco fileiras de
+  /* Duas linhas reservadas sempre: e isso que mantem as fileiras de
      barra no mesmo chao quando um titulo quebra e o vizinho nao. */
   min-height: 2.44em;
 }
 .mini__b {
   display: flex;
   align-items: flex-end;
-  gap: clamp(3px, 0.42vw, 6px);
-  height: clamp(88px, 14.5vh, 152px);
+  gap: clamp(4px, 0.6vw, 8px);
+  height: clamp(110px, 19vh, 210px);
   margin-top: 0.85em;
 }
 .mini__col {

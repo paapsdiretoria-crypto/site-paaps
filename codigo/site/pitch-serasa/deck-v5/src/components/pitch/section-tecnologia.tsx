@@ -1,6 +1,32 @@
 import Image from "next/image";
 import { Slide } from "./ui";
 
+/* Tela dividida: 2/3 foto, 1/3 textura clara (mesma da Concorrencia), pedido
+   da Mallu em 28/08/2026. O medico de costas precisa ficar inteiro: ele esta
+   perto do centro horizontal da foto original, entao "center" horizontal
+   funciona mesmo com a coluna mais estreita que o slide inteiro. */
+function FundoDividido() {
+  return (
+    <div className="absolute inset-0 z-0 grid grid-cols-3">
+      <div className="col-span-2 relative overflow-hidden veu veu-denso">
+        <Image
+          src="/fotos/13-tecnologia.jpg"
+          alt="Profissional de saúde de costas, em corredor de farmácia hospitalar"
+          fill
+          priority
+          sizes="66vw"
+          quality={90}
+          className="object-cover"
+          style={{ objectPosition: "45% 28%" }}
+        />
+      </div>
+      <div className="relative bg-[var(--bege)]">
+        <div className="slide-claro__textura" />
+      </div>
+    </div>
+  );
+}
+
 /* A serie historica: 12 barras, uma por mes. Sao proporcoes de desenho, nao
    dado de cliente: o mockup nao imprime numero nenhum. Valores copiados do
    deck antigo. */
@@ -21,10 +47,13 @@ export function SectionTecnologia() {
   return (
     <Slide
       rotulo="Tecnologia"
-      foto="/fotos/13-tecnologia.jpg"
-      veu="veu-denso"
-      posicao="center 42%"
-      fonte="O afastamento só vira registro do INSS a partir do 16º dia, Lei 8.213/1991, art. 60 · A literatura acadêmica registra a pesquisa nessa população como escassa · O tratamento de informações e dados se adequa à LGPD e às diretrizes éticas e de boas práticas do CFP."
+      fundo={<FundoDividido />}
+      fonte={
+        <span className="whitespace-nowrap">
+          O tratamento de informações e dados se adequa à LGPD e às
+          diretrizes éticas e de boas práticas do CFP.
+        </span>
+      }
     >
       <p className="produto">
         <span className="produto__app">app</span>
@@ -37,8 +66,9 @@ export function SectionTecnologia() {
               ficava boiando longe do que ele conta. */}
           <div className="flex items-baseline gap-5">
             <span className="font-mono t-num font-bold leading-none">0</span>
-            <p className="t-corpo txt-suave max-w-[24ch]">
-              estatísticas nacionais sobre o adoecimento do servidor municipal.
+            <p className="t-corpo txt-suave max-w-[30ch]">
+              estatísticas nacionais sobre o adoecimento do servidor
+              municipal.
             </p>
           </div>
 

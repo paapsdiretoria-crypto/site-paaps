@@ -13,7 +13,8 @@ const marcos = [
   {
     lado: "baixo",
     titulo: "Equipe local",
-    texto: "psicólogas da cidade formadas, e a metodologia gravada com elas",
+    texto:
+      "psicólogas da cidade formadas e continuadamente supervisionadas. MVP da metodologia para licença",
   },
   {
     lado: "alto",
@@ -40,8 +41,8 @@ const marcos = [
   { lado: "alto", titulo: "68 municípios", texto: "1,2% do Brasil, no ano 5" },
   {
     lado: "baixo",
-    titulo: "Fora do Brasil",
-    texto: "o método atravessa para outro sistema público",
+    titulo: "180 municípios",
+    texto: "no Brasil (ano 10) + internacionalização do Case Brasil",
   },
 ];
 
