@@ -218,6 +218,41 @@ primeira fortalece a série, a segunda cansa quem acompanha de perto.
 
 ---
 
+## Situação: a tarefa recebida descreve um estado que o disco já contradiz
+
+**Quando acontece:** o briefing de quem me aciona afirma "isso nunca foi feito" ou "você está
+fazendo pela primeira vez", mas o artefato de destino já existe no disco, com data de hoje, em
+estado mais avançado do que o briefing presume.
+
+**O que aconteceu:** 30/08/2026, retomada do carrossel "De quem é esse trabalho" (reprovado em
+30/07). O briefing dizia que eu escreveria a reescrita completa pela primeira vez, e que a Mallu
+validaria antes de qualquer avanço. `git status` no início da conversa já listava
+`B3-texto-carrossel-v2.md` como modificado e dois arquivos de crítica (`rodada4`, `rodada5`) como
+não commitados. Antes de escrever uma linha, li o arquivo de destino: já era uma reescrita
+completa, datada de hoje, que tinha passado por 5 rodadas do Crítico de Conteúdo e fechado com
+nota 100/100, decisão "libera pro Buscador de Fotos". A única lacuna real era de documentação: o
+cabeçalho do arquivo não registrava o resultado da rodada 5 (parava em "Enviando de volta ao
+Crítico para a rodada 5"), embora o arquivo de crítica da rodada 5 já existisse com a nota máxima.
+
+**O que eu fiz:** não reescrevi o conteúdo já aprovado (isso destruiria trabalho validado sem
+motivo). Completei só a lacuna de documentação (acrescentei a entrada da rodada 5 ao cabeçalho,
+com a nota, a decisão e as duas potencializações não-bloqueantes que o crítico registrou). Não
+chamei o Crítico de novo (já tinha rodado 5x e fechado). Não chamei o Buscador de Fotos, respeitando
+a instrução explícita de quem me acionou de não avançar o fluxo sem a Mallu, mesmo sabendo que o
+processo padrão (13/08/2026 em diante) autorizaria o Crítico a liberar sozinho.
+
+**Regra que fica:**
+- ❌ Confiar no enunciado da tarefa sobre o estado do trabalho sem checar o disco primeiro
+- ✅ Sempre ler `git status` e o arquivo de destino antes de escrever, mesmo quando o briefing
+  afirma que nada foi feito ainda; se o artefato já existe e está mais avançado, completar a
+  lacuna real (aqui, documentação) em vez de reescrever por cima do que já foi validado
+
+**Por quê:** reescrever uma peça que já tirou nota 100/100 do Crítico, só porque o briefing
+presumia que ela não existia, seria regressão disfarçada de trabalho. O ganho real da sessão foi
+verificar e documentar, não gerar tokens de texto novo sobre algo já fechado.
+
+---
+
 ## Pendências para o próximo ciclo
 
 - Confirmar com a Mallu a peça inteira (Sessão 01 pulou a parada da primeira rodada por

@@ -111,6 +111,16 @@ sente. É a capa padrão do @paaps.brasil.
 **Erro comum:** capa que enuncia um conceito em vez de uma tensão. Se a leitora precisa
 decifrar antes de sentir, a capa falhou.
 
+**Nota (30/08/2026, copywriter-paaps):** existe uma variante confirmada do M1 que não termina em
+pergunta: a capa declarativa de impossibilidade estrutural ("é impossível X através de Y" ou
+equivalente), usada em 07/07 (líder de conversão do perfil, 3,0%) e 15/07 ("É impossível oferecer
+vínculo contínuo através de contratos que terminam todo ano"), e de novo em "De quem é esse
+trabalho" (30/08, "a gestão só enxerga esse trabalho quando ele vira atestado"), aprovada pelo
+Crítico de Conteúdo com nota 100/100. `voz-paaps.md` já cobre isso ("pergunta estrutural OU
+notícia como abertura"). Registrando aqui para o catálogo não tratar a ausência de pergunta como
+erro por engano: é subtipo já validado três vezes, não desvio do modelo. Se a variante continuar
+se repetindo, cabe propor a ela como subtipo nomeado (M1a), com aprovação explícita da Mallu.
+
 ---
 
 ### M2 : AFIRMAÇÃO CONTINUADA
@@ -306,6 +316,7 @@ ou aprovada por ela.
 | Data | Quem | O que mudou |
 |---|---|---|
 | 30/07/2026 | orquestrador | Criação do catálogo: 8 leis universais + M1 a M8, extraídos de 10 slides publicados enviados pela Mallu |
+| 30/08/2026 | copywriter-paaps | Nota em M1: registrada a variante declarativa de impossibilidade estrutural (sem pergunta), confirmada 3x (07/07, 15/07, "De quem é esse trabalho"), como subtipo já validado, não erro |
 
 ---
 

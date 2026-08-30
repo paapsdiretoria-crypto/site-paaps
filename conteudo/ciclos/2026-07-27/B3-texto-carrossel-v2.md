@@ -57,6 +57,20 @@ slide 3 virou oração relativa completa ("que atua de casa em casa"); a legenda
 solto por "um bairro inteiro de famílias", sem prometer precisão que a peça não sustenta.
 Enviando de volta ao Crítico para a rodada 5.
 
+**Rodada 5 do Crítico (30/08/2026): nota 100/100, corte 90. Decisão: libera pro Buscador de
+Fotos.** Relatório completo em `carrossel-2026-08-30-de-quem-e-esse-trabalho-critica-rodada5.md`.
+Nenhum achado bloqueante nesta rodada; as correções da rodada 4 (slide 3, legenda) se sustentaram
+sem regressão. Duas potencializações registradas, opcionais, não aplicadas porque o próprio
+crítico as marcou como leitura de gosto para o gate final da Mallu, não como erro: (1) o eco entre
+a manchete da capa ("a gestão só enxerga quando vira atestado") e a legenda ("a gestão só sabe
+contar isso quando vira atestado") é decisão deliberada de bookend, mas pode soar repetitivo a
+depender do gosto dela, e se soar, o corte é na legenda, não na capa; (2) o slide 3 empilha três
+informações dentro do mesmo card do modelo M5 (dado de enfermagem, dado de assistência social,
+ausência de dado da ACS), o que funciona mas está mais denso do que "um dado por card" pede
+idealmente. **Por instrução explícita de quem retomou este ciclo em 30/08/2026, a peça não avança
+sozinha para o Buscador de Fotos nem para o Aplicador Visual, mesmo com a liberação do crítico:
+fica aqui, pronta, para a Mallu decidir.**
+
 ---
 
 ## Decisões de abertura
