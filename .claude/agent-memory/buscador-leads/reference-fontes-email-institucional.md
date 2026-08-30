@@ -54,6 +54,48 @@ assistência social). É publicado em fonte oficial, mas prefira o endereço no 
   e-mail existe mas não é legível por essa rota: ou achar outra página do mesmo site, ou
   deixar o município de fora. **Nunca reconstruir o endereço por dedução.**
 
+## Resolvido em 30/08/2026: o placeholder `[email protected]` é decodificável, não é fim de linha
+
+O que antes virava "e-mail ofuscado, descartar o lead" tem solução na maioria dos casos. O
+placeholder que o WebFetch devolve é o texto literal que o **Cloudflare Email Address
+Obfuscation** injeta no HTML quando JavaScript está desligado: ele troca `mailto:` por um
+`<a href="/cdn-cgi/l/email-protection" data-cfemail="HEX">` e decora a tela com essa string
+fixa. O endereço real está cifrado (XOR simples) dentro do atributo `data-cfemail`, e dá para
+decodificar sem abrir navegador:
+
+```bash
+curl -s -A "Mozilla/5.0" --max-time 20 "URL" | grep -Eo 'data-cfemail="[a-f0-9]+"' | sort -u
+```
+
+depois, para cada hex encontrado:
+
+```python
+def decode(cfemail):
+    r = int(cfemail[:2], 16)
+    return ''.join(chr(int(cfemail[i:i+2], 16) ^ r) for i in range(2, len(cfemail), 2))
+```
+
+Rendeu direto em Felício dos Santos, Santo Antônio do Itambé (achou `saude@`, cargo certo,
+numa página que listava uma dezena de secretarias de uma vez), Carbonita, Alvorada de Minas
+e Coluna (MG), todos via curl puro, sem gastar chamada de WebFetch. **Importante:** o próprio
+`WebFetch` (por passar o HTML por um modelo que redige PII) também pode devolver esse
+placeholder mesmo quando a página tem o `data-cfemail` decodificável, então um "e-mail
+ofuscado" do WebFetch não é motivo para descartar o lead: baixar o HTML cru com `curl` e
+tentar o decode acima antes de desistir.
+
+Continua valendo não reconstruir e-mail por dedução: isso aqui não é dedução, é ler o dado
+que já está publicado, só que cifrado no HTML em vez de em texto puro.
+
+## Terceira nota (30/08/2026): sites em SPA/JS puro continuam secos por curl
+
+Nem todo 403/404 é Cloudflare. Coluna, Alvorada de Minas e Couto de Magalhães de Minas
+devolveram 403 ou 404 em várias rotas por `curl` puro (sem `data-cfemail` nenhum), enquanto
+outras páginas do mesmo domínio abriram normalmente: provavelmente WAF específico da rota, não
+do domínio inteiro. Vale testar várias sub-rotas (`/secretarias`, `/contato`, `/secretaria`,
+`/atendimento`) antes de desistir do município. Couto de Magalhães de Minas e Senador
+Modestino Gonçalves (MG) ficaram sem e-mail confirmável mesmo depois desse tratamento: nenhuma
+rota testada expôs `data-cfemail` nem texto puro.
+
 ## Terceira armadilha (05/08/2026): e-mail publicado com acento no local-part
 
 Mirabela publica o e-mail da Saúde como `saúde@mirabela.mg.gov.br` (com acento) em duas

@@ -176,3 +176,60 @@ que ainda sobra (município com CAPS regional já mapeado, só falta e-mail), de
 Porteirinha/Mantena/Icaraí de Minas (só falta gancho), antes de sair varrendo região nova.
 
 Rotas e fontes em [[reference-fontes-email-institucional]].
+
+## 5ª leva, 30/08/2026: rodada semanal sem a Mallu, estoque zerado no início
+
+Estoque de `Aprovada` estava em **zero** (a leva de 25 de 23/08 tinha saído inteira como
+`Enviada`). Fechei nome de departamento + e-mail institucional + gancho, verificados por
+`curl` direto na fonte oficial (ver a técnica de decode do Cloudflare em
+[[reference-fontes-email-institucional]]), para 7 organizações, todas cadastradas como
+`0. Alvo` → carta `Aprovada`:
+
+- **Carbonita, Santo Antônio do Itambé, Felício dos Santos, Alvorada de Minas, Coluna**
+  (todos MG): completam a lista de Diamantina/CAPS Renascer (14 municípios) que a 4ª leva
+  tinha deixado em aberto. Gancho: mesma Carta de Serviços de Diamantina
+  (`diamantina.mg.gov.br/portal/carta-servicos/31/`), já usada para Itamarandiba.
+- **Itamarandiba (MG)**: já estava `0. Alvo` com contato (`rh@itamarandiba.mg.gov.br`) e
+  gancho prontos de rodada anterior; só faltava escrever a carta.
+- **CISNORTE**: já estava `0. Alvo` com contato (`diretoria@cisnorte.com.br`); gancho novo,
+  achado direto no site (`cisnorte.com.br/municipios-consorciados/`): 18 municípios
+  consorciados, laboratório e transporte compartilhados.
+
+**Restam sem e-mail confirmável, mesmo depois de testar Cloudflare-decode em várias rotas:**
+Couto de Magalhães de Minas e Senador Modestino Gonçalves (MG). São os dois últimos da
+lista de Diamantina. Se voltarem à fila, tentar de novo com rota diferente, ou telefonar.
+
+**Descartados nesta leva, por motivo (não é lista morta):**
+- **Prefeitura de Monte Azul**: e-mail antigo (`smas.saude@monteazul.mg.gov.br`) segue
+  bounceado (sem MX); nenhum e-mail alternativo encontrado nesta rodada.
+- **Prefeitura de Icaraí de Minas (MG)**: contato confirmado, mas terceira tentativa de
+  gancho (unidades de saúde, história e dados) também não rendeu fato citável; página de
+  unidades de saúde não abriu conteúdo por `curl`.
+- **Prefeitura de São Gotardo (MG)** (a entrada `0. Alvo`, distinta da já `1. Cadastrado`):
+  descartada por duplicidade, o município já tinha carta enviada sob o mesmo nome.
+- **SICOOB**: fora do ICP desta frente (já é negociação de benefício corporativo, não
+  prospecção fria a órgão público); Observações do lead confirmam.
+- **Deputado Estadual Wendel Mesquita, Diego Sanches/Assessora Janaina Silva, Marina
+  Helou**: marcados "AGUARDANDO APROVAÇÃO DA MALLU" nas Observações; fora do fluxo autônomo.
+- **Salinas (MG)**: já `1. Cadastrado`. Tentei remapear a lista de "outros seis municípios"
+  que o CAPS II/Salinas atende (citada sem nomes na própria Carta de Serviços,
+  `salinas.mg.gov.br/portal/carta-servicos/34/`) testando outros IDs de carta-serviços no
+  mesmo domínio (30 a 40): nenhum trouxe a lista nominal. **Ficou em aberto**: se alguém
+  achar a lista (Diário Oficial, CIR/SES-MG), é uma mina do mesmo tamanho da de Diamantina.
+- **Araçuaí, Turmalina, Minas Novas, Capelinha (MG)**: testados como possíveis polos
+  regionais de CAPS (Alto/Médio Jequitinhonha), nenhum tinha Carta de Serviços ou página
+  citando lista de municípios atendidos, publicada e encontrável por busca.
+- **Sinal legislativo (lei/PL municipal de saúde mental do servidor) por busca aberta**:
+  seco de novo, nenhum resultado específico de município de MG (só achados estaduais/
+  federais, ou de outros estados). Confirma o registro da 3ª leva: essa via precisa do
+  Diário Oficial dos Municípios Mineiros, não do buscador aberto.
+
+**Why:** estoque zerado, meta de 25 para a semana (n8n dispara 5/dia, seg a sex); rodada é
+semanal agora (se falhar, a semana toda fica sem carta).
+**How to apply:** a lista de Diamantina está com 12 dos 14 municípios já usados (só faltam
+Couto de Magalhães de Minas e Senador Modestino Gonçalves, e mesmo esses só por e-mail).
+**Para a próxima rodada, essa mina está encerrada**: começar por Salinas (achar a lista
+nominal dos 6 municípios) ou por Januária (CAPS AD, 4 municípios, nunca remapeado), antes de
+sair varrendo região totalmente nova. Region ainda intocada nas 5 levas: Triângulo Mineiro
+(fora Ibiá/Rio Paranaíba/São Gotardo), Sul de Minas (fora Piranguçu/Virgínia/Alfenas/Passos/
+Guaxupé/Campo Belo), Vale do Aço (fora CONSAÚDE), Zona da Mata (fora poucas cidades).
