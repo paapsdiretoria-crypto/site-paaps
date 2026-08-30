@@ -125,6 +125,18 @@ reprovou. Ver as Leis 1 e 2 de `modelos-slide-paaps.md`.
 
 ---
 
+## Caminho alternativo: HTML fotografado (sem Canva)
+
+Validado em 30/08/2026: montar o carrossel em HTML/CSS puro, um `<section>` por slide em
+1080×1350, servido por `python3 -m http.server` e fotografado via Chrome headless (mesmo método
+do skill `exporta-html-pdf`). Útil quando o MCP do Canva não está disponível ou quando a peça pede
+mais controle de layout do que o template do Canva permite. As regras que valem para o Canva
+(paleta, tipografia, uma palavra amarela por slide, foto em todos os slides) valem igual aqui.
+Regras específicas desse caminho, calibradas pela Mallu na primeira rodada real: ver
+`project_pipeline_html_carrossel` na memória (véu de legibilidade é sempre chapado, nunca
+gradiente; o campo "Crédito:" do handoff do copywriter não vira texto no slide publicado; textura
+de marca é opção de fundo de card, testar clara e escura).
+
 ## Montagem no Canva
 
 ### Template
