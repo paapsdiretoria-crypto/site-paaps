@@ -167,28 +167,23 @@ p + p{margin-top:1.05em}
 /* Título rotativo do hero: .girante é a faixa que mostra uma frase por vez,
    como um tambor girando. O JS (site.js, bloco "Girante do hero") troca o
    texto e liga as classes --sai/--entra; esta CSS só anima a transição entre
-   os dois estados, nunca decide qual frase é a vez. */
-.girante{display:block;overflow:hidden;height:1.2em;perspective:600px}
+   os dois estados, nunca decide qual frase é a vez.
+   A caixa é alta o bastante pra 2 linhas: a frase rotativa herda o mesmo
+   tamanho de fonte da linha 1 e, se não couber numa linha só (ex.: "DAS
+   TERAPEUTAS OCUPACIONAIS"), quebra igual à linha 1 já quebra hoje — nunca
+   força uma linha só encolhendo a letra, isso é o que cortava a palavra
+   na borda em telas médias. */
+.girante{display:block;overflow:hidden;height:2.3em;perspective:600px}
 .girante__atual{
   display:inline-block;color:var(--amarelo);font-weight:700;
-  white-space:nowrap;transform-origin:50% 50%;
+  transform-origin:50% 50%;
   transform:rotateX(0deg) translateY(0);opacity:1;
-  transition:transform .5s cubic-bezier(.5,0,.2,1),opacity .38s ease;
+  transition:transform .42s cubic-bezier(.5,0,.2,1),opacity .3s ease;
   backface-visibility:hidden;
 }
 .girante__atual--sai{transform:rotateX(80deg) translateY(-14%);opacity:0}
 .girante__atual--entra{transform:rotateX(-80deg) translateY(14%);opacity:0}
 .girante--sem-transicao .girante__atual{transition:none}
-@media (max-width:640px){.girante{font-size:clamp(1.3rem,7.2vw,2.1rem)}}
-@media (max-width:520px){.girante__atual{white-space:normal}}
-@media (max-width:400px){
-  /* Nem toda frase cabe numa linha no celular menor: aqui a prioridade é
-     nunca cortar a letra, então a faixa cresce e o giro 3D some. */
-  .girante{height:auto;overflow:visible;perspective:none}
-  .girante__atual,.girante__atual--sai,.girante__atual--entra{
-    transform:none;opacity:1;transition:none;
-  }
-}
 @media (prefers-reduced-motion:reduce){.girante__atual{transition:none}}
 
 /* ┌──────────────────────────────────────────────────────────────────────┐

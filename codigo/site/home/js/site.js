@@ -659,8 +659,8 @@
     'DO BRASIL'
   ];
   var indice = 0;
-  var DURACAO_VISIVEL = 2800;
-  var DURACAO_SAIDA = 380;
+  var DURACAO_VISIVEL = 2100;
+  var DURACAO_SAIDA = 340;
 
   function girar() {
     if (document.visibilityState === 'hidden') return;
