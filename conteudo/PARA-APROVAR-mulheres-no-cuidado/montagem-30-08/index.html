@@ -34,11 +34,14 @@
   .foto{position:absolute;left:0;width:1080px;object-fit:cover;z-index:0;}
 
   /* véu chapado, uniforme — nunca gradiente. Opacidade varia por slide via style inline. */
-  .escurecer{position:absolute;inset:0;z-index:1;background:var(--cor-marrom);}
+  .escurecer{position:absolute;inset:0;z-index:1;background:#000;}
 
-  /* textura de marca — Textura 2, ~4-5% opacidade, nunca disputa com a letra */
+  /* textura de marca — Textura 2. O PNG já embute ~25% de opacidade no próprio arquivo
+     (marrom sobre transparente / branco sobre transparente); a opacidade CSS fica em 1,
+     nunca reduzir de novo por cima, senão some. Marrom vai em fundo claro; branco vai em
+     fundo escuro. */
   .textura{position:absolute;inset:0;z-index:1;pointer-events:none;
-           background-repeat:no-repeat;background-position:center;background-size:220% auto;opacity:0.045;}
+           background-repeat:no-repeat;background-position:center;background-size:cover;opacity:0.4;}
   .textura--marrom{background-image:url('texturas/textura-marrom.png');}
   .textura--branco{background-image:url('texturas/textura-branco.png');}
 
@@ -58,12 +61,12 @@
 
   /* SLIDE 1 — CAPA */
   #s1 .foto{top:0;height:1350px;object-position:22% 82%;filter:saturate(1.05);}
-  #s1 .escurecer{background:rgba(68,35,9,0.42);}
+  #s1 .escurecer{background:rgba(0,0,0,0.42);}
   #s1 .conteudo{justify-content:flex-end;padding-bottom:190px;gap:24px;}
 
   /* SLIDE 2 — AFIRMAÇÃO */
   #s2 .foto{top:0;height:1350px;object-position:70% 60%;}
-  #s2 .escurecer{background:rgba(68,35,9,0.32);}
+  #s2 .escurecer{background:rgba(0,0,0,0.32);}
   #s2 .conteudo{justify-content:flex-end;padding-bottom:190px;gap:26px;}
 
   /* SLIDE 3 — DADO EM CARD */
@@ -83,7 +86,7 @@
 
   /* SLIDE 4 — CITAÇÃO */
   #s4 .foto{top:0;height:1350px;object-position:75% 20%;}
-  #s4 .escurecer{background:rgba(68,35,9,0.65);}
+  #s4 .escurecer{background:rgba(0,0,0,0.65);}
   #s4 .conteudo{justify-content:center;gap:34px;}
   #s4 .aspa{font-family:var(--fonte-label);font-size:120px;color:var(--cor-amarelo);line-height:0.5;font-weight:800;}
   #s4 .citacao{font-size:44px;font-weight:700;line-height:1.42;}
@@ -113,7 +116,7 @@
 
   /* SLIDE 8 — PERGUNTA + CTA institucional */
   #s8 .foto{top:0;height:1350px;object-position:75% 15%;}
-  #s8 .escurecer{background:rgba(68,35,9,0.55);}
+  #s8 .escurecer{background:rgba(0,0,0,0.55);}
   #s8 .conteudo{justify-content:flex-end;padding-bottom:270px;gap:16px;}
   #s8 .abertura{font-family:var(--fonte-titulo);font-weight:400;font-size:30px;color:rgba(255,255,255,0.88);}
   #s8 .pergunta{font-size:54px;font-weight:700;line-height:1.28;}
@@ -152,7 +155,7 @@
 <section class="slide" id="s3">
   <img class="foto" src="fotos/slide3.jpg">
   <div class="card">
-    <div class="textura textura--branco"></div>
+    <div class="textura textura--marrom"></div>
     <div class="headline-media">ENTRE TÉCNICAS E AUXILIARES DE ENFERMAGEM, MAIS DE METADE SE AUTODECLARA <span class="amarelo">NEGRA</span>.</div>
     <div class="corpo">Entre assistentes sociais, quase metade também é negra. Da Agente Comunitária de Saúde, à Psicóloga, à Terapeuta Ocupacional, à Professora, à Doula, à Médica.</div>
   </div>
@@ -164,7 +167,7 @@
 <section class="slide" id="s3b">
   <img class="foto" src="fotos/slide3.jpg">
   <div class="card">
-    <div class="textura textura--marrom"></div>
+    <div class="textura textura--branco"></div>
     <div class="headline-media">ENTRE TÉCNICAS E AUXILIARES DE ENFERMAGEM, MAIS DE METADE SE AUTODECLARA <span class="amarelo">NEGRA</span>.</div>
     <div class="corpo">Entre assistentes sociais, quase metade também é negra. Da Agente Comunitária de Saúde, à Psicóloga, à Terapeuta Ocupacional, à Professora, à Doula, à Médica.</div>
   </div>
@@ -195,7 +198,7 @@
 
 <!-- SLIDE 6 : A VIRADA -->
 <section class="slide" id="s6">
-  <div class="textura textura--marrom"></div>
+  <div class="textura textura--branco"></div>
   <div class="conteudo">
     <div class="aspa">&ldquo;</div>
     <div class="citacao">O trabalho delas só entra para os indicadores depois que custou uma <span class="amarelo amarelo-sub">licença</span>.</div>
@@ -207,7 +210,7 @@
 <!-- SLIDE 7 : NÚMERO GIGANTE -->
 <section class="slide" id="s7">
   <img class="foto" src="fotos/slide7.jpg">
-  <div class="area-dado"><div class="textura textura--marrom"></div></div>
+  <div class="area-dado"><div class="textura textura--branco"></div></div>
   <div class="conteudo">
     <div class="numero">75%</div>
     <div class="headline-media">do trabalho de cuidado não remunerado no mundo é feito por mulheres</div>
