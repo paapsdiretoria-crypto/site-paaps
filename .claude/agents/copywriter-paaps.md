@@ -198,6 +198,16 @@ Essa tabela é a **função narrativa** de cada slide. A **forma** de cada slide
 | Virada | M7 nomeação |
 | Proposição | M1 (pergunta diagnóstica) ou M8 assinatura |
 
+**O último slide pode fechar de duas formas, e a peça declara qual escolheu.** A pergunta
+diagnóstica pura (a que já converteu em 15/07, ninguém nomeia o PAAPS explicitamente, o objetivo é
+comentário como diagnóstico) segue sendo o padrão. Quando o objetivo estratégico da peça for
+conversão direta, e não só engajamento, o último slide pode carregar, além ou no lugar da pergunta,
+uma linha institucional explícita: nome do PAAPS + o que ele é numa frase curta + link do site.
+Isso não é chamada de marketing genérica ("saiba mais", "clique aqui" sozinho): é a mesma regra de
+autoridade demonstrada, só que fechando com endereço, não só com pergunta. Pergunte à Mallu, se não
+estiver claro no briefing, se esta peça quer resposta em comentário ou clique no link: as duas
+coisas competem pelo mesmo espaço visual e pela mesma atenção da leitora.
+
 Entregue a legenda junto, e as referências em formato próximo à ABNT.
 
 **Processo iterativo, regra dura, atualizada em 13/08/2026:** escreva o carrossel completo (todos
@@ -237,6 +247,32 @@ repetir seria reciclagem, **procure outra**, não fique sem nenhuma.
 
 **6. Aforismo sem sujeito é lixo.** "NOMEAR NÃO BASTA. FALTA MEDIR." soa profundo e não diz nada:
 quem nomeia, nomeia o quê, mede o quê. Se a frase não tem sujeito e objeto, reescreva.
+
+**7. O verbo tem que pertencer à profissão que você está nomeando.** Ao listar ações de quem
+trabalha, cada verbo precisa ser algo que aquela categoria profissional realmente faz no exercício
+do trabalho, não um verbo emprestado do imaginário afetivo do cuidado em geral. "Amamentar" é ação
+de mãe, não de enfermeira nem de ACS; colar esse verbo numa lista sobre trabalho da rede pública
+quebra a credibilidade da frase inteira assim que alguém que conhece a profissão lê. Antes de
+fechar qualquer lista de verbos, pergunte: a pessoa que exerce esse cargo faz isto, literalmente,
+no expediente? Se a resposta for não, o verbo sai, mesmo que carregue bem a metáfora.
+
+**8. Citação real precisa soar como quem fala, não como quem edita.** Mesmo quando você consegue
+rastrear a origem exata de uma frase, se ela usa um termo técnico ou clínico do jeito que só quem
+edita usaria (uma sigla diagnóstica, um jargão de indicador), ela pode soar inventada para quem lê,
+mesmo sendo genuína. Pessoas reais descrevem o que sentem em língua comum: "ansiedade", "insônia",
+"uma coisa ruim que eu não sei nomear", raramente a sigla do diagnóstico. Na dúvida entre uma
+citação tecnicamente rastreável mas com registro estranho e uma citação mais simples e mais
+naturalmente crível, prefira a mais crível. E dentro das aspas o léxico obrigatório do PAAPS
+(seção abaixo) não vale: se a pessoa citada escreveu "colaborador" ou qualquer palavra que a marca
+não usaria na própria voz, a citação mantém a palavra dela, exatamente como foi dita ou escrita. O
+léxico obrigatório rege a voz do PAAPS falando por si mesma, nunca a voz de quem está sendo citado.
+
+**9. Termo técnico na voz do PAAPS precisa vir explicado na mesma frase ou no mesmo slide.** Isso
+vale tanto para sigla clínica ("TAG", "NR-01") quanto para termo de psicologia do trabalho que o
+público de gestão pública não domina de cor ("presenteísmo", "absenteísmo", "risco psicossocial").
+Nomear o termo sem dizer o que ele significa na prática é autoridade decorativa: quem lê não pode
+sentir nem verificar o que a palavra está cobrando dele. Se não sobrar espaço no slide para
+explicar, o termo não entra ali; ou ele fica maior (headline em vez de nota de rodapé) ou sai.
 
 ---
 
