@@ -636,3 +636,48 @@
     });
   });
 })();
+
+/* ---- girante do hero: título rotativo "A PAAPS É A REDE DE PSICÓLOGOS ___".
+   O tambor gira entre os públicos que a PAAPS atende. A transição e as
+   classes --sai/--entra vivem no CSS (ver .girante em paaps.css); aqui só
+   troca o texto e liga/desliga as classes no momento certo. ---- */
+(function () {
+  'use strict';
+  var faixa = document.querySelector('.girante');
+  var atual = faixa ? faixa.querySelector('.girante__atual') : null;
+  if (!faixa || !atual) return;
+
+  var frases = [
+    'DE QUEM CUIDA',
+    'DAS PROFESSORAS',
+    'DAS ACS E ACE',
+    'DAS ENFERMEIRAS',
+    'DAS DOULAS',
+    'DAS TERAPEUTAS OCUPACIONAIS',
+    'DAS SERVIDORAS PÚBLICAS',
+    'DE QUEM SUSTENTA TUDO',
+    'DO BRASIL'
+  ];
+  var indice = 0;
+  var DURACAO_VISIVEL = 2800;
+  var DURACAO_SAIDA = 380;
+
+  function girar() {
+    if (document.visibilityState === 'hidden') return;
+
+    atual.classList.add('girante__atual--sai');
+
+    setTimeout(function () {
+      indice = (indice + 1) % frases.length;
+      faixa.classList.add('girante--sem-transicao');
+      atual.textContent = frases[indice];
+      atual.classList.remove('girante__atual--sai');
+      atual.classList.add('girante__atual--entra');
+      void atual.offsetWidth; /* força o navegador a aplicar o estado "entra" antes de tirar */
+      faixa.classList.remove('girante--sem-transicao');
+      atual.classList.remove('girante__atual--entra');
+    }, DURACAO_SAIDA);
+  }
+
+  setInterval(girar, DURACAO_VISIVEL);
+})();

@@ -9,31 +9,32 @@ Site institucional estático da **PAAPS** — negócio social / GovTech de Psico
 ```
 site/
   DESIGN-SYSTEM.md               ← documentação do design system
-  PROMPT_CLAUDE_CODE_SITE_PAAPS.md ← prompt de referência
-  .claude/skills/frontend-design.md ← skill de design genérica
-  paaps-site/
+  REGRAS-MOBILE-PAAPS-SITE.md    ← as 6 leis do mobile, fonte da verdade da responsividade
+  PROMPT-SITE-PAAPS-V1.md        ← prompt de referência mais recente
+  home/                          ← O SITE ATIVO, publicado em paaps.com.br
     index.html                   ← Home
-    logo.png
-    sobre/index.html
-    servicos/index.html
-    como-contratar/index.html
-    case/index.html
+    como-atuamos/index.html
+    treinamentos/index.html
+    urgencias/index.html
     contato/index.html
-    css/
-      style.css                  ← variáveis globais, tipografia, utilitários, responsividade
-      components.css             ← header, hero, cards, footer, componentes específicos
-    js/main.js                   ← hamburger, scroll, marquee, IntersectionObserver, contadores
-    imagens/                     ← assets do site (fotos, texturas, pontinhos — exceto logo.png)
+    mapa/mapa-rede.html
+    css/paaps.css                ← variáveis globais, tipografia, componentes, responsividade
+    js/site.js                   ← todo o JS do site, em IIFEs por funcionalidade
+    img/                         ← assets do site (fotos, texturas, pontinhos, logos)
+    fontes/                      ← League Spartan local via @font-face
+  deploy-paaps-com-br/           ← espelho de home/ empacotado para publicação (cPanel/HostGator),
+                                    ver LEIA-ME-DEPLOY.md ali dentro. Editar sempre em home/ primeiro,
+                                    depois replicar aqui — nunca o inverso.
 ```
 
-**Insumos compartilhados:** logos, texturas e identidade visual ficam em `../insumos-compartilhados/`.
+**Insumos compartilhados:** logos, texturas e identidade visual ficam em `../../insumos-compartilhados/`.
 
 ---
 
 ## Como visualizar
 
 ```bash
-cd "site/paaps-site" && python3 -m http.server 8080
+cd "codigo/site/home" && python3 -m http.server 8080
 # Abrir: http://localhost:8080
 ```
 
@@ -43,42 +44,34 @@ Não há build, transpilação ou dependências npm.
 
 ## Identidade visual (CSS)
 
-Variáveis em `style.css` `:root` — **sempre usar variáveis, nunca hardcodar hex:**
+Variáveis em `home/css/paaps.css` `:root` — **sempre usar variáveis, nunca hardcodar hex:**
 
 | Variável | Valor | Uso |
 |---|---|---|
-| `--cor-fundo` | `#f5f1e1` | Fundo geral |
-| `--cor-marrom` | `#442309` | Texto principal, seção escura |
-| `--cor-terracota` | `#cb4710` | Destaque primário, CTAs |
-| `--cor-oliva` | `#aea349` | Destaque secundário |
-| `--cor-amarelo` | `#f7c31c` | Números grandes, acentos |
-| `--cor-bege-rosa` | `#bbada2` | Labels, subtextos suaves |
-| `--cor-lilas` | `#bcb6f2` | Card trilha empresas |
+| `--bege` | `#f5f1e1` | 1. Dominante, o papel |
+| `--marrom` | `#442309` | 2. A tinta, seções escuras |
+| `--amarelo` | `#f7c31c` | 3. Palavra-chave, destaque pontual |
+| `--oliva` | `#aea349` | 4. Cor chapada, detalhe |
+| `--terracota` | `#cb4710` | 5. Raro |
+| `--roxo` | `#bcb6f2` | 6. Quase nunca |
 
-Tipografia: `League Spartan` (títulos, labels, botões) · `Helvetica Neue` (corpo).
+Tipografia: `League Spartan` (títulos, em CAIXA ALTA) · corpo de texto em fonte padrão do sistema.
 
 ---
 
 ## Padrões de componentes
 
-**Animações de entrada:** classe `animar` no elemento. O `main.js` usa IntersectionObserver para adicionar `visivel` quando entra na viewport. Use `animar-delay-1/2/3/4` para escalonamento.
+O CSS é organizado em blocos comentados por seção da home (ver o mapa no topo de `home/index.html`, "MAPA DESTA PÁGINA"). O JS (`home/js/site.js`) é uma sequência de IIFEs, uma por funcionalidade (menu, trilha de seções, animações de entrada, título rotativo do hero etc.) — ao adicionar comportamento novo, seguir esse padrão em vez de criar um arquivo JS separado.
 
-**Marcadores coloridos:** `<span class="marcador marcador--terracota">` — antes de títulos de seção.
+**Classe `.chave` / `.grifo`:** destaque em amarelo dentro de um título ou parágrafo.
 
-**Label de seção:** `<span class="label-secao">` — texto em caps pequeno acima do h2.
-
-**Esteira marquee:** `main.js` duplica automaticamente o conteúdo de `.esteira__track`.
-
-**Contadores animados:** `<span data-valor="56" data-prefixo="+" data-sufixo="%">` — JS anima de 0 até o valor.
+**`.grifo--linha`:** frase que não pode quebrar no meio (`white-space:nowrap`, com fallback `normal` abaixo de 520px) — usar sempre que uma frase precisa ser lida como unidade.
 
 ---
 
 ## Responsividade
 
-Breakpoints em `components.css` (não criar novos):
-- `≤ 960px`: grid-3 vira 2 colunas, case-grid vira 1 coluna
-- `≤ 768px`: header hamburger ativo, grids viram 1 coluna, nav oculta
-- `≤ 480px`: hero usa `100svh`, grid-numeros vira 1 coluna
+Fonte da verdade: `REGRAS-MOBILE-PAAPS-SITE.md` (as 6 leis do mobile — a foto ocupa a tela inteira, o texto mora dentro da foto, uma ideia por tela, etc.). Breakpoints principais em `home/css/paaps.css`: `≤960px` e `≤768px`, com um bloco de overrides dedicado ao `#hero` dentro do breakpoint `≤768px`. Tamanhos fluidos via `clamp()` na maior parte da tipografia, em vez de valores fixos por breakpoint.
 
 ---
 
