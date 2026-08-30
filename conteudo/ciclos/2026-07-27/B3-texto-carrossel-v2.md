@@ -30,7 +30,32 @@ de impacto (a linha "menor" tinha a mesma carga retórica da principal). Os trê
 versão (marcados inline, "Correção da rodada 2 do Crítico"): cortei a frase final do bloco da
 capa; passei a expansão de "TAG" para dentro de colchetes, visível na própria citação; reescrevi
 a linha menor do slide 6 como explicação de mecanismo, não como segunda sentença de efeito.
-Enviando de volta ao Crítico para a rodada 3.
+
+**Rodada 3 do Crítico (30/08/2026): nota 75/100, corte 90.** Relatório completo em
+`carrossel-2026-08-30-de-quem-e-esse-trabalho-critica-rodada3.md`. Dois achados, os dois novos em
+relação às rodadas anteriores (não regressão do que já tinha sido corrigido): (1) a mesma figura
+de negação por contraste, lida na peça inteira pela primeira vez sob este critério, ainda
+aparecia na headline da capa (protegida como bookend com a legenda, contada como uma ocorrência),
+e DUAS vezes dentro do slide 6 (a citação principal, que é o núcleo intocável, e a linha de
+explicação que a correção da rodada 2 tinha resolvido para outro problema mas que reintroduzia a
+mesma arquitetura); (2) o slide 4 ganhou uma "tag curta" visível avisando que a citação já tinha
+sido usada antes, o que expõe ao público a mesma contabilidade de processo que motivou a causa 4
+da reprovação original de 30/07. Corrigidos nesta versão: a linha de explicação do slide 6 saiu
+da cadência "não X: só Y" (agora descreve o mecanismo sem negação: "o indicador registrava meta
+batida. O esforço dela ficava de fora dessa conta."); a "tag curta" do slide 4 foi cortada do
+conteúdo visível e passou a existir só nas Referências deste documento de handoff, que não vai
+para o Instagram.
+
+**Rodada 4 do Crítico (30/08/2026): nota 75/100, corte 90.** Relatório completo em
+`carrossel-2026-08-30-de-quem-e-esse-trabalho-critica-rodada4.md`. Confirmou, sem reabrir, as
+duas correções da rodada 3 (figura de negação por contraste com duas ocorrências protegidas;
+tag curta fora do conteúdo visível do slide 4). Achado novo, uma causa em dois lugares (desconto
+único): dado que não se sustenta sozinho. (1) Slide 3: "mais perto de casa em casa", sem vírgula
+nem verbo que amarrasse à ACS, lia como sintaxe quebrada. (2) Legenda: "duzentas famílias" era o
+único número da peça sem fonte nem ano em lugar nenhum do documento. Corrigidos nesta versão:
+slide 3 virou oração relativa completa ("que atua de casa em casa"); a legenda trocou o número
+solto por "um bairro inteiro de famílias", sem prometer precisão que a peça não sustenta.
+Enviando de volta ao Crítico para a rodada 5.
 
 ---
 
@@ -167,8 +192,8 @@ centralizar os três rostos rindo, focando na mão com o caderno e o colete.
 
 - **CAPS com o achado, um termo amarelo (12/12? aproximado, teto de contextualização
   aceita mais):** ENTRE TÉCNICAS E AUXILIARES DE ENFERMAGEM, MAIS DE METADE SE DECLARA **NEGRA**.
-- **Card creme sobreposto, corpo em língua comum (25/35):** Entre assistentes sociais, quase
-  metade também é negra. Da Agente Comunitária de Saúde, mais perto de casa em casa, nenhuma
+- **Card creme sobreposto, corpo em língua comum (24/35):** Entre assistentes sociais, quase
+  metade também é negra. Da Agente Comunitária de Saúde, que atua de casa em casa, nenhuma
   pesquisa nacional levantou esse número.
 - **Fonte, no pé do card:** Cofen/Fiocruz, Pesquisa Perfil da Enfermagem no Brasil, 2015 · CFESS,
   Perfil de Assistentes Sociais no Brasil, 2022.
@@ -191,10 +216,15 @@ entrega a ideia de ausência, sem precisar repetir no bloco de baixo. O bloco ag
 "mulher, e desproporcionalmente mulher negra", sem negação nenhuma.
 
 **Correção da rodada 1 do Crítico (slide 3):** "esse número nunca foi levantado" era passiva sem
-sujeito,
-o mesmo mecanismo que `voz-paaps.md` proíbe para "ninguém mediu"/"ninguém preveniu", só que
-escondido na construção passiva em vez do pronome. Reescrevi nomeando quem deveria ter medido e
-não mediu: "nenhuma pesquisa nacional levantou esse número".
+sujeito, o mesmo mecanismo que `voz-paaps.md` proíbe para "ninguém mediu"/"ninguém preveniu", só
+que escondido na construção passiva em vez do pronome. Reescrevi nomeando quem deveria ter medido
+e não mediu: "nenhuma pesquisa nacional levantou esse número".
+
+**Correção da rodada 4 do Crítico (slide 3):** "mais perto de casa em casa", sem vírgula nem
+verbo que amarrasse a expressão à Agente Comunitária de Saúde, lia como bloco sintático quebrado:
+não ficava claro, na primeira passada, se "mais perto" era comparativo ou se "de casa em casa"
+era aposto explicando o trabalho dela. Reescrevi como oração relativa completa ("que atua de casa
+em casa"), que entrega o sentido de primeira, sem perder a ideia de proximidade territorial.
 
 ---
 
@@ -304,8 +334,19 @@ sozinho.
 **Correção da rodada 2 do Crítico:** a linha menor deste slide dizia "Antes disso, ela só existia
 como meta cumprida", que repetia a mesma carga de frase-choque da citação principal, só em
 tamanho menor (dois socos, não um soco e uma explicação, o erro que a Lei 5 do catálogo nomeia).
-Reescrevi como explicação de mecanismo em língua comum ("o indicador da equipe não registrava o
-esforço dela: só a meta batida"), que informa sem tentar impactar de novo.
+
+**Correção da rodada 3 do Crítico:** a primeira reescrita ("o indicador da equipe não registrava
+o esforço dela: só a meta batida") resolveu o problema da rodada 2, mas reintroduziu, dentro do
+mesmo slide, a mesma arquitetura de negação por contraste que já sustenta a citação principal
+("só entrou... depois que") e o bookend capa/legenda ("só enxerga quando vira atestado"). Como o
+crítico apontou na rodada 3, isso deixava a peça com a figura repetida três vezes (capa+legenda
+contadas como uma, mais as duas dentro do slide 6). Reescrevi de novo, sem negação: "O indicador
+da equipe registrava meta batida. O esforço dela ficava de fora dessa conta." Descreve o mesmo
+mecanismo (o indicador media uma coisa e não a outra) sem repetir o molde "não X: só Y".
+
+**Correção da rodada 4 do Crítico:** confirmada sem regressão. A leitura de primeira vista da
+rodada 4 conferiu que esta linha não usa negação e não reabre a figura, e que nenhuma terceira
+ocorrência nova apareceu no slide.
 
 **Por que este é o único slide que dispensa lista ou card:** os quatro slides anteriores já
 entregaram, nesta ordem, o que essa frase precisa para pagar o que promete: que existe um trabalho
@@ -391,8 +432,8 @@ cidade sai, vira "prefeitura de pequeno porte, no interior de Minas Gerais".
 
 ## LEGENDA
 
-> Ela sustenta duzentas famílias, um posto de saúde, um território inteiro. A gestão só sabe
-> contar isso quando vira atestado.
+> Ela sustenta um bairro inteiro de famílias, um posto de saúde, um território inteiro. A
+> gestão só sabe contar isso quando vira atestado.
 >
 > Uma servidora pública escreveu aqui, uma vez: "Quem cuida de nós? Deus."
 >
@@ -408,6 +449,13 @@ questão é que está cuidando sozinha.") era a quarta ocorrência, nesta peça,
 negação por contraste já identificada nos slides 1, 2 e 6. Cortei: a citação sustenta o peso
 sozinha, sem precisar de glosa. Sobra, na peça inteira, uma única ocorrência dessa figura, no
 slide 6, onde ela é o núcleo que a Tecelã pediu para não suavizar.
+
+**Correção da rodada 4 do Crítico:** "duzentas famílias" era o único número de toda a peça sem
+fonte nem ano declarados em lugar nenhum do documento, quebrando a consistência de rigor que os
+outros sete dados mantêm (todos com fonte e ano no rodapé do slide ou nas Referências). O número
+era estimativa livre a partir do parâmetro de cobertura da Atenção Básica, nunca verificada nesta
+sessão com fonte oficial. Troquei por "um bairro inteiro de famílias", que carrega o mesmo peso
+afetivo de escala sem prometer uma precisão que a peça não sustenta.
 
 ---
 
@@ -429,9 +477,10 @@ slide 6, onde ela é o núcleo que a Tecelã pediu para não suavizar.
   da NR-1 (gerenciamento de riscos psicossociais; fiscalização punitiva a partir de 26 maio 2026,
   no âmbito do regime celetista). Brasília, DF, mar. 2026.
 - Comentário público de servidora pública da rede, no perfil @paaps.brasil (post de 02 jul. 2026),
-  citado literalmente, com ortografia levemente normalizada, sigla clínica original "TAG" expandida
-  para Transtorno de Ansiedade Generalizada (clareza de leitura) e sem identificação da autora; a
-  mesma citação já apareceu no slide 4 do carrossel de 15 jul. 2026.
+  citado literalmente, com ortografia levemente normalizada e sem identificação da autora; a sigla
+  clínica original "TAG" foi mantida na citação, com a expansão "[Transtorno de Ansiedade
+  Generalizada]" inserida entre colchetes, visível no próprio slide, para clareza de leitura sem
+  alterar a fala; a mesma citação já apareceu no slide 4 do carrossel de 15 jul. 2026.
 - Comentário público de servidora pública da rede, no perfil @paaps.brasil, "Quem cuida de nós?
   Deus." (data não precisa nesta sessão; citado na legenda).
 - Carrossel @paaps.brasil, "Quem cuida da RAPS", 15 jul. 2026 (referência de forma).
@@ -472,10 +521,13 @@ que é pensamento e o que é andaime nesta peça.
 - Estrutura "não é X, é Y": zero usos nesta peça (não foi necessária em nenhum slide).
 - Léxico de pessoas: "Servidora Pública", "Agente Comunitária de Saúde", "técnicas e auxiliares
   de enfermagem", "assistentes sociais"; nenhum "colaborador", nenhum "Servidor" sozinho.
-- Figura de negação por contraste ("nunca X, só quando Y"): reduzida de quatro ocorrências
-  (slides 1, 2, 6 e legenda) para uma só, no slide 6, onde é o núcleo protegido pela Tecelã
-  (a correção da rodada 1 resolveu 3 dos 4 usos; a rodada 2 apontou que o slide 1 ainda repetia a
-  figura com outras palavras, e cortei a frase inteira).
+- Figura de negação por contraste ("nunca X, só quando Y" / "não X: só Y"): reduzida, ao final de
+  três rodadas de crítica, a uma única ocorrência protegida na peça inteira: o par capa/legenda
+  ("só enxerga quando vira atestado" / "só sabe contar isso quando vira atestado"), contado como
+  bookend intencional, mais a citação principal do slide 6 ("só entrou na planilha depois que
+  parou de funcionar"), que é o núcleo que a Tecelã pediu para não suavizar. Todas as outras
+  ocorrências (bloco de contexto do slide 1, linha de explicação do slide 2, linha de explicação
+  do slide 6, linha extra da legenda) foram reescritas sem a figura.
 - Nenhuma passiva vazia de agência: "nenhuma pesquisa nacional levantou esse número" nomeia quem
   deveria ter medido, no lugar de "esse número nunca foi levantado" (rodada 1 do Crítico).
 - Nenhuma sigla sem expansão, e nenhuma citação alterada sem marca visível: "TAG" (slide 4)
@@ -486,7 +538,15 @@ que é pensamento e o que é andaime nesta peça.
   todas as letras, que 546.254 e 823% são do país inteiro, não da ACS celetista (rodada 1 do
   Crítico).
 - Nenhum slide com duas frases de impacto: a linha de apoio do slide 6 virou explicação de
-  mecanismo em língua comum, não segunda sentença de efeito (rodada 2 do Crítico).
+  mecanismo em língua comum, sem negação e sem carga de frase-choque (rodadas 2 e 3 do Crítico).
+- Nenhuma contabilidade de processo exposta ao público, nem sobre o post ("há 12 dias, dissemos")
+  nem sobre a citação ("essa fala já apareceu"): a informação de reuso da citação do slide 4 mora
+  só nas Referências deste handoff, nunca no card publicado (rodada 3 do Crítico).
+- Nenhuma sintaxe comprimida a ponto de exigir reconstrução: "que atua de casa em casa" (slide 3)
+  substitui um bloco sem verbo nem vírgula que amarrasse a expressão à ACS (rodada 4 do Crítico).
+- Nenhum número sem fonte nem ano: "duzentas famílias" (legenda), o único dado solto da peça,
+  virou "um bairro inteiro de famílias", sem prometer precisão que não estava lastreada
+  (rodada 4 do Crítico).
 
 ---
 
