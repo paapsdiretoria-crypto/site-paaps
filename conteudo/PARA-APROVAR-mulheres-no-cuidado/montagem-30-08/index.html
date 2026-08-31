@@ -36,13 +36,12 @@
   /* véu chapado, uniforme — nunca gradiente. Opacidade varia por slide via style inline. */
   .escurecer{position:absolute;inset:0;z-index:1;background:#000;}
 
-  /* textura de marca — Textura 3 (fundo claro) e Textura 1 (fundo escuro), em mosaico
-     pequeno (nunca "cover": em escala grande vira 1-2 traços gigantes brigando com o
-     texto, "parece onça"). O PNG já embute ~25% de opacidade própria; opacidade CSS
-     0.4 por cima disso é o ponto calibrado visualmente contra grade de teste
-     (ver teste-textura.html) — visível, tom sobre tom, sem competir com a letra. */
+  /* textura de marca — só na faixa bege, por instrução dela (30/08, rodada 4): o marrom
+     fica sem textura por enquanto. Textura 4, esparsa (sem repeat), opacidade 0.05 —
+     número exato que ela mediu no próprio Canva ("nível cinco de cem"). Delicada mesmo:
+     não subir isso de novo sem ela pedir. */
   .textura{position:absolute;inset:0;z-index:1;pointer-events:none;
-           background-repeat:no-repeat;background-position:center;background-size:140%;opacity:0.22;}
+           background-repeat:no-repeat;background-position:center;background-size:140%;opacity:0.05;}
   .textura--marrom{background-image:url('texturas/textura-marrom.png');}
   .textura--branco{background-image:url('texturas/textura-branco.png');}
 
@@ -98,12 +97,14 @@
   #s5 .conteudo{justify-content:center;align-items:flex-start;padding-top:150px;}
   #s5 .headline-grande{font-size:78px;max-width:880px;}
 
-  /* SLIDE 6 — A VIRADA (sem foto; textura marrom, não gradiente) */
+  /* SLIDE 6 — A VIRADA (sem foto por enquanto; ela vai mandar uma pra dividir a tela) */
   #s6{background:var(--cor-marrom);}
   #s6 .conteudo{justify-content:center;gap:36px;align-items:flex-start;}
-  #s6 .aspa{font-family:var(--fonte-label);font-size:120px;color:var(--cor-amarelo);line-height:0.5;font-weight:800;}
   #s6 .citacao{font-size:50px;font-weight:700;line-height:1.28;max-width:900px;}
   #s6 .corpo{max-width:820px;color:rgba(255,255,255,0.88);}
+  .legenda-caps{position:absolute;left:76px;bottom:56px;right:160px;z-index:3;
+                 font-family:var(--fonte-label);font-weight:700;font-size:20px;line-height:1.35;
+                 letter-spacing:0;color:var(--cor-bege-rosa);}
 
   /* SLIDE 7 — NÚMERO GIGANTE (textura marrom na área do dado) */
   #s7{background:var(--cor-marrom);}
@@ -115,18 +116,25 @@
   #s7 .corpo-menor{max-width:840px;}
   #s7 .corpo-terciario{font-size:24px;color:rgba(255,255,255,0.75);max-width:840px;margin-top:6px;}
 
-  /* SLIDE 8 — PERGUNTA + CTA institucional */
+  /* SLIDE 8 — PERGUNTA + CTA institucional. Referência: post real dela (foto sangrando
+     até o fim, sem faixa, legenda + logo numa linha só direto sobre a foto). Composição
+     em 3 zonas pra não pegar o rosto na foto: abertura em cima do guarda-chuva
+     (esquerda), pergunta grande à direita (onde não tem rosto), CTA embaixo, na foto. */
   #s8 .foto{top:0;height:1350px;object-position:75% 15%;}
-  #s8 .escurecer{background:rgba(0,0,0,0.55);}
-  #s8 .conteudo{justify-content:flex-end;padding-bottom:270px;gap:16px;}
-  #s8 .abertura{font-family:var(--fonte-titulo);font-weight:400;font-size:30px;color:rgba(255,255,255,0.88);}
-  #s8 .pergunta{font-size:54px;font-weight:700;line-height:1.28;}
-  #s8 .pergunta .glossa{display:block;font-family:var(--fonte-titulo);font-size:26px;font-weight:400;color:rgba(255,255,255,0.82);margin-top:12px;}
-  #s8 .pergunta .linha2{display:block;margin-top:12px;}
-  #s8 .cta{position:absolute;left:0;right:0;bottom:0;height:210px;background:var(--cor-marrom);
-           z-index:3;display:flex;flex-direction:column;justify-content:center;gap:14px;padding:0 76px;}
-  #s8 .cta-texto{font-family:var(--fonte-titulo);font-weight:700;font-size:32px;line-height:1.25;max-width:820px;color:var(--cor-branco);}
-  #s8 .cta-link{font-family:var(--fonte-label);font-weight:800;font-size:26px;color:var(--cor-amarelo);}
+  #s8 .escurecer{background:rgba(0,0,0,0.48);}
+  #s8 .abertura{position:absolute;left:76px;top:90px;width:560px;z-index:2;
+                 font-family:var(--fonte-titulo);font-weight:700;font-size:36px;line-height:1.28;color:var(--cor-branco);}
+  #s8 .zona-pergunta{position:absolute;right:76px;left:520px;top:830px;z-index:2;text-align:right;}
+  #s8 .pergunta{font-size:46px;font-weight:700;line-height:1.28;white-space:nowrap;}
+  #s8 .pergunta .glossa{display:block;font-family:var(--fonte-titulo);font-size:24px;font-weight:400;
+                         color:rgba(255,255,255,0.82);margin-top:10px;white-space:normal;}
+  #s8 .pergunta .linha2{display:block;margin-top:10px;white-space:normal;}
+  #s8 .cta-rodape{position:absolute;left:76px;right:76px;bottom:56px;z-index:3;
+                   display:flex;align-items:flex-end;justify-content:space-between;gap:24px;}
+  #s8 .cta-texto{font-family:var(--fonte-titulo);font-weight:700;font-size:25px;line-height:1.3;
+                  color:var(--cor-branco);white-space:nowrap;}
+  #s8 .cta-link{display:block;font-family:var(--fonte-label);font-weight:700;font-size:19px;
+                 color:var(--cor-amarelo);margin-top:6px;white-space:nowrap;}
 </style>
 </head>
 <body>
@@ -155,7 +163,6 @@
 <!-- SLIDE 3 : DADO EM CARD (variante A — card bege/creme, com textura) -->
 <section class="slide" id="s3">
   <img class="foto" src="fotos/slide3.jpg">
-  <div class="textura textura--branco" style="top:620px;bottom:0;"></div>
   <div class="card">
     <div class="textura textura--marrom"></div>
     <div class="headline-media">ENTRE TÉCNICAS E AUXILIARES DE ENFERMAGEM, MAIS DE METADE SE AUTODECLARA <span class="amarelo">NEGRA</span>.</div>
@@ -198,42 +205,40 @@
   <img class="logo" src="logo/logo-branco.png">
 </section>
 
-<!-- SLIDE 6 : A VIRADA -->
+<!-- SLIDE 6 : A VIRADA (pendente: foto que ela vai enviar, pra dividir a tela) -->
 <section class="slide" id="s6">
-  <div class="textura textura--branco"></div>
   <div class="conteudo">
-    <div class="aspa">&ldquo;</div>
     <div class="citacao">O trabalho delas só entra para os indicadores depois que custou uma <span class="amarelo amarelo-sub">licença</span>.</div>
-    <div class="corpo">O indicador da equipe só registra a meta batida.</div>
+    <div class="corpo">O indicador da equipe só registra a meta batida. Entre quem trabalha formalmente, os afastamentos por esgotamento profissional multiplicaram por 9 em 4 anos.</div>
   </div>
+  <div class="legenda-caps">NÓS PRECISAMOS CONHECER MELHOR E CUIDAR MELHOR DESSAS MULHERES QUE CUIDAM DE TUDO.</div>
   <img class="logo" src="logo/logo-branco.png">
 </section>
 
 <!-- SLIDE 7 : NÚMERO GIGANTE -->
 <section class="slide" id="s7">
   <img class="foto" src="fotos/slide7.jpg">
-  <div class="area-dado"><div class="textura textura--branco"></div></div>
+  <div class="area-dado"></div>
   <div class="conteudo">
     <div class="numero">75%</div>
     <div class="headline-media">do trabalho de cuidado não remunerado no mundo é feito por mulheres</div>
-    <div class="corpo-menor">Em agosto de 2026, o SUS lançou o Acolhe Mais: teleatendimento psicológico gratuito para mulheres em situação de violência e para quem cuida, sem remuneração, de familiares com deficiência ou doença rara.</div>
-    <div class="corpo-terciario">Entre quem trabalha formalmente, os afastamentos por esgotamento profissional multiplicaram por 9 em 4 anos.</div>
+    <div class="corpo-menor">O recém-lançado programa Acolhe Mais, atendimento psicológico online para Mães Atípicas ou Mulheres Vítimas de Violência, pelo SUS, nasce justamente porque hoje sabemos que: cuidar também adoece quem cuida.</div>
   </div>
   <div class="fonte-rodape">OIT · Ministério da Saúde, Acolhe Mais, ago. 2026</div>
   <img class="logo" src="logo/logo-branco.png">
 </section>
 
-<!-- SLIDE 8 : PERGUNTA + CTA -->
+<!-- SLIDE 8 : PERGUNTA + CTA (foto sangrando até o fim, sem faixa) -->
 <section class="slide" id="s8">
   <img class="foto" src="fotos/slide8.jpg">
   <div class="escurecer"></div>
-  <div class="conteudo">
-    <div class="abertura">Na sua rede, quem cuida de quem cuida?</div>
-    <div class="pergunta">O <span class="amarelo amarelo-sub">presenteísmo</span><span class="glossa">(ir ao trabalho, mas adoecida ou exausta demais para dar o seu melhor)</span><span class="linha2">na sua equipe ainda não tem indicador?</span></div>
+  <div class="abertura">O Acolhe Mais do SUS sabe que precisamos cuidar quem cuida. Mas não olhou para as mulheres do próprio SUS, que cuidam de tudo.</div>
+  <div class="zona-pergunta">
+    <div class="pergunta">O <span class="amarelo amarelo-sub">presenteísmo</span> em mulheres<span class="glossa">(ir ao trabalho, mas adoecida ou exausta demais para dar o seu melhor)</span><span class="linha2">ainda não tem indicador?</span></div>
   </div>
-  <div class="cta">
-    <div class="cta-texto">A PAAPS É A REDE DE PSICÓLOGAS DAS SERVIDORAS PÚBLICAS</div>
-    <div class="cta-link">SAIBA MAIS EM WWW.PAAPS.COM.BR</div>
+  <div class="cta-rodape">
+    <div class="cta-texto">A PAAPS É A REDE DE PSICÓLOGAS DAS SERVIDORAS PÚBLICAS<span class="cta-link">SAIBA MAIS EM WWW.PAAPS.COM.BR</span></div>
+    <img class="logo" src="logo/logo-branco.png" style="position:relative;right:0;bottom:0;flex-shrink:0;">
   </div>
 </section>
 
