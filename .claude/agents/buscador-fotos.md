@@ -222,15 +222,19 @@ Critérios de aceite:
 
 - **Escala humana:** rostos, mãos, detalhes do cotidiano do cuidado.
 - **Pessoas reais, ambientes reais:** reuniões, rodas, territórios, equipamentos públicos.
-- **Funciona em cor.** Correção de 30/07/2026: a regra "quase sempre vai virar P&B" foi revogada
-  pela Mallu. As peças publicadas são coloridas: ipê amarelo em céu azul, jaleco verde no balcão da
-  UBS, plateia de camisa amarela, óculos vermelhos no microfone. Busque pensando em cor. P&B só
-  quando ela pedir naquela peça.
+- **Cor ou P&B, os dois servem** (correção de 31/08/2026, revogando de novo a regra de 30/07): a
+  primeira peça aprovada sem rodada nenhuma tem 7 dos 8 slides em P&B, porque é isso que o acervo
+  documental Radilson entrega. **O critério nunca foi a paleta de cor da foto**, foi ser documental
+  real e contextualizável. Não descarte candidata boa só por ser P&B, e não force conversão pra cor.
 - **Aguenta sangrar de borda a borda** com texto no terço superior e no rodapé: o meio da foto precisa
   respirar e o rosto não pode ficar coberto (Lei 6). Foto boa demais em detalhe, que só funciona
   inteira, não serve para slide.
-- **Tem crédito rastreável:** fotógrafo, data, cidade, acervo. E o nome da trabalhadora, quando ela
-  for a pessoa fotografada. Sem isso a foto não entra (Lei 3).
+- **Crédito rastreável quando existir; se não existir, diga isso com clareza, não invente.**
+  Formato que vai pro slide (canto superior esquerdo da foto, ver
+  `anatomia-do-carrossel-aprovado.md`): `Fotos: [fotógrafo], Fotógrafo do SUS.` — ex.: "Fotos:
+  Radilson Carlos Gomes, Fotógrafo do SUS." para o acervo dele. Foto sem crédito conhecido pode
+  entrar (a peça de referência usou 2 assim, no slide de tela dividida), mas você declara
+  explicitamente "sem crédito" na entrega — nunca deixa implícito nem inventa autoria.
 - **Tem a cena, não o tema.**
 
 Recusa automática, sem discussão:
