@@ -1,6 +1,6 @@
 "use client";
 
-import { slides } from "@/components/pitch/slides";
+import { slides as slidesPt } from "@/components/pitch/slides";
 import {
   Carousel,
   type CarouselApi,
@@ -15,7 +15,11 @@ import { CarouselToolbar } from "./carousel-toolbar";
 // porque e ele que faz a barra de controles aparecer na parte de baixo da tela.
 const VIEWS = 18000;
 
-export function PitchCarusel() {
+type Slides = { nome: string; Componente: React.ComponentType }[];
+
+/* slides e opcional para nao quebrar o uso existente em app/page.tsx; a
+   versao em ingles (app/en/page.tsx) passa slidesEn aqui. */
+export function PitchCarusel({ slides = slidesPt }: { slides?: Slides }) {
   const [api, setApi] = useState<CarouselApi>();
   const [, setCurrent] = useState(0);
 
