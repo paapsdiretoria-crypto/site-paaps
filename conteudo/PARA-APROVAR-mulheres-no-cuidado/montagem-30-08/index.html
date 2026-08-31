@@ -36,12 +36,13 @@
   /* véu chapado, uniforme — nunca gradiente. Opacidade varia por slide via style inline. */
   .escurecer{position:absolute;inset:0;z-index:1;background:#000;}
 
-  /* textura de marca — Textura 2. O PNG já embute ~25% de opacidade no próprio arquivo
-     (marrom sobre transparente / branco sobre transparente); a opacidade CSS fica em 1,
-     nunca reduzir de novo por cima, senão some. Marrom vai em fundo claro; branco vai em
-     fundo escuro. */
+  /* textura de marca — Textura 3 (fundo claro) e Textura 1 (fundo escuro), em mosaico
+     pequeno (nunca "cover": em escala grande vira 1-2 traços gigantes brigando com o
+     texto, "parece onça"). O PNG já embute ~25% de opacidade própria; opacidade CSS
+     0.4 por cima disso é o ponto calibrado visualmente contra grade de teste
+     (ver teste-textura.html) — visível, tom sobre tom, sem competir com a letra. */
   .textura{position:absolute;inset:0;z-index:1;pointer-events:none;
-           background-repeat:no-repeat;background-position:center;background-size:cover;opacity:0.4;}
+           background-repeat:no-repeat;background-position:center;background-size:140%;opacity:0.22;}
   .textura--marrom{background-image:url('texturas/textura-marrom.png');}
   .textura--branco{background-image:url('texturas/textura-branco.png');}
 
@@ -154,6 +155,7 @@
 <!-- SLIDE 3 : DADO EM CARD (variante A — card bege/creme, com textura) -->
 <section class="slide" id="s3">
   <img class="foto" src="fotos/slide3.jpg">
+  <div class="textura textura--branco" style="top:620px;bottom:0;"></div>
   <div class="card">
     <div class="textura textura--marrom"></div>
     <div class="headline-media">ENTRE TÉCNICAS E AUXILIARES DE ENFERMAGEM, MAIS DE METADE SE AUTODECLARA <span class="amarelo">NEGRA</span>.</div>
