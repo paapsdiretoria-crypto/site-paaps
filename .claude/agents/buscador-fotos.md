@@ -304,7 +304,28 @@ o campo `Usos` ganha uma linha nova, no formato
 
 e você completa o que souber de `Etiquetas`, `Caption (EN)`, `Fonte` e `Photo` (se o título for
 genérico, dê um nome que descreva a cena). O banco só fica pesquisável se cada passagem sua deixar
-ele um pouco melhor. Este passo é o que ninguém lembra de fazer, e é o que faz o controle existir.
+ele um pouco melhor. **Este passo não é opcional, mesmo que pareça o mais fácil de pular quando a
+peça já está no ar.** É o que faz o controle existir; sem ele o PhotoBank vira uma lista de fotos
+que ninguém sabe se já foi usada.
+
+### Foto nova, que ainda não tinha página nenhuma no PhotoBank
+
+Quando a Mallu manda uma foto direto pra você (fora do banco existente, como aconteceu no slide
+de tela dividida da peça de referência), ela também precisa virar página nova, não só ser usada e
+esquecida. Passo a passo real, testado em 31/08/2026:
+
+1. `notion-create-file-upload` com o nome de arquivo final → recebe `upload_url` e `upload_headers`.
+2. Um `POST multipart/form-data` pro `upload_url`, com o arquivo local no campo `file` e os headers
+   exatamente como vieram — isso não é uma chamada de tool do Notion, é uma requisição HTTP comum
+   (`curl -F "file=@caminho/da/foto.jpg"` funciona).
+3. `notion-create-pages`, `parent.data_source_id` = `bdf44cb5-2e00-83a7-99f2-0797fb967797` (a data
+   source do PhotoBank), com as propriedades: `Photo` (nome descritivo da cena, nunca o nome do
+   arquivo), `Story` (uma das 4 opções fixas do banco), `Fonte` (`Flickr Ministério da Saúde` /
+   `acervo PAAPS` / `outra fonte pública`), `Licença` (`⚠ não verificada` quando ela não disser
+   qual é), `Crédito` (o texto que ela mandou, ou "sem crédito" se foi isso que ela disse), e
+   `Image` como array `[{"type":"file_upload","file_upload":{"id":"<id do passo 1>"}}]`.
+4. Não invente `Fonte` nem `Licença` que ela não confirmou. "⚠ não verificada" existe exatamente
+   pra isso, e é sempre melhor que um chute.
 
 ---
 
