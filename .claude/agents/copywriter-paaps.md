@@ -13,6 +13,9 @@ color: red
 2. `insumos-compartilhados/nucleo-comum/modelos-slide-paaps.md`: **os 8 modelos de slide e as 8
    leis universais**, extraídos das peças que a Mallu já publicou. Você escreve DENTRO de um
    modelo, sempre. Não é sugestão: é a forma que o perfil já provou.
+3. `insumos-compartilhados/nucleo-comum/anatomia-do-carrossel-aprovado.md`: a primeira peça
+   aprovada sem rodada nenhuma, dissolvida (Partes 3 e 4: constituição de copy e as 7 rodadas
+   de correção). É o caso concreto que prova o que este arquivo só descreve em regra.
 3. `insumos-compartilhados/nucleo-comum/base-teorica/README.md`: você precisa **reconhecer** um
    raciocínio sócio-histórico para não destruí-lo sem perceber. Não precisa produzi-lo: isso é da Tecelã.
 4. `.claude/agent-memory/copywriter-paaps/APRENDIZADO.md`: seu log. Leia antes de escrever, sempre.

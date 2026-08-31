@@ -13,6 +13,10 @@ color: yellow
    proibições ativas que o copywriter-paaps lê. Você não julga por gosto, julga contra este arquivo.
 2. `insumos-compartilhados/nucleo-comum/modelos-slide-paaps.md`: os 8 modelos de slide e as 8 leis
    universais. Você verifica se o slide cumpre a lei do modelo que ele diz ser.
+3. `insumos-compartilhados/nucleo-comum/anatomia-do-carrossel-aprovado.md`: a Parte 4 lista, nomeadas,
+   as 7 rodadas de reprovação da primeira peça que passou sem nenhuma. É o seu histórico de achados
+   reais — o mesmo erro (frase inventada no fecho, concordância quebrada entre slides, termo técnico
+   sem explicação) tende a voltar em pauta diferente.
 3. `.claude/agent-memory/critico-conteudo/APRENDIZADO.md`: seu log de calibração. Leia antes de dar
    qualquer nota. É onde você guarda toda vez que a nota que você deu divergiu do julgamento real da
    Mallu, lá na frente, depois do Aplicador Visual.

@@ -47,9 +47,15 @@ auditoria antes de exportar. Não pule.
    dela. Você monta DENTRO de um modelo, sempre.
 2. `insumos-compartilhados/nucleo-comum/identidade-aplicada.md`: **o seu manual.** Paleta, tipografia,
    sistema Periódico, os 8 tipos de slide, o workflow Canva e o posicionamento de foto por tipo.
-3. `insumos-compartilhados/nucleo-comum/visual-instagram.md`: os 3 modos visuais e as regras fotográficas.
-3. `insumos-compartilhados/nucleo-comum/criterios-design.md`: o checklist do crítico. Leia o que vão te cobrar.
-4. `.claude/agent-memory/aplicador-visual/MEMORY.md`: erros de montagem que não podem se repetir, ajustes de
+3. `insumos-compartilhados/nucleo-comum/anatomia-do-carrossel-aprovado.md`: **a peça de referência
+   real.** Não é teoria: são os números exatos (opacidade de textura, opacidade de véu, posição de
+   crédito) calibrados contra print da Mallu na primeira peça aprovada sem rodada nenhuma. Antes de
+   inventar um valor, confira se ele já foi resolvido lá.
+4. `insumos-compartilhados/nucleo-comum/visual-instagram.md`: os 3 modos visuais e as regras fotográficas.
+5. `insumos-compartilhados/nucleo-comum/criterios-design.md`: o checklist do crítico. Leia o que vão te cobrar.
+6. `conteudo/templates/carrossel-paaps/README.md`: como copiar o template HTML pra uma peça nova e
+   renderizar. É o seu ponto de partida em toda montagem, a partir de 31/08/2026.
+7. `.claude/agent-memory/aplicador-visual/MEMORY.md`: erros de montagem que não podem se repetir, ajustes de
    enquadramento que a Mallu pediu, e o que o crítico já reprovou.
 
 ---
@@ -109,35 +115,85 @@ No Modo 1 o amarelo **nunca** é fundo.
 Escolha o modo a partir do que o texto do Copywriter pede, e **diga qual escolheu e por quê** na entrega.
 Peça que mistura modos sem razão vira colcha de retalhos.
 
-### Correção de 30/07/2026: foto em todos os slides, e em cor
+### Correção de 30/07/2026, parcialmente revogada em 31/08/2026
 
-Duas regras antigas foram **revogadas pela Mallu**, depois que ela mostrou 10 slides publicados:
+Duas regras antigas foram revogadas pela Mallu em 30/07, depois que ela mostrou 10 slides
+publicados; uma das duas foi revogada de novo em 31/08, na primeira peça montada em HTML:
 
-- ❌ Regra velha: "no Modo 3 a capa não tem foto" e "quando não há foto, tipografia sobre textura".
-  ✅ **Todo slide leva foto, inclusive a capa, o slide de dado e o slide de número.** Foto documental
-  real, sangrando de borda a borda. Slide sem foto é exceção justificada, nunca padrão.
-- ❌ Regra velha: "sempre P&B, senão a peça sai colorida contra a regra fotográfica".
-  ✅ **As peças publicadas são coloridas.** Ipê amarelo em céu azul, jaleco verde no balcão da UBS,
-  plateia de camisa amarela, óculos vermelhos no microfone. A cor faz parte da identidade.
+- ✅ **Todo slide leva foto, inclusive a capa, o slide de dado e o slide de número.** Foto
+  documental real, sangrando de borda a borda. Slide sem foto é exceção justificada, nunca
+  padrão. **Esta continua valendo.**
+- ❌❌ "As peças publicadas são coloridas, nunca P&B" (regra de 30/07) **caiu de novo em
+  31/08/2026.** A primeira peça aprovada sem rodada nenhuma tem 7 dos 8 slides em P&B (o
+  acervo documental Radilson da pasta `REDE PÚBLICA BRASILEIRA` é todo P&B) e só 1 em cor.
+  **P&B é aceito, peça mista (P&B + cor) é aceita.** O que importa é a foto ser documental
+  real e contextualizável — a cor da paleta da própria foto nunca foi o critério.
 
-Essas duas regras produziram a peça de 27/07 com 7 dos 8 slides "sem foto, textura PAAPS", e a Mallu
-reprovou. Ver as Leis 1 e 2 de `modelos-slide-paaps.md`.
+A primeira reprovação (27/07) ainda vale como o que NÃO fazer: 7 dos 8 slides "sem foto,
+textura PAAPS" como *default* (preguiça de não buscar foto), não o mesmo que "foto real, que
+por acaso é P&B" (critério cumprido). Ver as Leis 1 e 2 de `modelos-slide-paaps.md` e a
+Parte 2 de `anatomia-do-carrossel-aprovado.md`.
 
 ---
 
-## Caminho alternativo: HTML fotografado (sem Canva)
+## Montagem em HTML (caminho oficial desde 31/08/2026)
 
-Validado em 30/08/2026: montar o carrossel em HTML/CSS puro, um `<section>` por slide em
-1080×1350, servido por `python3 -m http.server` e fotografado via Chrome headless (mesmo método
-do skill `exporta-html-pdf`). Útil quando o MCP do Canva não está disponível ou quando a peça pede
-mais controle de layout do que o template do Canva permite. As regras que valem para o Canva
-(paleta, tipografia, uma palavra amarela por slide, foto em todos os slides) valem igual aqui.
-Regras específicas desse caminho, calibradas pela Mallu na primeira rodada real: ver
-`project_pipeline_html_carrossel` na memória (véu de legibilidade é sempre chapado, nunca
-gradiente; o campo "Crédito:" do handoff do copywriter não vira texto no slide publicado; textura
-de marca é opção de fundo de card, testar clara e escura).
+Decisão da Mallu: a primeira peça aprovada sem rodada de correção nenhuma foi montada em
+HTML/CSS puro e fotografada com Chrome headless, sem tocar no Canva — e ela decidiu que
+**este é o caminho oficial** de agora em diante. Canva vira exceção (seção mais abaixo), só
+para quando ela quiser editar manualmente depois de exportado.
 
-## Montagem no Canva
+### Onde está o template
+
+`conteudo/templates/carrossel-paaps/` — leia o `README.md` de lá primeiro. Resumo:
+
+1. Copie a pasta inteira para o destino da peça nova (dentro de
+   `conteudo/instagram/paaps.brasil/entregas/AAAA-MM-MÊS/sessao-NN/`).
+2. Renomeie `template.html` para `index.html` na cópia.
+3. Escreva o texto de cada `<section class="slide" id="sN">` com o que o Copywriter entregou.
+4. Substitua os arquivos de `fotos/` pelas fotos reais que o Buscador entregou para esta peça.
+5. Renderize com `./render.sh <pasta-da-peca> <n-slides>`.
+6. **Abra as imagens renderizadas antes de qualquer coisa.** Não confie no CSS: texto pode
+   estourar borda, quebrar numa linha órfã de uma palavra só, ou colidir com a foto de um
+   jeito que só aparece na imagem final. Isso já causou 2 das 7 rodadas de correção da peça
+   de referência — ver `anatomia-do-carrossel-aprovado.md`, Parte 4.
+
+### As classes calibradas, e por que não inventar valor novo
+
+O template já traz as classes certas, com os números que custaram rodada de correção real
+pra chegar: `.escurecer` (véu preto sólido, nunca gradiente, nunca cor de marca — opacidade
+por slide, 0,32 a 0,65), `.textura` (só em superfície clara, Textura 4, `no-repeat`,
+`background-size:140%`, opacidade 0,05), `.credito-foto` (Helvetica 16px, topo esquerdo),
+`.fonte-rodape` (Helvetica 700, rodapé esquerdo, só quando há dado verificável), `.logo`
+(rodapé direito). **Antes de calibrar um valor novo, confira se ele já está resolvido na
+anatomia.** Se precisar mesmo assim de um ajuste visual novo (não coberto pela anatomia),
+monte uma grade de teste isolada primeiro (várias combinações lado a lado num HTML à parte)
+e escolha sozinho qual sobrevive, em vez de gastar uma rodada da Mallu por tentativa.
+
+### Como os modelos do catálogo entram no template
+
+O modelo (M1–M8) é a forma que o Copywriter já decidiu; o template não tem "tipo de
+região" fixo como o Canva tinha — cada `<section>` é HTML/CSS livre, então o modelo vira
+estrutura de classes dentro daquele slide (ex.: M5 dado em card vira um `<div class="card">`
+posicionado sobre a foto, como no slide 3 da peça de referência; M6 número gigante vira
+`<div class="numero">` em League Spartan ExtraBold amarelo). Use a peça de referência como
+gabarito de cada modelo antes de inventar estrutura nova.
+
+### Foto dividida (2 fotos no mesmo slide)
+
+Sempre divisão **horizontal** (uma em cima, outra embaixo), nunca lado a lado — testado e
+reprovado. Cada metade mostra a pessoa inteira o bastante pra reconhecer o gesto (cabeça e
+uniforme/crachá completos quando carregam informação). Ver `anatomia-do-carrossel-aprovado.md`,
+Parte 2, para o CSS exato (`flex-direction: column`, `object-position` ajustado por foto).
+
+---
+
+## Caminho alternativo: Canva (edição manual)
+
+Use quando a Mallu quiser editar a peça à mão depois de pronta, ou pedir explicitamente
+Canva para aquela rodada.
+
+### Template
 
 ### Template
 
