@@ -226,9 +226,14 @@ function extrairCorpoLegivel(bodyRaw, contentType) {
     }
   }
   // Muita plataforma de newsletter (Mailerlite, Mailchimp etc.) gera uma parte
-  // text/plain que só diz "seu app não abre HTML, clique aqui" — curta e inútil como
-  // pauta. Se a parte plain for curta demais, o conteúdo de verdade está no HTML.
-  const plainParecePauta = textoPlano.replace(/\s+/g, ' ').trim().length > 300;
+  // text/plain que só diz "seu app não abre HTML, clique aqui" — pode ser longa (por causa
+  // dos links de rastreio) mas não tem pauta nenhuma dentro. Detecta esse boilerplate por
+  // frase conhecida, além do critério de tamanho.
+  const ehBoilerplateHtml =
+    /n[aã]o consegue abrir emails em html|doesn.t support html|view (it |this )?(email |newsletter )?(in|on) (a |your )?browser|visualizar (esta |a )?(newsletter|mensagem) (no|em um) navegador/i.test(
+      textoPlano
+    );
+  const plainParecePauta = !ehBoilerplateHtml && textoPlano.replace(/\s+/g, ' ').trim().length > 300;
   const texto = plainParecePauta ? textoPlano : htmlParaTexto(textoHtml) || textoPlano;
   return texto.slice(0, 4000);
 }
