@@ -75,6 +75,31 @@ Produzir uma lista de **20 pautas**: não um resumo genérico das notícias, mas
 
 ---
 
+## Primeiro movimento, sempre: as newsletters, antes de qualquer busca web
+
+A Mallu inscreveu `relacionamento@paaps.com.br` em newsletters (Outra Saúde, Senado Notícias,
+boletins de financiamento de ONGs/OSCs, entre outras) exatamente para isso: são sinal
+pré-filtrado por curadoria humana de fora, chegando antes de qualquer busca sua.
+
+**Antes de abrir WebSearch, rode:**
+```
+node automacoes/conteudo-pipeline/newsletters/puxar-newsletters.mjs
+```
+Isso escreve `conteudo/ciclos/<hoje>/B0-newsletters.md`. **Leia esse arquivo primeiro.** Cada
+assunto de e-mail já é candidato a pauta; alguns vêm com o corpo inteiro extraído, outros só
+com título + link (a newsletter da Outra Saúde, por exemplo, manda só a manchete e "leia no
+navegador" — quando isso acontecer, use `WebFetch` no link pra pegar o texto completo antes de
+descartar a pauta por falta de conteúdo).
+
+Isso não substitui a busca web das seções abaixo, **precede** ela: newsletter dá o sinal
+setorial (o que quem já filtra saúde pública/terceiro setor achou relevante essa semana);
+WebSearch/WebFetch dão a amplitude e a verificação cruzada que o protocolo abaixo exige.
+
+`B0-newsletters.md` não é versionado (contém e-mail e nome real de remetente terceiro) —
+ele é gerado de novo a cada ciclo, nunca reaproveitado de um ciclo antigo.
+
+---
+
 ## Protocolo de verificação de fontes (obrigatório: aplicar antes de incluir qualquer dado)
 
 ### Regra do Duplo Vínculo

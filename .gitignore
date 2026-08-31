@@ -53,3 +53,8 @@ codigo/dashboard-agentes/ponte/.env
 automacoes/pesquisa-tcc-bh/unidades-bh.json
 automacoes/pesquisa-tcc-bh/previa/
 automacoes/pesquisa-tcc-bh/anuencia-suas.pdf
+
+# Newsletters puxadas por IMAP (automacoes/conteudo-pipeline/newsletters/puxar-newsletters.mjs):
+# carregam nome e e-mail real de remetente terceiro (dado pessoal). O Radar lê local,
+# nunca precisa estar versionado.
+conteudo/ciclos/*/B0-newsletters.md

@@ -16,10 +16,15 @@
  * Sem argumento: últimos 7 dias, pasta INBOX. Escreve em
  * conteudo/ciclos/<AAAA-MM-DD-de-hoje>/B0-newsletters.md
  *
- * Limitação conhecida: extração de texto de HTML é regex, não um parser de verdade. Serve
- * pra dar ao Radar o assunto e o conteúdo legível da newsletter, não pra reproduzir o
- * e-mail formatado. Se uma newsletter específica sair ilegível, abra-a no webmail e ajuste
- * a extração aqui — não invente conteúdo que a extração não trouxe.
+ * Limitações conhecidas, testadas contra a caixa real em 31/08/2026:
+ * 1. Extração de texto de HTML é regex, não um parser de verdade. Serve pra dar ao Radar
+ *    o assunto e o conteúdo legível, não pra reproduzir o e-mail formatado.
+ * 2. Algumas newsletters (a Outra Saúde é o caso confirmado) mandam só título + "leia no
+ *    navegador [link]", sem corpo nenhum no e-mail em si — o artigo mora só na página. Pra
+ *    essas, o `assunto` já é a pauta, e o Radar deve seguir o link com WebFetch (que ele já
+ *    tem) se quiser o texto completo. Isso não é bug: o e-mail de verdade não traz mais nada.
+ * Se uma newsletter específica sair ilegível por outro motivo, abra-a no webmail e ajuste a
+ * extração aqui — não invente conteúdo que a extração não trouxe.
  */
 
 import { connect } from 'node:tls';
@@ -159,6 +164,9 @@ function htmlParaTexto(html) {
     .replace(/<script[\s\S]*?<\/script>/gi, ' ')
     .replace(/<br\s*\/?>/gi, '\n')
     .replace(/<\/p>|<\/div>|<\/tr>|<\/h[1-6]>/gi, '\n')
+    // link de rastreio (mailerlite/mailchimp/etc.) é enorme e não ajuda o Radar a nada;
+    // link normal (domínio curto) fica, porque pode ser a fonte primária da pauta.
+    .replace(/<a [^>]*href="([^"]{80,})"[^>]*>/gi, ' [link] ')
     .replace(/<a [^>]*href="([^"]+)"[^>]*>/gi, ' [$1] ')
     .replace(/<[^>]+>/g, ' ')
     .replace(/&nbsp;/g, ' ')
@@ -229,9 +237,11 @@ function extrairCorpoLegivel(bodyRaw, contentType) {
   // text/plain que só diz "seu app não abre HTML, clique aqui" — pode ser longa (por causa
   // dos links de rastreio) mas não tem pauta nenhuma dentro. Detecta esse boilerplate por
   // frase conhecida, além do critério de tamanho.
+  // teste roda sobre a versão já em utf8: textoPlano ainda está em "binary" aqui, e um
+  // acento como "ã" chega como 2 bytes soltos — testar direto no binary nunca bate no "ã".
   const ehBoilerplateHtml =
-    /n[aã]o consegue abrir emails em html|doesn.t support html|view (it |this )?(email |newsletter )?(in|on) (a |your )?browser|visualizar (esta |a )?(newsletter|mensagem) (no|em um) navegador/i.test(
-      textoPlano
+    /nao consegue abrir emails em html|doesn.t support html|view (it |this )?(email |newsletter )?(in|on) (a |your )?browser|visualizar (esta |a )?(newsletter|mensagem) (no|em um) navegador/i.test(
+      toUtf8(textoPlano).normalize('NFD').replace(/[̀-ͯ]/g, '')
     );
   const plainParecePauta = !ehBoilerplateHtml && textoPlano.replace(/\s+/g, ' ').trim().length > 300;
   const texto = plainParecePauta ? textoPlano : htmlParaTexto(textoHtml) || textoPlano;

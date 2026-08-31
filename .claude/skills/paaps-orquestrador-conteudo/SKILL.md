@@ -145,6 +145,29 @@ Nunca pular a Tecelã para "ganhar tempo". Pular apaga uma rodada de aprendizado
 
 Regra de dramaturgia do carrossel: choque no presente, depois raiz histórica, depois prova; a imagem argumenta a tese antes do texto; o rodapé devolve o conteúdo ao campo das políticas públicas. Um hook que promete consequência forte cria dívida narrativa que os slides seguintes precisam pagar com prova. Não deixar cheque sem fundo.
 
+## 6.1 A receita da semana ("crie os conteúdos da semana")
+
+Pedido "sem tema definido" no formato de rodada semanal (linha 2 da tabela da seção 2) tem
+receita fixa, definida pela Mallu em 31/08/2026: **2 carrosséis @paaps.brasil + 1 card único +
+1 roteiro de Reel para gravar.**
+
+- **2 carrosséis** — Tronco B completo, um ciclo inteiro da seção 6 por carrossel (`radar` lendo
+  as newsletters primeiro, depois busca web — ver `radar.md` — em paralelo com `paaps-brasil`,
+  depois `tecela`, `copywriter-paaps`, `critico-conteudo`, `buscador-fotos`, `aplicador-visual`).
+- **1 card único** — peça de 1 slide só (não carrossel), num dos 8 modelos do catálogo
+  (`modelos-slide-paaps.md`), 1080×1350, montada com `conteudo/templates/carrossel-paaps/`
+  (`./render.sh <pasta> 1`, só o slide 1). Serve pauta que cabe numa imagem só: dado isolado,
+  frase de impacto, citação. **Formato ainda não confirmado por ela em produção** — o primeiro
+  card entregue funciona como validação do formato, não como padrão já fechado.
+- **1 roteiro de Reel** — `mallu-reels`, generalizado pra servir os dois perfis (ver a seção
+  "Perfil de destino" do próprio `mallu-reels.md`), com o gate de voz da árvore decidindo qual
+  perfil grava.
+
+Cada peça das 4 passa pelo próprio gate (crítico do tipo de peça + Mallu) antes de entrar no
+lote da semana. **Não despejar as 4 juntas sem ela ter visto nenhuma**: a regra de entrega
+iterativa (carrossel: primeira rodada, aguardar validação) vale peça a peça dentro da semana,
+não só dentro de um carrossel.
+
 ## 7. Roteamento: agentes e skills que EXISTEM
 
 Nunca inventar nome de skill ou agente. Esta é a lista real.
@@ -156,9 +179,10 @@ Nunca inventar nome de skill ou agente. Esta é a lista real.
 | Argumento sócio-histórico, contradição, mediações | `tecela` | agente (3 modos, seção 6) |
 | Texto do carrossel @paaps.brasil | `copywriter-paaps` | agente |
 | Curadoria de foto no PhotoBank | `buscador-fotos` | agente |
-| Montagem no Canva e entrega no Drive | `aplicador-visual` | agente |
+| Montagem em HTML (oficial) ou Canva (exceção), entrega no Drive | `aplicador-visual` | agente |
+| Card único (1 slide, não carrossel) | `aplicador-visual`, modelo do catálogo + `conteudo/templates/carrossel-paaps/` | agente + template |
 | Carrossel do @amalluvasconcellos | `mallu-carrossel` | agente |
-| Roteiro de Reel do @amalluvasconcellos | `mallu-reels` | agente |
+| Roteiro de Reel, dos dois perfis | `mallu-reels` (generalizado 31/08/2026) | agente |
 | Post de LinkedIn pessoal | `mallu-linkedin` | agente |
 | Post de LinkedIn institucional | `paaps-linkedin` | agente |
 | Gatilho na comunidade ECOA | `ecoa` | agente (INCOMPLETO, avisar a Mallu) |
