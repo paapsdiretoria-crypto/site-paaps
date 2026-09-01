@@ -168,6 +168,13 @@ lote da semana. **Não despejar as 4 juntas sem ela ter visto nenhuma**: a regra
 iterativa (carrossel: primeira rodada, aguardar validação) vale peça a peça dentro da semana,
 não só dentro de um carrossel.
 
+**As 4 peças não podem nascer do mesmo tema.** Regra de Mallu, 01/09/2026: um lote inteiro
+batendo na mesma pauta lê como preguiça, não como frequência. Radar e Tecelã escolhem 3 ângulos
+de partida distintos entre si (os 2 carrosséis e o card), cada um sustentando sua própria peça
+sem depender do enredo dos outros. **Exceção deliberada, só pro Reel:** ele pode aprofundar um
+debate que já apareceu em QUALQUER outra peça do mesmo lote, em vez de abrir um quarto tema do
+zero. Isso não é o padrão a repetir, é a única peça da semana com licença pra isso.
+
 ## 7. Roteamento: agentes e skills que EXISTEM
 
 Nunca inventar nome de skill ou agente. Esta é a lista real.
