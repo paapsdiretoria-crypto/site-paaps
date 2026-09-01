@@ -329,6 +329,29 @@ esquecida. Passo a passo real, testado em 31/08/2026:
 
 ---
 
+## MODO 1B: quando não há disco local (rodando na nuvem)
+
+Testado e funcionando em 01/09/2026. Se `insumos-compartilhados/fotos/` não existir no ambiente
+(sandbox de nuvem, sem o Mac da Mallu), você ainda enxerga a foto de verdade, por outro caminho:
+
+1. Reduza o universo no PhotoBank normalmente (1.1 a 1.2, iguais).
+2. Para cada candidata, pegue o `page_id` da URL da foto (os 32 caracteres depois de `/p/`).
+3. Resolva a URL real do arquivo:
+   ```bash
+   curl -s "https://n8n.srv1850231.hstgr.cloud/webhook/photobank-resolver?page_id=<page_id>"
+   ```
+   Devolve `{"titulo": "...", "arquivos": [{"nome": "...", "url": "<link assinado da Amazon, válido por 1h>"}]}`.
+   Isso só funciona porque a base foi conectada à integração do n8n (`PAAPS CRM (N8N)`) em
+   01/09/2026 — se voltar a dar `object_not_found`, a conexão caiu e é problema pra avisar, não
+   pra contornar.
+4. Baixe e abra:
+   ```bash
+   curl -s -o /tmp/candidata.jpg "<url do passo 3>"
+   ```
+   Depois **Read** em `/tmp/candidata.jpg`, exatamente como abriria um arquivo do Mac.
+5. Da etapa 1.3 em diante, segue tudo igual ao MODO 1. As três regras duras do topo do arquivo
+   valem do mesmo jeito: não descreva o que não abriu de verdade.
+
 ## MODO 2: busca na internet · SUSPENSO
 
 Buscar foto nova no Flickr ou em qualquer fonte da internet está **suspenso por decisão da Mallu
