@@ -58,3 +58,6 @@ automacoes/pesquisa-tcc-bh/anuencia-suas.pdf
 # carregam nome e e-mail real de remetente terceiro (dado pessoal). O Radar lê local,
 # nunca precisa estar versionado.
 conteudo/ciclos/*/B0-newsletters.md
+
+# vídeo grande, fora do git desde 01/09/2026 (travava o push, acima do limite do GitHub)
+codigo/site/pitch-serasa/img/final - cópia.mp4
