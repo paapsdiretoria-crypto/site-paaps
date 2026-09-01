@@ -29,8 +29,19 @@ if [ "${#IDS[@]}" -eq 0 ]; then
   for i in $(seq 1 "$N"); do IDS+=("$i"); done
 fi
 
+# Acha um Chromium headless utilizável: Chrome de macOS local primeiro, senão qualquer
+# Chromium/Chrome de Linux no PATH, senão o Chromium que o Playwright já traz pré-instalado
+# nos sandboxes de nuvem (achado em 01/09/2026, sem precisar instalar nada).
 CH="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
-[ -x "$CH" ] || { echo "Chrome nao encontrado em $CH"; exit 1; }
+if [ ! -x "$CH" ]; then
+  CH="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
+fi
+if [ -z "$CH" ] || [ ! -x "$CH" ]; then
+  for cand in "${PLAYWRIGHT_BROWSERS_PATH:-/opt/pw-browsers}/chromium" "$HOME/.cache/ms-playwright/chromium"*/chrome-linux/chrome; do
+    if [ -x "$cand" ]; then CH="$cand"; break; fi
+  done
+fi
+[ -n "$CH" ] && [ -x "$CH" ] || { echo "Nenhum Chromium/Chrome headless encontrado (nem macOS, nem Linux, nem Playwright)"; exit 1; }
 [ -f "$PASTA/index.html" ] || { echo "Nao achei $PASTA/index.html"; exit 1; }
 
 PORT=$(python3 -c "import socket;s=socket.socket();s.bind(('',0));print(s.getsockname()[1]);s.close()")
