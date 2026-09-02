@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>De quem é esse trabalho — montagem 30/08 v2</title>
+<style>
+  @font-face{ font-family:'League Spartan'; src:url('fontes/LeagueSpartan-Bold.ttf'); font-weight:700; }
+  @font-face{ font-family:'League Spartan'; src:url('fontes/LeagueSpartan-ExtraBold.ttf'); font-weight:800; }
+
+  :root{
+    --cor-fundo:#f5f1e1;
+    --cor-marrom:#442309;
+    --cor-terracota:#cb4710;
+    --cor-oliva:#aea349;
+    --cor-amarelo:#f7c31c;
+    --cor-bege-rosa:#bbada2;
+    --cor-branco:#ffffff;
+    --fonte-titulo:Helvetica,'Nimbus Sans PAAPS',Arial,sans-serif;
+    --fonte-label:'League Spartan',Helvetica,Arial,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:#111;}
+  .slide{
+    width:1080px;height:1350px;position:relative;overflow:hidden;
+    background:var(--cor-marrom);
+    font-family:var(--fonte-titulo);
+    color:var(--cor-branco);
+    page-break-after:always;
+  }
+  .slide::after{
+    content:'';position:absolute;inset:0;pointer-events:none;
+    background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+  }
+  .foto{position:absolute;left:0;width:1080px;object-fit:cover;z-index:0;}
+
+  /* véu chapado, uniforme — nunca gradiente. Opacidade varia por slide via style inline. */
+  .escurecer{position:absolute;inset:0;z-index:1;background:#000;}
+
+  /* textura de marca — só na faixa bege, por instrução dela (30/08, rodada 4): o marrom
+     fica sem textura por enquanto. Textura 4, esparsa (sem repeat), opacidade 0.05 —
+     número exato que ela mediu no próprio Canva ("nível cinco de cem"). Delicada mesmo:
+     não subir isso de novo sem ela pedir. */
+  .textura{position:absolute;inset:0;z-index:1;pointer-events:none;
+           background-repeat:no-repeat;background-position:center;background-size:140%;opacity:0.05;}
+  .textura--marrom{background-image:url('texturas/textura-marrom.png');}
+  .textura--branco{background-image:url('texturas/textura-branco.png');}
+
+  .conteudo{position:relative;z-index:2;width:100%;height:100%;padding:72px 76px;display:flex;flex-direction:column;}
+  .amarelo{color:var(--cor-amarelo);font-weight:700;}
+  .amarelo-sub{text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:6px;}
+  .label{font-family:var(--fonte-label);font-weight:700;letter-spacing:0;text-transform:uppercase;}
+
+  /* fonte do dado — só onde existe reivindicação verificável (slides 3 e 7). Helvetica, negrito, nunca League Spartan. */
+  .fonte-rodape{position:absolute;left:76px;bottom:56px;z-index:3;font-family:var(--fonte-titulo);font-weight:700;font-size:24px;color:var(--cor-branco);max-width:640px;line-height:1.3;}
+  .logo{position:absolute;right:76px;bottom:52px;z-index:3;height:52px;}
+
+  /* crédito da foto, escrito na própria foto. Em todo slide com foto do Radilson,
+     menos o 6 (fotos de outra origem/sem crédito). Sempre em cima: onde a foto está
+     dividida (3, 7) fica na metade de cima; no fechamento (8) fica em cima porque
+     embaixo já tem o CTA. */
+  .credito-foto{position:absolute;top:32px;left:76px;z-index:3;
+                 font-family:var(--fonte-titulo);font-weight:400;font-size:16px;
+                 color:rgba(255,255,255,0.85);text-shadow:0 1px 3px rgba(0,0,0,0.6);}
+
+  .headline-grande{font-size:68px;font-weight:700;line-height:1.16;}
+  .headline-media{font-size:52px;font-weight:700;line-height:1.18;}
+  .corpo{font-size:34px;font-weight:400;line-height:1.4;}
+  .corpo-menor{font-size:29px;font-weight:400;line-height:1.42;color:rgba(255,255,255,0.92);}
+
+  /* SLIDE 1 — CAPA */
+  #s1 .foto{top:0;height:1350px;object-position:22% 82%;filter:saturate(1.05);}
+  #s1 .escurecer{background:rgba(0,0,0,0.42);}
+  #s1 .conteudo{justify-content:flex-end;padding-bottom:190px;gap:24px;}
+
+  /* SLIDE 2 — AFIRMAÇÃO */
+  #s2 .foto{top:0;height:1350px;object-position:70% 60%;}
+  #s2 .escurecer{background:rgba(0,0,0,0.32);}
+  #s2 .conteudo{justify-content:flex-end;padding-bottom:190px;gap:26px;}
+
+  /* SLIDE 3 — DADO EM CARD. Card escuro (aprovado: era a "variante B"). */
+  #s3 .foto{top:0;height:620px;object-position:15% 45%;}
+  #s3 .card{position:absolute;left:76px;right:76px;top:590px;
+             border:1px solid rgba(255,255,255,0.16);padding:56px 60px;z-index:2;overflow:hidden;
+             background:var(--cor-marrom);color:var(--cor-branco);}
+  #s3 .card .headline-media{color:var(--cor-branco);font-size:44px;margin-bottom:26px;position:relative;z-index:2;}
+  #s3 .card .corpo{color:rgba(255,255,255,0.92);font-size:32px;position:relative;z-index:2;}
+  #s3 .amarelo{color:var(--cor-amarelo);}
+  #s3 .fonte-rodape{color:var(--cor-branco);}
+
+  /* SLIDE 4 — CITAÇÃO */
+  #s4 .foto{top:0;height:1350px;object-position:75% 20%;}
+  #s4 .escurecer{background:rgba(0,0,0,0.65);}
+  #s4 .conteudo{justify-content:center;gap:34px;}
+  #s4 .aspa{font-family:var(--fonte-label);font-size:120px;color:var(--cor-amarelo);line-height:0.5;font-weight:800;}
+  #s4 .citacao{font-size:44px;font-weight:700;line-height:1.42;}
+  #s4 .atribuicao{font-size:27px;color:var(--cor-bege-rosa);font-weight:400;}
+
+  /* SLIDE 5 — RESPIRO (sem véu: legibilidade já ok) */
+  #s5 .foto{top:0;height:1350px;object-position:50% 35%;}
+  #s5 .conteudo{justify-content:center;align-items:flex-start;padding-top:150px;}
+  #s5 .headline-grande{font-size:78px;max-width:880px;}
+
+  /* SLIDE 6 — A VIRADA. Fundo dividido entre as 2 fotos que ela mandou (pendente os
+     arquivos reais — ver nota de entrega). Legenda em caps, centralizada, subida pra
+     não colidir com o logo, calibrada pra fechar em exatamente 2 linhas. */
+  #s6{background:var(--cor-marrom);}
+  #s6 .split{position:absolute;inset:0;display:flex;flex-direction:column;z-index:0;}
+  #s6 .split > div{flex:1;width:100%;background-repeat:no-repeat;background-position:center;}
+  /* foto de cima: aspecto já parecido com a caixa, cover simples cobre bem as duas pessoas */
+  #s6 .split > div.topo{background-size:cover;background-position:center 38%;}
+  /* foto de baixo: ela topou o corte pra ocupar o slide inteiro, sem borda marrom */
+  #s6 .split > div.baixo{background-size:cover;background-position:center 35%;}
+  #s6 .conteudo{justify-content:center;gap:36px;align-items:flex-start;}
+  #s6 .citacao{font-size:50px;font-weight:700;line-height:1.28;max-width:900px;}
+  #s6 .corpo{max-width:820px;color:rgba(255,255,255,0.88);}
+  .legenda-caps{position:absolute;left:100px;right:100px;top:1080px;z-index:3;text-align:center;
+                 font-family:var(--fonte-label);font-weight:700;font-size:38px;line-height:1.3;
+                 letter-spacing:0;color:var(--cor-branco);}
+  .legenda-caps .sub{text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:5px;}
+  .legenda-caps .dest{color:var(--cor-amarelo);}
+
+  /* SLIDE 7 — NÚMERO GIGANTE (textura marrom na área do dado) */
+  #s7{background:var(--cor-marrom);}
+  #s7 .foto{top:0;height:560px;object-position:50% 30%;}
+  #s7 .area-dado{position:absolute;left:0;right:0;top:560px;bottom:0;z-index:1;background:var(--cor-marrom);overflow:hidden;}
+  #s7 .conteudo{justify-content:flex-end;padding-bottom:180px;gap:16px;}
+  #s7 .numero{font-family:var(--fonte-label);font-weight:800;font-size:150px;color:var(--cor-amarelo);line-height:0.95;}
+  #s7 .headline-media{font-size:38px;font-weight:400;max-width:820px;}
+  #s7 .corpo-menor{max-width:840px;}
+  #s7 .corpo-terciario{font-size:24px;color:rgba(255,255,255,0.75);max-width:840px;margin-top:6px;}
+
+  /* SLIDE 8 — PERGUNTA + CTA institucional. Referência: post real dela (foto sangrando
+     até o fim, sem faixa, legenda + logo numa linha só direto sobre a foto). Composição
+     em 3 zonas pra não pegar o rosto na foto: abertura em cima do guarda-chuva
+     (esquerda), pergunta grande à direita (onde não tem rosto), CTA embaixo, na foto. */
+  #s8 .foto{top:0;height:1350px;object-position:75% 15%;}
+  #s8 .escurecer{background:rgba(0,0,0,0.48);}
+  #s8 .abertura{position:absolute;left:76px;top:90px;width:560px;z-index:2;
+                 font-family:var(--fonte-titulo);font-weight:700;font-size:36px;line-height:1.28;color:var(--cor-branco);}
+  #s8 .zona-pergunta{position:absolute;right:76px;left:220px;top:820px;z-index:2;text-align:right;}
+  #s8 .pergunta{font-size:38px;font-weight:700;line-height:1.28;white-space:nowrap;}
+  #s8 .explicacao{margin-top:14px;font-family:var(--fonte-titulo);font-size:25px;font-weight:400;
+                   line-height:1.45;color:rgba(255,255,255,0.85);}
+  #s8 .cta-rodape{position:absolute;left:76px;right:76px;bottom:56px;z-index:3;
+                   display:flex;align-items:flex-end;justify-content:space-between;gap:24px;}
+  #s8 .cta-texto{font-family:var(--fonte-titulo);font-weight:700;font-size:25px;line-height:1.3;
+                  color:var(--cor-branco);white-space:nowrap;}
+  #s8 .cta-link{display:block;font-family:var(--fonte-label);font-weight:700;font-size:19px;
+                 color:var(--cor-amarelo);margin-top:6px;white-space:nowrap;}
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1 : CAPA -->
+<section class="slide" id="s1">
+  <img class="foto" src="fotos/slide1.jpg">
+  <div class="escurecer"></div>
+  <div class="credito-foto">Fotos: Radilson Carlos Gomes, Fotógrafo do SUS.</div>
+  <div class="conteudo">
+    <div class="headline-grande">A parte invisível do trabalho é o que depois vira <span class="amarelo amarelo-sub">atestado</span>.</div>
+    <div class="corpo">Esse trabalho tem nome e quase sempre: mulher, e desproporcionalmente mulher negra.</div>
+  </div>
+  <img class="logo" src="logo/logo-branco.png">
+</section>
+
+<!-- SLIDE 2 : AFIRMAÇÃO -->
+<section class="slide" id="s2">
+  <img class="foto" src="fotos/slide2.jpg">
+  <div class="escurecer"></div>
+  <div class="credito-foto">Fotos: Radilson Carlos Gomes, Fotógrafo do SUS.</div>
+  <div class="conteudo">
+    <div class="headline-grande">QUEM ESCUTA E ACOLHE DENTRO DO SUS, sustenta a vida do outro há <span class="amarelo amarelo-sub">séculos</span>.</div>
+  </div>
+  <img class="logo" src="logo/logo-branco.png">
+</section>
+
+<!-- SLIDE 3 : DADO EM CARD (card marrom escuro, aprovado — a antiga "variante B") -->
+<section class="slide" id="s3">
+  <img class="foto" src="fotos/slide3.jpg">
+  <div class="credito-foto">Fotos: Radilson Carlos Gomes, Fotógrafo do SUS.</div>
+  <div class="card">
+    <div class="textura textura--branco"></div>
+    <div class="headline-media">ENTRE TÉCNICAS E AUXILIARES DE ENFERMAGEM, MAIS DE METADE SE AUTODECLARA <span class="amarelo">NEGRA</span>.</div>
+    <div class="corpo">Entre assistentes sociais, quase metade também é negra. Da Agente Comunitária de Saúde, à Psicóloga, à Terapeuta Ocupacional, à Professora, à Doula, à Médica.</div>
+  </div>
+  <div class="fonte-rodape">COFEN/FIOCRUZ, 2015 · CFESS, 2022</div>
+  <img class="logo" src="logo/logo-branco.png">
+</section>
+
+<!-- SLIDE 4 : CITAÇÃO -->
+<section class="slide" id="s4">
+  <img class="foto" src="fotos/slide4.jpg">
+  <div class="escurecer"></div>
+  <div class="credito-foto">Fotos: Radilson Carlos Gomes, Fotógrafo do SUS.</div>
+  <div class="conteudo">
+    <div class="aspa">&ldquo;</div>
+    <div class="citacao">É um sonho para mim, de verdade, enquanto servidora pública, mas também como pessoa. Creio que através desse cuidado, vamos conseguir <span class="amarelo amarelo-sub">"resgatar"</span> muitos colaboradores adoecidos.</div>
+    <div class="atribuicao">Servidora Pública, mensagem real enviada à PAAPS</div>
+  </div>
+  <img class="logo" src="logo/logo-branco.png">
+</section>
+
+<!-- SLIDE 5 : RESPIRO -->
+<section class="slide" id="s5">
+  <img class="foto" src="fotos/slide5.jpg">
+  <div class="credito-foto">Fotos: Radilson Carlos Gomes, Fotógrafo do SUS.</div>
+  <div class="conteudo">
+    <div class="headline-grande">ELAS SUSTENTAM O <span class="amarelo amarelo-sub">TERRITÓRIO</span> INTEIRO.</div>
+  </div>
+  <img class="logo" src="logo/logo-branco.png">
+</section>
+
+<!-- SLIDE 6 : A VIRADA. Fundo dividido: Macapá (2 agentes na porta) + Agente de Saúde (idoso). -->
+<section class="slide" id="s6">
+  <div class="split">
+    <div class="topo" style="background-image:url('fotos/slide6-a.jpg');"></div>
+    <div class="baixo" style="background-image:url('fotos/slide6-b.jpg');"></div>
+  </div>
+  <div class="escurecer" style="background:rgba(0,0,0,0.45);"></div>
+  <div class="conteudo">
+    <div class="citacao">O trabalho delas só entra para os indicadores depois que custou uma <span class="amarelo amarelo-sub">licença</span>.</div>
+    <div class="corpo">O indicador da equipe só registra a meta batida. Entre quem trabalha formalmente, os afastamentos por esgotamento profissional multiplicaram por 9 em 4 anos.</div>
+  </div>
+  <div class="legenda-caps">NÓS PRECISAMOS <span class="sub">CONHECER</span> MELHOR E <span class="sub">CUIDAR</span> MELHOR DESSAS <span class="dest">MULHERES QUE CUIDAM DE TUDO</span>.</div>
+  <img class="logo" src="logo/logo-branco.png">
+</section>
+
+<!-- SLIDE 7 : NÚMERO GIGANTE -->
+<section class="slide" id="s7">
+  <img class="foto" src="fotos/slide7.jpg">
+  <div class="credito-foto">Fotos: Radilson Carlos Gomes, Fotógrafo do SUS.</div>
+  <div class="area-dado"><div class="textura textura--branco"></div></div>
+  <div class="conteudo">
+    <div class="numero">75%</div>
+    <div class="headline-media">do trabalho de cuidado não remunerado no mundo é feito por mulheres</div>
+    <div class="corpo-menor">O recém-lançado programa Acolhe Mais, atendimento psicológico online para Mães Atípicas ou Mulheres Vítimas de Violência, pelo SUS, nasce justamente porque hoje sabemos que: cuidar também adoece quem cuida.</div>
+  </div>
+  <div class="fonte-rodape">OIT · Ministério da Saúde, Acolhe Mais, ago. 2026</div>
+  <img class="logo" src="logo/logo-branco.png">
+</section>
+
+<!-- SLIDE 8 : PERGUNTA + CTA (foto sangrando até o fim, sem faixa) -->
+<section class="slide" id="s8">
+  <img class="foto" src="fotos/slide8.jpg">
+  <div class="escurecer"></div>
+  <div class="credito-foto">Fotos: Radilson Carlos Gomes, Fotógrafo do SUS.</div>
+  <div class="abertura">O Acolhe Mais do SUS sabe que precisamos cuidar quem cuida. Mas não olhou para as mulheres do próprio SUS, que cuidam de tudo.</div>
+  <div class="zona-pergunta">
+    <div class="pergunta">O <span class="amarelo amarelo-sub">presenteísmo</span> em mulheres:</div>
+    <div class="explicacao">ir ao trabalho, mas adoecida ou exausta demais para dar o seu melhor. Ainda não tem indicador ou programa de cuidado.</div>
+  </div>
+  <div class="cta-rodape">
+    <div class="cta-texto">A PAAPS É A REDE DE PSICÓLOGAS DAS SERVIDORAS PÚBLICAS<span class="cta-link">SAIBA MAIS EM WWW.PAAPS.COM.BR</span></div>
+    <img class="logo" src="logo/logo-branco.png" style="position:relative;right:0;bottom:0;flex-shrink:0;">
+  </div>
+</section>
+
+<script>
+(()=>{
+  const n = new URLSearchParams(location.search).get('solo');
+  if(!n) return;
+  document.querySelectorAll('.slide').forEach((s)=>{
+    s.style.display = (s.id === ('s'+n)) ? '' : 'none';
+  });
+  window.scrollTo(0,0);
+})();
+</script>
+</body>
+</html>
