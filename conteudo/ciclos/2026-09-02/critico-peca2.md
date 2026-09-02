@@ -159,3 +159,94 @@ as fontes na linha de rodapé do slide (uma com ano, outra sem).
 - Legenda: a pergunta final é boa CTA (proposição, não apelo); vale considerar se cabe reforçar,
   na própria legenda, a mesma imprecisão de canal do slide 4 (achado 1), caso a legenda cite a
   fala da ACS em algum rascunho futuro.
+
+---
+
+# Crítica : rotatividade de quase 40% dos ACS : rodada 2
+
+**Nota:** 97/100
+**Corte desta rodada:** 90 (rodadas 1 a 5)
+**Decisão:** APROVADO, libera pro Buscador de Fotos
+
+Leitura de primeira mão da versão revisada em `conteudo/ciclos/2026-09-02/copy-peca2-acs.md`, sem
+acesso ao raciocínio do copywriter, só o texto final entregue. Conferência ponto a ponto dos 5
+achados bloqueantes da rodada 1, mais checklist completo dos 8 slides e da peça inteira, do zero.
+
+## Achados bloqueantes
+
+Nenhum. Os 5 bloqueantes da rodada 1 foram corrigidos de verdade, não só declarados como
+corrigidos:
+
+1. **Slide 4, atribuição:** `Agente Comunitária de Saúde, em comentário público no @paaps.brasil`.
+   Bate com a fonte real registrada em `.claude/agent-memory/tecela/ciclo-2026-07-15.md`, linha 15
+   ("formulação literal de uma ACS nos comentários"). Canal certo, nomeado, no mesmo padrão da
+   peça de referência ("Servidora Pública, mensagem real enviada à PAAPS").
+
+2. **Figura de negação por contraste:** reduzida à única ocorrência do slide 6 ("por emenda
+   constitucional, não por lei ordinária"), que passa no teste da regra 4.1 (é uma disputa
+   jurídica real que a categoria sustentou, não espantalho). O slide 2 perdeu o contraste com X
+   espantalho ("não em talento de currículo") e ficou só na afirmação direta, carregando a mesma
+   mediação sem a fórmula repetida. O paralelismo do slide 3 ("para a porta abrir... para a meta
+   fechar...") não usa negação explícita e continua não sendo, por si, a mesma figura: mantenho o
+   critério já registrado na rodada 1 de não penalizá-lo à parte.
+
+3. **Slide 6/M7:** comprimido de cinco fragmentos para as três linhas exigidas pela anatomia do
+   modelo ("Mesma rua. Mesmas casas." / "A mesma agente sozinha nelas, sem reforço de enfermagem."
+   / "Nenhuma vaga nova para dividir o território."), sem perder a mediação do subfinanciamento de
+   enfermagem, que foi redistribuída para dentro da segunda linha em vez de cortada. A ordem CAPS
+   de entrada → virada → lista de três → enquadre institucional agora bate com a anatomia
+   publicada do M7. A segunda linha da lista é um pouco mais densa que o padrão dos exemplos
+   publicados (ex.: "Sobrecarga constante.", "Isolamento do sofrimento."), mas isso é observação de
+   polimento, não quebra de lei: a contagem de linhas e a hierarquia de peso estão corretas.
+
+4. **Legenda:** a referência a Foucault foi removida e substituída por "a maior rede pública de
+   saúde do mundo chega dentro de cada casa porque alguém do bairro bate na porta: um laço que
+   nenhuma meta sabe contar." Carrega a mesma mediação (capilaridade do SUS sustentada pelo
+   trabalho mais precarizado da rede) em português corrente, sem nomear teórico nem deixar jargão
+   sem tradução.
+
+5. **Concordância de gênero:** conferida slide a slide, mais a legenda. Convenção feminina
+   aplicada de forma consistente nos 8 slides ("a Agente Comunitária de Saúde, a ACS" no slide 1;
+   "dela" no slide 2; "a mesma agente" no slide 6; "das Agentes Comunitárias de Saúde" no slide 7).
+   O "ele" do slide 8 e da legenda concorda com "suporte de enfermagem" (substantivo masculino), não
+   com a categoria profissional: não é erro de gênero, é concordância correta com outro antecedente.
+   O pronome "ela" do slide 1 agora tem antecedente claro dentro do próprio slide ("da Agente
+   Comunitária de Saúde, a ACS", na segunda linha).
+
+## Achado a verificar da rodada 1: resolvido com honestidade, mas com efeito colateral de voz
+
+A separação de fontes do dado de 39,9% (SciELO com ano 2025 confirmado; RMMG marcada como "ano não
+confirmado") é a resposta certa contra inventar um ano que não existe na fonte (regra 4.6). Não é
+achado bloqueante: o dado ainda se sustenta sozinho (tem ano na fonte principal, tem fonte
+nomeada, tem o que significa na prática). Mas registro como observação de voz, não de exatidão:
+"ano não confirmado" escrito dentro do próprio slide (e repetido na legenda) é uma nota de
+processo editorial, o tipo de ressalva que só quem monta a peça precisa saber, vazando para dentro
+do texto que a leitora vê. Numa peça cujo eixo declarado é "autoridade demonstrada pela precisão
+do diagnóstico territorial", uma frase que soa como rodapé de fact-checking pesa contra esse
+efeito, mesmo sendo tecnicamente honesta. Ver potencialização abaixo.
+
+## O que já está bom
+
+- Todos os 5 bloqueantes da rodada 1 corrigidos na causa, não só no sintoma (a correção do slide 6,
+  por exemplo, redistribuiu conteúdo em vez de cortar informação para caber no teto de linhas).
+- A convenção de gênero passou a ser tratada como decisão de peça inteira, não conserto
+  slide a slide: nenhuma nova quebra de concordância apareceu como efeito colateral da correção.
+- A peça manteve, sem retrocesso, tudo que já estava bom na rodada 1: zero travessão, nenhum
+  cliente nomeado, NR-1 ausente e sem falta, nenhum "ninguém X" sem sujeito, nenhum chapéu/eyebrow,
+  cena de foto descrita nos 8 slides, cada dado com fonte e conectado à tese do vínculo que a meta
+  desgasta.
+- A citação real do slide 4 segue sendo a única voz humana da peça, e agora com atribuição de
+  canal exata, reforçando em vez de arranhar a autoridade do diagnóstico.
+
+## Potencializações (opcional, nunca bloqueante)
+
+- Slide 7 e legenda: considerar remover a frase "ano não confirmado" do texto público e manter a
+  transparência só no lastro interno (arquivo de referências ABNT, que já lista a RMMG sem ano,
+  no padrão bibliográfico normal para fonte sem data visível). O slide pode citar só
+  "Fonte: Ciência & Saúde Coletiva/SciELO, 2025 · Revista Médica de Minas Gerais (RMMG)", sem o
+  qualificador, sem perder honestidade nenhuma (a ausência de ano na RMMG já fica registrada nas
+  Referências, que são o lugar certo para esse tipo de ressalva).
+- Slide 6, segunda linha da lista ("A mesma agente sozinha nelas, sem reforço de enfermagem."):
+  se houver espaço de reescrita numa rodada futura por outro motivo, vale testar quebrar em duas
+  linhas mais curtas, mais perto do ritmo dos exemplos publicados do M7 ("Sobrecarga constante." /
+  "Isolamento do sofrimento."). Não é correção, é afinação de cadência.
