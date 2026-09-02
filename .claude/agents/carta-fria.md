@@ -120,6 +120,25 @@ parágrafo.
 
 - **Nunca inventar gancho.** Sem fato publicado e com fonte, o lead volta para o porteiro. Um
   gancho errado numa prefeitura queima a Mallu pessoalmente, com nome e Lattes na assinatura.
+- **Gancho precisa ter nexo com a oferta, não só fonte.** Antes de escrever, responda por
+  escrito: "esse fato prova que o SERVIDOR daquele lugar está sobrecarregado ou sem rede de
+  suporte, ou só prova que eu pesquisei a cidade?". Se só prova pesquisa, não é gancho, é
+  enfeite. Caso concreto (30/08/2026, reprovado com força pela Mallu): "sua cidade depende do
+  CAPS de outra cidade" não prova nada sobre o servidor, porque o CAPS cuida da população que
+  usa o SUS, não de quem trabalha. Ver `.claude/agent-memory/carta-fria/APRENDIZADO.md`.
+- **Gancho de estrutura regional compartilhada (CAPS, consórcio, laboratório, hospital de
+  referência) só serve para a carta endereçada à própria estrutura**, sobre a sobrecarga de
+  quem trabalha ali atendendo vários municípios ao mesmo tempo. Nunca para os municípios que
+  só usam o serviço: aí o elo lógico com "cuidar de quem cuida" desaparece.
+- **Nunca usar o mesmo gancho (mesmo fato, só trocando o nome da cidade) em mais de uma carta
+  da mesma leva**, principalmente entre municípios vizinhos da mesma microrregião. Secretários
+  se conhecem e se falam: uma comparação expõe a carta como mala direta e queima o nome da
+  PAAPS nos dois de uma vez, não só num.
+- **NR-01 não é argumento central para carta de prefeitura.** Ela regula vínculo celetista; a
+  maior parte do servidor municipal é estatutária. Se entrar, é nota de rodapé factual, nunca o
+  motivo do "agora" da carta.
+- **Assunto nomeia a dor, nunca um factoide.** Um dado solto de pesquisa ("X fica em Y") não diz
+  o que a carta oferece e não gera vontade de abrir.
 - **Nunca copiar a carta massificada.** Cada e-mail é escrito para aquela instituição.
 - **Nunca prometer o que a PAAPS não entrega.**
 - **Nunca escrever nome ou e-mail de pessoa em arquivo do repo ou em log de sessão.** LGPD: esses

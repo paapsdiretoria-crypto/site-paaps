@@ -4,6 +4,65 @@
 > mostrou. Baseline vivo, nunca gabarito rígido: na dúvida entre a regra e o que deu resultado,
 > vence o resultado (e registre a exceção aqui, para virar regra nova).
 
+## Gancho sem nexo com a oferta: a lição mais grave até aqui (30/08/2026)
+
+Seis cartas da mesma leva (Carbonita, Felício dos Santos, Santo Antônio do Itambé, Coluna,
+Alvorada de Minas, Itamarandiba, todas de 30/08/2026) usaram o mesmo gancho, só trocando o
+nome da cidade: "sua cidade não tem CAPS próprio, depende do CAPS Renascer em Diamantina, que
+atende quatorze municípios". A Mallu reprovou com muita força, e ela tem razão nos dois pontos:
+
+1. **O fato não prova o que a carta precisa provar.** O CAPS cuida da população que usa o SUS;
+   a PAAPS cuida de quem trabalha, do servidor. "Sua cidade depende do CAPS de outra cidade" não
+   é evidência de que os servidores daquele município estão sobrecarregados ou sem rede de
+   suporte. É um fato que prova que abrimos o site da prefeitura, não que entendemos a dor de
+   quem a PAAPS vai atender. **Gancho sem nexo com a oferta não é gancho fraco, é gancho errado**,
+   mesmo tendo fonte e sendo verdadeiro.
+2. **Reenviado para uma microrregião inteira de uma vez.** Mesmo se o gancho fosse bom, usar o
+   mesmo fato para 6 municípios vizinhos da mesma Microrregião queima a praça inteira num só
+   disparo: qualquer comparação entre secretários (que se conhecem, que se falam) expõe o texto
+   como mala direta, e derruba a credibilidade da PAAPS nos dois ao mesmo tempo, não só num.
+
+**Regra nova, dura:** um gancho de estrutura regional compartilhada (CAPS, consórcio,
+laboratório, hospital de referência) só serve para endereçar a **própria estrutura** (o CAPS, o
+consórcio) sobre a sobrecarga de **quem trabalha ali**, atendendo tantos municípios ao mesmo
+tempo. Isso conecta de verdade com a oferta da PAAPS (cuidar de quem cuida). Nunca serve para os
+municípios que só *usam* o serviço: aí o fato é sobre a população, não sobre o servidor, e o elo
+lógico desaparece. A carta do CISNORTE (escrita para o próprio consórcio, sobre a equipe que
+sustenta dezoito municípios) é o exemplo do uso certo; as seis cartas de Diamantina são o
+exemplo do uso errado.
+
+**O teste antes de escrever qualquer gancho, a partir de agora:** responder por escrito "esse
+fato prova que o SERVIDOR daquele lugar está sobrecarregado ou sem rede de suporte, ou só prova
+que eu pesquisei a cidade?". Se a resposta for só a segunda, não é gancho, é enfeite, e a carta
+não sai com ele.
+
+**Escopo do dano:** a mesma técnica (Carta de Serviços de CAPS regional listando municípios
+atendidos) foi usada como "achado reaproveitável" também na 4ª leva do buscador-leads (10/08/2026,
+16 municípios da onda 1: Itacarambi, Montezuma, Presidente Kubitschek, Gouveia, Rubelita, Pedras
+de Maria da Cruz, Indaiabira, Vargem Grande do Rio Pardo, Santo Antônio do Retiro, São Gonçalo do
+Rio Preto, Ninheira, Grão Mogol, Novorizonte, Fruta de Leite, Berizal, Congonhas do Norte), que já
+foram enviadas. Isso é candidato forte a explicar parte da baixa taxa de resposta das últimas
+semanas, não só das cartas de hoje. Ver a correção espelhada em
+`.claude/agent-memory/buscador-leads/project-organizacoes-varridas.md`.
+
+## NR-01 não é argumento central para prefeitura (endurecido em 30/08/2026)
+
+A ressalva de 26/07 ("a NR-01 alcança o vínculo celetista, a maior parte do servidor municipal é
+estatutária") ficou fraca demais na prática: as cartas continuaram citando a NR-01 como o que
+"torna o cuidado mais concreto" para gestão pública, tratando-a como argumento atual e relevante
+quando na real ela **não impacta o serviço público de forma direta**, só o vínculo CLT (empresa
+privada). Regra endurecida: **não usar a NR-01 como argumento central ou como o que justifica o
+"agora" de uma carta para prefeitura.** Se entrar, é nota de rodapé factual, nunca o motivo da
+oferta, e nunca repetida em mais de uma carta da mesma leva com a mesma frase.
+
+## Assunto não pode ser um factoide (30/08/2026)
+
+"O CAPS que atende Carbonita fica em Diamantina" é o tipo de assunto que a Mallu classificou como
+o pior que já viu: não diz o que a carta oferece, não nomeia dor nenhuma, não gera vontade de
+abrir. Regra: o assunto nomeia a dor de quem lê (sobrecarga, falta de rede de suporte, o que
+pesa na gestão) ou o território de um jeito que já sinaliza do que se trata. Nunca um dado
+solto de pesquisa (uma trivia, um "você sabia") sem tensão nenhuma.
+
 ## Princípios de voz (aprendidos com a Mallu, 24/07/2026)
 
 - **Nome da marca: "PAAPS Brasil"**, nunca só "PAAPS" sozinho. Vale no corpo e na assinatura.

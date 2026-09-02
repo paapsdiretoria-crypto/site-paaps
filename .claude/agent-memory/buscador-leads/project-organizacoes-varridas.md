@@ -149,6 +149,19 @@ notícia nenhuma (o que importa com o bloqueio eleitoral ativo). Da lista de Dia
 sobram sem e-mail confirmado: Carbonita, Coluna, Alvorada, Couto de Magalhães de Minas, Felício
 dos Santos, Santo Antônio do Itambé, Senador Modestino Gonçalves.
 
+> **CORREÇÃO DURA (30/08/2026): esta "mina" só é válida para achar e-mail e mapa de município,
+> nunca para virar o gancho da carta enviada ao município.** A Mallu reprovou com força seis
+> cartas que usaram exatamente essa lista como gancho ("sua cidade depende do CAPS de outra
+> cidade") para os municípios-membro. O fato é sobre a população que usa o CAPS, não sobre o
+> servidor que a PAAPS quer atender: não tem nexo com a oferta, mesmo sendo verdadeiro e
+> verificável. **A lista de municípios de um CAPS/consórcio regional serve para duas coisas
+> apenas: (1) achar o e-mail institucional de cada município (uso já correto, manter), e (2)
+> como gancho de carta endereçada à PRÓPRIA estrutura regional (o CAPS, o consórcio), sobre a
+> sobrecarga de quem trabalha ali atendendo vários municípios de uma vez — nunca como gancho
+> para o município individual.** A onda 1 inteira (16 municípios, 10/08/2026, listados abaixo)
+> usou essa técnica do jeito errado e já foi enviada: é candidato forte a explicar parte da
+> baixa taxa de resposta das últimas semanas. Ver `.claude/agent-memory/carta-fria/APRENDIZADO.md`.
+
 **Ficaram cadastrados como `0. Alvo` com contato de saúde confirmado mas sem gancho ainda**
 (prontos para a próxima rodada sem precisar buscar contato de novo): Nova Porteirinha, Mantena,
 Icaraí de Minas. Datas ficou cadastrada só com ouvidoria geral, sem nome.
