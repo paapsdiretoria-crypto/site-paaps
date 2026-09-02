@@ -149,3 +149,98 @@ Troca o ano-base inventado pela duração que a reportagem realmente afirma. Res
 **87/100, abaixo do corte de 90. Volta pro copywriter.** Não é uma rodada de reescrita: é uma correção pontual no slide 2 (trocar "ENTRE 2006 E 2026" por "EM VINTE ANOS", ou confirmar o ano-base real antes de manter a precisão) mais, fora do escopo deste agente, uma checagem externa da citação do slide 4.
 
 **Nota de processo:** mesma limitação da rodada 1. A ferramenta Agent não está disponível no meu conjunto de ferramentas nesta sessão (só Read e Write). Não consigo acionar o `copywriter-paaps` para abrir a rodada 4; alguém com acesso à ferramenta Agent precisa rodar essa etapa, passando este arquivo como entrada.
+
+---
+
+# Crítica : INSS, o órgão que carimba sofrimento e não vê o próprio : rodada 4
+
+**Nota:** 100/100
+**Corte desta rodada:** 90 (rodadas 1 a 5)
+**Decisão:** libera pro Buscador de Fotos
+
+## Escopo desta passada
+
+Verificação pontual dos dois pontos deixados em aberto pela rodada 3: a correção do ano-base do
+slide 2, e a fidelidade da citação de Miucha Cicaroni no slide 4, agora confirmável porque o
+orquestrador trouxe a fala original localizada por busca externa (fora do alcance das ferramentas
+desta sessão, só Read/Write). Não reabri o resto da peça: nenhum outro slide foi alterado entre a
+rodada 3 e esta, conforme a própria nota do arquivo do copywriter ("corrigido na rodada 4, achado
+do Crítico", presa só ao slide 2).
+
+## 1. Slide 2 : ano-base fabricado (achado novo da rodada 3)
+
+**Confirmado corrigido.** Texto atual: "EM VINTE ANOS, GOVERNO APÓS GOVERNO, POR ESCOLHA
+ORÇAMENTÁRIA REPETIDA, SEM REPOR O QUADRO NA MESMA VELOCIDADE EM QUE ELE SE ESVAZIAVA, o INSS
+perdeu **56%** dos servidores que já teve: 24 mil vagas a menos." Rodapé: "Agência Pública, mar.
+2026." Bate, quase palavra por palavra, com a reescrita que eu tinha proposto na rodada 3. A frase
+agora carrega só a duração que a reportagem realmente afirma ("vinte anos"), sem inventar um
+intervalo de calendário (2006-2026) que a fonte não sustenta. O slide volta a se sustentar sozinho:
+fonte no rodapé, dado explicado, sem precisão fabricada apresentada como fato datado.
+
+## 2. Slide 4 : fidelidade da citação de Miucha Cicaroni (ressalva da rodada 3)
+
+**Confirmado por verificação externa trazida pelo orquestrador**, contra a reportagem original
+(Agência Pública, mar. 2026). A fala entre aspas no slide, "NUMA TENTATIVA DE SE ADAPTAR, A GENTE
+VAI ADOECENDO.", bate literalmente com a fala real, "Numa tentativa de se adaptar, a gente vai
+adoecendo". A diferença é só a caixa alta, convenção tipográfica do modelo M4 (Lei do catálogo),
+não edição de conteúdo. Nada foi acrescentado, cortado ou parafraseado dentro das aspas. Os dados
+de atribuição fora das aspas, nome, 47 anos, servidora do INSS em Campinas (SP), diagnóstico de
+burnout em setembro de 2025, episódio anterior em 2021, denúncia ao Ministério Público do
+Trabalho, também batem com o que foi confirmado.
+
+**Nota à parte, não bloqueante:** o bloco de atribuição do slide também inclui "Trabalha na
+concessão de benefícios, inclusive no auxílio-doença de quem precisa se afastar do próprio
+trabalho", detalhe de função que a verificação trazida não cobriu explicitamente (o que veio
+confirmado foi nome, idade, cidade, diagnóstico, episódio anterior e denúncia). É plausível dentro
+do que a reportagem descreve sobre servidores do INSS e não está entre aspas, então não desconto
+por isso agora, mas registro como item a confirmar se alguém revisar a reportagem na íntegra antes
+da publicação final.
+
+O risco residual que segurou 3 pontos do critério de voz humana real na rodada 3 está,
+portanto, fechado: a citação é real e fielmente reproduzida, não uma aproximação.
+
+## Nota, com composição
+
+| Critério | Pontos possíveis | Pontos dados | Motivo |
+|---|---|---|---|
+| Dado se sustenta sozinho (ano/fonte/significado) | 25 | 25 | Achado da rodada 3 resolvido: slide 2 sem mais precisão fabricada |
+| Dado se conecta com a tese | 20 | 20 | Sem achado, mantido da rodada 3 |
+| Capa com uma tese só | 15 | 15 | Sem achado, mantido |
+| Nenhuma figura retórica repete mais de 1x | 15 | 15 | Sem achado, mantido |
+| Proibições ativas (NR-1, case, "ninguém" sem sujeito, travessão, coachesco) | 15 | 15 | Sem achado, mantido |
+| Voz humana real + 1 frase de impacto por slide | 10 | 10 | Risco residual da rodada 3 (fidelidade da citação) resolvido por verificação externa |
+
+**Total: 100/100.**
+
+## O que já está bom
+
+- Toda a cadeia de correções das rodadas 1 a 3 se manteve estável nesta passada: nenhum achado
+  antigo (figura retórica repetida, pergunta de efeito em excesso, "ninguém mede" sem sujeito,
+  duas frases de impacto no mesmo bloco) voltou disfarçado em slide nenhum.
+- O slide 2 foi o único ponto da peça que precisou de duas rodadas de ajuste até fechar, e fechou
+  sem perder o dado (56%, 24 mil vagas), só trocando precisão inventada por duração real.
+- A voz de Miucha Cicaroni é, agora confirmadamente, uma citação real e fielmente reproduzida
+  dentro das aspas, ocupando o lugar estrutural certo (sintoma vivido antes do mecanismo do
+  slide 5), sem competir com a nomeação institucional do slide 7.
+
+## Potencializações (opcional, nunca bloqueante)
+
+- Mantida da rodada 1/3: a capa poderia trazer, no bloco pequeno, uma faceta nova em vez de
+  reforçar a mesma pergunta com outras palavras.
+- Nova: confirmar também o detalhe de cargo de Miucha ("concessão de benefícios, inclusive
+  auxílio-doença") contra o texto integral da reportagem antes da publicação, mesmo não sendo
+  bloqueante: é o único fragmento de atribuição que não veio explicitamente coberto pela
+  verificação externa desta rodada.
+
+## Decisão
+
+**100/100, acima do corte de 90 (rodada 4, dentro de rodadas 1 a 5). Libera pro Buscador de
+Fotos.** A peça já tinha passado do mínimo de duas rodadas desde a rodada 2, e a nota está estável
+em patamar alto desde a rodada 3 (87 → 100), fechada por correção pontual e verificação externa,
+não por reescrita nova.
+
+**Nota de processo:** mesma limitação das rodadas anteriores. A ferramenta Agent não está
+disponível no meu conjunto de ferramentas nesta sessão (só Read e Write). Não consigo acionar o
+`buscador-fotos` diretamente para abrir a próxima etapa; alguém com acesso à ferramenta Agent
+precisa rodar essa etapa, passando este arquivo e `conteudo/ciclos/2026-09-02/copy-peca1-inss.md`
+como entrada.

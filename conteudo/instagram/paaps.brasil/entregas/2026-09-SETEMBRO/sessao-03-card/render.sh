@@ -50,14 +50,33 @@ SRV=$!
 trap 'kill $SRV 2>/dev/null; wait $SRV 2>/dev/null' EXIT
 sleep 1
 
+# Largura/altura reais do slide (o CSS do template usa 1080x1350; não mude sem checar lá).
+W=1080
+H=1350
+# Folga vertical no --window-size pedido ao Chrome (achado em 02/09/2026, sandbox de nuvem
+# com o Chromium do Playwright): o headless reserva ~87px de altura de "moldura" mesmo sem
+# UI nenhuma, e a página só recebe H-87px de viewport de verdade — cortando o rodapé/logo
+# do slide sem erro nenhum no console. Pedimos H+PAD de janela e recortamos a imagem final
+# de volta para HxW exatos com PIL. Testado: com PAD=100 a página some inteira até a última
+# linha (y=1349) sem sobra nem corte. Se algum ambiente não tiver esse offset, o crop ainda
+# funciona (pega o canto superior esquerdo exato, que é sempre onde o slide começa).
+PAD=100
+
 mkdir -p "$PASTA/export"
-echo "Fotografando ${#IDS[@]} slide(s) de $PASTA em 1080x1350..."
+echo "Fotografando ${#IDS[@]} slide(s) de $PASTA em ${W}x${H}..."
 for id in "${IDS[@]}"; do
   padded=$(printf "%02d" "$id" 2>/dev/null || echo "$id")
+  RAW="$PASTA/export/.raw-slide-${padded}.png"
   "$CH" --headless=new --disable-gpu --no-sandbox --hide-scrollbars \
-    --virtual-time-budget=12000 --window-size=1080,1350 \
-    --screenshot="$PASTA/export/slide-${padded}.png" \
+    --virtual-time-budget=12000 --window-size=${W},$((H+PAD)) \
+    --screenshot="$RAW" \
     "http://localhost:$PORT/index.html?solo=${id}" >/dev/null 2>&1
+  python3 -c "
+from PIL import Image
+im = Image.open('$RAW')
+im.crop((0,0,$W,$H)).save('$PASTA/export/slide-${padded}.png')
+"
+  rm -f "$RAW"
   echo "  slide-${padded}.png"
 done
 

@@ -161,3 +161,31 @@ conteúdo desta pasta pelas ferramentas MCP do Google Drive disponíveis.**
 **biblioteca de PDFs teóricos** (CREPOP, RAPS/UNA-SUS, artigos de psicologia do trabalho), **não**
 o acervo fotográfico documental de rede pública. Nome igual, conteúdo totalmente diferente do que
 o mesmo nome designa no disco local. Não confundir os dois na hora de buscar.
+
+---
+
+## Fotos específicas de `FOTOS BVMG ISAAC` e `OUTRAS FOTOS`, abertas em 02/09/2026
+
+Continuação da auditoria do mesmo evento indoor de Bela Vista de Minas (workshop/roda de conversa,
+26-27/11/2025), usadas como **escolha de segunda opção** no carrossel de rotatividade das ACS
+quando a Mallu determinou que nenhum slide pode ficar sem foto. Descrições verificadas por `Read`
+direto (download via Drive → decodificação local → Read), não por título nem por snippet.
+
+| Arquivo | Pasta | O que eu vi | Observação |
+|---|---|---|---|
+| `IMG_7940.JPG` | `FOTOS BVMG ISAAC` | Duas pessoas em pé (mulher com panfleto "servidor público de Bela Vista de Minas" + QR code de psicoterapia; homem de camisa azul-marinho ao fundo lendo papéis), perto de um cartaz cor-de-rosa "Se não puder fazer tudo, faça tudo que puder" e, à esquerda cortado, um cartaz azul com texto "[...]LA ACS" / "NA PORTA E AGUARDAR" | **Única foto do acervo com referência textual explícita a "ACS"** — útil se algum carrossel futuro quiser citar o material institucional interno, não a cena de campo |
+| `IMG_7925.JPG` | `FOTOS BVMG ISAAC` | Mulher de tanktop branca, shorts jeans claro, tatuagem no braço, mão perto do rosto/pescoço em gesto de fala, segurando um livreto amarelo; perto de uma porta com fechadura, corredor com piso de cerâmica, cartazes de "câncer de próstata" na porta ao fundo | Retrato individual espontâneo, não é ACS em campo; ambiente parece banheiro/vestiário institucional |
+| `IMG_7993.JPG` | `FOTOS BVMG ISAAC` | Corredor institucional **vazio, sem pessoas**, piso verde-claro listrado, azulejo marrom padronado na parede, decoração de EVA infantil (sol, árvore, bonecos) no teto/parede, ventilador ligado ao fundo, porta arqueada levando a outro cômodo com mesinha infantil vermelha | Provável creche/CRAS. **Única foto do material sem nenhuma pessoa em quadro** — serve para cena de ausência quando não há nada melhor |
+| `IMG_7994.JPG` | `FOTOS BVMG ISAAC` | Mesmo corredor de `IMG_7993`, ângulo mais fechado, recorte de EVA de criança em primeiro plano desfocado, trilha de decoração colorida em curva até porta arqueada ao fundo | Também sem pessoas reais; composição em curva "afastando-se" pode servir a slide de fechamento por analogia visual, não por conteúdo |
+| `IMG_7730.JPG` | `FOTOS BVMG ISAAC` | 3 mulheres sentadas em cadeiras amarelas de escritório, a do centro (blusa branca, tatuagem no braço) sorrindo de leve, janela grande ao fundo com luz estourada | A mais "clara/leve" do lote — quando um slide pedir tom leve/respiro, é a candidata natural apesar de ser reunião indoor |
+| `MARIA QUINZINHO.jpg` | `OUTRAS FOTOS` | Retrato em perfil fechado de senhora idosa sorrindo, luz forte, grade de ferro desfocada ao fundo | **⚠ Alta exposição**: provável moradora/beneficiária, não ACS, rosto muito próximo e identificável. Evitar salvo decisão explícita da Mallu |
+| `DSC03075-3.jpg` | `OUTRAS FOTOS` | Roda de ~15 pessoas sentadas ao ar livre sob palmeiras, plantação de milho e morro ao fundo, vaso de flores laranjas no centro | Refazenda, não SUS. Melhor foto do lote em "escala de território" (paisagem aberta), mas errada em contexto (comunidade/terra, não rede pública) |
+| `DSC03222-74.jpg` | `OUTRAS FOTOS` | Duas mulheres (uma idosa de cabelo branco, outra de meia-idade sorrindo) com tecido estampado de morangos em primeiro plano, cerca de bambu e árvores ao fundo | Refazenda. Boa foto de troca intergeracional/afeto, mas não é cena de porta/visita domiciliar |
+
+**Padrão que se confirma:** `FOTOS BVMG ISAAC` continua sendo **um único evento indoor** (workshop),
+sem nenhuma variação de local. Se um carrossel pedir de novo cena de rua/porta/casa e só houver
+acesso ao Drive, não vale abrir mais fotos dessa pasta esperando achar isso — já é amostra grande
+(24 arquivos abertos ao todo entre as duas rodadas) e o padrão é consistente. `OUTRAS FOTOS` tem
+material de Refazenda (ao ar livre, comunidade, terra) que serve melhor para "escala/território" e
+"afeto/acolhimento" do que para ACS especificamente — mas ainda é acervo errado para argumento de
+rede pública/SUS.
