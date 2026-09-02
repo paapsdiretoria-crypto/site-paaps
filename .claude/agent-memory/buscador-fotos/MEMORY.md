@@ -129,3 +129,35 @@ metadados, não desta etapa de curadoria pontual.
 ## Fotos que a Mallu rejeitou
 
 *(vazio; registrar a partir da primeira devolução dela)*
+
+---
+
+## MODO 1C (Google Drive) — o que a pasta `FOTOS BVMG ISAAC` realmente é (02/09/2026)
+
+Rodando em sandbox de nuvem sem disco local nem ferramentas Notion, usei o MODO 1C
+(`mcp__Google_Drive__search_files` + `download_file_content`) para o carrossel de rotatividade das
+ACS. Abri 15 das 208 fotos de `FOTOS BVMG ISAAC` (id `1j3HMea3pwEWaz4HEuEUFFpuuYmTl0bPr`), espalhadas
+por toda a numeração `IMG_7721` a `IMG_8002`.
+
+**Achado importante: a pasta inteira, pelo menos na amostra aberta, é a cobertura de UM ÚNICO
+EVENTO** — um workshop/roda de conversa indoor num prédio público de Bela Vista de Minas (retratos
+institucionais na parede, TV, ar-condicionado, cadeiras amarelas de escritório), com dinâmica de
+post-its coloridos na parede, uma fala com microfone e uma foto de grupo posada de encerramento.
+**Não é o acervo de campo (rua, porta, casa, visita domiciliar) que os carrosséis de ACS pedem.**
+Esse acervo de campo (`REDE PÚBLICA BRASILEIRA`, ver seção acima deste arquivo) só existe no disco
+local do Mac, não no Drive. Se aparecer de novo uma sessão de nuvem sem disco local e a tarefa
+pedir cena de rua/porta/casa: **não adianta vasculhar mais fundo `FOTOS BVMG ISAAC` esperando achar
+isso** — é outro tipo de material (reunião/formação interna). Vale para portrait fechado também: as
+fotos de rosto sério que existem lá são recortes de gente ouvindo em roda, não retratos dedicados,
+e ninguém está de uniforme.
+
+**Pasta `Case de Bela Vista de Minas`** (id `1PkZZ35oEi9x_PFfycZBEqhp5fc6a6QUx`) é só atalhos
+(`application/vnd.google-apps.shortcut`) para HEIC/MOV/JPG hospedados em outro lugar do Drive.
+`download_file_content` recusa com "Download not allowed for file id" nos atalhos, e
+`get_file_metadata` não expõe o id do arquivo-alvo. **Não há caminho conhecido para abrir o
+conteúdo desta pasta pelas ferramentas MCP do Google Drive disponíveis.**
+
+**Pasta `REDE PÚBLICA - BRASIL`** no Drive (id `16ERZZlcKjIRBMggzhJ_abtj6HF686XUx`) é uma
+**biblioteca de PDFs teóricos** (CREPOP, RAPS/UNA-SUS, artigos de psicologia do trabalho), **não**
+o acervo fotográfico documental de rede pública. Nome igual, conteúdo totalmente diferente do que
+o mesmo nome designa no disco local. Não confundir os dois na hora de buscar.

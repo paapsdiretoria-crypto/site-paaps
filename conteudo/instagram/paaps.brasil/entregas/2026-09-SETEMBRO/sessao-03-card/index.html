@@ -50,28 +50,28 @@
 
   /* ===== CARD ÚNICO : envelhecimento populacional =====
      Modelo aprovado pelo crítico (rodada 2, 97/100): variante do M1 (capa declarativa de
-     impossibilidade estrutural, sem pergunta) na cabeça do card, sustentada por uma linha
-     de apoio em língua comum e um rodapé com as duas fontes amarradas cada uma à afirmação
-     que sustentam (lógica do M6 número gigante, só que o elemento gigante é a frase de
-     impossibilidade, não um número isolado).
+     impossibilidade estrutural, sem pergunta) sustentada por uma linha de apoio em língua
+     comum e um rodapé com as duas fontes, cada uma amarrada à afirmação que sustenta
+     (lógica do M6 número gigante, só que o elemento gigante é a frase de impossibilidade,
+     não um número isolado).
 
      Composição: como o card é denso (headline longa + linha de apoio longa + 2 linhas de
-     fonte), a foto vai em faixa superior sangrando (mesma lógica do slide 3 "dado em card"
-     da peça de referência: object-fit cover é width-bound nessa altura, praticamente toda a
-     largura da foto original aparece, cortando só o suficiente pra excluir o homem desfocado
-     ao fundo à direita — decisão do Buscador de Fotos, executada aqui) — e o corpo de texto
-     inteiro senta numa área sólida marrom abaixo, sem competir com o fundo movimentado do
-     quintal. Nenhum texto cobre os rostos ou o gesto das duas mulheres (Lei 6). */
-  #s1 .foto{top:0;height:820px;object-position:4% 42%;}
-  #s1 .area-texto{position:absolute;left:0;right:0;top:820px;bottom:0;z-index:1;
-                   background:var(--cor-marrom);overflow:hidden;}
+     fonte), a foto sangra numa faixa superior (mesma lógica do slide 3 "dado em card" da
+     peça de referência) e o corpo de texto inteiro senta numa área sólida marrom abaixo,
+     dentro de um container próprio (.card), para não competir com o fundo movimentado do
+     quintal nem vazar por cima da foto. Nenhum texto cobre os rostos ou o gesto das duas
+     mulheres (Lei 6). A foto usada já é um recorte pré-processado (ver nota de entrega)
+     que exclui o homem desfocado ao fundo à direita, decisão do Buscador de Fotos. */
+  #s1 .foto{top:0;height:680px;object-position:50% 88%;}
+  #s1 .card{position:absolute;left:0;right:0;top:680px;bottom:0;z-index:1;
+             background:var(--cor-marrom);overflow:hidden;}
   #s1 .conteudo{position:relative;z-index:2;width:100%;height:100%;
-                 padding:44px 64px 40px;display:flex;flex-direction:column;justify-content:flex-start;gap:22px;}
-  #s1 .headline{font-size:46px;font-weight:700;line-height:1.2;}
-  #s1 .apoio{font-size:26px;font-weight:400;line-height:1.42;color:rgba(255,255,255,0.92);max-width:960px;}
+                 padding:46px 64px 38px;display:flex;flex-direction:column;gap:24px;}
+  #s1 .headline{font-size:45px;font-weight:700;line-height:1.22;}
+  #s1 .apoio{font-size:25px;font-weight:400;line-height:1.42;color:rgba(255,255,255,0.92);max-width:940px;}
   #s1 .apoio em{font-style:italic;font-weight:400;}
-  #s1 .rodape{margin-top:auto;display:flex;flex-direction:column;gap:6px;max-width:820px;}
-  #s1 .rodape .linha{font-family:var(--fonte-titulo);font-weight:700;font-size:18px;line-height:1.35;
+  #s1 .rodape{margin-top:auto;display:flex;flex-direction:column;gap:6px;max-width:780px;}
+  #s1 .rodape .linha{font-family:var(--fonte-titulo);font-weight:700;font-size:17px;line-height:1.32;
                       color:rgba(255,255,255,0.78);}
 </style>
 </head>
@@ -79,16 +79,16 @@
 
 <!-- SLIDE 1 : CARD ÚNICO -->
 <section class="slide" id="s1">
-  <img class="foto" src="fotos/idosa-vinculo-intergeracional-DSC03222-74.jpg">
-  <div class="area-texto">
+  <img class="foto" src="fotos/idosa-vinculo-intergeracional-crop.jpg">
+  <div class="card">
     <div class="textura textura--branco"></div>
-  </div>
-  <div class="conteudo">
-    <div class="headline">NUNCA EXISTIRÁ FAMÍLIA SUFICIENTE PARA CUIDAR SOZINHA DE <span class="amarelo">35,2 MILHÕES</span> DE PESSOAS COM 60 ANOS OU MAIS.</div>
-    <div class="apoio">Em 2012, eram 22,2 milhões. Em 2025, essa população chegou a 35,2 milhões, 16,6% do Brasil. A rede pública que poderia dividir esse cuidado com as famílias cresceu onde o Estado escolheu investir mais forte, décadas atrás, sobretudo no Sul e no Sudeste: há centro-dia para idoso em São Paulo, no Rio de Janeiro, em Belo Horizonte. <em>Não em Maceió. Não em João Pessoa.</em></div>
-    <div class="rodape">
-      <div class="linha">População idosa (22,2 mi em 2012; 35,2 mi em 2025; 16,6% do Brasil): IBGE, dados citados por Correio Braziliense, abr. 2026.</div>
-      <div class="linha">Rede de centros-dia por região: Estado de Minas, mai. 2026.</div>
+    <div class="conteudo">
+      <div class="headline">NUNCA EXISTIRÁ FAMÍLIA SUFICIENTE PARA CUIDAR SOZINHA DE <span class="amarelo">35,2 MILHÕES</span> DE PESSOAS COM 60 ANOS OU MAIS.</div>
+      <div class="apoio">Em 2012, eram 22,2 milhões. Em 2025, essa população chegou a 35,2 milhões, 16,6% do Brasil. A rede pública que poderia dividir esse cuidado com as famílias cresceu onde o Estado escolheu investir mais forte, décadas atrás, sobretudo no Sul e no Sudeste: há centro-dia para idoso em São Paulo, no Rio de Janeiro, em Belo Horizonte. <em>Não em Maceió. Não em João Pessoa.</em></div>
+      <div class="rodape">
+        <div class="linha">População idosa (22,2 mi em 2012; 35,2 mi em 2025; 16,6% do Brasil): IBGE, dados citados por Correio Braziliense, abr. 2026.</div>
+        <div class="linha">Rede de centros-dia por região: Estado de Minas, mai. 2026.</div>
+      </div>
     </div>
   </div>
   <img class="logo" src="logo/logo-branco.png">
