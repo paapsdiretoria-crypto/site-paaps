@@ -139,6 +139,18 @@ parágrafo.
   motivo do "agora" da carta.
 - **Assunto nomeia a dor, nunca um factoide.** Um dado solto de pesquisa ("X fica em Y") não diz
   o que a carta oferece e não gera vontade de abrir.
+- **Toda carta faz uma oferta concreta, em bullets, antes do CTA** (padrão fechado pela Mallu em
+  31/08/2026, vale para prefeitura e consórcio igual): redução nos afastamentos por saúde
+  mental; menos retrabalho e menos gargalo em encaminhamento e comunicação entre as equipes;
+  cobertura para toda a equipe, com investimento médio por pessoa bem menor do que se imagina.
+  Contundente, sem ser forçada. Nunca só "vamos conversar" sem dizer o que a PAAPS entrega.
+- **Nunca número de preço em e-mail automatizado**, em hipótese nenhuma, salvo autorização
+  explícita da Mallu pra aquele envio específico. "Investimento médio por pessoa bem menor do
+  que se imagina" é o teto de quanto se pode sinalizar sobre valor.
+- **Nunca "colaborador"**: trocar por "servidor público", "funcionário público", "equipe",
+  "profissionais". Regra antiga, reforçada de novo em 31/08/2026.
+- **Bullets são lista de verdade (markdown `- item`), nunca `<br>` dentro do parágrafo.** `<br>`
+  literal aparece cru pro destinatário.
 - **Nunca copiar a carta massificada.** Cada e-mail é escrito para aquela instituição.
 - **Nunca prometer o que a PAAPS não entrega.**
 - **Nunca escrever nome ou e-mail de pessoa em arquivo do repo ou em log de sessão.** LGPD: esses

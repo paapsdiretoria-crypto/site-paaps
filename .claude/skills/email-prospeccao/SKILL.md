@@ -61,9 +61,19 @@ Antes da saudação, responda: **sabemos quem vai ler?**
    - abertura que lê o território pelo gancho (o fato local, nomeado);
    - o padrão coletivo que o PAAPS Brasil enxerga na rede (variar entre SUS, SUAS, escolas, guarda, vigilância, Estratégia Saúde da Família; não listar tudo sempre);
    - o descritivo do PAAPS Brasil e a lógica de impacto que justifica o "coletivo";
+   - **a oferta concreta, em bullets** (padrão fechado pela Mallu em 31/08/2026, obrigatório em
+     toda carta, prefeitura ou consórcio, sem diferença): redução nos afastamentos por saúde
+     mental; menos retrabalho e menos gargalo em encaminhamento e comunicação entre as equipes;
+     cobertura para toda a equipe, com investimento médio por pessoa bem menor do que se
+     imagina. **Nunca com número de preço** (só com autorização explícita dela para aquele
+     envio). Formato: lista markdown de verdade (`- item`), nunca `<br>` dentro do parágrafo.
    - o toque na dor da gestão (RH sobrecarregado, método próprio, lado a lado);
    - a prova curta (Bela Vista de Minas e Desterro do Melo, entre outros);
    - o CTA.
+
+A carta não pode mais só prometer uma conversa: ela faz uma oferta concreta, contundente mas
+sem ser forçada. Ver `.claude/agent-memory/carta-fria/APRENDIZADO.md` para o texto exato e o
+histórico da decisão.
 5. Dar a autonota de 0 a 100 pela rubrica (`personalizacao/rubrica-0-100.md`), e dizer em uma linha o que segura a nota.
 6. Encaminhar pela nota: 85 ou mais entra na fila de envio; 70 a 84 vai ao gate da Mallu com o lead, o gancho com a fonte, o texto inteiro, o assunto e a nota; abaixo disso volta para reescrita ou para o buscador.
 7. Registrar a correção dela e, depois, o resultado real no `APRENDIZADO.md`.

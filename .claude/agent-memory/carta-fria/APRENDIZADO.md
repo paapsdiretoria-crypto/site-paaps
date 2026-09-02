@@ -55,6 +55,36 @@ privada). Regra endurecida: **não usar a NR-01 como argumento central ou como o
 "agora" de uma carta para prefeitura.** Se entrar, é nota de rodapé factual, nunca o motivo da
 oferta, e nunca repetida em mais de uma carta da mesma leva com a mesma frase.
 
+## A oferta da PAAPS: registrado como padrão (31/08/2026)
+
+A Mallu reescreveu à mão o parágrafo de oferta da carta do CISNORTE e mandou registrar como
+**a oferta oficial, para qualquer comprador (prefeitura ou consórcio, não tem diferença)**. A
+carta não pode mais só prometer uma conversa: ela precisa fazer uma oferta concreta, de forma
+contundente mas sem ser forçada. Vira parágrafo padrão, sempre em bullets, sempre antes do CTA:
+
+- Redução nos afastamentos por saúde mental
+- Menos retrabalho, menos gargalo em encaminhamento e comunicação entre as equipes
+- Cobertura para toda a equipe, com investimento médio por pessoa bem menor do que se imagina
+
+**Regra dura sobre valor: nenhum e-mail automatizado leva número de preço, nunca, salvo
+autorização explícita da Mallu para aquele envio específico.** A frase "investimento médio por
+pessoa bem menor do que se imagina" é o teto: sinaliza acessibilidade sem comprometer um valor.
+A primeira versão que ela reescreveu tinha "R$150,00/mês por colaborador" escrito; ela mesma
+tirou o número ao dar a instrução final, então o número nunca chega a ir para uma carta.
+
+**Formatação:** os três itens vão como lista de verdade (markdown `- item` em linhas separadas),
+nunca como `<br>` literal dentro de um parágrafo corrido. `<br>` aparece como texto cru pro
+destinatário e queima a credibilidade da carta inteira.
+
+**Palavra proibida que apareceu no rascunho: "colaborador".** Já era regra
+([[feedback_lexico_pessoas_rede.md]] no repo principal), a Mallu confirmou de novo: trocar por
+"servidor público", "funcionário público", "equipe", "profissionais".
+
+**Lição de voz, independente da oferta:** "Vocês garantem a estrutura que muitas dessas
+prefeituras não teriam sozinhas" (2ª pessoa, dá crédito a quem lê) é melhor que "É a estrutura
+que muitas dessas prefeituras não teriam sozinhas" (impessoal, fala sobre o leitor por fora).
+Preferir 2ª pessoa quando o gancho descreve algo que a própria organização fez ou sustenta.
+
 ## Assunto não pode ser um factoide (30/08/2026)
 
 "O CAPS que atende Carbonita fica em Diamantina" é o tipo de assunto que a Mallu classificou como
