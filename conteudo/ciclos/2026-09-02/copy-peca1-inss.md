@@ -1,4 +1,4 @@
-# Copy : Peça 1 da semana : INSS, o órgão que carimba sofrimento e não vê o próprio : rodada 2
+# Copy : Peça 1 da semana : INSS, o órgão que carimba sofrimento e não vê o próprio : rodada 3
 
 > Fonte de raciocínio: `conteudo/ciclos/2026-09-02/tecela-peca1-inss.md`.
 > Fonte de dado: Agência Pública, mar. 2026 (única fonte factual usada, ver referências).
@@ -126,21 +126,36 @@ de senha ao fundo mostrando número alto, sensação de tempo de espera.
 
 ---
 
-### Slide 4 : Respiro (o sintoma vivido, mediação 3 da Tecelã)
-**Modelo:** M3, respiro.
+### Slide 4 : Voz real do campo (o sintoma vivido, mediação 3 da Tecelã)
+**Modelo:** M4, citação. (Substituiu o M3 respiro genérico da rodada 2: a voz real carrega o
+mesmo lugar na arquitetura, o sintoma vivido antes da lei/mecanismo do slide 5, só que agora com
+nome, idade, cargo e fonte, em vez de prosa sem sujeito.)
 
 **Texto:**
 
-> Antes de carimbar qualquer coisa, alguém leu. Um relato de sofrimento atrás do outro, o dia
-> inteiro, sem pausa pra processar o que acabou de ler. Isso também **"pesa."**
+> *(citação, fonte display, aspas)* "NUMA TENTATIVA DE SE ADAPTAR, A GENTE VAI **ADOECENDO**."
+>
+> *(atribuição, texto pequeno, língua comum)* Miucha Cicaroni, 47 anos, servidora do INSS em
+> Campinas (SP). Trabalha na concessão de benefícios, inclusive no auxílio-doença de quem
+> precisa se afastar do próprio trabalho. Foi diagnosticada com burnout em setembro de 2025, o
+> segundo episódio dela desde 2021. Denunciou o próprio INSS ao Ministério Público do Trabalho.
+>
+> *[rodapé]* Agência Pública, mar. 2026.
 
-**Destaque:** amarelo só na expressão entre aspas "pesa.".
+**Destaque:** amarelo só em "adoecendo", dentro da citação. Nenhum destaque no bloco de
+atribuição: é explicação em língua comum, nunca um segundo murro (regra 2 do que reprovou
+27/07).
 
-**Foto:** mãos de um servidor/perito folheando ou lendo um processo impresso numa mesa de
-trabalho real, luz suave, foco no gesto de leitura repetitiva. Não precisa mostrar rosto.
+**Foto:** prioridade 1 para o Buscador: procurar, na própria reportagem da Agência Pública (mar.
+2026) ou em cobertura correlata, uma foto real e identificável de Miucha Cicaroni, com crédito
+rastreável. Se não existir imagem dela com uso autorizado, cena documental equivalente e real:
+uma servidora do INSS trabalhando numa mesa de atendimento ou perícia, mãos sobre o teclado ou
+sobre um processo aberto, rosto de perfil ou parcialmente fora de quadro (não inventar retrato
+como se fosse dela sem confirmação). Luz de escritório público, sem dramatização.
 
-**Crédito da foto:** idem regra acima. Slide sem card, sem bloco de dado: é o respiro, fica só
-prosa e foto.
+**Crédito da foto:** se for a foto real dela, creditar a reportagem de origem (Agência Pública,
+mar. 2026). Se for cena documental equivalente, idem regra geral: se não houver fonte
+identificável, omitir a linha de crédito (Lei 3).
 
 ---
 
@@ -281,26 +296,23 @@ for encontrada para um slide específico, declarar a ausência de crédito em ve
 
 ## Onde o raciocínio da Tecelã ficou apertado
 
-Um ponto real, não maquiado: **não havia, nos materiais recebidos, nenhuma fala real e
-atribuível de um servidor do INSS ou de quem está na fila** (comentário de perfil, relato de
-campo, trecho de reportagem com aspas diretas). `voz-paaps.md` e a anatomia aprovada exigem
-que toda peça carregue pelo menos uma voz humana real, nunca inventada. Não forcei uma citação
-(modelo M4) com base numa frase fabricada para preencher a lacuna: isso seria inventar
-testemunho, proibição mais dura que qualquer regra de estrutura. Em vez disso, usei a "frase
-pronta" que a própria Tecelã escreveu como síntese do raciocínio (explicitamente marcada por
-ela como "sem nome de autor") como matéria-prima da virada do slide 7, que é nomeação
-institucional, não citação de pessoa.
+Um ponto real, não maquiado, registrado nas rodadas 1 e 2: **não havia, nos materiais recebidos
+até então, nenhuma fala real e atribuível de um servidor do INSS ou de quem está na fila**
+(comentário de perfil, relato de campo, trecho de reportagem com aspas diretas). `voz-paaps.md`
+e a anatomia aprovada exigem que toda peça carregue pelo menos uma voz humana real, nunca
+inventada. Não forcei uma citação (modelo M4) com base numa frase fabricada para preencher a
+lacuna: isso seria inventar testemunho, proibição mais dura que qualquer regra de estrutura.
 
-**Status após a rodada 1 do Crítico de Conteúdo (achado bloqueante 6): item NÃO resolvido
-nesta rodada 2.** Eu não tenho, nesta sessão, ferramenta de navegação/busca na web para reler
-a reportagem original da Agência Pública em busca de um caso nomeado (servidor identificado,
-trecho com aspas diretas atribuível) que pudesse virar testemunho indireto sem citação
-inventada, como o Crítico sugeriu como alternativa. Também não recebi, do Radar nem da Tecelã,
-nenhuma fala real e atribuível nesta rodada. Diante disso, **esta lacuna precisa ir para a
-Mallu decidir antes da aprovação final**: ou ela autoriza a peça a seguir sem voz humana real
-(exceção ao M4, justificada pela ausência documentada de fonte, não por preguiça), ou ela pede
-que o Radar volte à reportagem e a outras fontes públicas (comentários de servidores do INSS
-em rede social, depoimento em CPI, matéria com aspas diretas) atrás de uma fala real antes da
-próxima rodada do Crítico. Se essa fala aparecer, ela deveria substituir o slide 4 (respiro) ou
-entrar como slide adicional em modelo M4: uma voz real de dentro do INSS fortalece a peça mais
-do que qualquer frase que eu possa escrever.
+**Status após a rodada 3: achado bloqueante 6 do Crítico, RESOLVIDO.** A rodada 3 trouxe um caso
+real, nomeado e verificável, extraído da mesma reportagem que já embasa a peça inteira (Agência
+Pública, mar. 2026): Miucha Cicaroni, 47 anos, servidora do INSS em Campinas (SP), diagnosticada
+com burnout em setembro de 2025, que denunciou o próprio órgão ao Ministério Público do
+Trabalho. A fala dela em aspas diretas, "Numa tentativa de se adaptar, a gente vai adoecendo",
+entrou no slide 4, em modelo M4, substituindo o respiro genérico sem sujeito da rodada 2. Não
+precisei recorrer à "frase pronta sem nome de autor" da Tecelã como testemunho indireto: a
+citação de Miucha é voz real, atribuída, em língua comum (nada de sigla ou jargão clínico,
+regra 8 do que reprovou 27/07), e carrega exatamente o mesmo lugar estrutural que o respiro
+ocupava, o sintoma vivido antes do mecanismo do slide 5. A "frase pronta" da Tecelã permanece
+onde já estava, como nomeação institucional no slide 7, e não competiu com a citação nova: são
+duas vozes de natureza diferente (uma pessoa nomeada vs. uma síntese institucional), cada uma no
+slide certo.
