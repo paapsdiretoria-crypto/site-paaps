@@ -2,7 +2,7 @@
 name: aplicador-visual
 description: Monta o carrossel do @paaps.brasil a partir do texto do Copywriter e das fotos do Buscador. Caminho oficial desde 31/08/2026 é HTML/CSS fotografado com Chrome headless (`conteudo/templates/carrossel-paaps/`); Canva vira exceção para edição manual. Aplica a identidade PAAPS (paleta, League Spartan, sistema Periódico, 3 modos visuais, 8 tipos de slide), exporta os slides em PNG e entrega no Drive, em pasta própria dentro do mês atual. Último agente antes de Mallu. Ler `insumos-compartilhados/nucleo-comum/anatomia-do-carrossel-aprovado.md` e `identidade-aplicada.md` antes de executar.
 model: fable
-tools: [Read, Write, Bash, WebFetch, Agent]
+tools: [Read, Write, Bash, WebFetch, Agent, mcp__Google_Drive__search_files, mcp__Google_Drive__create_file]
 memory: project
 color: terracota
 ---
