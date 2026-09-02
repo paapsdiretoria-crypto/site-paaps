@@ -92,3 +92,91 @@ de dado com card de citação na mesma sequência de postagens, por exemplo.
 - Se a rodada seguinte resolver os dois achados bloqueantes citando fonte oficial e uma alegação
   cidade-a-cidade rastreável (ou generalizada), a peça está muito perto do corte: os outros cinco
   critérios já pontuam quase cheio nesta rodada.
+
+---
+
+# Crítica : Peça 3 (card único, envelhecimento populacional) : rodada 2
+
+**Nota fonte:** `conteudo/ciclos/2026-09-02/copy-peca3-card.md` (versão revisada, rodada 2)
+**Nota:** 97/100
+**Corte desta rodada:** 90 (rodada 2, dentro da janela de rodadas 1 a 5)
+**Decisão:** APROVADO. Libera pro Buscador de Fotos.
+
+## Verificação dos dois bloqueantes da rodada 1
+
+### 1. Alegação de centro-dia por cidade: corrigido de verdade
+
+O rodapé deixou de ser um bloco único ("Correio Braziliense, abr. 2026 · Estado de Minas, mai.
+2026") sem indicar qual fonte sustenta qual frase, e passou a ser duas linhas, cada uma amarrada
+à afirmação específica que sustenta:
+
+> "Rede de centros-dia por região: Estado de Minas, mai. 2026, em
+> em.com.br/bem-viver/2026/05/7410472."
+
+Isso é exatamente a opção (a) que o achado 1 da rodada 1 pedia: a alegação cidade a cidade
+("há centro-dia... em São Paulo, no Rio de Janeiro, em Belo Horizonte. Não em Maceió. Não em João
+Pessoa.") agora aponta nominalmente para um documento específico e citável, com URL, separado da
+fonte dos números populacionais. Um leitor real consegue ir até essa matéria e checar. A pergunta 1
+do checklist ("dá pra entender esse dado sem sair do slide, com fonte verificável?") passa a se
+sustentar. Acho resolvido; não tenho como abrir a URL a partir daqui para conferir o conteúdo
+literal da matéria, mas isso já está fora do que o crítico de conteúdo avalia (rastreabilidade
+formal da fonte, não fact-checking de matéria de terceiros que o próprio ecossistema não teria
+como auditar peça a peça).
+
+### 2. Cadeia de fonte dos números demográficos até o IBGE: corrigido de verdade
+
+O rodapé agora lê:
+
+> "População idosa (22,2 mi em 2012; 35,2 mi em 2025; 16,6% do Brasil): IBGE, dados citados por
+> Correio Braziliense, abr. 2026."
+
+Isso segue quase à risca a reescrita proposta na rodada 1: IBGE como fonte primária nomeada, o
+jornal como onde o dado foi lido, não como fonte final. Resolvido.
+
+## Travessão grande
+
+Varredura no card revisado inteiro (headline, linha de apoio, rodapé, notas de entrega): nenhuma
+ocorrência de "—". Os conectivos usam `:`, `;`, `,` e `-` curto, dentro da proibição ativa.
+
+## O que mais mudou (potencialização da rodada 1, aplicada)
+
+"Não em Maceió. Não em João Pessoa." saiu do negrito cheio e foi para itálico sem cor, exatamente
+como a potencialização não bloqueante da rodada 1 sugeriu, para não competir como segundo murro ao
+lado do amarelo do headline (Lei 5). Isso não era bloqueante, mas a execução ficou boa: o
+trecho ainda marca a mudança de cadência da frase sem repetir o peso do destaque principal.
+
+## O que já está bom (mantido da rodada 1, sem necessidade de reavaliar)
+
+- Sujeito estrutural nomeado ("o Estado escolheu investir mais forte"), zero "ninguém mediu" sem
+  sujeito.
+- Zero chapéu, zero vocabulário coachesco, zero case nomeado, zero "não é X, é Y".
+- Tese única no card, sem duas ideias competindo.
+- Ano e recorte territorial presentes para os três números principais.
+- Variante de M1 (impossibilidade estrutural sem pergunta) aplicada com coerência ao tema.
+
+## Achado não bloqueante, mantido sem desconto de peso cheio
+
+Zero voz humana real na peça, mesma limitação estrutural de formato registrada na rodada 1
+(card único de headline + linha de apoio não tem onde acomodar uma citação sem descaracterizar o
+formato). Não descontado, mas sinalizado de novo: se "card único" virar padrão de produção, a
+frente precisa de resposta estrutural (alternar card de dado com card de citação na sequência de
+postagens).
+
+## Onde ficaram os 3 pontos que não voltaram ao pleno
+
+- O rodapé cita "IBGE" mas não nomeia o levantamento específico (Censo Demográfico ou PNAD
+  Contínua). A proposta da rodada 1 deixava isso como lacuna a preencher pelo Copywriter
+  ("[Censo/PNAD Contínua, indicar qual]"); ele optou por não preencher. Não é bloqueante porque a
+  rastreabilidade até o órgão certo já está garantida (o teste da rodada 1 era "cita-se o IBGE",
+  e isso está cumprido), mas nomear o levantamento deixaria o rodapé auditável com um passo a
+  menos de busca.
+- A URL crua no rodapé ("em.com.br/bem-viver/2026/05/7410472") cumpre a função de rastreio, mas é
+  uma decisão de acabamento visual (comprimento, se cabe na composição do Aplicador Visual), fora
+  do escopo deste crítico.
+
+## Potencializações (opcional, nunca bloqueante)
+
+- Nomear o levantamento do IBGE (Censo Demográfico 2022 ou PNAD Contínua, o que for o caso) no
+  rodapé, se o Copywriter ou o Aplicador Visual tiverem essa informação à mão.
+- Nenhuma outra pendência: os cinco critérios que já pontuavam quase cheio na rodada 1 seguem
+  estáveis nesta rodada, e a peça está pronta para seguir no fluxo.
