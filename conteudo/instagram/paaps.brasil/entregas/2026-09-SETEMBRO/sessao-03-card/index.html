@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Card : envelhecimento populacional</title>
+<style>
+  @font-face{ font-family:'League Spartan'; src:url('fontes/LeagueSpartan-Bold.ttf'); font-weight:700; }
+  @font-face{ font-family:'League Spartan'; src:url('fontes/LeagueSpartan-ExtraBold.ttf'); font-weight:800; }
+
+  :root{
+    --cor-fundo:#f5f1e1;
+    --cor-marrom:#442309;
+    --cor-terracota:#cb4710;
+    --cor-oliva:#aea349;
+    --cor-amarelo:#f7c31c;
+    --cor-bege-rosa:#bbada2;
+    --cor-branco:#ffffff;
+    --fonte-titulo:Helvetica,'Nimbus Sans PAAPS',Arial,sans-serif;
+    --fonte-label:'League Spartan',Helvetica,Arial,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:#111;}
+  .slide{
+    width:1080px;height:1350px;position:relative;overflow:hidden;
+    background:var(--cor-marrom);
+    font-family:var(--fonte-titulo);
+    color:var(--cor-branco);
+    page-break-after:always;
+  }
+  .slide::after{
+    content:'';position:absolute;inset:0;pointer-events:none;
+    background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+  }
+  .foto{position:absolute;left:0;width:1080px;object-fit:cover;z-index:0;}
+
+  /* véu chapado, uniforme — nunca gradiente. Opacidade varia por slide via style inline. */
+  .escurecer{position:absolute;inset:0;z-index:1;background:#000;}
+
+  /* textura de marca — Textura 4, esparsa (sem repeat), opacidade 0.05, exatamente como
+     calibrado na peça de referência (anatomia-do-carrossel-aprovado.md, Parte 2). */
+  .textura{position:absolute;inset:0;z-index:1;pointer-events:none;
+           background-repeat:no-repeat;background-position:center;background-size:140%;opacity:0.05;}
+  .textura--marrom{background-image:url('texturas/textura-marrom.png');}
+  .textura--branco{background-image:url('texturas/textura-branco.png');}
+
+  .amarelo{color:var(--cor-amarelo);font-weight:700;}
+  .amarelo-sub{text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:6px;}
+  .label{font-family:var(--fonte-label);font-weight:700;letter-spacing:0;text-transform:uppercase;}
+  .logo{position:absolute;right:76px;bottom:44px;z-index:3;height:52px;}
+
+  /* ===== CARD ÚNICO : envelhecimento populacional =====
+     Modelo aprovado pelo crítico (rodada 2, 97/100): variante do M1 (capa declarativa de
+     impossibilidade estrutural, sem pergunta) na cabeça do card, sustentada por uma linha
+     de apoio em língua comum e um rodapé com as duas fontes amarradas cada uma à afirmação
+     que sustentam (lógica do M6 número gigante, só que o elemento gigante é a frase de
+     impossibilidade, não um número isolado).
+
+     Composição: como o card é denso (headline longa + linha de apoio longa + 2 linhas de
+     fonte), a foto vai em faixa superior sangrando (mesma lógica do slide 3 "dado em card"
+     da peça de referência: object-fit cover é width-bound nessa altura, praticamente toda a
+     largura da foto original aparece, cortando só o suficiente pra excluir o homem desfocado
+     ao fundo à direita — decisão do Buscador de Fotos, executada aqui) — e o corpo de texto
+     inteiro senta numa área sólida marrom abaixo, sem competir com o fundo movimentado do
+     quintal. Nenhum texto cobre os rostos ou o gesto das duas mulheres (Lei 6). */
+  #s1 .foto{top:0;height:820px;object-position:4% 42%;}
+  #s1 .area-texto{position:absolute;left:0;right:0;top:820px;bottom:0;z-index:1;
+                   background:var(--cor-marrom);overflow:hidden;}
+  #s1 .conteudo{position:relative;z-index:2;width:100%;height:100%;
+                 padding:44px 64px 40px;display:flex;flex-direction:column;justify-content:flex-start;gap:22px;}
+  #s1 .headline{font-size:46px;font-weight:700;line-height:1.2;}
+  #s1 .apoio{font-size:26px;font-weight:400;line-height:1.42;color:rgba(255,255,255,0.92);max-width:960px;}
+  #s1 .apoio em{font-style:italic;font-weight:400;}
+  #s1 .rodape{margin-top:auto;display:flex;flex-direction:column;gap:6px;max-width:820px;}
+  #s1 .rodape .linha{font-family:var(--fonte-titulo);font-weight:700;font-size:18px;line-height:1.35;
+                      color:rgba(255,255,255,0.78);}
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1 : CARD ÚNICO -->
+<section class="slide" id="s1">
+  <img class="foto" src="fotos/idosa-vinculo-intergeracional-DSC03222-74.jpg">
+  <div class="area-texto">
+    <div class="textura textura--branco"></div>
+  </div>
+  <div class="conteudo">
+    <div class="headline">NUNCA EXISTIRÁ FAMÍLIA SUFICIENTE PARA CUIDAR SOZINHA DE <span class="amarelo">35,2 MILHÕES</span> DE PESSOAS COM 60 ANOS OU MAIS.</div>
+    <div class="apoio">Em 2012, eram 22,2 milhões. Em 2025, essa população chegou a 35,2 milhões, 16,6% do Brasil. A rede pública que poderia dividir esse cuidado com as famílias cresceu onde o Estado escolheu investir mais forte, décadas atrás, sobretudo no Sul e no Sudeste: há centro-dia para idoso em São Paulo, no Rio de Janeiro, em Belo Horizonte. <em>Não em Maceió. Não em João Pessoa.</em></div>
+    <div class="rodape">
+      <div class="linha">População idosa (22,2 mi em 2012; 35,2 mi em 2025; 16,6% do Brasil): IBGE, dados citados por Correio Braziliense, abr. 2026.</div>
+      <div class="linha">Rede de centros-dia por região: Estado de Minas, mai. 2026.</div>
+    </div>
+  </div>
+  <img class="logo" src="logo/logo-branco.png">
+</section>
+
+<script>
+(()=>{
+  const n = new URLSearchParams(location.search).get('solo');
+  if(!n) return;
+  document.querySelectorAll('.slide').forEach((s)=>{
+    s.style.display = (s.id === ('s'+n)) ? '' : 'none';
+  });
+  window.scrollTo(0,0);
+})();
+</script>
+</body>
+</html>
