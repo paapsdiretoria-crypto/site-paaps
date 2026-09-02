@@ -56,22 +56,23 @@
      não um número isolado).
 
      Composição: como o card é denso (headline longa + linha de apoio longa + 2 linhas de
-     fonte), a foto sangra numa faixa superior (mesma lógica do slide 3 "dado em card" da
-     peça de referência) e o corpo de texto inteiro senta numa área sólida marrom abaixo,
-     dentro de um container próprio (.card), para não competir com o fundo movimentado do
-     quintal nem vazar por cima da foto. Nenhum texto cobre os rostos ou o gesto das duas
-     mulheres (Lei 6). A foto usada já é um recorte pré-processado (ver nota de entrega)
-     que exclui o homem desfocado ao fundo à direita, decisão do Buscador de Fotos. */
-  #s1 .foto{top:0;height:680px;object-position:50% 88%;}
-  #s1 .card{position:absolute;left:0;right:0;top:680px;bottom:0;z-index:1;
+     fonte, cada uma podendo quebrar em 2 linhas), a foto sangra numa faixa superior curta
+     (mesma lógica do slide 3 "dado em card" da peça de referência) e o corpo de texto
+     inteiro senta numa área sólida marrom abaixo, com folga generosa medida no PNG
+     renderizado (não só no CSS — 2 rodadas de ajuste até o rodapé parar de estourar a
+     borda). Nenhum texto cobre os rostos ou o gesto das duas mulheres (Lei 6). A foto usada
+     já é um recorte pré-processado (ver nota de entrega) que exclui o homem desfocado ao
+     fundo à direita, decisão do Buscador de Fotos executada aqui. */
+  #s1 .foto{top:0;height:560px;object-position:50% 40%;}
+  #s1 .card{position:absolute;left:0;right:0;top:560px;bottom:0;z-index:1;
              background:var(--cor-marrom);overflow:hidden;}
   #s1 .conteudo{position:relative;z-index:2;width:100%;height:100%;
-                 padding:46px 64px 38px;display:flex;flex-direction:column;gap:24px;}
-  #s1 .headline{font-size:45px;font-weight:700;line-height:1.22;}
-  #s1 .apoio{font-size:25px;font-weight:400;line-height:1.42;color:rgba(255,255,255,0.92);max-width:940px;}
+                 padding:52px 64px 44px;display:flex;flex-direction:column;gap:30px;}
+  #s1 .headline{font-size:44px;font-weight:700;line-height:1.22;}
+  #s1 .apoio{font-size:24px;font-weight:400;line-height:1.44;color:rgba(255,255,255,0.92);max-width:940px;}
   #s1 .apoio em{font-style:italic;font-weight:400;}
-  #s1 .rodape{margin-top:auto;display:flex;flex-direction:column;gap:6px;max-width:780px;}
-  #s1 .rodape .linha{font-family:var(--fonte-titulo);font-weight:700;font-size:17px;line-height:1.32;
+  #s1 .rodape{display:flex;flex-direction:column;gap:8px;max-width:780px;}
+  #s1 .rodape .linha{font-family:var(--fonte-titulo);font-weight:700;font-size:16px;line-height:1.35;
                       color:rgba(255,255,255,0.78);}
 </style>
 </head>

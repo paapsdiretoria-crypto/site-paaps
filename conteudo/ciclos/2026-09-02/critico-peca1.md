@@ -84,3 +84,68 @@ Deixa a frase "a mesma máquina que lê o laudo de um país inteiro não consegu
 ## Nota de processo: ferramenta Agent indisponível nesta sessão
 
 Assim como o copywriter registrou no próprio arquivo avaliado, **a ferramenta Agent não está disponível no meu conjunto de ferramentas nesta sessão** (só Read e Write). Não consigo, portanto, acionar o `copywriter-paaps` diretamente para abrir a rodada 2. Este relatório está pronto e salvo; falta alguém com acesso à ferramenta Agent rodar a etapa de devolução, passando este arquivo como entrada da rodada 2.
+
+---
+
+# Crítica : INSS, o órgão que carimba sofrimento e não vê o próprio : rodada 3
+
+**Nota:** 87/100
+**Corte desta rodada:** 90 (rodadas 1 a 5)
+**Decisão:** volta pro copywriter
+
+## Confirmação dos 7 achados bloqueantes da rodada 1
+
+| # | Achado original | Status na rodada 3 |
+|---|---|---|
+| 1 | Slide 2 sem fonte/período no próprio slide | **Parcial.** Rodapé com fonte agora presente, e há um período no corpo do slide ("ENTRE 2006 E 2026"). Mas o próprio arquivo do copywriter declara, em nota, que "2006" é cálculo do copywriter a partir de "vinte anos antes da publicação", não um ano-base confirmado pela reportagem, e termina pedindo para "ajustar aqui antes de publicar" se o Radar achar outro ano-base. Um número apresentado como fato fonteado, mas autodeclarado como não verificado, não passa no critério de dado com fonte verificável (`voz-paaps.md` 4.6). Ver achado novo abaixo. |
+| 2 | Slide 7 sem fonte/período no próprio slide | **Resolvido.** Rodapé "Agência Pública, mar. 2026" presente e cobre o dado das 8.500 vagas. |
+| 3 | Antítese repetida entre slides 6/7 | **Resolvido.** O rodapé do slide 6 foi trocado por uma restatement seca do número (sem a frase de antítese). "A mesma máquina que lê o laudo de um país inteiro não consegue ler o próprio" agora ocorre uma única vez na peça, no slide 7, onde o modelo M7 pede que a virada apareça pela primeira vez. |
+| 4 | Pergunta "quem carimba" repetida 4x | **Resolvido.** Capa: os blocos médio e pequeno viraram declarativos, restando uma única pergunta no bloco maior. Fechamento (slide 8): mantém a segunda ocorrência, aceita como bookend capa+fechamento. Legenda: reescrita para "que outro órgão, na sua rede, também faz esse mesmo tipo de trabalho invisível?", que não repete mais a fórmula literal "carimba/não vê o próprio". Reduzido ao par aceito. |
+| 5 | "Ninguém mede" sem sujeito | **Resolvido.** Slide 7 agora lê "Isso também é trabalho: e a própria instituição nunca mediu." Sujeito estrutural nomeado. |
+| 6 | Zero voz humana real | **Resolvido, com ressalva de verificação.** Slide 4 traz citação atribuída de Miucha Cicaroni (nome, 47 anos, servidora do INSS em Campinas/SP, cargo na concessão de benefícios, diagnóstico de burnout datado, denúncia ao MPT, fonte Agência Pública mar. 2026). Atribuição estruturalmente completa pelo checklist. **Não consegui, com as ferramentas desta sessão (só Read/Write, sem acesso à internet), abrir a reportagem original e confirmar se a citação em aspas é literal e se os dados biográficos batem com o texto publicado.** Isso é exatamente o tipo de erro que meu `APRENDIZADO.md` registra como recorrente em rodadas passadas ("citação alterada por dentro das aspas sem marcação visível de edição", peça de 30/08). Não bloqueio por isso agora, porque a especificidade dos dados é o padrão de uma citação real (não teria motivo pra um agente inventar idade, cidade, data exata de diagnóstico e denúncia ao MPT), mas registro como risco residual não fechado e recomendo confirmação externa (Radar) antes de liberar pro Buscador de Fotos. |
+| 7 | Slide 2 com duas frases de impacto | **Resolvido.** A segunda frase ("não era destino, era escolha orçamentária") foi absorvida pela entrada CAPS ("POR ESCOLHA ORÇAMENTÁRIA REPETIDA"). O corpo do slide agora carrega uma frase só. Efeito colateral: a única cota de "não X, é Y" da peça desapareceu; ter zero ocorrências é permitido, não é problema. |
+
+**Travessão grande:** nenhuma ocorrência em nenhum slide, rodapé, legenda ou nota interna. Confirmado limpo.
+
+## Achado novo (não estava na rodada 1)
+
+### Slide 2 : ano-base apresentado como fato fonteado, mas autodeclarado como não verificado
+**Texto:** "ENTRE 2006 E 2026, GOVERNO APÓS GOVERNO, POR ESCOLHA ORÇAMENTÁRIA REPETIDA, SEM REPOR O QUADRO NA MESMA VELOCIDADE EM QUE ELE SE ESVAZIAVA, o INSS perdeu **56%** dos servidores que já teve: 24 mil vagas a menos. [rodapé] Agência Pública, mar. 2026."
+**Falha:** `voz-paaps.md` 4.6, "nenhum número entra numa peça sem fonte verificável", responsabilidade explícita deste agente. A nota do próprio copywriter no arquivo confirma que "2006" não vem da reportagem, é cálculo de "vinte anos antes da publicação" (mar. 2026), e que a reportagem consultada só afirma a duração ("vinte anos"), sem ano-base literal. O rodapé "Agência Pública, mar. 2026" dá a impressão de que todo o enunciado, incluindo o intervalo exato de anos, vem dali. Isso é precisão fabricada apresentada como fato datado. O próprio copywriter já sinalizou que isso precisa de ajuste antes de publicar; a rodada 3 chegou até mim sem esse ajuste feito.
+
+**Reescrita proposta** (proposta, quem decide é o copywriter):
+> EM VINTE ANOS, GOVERNO APÓS GOVERNO, POR ESCOLHA ORÇAMENTÁRIA REPETIDA, SEM REPOR O QUADRO NA MESMA VELOCIDADE EM QUE ELE SE ESVAZIAVA,
+> *o INSS perdeu* **56%** *dos servidores que já teve: 24 mil vagas a menos.*
+> *[rodapé]* Agência Pública, mar. 2026.
+
+Troca o ano-base inventado pela duração que a reportagem realmente afirma. Resolve o achado sem inventar uma precisão que ninguém confirmou.
+
+## Nota, com composição
+
+| Critério | Pontos possíveis | Pontos dados | Motivo do desconto |
+|---|---|---|---|
+| Dado se sustenta sozinho (ano/fonte/significado) | 25 | 15 | Slide 2: ano-base fabricado apresentado como fonteado (achado novo acima) |
+| Dado se conecta com a tese | 20 | 20 | Sem achado |
+| Capa com uma tese só | 15 | 15 | Sem achado |
+| Nenhuma figura retórica repete mais de 1x | 15 | 15 | Achados 3 e 4 confirmados resolvidos |
+| Proibições ativas (NR-1, case, "ninguém" sem sujeito, travessão, coachesco) | 15 | 15 | Todas limpas |
+| Voz humana real + 1 frase de impacto por slide | 10 | 7 | Estruturalmente resolvido; desconto pelo risco residual de fidelidade da citação que não consegui verificar com as ferramentas desta sessão |
+
+**Total: 87/100.**
+
+## O que já está bom (a partir da rodada 2, reforçado na rodada 3)
+
+- Mecânica de fonte no rodapé, dentro do próprio slide, agora consistente em quase toda a peça (slides 2, 3, 6, 7 e legenda), não mais concentrada só nos slides 3 e 6 como na rodada 1.
+- A voz real de Miucha Cicaroni ocupa exatamente o lugar estrutural certo (sintoma vivido antes do mecanismo do slide 5), sem competir com a nomeação institucional do slide 7: duas vozes de natureza diferente, cada uma no slide certo.
+- Nenhum dos achados 3, 4, 5 e 7 voltou disfarçado em outro slide: as correções foram reais, não cosméticas.
+
+## Potencializações (opcional, nunca bloqueante)
+
+- Mesma da rodada 1, ainda válida: a capa poderia trazer, no bloco pequeno, uma faceta nova em vez de reforçar a mesma tese com outras palavras.
+- Antes de liberar pro Buscador de Fotos, vale um segundo par de olhos (Radar ou a própria Mallu) confirmando a citação de Miucha Cicaroni contra a reportagem original, já que este agente não teve como fazer essa checagem nesta sessão.
+
+## Decisão
+
+**87/100, abaixo do corte de 90. Volta pro copywriter.** Não é uma rodada de reescrita: é uma correção pontual no slide 2 (trocar "ENTRE 2006 E 2026" por "EM VINTE ANOS", ou confirmar o ano-base real antes de manter a precisão) mais, fora do escopo deste agente, uma checagem externa da citação do slide 4.
+
+**Nota de processo:** mesma limitação da rodada 1. A ferramenta Agent não está disponível no meu conjunto de ferramentas nesta sessão (só Read e Write). Não consigo acionar o `copywriter-paaps` para abrir a rodada 4; alguém com acesso à ferramenta Agent precisa rodar essa etapa, passando este arquivo como entrada.

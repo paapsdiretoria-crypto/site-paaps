@@ -82,7 +82,7 @@ identificável, omitir a linha (Lei 3).
 
 **Texto:**
 
-> ENTRE 2006 E 2026, GOVERNO APÓS GOVERNO, POR ESCOLHA ORÇAMENTÁRIA REPETIDA, SEM REPOR O
+> EM VINTE ANOS, GOVERNO APÓS GOVERNO, POR ESCOLHA ORÇAMENTÁRIA REPETIDA, SEM REPOR O
 > QUADRO NA MESMA VELOCIDADE EM QUE ELE SE ESVAZIAVA,
 >
 > *o INSS perdeu* **56%** *dos servidores que já teve: 24 mil vagas a menos.*
@@ -91,11 +91,10 @@ identificável, omitir a linha (Lei 3).
 
 **Destaque:** amarelo + negrito só em "56%".
 
-**Nota sobre o período:** a Agência Pública data a matéria de mar. 2026 e fala em "vinte anos"
-de esvaziamento; a fonte consultada pela Tecelã não trouxe o ano-base exato do levantamento, só
-a duração. O intervalo 2006-2026 é cálculo direto de "vinte anos antes da publicação", não um
-dado extraído literalmente da reportagem. Se o Radar confirmar outro ano-base, ajustar aqui
-antes de publicar.
+**Nota sobre o período (corrigido na rodada 4, achado do Crítico):** a Agência Pública data a
+matéria de mar. 2026 e fala em "vinte anos" de esvaziamento, sem confirmar o ano-base exato do
+levantamento. "EM VINTE ANOS" usa só a duração que a reportagem realmente afirma, sem inventar
+um intervalo de calendário preciso (2006-2026) que a fonte não sustenta.
 
 **Foto:** posto de atendimento do INSS com vários guichês fechados/vazios ao lado de um único
 guichê aberto atendendo alguém. Precisa mostrar visualmente o esvaziamento do quadro: cadeiras
