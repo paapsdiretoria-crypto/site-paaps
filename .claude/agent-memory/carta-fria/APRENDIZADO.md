@@ -63,6 +63,18 @@ como intervenção organizacional também aparece nas diretrizes, mas com grau m
 peso. Fonte: [WHO guidelines on mental health at work](https://www.who.int/publications/i/item/9789240053052),
 [resumo executivo](https://www.ncbi.nlm.nih.gov/books/NBK586355/).
 
+**Terceira rodada de ajuste (mesmo dia), regras de forma que valem daqui pra frente:**
+
+- **OMS, nunca "Organização Mundial da Saúde" por extenso.** Mais curto, mais direto.
+- **"Saúde Mental no Trabalho" é conceito, sempre com inicial maiúscula em cada palavra de
+  conteúdo** (Saúde, Mental, Trabalho; a preposição "no" fica minúscula).
+- **Link do site sempre clicável**, nunca URL solta em texto puro.
+- **Negrito na frase que carrega o mecanismo da oferta e no resultado social prova** (a frase
+  que descreve o que a PAAPS faz de fato, e o retorno real que já recebeu), não no resto.
+- **E-mail não pode crescer.** Toda adição precisa cortar algo em outro lugar: o alívio de
+  culpa ("isso não é problema exclusivo da sua rede") virou uma frase só, no fim do primeiro
+  parágrafo, em vez de parágrafo próprio.
+
 **E-mail exemplo final desta rodada (referência do Passo 4 da fórmula da oferta):**
 
 > Assunto: Quem segura a equipe quando ninguém fala que está mal?
@@ -72,10 +84,12 @@ peso. Fonte: [WHO guidelines on mental health at work](https://www.who.int/publi
 > Na maioria das redes públicas municipais existem afastamentos por saúde mental em que, muitas
 > vezes, ninguém sabia que algo estava acontecendo com aquela pessoa. Mas isso não é só falta de
 > atenção da gestão: o desgaste raramente aparece a tempo de prevenir o afastamento quando não
-> há espaço para cuidar de quem cuida e para debater a saúde mental de quem cuida.
+> há espaço para cuidar de quem cuida e para debater a saúde mental de quem cuida. Isso não é
+> problema exclusivo da sua rede.
 >
-> A PAAPS Brasil é a rede de psicólogos dos servidores públicos. Conheça melhor nossa iniciativa
-> no site www.paaps.com.br.
+> A PAAPS Brasil é a rede de psicólogos dos servidores públicos, e estamos transformando a rede
+> pública brasileira com a psicologia social e sistêmica aplicada à gestão pública do Brasil.
+> Conheça mais no [site](http://www.paaps.com.br).
 >
 > Cuidamos de quem cuida: para que o atendimento chegue mais qualificado na ponta, para que a
 > política pública funcione melhor onde acontece, e para que o servidor tenha rede de suporte
@@ -87,15 +101,15 @@ peso. Fonte: [WHO guidelines on mental health at work](https://www.who.int/publi
 >   instância e outra.
 > - Cobertura para toda a equipe, com investimento médio por pessoa bem menor do que se imagina.
 >
-> Esses problemas não são exclusividade da sua rede, acontecem em boa parte dos municípios que
-> atendemos. E desde a primeira roda de intervenção da PAAPS já recebemos retorno de gestores
-> mais aliviados e equipes mais comunicativas, com vínculos mais saudáveis entre si.
+> E desde a primeira roda de intervenção da PAAPS, já recebemos **retorno de gestores mais
+> aliviados e equipes mais comunicativas**.
 >
-> A recomendação mais forte da Organização Mundial da Saúde para saúde mental no trabalho é
-> justamente essa: preparar lideranças e gestores para apoiar quem trabalha com eles. É
-> exatamente isso que a PAAPS faz.
+> A recomendação mais forte da OMS para Saúde Mental no Trabalho é **preparar lideranças e
+> gestores para apoiar quem trabalha com eles**, e trabalhar as equipes juntas. É exatamente
+> isso que a PAAPS faz.
 >
-> Se houver interesse, basta responder a este e-mail e combinamos o melhor momento.
+> Se houver interesse, basta responder a este e-mail e combinamos o melhor momento, para
+> planejar a prevenção dos afastamentos em saúde mental no seu município.
 >
 > Mallu Vasconcellos e equipe de relacionamento PAAPS Brasil
 > PAAPS Brasil, Rede de Saúde Mental Coletiva para as políticas públicas
