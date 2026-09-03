@@ -41,6 +41,65 @@ da PAAPS Brasil pra abertura do corpo do e-mail, mais curto que o que já estava
 Conheça melhor nossa iniciativa no site www.paaps.com.br." Ainda não está confirmado se substitui
 o descritivo antigo ou se é uma variação a testar; usar com esse cuidado até ela validar.
 
+**Duas correções seguintes, na mesma rodada de reescrita do e-mail exemplo:**
+
+1. **Nunca abrir com frase curta e pontuada tipo manifesto.** Eu tinha escrito "É muito comum."
+   como sentença isolada de impacto antes do fato. Reação: "muito ruim esse começo... por que
+   que você botou isso desse jeito?" O fato entra direto, numa frase que flui, sem o corte
+   dramático antes dele: "Na maioria das redes públicas municipais existem afastamentos por
+   saúde mental em que, muitas vezes, ninguém sabia que algo estava acontecendo com aquela
+   pessoa." Ver também a proibição de "poesia burra" e frase de efeito vazio já registradas em
+   `voz-paaps.md`: essa é a mesma família de erro, aplicada à abertura de e-mail.
+2. **A PAAPS nunca é sujeito gramatical de "ter afastamento".** Eu tinha escrito "a gente tem
+   afastamento por saúde mental". Quem tem afastamento é a rede pública, nunca a PAAPS: a PAAPS
+   previne. Trocar sempre pelo sujeito certo: "existem afastamentos" (a rede, no geral), nunca
+   "a gente tem" com a PAAPS como sujeito.
+
+**Fato verificado nesta rodada, com fonte, pode ser reusado:** a recomendação de grau mais forte
+("strong recommendation") das Diretrizes da OMS sobre saúde mental no trabalho (2022) é treinar
+lideranças e gestores para apoiar a saúde mental de quem trabalha com eles. "Trabalho em equipe"
+como intervenção organizacional também aparece nas diretrizes, mas com grau mais fraco
+("conditional recommendation", evidência muito baixa): não usar os dois como se tivessem o mesmo
+peso. Fonte: [WHO guidelines on mental health at work](https://www.who.int/publications/i/item/9789240053052),
+[resumo executivo](https://www.ncbi.nlm.nih.gov/books/NBK586355/).
+
+**E-mail exemplo final desta rodada (referência do Passo 4 da fórmula da oferta):**
+
+> Assunto: Quem segura a equipe quando ninguém fala que está mal?
+>
+> Prezado(a) Secretário(a) [Nome],
+>
+> Na maioria das redes públicas municipais existem afastamentos por saúde mental em que, muitas
+> vezes, ninguém sabia que algo estava acontecendo com aquela pessoa. Mas isso não é só falta de
+> atenção da gestão: o desgaste raramente aparece a tempo de prevenir o afastamento quando não
+> há espaço para cuidar de quem cuida e para debater a saúde mental de quem cuida.
+>
+> A PAAPS Brasil é a rede de psicólogos dos servidores públicos. Conheça melhor nossa iniciativa
+> no site www.paaps.com.br.
+>
+> Cuidamos de quem cuida: para que o atendimento chegue mais qualificado na ponta, para que a
+> política pública funcione melhor onde acontece, e para que o servidor tenha rede de suporte
+> tão real quanto a que o município oferece ao cidadão.
+>
+> - Detectamos o desgaste antes que ele vire afastamento, porque estamos dentro da rotina da
+>   equipe, não só olhando o número depois que ele já subiu.
+> - Trabalhamos a comunicação entre setores para que menos caso fique perdido entre uma
+>   instância e outra.
+> - Cobertura para toda a equipe, com investimento médio por pessoa bem menor do que se imagina.
+>
+> Esses problemas não são exclusividade da sua rede, acontecem em boa parte dos municípios que
+> atendemos. E desde a primeira roda de intervenção da PAAPS já recebemos retorno de gestores
+> mais aliviados e equipes mais comunicativas, com vínculos mais saudáveis entre si.
+>
+> A recomendação mais forte da Organização Mundial da Saúde para saúde mental no trabalho é
+> justamente essa: preparar lideranças e gestores para apoiar quem trabalha com eles. É
+> exatamente isso que a PAAPS faz.
+>
+> Se houver interesse, basta responder a este e-mail e combinamos o melhor momento.
+>
+> Mallu Vasconcellos e equipe de relacionamento PAAPS Brasil
+> PAAPS Brasil, Rede de Saúde Mental Coletiva para as políticas públicas
+
 ## Assunto factoide em escala: auditoria de 93 cartas (02/09/2026)
 
 A Mallu pediu para ver o assunto de todas as cartas já Aprovada/Enviada, porque desconfiava
