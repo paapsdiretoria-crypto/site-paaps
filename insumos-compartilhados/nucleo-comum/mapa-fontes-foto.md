@@ -21,6 +21,26 @@ eventos do PAAPS). Usar foto própria em todo carrossel estreita o alcance visua
 fotografia documental pública é abundante, rigorosa, de autoria declarada e cobre todo o
 território nacional.
 
+## Calibração de 03/09/2026 : "cartucho precioso", nunca queimar tudo de uma vez
+
+Depois do primeiro lote de carrossel montado inteiro em sandbox de nuvem (sem MODO 1B/webhook
+n8n disponível, só o acervo próprio via Drive), a Mallu revalidou a regra acima com uma imagem
+mais dura, nas palavras dela: **as fotos do acervo próprio, sobretudo as que têm ela mesma, são
+"cartucho precioso". Não pode queimar todos os cartuchos num carrossel só**, porque (1) o
+volume é pequeno, (2) a repetição rápida entre peças fica pouco profissional, (3) queimar tudo
+agora significa não sobrar foto nova pra semana seguinte.
+
+**Regra numérica pra sessão que não conseguir MODO 1B/documental pública** (webhook bloqueado,
+sem disco local): no máximo **1 a 2 fotos do acervo próprio por peça**, nunca a peça inteira.
+Se depois de aplicar essa régua ainda faltar foto real pra completar os slides, **isso é o
+sinal de parar e avisar a Mallu que o ambiente não tem fonte suficiente**, não motivo pra
+estourar o teto do acervo próprio. Rodada de 02/09/2026 estourou esse teto (8/8 slides de uma
+peça, 6/8 de outra, vindos só do Drive) porque o MODO 1B estava bloqueado e não havia
+alternativa registrada além do acervo próprio; a correção real não é "usar menos foto própria
+e ponto", é destravar o MODO 1B (rede) ou o acesso ao disco local antes de montar o próximo
+lote inteiro. Ver `.claude/agents/buscador-fotos.md`, seção MODO 1C, para o registro técnico
+do bloqueio.
+
 ---
 
 ## 1. A REFERÊNCIA : Radilson Carlos Gomes
