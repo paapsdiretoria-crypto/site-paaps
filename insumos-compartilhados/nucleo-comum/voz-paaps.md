@@ -158,6 +158,22 @@ tenha aparecido em documento interno ou versão antiga de conteúdo, sai da peç
 - ✅ "A gente trabalha a prevenção de riscos psicossociais dentro do seu município." (sem nomear
   nenhum município específico)
 
+### 4.10 "Capital político" : BANIDO (Mallu, 03/09/2026)
+
+**Nunca oferecer ou sugerir que cuidar do servidor público rende "capital político" ao gestor ou à
+gestora.** Foi rejeitado com força ao aparecer num rascunho da fórmula de oferta da prospecção
+fria: é barganha, trata o cuidado com o servidor como moeda de troca política, e isso é o oposto
+do lugar de onde a PAAPS fala.
+
+**O ponto por trás continua válido, só a moldura muda.** Mostrar com dado que cuidou da própria
+rede não é só cumprir uma exigência formal: é sinal de valorização do servidor, do trabalhador.
+Fica nesse lugar (reconhecimento de quem trabalha), nunca no lugar de vantagem ou moeda de troca
+pro gestor.
+
+- ❌ "Mostrar, com dado, que cuidou da própria rede: capital político de verdade."
+- ✅ "Mostrar, com dado, que cuidou da própria rede: além de cumprir uma exigência formal, é sinal
+  de valorização do servidor."
+
 ---
 
 ## 5. As Três Personas : Para Calibrar Tom e Visual
