@@ -4,6 +4,43 @@
 > mostrou. Baseline vivo, nunca gabarito rígido: na dúvida entre a regra e o que deu resultado,
 > vence o resultado (e registre a exceção aqui, para virar regra nova).
 
+## O raciocínio de bastidor nunca vira frase literal no e-mail (03/09/2026)
+
+A Mallu estava construindo comigo a "fórmula da oferta" (resultado dos sonhos, desafios no
+caminho, oferta) e pediu um e-mail de exemplo aplicando a fórmula. Eu escrevi errado, e a
+correção dela é a lição mais importante desta seção: **o raciocínio estratégico que ela explica
+em voz alta é instrução de COMO escrever, nunca texto pra copiar pro e-mail.**
+
+Dois erros concretos, lado a lado:
+
+1. **Abertura.** Eu escrevi "Nas secretarias de municípios do seu porte, uma coisa se repete."
+   Reação dela: "Como é que você sabe disso?" É uma categorização sem lastro nenhum, afirmada
+   antes de qualquer fato. O jeito certo é começar pelo fato concreto e deixar a categorização
+   implícita nele: "É muito comum. A gente tem afastamento por saúde mental em que, muitas
+   vezes, ninguém sabia que algo estava acontecendo com aquela pessoa até não dar mais." O
+   pertencimento nasce do fato bem contado, não de uma frase que anuncia "isso é comum na sua
+   categoria".
+2. **Alívio de culpa.** Ela tinha me dito, na estratégia, que o gestor não pode se sentir sozinho
+   como se o problema fosse culpa dele. Eu escrevi um parágrafo inteiro só pra dizer isso: "isso
+   não é exclusividade da sua rede." A reação dela: "Eu falei que não era pro gestor se sentir
+   sozinho... e você criou um parágrafo só pra falar isso, ao invés de incorporar no texto." O
+   alívio funciona quando vem **junto de um fato que sustenta**, não como afirmação isolada:
+   "Esses problemas não são exclusividade da sua rede, acontecem em boa parte dos municípios que
+   atendemos. E desde a primeira roda de intervenção da PAAPS já recebemos retorno de gestores
+   mais aliviados e equipes mais comunicativas." O fato (o retorno real) é o que alivia; a frase
+   sozinha, sem fato, é a PAAPS anunciando a própria manobra.
+
+**A regra geral, para qualquer parte da carta a partir de agora:** quando a Mallu descreve o
+efeito psicológico ou estratégico que uma frase deve produzir, isso nunca vira a frase em si.
+Vira a instrução de qual fato contar e como amarrar esse fato ao ponto, deixando o efeito
+acontecer pelo conteúdo, nunca pela frase que descreve o efeito.
+
+**Novo elemento de voz, registrado no mesmo ciclo:** ela introduziu um descritivo alternativo
+da PAAPS Brasil pra abertura do corpo do e-mail, mais curto que o que já estava no
+`email-prospeccao/SKILL.md`: "A PAAPS Brasil é a rede de psicólogos dos servidores públicos.
+Conheça melhor nossa iniciativa no site www.paaps.com.br." Ainda não está confirmado se substitui
+o descritivo antigo ou se é uma variação a testar; usar com esse cuidado até ela validar.
+
 ## Assunto factoide em escala: auditoria de 93 cartas (02/09/2026)
 
 A Mallu pediu para ver o assunto de todas as cartas já Aprovada/Enviada, porque desconfiava
