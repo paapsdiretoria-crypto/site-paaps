@@ -138,7 +138,17 @@ parágrafo.
   maior parte do servidor municipal é estatutária. Se entrar, é nota de rodapé factual, nunca o
   motivo do "agora" da carta.
 - **Assunto nomeia a dor, nunca um factoide.** Um dado solto de pesquisa ("X fica em Y") não diz
-  o que a carta oferece e não gera vontade de abrir.
+  o que a carta oferece e não gera vontade de abrir. **Endurecido em 02/09/2026**, depois de
+  auditar 93 cartas já enviadas e achar o mesmo erro em escala (ver
+  `automacoes/prospeccao-email/personalizacao/auditoria-assuntos-02-09-2026.md`). Todo assunto
+  passa por duas perguntas antes de ir para o envio:
+  1. O assunto nomeia quem cuida, ou só nomeia o que existe? Um fato sobre o CAPS, o consórcio,
+     a obra ou o concurso não basta sozinho: precisa apontar pra quem sustenta aquilo por
+     dentro ("e quem cuida de quem cuida?", "e de quem cuida da equipe?", "quem sustenta X?").
+  2. Tirando o nome da cidade, esse assunto ainda seria só uma fórmula? Se a resposta é sim
+     ("[número] anos integrando [número] municípios", "[cidade] e a criança que depende do
+     CAPS de [outra cidade]"), é mala direta disfarçada de pesquisa. Reescrever do zero, nunca
+     só trocar o nome da cidade na mesma frase.
 - **Toda carta faz uma oferta concreta, em bullets, antes do CTA** (padrão fechado pela Mallu em
   31/08/2026, vale para prefeitura e consórcio igual): redução nos afastamentos por saúde
   mental; menos retrabalho e menos gargalo em encaminhamento e comunicação entre as equipes;

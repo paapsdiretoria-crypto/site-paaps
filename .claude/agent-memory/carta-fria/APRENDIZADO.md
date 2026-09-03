@@ -4,6 +4,33 @@
 > mostrou. Baseline vivo, nunca gabarito rígido: na dúvida entre a regra e o que deu resultado,
 > vence o resultado (e registre a exceção aqui, para virar regra nova).
 
+## Assunto factoide em escala: auditoria de 93 cartas (02/09/2026)
+
+A Mallu pediu para ver o assunto de todas as cartas já Aprovada/Enviada, porque desconfiava
+que a taxa de resposta baixa vinha dali. Auditoria completa em
+`automacoes/prospeccao-email/personalizacao/auditoria-assuntos-02-09-2026.md`. O achado é maior
+do que as 6 cartas do gancho-sem-nexo (seção abaixo): em **93 cartas**, cerca de **36** caem em
+duas famílias de assunto que repetem o mesmo erro de fundo, um fato sobre a estrutura ou a
+população atendida, nunca sobre o servidor.
+
+1. **Aniversário de consórcio/associação (22 cartas).** Fórmula fixa "[X] anos
+   integrando/sustentando [Y] municípios da [região]". A fórmula em si já denuncia mala direta:
+   um secretário que recebe duas dessas cartas percebe a máquina por trás.
+2. **CAPS infantil compartilhado entre municípios vizinhos (14 cartas).** "[Cidade] e a criança
+   que depende do CAPS de [outra cidade]". Fala da criança atendida (população SUS), não de
+   quem sustenta o serviço por dentro. É o mesmo erro da seção abaixo, só que numa leva
+   diferente (a leva de municípios pequenos sem CAPS próprio) e em volume bem maior.
+
+Todas as 36 já saíram (Estado = Enviada); não tem conserto possível. As 3 que ainda estavam em
+Aprovada (Santo Antônio do Itambé, Coluna, APAE Bocaiúva) foram corrigidas na hora, antes do
+disparo de segunda.
+
+**Regra nova, testável antes de qualquer envio:**
+1. O assunto nomeia quem cuida, ou só nomeia o que existe? Precisa apontar pra quem sustenta
+   aquilo por dentro ("e quem cuida de quem cuida?", "e de quem cuida da equipe?").
+2. Tirando o nome da cidade, esse assunto ainda seria só uma fórmula repetível? Se sim, é mala
+   direta disfarçada de pesquisa: reescrever do zero, nunca só trocar o nome.
+
 ## Gancho sem nexo com a oferta: a lição mais grave até aqui (30/08/2026)
 
 Seis cartas da mesma leva (Carbonita, Felício dos Santos, Santo Antônio do Itambé, Coluna,

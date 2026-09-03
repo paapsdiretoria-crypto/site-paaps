@@ -96,7 +96,13 @@ Faixas: 90+ gancho fresco e específico, destinatário certo, arco limpo, voz im
 - Voz em "nós". Assinar "Mallu Vasconcellos e equipe de relacionamento PAAPS Brasil", com a linha "PAAPS Brasil - Rede de Saúde Mental Coletiva para as políticas públicas".
 - Descritivo do PAAPS Brasil: rede de saúde mental coletiva para as políticas públicas à prova de futuro, que cuida de quem cuida.
 - Lógica de impacto que justifica o "coletivo": cuidar de quem cuida para que o atendimento chegue mais qualificado na ponta, para que a política pública funcione melhor onde acontece, e para que o servidor tenha rede de suporte tão real quanto a que o município oferece ao cidadão. Coletivo porque age na estrutura do trabalho.
-- Assunto: nomeia a dor ou o território. Evita "parceria", "proposta", "solução".
+- Assunto: nomeia a dor ou o território. Evita "parceria", "proposta", "solução". **Teste duro
+  (02/09/2026):** o assunto aponta pra quem cuida de quem cuida, ou só descreve o que existe
+  (CAPS, consórcio, obra, concurso)? E sem o nome da cidade, ele ainda seria só uma fórmula
+  ("[X] anos integrando [Y] municípios", "[cidade] depende do CAPS de [outra cidade]")? Se
+  qualquer uma das duas falhar, reescrever do zero. Ver
+  `automacoes/prospeccao-email/personalizacao/auditoria-assuntos-02-09-2026.md`, onde esse
+  erro apareceu em quase 40 das 93 cartas já enviadas.
 - CTA: conversa breve, sem custo e sem compromisso, ancorada em algo concreto do lead. Fecho: "Se houver interesse, basta responder a este e-mail e combinamos o melhor momento."
 - A PAAPS Brasil acabou de chegar: nunca fale no que "fica quando a gente sai".
 
