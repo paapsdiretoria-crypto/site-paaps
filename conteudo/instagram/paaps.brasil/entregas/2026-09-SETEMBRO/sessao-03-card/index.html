@@ -48,6 +48,13 @@
   .label{font-family:var(--fonte-label);font-weight:700;letter-spacing:0;text-transform:uppercase;}
   .logo{position:absolute;right:76px;bottom:44px;z-index:3;height:52px;}
 
+  /* crédito da foto (anatomia-do-carrossel-aprovado.md, Parte 2). Trocada em 04/09/2026:
+     a foto de acervo próprio (licença não declarada, projeto de origem incerto, consentimento
+     não confirmado) foi substituída por fotografia documental pública credenciada. */
+  .credito-foto{position:absolute;top:24px;left:64px;z-index:3;
+                 font-family:var(--fonte-titulo);font-weight:400;font-size:16px;
+                 color:rgba(255,255,255,0.85);text-shadow:0 1px 3px rgba(0,0,0,0.6);}
+
   /* ===== CARD ÚNICO : envelhecimento populacional =====
      Modelo aprovado pelo crítico (rodada 2, 97/100): variante do M1 (capa declarativa de
      impossibilidade estrutural, sem pergunta) sustentada por uma linha de apoio em língua
@@ -60,10 +67,18 @@
      (mesma lógica do slide 3 "dado em card" da peça de referência) e o corpo de texto
      inteiro senta numa área sólida marrom abaixo, com folga generosa medida no PNG
      renderizado (não só no CSS — 2 rodadas de ajuste até o rodapé parar de estourar a
-     borda). Nenhum texto cobre os rostos ou o gesto das duas mulheres (Lei 6). A foto usada
-     já é um recorte pré-processado (ver nota de entrega) que exclui o homem desfocado ao
-     fundo à direita, decisão do Buscador de Fotos executada aqui. */
-  #s1 .foto{top:0;height:560px;object-position:50% 40%;}
+     borda). Nenhum texto cobre o rosto (Lei 6).
+
+     Foto trocada em 04/09/2026 (fotografia documental pública, ver conteudo/ciclos/2026-09-02/
+     README.md): retrato de Seu Lindemberg, camponês vazanteiro e poeta, morador da
+     comunidade ribeirinha Ilha de Pau Preto (Matias Cardoso-MG), acervo João Roberto
+     Ripper/Fiocruz Imagens, 2012, uso não comercial (CC BY-NC). Substitui a foto de
+     acervo próprio que tinha licença não declarada, projeto de origem incerto e
+     consentimento de uso não confirmado dos rostos. 3968x2232 nativa: nesta caixa de
+     560px de altura o navegador só reduz a imagem (nunca amplia), então não há perda de
+     nitidez. O rosto dele ocupa a metade direita do quadro, com bastante folga acima e
+     abaixo — o corte de 560px tira só uma fatia fina de topo/base, longe da cabeça. */
+  #s1 .foto{top:0;height:560px;object-position:68% 40%;}
   #s1 .card{position:absolute;left:0;right:0;top:560px;bottom:0;z-index:1;
              background:var(--cor-marrom);overflow:hidden;}
   #s1 .conteudo{position:relative;z-index:2;width:100%;height:100%;
@@ -80,7 +95,8 @@
 
 <!-- SLIDE 1 : CARD ÚNICO -->
 <section class="slide" id="s1">
-  <img class="foto" src="fotos/idosa-vinculo-intergeracional-crop.jpg">
+  <img class="foto" src="fotos/lindemberg-camponês-poeta-ripper.jpg">
+  <div class="credito-foto">Foto: João Roberto Ripper/Fiocruz Imagens, Ilha de Pau Preto (Matias Cardoso-MG), 2012.</div>
   <div class="card">
     <div class="textura textura--branco"></div>
     <div class="conteudo">

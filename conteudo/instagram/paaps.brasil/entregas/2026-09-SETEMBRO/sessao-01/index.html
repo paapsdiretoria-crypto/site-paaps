@@ -52,6 +52,13 @@
   .fonte-rodape{position:absolute;left:76px;bottom:56px;z-index:3;font-family:var(--fonte-titulo);font-weight:700;font-size:22px;color:var(--cor-branco);max-width:640px;line-height:1.3;}
   .logo{position:absolute;right:76px;bottom:52px;z-index:3;height:52px;}
 
+  /* crédito da foto, escrito na própria foto (anatomia-do-carrossel-aprovado.md, Parte 2).
+     Usado só no slide 3 (foto real da Agência Brasil, 04/09/2026, substituindo acervo
+     próprio) : os demais slides mantêm as fotos de segunda opção sem crédito conhecido. */
+  .credito-foto{position:absolute;top:24px;left:76px;z-index:3;
+                 font-family:var(--fonte-titulo);font-weight:400;font-size:16px;
+                 color:rgba(255,255,255,0.85);text-shadow:0 1px 3px rgba(0,0,0,0.6);}
+
   .headline-grande{font-size:68px;font-weight:700;line-height:1.16;}
   .headline-media{font-size:52px;font-weight:700;line-height:1.18;}
   .corpo{font-size:34px;font-weight:400;line-height:1.4;}
@@ -72,8 +79,12 @@
   #s2 .abertura{font-size:44px;font-weight:700;line-height:1.22;text-transform:uppercase;}
   #s2 .fecho{font-size:36px;font-weight:400;line-height:1.32;}
 
-  /* ===================== SLIDE 3 : DADO EM CARD (M5). Card marrom sólido (variante aprovada). ===================== */
-  #s3 .foto{top:0;height:620px;object-position:63% 48%;}
+  /* ===================== SLIDE 3 : DADO EM CARD (M5). Card marrom sólido (variante aprovada). =====================
+     Foto trocada em 04/09/2026: sala de perícia médica do INSS lotada, painel de senha
+     visível (Agência Brasil, 03/09/2026, crédito MPS/Divulgação) — substitui a foto de
+     segunda opção do acervo próprio. 1600x800 nativa; nesta caixa de 620px de altura o
+     navegador só reduz a imagem (nunca amplia), então não há perda de nitidez. */
+  #s3 .foto{top:0;height:620px;object-position:45% 50%;}
   #s3 .card{position:absolute;left:76px;right:76px;top:590px;
              border:1px solid rgba(255,255,255,0.16);padding:56px 60px;z-index:2;overflow:hidden;
              background:var(--cor-marrom);color:var(--cor-branco);}
@@ -161,6 +172,7 @@
 <!-- SLIDE 3 : DADO EM CARD (M5) -->
 <section class="slide" id="s3">
   <img class="foto" src="fotos/slide-03.jpg">
+  <div class="credito-foto">Foto: MPS/Divulgação.</div>
   <div class="card">
     <div class="textura textura--branco"></div>
     <div class="headline-media">A fila pra conseguir esse carimbo <span class="amarelo">triplicou</span> em três anos.</div>

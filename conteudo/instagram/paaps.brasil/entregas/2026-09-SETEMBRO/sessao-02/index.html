@@ -52,29 +52,47 @@
   .fonte-rodape{position:absolute;left:76px;bottom:56px;z-index:3;font-family:var(--fonte-titulo);font-weight:700;font-size:24px;color:var(--cor-branco);max-width:640px;line-height:1.3;}
   .logo{position:absolute;right:76px;bottom:52px;z-index:3;height:52px;}
 
-  /* Nenhum slide desta peça tem crédito de fotógrafo/pessoa conhecido (ver fotos-peca2.md:
-     acervo próprio PAAPS, licença não declarada, sem nome). Lei 3 do catálogo: sem origem
-     conhecida, omite a linha inteira — por isso .credito-foto não é usada em nenhum #sN aqui. */
+  /* crédito da foto (anatomia-do-carrossel-aprovado.md, Parte 2). Trocado em 04/09/2026:
+     6 dos 8 slides passaram a usar fotografia documental pública (PhotoBank, Story "Inside
+     the World's Largest Public Health System"), a maioria de Radilson Carlos Gomes via
+     Flickr Ministério da Saúde — leva crédito. Os slides 1 e 5 usam fotos da mesma Story
+     mas com crédito "não identificado, confirmar antes de publicar" no PhotoBank: por Lei 3
+     (nunca inventar autoria), ficam sem .credito-foto. Slides 4 e 6 seguem no acervo próprio
+     PAAPS (teto do "cartucho precioso", mapa-fontes-foto.md), sem crédito conhecido. */
+  .credito-foto{position:absolute;top:24px;left:76px;z-index:3;
+                 font-family:var(--fonte-titulo);font-weight:400;font-size:16px;
+                 color:rgba(255,255,255,0.85);text-shadow:0 1px 3px rgba(0,0,0,0.6);}
 
   .headline-grande{font-size:68px;font-weight:700;line-height:1.16;}
   .headline-media{font-size:52px;font-weight:700;line-height:1.18;}
   .corpo{font-size:34px;font-weight:400;line-height:1.4;}
   .corpo-menor{font-size:29px;font-weight:400;line-height:1.42;color:rgba(255,255,255,0.92);}
 
-  /* SLIDE 1 — CAPA (M1, variante declarativa de impossibilidade estrutural) */
-  #s1 .foto{top:0;height:1350px;object-position:32% 30%;}
+  /* SLIDE 1 — CAPA (M1, variante declarativa de impossibilidade estrutural)
+     Foto trocada 04/09/2026: agente de saúde com prancheta visitando moradora idosa em
+     varanda de casa de madeira real (PhotoBank, sem crédito confirmado — Lei 3, sem
+     .credito-foto). 2560x1714 nativa, folga ampla para a caixa de 1350px: sem perda de
+     nitidez. Enquadramento mantém a agente e a moradora inteiras, sem cortar rosto. */
+  #s1 .foto{top:0;height:1350px;object-position:66% 42%;}
   #s1 .escurecer{background:rgba(0,0,0,0.5);}
   #s1 .conteudo{justify-content:flex-end;padding-bottom:190px;gap:24px;}
 
-  /* SLIDE 2 — AFIRMAÇÃO CONTINUADA (M2) */
-  #s2 .foto{top:0;height:1350px;object-position:62% 38%;}
+  /* SLIDE 2 — AFIRMAÇÃO CONTINUADA (M2)
+     Foto trocada 04/09/2026: ACS e enfermeira rindo com moradora idosa tocando gaita à
+     porta de casa (Radilson Carlos Gomes/Flickr MS). 2560x1714 nativa, reduzida (nunca
+     ampliada) pra caber nos 1080x1350. Enquadramento à direita mantém a enfermeira e a
+     idosa inteiras (rostos completos); a ACS em primeiro plano perde só o ombro esquerdo. */
+  #s2 .foto{top:0;height:1350px;object-position:68% 42%;}
   #s2 .escurecer{background:rgba(0,0,0,0.42);}
   #s2 .conteudo{justify-content:flex-end;padding-bottom:190px;gap:26px;}
 
   /* SLIDE 3 — DADO EM CARD (M5). Aqui o Copywriter pediu o achado FORA do card, em cima da
      foto (anatomia original do M5, passo 2 separado do passo 3) — por isso a foto leva véu
      e a frase de abertura entra no .conteudo, com o card entrando depois, mais abaixo. */
-  #s3 .foto{top:0;height:760px;object-position:30% 40%;}
+  /* Foto trocada 04/09/2026: equipe do PSF real em frente a casa de madeira, visita de
+     campo (Radilson Carlos Gomes/Flickr MS). 1494x1000 nativa: nesta caixa de 760px de
+     altura o navegador reduz a imagem, nunca amplia (checado antes de aplicar). */
+  #s3 .foto{top:0;height:760px;object-position:55% 42%;}
   #s3 .escurecer{position:absolute;left:0;right:0;top:0;height:760px;z-index:1;background:rgba(0,0,0,0.4);}
   #s3 .conteudo{justify-content:flex-start;padding-top:84px;padding-bottom:0;}
   #s3 .headline-media{font-size:44px;}
@@ -95,7 +113,10 @@
   /* SLIDE 5 — RESPIRO (M3). Véu bem leve (0.22) só pra garantir contraste onde a janela
      estoura de luz atrás do texto — a foto é clara por natureza, isso não é um véu de
      legibilidade pesado. Sem crédito, sem bloco de dado — regra do próprio modelo. */
-  #s5 .foto{top:0;height:1350px;object-position:38% 42%;}
+  /* Foto trocada 04/09/2026: mãe amamentando recém-nascido, agente anotando na prancheta,
+     luz de janela real (PhotoBank, sem crédito confirmado — Lei 3, sem .credito-foto).
+     2560x1718 nativa, reduzida (nunca ampliada) pra caber nos 1080x1350. */
+  #s5 .foto{top:0;height:1350px;object-position:64% 45%;}
   #s5 .escurecer{background:rgba(0,0,0,0.22);}
   #s5 .conteudo{justify-content:center;align-items:flex-start;padding-top:150px;}
   #s5 .headline-grande{font-size:58px;max-width:940px;font-weight:700;color:var(--cor-branco);}
@@ -114,7 +135,10 @@
 
   /* SLIDE 7 — NÚMERO GIGANTE (M6) */
   #s7{background:var(--cor-marrom);}
-  #s7 .foto{top:0;height:560px;object-position:50% 12%;}
+  /* Foto trocada 04/09/2026: chegada de visita domiciliar, maleta na mão, cães na porta
+     (Radilson Carlos Gomes/Flickr MS). 1494x1000 nativa: nesta caixa de 560px de altura o
+     navegador reduz a imagem, nunca amplia. */
+  #s7 .foto{top:0;height:560px;object-position:35% 35%;}
   #s7 .area-dado{position:absolute;left:0;right:0;top:560px;bottom:0;z-index:1;background:var(--cor-marrom);overflow:hidden;}
   #s7 .conteudo{justify-content:flex-end;padding-bottom:170px;gap:16px;}
   #s7 .numero{font-family:var(--fonte-label);font-weight:800;font-size:150px;color:var(--cor-amarelo);line-height:0.95;}
@@ -123,7 +147,11 @@
 
   /* SLIDE 8 — PERGUNTA (M1, variante diagnóstica). Sem CTA institucional, sem link, sem
      nome do PAAPS no texto (o eixo da peça pede fechamento em pergunta, não conversão). */
-  #s8 .foto{top:0;height:1350px;object-position:50% 30%;}
+  /* Foto trocada 04/09/2026: ACS em movimento (leve motion blur), atravessando beco de
+     tijolo aparente rumo à comunidade (Radilson Carlos Gomes/Flickr MS). 2490x1800
+     nativa, reduzida (nunca ampliada). Sem rosto em quadro (figura de costas/perfil, foco
+     no movimento), então não há risco de corte de rosto neste slide. */
+  #s8 .foto{top:0;height:1350px;object-position:52% 55%;}
   #s8 .escurecer{background:rgba(0,0,0,0.5);}
   #s8 .conteudo{justify-content:flex-end;padding-bottom:170px;gap:30px;}
   #s8 .abertura{font-size:36px;font-weight:700;line-height:1.28;max-width:940px;}
@@ -146,6 +174,7 @@
 <!-- SLIDE 2 : RAIZ HISTÓRICA — M2 afirmação continuada -->
 <section class="slide" id="s2">
   <img class="foto" src="fotos/slide-02.jpg">
+  <div class="credito-foto">Fotos: Radilson Carlos Gomes, Fotógrafo do SUS.</div>
   <div class="escurecer"></div>
   <div class="conteudo">
     <div class="headline-grande">DESDE A LEI QUE CRIOU A CARREIRA, EM 2006, a exigência para ser Agente Comunitária de Saúde é morar no bairro onde vai trabalhar: a Lei 11.350 fez da vizinhança o <span class="amarelo">pré-requisito do contrato</span> dela.</div>
@@ -156,6 +185,7 @@
 <!-- SLIDE 3 : CONTRADIÇÃO EM DADO — M5 dado em card (achado fora do card, sobre a foto) -->
 <section class="slide" id="s3">
   <img class="foto" src="fotos/slide-03.jpg">
+  <div class="credito-foto">Fotos: Radilson Carlos Gomes, Fotógrafo do SUS.</div>
   <div class="escurecer"></div>
   <div class="conteudo">
     <div class="headline-media">PARA A PORTA ABRIR, A AGENTE COMUNITÁRIA DE SAÚDE PRECISA SER <span class="amarelo">VIZINHA</span>. PARA A META FECHAR, A VISITA DELA VIRA NÚMERO.</div>
@@ -209,6 +239,7 @@
 <!-- SLIDE 7 : NÚMERO GIGANTE — M6 -->
 <section class="slide" id="s7">
   <img class="foto" src="fotos/slide-07.jpg">
+  <div class="credito-foto">Fotos: Radilson Carlos Gomes, Fotógrafo do SUS.</div>
   <div class="area-dado"><div class="textura textura--branco"></div></div>
   <div class="conteudo">
     <div class="numero">39,9%</div>
@@ -220,7 +251,8 @@
 
 <!-- SLIDE 8 : FECHAMENTO, PERGUNTA — M1 variante diagnóstica -->
 <section class="slide" id="s8">
-  <img class="foto" src="fotos/slide-08.jpg">
+  <img class="foto" src="fotos/slide-08.png">
+  <div class="credito-foto">Fotos: Radilson Carlos Gomes, Fotógrafo do SUS.</div>
   <div class="escurecer"></div>
   <div class="conteudo">
     <div class="abertura">A rede mais capilarizada do mundo anda de porta em porta com quem ela mais deixa ir embora.</div>
