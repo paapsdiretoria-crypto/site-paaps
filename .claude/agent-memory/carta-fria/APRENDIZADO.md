@@ -63,6 +63,17 @@ como intervenção organizacional também aparece nas diretrizes, mas com grau m
 peso. Fonte: [WHO guidelines on mental health at work](https://www.who.int/publications/i/item/9789240053052),
 [resumo executivo](https://www.ncbi.nlm.nih.gov/books/NBK586355/).
 
+**Quarta rodada (mesmo dia): linguagem de adoecimento, do lugar de quem é psicóloga.** Eu tinha
+escrito "ninguém sabia que algo estava acontecendo com aquela pessoa até não dar mais". Ela
+rejeitou: "não acho que é isso que acontece com uma pessoa adoecida mentalmente... não é como
+uma psicóloga fala de um adoecimento." "Até não dar mais" trata o adoecimento como ruptura
+individual, um ponto de quebra da pessoa. A frase certa nomeia a falha coletiva de perceber, não
+o colapso individual: **"a pessoa atravessou tudo sozinha, sem que a rede em volta percebesse."**
+Regra geral: qualquer frase sobre adoecimento mental passa pelo mesmo teste, o sujeito da frase é
+a rede que falhou em perceber/sustentar, nunca a pessoa "chegando ao limite". Reforça a
+proibição já existente de linguagem clínica/patologizante sem contexto relacional e sistêmico
+(`voz-paaps.md` 3).
+
 **Terceira rodada de ajuste (mesmo dia), regras de forma que valem daqui pra frente:**
 
 - **OMS, nunca "Organização Mundial da Saúde" por extenso.** Mais curto, mais direto.
