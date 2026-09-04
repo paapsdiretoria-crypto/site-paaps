@@ -30,12 +30,42 @@ export function lerEnv() {
 
 const MARCA = '{{CORPO}}';
 
-/** Corpo em texto (parágrafos separados por linha em branco) para HTML de e-mail. */
+/** Negrito **x** e link [texto](url) markdown, na cor de destaque usada no molde. */
+function inlineParaHtml(texto) {
+  return texto
+    .replace(/\*\*(.+?)\*\*/g, '<strong style="color:#6b4a2c;">$1</strong>')
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" style="color:#6b4a2c; text-decoration:underline;">$1</a>');
+}
+
+/**
+ * Corpo em texto (parágrafos separados por linha em branco) para HTML de e-mail.
+ * Bloco em que toda linha começa com "- " vira lista de checkmarks (mesmo desenho do
+ * exemplo aprovado em personalizacao/exemplo-email-formula-oferta.html), o resto vira
+ * parágrafo normal com negrito/link markdown convertidos.
+ */
 function corpoParaHtml(texto) {
   return texto
     .trim()
     .split(/\n\s*\n/)
-    .map((p) => `<p style="margin:0 0 16px 0;">${p.trim().replace(/\n/g, '<br>')}</p>`)
+    .map((bloco) => {
+      const linhas = bloco.trim().split('\n');
+      const ehLista = linhas.length > 0 && linhas.every((l) => /^-\s/.test(l.trim()));
+      if (ehLista) {
+        const itens = linhas
+          .map((l) => l.trim().replace(/^-\s*(✓\s*)?/, ''))
+          .map(
+            (item, i, arr) => `<tr>
+  <td width="22" valign="top" style="padding:0 10px ${i === arr.length - 1 ? 0 : 12}px 0; font-size:15px; line-height:1.68; color:#a9762f;">✓</td>
+  <td style="padding:0 0 ${i === arr.length - 1 ? 0 : 12}px 0; font-size:15px; line-height:1.68; color:#3b2109;">${inlineParaHtml(item)}</td>
+</tr>`
+          )
+          .join('\n');
+        return `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 18px 0;">
+${itens}
+</table>`;
+      }
+      return `<p style="margin:0 0 18px 0;">${inlineParaHtml(bloco.trim()).replace(/\n/g, '<br>')}</p>`;
+    })
     .join('\n');
 }
 
@@ -46,9 +76,14 @@ function corpoParaHtml(texto) {
 function lerCarta(pastaLeva, arquivo) {
   const texto = readFileSync(resolve(base, `levas/${pastaLeva}/${arquivo}`), 'utf8');
   const secao = (titulo) => {
-    const m = texto.match(new RegExp(`^## ${titulo}\\s*$([\\s\\S]*?)(?=^## |\\Z)`, 'm'));
-    if (!m) throw new Error(`seção "## ${titulo}" não encontrada em ${arquivo}`);
-    return m[1].trim();
+    // \Z (fim de string em regex estilo Python) não existe em JS: vira "Z" literal, e a seção
+    // Corpo (sempre a última do arquivo) nunca batia, a menos que o texto tivesse um "Z" maiúsculo
+    // em algum lugar. Corrigido dividindo o arquivo por cabeçalho "## " em vez de regex com \Z.
+    const partes = texto.split(/^## /m).slice(1);
+    const parte = partes.find((p) => p === titulo || p.startsWith(`${titulo}\n`) || p.startsWith(`${titulo}\r\n`));
+    if (!parte) throw new Error(`seção "## ${titulo}" não encontrada em ${arquivo}`);
+    const quebra = parte.indexOf('\n');
+    return (quebra === -1 ? '' : parte.slice(quebra + 1)).trim();
   };
   return { assunto: secao('Assunto').split('\n')[0].trim(), corpo: secao('Corpo') };
 }

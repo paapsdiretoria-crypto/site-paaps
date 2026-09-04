@@ -1,0 +1,227 @@
+{
+  "cartas": [
+    {
+      "lead": "APAE de Bocaiúva (MG)",
+      "arquivo": "001-apae-de-bocaiuva-mg.md",
+      "para": "apaeboc@yahoo.com.br",
+      "leadPageId": "3cc44cb5-2e00-81c6-9c0c-c48b28e4480c"
+    },
+    {
+      "lead": "Prefeitura de Coluna (MG)",
+      "arquivo": "002-prefeitura-de-coluna-mg.md",
+      "para": "gabinete@coluna.mg.gov.br",
+      "leadPageId": "3cc44cb5-2e00-816f-afe1-fa539d84b7e6"
+    },
+    {
+      "lead": "Prefeitura de Montezuma (MG)",
+      "arquivo": "003-prefeitura-de-montezuma-mg.md",
+      "para": "saude@montezuma.mg.gov.br",
+      "leadPageId": "3b844cb5-2e00-819e-a813-e34f136c02e4"
+    },
+    {
+      "lead": "Prefeitura de Nanuque (MG)",
+      "arquivo": "004-prefeitura-de-nanuque-mg.md",
+      "para": "saude@nanuque.mg.gov.br",
+      "leadPageId": "3b744cb5-2e00-8139-a5be-fc25efcdeef1"
+    },
+    {
+      "lead": "Prefeitura de Ninheira (MG)",
+      "arquivo": "005-prefeitura-de-ninheira-mg.md",
+      "para": "saude@ninheira.mg.gov.br",
+      "leadPageId": "3b844cb5-2e00-814e-8326-dcad5c359a83"
+    },
+    {
+      "lead": "Prefeitura de Nova Porteirinha (MG)",
+      "arquivo": "006-prefeitura-de-nova-porteirinha-mg.md",
+      "para": "saude@novaporteirinha.mg.gov.br",
+      "leadPageId": "3b844cb5-2e00-8182-8cda-fbcd6d108bcb"
+    },
+    {
+      "lead": "Prefeitura de Novorizonte (MG)",
+      "arquivo": "007-prefeitura-de-novorizonte-mg.md",
+      "para": "saude@novorizonte.mg.gov.br",
+      "leadPageId": "3b844cb5-2e00-8128-b5cb-cef4866d4553"
+    },
+    {
+      "lead": "Prefeitura de Passos (MG)",
+      "arquivo": "008-prefeitura-de-passos-mg.md",
+      "para": "pmp.saude@passos.mg.gov.br",
+      "leadPageId": "3be44cb5-2e00-8168-8cd7-c5b296c6fd44"
+    },
+    {
+      "lead": "Prefeitura de Patrocínio",
+      "arquivo": "009-prefeitura-de-patrocinio.md",
+      "para": "faleouvidoria@patrocinio.mg.gov.br",
+      "leadPageId": "3b444cb5-2e00-817b-9dfb-d5c3775f9a40"
+    },
+    {
+      "lead": "Prefeitura de Patrocínio (MG)",
+      "arquivo": "010-prefeitura-de-patrocinio-mg.md",
+      "para": "faleouvidoria@patrocinio.mg.gov.br",
+      "leadPageId": "3be44cb5-2e00-8129-ad72-c3f53e76c422"
+    },
+    {
+      "lead": "Prefeitura de Pedras de Maria da Cruz (MG)",
+      "arquivo": "011-prefeitura-de-pedras-de-maria-da-cruz-mg.md",
+      "para": "administracao@pedrasdemariadacruz.mg.gov.br",
+      "leadPageId": "3b844cb5-2e00-811e-a4ab-d8239118c0c3"
+    },
+    {
+      "lead": "Prefeitura de Piranguçu (MG)",
+      "arquivo": "012-prefeitura-de-pirangucu-mg.md",
+      "para": "saude@pirangucu.mg.gov.br",
+      "leadPageId": "3b844cb5-2e00-81bd-a181-e3aaccd2c47f"
+    },
+    {
+      "lead": "Prefeitura de Piumhi (MG)",
+      "arquivo": "013-prefeitura-de-piumhi-mg.md",
+      "para": "saude@prefeiturapiumhi.mg.gov.br",
+      "leadPageId": "3be44cb5-2e00-8157-b405-c1f59e84b874"
+    },
+    {
+      "lead": "Prefeitura de Porteirinha",
+      "arquivo": "014-prefeitura-de-porteirinha.md",
+      "para": "saude@porteirinha.mg.gov.br",
+      "leadPageId": "3a744cb5-2e00-8185-9029-e802ff632868"
+    },
+    {
+      "lead": "Prefeitura de Pouso Alegre",
+      "arquivo": "015-prefeitura-de-pouso-alegre.md",
+      "para": "gestãodepessoas@pousoalegre.mg.gov.br",
+      "leadPageId": "3b444cb5-2e00-8104-b301-eec9e215fc06"
+    },
+    {
+      "lead": "Prefeitura de Presidente Kubitschek (MG)",
+      "arquivo": "016-prefeitura-de-presidente-kubitschek-mg.md",
+      "para": "saude@pk.mg.gov.br",
+      "leadPageId": "3b844cb5-2e00-81ef-8b7c-eaf65cc3e67a"
+    },
+    {
+      "lead": "Prefeitura de Resplendor (MG)",
+      "arquivo": "017-prefeitura-de-resplendor-mg.md",
+      "para": "saude@resplendor.mg.gov.br",
+      "leadPageId": "3b844cb5-2e00-818d-88c0-cc5c161ad067"
+    },
+    {
+      "lead": "Prefeitura de Riacho dos Machados",
+      "arquivo": "018-prefeitura-de-riacho-dos-machados.md",
+      "para": "saude@riachodosmachados.mg.gov.br",
+      "leadPageId": "3a744cb5-2e00-81b4-b2cd-d8382254e150"
+    },
+    {
+      "lead": "Prefeitura de Rio Casca (MG)",
+      "arquivo": "019-prefeitura-de-rio-casca-mg.md",
+      "para": "semas@riocasca.mg.gov.br",
+      "leadPageId": "3b844cb5-2e00-814c-b8e1-d34f8eb3333a"
+    },
+    {
+      "lead": "Prefeitura de Rio Paranaíba (MG)",
+      "arquivo": "020-prefeitura-de-rio-paranaiba-mg.md",
+      "para": "saude@rioparanaiba.mg.gov.br",
+      "leadPageId": "3b844cb5-2e00-8166-b113-c4b41ff94a67"
+    },
+    {
+      "lead": "Prefeitura de Rio Pardo de Minas",
+      "arquivo": "021-prefeitura-de-rio-pardo-de-minas.md",
+      "para": "saude@riopardo.mg.gov.br",
+      "leadPageId": "3a744cb5-2e00-8179-89be-f6c889d1e463"
+    },
+    {
+      "lead": "Prefeitura de Rio Pomba (MG)",
+      "arquivo": "022-prefeitura-de-rio-pomba-mg.md",
+      "para": "gabinete@riopomba.mg.gov.br",
+      "leadPageId": "3b844cb5-2e00-81e7-b0c1-d68103faed25"
+    },
+    {
+      "lead": "Prefeitura de Rubelita (MG)",
+      "arquivo": "023-prefeitura-de-rubelita-mg.md",
+      "para": "saude@rubelita.mg.gov.br",
+      "leadPageId": "3b844cb5-2e00-81aa-b8df-fc0c3410c867"
+    },
+    {
+      "lead": "Prefeitura de Salinas",
+      "arquivo": "024-prefeitura-de-salinas.md",
+      "para": "secsaude@salinas.mg.gov.br",
+      "leadPageId": "3a744cb5-2e00-8113-bf94-e04a1ce619b7"
+    },
+    {
+      "lead": "Prefeitura de Santa Vitória (MG)",
+      "arquivo": "025-prefeitura-de-santa-vitoria-mg.md",
+      "para": "saude@santavitoria.mg.gov.br",
+      "leadPageId": "3be44cb5-2e00-81ef-ab4d-ddd6955846b6"
+    },
+    {
+      "lead": "Prefeitura de Santo Antônio do Itambé (MG)",
+      "arquivo": "026-prefeitura-de-santo-antonio-do-itambe-mg.md",
+      "para": "saude@santoantoniodoitambe.mg.gov.br",
+      "leadPageId": "3cc44cb5-2e00-813c-be83-cf094105aa5c"
+    },
+    {
+      "lead": "Prefeitura de Santo Antônio do Retiro (MG)",
+      "arquivo": "027-prefeitura-de-santo-antonio-do-retiro-mg.md",
+      "para": "saude@santoantoniodoretiro.mg.gov.br",
+      "leadPageId": "3b844cb5-2e00-8136-a420-e85c5b2956b1"
+    },
+    {
+      "lead": "Prefeitura de São Gonçalo do Rio Preto (MG)",
+      "arquivo": "028-prefeitura-de-sao-goncalo-do-rio-preto-mg.md",
+      "para": "saude@saogoncalodoriopreto.mg.gov.br",
+      "leadPageId": "3b844cb5-2e00-81dc-a659-e96836837a66"
+    },
+    {
+      "lead": "Prefeitura de São Gotardo (MG)",
+      "arquivo": "029-prefeitura-de-sao-gotardo-mg.md",
+      "para": "saude@saogotardo.mg.gov.br",
+      "leadPageId": "3b844cb5-2e00-8183-a0a3-e1364fb22446"
+    },
+    {
+      "lead": "Prefeitura de São João do Manhuaçu (MG)",
+      "arquivo": "030-prefeitura-de-sao-joao-do-manhuacu-mg.md",
+      "para": "prefeitura@saojoaodomanhuacu.mg.gov.br",
+      "leadPageId": "3b744cb5-2e00-81f1-8b60-f6ea43e77b87"
+    },
+    {
+      "lead": "Prefeitura de São João do Paraíso",
+      "arquivo": "031-prefeitura-de-sao-joao-do-paraiso.md",
+      "para": "saude@sjparaiso.mg.gov.br",
+      "leadPageId": "3b344cb5-2e00-81e8-a672-d0fa38fdb11c"
+    },
+    {
+      "lead": "Prefeitura de Serro (MG)",
+      "arquivo": "032-prefeitura-de-serro-mg.md",
+      "para": "saude@serro.mg.gov.br",
+      "leadPageId": "3b744cb5-2e00-8194-b145-c0d6f23a598b"
+    },
+    {
+      "lead": "Prefeitura de Taiobeiras",
+      "arquivo": "033-prefeitura-de-taiobeiras.md",
+      "para": "gestaosaude@taiobeiras.mg.gov.br",
+      "leadPageId": "3a744cb5-2e00-81fc-8857-d5f9dc2829bf"
+    },
+    {
+      "lead": "Prefeitura de Uberlândia",
+      "arquivo": "034-prefeitura-de-uberlandia.md",
+      "para": "cmsu@uberlandia.mg.gov.br",
+      "leadPageId": "2f944cb5-2e00-80e4-ab9d-d6222933245c"
+    },
+    {
+      "lead": "Prefeitura de Vargem Grande do Rio Pardo (MG)",
+      "arquivo": "035-prefeitura-de-vargem-grande-do-rio-pardo-mg.md",
+      "para": "secvg.saude@yahoo.com.br",
+      "leadPageId": "3b844cb5-2e00-81e5-8f31-dcdcde36ed1b"
+    },
+    {
+      "lead": "Prefeitura de Virgínia (MG)",
+      "arquivo": "036-prefeitura-de-virginia-mg.md",
+      "para": "saude@virginia.mg.gov.br",
+      "leadPageId": "3b844cb5-2e00-81e2-aa03-e64e84bfb583"
+    },
+    {
+      "lead": "União da Serra Geral (Consórcio Norte de Minas)",
+      "arquivo": "037-uniao-da-serra-geral-consorcio-norte-de-minas.md",
+      "para": "uniaodaserrageral@gmail.com",
+      "leadPageId": "3c544cb5-2e00-8168-92e2-f8f6347b34f7"
+    }
+  ],
+  "intervaloMinutos": 3
+}
