@@ -128,8 +128,9 @@ Ordem confirmada, seis agentes, cada um com dono:
 2. **tecela** tece o argumento: desnaturaliza o fenômeno, nomeia a contradição, situa na totalidade, acha as mediações.
 3. **copywriter-paaps** escreve o carrossel sem apagar nem atenuar o pensamento de ninguém.
 4. **buscador-fotos** curadoria no PhotoBank e lista curta de candidatas por slide. Quem escolhe é a Mallu.
-5. **aplicador-visual** monta no Canva, exporta e entrega no Drive.
-6. **Mallu** aprova.
+5. **aplicador-visual** monta no Canva ou HTML/Chromium, exporta e entrega.
+6. **legendas-otimizadas** (skill) gera a legenda de postagem a partir do texto final aprovado da peça. **Obrigatório em toda peça, calibrado pela Mallu em 04/09/2026: nenhuma entrega sai sem a legenda junto.** Nunca pular esta etapa nem entregar a peça "sem legenda por enquanto".
+7. **Mallu** aprova, já recebendo peça montada + legenda na mesma entrega.
 
 O `sentinela` está fora deste fluxo.
 
@@ -167,6 +168,11 @@ Cada peça das 4 passa pelo próprio gate (crítico do tipo de peça + Mallu) an
 lote da semana. **Não despejar as 4 juntas sem ela ter visto nenhuma**: a regra de entrega
 iterativa (carrossel: primeira rodada, aguardar validação) vale peça a peça dentro da semana,
 não só dentro de um carrossel.
+
+**Toda peça (os 2 carrosséis, o card e o Reel) sai com legenda de postagem junto, calibrado
+pela Mallu em 04/09/2026.** A legenda nasce da skill `legendas-otimizadas`, a partir do texto
+final já aprovado pelo crítico daquela peça, nunca de um rascunho. Entrega sem legenda não está
+completa, mesmo que a peça visual esteja pronta.
 
 **As 4 peças não podem nascer do mesmo tema.** Regra de Mallu, 01/09/2026: um lote inteiro
 batendo na mesma pauta lê como preguiça, não como frequência. Radar e Tecelã escolhem 3 ângulos
@@ -212,9 +218,10 @@ Um agente só inicia sua etapa quando o artefato de entrada existe, e só a conc
 - **B2 Argumento da Tecelã**: contradição nomeada, totalidade, mediações.
 - **B3 Texto do carrossel**: saída do copywriter-paaps.
 - **B4 Deck montado**: slides exportados, entregues no Drive.
+- **B5 Legenda de postagem**: saída da skill `legendas-otimizadas` a partir do texto final aprovado. Obrigatória junto de B4 em toda peça (2 carrosséis + card + Reel), calibrado pela Mallu em 04/09/2026.
 - **QA Verificação final**: checagem dos 7 guardrails da seção 3. Reprova se qualquer um falhar.
 
-Definição de pronto: passou pelo QA, sem travessão grande, ordem quente antes de prova preservada, voz autoral, dado com fonte quando houver afirmação factual, agente dono acionado em cada etapa.
+Definição de pronto: passou pelo QA, sem travessão grande, ordem quente antes de prova preservada, voz autoral, dado com fonte quando houver afirmação factual, agente dono acionado em cada etapa, legenda de postagem entregue junto (B5).
 
 ## 9. Estado atual e nós abertos
 
