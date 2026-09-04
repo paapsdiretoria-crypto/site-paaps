@@ -115,7 +115,6 @@
 | Prefeitura de Santo Antônio do Retiro (MG) | 1. Cadastrado | sim |
 | Prefeitura de Serro (MG) | 1. Cadastrado | sim |
 | Prefeitura de São Gonçalo do Rio Preto (MG) | 1. Cadastrado | sim |
-| Prefeitura de São Gotardo (MG) | 0. Alvo | não |
 | Prefeitura de São Gotardo (MG) | 1. Cadastrado | sim |
 | Prefeitura de São João do Manhuaçu (MG) | 1. Cadastrado | sim |
 | Prefeitura de São João do Paraíso | 1. Cadastrado | sim |
