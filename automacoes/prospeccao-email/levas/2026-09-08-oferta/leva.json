@@ -1,0 +1,125 @@
+{
+  "cartas": [
+    {
+      "lead": "AMBASP (Associação Baixo Sapucaí – Varginha)",
+      "arquivo": "001-ambasp-associacao-baixo-sapucai-varginha.md",
+      "para": "executivo@ambasp.org.br",
+      "leadPageId": "3c544cb5-2e00-812c-9ca5-ed17634ac459"
+    },
+    {
+      "lead": "AMME (Associação Médio Espinhaço – Conceição do Mato Dentro)",
+      "arquivo": "002-amme-associacao-medio-espinhaco-conceicao-do-mato-dentro.md",
+      "para": "fale@ammecimme.org.br",
+      "leadPageId": "3c544cb5-2e00-8125-8eef-d3f34cb95eb6"
+    },
+    {
+      "lead": "APAE de Espinosa (MG)",
+      "arquivo": "003-apae-de-espinosa-mg.md",
+      "para": "espinosa@apaebrasil.org.br",
+      "leadPageId": "3cc44cb5-2e00-8150-9ded-eee708d2b86e"
+    },
+    {
+      "lead": "CIMBAJE (Consórcio Baixo Jequitinhonha)",
+      "arquivo": "004-cimbaje-consorcio-baixo-jequitinhonha.md",
+      "para": "executivo@cimbaje.mg.gov.br",
+      "leadPageId": "3c544cb5-2e00-81fd-9b9f-f692e051e5ed"
+    },
+    {
+      "lead": "CISMARPA (Consórcio Alto Rio Pardo – Poços de Caldas)",
+      "arquivo": "005-cismarpa-consorcio-alto-rio-pardo-pocos-de-caldas.md",
+      "para": "contato@cismarpa.com",
+      "leadPageId": "3c544cb5-2e00-8184-b7ad-d576780a396b"
+    },
+    {
+      "lead": "CISVERDE / CISARVG (Alto Rio Verde Grande)",
+      "arquivo": "006-cisverde-cisarvg-alto-rio-verde-grande.md",
+      "para": "cisarvgrande@yahoo.com.br",
+      "leadPageId": "3c544cb5-2e00-8195-91e2-f6f865025da3"
+    },
+    {
+      "lead": "Prefeitura de Alvorada de Minas (MG)",
+      "arquivo": "007-prefeitura-de-alvorada-de-minas-mg.md",
+      "para": "gabinete@alvoradademinas.mg.gov.br",
+      "leadPageId": "3cc44cb5-2e00-810c-937d-f2577e6a5d9d"
+    },
+    {
+      "lead": "Prefeitura de Carbonita (MG)",
+      "arquivo": "008-prefeitura-de-carbonita-mg.md",
+      "para": "saude@carbonita.mg.gov.br",
+      "leadPageId": "3cc44cb5-2e00-817d-b66d-df749cad3c81"
+    },
+    {
+      "lead": "PREFEITURA DE CONTAGEM (MG) - Secretaria Municipal de Administração",
+      "arquivo": "009-prefeitura-de-contagem-mg-secretaria-municipal-de-administra.md",
+      "para": "administracao@contagem.mg.gov.br",
+      "leadPageId": "3ab44cb5-2e00-8124-8bd3-ea79dccab1f6"
+    },
+    {
+      "lead": "Prefeitura de Espinosa",
+      "arquivo": "010-prefeitura-de-espinosa.md",
+      "para": "administracao@espinosa.mg.gov.br",
+      "leadPageId": "3a744cb5-2e00-811d-afae-f5ff2cfb7187"
+    },
+    {
+      "lead": "Prefeitura de Grão Mogol",
+      "arquivo": "011-prefeitura-de-grao-mogol.md",
+      "para": "saude@graomogol.mg.gov.br",
+      "leadPageId": "3a744cb5-2e00-81eb-9781-c39f594b5075"
+    },
+    {
+      "lead": "Prefeitura de Itacarambi (MG)",
+      "arquivo": "012-prefeitura-de-itacarambi-mg.md",
+      "para": "prefeituradeitacarambi@itacarambi.mg.gov.br",
+      "leadPageId": "3b844cb5-2e00-8116-8987-f390f9fd38e7"
+    },
+    {
+      "lead": "Prefeitura de Januária",
+      "arquivo": "013-prefeitura-de-januaria.md",
+      "para": "smsjanuaria@gmail.com",
+      "leadPageId": "3b444cb5-2e00-8168-99d5-e9ad17c0328e"
+    },
+    {
+      "lead": "Prefeitura de Montezuma (MG)",
+      "arquivo": "014-prefeitura-de-montezuma-mg.md",
+      "para": "saude@montezuma.mg.gov.br",
+      "leadPageId": "3b844cb5-2e00-819e-a813-e34f136c02e4"
+    },
+    {
+      "lead": "Prefeitura de Passos (MG)",
+      "arquivo": "015-prefeitura-de-passos-mg.md",
+      "para": "pmp.saude@passos.mg.gov.br",
+      "leadPageId": "3be44cb5-2e00-8168-8cd7-c5b296c6fd44"
+    },
+    {
+      "lead": "Prefeitura de Piumhi (MG)",
+      "arquivo": "016-prefeitura-de-piumhi-mg.md",
+      "para": "saude@prefeiturapiumhi.mg.gov.br",
+      "leadPageId": "3be44cb5-2e00-8157-b405-c1f59e84b874"
+    },
+    {
+      "lead": "Prefeitura de Riacho dos Machados",
+      "arquivo": "017-prefeitura-de-riacho-dos-machados.md",
+      "para": "saude@riachodosmachados.mg.gov.br",
+      "leadPageId": "3a744cb5-2e00-81b4-b2cd-d8382254e150"
+    },
+    {
+      "lead": "Prefeitura de Rubelita (MG)",
+      "arquivo": "018-prefeitura-de-rubelita-mg.md",
+      "para": "saude@rubelita.mg.gov.br",
+      "leadPageId": "3b844cb5-2e00-81aa-b8df-fc0c3410c867"
+    },
+    {
+      "lead": "Prefeitura de São Gonçalo do Rio Preto (MG)",
+      "arquivo": "019-prefeitura-de-sao-goncalo-do-rio-preto-mg.md",
+      "para": "saude@saogoncalodoriopreto.mg.gov.br",
+      "leadPageId": "3b844cb5-2e00-81dc-a659-e96836837a66"
+    },
+    {
+      "lead": "Prefeitura de Taiobeiras",
+      "arquivo": "020-prefeitura-de-taiobeiras.md",
+      "para": "gestaosaude@taiobeiras.mg.gov.br",
+      "leadPageId": "3a744cb5-2e00-81fc-8857-d5f9dc2829bf"
+    }
+  ],
+  "intervaloMinutos": 5
+}

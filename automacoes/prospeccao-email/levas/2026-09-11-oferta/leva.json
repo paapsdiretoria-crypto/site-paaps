@@ -1,0 +1,125 @@
+{
+  "cartas": [
+    {
+      "lead": "AMERP (Associação Médio Rio Pomba – Muriaé)",
+      "arquivo": "001-amerp-associacao-medio-rio-pomba-muriae.md",
+      "para": "amerp@amerp.com.br",
+      "leadPageId": "3c544cb5-2e00-8198-acec-dd30bc153100"
+    },
+    {
+      "lead": "AMVALE (Associação Vale do Rio Grande – Uberaba)",
+      "arquivo": "002-amvale-associacao-vale-do-rio-grande-uberaba.md",
+      "para": "amvale.adm@gmail.com",
+      "leadPageId": "3c544cb5-2e00-81d4-9718-ffb58923021d"
+    },
+    {
+      "lead": "Betim",
+      "arquivo": "003-betim.md",
+      "para": "gerencia.sesmt@betim.mg.gov.br",
+      "leadPageId": "2f944cb5-2e00-80da-8f46-d89ccb0956e2"
+    },
+    {
+      "lead": "CISAMESP (Consórcio Médio Sapucaí)",
+      "arquivo": "004-cisamesp-consorcio-medio-sapucai.md",
+      "para": "cisamesp@cisamesp.mg.gov.br",
+      "leadPageId": "3c544cb5-2e00-817a-9600-c401922f826a"
+    },
+    {
+      "lead": "CISNORTE (Consórcio Norte de Minas)",
+      "arquivo": "005-cisnorte-consorcio-norte-de-minas.md",
+      "para": "diretoria@cisnorte.com.br",
+      "leadPageId": "3c544cb5-2e00-8179-b8ad-ca97419ec9ed"
+    },
+    {
+      "lead": "Prefeitura de Aimorés (MG)",
+      "arquivo": "006-prefeitura-de-aimores-mg.md",
+      "para": "saude@aimores.mg.gov.br",
+      "leadPageId": "3b844cb5-2e00-81a2-8af5-fe98f411e0ab"
+    },
+    {
+      "lead": "Prefeitura de Campo Belo (MG)",
+      "arquivo": "007-prefeitura-de-campo-belo-mg.md",
+      "para": "administracao@campobelo.mg.gov.br",
+      "leadPageId": "3c544cb5-2e00-818b-98d4-fc85791e475f"
+    },
+    {
+      "lead": "Prefeitura de Congonhas do Norte (MG)",
+      "arquivo": "008-prefeitura-de-congonhas-do-norte-mg.md",
+      "para": "cms@congonhasdonorte.mg.gov.br",
+      "leadPageId": "3b844cb5-2e00-8155-8b18-f077c30925fb"
+    },
+    {
+      "lead": "Prefeitura de Datas (MG)",
+      "arquivo": "009-prefeitura-de-datas-mg.md",
+      "para": "ouvidoria@datas.mg.gov.br",
+      "leadPageId": "3b844cb5-2e00-81eb-82c8-f9fc1bbb2e83"
+    },
+    {
+      "lead": "Prefeitura de Fruta de Leite (MG)",
+      "arquivo": "010-prefeitura-de-fruta-de-leite-mg.md",
+      "para": "gabinete@frutadeleite.mg.gov.br",
+      "leadPageId": "3b844cb5-2e00-8175-a6bb-e54ce72dccb0"
+    },
+    {
+      "lead": "Prefeitura de Icaraí de Minas (MG)",
+      "arquivo": "011-prefeitura-de-icarai-de-minas-mg.md",
+      "para": "saude@icaraideminas.mg.gov.br",
+      "leadPageId": "3b844cb5-2e00-81aa-8fc2-dce39daf4ab1"
+    },
+    {
+      "lead": "Prefeitura de Jaíba",
+      "arquivo": "012-prefeitura-de-jaiba.md",
+      "para": "administracao@jaiba.mg.gov.br",
+      "leadPageId": "3a744cb5-2e00-81ce-9f55-df23d1f636f0"
+    },
+    {
+      "lead": "Prefeitura de Mirabela",
+      "arquivo": "013-prefeitura-de-mirabela.md",
+      "para": "saude@mirabela.mg.gov.br",
+      "leadPageId": "3b344cb5-2e00-816e-aaa5-dfa588348141"
+    },
+    {
+      "lead": "Prefeitura de Nova Porteirinha (MG)",
+      "arquivo": "014-prefeitura-de-nova-porteirinha-mg.md",
+      "para": "saude@novaporteirinha.mg.gov.br",
+      "leadPageId": "3b844cb5-2e00-8182-8cda-fbcd6d108bcb"
+    },
+    {
+      "lead": "Prefeitura de Pedras de Maria da Cruz (MG)",
+      "arquivo": "015-prefeitura-de-pedras-de-maria-da-cruz-mg.md",
+      "para": "administracao@pedrasdemariadacruz.mg.gov.br",
+      "leadPageId": "3b844cb5-2e00-811e-a4ab-d8239118c0c3"
+    },
+    {
+      "lead": "Prefeitura de Presidente Kubitschek (MG)",
+      "arquivo": "016-prefeitura-de-presidente-kubitschek-mg.md",
+      "para": "saude@pk.mg.gov.br",
+      "leadPageId": "3b844cb5-2e00-81ef-8b7c-eaf65cc3e67a"
+    },
+    {
+      "lead": "Prefeitura de Rio Pardo de Minas",
+      "arquivo": "017-prefeitura-de-rio-pardo-de-minas.md",
+      "para": "saude@riopardo.mg.gov.br",
+      "leadPageId": "3a744cb5-2e00-8179-89be-f6c889d1e463"
+    },
+    {
+      "lead": "Prefeitura de Santo Antônio do Itambé (MG)",
+      "arquivo": "018-prefeitura-de-santo-antonio-do-itambe-mg.md",
+      "para": "saude@santoantoniodoitambe.mg.gov.br",
+      "leadPageId": "3cc44cb5-2e00-813c-be83-cf094105aa5c"
+    },
+    {
+      "lead": "Prefeitura de São João do Paraíso",
+      "arquivo": "019-prefeitura-de-sao-joao-do-paraiso.md",
+      "para": "saude@sjparaiso.mg.gov.br",
+      "leadPageId": "3b344cb5-2e00-81e8-a672-d0fa38fdb11c"
+    },
+    {
+      "lead": "Prefeitura de Virgínia (MG)",
+      "arquivo": "020-prefeitura-de-virginia-mg.md",
+      "para": "saude@virginia.mg.gov.br",
+      "leadPageId": "3b844cb5-2e00-81e2-aa03-e64e84bfb583"
+    }
+  ],
+  "intervaloMinutos": 5
+}

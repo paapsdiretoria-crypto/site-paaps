@@ -1,0 +1,125 @@
+{
+  "cartas": [
+    {
+      "lead": "AMEPI (Associação Médio Rio Piracicaba – João Monlevade)",
+      "arquivo": "001-amepi-associacao-medio-rio-piracicaba-joao-monlevade.md",
+      "para": "amepi@amepi.org.br",
+      "leadPageId": "3c544cb5-2e00-8118-9e9f-fc97eb1c2bcf"
+    },
+    {
+      "lead": "AMOG (Associação Baixa Mogiana – Guaxupé)",
+      "arquivo": "002-amog-associacao-baixa-mogiana-guaxupe.md",
+      "para": "amog.amog@yahoo.com.br",
+      "leadPageId": "3c544cb5-2e00-81b5-8408-e7297d9fefd9"
+    },
+    {
+      "lead": "APAE de Salinas (MG)",
+      "arquivo": "003-apae-de-salinas-mg.md",
+      "para": "apaesalinas@ig.com.br",
+      "leadPageId": "3cc44cb5-2e00-81db-9880-c45fd1e4db47"
+    },
+    {
+      "lead": "CIMMVI / AMVI (Vale do Itapecerica – Divinópolis)",
+      "arquivo": "004-cimmvi-amvi-vale-do-itapecerica-divinopolis.md",
+      "para": "consorciocimmvi@gmail.com",
+      "leadPageId": "3c544cb5-2e00-81c6-9403-e57a0c896724"
+    },
+    {
+      "lead": "CISMIV (Consórcio Zona da Mata – Viçosa)",
+      "arquivo": "005-cismiv-consorcio-zona-da-mata-vicosa.md",
+      "para": "ouvidoria.cismiv@gmail.com",
+      "leadPageId": "3c544cb5-2e00-811f-9f8f-d8067b9c79c2"
+    },
+    {
+      "lead": "CONSAÚDE (Consórcio Vale do Aço)",
+      "arquivo": "006-consaude-consorcio-vale-do-aco.md",
+      "para": "agendamento@consaudevaledoaco.com.br",
+      "leadPageId": "3c544cb5-2e00-81cc-99ba-cb555e2baa69"
+    },
+    {
+      "lead": "Prefeitura de Bocaiuva",
+      "arquivo": "007-prefeitura-de-bocaiuva.md",
+      "para": "saude@bocaiuva.mg.gov.br",
+      "leadPageId": "3a744cb5-2e00-814f-a543-f1b30d838ade"
+    },
+    {
+      "lead": "Prefeitura de Coluna (MG)",
+      "arquivo": "008-prefeitura-de-coluna-mg.md",
+      "para": "gabinete@coluna.mg.gov.br",
+      "leadPageId": "3cc44cb5-2e00-816f-afe1-fa539d84b7e6"
+    },
+    {
+      "lead": "Prefeitura de Curvelo (MG)",
+      "arquivo": "009-prefeitura-de-curvelo-mg.md",
+      "para": "saude@curvelo.mg.gov.br",
+      "leadPageId": "3b744cb5-2e00-818d-a7a4-dda4e4267739"
+    },
+    {
+      "lead": "Prefeitura de Franciscópolis",
+      "arquivo": "010-prefeitura-de-franciscopolis.md",
+      "para": "contato@franciscopolis.mg.gov.br",
+      "leadPageId": "3b444cb5-2e00-813c-b38c-efad98910602"
+    },
+    {
+      "lead": "Prefeitura de Ibiá (MG)",
+      "arquivo": "011-prefeitura-de-ibia-mg.md",
+      "para": "secretariasaude@ibia.mg.gov.br",
+      "leadPageId": "3b844cb5-2e00-815e-bd4c-ce97029fb98c"
+    },
+    {
+      "lead": "Prefeitura de Itaúna (MG)",
+      "arquivo": "012-prefeitura-de-itauna-mg.md",
+      "para": "gabinetesaude@itauna.mg.gov.br",
+      "leadPageId": "3be44cb5-2e00-81ee-8f6b-c2791ea361af"
+    },
+    {
+      "lead": "Prefeitura de Mato Verde",
+      "arquivo": "013-prefeitura-de-mato-verde.md",
+      "para": "saude@matoverde.mg.gov.br",
+      "leadPageId": "3b344cb5-2e00-81eb-8980-eb33f1c511d2"
+    },
+    {
+      "lead": "Prefeitura de Ninheira (MG)",
+      "arquivo": "014-prefeitura-de-ninheira-mg.md",
+      "para": "saude@ninheira.mg.gov.br",
+      "leadPageId": "3b844cb5-2e00-814e-8326-dcad5c359a83"
+    },
+    {
+      "lead": "Prefeitura de Patrocínio (MG)",
+      "arquivo": "015-prefeitura-de-patrocinio-mg.md",
+      "para": "faleouvidoria@patrocinio.mg.gov.br",
+      "leadPageId": "3be44cb5-2e00-8129-ad72-c3f53e76c422"
+    },
+    {
+      "lead": "Prefeitura de Pouso Alegre",
+      "arquivo": "016-prefeitura-de-pouso-alegre.md",
+      "para": "gestãodepessoas@pousoalegre.mg.gov.br",
+      "leadPageId": "3b444cb5-2e00-8104-b301-eec9e215fc06"
+    },
+    {
+      "lead": "Prefeitura de Rio Paranaíba (MG)",
+      "arquivo": "017-prefeitura-de-rio-paranaiba-mg.md",
+      "para": "saude@rioparanaiba.mg.gov.br",
+      "leadPageId": "3b844cb5-2e00-8166-b113-c4b41ff94a67"
+    },
+    {
+      "lead": "Prefeitura de Santa Vitória (MG)",
+      "arquivo": "018-prefeitura-de-santa-vitoria-mg.md",
+      "para": "saude@santavitoria.mg.gov.br",
+      "leadPageId": "3be44cb5-2e00-81ef-ab4d-ddd6955846b6"
+    },
+    {
+      "lead": "Prefeitura de São João do Manhuaçu (MG)",
+      "arquivo": "019-prefeitura-de-sao-joao-do-manhuacu-mg.md",
+      "para": "prefeitura@saojoaodomanhuacu.mg.gov.br",
+      "leadPageId": "3b744cb5-2e00-81f1-8b60-f6ea43e77b87"
+    },
+    {
+      "lead": "Prefeitura de Vargem Grande do Rio Pardo (MG)",
+      "arquivo": "020-prefeitura-de-vargem-grande-do-rio-pardo-mg.md",
+      "para": "secvg.saude@yahoo.com.br",
+      "leadPageId": "3b844cb5-2e00-81e5-8f31-dcdcde36ed1b"
+    }
+  ],
+  "intervaloMinutos": 5
+}
