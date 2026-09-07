@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Convite à Roda de Equipe — frente</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --olive-dark:#5f6329;
+    --olive:#9a9c40;
+    --olive-soft:#aeb058;
+    --cream:#faf5e6;
+    --cream-dim:#e9e2c8;
+    --orange:#d1531f;
+    --orange-dark:#a53f16;
+    --ink:#3a3111;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:#d8d8c2}
+  body{font-family:'Nunito',sans-serif;display:flex;justify-content:center;align-items:flex-start}
+
+  .page{
+    width:210mm;height:297mm;
+    position:relative;
+    overflow:hidden;
+    background:
+      radial-gradient(circle at 88% 10%, rgba(255,255,255,0.10), transparent 45%),
+      radial-gradient(circle at 8% 92%, rgba(0,0,0,0.14), transparent 50%),
+      linear-gradient(160deg, var(--olive-soft) 0%, var(--olive) 55%, var(--olive-dark) 100%);
+    padding:16mm 16mm 14mm 16mm;
+    display:flex;
+    flex-direction:column;
+    color:var(--cream);
+  }
+
+  /* textura oficial PAAPS (identidade-visual/04-texturas), nunca inventar padrão novo */
+  .textura{
+    position:absolute;inset:0;pointer-events:none;
+    background-image:url("../../../insumos-compartilhados/identidade-visual/04-texturas/Paaps - Textura 1 branco-8.png");
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:140%;
+    opacity:.5;
+  }
+
+  .badge{
+    align-self:flex-start;
+    display:inline-flex;align-items:center;gap:2.4mm;
+    background:rgba(0,0,0,0.16);
+    border:0.35mm solid rgba(255,255,255,0.22);
+    color:var(--cream);
+    font-family:'Nunito',sans-serif;font-weight:700;font-size:9.4pt;
+    letter-spacing:.01em;
+    padding:2.6mm 5mm;
+    border-radius:99px;
+    position:relative;z-index:2;
+  }
+  .badge b{color:#fff}
+
+  h1{
+    font-family:'Baloo 2',sans-serif;
+    font-weight:800;
+    font-size:44pt;
+    line-height:1.02;
+    color:var(--cream);
+    margin-top:6mm;
+    position:relative;z-index:2;
+    max-width:150mm;
+  }
+
+  .lead{
+    margin-top:6mm;
+    font-size:12.5pt;
+    line-height:1.5;
+    color:var(--cream);
+    max-width:148mm;
+    position:relative;z-index:2;
+  }
+  .lead strong{color:#fff}
+
+  .data-box{
+    position:relative;z-index:2;
+    margin-top:9mm;
+    align-self:flex-start;
+    background:linear-gradient(135deg, var(--orange) 0%, var(--orange-dark) 100%);
+    border-radius:6mm;
+    padding:6mm 10mm;
+    box-shadow:0 3mm 6mm rgba(0,0,0,0.18);
+    display:flex;
+    align-items:center;
+    gap:8mm;
+  }
+  .data-box .dia{
+    font-family:'Baloo 2',sans-serif;
+    font-weight:800;
+    font-size:34pt;
+    line-height:1;
+    color:#fff;
+  }
+  .data-box .divisor{width:0.5mm;height:16mm;background:rgba(255,255,255,0.35)}
+  .data-box .hora{
+    font-family:'Baloo 2',sans-serif;
+    font-weight:700;
+    font-size:16pt;
+    color:#fff;
+    line-height:1.2;
+  }
+  .data-box .hora small{
+    display:block;
+    font-family:'Nunito',sans-serif;
+    font-weight:700;
+    font-size:8.6pt;
+    letter-spacing:.09em;
+    color:rgba(255,255,255,0.85);
+    margin-bottom:1mm;
+  }
+
+  .pergunta-wrap{
+    position:relative;z-index:2;
+    margin-top:14mm;
+  }
+  .pergunta{
+    font-family:'Baloo 2',sans-serif;
+    font-weight:700;
+    font-size:31pt;
+    line-height:1.18;
+    color:var(--cream);
+  }
+  .pergunta .sub{
+    text-decoration:underline;
+    text-decoration-color:var(--orange);
+    text-decoration-thickness:3mm;
+    text-underline-offset:3mm;
+  }
+
+  .spacer{flex:1}
+
+  .convite{
+    position:relative;z-index:2;
+    margin-top:10mm;
+    font-family:'Nunito',sans-serif;
+    font-weight:700;
+    font-size:14.5pt;
+    line-height:1.42;
+    color:var(--cream);
+    max-width:150mm;
+  }
+  .convite .destaque{color:var(--orange);}
+  .convite .destaque2{
+    background:#fff;
+    -webkit-background-clip:text;
+    background-clip:text;
+  }
+
+  .rodape{
+    position:relative;z-index:2;
+    margin-top:10mm;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:6mm;
+  }
+  .pesquisadora{
+    font-size:9pt;
+    line-height:1.5;
+    color:rgba(250,245,230,0.82);
+  }
+  .pesquisadora b{color:var(--cream)}
+
+  .selo-puc{
+    display:flex;align-items:center;gap:3mm;
+    background:rgba(0,0,0,0.18);
+    border:0.35mm solid rgba(255,255,255,0.25);
+    border-radius:99px;
+    padding:2.6mm 5mm 2.6mm 3mm;
+  }
+  .selo-puc .circulo{
+    width:9mm;height:9mm;border-radius:50%;
+    background:var(--cream);
+    color:var(--olive-dark);
+    font-family:'Baloo 2',sans-serif;font-weight:800;font-size:7.4pt;
+    display:flex;align-items:center;justify-content:center;
+    letter-spacing:-0.02em;
+  }
+  .selo-puc .texto{font-size:8pt;line-height:1.25;color:var(--cream);font-weight:700}
+  .selo-puc .texto span{display:block;font-weight:400;opacity:.85;font-size:7.4pt}
+
+  .rodape-puc{
+    display:flex;flex-direction:column;align-items:flex-end;gap:2.4mm;
+  }
+  .rodape-puc .puc-logo{
+    height:16mm;width:auto;
+    display:block;
+    filter:drop-shadow(0 1mm 2mm rgba(0,0,0,0.25));
+  }
+
+  @media print{
+    @page{size:210mm 297mm;margin:0}
+    html,body{background:none}
+    .page{width:210mm;height:297mm}
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+    <div class="textura"></div>
+
+    <div class="badge">Pesquisa de Conclusão de Curso · <b>Psicologia</b></div>
+
+    <h1>Convite à Roda de Equipe</h1>
+
+    <p class="lead">
+      Conduzida por <strong>Maria Luiza Vasconcellos</strong> (PUC Minas), a pesquisa
+      escuta a saúde mental de quem cuida na rede pública.
+    </p>
+
+    <div class="data-box">
+      <div class="dia">21/09</div>
+      <div class="divisor"></div>
+      <div class="hora"><small>HORÁRIO</small>09h às 10h</div>
+    </div>
+
+    <div class="pergunta-wrap">
+      <div class="pergunta"><span class="sub">quem cuida de<br>quem cuida?</span></div>
+    </div>
+
+    <div class="spacer"></div>
+
+    <p class="convite">
+      Um convite a todos que trabalham no <span class="destaque">CRAS Vila Betânia</span>
+      para um momento pensado com vocês e para vocês.
+    </p>
+
+    <div class="rodape">
+      <div class="pesquisadora"><b>Maria Luiza Vasconcellos Barbosa</b><br>Graduanda em Psicologia, Pesquisadora responsável</div>
+      <div class="rodape-puc">
+        <img class="puc-logo" src="puc-minas-logo.png" alt="PUC Minas" onerror="this.style.display='none'">
+        <div class="selo-puc">
+          <div class="circulo">PUC</div>
+          <div class="texto">PUC Minas<span>Curso de Psicologia</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

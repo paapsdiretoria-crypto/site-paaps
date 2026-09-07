@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Convite à Roda de Equipe — verso</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --olive-dark:#5f6329;
+    --olive:#9a9c40;
+    --olive-soft:#aeb058;
+    --cream:#faf5e6;
+    --cream-dim:#e9e2c8;
+    --orange:#d1531f;
+    --orange-dark:#a53f16;
+    --ink:#3a3111;
+    --whatsapp:#25d366;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:#d8d8c2}
+  body{font-family:'Nunito',sans-serif;display:flex;justify-content:center;align-items:flex-start}
+
+  .page{
+    width:210mm;height:297mm;
+    position:relative;
+    overflow:hidden;
+    background:
+      radial-gradient(circle at 90% 6%, rgba(255,255,255,0.10), transparent 45%),
+      radial-gradient(circle at 4% 96%, rgba(0,0,0,0.14), transparent 50%),
+      linear-gradient(160deg, var(--olive-soft) 0%, var(--olive) 55%, var(--olive-dark) 100%);
+    padding:16mm 16mm 14mm 16mm;
+    display:flex;
+    flex-direction:column;
+    color:var(--cream);
+  }
+
+  /* textura oficial PAAPS (identidade-visual/04-texturas), nunca inventar padrão novo */
+  .textura{
+    position:absolute;inset:0;pointer-events:none;
+    background-image:url("../../../insumos-compartilhados/identidade-visual/04-texturas/Paaps - Textura 1 branco-8.png");
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:140%;
+    opacity:.5;
+  }
+
+  h1{
+    font-family:'Baloo 2',sans-serif;
+    font-weight:800;
+    font-size:30pt;
+    line-height:1.06;
+    color:var(--cream);
+    position:relative;z-index:2;
+    max-width:150mm;
+  }
+  .lead{
+    margin-top:4.5mm;
+    font-size:12pt;
+    line-height:1.5;
+    color:rgba(250,245,230,0.92);
+    max-width:150mm;
+    position:relative;z-index:2;
+  }
+
+  .card{
+    position:relative;z-index:2;
+    margin-top:8mm;
+    background:#ffffff;
+    border-radius:7mm;
+    padding:8mm 9mm 9mm;
+    box-shadow:0 4mm 8mm rgba(0,0,0,0.20);
+    display:flex;
+    align-items:center;
+    gap:8mm;
+    align-self:stretch;
+  }
+  .card .info{flex:1}
+  .card .selo-wa{
+    display:inline-flex;align-items:center;gap:2.2mm;
+    background:rgba(37,211,102,0.12);
+    color:#188a44;
+    font-weight:800;font-size:8.6pt;
+    padding:1.6mm 3.4mm;
+    border-radius:99px;
+    margin-bottom:2.6mm;
+  }
+  .card .selo-wa .ponto{width:2mm;height:2mm;border-radius:50%;background:var(--whatsapp)}
+  .card h2{
+    font-family:'Baloo 2',sans-serif;
+    font-weight:700;
+    font-size:15pt;
+    color:var(--ink);
+    line-height:1.2;
+  }
+  .card p.sub{
+    font-size:9.6pt;
+    color:#6b6842;
+    margin-top:1.6mm;
+    font-weight:700;
+  }
+  .card .instrucao{
+    margin-top:4mm;
+    font-size:9pt;
+    color:#615c33;
+    line-height:1.45;
+    max-width:70mm;
+  }
+  .qr-box{
+    flex-shrink:0;
+    width:42mm;height:42mm;
+    background:#fff;
+    border:0.5mm solid #eee6cf;
+    border-radius:4mm;
+    display:flex;align-items:center;justify-content:center;
+    padding:2mm;
+  }
+  .qr-box img{width:100%;height:100%;display:block}
+
+  h3.pergunta{
+    position:relative;z-index:2;
+    margin-top:9mm;
+    font-family:'Baloo 2',sans-serif;
+    font-weight:700;
+    font-size:17pt;
+    line-height:1.3;
+    color:var(--cream);
+    max-width:150mm;
+  }
+
+  ul.pontos{
+    position:relative;z-index:2;
+    margin-top:6mm;
+    list-style:none;
+  }
+  ul.pontos li{
+    display:flex;
+    gap:4mm;
+    padding:3.4mm 0;
+    border-bottom:0.3mm solid rgba(255,255,255,0.16);
+    font-size:11pt;
+    line-height:1.45;
+    color:var(--cream);
+  }
+  ul.pontos li:last-child{border-bottom:none}
+  ul.pontos li .marca{
+    flex-shrink:0;
+    width:6mm;height:6mm;
+    border-radius:50%;
+    background:var(--orange);
+    display:flex;align-items:center;justify-content:center;
+    color:#fff;font-weight:800;font-size:9pt;
+    margin-top:0.5mm;
+  }
+
+  .spacer{flex:1}
+
+  .callout{
+    position:relative;z-index:2;
+    margin-top:8mm;
+    background:linear-gradient(135deg, var(--orange) 0%, var(--orange-dark) 100%);
+    border-radius:6mm;
+    padding:7mm 9mm;
+    box-shadow:0 3mm 6mm rgba(0,0,0,0.18);
+  }
+  .callout p{
+    font-family:'Baloo 2',sans-serif;
+    font-weight:700;
+    font-size:15pt;
+    line-height:1.32;
+    color:#fff;
+  }
+
+  .rodape{
+    position:relative;z-index:2;
+    margin-top:8mm;
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+  }
+  .selo-puc{
+    display:flex;align-items:center;gap:3mm;
+    background:rgba(0,0,0,0.18);
+    border:0.35mm solid rgba(255,255,255,0.25);
+    border-radius:99px;
+    padding:2.6mm 5mm 2.6mm 3mm;
+  }
+  .selo-puc .circulo{
+    width:9mm;height:9mm;border-radius:50%;
+    background:var(--cream);
+    color:var(--olive-dark);
+    font-family:'Baloo 2',sans-serif;font-weight:800;font-size:7.4pt;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .selo-puc .texto{font-size:8pt;line-height:1.25;color:var(--cream);font-weight:700}
+  .selo-puc .texto span{display:block;font-weight:400;opacity:.85;font-size:7.4pt}
+
+  .rodape-puc{
+    display:flex;flex-direction:column;align-items:flex-end;gap:2.4mm;
+  }
+  .rodape-puc .puc-logo{
+    height:16mm;width:auto;
+    display:block;
+    filter:drop-shadow(0 1mm 2mm rgba(0,0,0,0.25));
+  }
+
+  @media print{
+    @page{size:210mm 297mm;margin:0}
+    html,body{background:none}
+    .page{width:210mm;height:297mm}
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+    <div class="textura"></div>
+
+    <h1>Entre no grupo do WhatsApp</h1>
+    <p class="lead">Um convite a um momento de cuidado coletivo com a equipe do CRAS.</p>
+
+    <div class="card">
+      <div class="info">
+        <div class="selo-wa"><span class="ponto"></span>GRUPO DO WHATSAPP</div>
+        <h2>Cuidar do CRAS<br>Vila Betânia</h2>
+        <p class="sub">Aponte a câmera do celular para o QR code</p>
+        <p class="instrucao">Ou peça o link a quem organizou a visita, se preferir digitar.</p>
+      </div>
+      <div class="qr-box">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=400x400&margin=6&data=https%3A%2F%2Fchat.whatsapp.com%2FKHMhzcH766r6YQwJ0QfQwa%3Fmode%3Dgi_t" alt="QR code do grupo do WhatsApp">
+      </div>
+    </div>
+
+    <h3 class="pergunta">Alguns pontos importantes:</h3>
+
+    <ul class="pontos">
+      <li><span class="marca">1</span>A Roda integra uma pesquisa acadêmica, orientada por um professor da PUC Minas.</li>
+      <li><span class="marca">2</span>Tem duração de 1 hora, podendo a equipe solicitar uma roda adicional ao final, se desejar.</li>
+      <li><span class="marca">3</span>O grupo é limitado a 12 participantes.</li>
+      <li><span class="marca">4</span>A participação é voluntária, mediante autorização por escrito, com uso anônimo do conteúdo só para fins da pesquisa. Todos os detalhes e documentos serão apresentados e explicados no próprio dia.</li>
+    </ul>
+
+    <div class="spacer"></div>
+
+    <div class="callout">
+      <p>O propósito central deste encontro é cuidar de quem cuida, fortalecendo a saúde mental da equipe.</p>
+    </div>
+
+    <div class="rodape">
+      <div class="rodape-puc">
+        <img class="puc-logo" src="puc-minas-logo.png" alt="PUC Minas" onerror="this.style.display='none'">
+        <div class="selo-puc">
+          <div class="circulo">PUC</div>
+          <div class="texto">PUC Minas<span>Curso de Psicologia</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
