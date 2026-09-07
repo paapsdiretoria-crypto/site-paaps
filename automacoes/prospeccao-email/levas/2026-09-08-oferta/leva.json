@@ -113,6 +113,12 @@
       "arquivo": "020-prefeitura-de-taiobeiras.md",
       "para": "gestaosaude@taiobeiras.mg.gov.br",
       "leadPageId": "3a744cb5-2e00-81fc-8857-d5f9dc2829bf"
+    },
+    {
+      "lead": "Associação Mineira de Municípios (AMM)",
+      "arquivo": "021-amm-associacao-mineira-de-municipios.md",
+      "para": "amm@amm-mg.org.br",
+      "leadPageId": "38644cb5-2e00-80db-9cae-f1f7b80c78cd"
     }
   ],
   "intervaloMinutos": 5

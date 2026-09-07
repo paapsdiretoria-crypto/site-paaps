@@ -2,7 +2,7 @@
 Quem segura a equipe quando ninguém fala que está mal?
 
 ## Corpo
-Prezados,
+À Secretaria Municipal de Saúde de Santo Antônio do Itambé,
 
 Você sabia que os afastamentos por transtornos mentais no Brasil dobraram nos últimos dez anos? Na maioria das redes públicas municipais existem afastamentos por saúde mental em que a pessoa atravessou tudo sozinha, sem que a rede em volta percebesse. **Isso não é um problema exclusivo da sua rede.**
 
