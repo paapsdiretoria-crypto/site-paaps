@@ -199,10 +199,16 @@
   .rodape-puc{
     display:flex;flex-direction:column;align-items:flex-end;gap:2.4mm;
   }
-  .rodape-puc .puc-logo{
-    height:16mm;width:auto;
+  .puc-logo-card{
+    background:#fff;
+    border-radius:2.2mm;
+    padding:2mm 3.4mm;
+    box-shadow:0 1mm 2.4mm rgba(0,0,0,0.22);
+    display:flex;align-items:center;
+  }
+  .puc-logo-card img{
+    height:11mm;width:auto;
     display:block;
-    filter:drop-shadow(0 1mm 2mm rgba(0,0,0,0.25));
   }
 
   @media print{
@@ -248,7 +254,7 @@
 
     <div class="rodape">
       <div class="rodape-puc">
-        <img class="puc-logo" src="puc-minas-logo.png" alt="PUC Minas" onerror="this.style.display='none'">
+        <div class="puc-logo-card"><img src="puc-minas-logo.png" alt="PUC Minas"></div>
         <div class="selo-puc">
           <div class="circulo">PUC</div>
           <div class="texto">PUC Minas<span>Curso de Psicologia</span></div>
