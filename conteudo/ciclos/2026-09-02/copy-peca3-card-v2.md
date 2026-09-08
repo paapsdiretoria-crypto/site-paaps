@@ -53,7 +53,7 @@ porque é honesto dizer que ela existe: se o Crítico de Conteúdo (ou a Mallu) 
 não é "cena" o suficiente para satisfazer o espírito da regra 3, a alternativa seguinte não seria
 mais uma tentativa de encarnação textual, e sim pedir à Tecelã uma mediação de campo nova (um
 relato real de sobrecarga de cuidador familiar, se existir no material dela ou em comentário
-público do perfil) — isso eu não tenho autorização para fabricar sozinho.
+público do perfil): isso eu não tenho autorização para fabricar sozinho.
 
 ---
 
@@ -69,9 +69,9 @@ público do perfil) — isso eu não tenho autorização para fabricar sozinho.
 > Isso não é falha da sua família: é a mesma transição que fez o Brasil envelhecer, e deixou cada
 > vez menos parentes para dividir esse cuidado. Entre 2012 e 2025, a população com 60 anos ou mais
 > saiu de 22,2 milhões para 35,2 milhões: já são 16,6% do país. A rede pública que podia dividir
-> esse peso cresceu onde o Estado já investia mais forte, décadas atrás: há centro-dia para idoso
-> em São Paulo, no Rio de Janeiro, em Belo Horizonte. *Não em Maceió, não em João Pessoa.* Essa
-> desigualdade tem nome: uma decisão de décadas atrás.
+> esse peso cresceu onde o Estado escolheu investir mais forte, décadas atrás: há centro-dia para
+> idoso em São Paulo, no Rio de Janeiro, em Belo Horizonte. *Não em Maceió, não em João Pessoa.*
+> Essa desigualdade tem nome: uma escolha do Estado, tomada décadas atrás.
 
 **Fonte (rodapé, Helvetica, canto inferior esquerdo, cada linha amarrada à afirmação que sustenta):**
 
@@ -163,8 +163,8 @@ origem for conhecida; sem origem rastreável, a linha de crédito sai, nunca se 
 ## Legenda
 
 > O Brasil envelheceu rápido. As famílias, para dividir esse cuidado, ficaram pequenas ainda mais
-> rápido. Enquanto isso, a rede pública que podia entrar nessa conta cresceu só onde o Estado já
-> investia forte, décadas atrás.
+> rápido. Enquanto isso, a rede pública que podia entrar nessa conta cresceu só onde o Estado
+> escolheu investir forte, décadas atrás.
 >
 > Nem toda cidade tem centro-dia pra idoso. Nem toda família tem gente sobrando pra cuidar
 > sozinha.
@@ -230,7 +230,7 @@ que ele usaria (`voz-paaps.md`, `modelos-slide-paaps.md`, o checklist completo d
 achado bloqueante nos critérios objetivos: fonte rastreável nos três números e na alegação de
 cidade (herdada, já validada), tese única, "não é X, é Y" usado uma vez só e com X real e nomeado,
 zero travessão, zero chapéu, zero case nomeado, zero vocabulário coachesco, sujeito estrutural
-nomeado ("o Estado já investia mais forte"), uma frase de impacto por camada (Lei 5 respeitada).
+nomeado ("o Estado escolheu investir mais forte"), uma frase de impacto por camada (Lei 5 respeitada).
 O único ponto que a v1 já tinha registrado como limitação aceita, e que continua aqui, é a
 ausência de voz humana real (M4): um card único de duas camadas de texto não tem onde encaixar
 uma citação sem descaracterizar o formato, e a rodada 2 anterior do crítico real já havia tratado
