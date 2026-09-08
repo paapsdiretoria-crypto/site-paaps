@@ -1,7 +1,7 @@
 # Tecelã — Peça 1 (carrossel): INSS perdeu 56% dos servidores, onda de burnout
 
 ## O fenômeno desnaturalizado
-24 mil vagas perdidas em 20 anos (56% do quadro do INSS) não é o tamanho natural de uma autarquia grande demais. É resultado acumulado de decisão orçamentária repetida, governo após governo: não repor o quadro na velocidade em que se esvaziava. A fila (de 1,08 milhão de pessoas em dez/2022 para 3,1 milhões em fev/2026) é a fotografia tardia desse acúmulo. Frase-núcleo: o Brasil poderia ter planejado a reposição desse quadro na mesma velocidade em que cresceu a demanda. Não era destino.
+24 mil vagas perdidas em 20 anos (56% do quadro do INSS) não é o tamanho natural de uma autarquia grande demais. É resultado acumulado de decisão orçamentária repetida, governo após governo: não repor o quadro na velocidade em que se esvaziava. Os requerimentos de benefício (de 798 mil em jun/2023 para mais de 1 milhão em dez/2025, alta de 26%) são a fotografia tardia desse acúmulo. Frase-núcleo: o Brasil poderia ter planejado a reposição desse quadro na mesma velocidade em que cresceu a demanda. Não era destino.
 
 ## A contradição
 A instituição que tem o monopólio de reconhecer oficialmente que o trabalho adoeceu a mente de um brasileiro (com laudo, com direito, com benefício) organiza o próprio trabalho de quem faz esse reconhecimento de um jeito que o adoece do mesmo jeito. Entre 2024 e 2025, pelo menos 1.871 servidores do INSS foram afastados por transtorno mental ou comportamental. Os lados se produzem: menos servidores → mais fila → mais carga sobre quem ficou → mais adoecimento → menos servidores.
@@ -16,7 +16,7 @@ O INSS é o núcleo do sistema de proteção social de quem trabalha no Brasil: 
 4. A fila tem número público; o servidor que adoece não tem indicador público equivalente. Fica invisível pela mesma lógica de medição que ele aplica aos outros.
 
 ## O movimento
-Vinte anos de erosão lenta e silenciosa chegaram ao ponto em que a fila triplicou em 3 anos, virou manchete, virou CPI. O que era gerido internamente sem visibilidade passou a exigir resposta pública. Em aberto: se as 8.500 vagas novas repetem o mesmo desenho de trabalho que já produziu quase 1.900 afastamentos em 2 anos, o salto se repete em escala maior.
+Vinte anos de erosão lenta e silenciosa chegaram ao ponto em que os requerimentos de benefício subiram 26% em menos de 3 anos e a fila total bateu 3 milhões de processos, virou manchete, virou CPI. O que era gerido internamente sem visibilidade passou a exigir resposta pública. Em aberto: se as 8.500 vagas novas repetem o mesmo desenho de trabalho que já produziu quase 1.900 afastamentos em 2 anos, o salto se repete em escala maior.
 
 ## Conexão inusitada
 O INSS é, ao mesmo tempo, o único lugar do Brasil que confere carimbo oficial ao sofrimento psíquico do trabalho, e um dos lugares, dentro do próprio Estado, onde esse sofrimento mais cresce e menos recebe o mesmo carimbo. Não é hipocrisia de gestor: é a máquina de leitura de laudos, incapaz de ler o próprio laudo.
@@ -29,7 +29,14 @@ Sofrimento ético-político (Sawaia) ou sofrimento social (Minayo).
 
 ## Dados para o Copywriter usar (fonte única: Agência Pública, mar/2026, republicado por Sinssp e Seaac Campinas)
 - INSS perdeu 24 mil vagas em 20 anos (56% do quadro).
-- Fila: 1,08 milhão (dez/2022) → 3,1 milhões (fev/2026).
+- **Correção de 08/09/2026, verificada direto na fonte (o número anterior aqui, "fila de 1,08 milhão em
+  dez/2022 para 3,1 milhões em fev/2026, triplicou em 3 anos", não existe no artigo e foi removido):**
+  o artigo cita duas métricas diferentes, não comparáveis entre si, e nenhuma delas sustenta "triplicou":
+  (a) **requerimentos de benefício:** 798 mil (jun/2023) → mais de 1 milhão (dez/2025), alta de 26%;
+  (b) **fila total de processos aguardando análise** (inclui manutenção de benefícios, revisões, perícias
+  antifraude e recursos, não só requerimentos novos): "3 milhões", citado sem baseline anterior no
+  artigo (mar/2026). Use (a) quando precisar de evolução no tempo com dois pontos comparáveis; use (b)
+  isolado, sem comparar com (a), se precisar do tamanho absoluto da fila hoje.
 - Pelo menos 1.871 servidores do INSS afastados por transtorno mental/comportamental entre 2024-2025.
 - INSS pediu concurso para 8.500 vagas novas em 2026.
 - Há CPI investigando o órgão.

@@ -306,8 +306,9 @@ ficar legível.
 > O piso subiu em 2026. O tanto de gente que uma só Agente Comunitária de Saúde ainda cobre
 > sozinha, 750 pessoas, não subiu junto.
 >
-> No seu município, o que falta primeiro pra Agente Comunitária de Saúde ficar: salário, gente
-> pra dividir o território, ou apoio de enfermagem pra quem herdou a tarefa sem herdar o cargo?
+> Se você trabalha nessa rede, sabe que a resposta não é só salário. Conta pra gente, no
+> comentário: o que teria feito diferença pra uma Agente Comunitária de Saúde não sair no
+> primeiro ano, na sua cidade?
 >
 > A rede pública mais espalhada do mundo entra em cada casa porque alguém do próprio bairro
 > bate na porta. Isso, nenhuma meta sabe contar.
