@@ -1,0 +1,11 @@
+{
+  "cartas": [
+    {
+      "lead": "CISCEN - Consórcio Intermunicipal de Saúde do Centro Nordeste (correção de endereço)",
+      "arquivo": "001-ciscen.md",
+      "para": "saude@ciscen.mg.gov.br",
+      "leadPageId": "3be44cb5-2e00-81da-805d-fdc6b2274edc"
+    }
+  ],
+  "intervaloMinutos": 1
+}
