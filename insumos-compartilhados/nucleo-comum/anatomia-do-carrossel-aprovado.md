@@ -174,6 +174,15 @@ termo de política pública que o público de gestão não domina de cor ("prese
 "Acolhe Mais") nunca aparece só nomeado: vem com o que ele significa na prática, no mesmo
 fôlego.
 
+**Correção de 08/09/2026, peça do INSS.** Termo técnico ou metáfora sem tradução é sintoma de
+uma causa mais funda: a peça usou material já comprimido e analítico da Tecelã (frase pronta,
+mediação institucional) como abertura, sem antes encarnar a mediação que descreve cena ou
+vivência concreta. O teste não é só "isto está explicado?": é "existe, antes desta frase, uma
+cena que faz o leitor sentir que já viveu isto, antes de a peça cobrar dele uma indignação
+institucional"? Frase pronta e conexão inusitada da Tecelã são material de fechamento ou meio,
+já comprimido por ela; nunca abertura sem transformação. Ver `copywriter-paaps.md`, "Como se
+escreve para o slide", regra 3, e `critico-conteudo.md`, item 14 do checklist.
+
 **Notícia recente vira o dado do slide de número quando ela citar uma estatística
 verificável e datada** — não basta ela existir, ela precisa efetivamente conter o número que
 o slide vai usar (ex.: 75% do trabalho de cuidado não remunerado, citado pelo próprio Acolhe
