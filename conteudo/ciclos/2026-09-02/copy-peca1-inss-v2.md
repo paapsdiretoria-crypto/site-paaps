@@ -65,7 +65,7 @@ lastro. Objetivo estratégico é diagnóstico em comentário, não clique em lin
 
 ---
 
-## Os 8 slides
+## Os 9 slides
 
 ### Slide 1 : Capa
 **Modelo:** M1, capa-pergunta (variante clássica, três blocos de escala decrescente).
@@ -175,7 +175,7 @@ entre eles.
 **Texto:**
 
 > *(CAPS)* EM VINTE ANOS, GOVERNO APÓS GOVERNO, POR ESCOLHA ORÇAMENTÁRIA REPETIDA, SEM REPOR O
-> QUADRO NA MESMA VELOCIDADE EM QUE ELE SE ESVAZIAVA,
+> QUADRO NO MESMO RITMO EM QUE ELE FOI FICANDO VAZIO,
 >
 > *(desfecho, caixa alta e baixa)* o INSS perdeu **56%** dos servidores públicos que já teve: 24
 > mil vagas a menos.
@@ -200,19 +200,25 @@ vazias atrás do balcão, luz apagada num dos postos.
 ### Slide 5 : Prova (dado em card, mediação 1 continuada)
 **Modelo:** M5, dado em card.
 
+**Correção de dado (rodada 2, 08/09/2026):** o número "1,08 milhão → 3,1 milhões, triplicou em três
+anos" não existe na fonte e foi removido (achado bloqueante do Crítico de Conteúdo, rodada 1). A
+Tecelã já corrigiu a própria lista de dados; uso aqui o dado (a) dela, requerimentos de benefício,
+que tem baseline e ponto final comparáveis dentro do mesmo artigo, sem reconstruir comparação que
+a fonte não sustenta.
+
 **Texto:**
 
-> *(CAPS)* A FILA PRA CONSEGUIR ESSE RECONHECIMENTO **TRIPLICOU** EM TRÊS ANOS.
+> *(CAPS)* O PEDIDO POR ESSE RECONHECIMENTO SUBIU **26%** EM MENOS DE TRÊS ANOS.
 >
-> *(card creme, caixa alta e baixa)* De 1,08 milhão de pedidos parados, em dezembro de 2022, para
-> 3,1 milhões, em fevereiro de 2026.
+> *(card creme, caixa alta e baixa)* De 798 mil requerimentos de benefício, em junho de 2023, para
+> mais de 1 milhão, em dezembro de 2025.
 >
 > *(pé do card)* Agência Pública, mar. 2026.
 
-**Destaque:** amarelo + negrito só em "TRIPLICOU".
+**Destaque:** amarelo + negrito só em "26%".
 
-**Foto:** sala de espera de agência do INSS lotada, pessoas em pé por falta de assento, painel de
-senha ao fundo mostrando número alto, sensação de tempo de espera.
+**Foto:** sala de espera de agência do INSS lotada, pessoas preenchendo formulário ou aguardando
+atendimento, painel de senha ao fundo, sensação de fluxo de gente que não para de chegar.
 
 **Crédito da foto:** idem regra geral.
 
@@ -225,8 +231,8 @@ senha ao fundo mostrando número alto, sensação de tempo de espera.
 
 > *(CAPS)* QUANTO MENOS GENTE SOBRA PRA LER ESSE SOFRIMENTO TODO,
 >
-> *(desfecho, caixa alta e baixa)* mais fila se acumula, que vira meta de mutirão, que aperta
-> ainda mais quem ficou, até quem ficou também **adoecer**: e o círculo se fecha sozinho.
+> *(desfecho, caixa alta e baixa)* mais fila se acumula, que vira meta de mutirão, que sobrecarrega
+> ainda mais quem restou, até quem restou também **adoecer**: e o círculo se fecha sozinho.
 
 **Destaque:** amarelo + negrito só em "adoecer".
 
@@ -242,7 +248,7 @@ ao fundo atendendo mais uma pessoa na fila. Precisa transmitir acúmulo constant
 
 **Texto:**
 
-> *(entrada, CAPS, sem destaque de cor)* A FILA TEM NÚMERO PÚBLICO, ATUALIZADO TODO MÊS.
+> *(entrada, CAPS, sem destaque de cor)* TODO MÊS, A FILA GANHA UM NÚMERO NOVO, PÚBLICO.
 >
 > *(virada, fonte display arredondada)* o sofrimento de quem lê essa fila inteira **não tem
 > indicador nenhum**.
@@ -256,8 +262,8 @@ ao fundo atendendo mais uma pessoa na fila. Precisa transmitir acúmulo constant
 > *(enquadre institucional, CAPS, sem destaque de cor)* A MÁQUINA QUE RECONHECE O SOFRIMENTO DO
 > PAÍS INTEIRO NUNCA APRENDEU A RECONHECER O PRÓPRIO.
 
-**Destaque:** amarelo + negrito só em "não tem indicador nenhum". Único slide onde a "fila tem
-número público" é dita, evitando a duplicata quase literal que a v1 cometeu entre os slides 1 e 7.
+**Destaque:** amarelo + negrito só em "não tem indicador nenhum". Único slide onde o número público
+da fila é mencionado, evitando a duplicata quase literal que a v1 cometeu entre os slides 1 e 7.
 
 **Foto:** mãos de uma servidora carimbando ou assinando um documento oficial numa mesa de perícia
 ou atendimento; cena literal e real do ato de reconhecimento oficial, não usada como metáfora
@@ -268,8 +274,12 @@ o texto nomeia o mecanismo em termos literais).
 
 ---
 
-### Slide 8 : Fechamento (número gigante + movimento + pergunta diagnóstica)
+### Slide 8 : O número (mediação 2 + movimento da Tecelã, um destaque só)
 **Modelo:** M6, número gigante.
+
+**Correção rodada 2 (achado 4 do Crítico):** este slide fundia número gigante com pergunta+CTA,
+dois destaques em amarelo no mesmo momento de leitura. Separado em dois slides: este carrega só o
+dado e o movimento; a proposição vira o slide 9, sozinha.
 
 **Texto:**
 
@@ -283,18 +293,9 @@ o texto nomeia o mecanismo em termos literais).
 > elas chegarem organizadas do mesmo jeito que as anteriores, o salto que já tirou 1.871 pessoas
 > da ativa se repete, maior.
 >
-> *(pergunta final)* QUE OUTRO SERVIÇO, NA SUA REDE, TAMBÉM LÊ O SOFRIMENTO ALHEIO TODO DIA E
-> NUNCA MEDIU O PRÓPRIO?
->
 > *[rodapé]* Agência Pública, mar. 2026.
 
-**Destaque:** amarelo + negrito no número "1.871"; amarelo + sublinhado na pergunta final. São
-dois elementos de cor no mesmo slide (número + pergunta), o que em geral quebraria a Lei 4; aqui
-se justifica porque o número é o dado do modelo M6 (obrigatório por definição do próprio modelo)
-e a pergunta é o fechamento da peça inteira, não uma segunda frase de impacto competindo pelo
-mesmo momento de leitura: são dois momentos sequenciais do mesmo slide (dado, depois proposição),
-não dois murros simultâneos. Se o Aplicador Visual achar que isso pesa demais num único slide,
-pode ser a exceção que separa este slide em dois; sinalizado aqui para ele decidir com contexto.
+**Destaque:** amarelo + negrito só no número "1.871". Nenhum outro elemento de cor no slide.
 
 **Foto:** fachada ou entrada de uma agência do INSS ao entardecer, placa oficial visível, ou a
 fila vista de longe esvaziando ao fim do expediente. Sensação de tempo passando, peso acumulado,
@@ -305,22 +306,50 @@ sangra até o fim do slide, com véu preto se precisar de contraste.
 
 ---
 
+### Slide 9 : Proposição (pergunta diagnóstica, fechamento da peça)
+**Modelo:** M1, capa-pergunta (variante de fechamento, um bloco só).
+
+**Texto:**
+
+> *(pergunta final, CAPS)* QUE OUTRO SERVIÇO, NA SUA REDE, TAMBÉM LÊ O SOFRIMENTO ALHEIO TODO DIA
+> E NUNCA MEDIU O PRÓPRIO?
+
+**Destaque:** amarelo + sublinhado só em "PRÓPRIO", a última palavra. Único elemento de cor no
+slide; nada compete com a pergunta.
+
+**Foto:** cena de outro serviço público, não o INSS (mesa de trabalho de equipe de CRAS, CAPS ou
+UBS, gente reunida em plantão ou atendimento), estética visivelmente diferente da agência
+previdenciária usada nos slides anteriores, para sinalizar que a pergunta se abre pra qualquer
+rede, não só a que a peça acabou de descrever.
+
+**Crédito da foto:** idem regra geral.
+
+---
+
 ## Legenda
 
-> Ela lê, todo dia, o sofrimento documentado de gente que nunca vai conhecer, um processo atrás
-> do outro, sem tempo de processar o que acabou de ler.
+**Correção rodada 2 (achados 1 e 3 do Crítico):** a legenda anterior era colagem de frases dos
+slides 1, 3, 5 e 7 (inclusive o dado fabricado do slide 5 antigo) e duplicava o slide 7 inteiro.
+Reescrita abaixo com vocabulário próprio, sem repetir nenhuma sequência de 5+ palavras já usada em
+algum slide, e com o dado corrigido do slide 5 (requerimentos, alta de 26%, não "triplicou").
+
+> Ela lê um caso, decide se aquilo chega pra virar direito, e já parte pro seguinte. Não sobra
+> intervalo pra respirar entre um relato e o próximo, nem alguém por perto pra comentar o que
+> acabou de ver.
 >
-> Isso é trabalho. E o INSS nunca mediu o custo disso pra quem faz.
+> O INSS é a única porta do país com esse poder de reconhecimento. Em vinte anos, o próprio órgão
+> perdeu mais da metade do quadro de servidores públicos: 24 mil vagas que nunca voltaram.
 >
-> Em vinte anos, o próprio órgão perdeu 56% do quadro de servidores públicos. A fila pra
-> conseguir esse reconhecimento triplicou: de 1,08 milhão de pedidos parados, em dez. 2022, para
-> 3,1 milhões, em fev. 2026. Entre 2024 e 2025, pelo menos 1.871 servidores públicos do INSS
-> foram afastados por transtorno mental ou comportamental.
+> No mesmo período, o pedido por esse tipo de reconhecimento não parou de crescer: entre junho de
+> 2023 e dezembro de 2025, subiu 26%. Quem segurou essa fila, do lado de dentro, foi ficando
+> doente também: entre 2024 e 2025, o próprio INSS afastou quase duas mil pessoas do quadro por
+> transtorno psíquico ligado ao trabalho.
 >
-> A máquina que reconhece o sofrimento do país inteiro nunca aprendeu a reconhecer o próprio.
+> A fila ganha número novo todo mês. O cansaço de quem passa o dia inteiro lendo essa fila não
+> tem indicador algum.
 >
-> Comenta pra gente: que outro serviço, na sua rede, também lê o sofrimento alheio todo dia e
-> nunca mediu o próprio?
+> Comenta pra gente: em que outro lugar da sua rede alguém mede o sofrimento de todo mundo, e
+> nunca o próprio?
 >
 > Sofrimento ético-político (SAWAIA, 1999).
 
@@ -347,13 +376,24 @@ público, Agência Brasil/EBC), sempre com a mesma régua: documental real, gent
 reconhecíveis, nunca stock genérico. Se nenhuma fonte com crédito rastreável for encontrada para
 um slide específico, declarar a ausência de crédito em vez de inventar.
 
+**Exceção, adicionada na rodada 2:** o slide 9 é o único que sai do universo do INSS de propósito
+(a pergunta generaliza o diagnóstico pra qualquer rede pública). Pra esse slide, o acervo do
+Radilson Carlos Gomes ("Fotógrafo do SUS") serve normalmente: é exatamente a estética de
+UBS/CAPS/CRAS que o slide pede, em contraste com a estética previdenciária dos slides 1 a 8.
+
 ## Onde o raciocínio da Tecelã ficou apertado
 
 Nenhum ponto amputado nesta reescrita: as quatro mediações entram todas, cada uma no slide certo
 da arquitetura (triagem no topo deste arquivo), a frase pronta permanece de fechamento/meio,
 comprimida e nomeada em vez de citada verbatim como abertura, e a conexão inusitada (a máquina que
 lê o laudo do país e não lê o próprio) fecha a virada do slide 7, sem repetir o dado da fila duas
-vezes como a v1 fez. O único ponto de tensão real: o slide 8 carrega dois elementos de destaque em
-amarelo (número + pergunta), o que a Lei 4 do catálogo normalmente proíbe; justifiquei a exceção
-no próprio slide, porque separá-los custaria a força do fechamento em número + movimento + pergunta
-como um só gesto. Se o Crítico de Conteúdo achar isso insuficiente, é o primeiro ponto que reviso.
+vezes como a v1 fez.
+
+**Atualização rodada 2:** os quatro achados do Crítico foram corrigidos. O dado fabricado do slide
+5 foi substituído pelo dado real da Tecelã (requerimentos, alta de 26%, jun/2023 a dez/2025), sem
+reconstruir comparação que a fonte não sustenta. As três formulações da Tecelã reaproveitadas
+quase literalmente (slides 4, 6 e 7) foram reescritas com palavras próprias, mantendo a ideia. A
+legenda foi reescrita do zero, sem colar trechos dos slides. E o slide 8 (que fundia número
+gigante e pergunta+CTA num só destaque duplo) virou dois slides, 8 e 9, cada um com um destaque
+em amarelo só. Nenhuma mediação da Tecelã mudou de sentido nessas correções: mudou a forma, nunca
+a densidade.
