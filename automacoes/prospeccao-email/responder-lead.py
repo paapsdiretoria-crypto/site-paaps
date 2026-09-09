@@ -17,9 +17,13 @@ O que ela faz, e por que cada passo existe:
 
 Uso:
   python3 responder-lead.py --para saude@x.mg.gov.br --assunto "Re: ..." \
-      --corpo respostas/arquivo.html [--enviar]
+      --corpo respostas/arquivo.html [--cc "a@x.com, b@x.com"] [--enviar]
 
 Sem --enviar, faz tudo menos disparar: monta, salva a prévia e mostra o que sairia.
+
+--cc existe para responder a uma thread em que o remetente pôs outras pessoas em
+cópia: responder só para quem assinou tira as outras da conversa. Aceita vários
+endereços separados por vírgula.
 """
 
 import argparse, imaplib, smtplib, ssl, time, email, sys
@@ -100,6 +104,7 @@ def pasta_enviados(imap):
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("--para", required=True)
+    p.add_argument("--cc", default="", help="endereços em cópia, separados por vírgula")
     p.add_argument("--assunto", required=True)
     p.add_argument("--corpo", required=True, help="arquivo HTML com o corpo (fragmento)")
     p.add_argument("--enviar", action="store_true")
@@ -135,6 +140,10 @@ def main():
     msg = EmailMessage()
     msg["From"] = REMETENTE
     msg["To"] = a.para
+    if a.cc:
+        # send_message() lê o cabeçalho Cc e inclui esses endereços na entrega SMTP,
+        # então basta declarar aqui.
+        msg["Cc"] = a.cc
     msg["Subject"] = a.assunto
     msg["Date"] = formatdate(localtime=True)
     msg["Message-ID"] = make_msgid(domain="paaps.com.br")
