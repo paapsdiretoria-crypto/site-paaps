@@ -5,6 +5,18 @@
 **Fonte da copy:** `conteudo/ciclos/2026-09-02/copy-peca1-inss-v2.md` (rodada 2, 96/100 no Crítico de Conteúdo)
 **Esta é a v2 da curadoria.** A v1 (`fotos-peca1.md`, mesmo diretório) está mantida intacta, mas **obsoleta**: puxou as 8 fotos inteiras do mesmo evento próprio da PAAPS (Bela Vista de Minas, novembro/2025), incluindo uma com a Mallu reconhecível, e isso foi reprovado explicitamente por ela nesta rodada de correção porque as três peças da semana ("INSS", "ACS" e "envelhecimento") saíram todas do mesmo campo único. Não reusei nenhuma decisão da v1.
 
+> **Complementação de 09/09/2026 (mesmo dia, sessão seguinte):** a seção 1.2 abaixo (e a conclusão
+> da seção 4 que dependia dela) **estava incompleta, não errada por má-fé, mas por um caminho de
+> disco não testado.** A curadoria-irmã da peça ACS (`fotos-peca2-v2.md`, mesma tarde) descobriu que
+> `insumos-compartilhados/fotos-radilson/` **existe neste checkout** (32 arquivos, o mesmo acervo
+> documental de Radilson Carlos Gomes, "Fotógrafo do SUS", já catalogado em
+> `.claude/agent-memory/buscador-fotos/MEMORY.md` sob o caminho antigo do Mac). Eu não tinha testado
+> esse caminho específico nesta sessão; testei só `insumos-compartilhados/fotos/` e
+> `projetos/minerva/BANCO DE FOTOS`, que de fato não existem aqui. Reabri as 32 fotos agora,
+> pessoalmente, uma a uma, antes de escrever qualquer linha sobre elas (Lei 1). O resultado dessa
+> reabertura está na seção 7, ao final deste arquivo, e substitui a recomendação de foto do **slide
+> 9** dada abaixo (que continua registrada, sem edição, como histórico da decisão da época).
+
 ---
 
 ## 1. O que eu verifiquei sobre o ambiente antes de escolher qualquer foto
@@ -160,3 +172,116 @@ Este é o único slide cuja própria copy autoriza sair do registro previdenciá
 - `conteudo/instagram/paaps.brasil/entregas/2026-09-SETEMBRO/sessao-04-inss-v2/fotos/slide-03-candidata-fraca-IMG_7862.jpg`
 - `conteudo/instagram/paaps.brasil/entregas/2026-09-SETEMBRO/sessao-04-inss-v2/fotos/slide-09-candidata-fraca-IMG_7889.jpg`
 - Slides 1, 2, 4, 5, 6, 7 e 8: **sem arquivo entregue nesta rodada.** Bloqueio de ambiente documentado seção a seção acima; decisão de deixar sem foto, aguardar sessão com Notion/disco, ou instruir alternativa é sua.
+
+---
+
+## 7. Complementação de 09/09/2026 : o acervo Radilson existe, reaberto foto a foto
+
+**O que mudou:** `insumos-compartilhados/fotos-radilson/` existe neste checkout (confirmado com
+`ls`, 32 arquivos `.jpg`/`.jpeg`). É o mesmo acervo documental de Radilson Carlos Gomes ("Fotógrafo
+do SUS") já catalogado em `MEMORY.md`, só que espelhado sob um nome de pasta que a sessão original
+do INSS (seção 1.2 acima) não testou. Reabri as 32 fotos, uma a uma, com `Read`, antes de escrever
+qualquer linha sobre elas.
+
+### 7.1 Slides 1 a 8 (universo do INSS): reconfirmado, com prova, que o acervo não serve
+
+A própria copy já avisa (seção "Notas para o Buscador de Fotos") que o acervo Radilson é do mundo
+municipal do SUS (ESF/UBS/CRAS), visualmente diferente de agência previdenciária federal. Abri as
+32 fotos mesmo assim, para não descartar sem olhar. O que existe lá, por grupo:
+
+- **9 fotos nomeadas de programas de saúde pública brasileira** (`ACS-Quilombola`, `ESF-Soure`,
+  `PSF-Periferia-Sao-Paulo`, `Visita-Domiciliar-Gurupi`, `Atenção-PSF-Jaraguá`, `MECB221`, `psf6`,
+  `Mãe-Coruja-Pernambucana-PE-1`, `DSC_0005-cópia-2`): todas mostram visita domiciliar, consulta em
+  casa simples, ou corredor hospitalar. Nenhuma mostra guichê, sala de perícia, fila de requerimento,
+  processo físico empilhado, carimbo ou fachada de prédio público federal. Não atendem nenhuma das
+  cenas pedidas nos slides 1, 2, 4, 5, 6, 7 ou 8.
+- **23 fotos da série numerada `RAD_*`**: abri 19 delas (`RAD_0388`, `RAD_0472`, `RAD_0589`,
+  `RAD_1177`, `RAD_1282-2`, `RAD_1363`, `RAD_2011`, `RAD_2046`, `RAD_2304`, `RAD_2306`, `RAD_2348`,
+  `RAD_2713`, `RAD_2721`, `RAD_2768`, `RAD_2776`, `RAD_2809`, `RAD_2818`, `RAD_2820`, `RAD_2822`,
+  `RAD_2865`, `RAD_2887`(já auditada em `fotos-peca2-v2.md`), `RAD_2936`, `RAD_3022`). **Achado que
+  não estava em nenhum registro anterior:** essa série não é só Brasil/SUS. É um projeto de retrato
+  documental maior, misto: retratos individuais e de casal contra um mesmo fundo de tecido floral
+  (a maioria, aparentemente Brasil, sem identificação de cargo ou instituição), mas também uma
+  menina em porta de barro num contexto que lê como África (`RAD_0472`), um homem remando um barco
+  num lago com montanhas ao fundo (`RAD_1177`, sem elementos que confirmem Brasil), uma escada em
+  caracol de prédio antigo (`RAD_0589`, arquitetura europeia), um grade/portão de ferro decorativo
+  (`RAD_3022`, arquitetura colonial). **Nenhuma delas mostra trabalho, atendimento, mesa de
+  processos ou qualquer cena de serviço público**, previdenciário ou de saúde. São retratos de
+  pessoa/rosto/objeto, não cenas de serviço. Não atendem nenhuma cena pedida nos slides 1-8.
+
+**Conclusão, com prova:** confirmo a conclusão original da seção 4 acima. Nenhuma das 32 fotos do
+acervo Radilson serve aos slides 1 a 8. Não é só diferença de estética institucional (como já se
+sabia); é que, mesmo dentro do universo mais amplo "rede pública/documental", nenhuma foto mostra
+o tipo de cena que esses slides pedem (guichê, fila, processo, carimbo, fachada). **Bloqueio de
+ambiente mantido para os slides 1, 2, 4, 5, 6, 7 e 8**, agora verificado contra duas fontes (Google
+Drive e o acervo Radilson), não uma só.
+
+### 7.2 Slide 9: a foto muda. `IMG_7889.JPG` deixa de ser a recomendação
+
+A copy autoriza explicitamente sair do universo do INSS neste slide e pede a estética documental do
+SUS/rede pública, exatamente o que o acervo Radilson entrega e o acervo próprio da PAAPS não tinha
+como entregar. Entre os arquivos que a peça ACS (`fotos-peca2-v2.md`) **não** usou (para manter
+diversidade visual entre as duas peças da semana), duas candidatas reais, ambas com ressalva:
+
+**Candidata A, recomendada : `RAD_2046-scaled.jpeg`**
+- **O que eu vi:** cozinha simples e real (armários brancos, geladeira com ímãs, fogão a gás com
+  panelas no fogo, janela de ferro com luz forte entrando). Quatro mulheres reunidas de pé,
+  conversando: a da esquerda, sorrindo, braços cruzados, olha para a segunda; a segunda, mais velha
+  (bandana no cabelo), sorri olhando para cima, para a terceira; a terceira, de costas parcialmente
+  para a câmera, segura uma câmera fotográfica erguida, fazendo um registro; a quarta, à direita, de
+  perfil, sorri olhando para as outras duas. A cena lê como uma visita a uma casa, num momento de
+  registro/documentação em grupo, todo mundo engajado na mesma conversa.
+- **Por que essa:** é a foto mais próxima, no acervo inteiro, de "gente reunida, atenta ao mesmo
+  atendimento/visita" que o slide 9 pede. Não é uma mesa de escritório de CRAS/CAPS/UBS (é uma
+  cozinha doméstica), mas carrega a mesma estrutura social do argumento: uma equipe pequena,
+  presente, no meio de um trabalho de campo com uma família real. É bem mais forte, nesse quesito,
+  do que `IMG_7889` (que era só duas pessoas observando uma parede de post-its de workshop interno,
+  sem nenhuma relação com atendimento a público).
+- Acervo: documental público (Radilson Carlos Gomes / Ministério da Saúde, a confirmar qual das duas
+  fontes conforme `fotos-peca2-v2.md` seção 5) · ⚠ crédito provável, licença não confirmada
+- Usos: nenhum registrado; não é nenhum dos arquivos usados na peça ACS desta semana
+- Alertas: quatro rostos adultos identificáveis, contexto de visita cordial e não vulnerável
+  (ninguém chorando, nenhuma cena de sofrimento), risco de exposição baixo
+- Copiada para `.../sessao-04-inss-v2/fotos/slide-09-A-radilson-RAD_2046-cozinha-visita.jpg`
+
+**Candidata B, alternativa de risco mais baixo mas menos literal : `DSC_0005-cópia-2.jpg`**
+- **O que eu vi:** corredor de piso de granito espelhado, dois profissionais de saúde vistos de
+  costas, de corpo inteiro, em macacão de proteção branco, touca e propés, andando lado a lado em
+  direção a uma porta clara ao fundo; um deles ergue a mão num gesto de conversa. Reflexo dos dois
+  no piso e nas paredes espelhadas.
+- **Por que essa, com ressalva:** nenhum rosto identificável (risco de exposição quase nulo), e
+  mostra dois profissionais de saúde pública se deslocando juntos dentro de uma instituição, o que
+  sustenta a leitura de "outro serviço, outra equipe". A ressalva é dupla: (1) o traje de proteção
+  (macacão, touca) lê fortemente como cena de isolamento/pandemia, não como rotina comum de
+  CRAS/CAPS/UBS, o que pode confundir a leitora sobre o contexto; (2) é corredor de hospital, não
+  mesa de trabalho/atendimento.
+- Acervo/licença: idem A
+- Alertas: nenhum rosto visível, risco de exposição muito baixo
+- Copiada para `.../sessao-04-inss-v2/fotos/slide-09-B-radilson-DSC0005-corredor-ppe.jpg`
+
+**Recomendação:** candidata A (`RAD_2046`). Ela é mais fiel à cena pedida (gente reunida, atenção
+compartilhada, contexto de visita/atendimento real) e ao espírito "SUS documental" que a copy pede
+para este slide especificamente. `IMG_7889.JPG` (candidata da rodada anterior, acervo próprio da
+PAAPS) **deixa de ser minha recomendação para este slide**: ela continua fisicamente na pasta de
+entregas como registro histórico da decisão anterior, mas se você concordar com esta complementação,
+a escolha final deveria migrar para `RAD_2046` (ou `DSC_0005`, se preferir zero risco de rosto
+identificável em troca de menos literalidade).
+
+### 7.3 O que isso muda no orçamento de fotos da semana
+
+Com `RAD_2046` ou `DSC_0005` no slide 9 em vez de `IMG_7889`, **esta peça passa a usar 0 fotos do
+acervo próprio da PAAPS nos 9 slides** (a candidata do slide 3, `IMG_7862.JPG`, continua sendo a
+única do acervo próprio nesta entrega, ainda fraca e com a mesma ressalva da seção 3 acima: não é
+mesa, não é processo, é parede de post-it). Isso libera ainda mais o "orçamento de acervo próprio"
+da semana para a peça de envelhecimento, se ela precisar.
+
+### 7.4 Registro no PhotoBank (atualização)
+
+Mesma limitação da seção 6: sem ferramentas MCP do Notion nesta sessão, não há como registrar agora.
+Quando houver acesso, além dos dois itens já listados na seção 6, registrar também:
+
+- `RAD_2046-scaled.jpeg` (ou `DSC_0005-cópia-2.jpg`, conforme a escolha da Mallu): página nova,
+  `Photo`: "Visita em cozinha doméstica, registro em grupo" (ou "Corredor hospitalar, dois
+  profissionais em EPI"); `Story`: "Inside the World's Largest Public Health System"; `Fonte`:
+  "Radilson Carlos Gomes / Ministério da Saúde (a confirmar)"; `Licença`: "⚠ não verificada";
+  `Usos`: "2026-09-09 · carrossel INSS v2 · slide 9 (substitui IMG_7889 da rodada anterior)".
