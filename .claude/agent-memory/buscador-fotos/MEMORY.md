@@ -128,7 +128,66 @@ metadados, não desta etapa de curadoria pontual.
 
 ## Fotos que a Mallu rejeitou
 
-*(vazio; registrar a partir da primeira devolução dela)*
+- **08-09/09/2026: as 3 peças da semana de 02/09 (INSS, ACS, envelhecimento) foram reprovadas em
+  bloco** porque as fotos vieram todas de um único campo (`FOTOS BVMG ISAAC`, o workshop de Bela
+  Vista de Minas), incluindo fotos com a Mallu reconhecível como palestrante. Nas palavras dela:
+  "as fotos foram escolhidas TODAS de um só campo. ficou repetitida e como eu já te falei, as
+  fotos institucionais ou aquelas que eu apareço são cartuchos a serem usados com parcimônia."
+  **Regra prática daqui pra frente:** no máximo 1-2 fotos do mesmo evento/campo por peça, no
+  máximo 1 com a Mallu reconhecível, e — o mais importante — coordenar entre as peças da mesma
+  semana para não repetir o mesmo arquivo nem o mesmo campo em todas elas. Ver
+  `conteudo/ciclos/2026-09-02/fotos-peca1-v2.md` seção 5 para o modelo de como registrar isso
+  para a próxima peça da sequência.
+
+---
+
+## 09/09/2026 : confirmado de novo, com prova, que o Notion não está disponível em sandbox de nuvem
+
+Nesta sessão (curadoria da v2 da peça INSS), a lista de tools carregada era só
+`Read/Write/Edit/Bash/Google Drive` — nenhuma função MCP do Notion. Testei se a causa era rede
+bloqueada (para não confundir "sem ferramenta" com "webhook fora do ar"):
+
+```
+curl https://n8n.srv1850231.hstgr.cloud/webhook/photobank-resolver?page_id=test  → HTTP 500 (rede aberta, erro de workflow)
+curl https://api.notion.com/v1/search                                            → HTTP 400 (rede aberta, erro de auth)
+```
+
+**A rede estava aberta, mas isso não ajuda**: sem uma ferramenta de query ao Notion, não há como
+descobrir nenhum `page_id` de foto do PhotoBank para depois resolver via webhook. O MODO 1B só
+funciona se alguém já tiver o `page_id` em mãos. **Se cair de novo numa sessão sem tools do
+Notion, não adianta testar a rede achando que isso desbloqueia algo:** confirme a lista de tools
+primeiro, e se Notion não estiver lá, vá direto ao MODO 1C/1D sem perder tempo com o webhook.
+
+## 09/09/2026 : inventário do que existe e não existe no Google Drive, atualizado
+
+Confirmado nesta sessão, com consulta e contagem de linhas:
+
+- `REDE PÚBLICA - BRASIL` (Drive, id `16ERZZlcKjIRBMggzhJ_abtj6HF686XUx`): **0 imagens**
+  (`parentId = '...' and mimeType contains 'image/'` devolveu 0 linhas). É biblioteca de PDF
+  teórico. O acervo fotográfico documental de rede pública (ACS/UBS/visita domiciliar) **não
+  existe em nenhum lugar do Drive**, só no disco local do Mac (`projetos/minerva/BANCO DE FOTOS/
+  REDE PÚBLICA BRASILEIRA/`), que por sua vez não existe em sandbox de nuvem.
+- Busca ampla por imagem com título contendo `ACS`, `ESF`, `UBS`, `CRAS`, `CAPS`, `RAD_`,
+  `quilombo`, `Marajó`, `INSS`, `previdência`, `perícia`, `agência`: **0 resultados** em toda a
+  conta do Drive. Não vale gastar chamada tentando de novo com esses termos.
+- A pasta-mãe `FOTOGRAFIA` (id `1an1kt7ILbCQqh9PzPuG9NDMkoK7i2Ym7`) só tem três subpastas:
+  `FOTOS BVMG ISAAC`, `OUTRAS FOTOS`, `ECOA FOTOS` (exclusiva do Interlocutor ECOA). Não há
+  `FOTOS (Refazenda e Vó Xopotó)` nem `FOTOS TEATRAR PAAPS` como pastas-filhas dela (podem existir
+  em outro lugar do Drive, mas não foram localizadas nesta busca).
+- **Conclusão que fica valendo até prova em contrário:** rodando só com Google Drive, a única
+  fotografia real disponível para qualquer peça de conteúdo do @paaps.brasil é o acervo próprio da
+  PAAPS. Isso obriga a aplicar o teto de 1-2 fotos por peça com rigor, e a aceitar que vários
+  slides fiquem sem candidata — nunca a forçar o mesmo campo em todos os slides de nenhuma peça.
+
+## 09/09/2026 : duas fotos novas catalogadas de `FOTOS BVMG ISAAC`
+
+| Arquivo | id Drive | O que eu vi | Observação |
+|---|---|---|---|
+| `IMG_7862.JPG` | `1teeAZc3Aj2gkj1NVTONg7TfOuBVcWjfW` | Close-up de mão feminina (esmalte azul-claro, pulseira dourada) apontando post-it rosa numa parede cheia de post-its rosa/verde-limão; pessoa de perfil, cabelo escuro ondulado cobrindo a maior parte do rosto | Único frame do acervo com "mão + papel escrito" de perto; rosto pouco exposto. Usado como candidata fraca no slide 3 da peça INSS v2 |
+| `IMG_7889.JPG` | `1EKqcrZYcFPCQX2U4aJEPERr9HtQuDdaQ` | Mulher de cabelo escuro ondulado comprido, blusa branca sem manga, tatuagem no braço, de perfil, sorrindo de leve olhando parede de post-its; duas outras mulheres sentadas em cadeiras amarelas ao fundo, sérias | **Mesmo padrão visual (blusa branca + tatuagem no braço) já identificado como Mallu Vasconcellos em `IMG_7926`** (ver `fotos-peca1.md` v1). Se usada, conta como a "1 foto com Mallu reconhecível" do teto da peça. Usada como candidata fraca no slide 9 da peça INSS v2 |
+
+*(Registro de rejeição direta pela Mallu, foto a foto: vazio; registrar a partir da primeira
+devolução dela sobre estas duas.)*
 
 ---
 
