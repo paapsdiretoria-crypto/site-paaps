@@ -285,6 +285,42 @@ declarou 7 de 9 slides sem candidata por não ter testado este caminho.
 | `DSC_0005-cópia-2.jpg` | Corredor hospitalar de piso espelhado, dois profissionais de costas em macacão de proteção branco completo (trajes de isolamento), andando em direção a porta iluminada | Cena de pandemia/isolamento, sem relação temática com ACS/rotatividade; não usar fora desse contexto específico |
 | `RAD_2887-scaled.jpeg` (reaberta) | Retrato frontal fechado, mulher de meia-idade, cabelo curto ondulado com tiara, expressão séria/cansada, fundo de chita florido | Expressão certa para citação/retrato sério, mas **identidade como ACS não confirmada** (pode ser moradora/beneficiária) — risco de atribuir citação real a pessoa errada se usada ilustrando fala de "uma ACS" |
 
+## 09/09/2026 : curadoria da peça 3 v2 (envelhecimento), região do Refazenda confirmada, e gap de "cena de cuidado ativo" registrado
+
+**`DSC03222-74.jpg` (Refazenda) tem região confirmada: Desterro do Melo, Minas Gerais (Sudeste).**
+Cruzei a camiseta "Sentindo a Vida... História" na foto com `voz-paaps.md` linha 153 (parceiro
+"Desterro do Melo" com logo autorizado) e com o documento `PAAPS_Yunus_Folha_de_Respostas` no Drive
+("Bela Vista de Minas, Materlândia e Desterro do Melo, em MG"). **Sempre que um brief pedir "fora
+do eixo Sul/Sudeste", excluir de saída qualquer foto da pasta `OUTRAS FOTOS`/Refazenda que pareça
+ligada a esse projeto** (camiseta com esse texto, quintal com cerca de bambu, luz quente de tarde):
+é Sudeste confirmado, não presumido.
+
+**Abri pela primeira vez, nesta sessão, seis retratos individuais da série `RAD_` que faltavam**
+(`RAD_2768`, `RAD_2776`, `RAD_2809`, `RAD_2818`, `RAD_2820`, `RAD_2865`): todos são retratos
+fechados de uma só pessoa contra o fundo de pano floral, sem segunda pessoa em quadro, sem gesto de
+cuidado. **Não servem para nenhum brief que peça duas pessoas interagindo.** Com isso, as 32 fotos
+de `fotos-radilson/` estão agora integralmente abertas e descritas neste arquivo ou no anterior.
+
+**Duas fotos novas de `OUTRAS FOTOS` catalogadas por download direto (não só amostra prévia):**
+
+| Arquivo | fileId Drive | O que eu vi |
+|---|---|---|
+| `MARIA QUINZINHO.jpg` | `1GHzwnykXS4lg_dhDDxSiJ0E1kZI97HcA` | Retrato de perfil fechado, mulher idosa sorrindo, grade de ferro desfocada ao fundo, blusa rosa. Sozinha em quadro. Enquadramento muito fechado (só rosto/pescoço) |
+| `falando foto 2.jpg` | `1XeF-5VMKdqibDIijBhbr6FPzdMnhjubr` | Evento/palestra indoor: mulher com microfone falando para 3 pessoas encostadas numa parede com borboletas azuis decorativas, mesa vermelha com notebook ao fundo. Sem relação com cuidado/envelhecimento |
+
+**Limite de download confirmado de novo: 10 MB por arquivo.** `DSC03011-24.jpg` (18 MB) e
+`DSC03040-45.jpg` (16 MB), na mesma pasta `OUTRAS FOTOS`, continuam impossíveis de abrir por este
+caminho. Não tentar de novo sem uma via alternativa (ex.: pedir que a Mallu comprima antes).
+
+**Achado estrutural desta rodada, vale para qualquer peça futura sobre cuidado/envelhecimento:**
+nenhuma fonte acessível (32 fotos documental público + acervo próprio via Drive) tem a cena
+específica "adulto de meia-idade ajudando fisicamente uma pessoa idosa a se levantar/vestir/comer,
+sozinhos, em casa". O acervo documental do Radilson tem afeto e apoio mútuo *entre pessoas da mesma
+geração* (`RAD_2936`, casal idoso de braços dados numa porta) e ternura entre gerações em plano
+fechadíssimo (`RAD_2822`, beijo no rosto), mas não a ação funcional de cuidado. Se aparecer de novo
+esse pedido específico, não vale reabrir o acervo esperando achar: é lacuna real, registrar e
+oferecer a aproximação mais honesta, como fiz em `conteudo/ciclos/2026-09-02/fotos-peca3-v2.md`.
+
 ### Confirmação, de novo, de lacunas já registradas (auditoria de hoje bate com 25/07 e 27/07)
 
 Reabri as 32 fotos de `fotos-radilson/` por nome e confirmo que **continuam sem existir**: rua com
