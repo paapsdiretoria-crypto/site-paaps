@@ -248,3 +248,49 @@ acesso ao Drive, não vale abrir mais fotos dessa pasta esperando achar isso —
 material de Refazenda (ao ar livre, comunidade, terra) que serve melhor para "escala/território" e
 "afeto/acolhimento" do que para ACS especificamente — mas ainda é acervo errado para argumento de
 rede pública/SUS.
+
+---
+
+## 09/09/2026 : achado importante, `insumos-compartilhados/fotos-radilson/` existe em sandbox de nuvem
+
+Na mesma manhã em que a curadoria do INSS v2 concluiu (com prova, `fotos-peca1-v2.md`) que
+`insumos-compartilhados/fotos/` e `projetos/minerva/BANCO DE FOTOS` não existem neste ambiente e foi
+direto para o Google Drive (MODO 1C), a curadoria seguinte da ACS v2 testou um terceiro caminho,
+citado como pendência aberta no `mapa-fontes-foto.md`, e ele **existe**:
+
+```bash
+ls insumos-compartilhados/fotos-radilson/    # 32 arquivos .jpg/.jpeg, EXISTE neste checkout
+```
+
+**É o mesmo acervo documental público já auditado aqui em 25/07 e 27/07** (`ACS-Quilombola-...`,
+`Visita-Domiciliar-Gurupi-Tocantins-...`, `PSF-Periferia-Sao-Paulo-...`, `ESF-Soure-...`,
+`Mãe-Coruja-Pernambucana-...`, a série `RAD_*`, mais `Atenção-PSF-Jaraguá`, `psf6.jpg`, `MECB221.jpg`,
+`DSC_0005-cópia-2.jpg`, `Presidente-Fiqueiredo-14-...`), só que espelhado sob um nome de pasta
+diferente do que a ficha técnica deste agente cita (`insumos-compartilhados/fotos/` no arquivo de
+instruções; `insumos-compartilhados/fotos-radilson/` no disco real deste ambiente).
+
+**Regra prática daqui pra frente: testar `insumos-compartilhados/fotos-radilson/` sempre, logo no
+início de qualquer curadoria em sandbox de nuvem, antes de concluir que só o acervo próprio via
+Drive está disponível.** Isso teria mudado o resultado da curadoria do INSS v2 da mesma manhã, que
+declarou 7 de 9 slides sem candidata por não ter testado este caminho.
+
+### Fotos novas descritas nesta sessão (além das já auditadas em 25/07 e 27/07)
+
+| Arquivo | O que eu vi | Observação |
+|---|---|---|
+| `MECB221.jpg` | Profissional de jaleco branco encostando estetoscópio no peito/ombro de um homem idoso de óculos sentado, ambos com expressão tranquila, ambiente claro | Mais próxima de "mãos + tarefa clínica de perto" no acervo; instrumento é estetoscópio, não aparelho de pressão — ressalva se usada para ilustrar "aferir pressão" |
+| `psf6.jpg` | Duas pessoas de costas caminhando por estrada de terra rural sob céu de nuvens dramáticas, plantação de milho de um lado; uma veste casaco com "AGENTE COMUNITÁRIO DE SAÚDE" nas costas | Melhor foto do acervo para fechamento/pergunta diagnóstica (M1 variante horizonte); cenário é estrada rural, não rua de bairro com casas |
+| `Presidente-Fiqueiredo-14-scaled.jpg` | Mulher com guarda-chuva florido, sorrindo para câmera, colete com bordado legível "SECRETARIA MUNICIPAL DE SAÚDE... AGENTE COMUNITÁRIO DE SAÚDE" | Única foto do acervo com identidade de ACS confirmada por uniforme; expressão é sorriso aberto, não séria/refletida |
+| `Atenção-PSF-Jaraguá-2048x1371.jpg` | Interior de casa de madeira, contraluz de porta ao fundo, profissional de jaleco com estetoscópio conversando com mulher segurando embrulho de pano (bebê?), várias mulheres e duas crianças pequenas sentadas ao redor observando, uma criança olhando direto pra câmera | **⚠ Alta exposição: crianças pequenas com rosto claramente identificável em contexto doméstico/comunitário (provável indígena, pelo vestuário).** Não recomendar sem decisão explícita da Mallu |
+| `DSC_0005-cópia-2.jpg` | Corredor hospitalar de piso espelhado, dois profissionais de costas em macacão de proteção branco completo (trajes de isolamento), andando em direção a porta iluminada | Cena de pandemia/isolamento, sem relação temática com ACS/rotatividade; não usar fora desse contexto específico |
+| `RAD_2887-scaled.jpeg` (reaberta) | Retrato frontal fechado, mulher de meia-idade, cabelo curto ondulado com tiara, expressão séria/cansada, fundo de chita florido | Expressão certa para citação/retrato sério, mas **identidade como ACS não confirmada** (pode ser moradora/beneficiária) — risco de atribuir citação real a pessoa errada se usada ilustrando fala de "uma ACS" |
+
+### Confirmação, de novo, de lacunas já registradas (auditoria de hoje bate com 25/07 e 27/07)
+
+Reabri as 32 fotos de `fotos-radilson/` por nome e confirmo que **continuam sem existir**: rua com
+fileira de casas + ACS caminhando com pasta (escala de território); cadeira vazia ou crachá pendurado
+sem dono (cena de ausência); UBS/posto com balcão e entrega de ficha a colega de enfermagem. Três
+carrosséis diferentes já pediram alguma dessas cenas (15/07, 27/07, 09/09) e nenhuma existe em
+nenhuma fonte aberta até hoje. Se aparecer de novo, vale abrir o Flickr do Ministério da Saúde ou a
+Fiocruz Imagens (`mapa-fontes-foto.md` seção 3) numa sessão dedicada, em vez de reabrir esta mesma
+pasta esperando achar algo novo.
