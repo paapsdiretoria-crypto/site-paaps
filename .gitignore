@@ -54,6 +54,10 @@ automacoes/pesquisa-tcc-bh/unidades-bh.json
 automacoes/pesquisa-tcc-bh/previa/
 automacoes/pesquisa-tcc-bh/anuencia-suas.pdf
 
+# Planilha de acompanhamento das Rodas: leva nome de coordenadora e dado de campo,
+# mesma regra acima. A estrutura de colunas está documentada no README desta pasta.
+automacoes/pesquisa-tcc-bh/acompanhamento-tcc.xlsx
+
 # Newsletters puxadas por IMAP (automacoes/conteudo-pipeline/newsletters/puxar-newsletters.mjs):
 # carregam nome e e-mail real de remetente terceiro (dado pessoal). O Radar lê local,
 # nunca precisa estar versionado.
