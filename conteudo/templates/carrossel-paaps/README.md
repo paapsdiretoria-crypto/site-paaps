@@ -6,7 +6,7 @@ edição manual pontual — ver seção correspondente em `.claude/agents/aplica
 Este template é o HTML da primeira peça aprovada sem rodada de correção nenhuma ("De quem é
 esse trabalho"), com o texto e as fotos daquela peça como exemplo funcional. Constituição
 visual completa, com os números calibrados, em
-`Conhecimento/voz-e-identidade/anatomia-do-carrossel-aprovado.md`.
+`Conhecimento/2-identidade/voz/anatomia-do-carrossel-aprovado.md`.
 
 ## Como montar uma peça nova
 

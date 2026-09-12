@@ -714,7 +714,7 @@ Ordem de prioridade, pelo impacto na qualidade do que sai:
    para reescrever os agentes em vez de só descrevê-los.
 2. **Acesso a `Conhecimento/`** (irmã de `conteudo/` dentro de SITE PAAPS). É onde vivem
    `voz-paaps.md`, `identidade-aplicada.md`, `visual-instagram.md`, `mapa-fontes-foto.md` (em
-   `Conhecimento/voz-e-identidade/`) e a base teórica da Tecelã (`Conhecimento/base-teorica/`).
+   `Conhecimento/2-identidade/voz/`) e a base teórica da Tecelã (`Conhecimento/3-metodo/base-teorica/`).
 3. **A GTO atende PAAPS, Mallu e Fabi como três clientes com equipes iguais, ou a equipe é uma só
    com três contextos?** Isso muda se os agentes ficam num repo por cliente ou num repo só.
 4. **A peça "Cuidar da ponta, impactar o mundo" (gravação 4) não achei no Calendário.** Ela é um

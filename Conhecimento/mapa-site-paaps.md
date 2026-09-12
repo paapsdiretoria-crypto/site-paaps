@@ -1,3 +1,11 @@
+---
+setor: 0-raiz
+tipo: inventario
+resumo: Todo primeiro nível de SITE PAAPS catalogado, inclusive o que nunca vai virar nota, com o backlog do que falta compilar
+status: vivo
+atualizado: 2026-09-12
+---
+
 # Mapa completo de SITE PAAPS
 
 Todo primeiro nível de `SITE PAAPS/`, pra nada ficar invisível pro Segundo Cérebro,
@@ -11,34 +19,51 @@ mesmo o que nunca vai virar página em `Conhecimento/`. Três status possíveis:
 
 | Pasta | Tamanho | O que é | Status |
 |---|---|---|---|
-| `Arquivos/` | pequeno | fontes brutas imutáveis do Segundo Cérebro | ✅ é a própria base |
-| `Conhecimento/` | pequeno | wiki sintetizada, este arquivo mora aqui | ✅ é a própria base |
-| `codigo/` | 1,1 GB | site institucional, dashboards, automação de vídeo/WhatsApp, indexado pelo CodeGraph | 🔧 código |
+| `Conhecimento/` | pequeno | **o cofre**, vault do Obsidian. Este arquivo mora aqui | ✅ é a própria base |
+| `Conhecimento/Arquivos/` | pequeno | fontes brutas de texto, dentro do cofre. Onde o Web Clipper salva | ✅ é a própria base |
+| `Arquivos/` (raiz) | 1,5 GB | acervo binário: foto, fonte tipográfica, identidade visual | 🔧 mídia bruta, nunca entra no grafo |
+| `codigo/` | 1,1 GB | site institucional, dashboards, automação de vídeo/WhatsApp, indexado pelo CodeGraph | 📋 os 5 `CLAUDE.md` de dentro são constituição, viram nota (ver backlog); o código em si é 🔧 |
 | `automacoes/` | 11 MB | scripts e regras das 5 frentes de automação do negócio | 📋 tem regra/plano real dentro (ver backlog) |
-| `conteudo/` | 24 MB | pipeline vivo de produção de carrossel/reel (ciclos, templates, entregas) | 📋 tem `sistema-gto/` real dentro (ver backlog); o resto é pipeline ativo, não conhecimento estático |
+| `conteudo/` | 24 MB | pipeline vivo de produção de carrossel/reel (ciclos, templates, entregas) | 📋 `CLAUDE.md` e `sistema-gto/` viram nota; o resto é pipeline ativo, não conhecimento estático |
 | `projetos/` | 965 MB | projetos avulsos, fora do git por precaução (Minerva, pipeflow-crm, pitches) | 📋 tem pitches e planos reais dentro (ver backlog); `pipeflow-crm/` é um app inteiro, isso sim é 🔧 código |
 | `hyperframes/` | 19 GB | ferramenta de vídeo de terceiros, clonada, reproduzível via git clone | 🔧 dependência externa |
-| `.claude/` | 539 MB | agentes, skills, memória, settings do Claude Code (a maior parte do peso é uma worktree órfã com trabalho não mesclado, ver memória de sessão) | 🔧 configuração |
-| `sessoes/` | 536 KB | log automático de sessão, um arquivo por dia | 🔧 operacional, não conhecimento (ver `index.md`) |
-| `segundo-cerebro/` | 0 (só atalhos) | cofre Obsidian dedicado: dois atalhos pra `Arquivos/` e `Conhecimento/` | 🔧 ferramenta de visualização |
+| `.claude/` | 539 MB | 23 agentes, 50 skills, settings do Claude Code (a maior parte do peso é uma worktree órfã com trabalho não mesclado) | 📋 agentes e skills viram índice e perfil no cofre, mas os arquivos **nunca saem daqui** |
+| `sessoes/` | 536 KB | log automático de sessão, um por dia | 🔧 é o `git status` do dia, operacional. A linha do tempo do conhecimento é [[log]] |
 
 ## Backlog de compilação (📋, pronto pra priorizar aos poucos)
 
-Nenhum destes está travado por automação que dependa do caminho exato (a confirmar
-um a um, é o passo 2 do próprio `compila`). Feito um de cada vez, com conversa antes
-de escrever a página, nunca em lote.
+Nenhum destes está travado por automação que dependa do caminho exato. A ordem abaixo é
+a que a Mallu fechou em 12/09/2026.
 
-- [x] `conteudo/sistema-gto/00-BASE-DO-PROJETO-GTO.md` + `01-PLANO-DE-ACAO-GTO.md`
-  → ver página do projeto GTO
-- [ ] `automacoes/prospeccao-email/regras-prospeccao.md`, `cadencia.md`,
-  `metricas.md`, `avisos-de-resposta.md`, `setup-resend-dominio.md`
-- [ ] `automacoes/pesquisa-tcc-bh/PLANO.md` + cartas-modelo
-- [ ] `projetos/impulsiona-startups-serasa/` : storytelling-estrategia,
-  plano-slides-objecoes, objecoes-e-respostas, pitch-deck-esqueleto, inscricao-rascunho
-- [ ] `projetos/minerva/PAAPS-Programa-Visao-Minerva.md` + `PAAPS_estrutura.md`
-- [ ] `projetos/impactarte/cadastro-proponente-rascunho.md`
+**Fase 1, as 10 constituições:**
+- [ ] `CLAUDE.md` da raiz : a constituição mais rica do repositório, vira de 35 a 45 notas
+- [ ] `automacoes/CLAUDE.md`
+- [ ] `conteudo/CLAUDE.md`
+- [ ] `codigo/site/CLAUDE.md`
+- [ ] `codigo/agente-whatsapp/CLAUDE.md`
+- [ ] `codigo/dashboard-agentes/CLAUDE.md`
+- [ ] `conteudo/instagram/amalluvasconcellos/CLAUDE.md`
+- [ ] `conteudo/instagram/paaps.brasil/CLAUDE.md`
+- [ ] `Conhecimento/4-projetos/ecoa/CLAUDE.md`
+- [ ] `projetos/minerva/CLAUDE.md`
 
-Regra pra todo item: a fonte original fica onde está (dentro da pasta operacional),
-nunca é movida nem copiada pra `Arquivos/`. A página de síntese em `Conhecimento/`
-cita o caminho real dela em texto, não como `[[link]]` clicável, porque essas pastas
-ficam fora do cofre `segundo-cerebro/` no Obsidian de propósito.
+**Fase 2, o pitch geral atual** (só o geral, nunca os projetos): `codigo/site/pitch-serasa/`,
+uma nota por subtópico: modelo licenciado fora do Brasil, uma por case, aprendizados dos
+cases, tese, TAM/SAM/SOM, modelo financeiro, ODS, uma por objeção.
+
+**Fase 3, as 5 frentes de `automacoes/`** com agentes e skills interligados:
+- [x] `automacoes/prospeccao-email/*` → [[prospeccao-fria]] (a reescrever no formato novo)
+- [x] `automacoes/pesquisa-tcc-bh/*` → [[pesquisa-tcc-bh]] (a reescrever no formato novo)
+- [x] `conteudo/sistema-gto/*` → [[sistema-gto]]
+- [ ] `automacoes/funil-leads/`, `conteudo-pipeline/`, `crescimento-instagram/`, `trafego-pago/`
+- [ ] `6-sistema/agentes.md` e `6-sistema/skills.md`, os dois índices
+
+**Fase 4:** migração das 129 memórias automáticas (`memoria-claude/`).
+
+**Fase 5, projetos vivos e editais.** Parada de propósito até a Mallu atualizar o que
+morreu: `projetos/impulsiona-startups-serasa/`, `minerva/`, `impactarte/`,
+`referral-monte-azul/`, `artefato-financeiro/`.
+
+Regra pra todo item: a fonte original fica onde está, nunca é movida nem copiada pro
+cofre. A nota cita o caminho real dela em texto simples, no campo `fontes` do cabeçalho,
+nunca como `[[link]]`, porque essas pastas ficam fora do cofre de propósito.

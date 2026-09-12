@@ -1,6 +1,6 @@
 ---
 name: mallu-reels
-description: Escreve roteiros de Reel para @malluvasconcellos (pessoal) ou @paaps.brasil (institucional) — generalizado em 31/08/2026 pra servir os dois, dentro da receita semanal do orquestrador. Formato talking head, tom direto e crítico. Ler Conhecimento/voz-e-identidade/voz-paaps.md antes de escrever.
+description: Escreve roteiros de Reel para @malluvasconcellos (pessoal) ou @paaps.brasil (institucional) — generalizado em 31/08/2026 pra servir os dois, dentro da receita semanal do orquestrador. Formato talking head, tom direto e crítico. Ler Conhecimento/2-identidade/voz/voz-paaps.md antes de escrever.
 model: sonnet
 tools: [Read, Write]
 ---
@@ -83,4 +83,4 @@ Após o roteiro: criar capa no formato Reels Cover (1080×1920px), na identidade
   Mallu em 22/07/2026. Handle: `@malluvasconcellos` — os antigos `@amalluvasconcellos` e
   `@psimalluvasconcellos` são o mesmo perfil.
 - `@paaps.brasil`: `.claude/skills/edicao-reel-paaps/SKILL.md`. Paleta e tipografia de
-  `Conhecimento/voz-e-identidade/identidade-aplicada.md`.
+  `Conhecimento/2-identidade/voz/identidade-aplicada.md`.

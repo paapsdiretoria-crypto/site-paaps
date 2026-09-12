@@ -27,7 +27,7 @@ site/
                                     depois replicar aqui — nunca o inverso.
 ```
 
-**Insumos compartilhados:** logos, texturas e identidade visual ficam em `../../Arquivos/` (identidade-visual/, aplicacao-id-visual/, fotos/); voz, critérios e identidade aplicada ficam em `../../Conhecimento/voz-e-identidade/`.
+**Insumos compartilhados:** logos, texturas e identidade visual ficam em `../../Arquivos/` (identidade-visual/, aplicacao-id-visual/, fotos/); voz, critérios e identidade aplicada ficam em `../../Conhecimento/2-identidade/voz/`.
 
 ---
 

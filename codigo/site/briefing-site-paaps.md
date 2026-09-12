@@ -1,8 +1,8 @@
 # Briefing do site PAAPS : handoff para quem for construir
 
 > Consolidado em 02/08/2026, a partir de uma sessão inteira de calibração com a Mallu.
-> Leia junto: `Conhecimento/institucional/o-que-e-a-paaps.md` (o que a PAAPS é) e
-> `Conhecimento/institucional/metodologia-paaps.md` (o que vende e como explica).
+> Leia junto: `Conhecimento/2-identidade/o-que-e-a-paaps.md` (o que a PAAPS é) e
+> `Conhecimento/3-metodo/metodologia-paaps.md` (o que vende e como explica).
 > A hierarquia de cor está no topo de `codigo/site/DESIGN-SYSTEM.md` e manda sobre o resto dele.
 
 ---

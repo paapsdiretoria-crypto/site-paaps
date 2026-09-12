@@ -42,7 +42,7 @@ referenciadas por ID interno do Notion, não URL de página; seguem como estão 
 | 16 | Otimização | `collection://20a44cb5-2e00-8312-8f40-07e5af1ce75f` | schema pobre demais |
 | 17 | Objetivos do cliente | `collection://47744cb5-2e00-8297-86c2-8716fe876902` | 5 objetivos datados |
 
-Fora do Notion, os agentes desta equipe também leem `Conhecimento/voz-e-identidade/`
+Fora do Notion, os agentes desta equipe também leem `Conhecimento/2-identidade/voz/`
 (confirmado acessível, é pasta irmã de `conteudo/` dentro de `SITE PAAPS/`) e escrevem em
 `.claude/agents/` na raiz do repositório, não dentro de `conteudo/`.
 

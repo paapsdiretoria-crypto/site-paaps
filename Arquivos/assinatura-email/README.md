@@ -90,7 +90,7 @@ em `assets/foto-montanha-minas.jpg`. Sem filtro: cor original.
 
 Logo: sempre a versão com **pontinhos coloridos**. Marrom + colorido em fundo claro, branco +
 colorido em fundo escuro. Nunca a que traz o descritivo embaixo (ver
-`Conhecimento/voz-e-identidade/identidade-aplicada.md` seção 3.1).
+`Conhecimento/2-identidade/voz/identidade-aplicada.md` seção 3.1).
 
 Arquivos-fonte: `assinatura-a-montanha.html`, `assinatura-b-editorial.html` e `base.css`
 (paleta, League Spartan, divisor tricolor, marcadores quadrados, grão).

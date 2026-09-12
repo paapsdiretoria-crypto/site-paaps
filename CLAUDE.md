@@ -1,9 +1,38 @@
 # CLAUDE.md : Contexto Mestre do Ecossistema PAAPS
 
+## ÍNDICE PRIMÁRIO : o cérebro começa aqui
+
+> **`Conhecimento/index.md`** : catálogo de toda nota do cofre, nos 6 setores. É a porta
+> de entrada. Ache o setor, leia o resumo de uma linha, só então abra a nota.
+> **`Conhecimento/6-sistema/agentes.md`** : o que cada agente de `.claude/agents/` faz.
+> **`Conhecimento/6-sistema/skills.md`** : o que cada skill de `.claude/skills/` faz.
+>
+> `Conhecimento/` é o Segundo Cérebro da PAAPS e a **fonte primária de conhecimento
+> durável** deste ecossistema. Antes de responder qualquer coisa que dependa de saber
+> algo sobre a PAAPS, passe pelo índice. O que vem depois neste arquivo são as regras
+> que nunca mudam e que precisam estar carregadas sempre.
+
+**As duas trilhas.** São o caminho de ida e o de volta do cérebro:
+
+- **Leitura.** Pergunta chega → qual dos 6 setores → `Conhecimento/index.md` → a nota →
+  só então responder. Nunca responder de memória sobre voz, jurídico, metodologia,
+  preço ou case sem passar pela nota.
+- **Escrita.** Análise pronta → qual setor → **isso é uma coisa ou três?** → já existe
+  nota? atualiza : cria → cabeçalho preenchido → linka nas duas direções → entra no
+  `index.md` → uma linha no `log.md`.
+
+> **Sobre a memória automática do Claude Code** (aquela fora deste repositório, em
+> `~/.claude/projects/.../memory/`, espelhada aqui pelo atalho `memoria-claude`): ela
+> deixou de ser onde o conhecimento da PAAPS mora. Conhecimento novo vai para
+> `Conhecimento/`, sempre. Aquele sistema não pode ser desligado por este arquivo, é
+> instrução do próprio Claude Code, mas deixa de ser alimentado e o índice dele encolhe
+> para um ponteiro. Decidido pela Mallu em 12/09/2026: o `MEMORY.md` carregava 150 linhas
+> em toda sessão, gastava token à toa e não era navegável por categoria.
+
 > Este arquivo é lido automaticamente pelo Claude Code ao abrir o repositório.
 > Ele carrega quem somos, como pensamos e o que nunca fazer. Tudo que for específico
 > de uma frente (site, conteúdo, instagram) está documentado nos `CLAUDE.md` das
-> subpastas e nos arquivos de `Conhecimento/voz-e-identidade/`.
+> subpastas e nos arquivos de `Conhecimento/2-identidade/voz/`.
 
 ---
 
@@ -32,7 +61,7 @@ definida no contrato social como "Programa de Aceleração Ativa de Projetos Soc
 > site, proposta, e-mail, carrossel, legenda, apresentação e qualquer peça pública: escrever apenas
 > **PAAPS** ou **PAAPS Brasil**, nunca a expansão. Motivo: "aceleração" comunica velocidade e
 > produtividade, exatamente o oposto do que a PAAPS faz, que é cuidado. Ver
-> `Conhecimento/institucional/ficha-juridica-paaps.md` para o uso jurídico.
+> `Conhecimento/2-identidade/juridico/ficha-juridica-paaps.md` para o uso jurídico.
 
 | Campo | Valor |
 |---|---|
@@ -61,7 +90,7 @@ Três consequências que decidem preenchimento de formulário:
   como negócio social.
 
 Ficha completa (objeto social alínea por alínea, cláusula GovTech, histórico de registro e
-checklist de documentos de habilitação): `Conhecimento/institucional/ficha-juridica-paaps.md`.
+checklist de documentos de habilitação): `Conhecimento/2-identidade/juridico/ficha-juridica-paaps.md`.
 
 ---
 
@@ -92,7 +121,7 @@ e de consumo.
 |---|---|
 | PAAPS | Solução de Psicologia Social para políticas públicas e programas sociais |
 | TEAtrar | Teatro conduzido por psicóloga para crianças e adolescentes autistas |
-| ECOA | Comunidade de aprendizagem e vivência prática em Psicologia Social Latina. Ver `Conhecimento/ecoa/CLAUDE.md` |
+| ECOA | Comunidade de aprendizagem e vivência prática em Psicologia Social Latina. Ver `Conhecimento/4-projetos/ecoa/CLAUDE.md` |
 | Periódico da Rede PAAPS | Publicação periódica |
 | Plantão Psicológico | Psicoterapia para servidores públicos |
 | Bela Vista de Minas | Prova de conceito: 5 meses com servidores (case de impacto) |
@@ -139,7 +168,7 @@ peça**. Carrossel inteiro nessa forma vira assinatura de IA, que é o que ela r
   Ninguém pensava aquilo, e é isso que soa como máquina.
 
 Antes de usar, nomeie por escrito quem é a pessoa que acredita no X. Se não conseguir, não use.
-Detalhe em `Conhecimento/voz-e-identidade/voz-paaps.md` seção 4.1.
+Detalhe em `Conhecimento/2-identidade/voz/voz-paaps.md` seção 4.1.
 
 ### Como nomear as pessoas da rede
 
@@ -167,7 +196,7 @@ longe. A PAAPS é uma rede construída por profissionais que já vivem esse dia 
 
 ### Forma do slide: os 8 modelos do carrossel PAAPS
 
-`Conhecimento/voz-e-identidade/modelos-slide-paaps.md` é o catálogo dos 8 modelos de slide e
+`Conhecimento/2-identidade/voz/modelos-slide-paaps.md` é o catálogo dos 8 modelos de slide e
 das 8 leis universais do @paaps.brasil, lidos de dentro das peças publicadas. Quem escreve ou monta
 carrossel lê antes: `copywriter-paaps`, `aplicador-visual`, `buscador-fotos`, skill `copy-carrossel`.
 
@@ -254,7 +283,35 @@ linguagem coachesca. Só avançar após esse raciocínio.
 ```
 SITE PAAPS/                          ← pasta raiz (renomear para PAAPS/ no Finder)
 │
-├── Arquivos/                        ← FONTES ORIGINAIS IMUTÁVEIS (padrão Raw/Wiki de Karpathy)
+├── Conhecimento/                    ← O COFRE. Vault do Obsidian que a Mallu abre.
+│   │                                  Escrito só por IA, lido por ela no grafo
+│   ├── index.md                     ← ÍNDICE PRIMÁRIO, os 6 setores. Porta de entrada
+│   ├── log.md                       ← linha do tempo do conhecimento, append-only
+│   ├── mapa-site-paaps.md           ← o que existe FORA do cofre e o que falta compilar
+│   ├── _templates/nota.md           ← molde de nota, com o cabeçalho explicado
+│   │
+│   ├── Arquivos/                    ← FONTES BRUTAS DE TEXTO, imutáveis. A IA lê, nunca edita.
+│   │   └── assets/                     É aqui que o Obsidian Web Clipper salva
+│   │
+│   ├── 1-fundadora/   🟣            ← a Mallu como pessoa: formação, CRP, rotina, TCC
+│   ├── 2-identidade/  🟡            ← quem a PAAPS é e como fala
+│   │   ├── voz/                     ← gabarito de voz, modelos de slide, design
+│   │   └── juridico/                ← ficha da DIGGING, GovTech, habilitação
+│   ├── 3-metodo/      🟢            ← o que a PAAPS sabe e como pensa
+│   │   ├── base-teorica/            ← fichamentos destilados, Psicologia Sócio-Histórica
+│   │   ├── normas/                  ← NR-01, CFP/CRP, ODS
+│   │   ├── temas/                   ← nós de tema que agregam a pesquisa
+│   │   └── evidencia/               ← uma nota por notícia, dado ou estudo
+│   ├── 4-projetos/    🔵            ← cada frente com vida própria
+│   │   └── ecoa/                    ← Comunidade ECOA, exportada do Notion
+│   ├── 5-mercado/     🟠            ← como a PAAPS se sustenta
+│   │   ├── pitch/  ├── cases/  ├── prospeccao/  └── editais/
+│   └── 6-sistema/     ⚪            ← a máquina: agentes, skills, convenções
+│       ├── agentes.md               ← índice dos agentes de .claude/agents/
+│       ├── skills.md                ← índice das skills de .claude/skills/
+│       └── arquitetura-agentes/     ← árvore de dois troncos, diagramas
+│
+├── Arquivos/                        ← ACERVO BINÁRIO, fora do cofre e fora do grafo
 │   ├── fotos/                       ← acervo de campo (1,5 GB, fora do git)
 │   ├── fotos-radilson/              ← fotos brutas de fotógrafo específico
 │   ├── identidade-visual/           ← logos, texturas, paleta, templates (não commitado)
@@ -266,39 +323,8 @@ SITE PAAPS/                          ← pasta raiz (renomear para PAAPS/ no Fin
 │   ├── docs-imagens/                ← imagens extraídas dos DOCX institucionais originais
 │   └── pitch-serasa-exports/        ← exports pontuais de PDF (ex.: saida.pdf)
 │
-├── Conhecimento/                    ← SINTETIZADO E MANTIDO POR IA (padrão Raw/Wiki)
-│   ├── index.md                     ← catálogo de toda página, separado em Projetos x Sistema
-│   │
-│   ├── voz-e-identidade/            ← PROJETO PAAPS (fica na raiz, é o projeto padrão do cofre)
-│   │   ├── voz-paaps.md             ← gabarito de voz e proibições ativas
-│   │   ├── afeto-situado-mallu.md   ← como iniciar a peça quando o gancho não vem dela
-│   │   ├── identidade-aplicada.md   ← paleta, tipografia, sistema Periódico, workflow Canva
-│   │   ├── criterios-design.md      ← checklist do crítico de design
-│   │   ├── qualidade-frontend.md    ← princípios de design (web + Canva)
-│   │   ├── visual-instagram.md      ← 3 modos visuais, regras fotográficas
-│   │   └── mapa-fontes-foto.md      ← fontes de fotografia documental (espaço reservado)
-│   ├── institucional/               ← PROJETO PAAPS : documentos convertidos de DOCX
-│   │   ├── manual-marca-posicionamento.md
-│   │   └── paaps-pesquisa-mercado.md
-│   ├── base-teorica/                ← PROJETO PAAPS : base teórica destilada da Tecelã
-│   │
-│   ├── ecoa/                        ← PROJETO ECOA (Psicologia Social Latina), autocontido
-│   │   ├── CLAUDE.md                ← contexto do projeto, ler antes de qualquer tarefa sobre a ECOA
-│   │   ├── identidade-e-posicionamento/ ← o que a ECOA é, propósito, valores, tom de voz, acordos
-│   │   ├── estrutura-e-rituais/     ← grupos, rituais, jornada, canvas, boas-vindas
-│   │   ├── planejamento-de-conteudo/← Eras, personas, impacto, referências de comunidade
-│   │   ├── porta-voz/               ← Programa Porta-Voz
-│   │   └── reunioes/                ← atas de equipe, planejamento e pesquisa
-│   │
-│   └── sistema/                     ← SISTEMA (como o Claude e os agentes operam aqui, não é a PAAPS)
-│       ├── arquitetura-agentes/     ← árvore de dois troncos, diagramas SVG + workflow-paaps.html
-│       └── como-trabalhar-com-claude.md
-│
-├── sessoes/                         ← logs automáticos de sessão (gerados por hook), fora do
-│   └── sessao-YYYY-MM-DD.md         ← cofre segundo-cerebro de propósito: é operacional, não conhecimento
-│
-├── segundo-cerebro/                 ← cofre Obsidian dedicado: dois atalhos, Arquivos/ e
-│                                       Conhecimento/, sem o resto do repositório
+├── sessoes/                         ← logs automáticos de sessão (gerados por hook).
+│   └── sessao-YYYY-MM-DD.md         ← é o git status do dia, operacional, fora do cofre
 │
 ├── codigo/                          ← TODO o código do ecossistema, indexado pelo CodeGraph
 │   ├── .codegraph/                  ← índice/grafo de código (SQLite local, não commitado)
@@ -329,95 +355,141 @@ SITE PAAPS/                          ← pasta raiz (renomear para PAAPS/ no Fin
 └── .agents/                         ← skills instaladas via npx skills (não commitado)
 ```
 
-> **Raw/Wiki (12/09/2026):** a raiz segue o padrão de um gist do Andrej Karpathy
-> (`llm-wiki.md`): `Arquivos/` guarda fontes originais imutáveis (fotos, identidade visual,
-> fontes tipográficas, exports pontuais) e `Conhecimento/` guarda conhecimento sintetizado e
-> mantido por IA (voz da marca, base teórica, ECOA, docs institucionais, log de sessão).
-> A antiga `insumos-compartilhados/` foi extinta: seu conteúdo se dividiu entre as duas.
-> `codigo/`, `automacoes/`, `hyperframes/`, `projetos/` e os pipelines vivos dentro de
-> `conteudo/` (`ciclos/`, `eventos/`, `templates/`...) ficaram de fora desta rodada:
-> são CÓDIGO ou processo ativo demais para separar sem quebrar o fluxo diário dos
-> agentes, não conhecimento estático.
+> **Duas pastas chamadas Arquivos, e a diferença importa.** `Conhecimento/Arquivos/`
+> está **dentro** do cofre: é a camada de fontes brutas de texto (clipping, transcrição,
+> artigo, plano), é onde o Obsidian Web Clipper salva, e é o que a Mallu quer dizer
+> quando fala "a pasta Arquivos". `Arquivos/` na raiz está **fora** do cofre: é acervo
+> binário (foto, fonte tipográfica, identidade visual), nunca entrou no grafo e não deve
+> entrar.
+>
+> **Por que as pastas operacionais ficam fora do cofre.** `codigo/`, `automacoes/`,
+> `hyperframes/`, `projetos/` e os pipelines vivos de `conteudo/` são código ou processo
+> ativo demais para mover sem quebrar o fluxo diário dos agentes. O conhecimento que mora
+> dentro delas **vira nota no cofre**, mas o arquivo original fica onde está, citado por
+> caminho em texto simples, nunca por `[[link]]`. Ver `Conhecimento/mapa-site-paaps.md`.
 
 ---
 
-## Segundo Cérebro : as três operações sobre Arquivos/ e Conhecimento/
+## Segundo Cérebro : as quatro operações sobre o cofre
 
-`Arquivos/` e `Conhecimento/` são a base do "segundo cérebro com memória progressiva"
-da Mallu (imersão de 12/09/2026, padrão Raw/Wiki do Karpathy localizado em português).
-`Conhecimento/` é lida no Obsidian, escrita só por IA: ela acompanha o grafo enquanto a
-conversa acontece, nunca edita a mão. Três operações nomeadas cobrem o ciclo de vida
-inteiro.
+`Conhecimento/` é o "segundo cérebro com memória progressiva" da Mallu (imersão de
+12/09/2026, padrão LLM Wiki do Karpathy localizado em português). Ela lê no Obsidian e
+acompanha o grafo enquanto a conversa acontece; **nunca edita a mão.** Quatro operações
+cobrem o ciclo de vida inteiro.
 
-**Regra de projeto (decide ONDE a página nasce, antes de qualquer outra regra):**
-`Conhecimento/` separa dois eixos, sempre. **Projeto** é o que a PAAPS é ou diz: a
-própria PAAPS fica na raiz (`voz-e-identidade/`, `institucional/`, `base-teorica/`,
-por ser o projeto padrão do cofre), cada projeto autocontido do ecossistema (ECOA,
-e no futuro TEAtrar, Periódico da Rede PAAPS, Plantão Psicológico, Bela Vista de Minas,
-ver `## Projetos do ecossistema` acima) ganha sua própria pasta de topo quando material
-justificar. **Sistema** é como o Claude e os agentes operam aqui dentro, nunca conteúdo
-da PAAPS: mora em `Conhecimento/sistema/` (arquitetura de agentes, como colaborar com o
-Claude, convenções operacionais). Antes de escrever qualquer página nova, pergunte: isso
-é sobre o que a PAAPS é/diz, ou sobre como a máquina por trás funciona? A resposta decide
-o galho, projeto ou sistema, antes mesmo de pensar em subpasta.
+### A regra que governa toda escrita: muitas notas, cada uma específica
 
-**Regra de link:** toda página de `Conhecimento/` que referencia um arquivo de
-`Arquivos/` usa colchete duplo com o nome do arquivo sem a extensão: `[[nome-do-arquivo]]`.
-Com `.md` dentro do colchete o link não resolve no Obsidian e o arquivo fica solto no
-grafo. Quando dois arquivos em qualquer lugar do cofre compartilham o mesmo nome (ex.:
-dois `README.md`), o link sozinho fica ambíguo: use o caminho relativo dentro do colchete,
-`[[pasta/nome-do-arquivo]]`.
+**Uma nota = uma coisa que alguém pode precisar saber sozinha.** Teste: se o `resumo` da
+nota só fica verdadeiro usando um "e", são duas notas.
 
-**Regra de subpasta:** nenhuma subpasta nova em `Conhecimento/` nasce por antecipação.
-Ela só nasce quando material já acumulado justificar (mesmo critério que gerou
-`voz-e-identidade/`, `institucional/`, `ecoa/` etc. na reorganização de 12/09/2026).
-Enquanto isso, página nova fica solta na raiz de `Conhecimento/`.
+Uma fonte gera **várias** notas, nunca uma só. O gist original é literal sobre isso:
+*"A single source might touch 10-15 wiki pages."* Nota-monstro que cobre uma pasta
+inteira é defeito, não economia: ninguém acha nada dentro dela e o grafo fica sem
+ligação. Um pitch vira uma nota por case, uma por objeção, uma pro modelo de negócio.
+Um `CLAUDE.md` vira uma nota por proibição, uma por calibração, uma por norma.
 
-### `compila` : uma fonte nova em Arquivos/ vira página em Conhecimento/
+### Como uma nota é escrita, já que quem lê é uma LLM no meio de uma tarefa
 
-Use quando um material bruto novo chega (PDF, transcrição, artigo, foto, dado, fichamento).
+- **Conclusão primeiro.** A primeira linha depois do título diz a resposta, não o
+  contexto. Quem lê pode parar ali.
+- **A regra escrita como regra:** "nunca escrever X, escrever Y", não "a gente decidiu
+  que talvez fosse melhor".
+- **O negativo explícito.** O que a nota proíbe vale tanto quanto o que ela permite, e é
+  o que mais se perde quando o contexto some.
+- **Data e autoria da decisão**, sempre que for calibração da Mallu.
+- **Link nas duas direções.** Nota que ninguém aponta é nota que ninguém acha.
 
-1. O material pousa em `Arquivos/<pasta correspondente>/`, sem alteração nenhuma.
-2. Leia o material inteiro antes de escrever qualquer coisa.
-3. Converse com quem pediu sobre o que ali importa: nem tudo que está na fonte merece
-   virar página.
-4. Escreva ou atualize a página em `Conhecimento/`, na subpasta temática mais próxima
-   das já existentes, ou solta na raiz se nenhuma servir (ver regra de subpasta acima).
-5. Linke a fonte com colchete duplo sem extensão (ver regra de link acima).
-6. Atualize `Conhecimento/index.md`: uma linha por página, com link e resumo de uma frase.
-7. Se a fonte nova contradiz algo já escrito, nomeie a contradição na própria página.
-   Não apague o que havia antes sem registrar por que mudou.
+### Regra de setor : decide ONDE a nota nasce, antes de qualquer outra coisa
 
-Uma fonte só pode mexer em várias páginas ao mesmo tempo. Isso é esperado, não é erro.
+| Setor | A pergunta |
+|---|---|
+| `1-fundadora` | é sobre a Mallu, a pessoa? |
+| `2-identidade` | é sobre quem a PAAPS é ou como ela fala? |
+| `3-metodo` | é sobre o que a PAAPS sabe e como pensa? |
+| `4-projetos` | é uma frente com vida própria (ECOA, TEAtrar, Periódico, Plantão, Bela Vista)? |
+| `5-mercado` | é sobre a PAAPS se sustentar (pitch, case, prospecção, preço, edital)? |
+| `6-sistema` | é sobre a máquina (agente, skill, hook, convenção), não sobre a PAAPS? |
 
-### `salva isso como nota` : uma resposta boa vira página permanente
+**Regra de cabeçalho:** toda nota nova abre com o bloco YAML do molde em
+`Conhecimento/_templates/nota.md`, com `setor`, `tipo`, `resumo`, `status` e
+`atualizado` preenchidos. O `resumo` é o que permite decidir se vale abrir o arquivo sem
+abrir o arquivo: é a economia de token do sistema inteiro. Sem cabeçalho, a nota não
+entra no índice e não ganha cor no grafo.
+
+**Regra de link:** `[[nome-do-arquivo]]`, sem extensão. Com `.md` dentro do colchete o
+link não resolve no Obsidian e a nota fica solta no grafo. Quando dois arquivos do cofre
+têm o mesmo nome (há vários `CLAUDE.md` e `README.md`), use o caminho:
+`[[pasta/nome-do-arquivo]]`. Arquivo que mora **fora** do cofre nunca vira `[[link]]`:
+entra como caminho em texto simples, no campo `fontes` do cabeçalho.
+
+**Regra de subpasta:** subpasta nova dentro de um setor só nasce quando material
+acumulado justificar. Enquanto isso, a nota fica solta na raiz do setor. O que nunca
+acontece é nota nascer fora dos 6 setores.
+
+### `compila` : uma fonte nova vira várias notas
+
+Use quando material bruto novo chega (artigo, transcrição, PDF, plano, dado, fichamento).
+
+1. A fonte pousa em `Conhecimento/Arquivos/`, sem alteração nenhuma. Ela é imutável.
+2. Leia a fonte inteira antes de escrever qualquer coisa.
+3. **Liste quantas notas ela gera, antes de escrever a primeira.** Se a lista tem uma
+   nota só, releia: quase sempre é porque a leitura foi rasa.
+4. Escreva cada nota no setor certo, com cabeçalho, conclusão primeiro.
+5. Linke a fonte com `[[nome-da-fonte]]` e linke as notas entre si.
+6. Atualize `Conhecimento/index.md`: uma linha por nota, com link e resumo.
+7. Se a fonte contradiz algo já escrito, nomeie a contradição na própria nota e marque a
+   antiga como `status: historico` com o motivo. Nunca apague sem registrar.
+8. Uma linha em `Conhecimento/log.md`: `## [AAAA-MM-DD] compila | assunto`.
+
+### `entrevista` : uma pasta, projeto, agente ou skill vira perfil
+
+Use para transformar em conhecimento algo que já existe no repositório mas nunca foi
+explicado. Trate o conteúdo da pasta como se fossem as respostas dela a oito perguntas:
+
+1. O que é, e pra quem · 2. Com quem trabalha · 3. O que entrega · 4. Como é medido
+5. Como é o processo, do começo ao fim · 6. O que acompanha pra se manter em dia
+7. O que nunca faz · 8. O que costuma dar errado
+
+Sai um `tipo: perfil` do entrevistado **mais todas as notas específicas que a leitura
+destravar**. O arquivo original não sai do lugar e não é copiado pro cofre.
+
+### `salva isso como nota` : uma resposta boa vira nota permanente
 
 Use quando uma pergunta no chat gerou resposta, comparação ou análise que vale guardar,
-não só responder e deixar sumir no histórico da conversa.
+em vez de sumir no histórico.
 
-1. Escreva a resposta como página nova em `Conhecimento/` (solta na raiz, ver regra de
-   subpasta acima).
-2. Linke as páginas e arquivos que a resposta usou como base, no mesmo formato de
-   colchete duplo sem extensão.
-3. Atualize `Conhecimento/index.md` com a página nova.
-4. Se a resposta generaliza algo que outras notas futuras vão repetir, avalie se ela
-   deveria virar parte de uma página de conceito já existente, em vez de ficar solta.
+1. Decida o setor, depois quantas notas aquilo é.
+2. Escreva com cabeçalho, no setor certo.
+3. Linke as notas e fontes que a resposta usou como base.
+4. Atualize `Conhecimento/index.md` e some uma linha ao `log.md`.
+5. Se a resposta generaliza algo que outras notas vão repetir, ela vira nota de conceito
+   própria e as outras passam a apontar pra ela.
 
 ### `audita` : exame de saúde de Conhecimento/
 
 Use por pedido explícito, ou de tempos em tempos, sem pauta puxada por uma fonte específica.
 
 Procure, em ordem:
-1. Contradições entre páginas diferentes.
-2. Afirmações antigas que uma fonte mais recente já superou e ninguém atualizou.
-3. Páginas órfãs: nada linka para elas.
-4. Conceitos citados repetidamente que ainda não têm página própria.
+1. Contradições entre notas diferentes.
+2. Afirmações antigas que uma fonte mais recente já superou e ninguém marcou como
+   `status: historico`.
+3. Notas órfãs: nada linka para elas.
+4. Conceitos citados repetidamente que ainda não têm nota própria.
 5. Links que deveriam existir e não existem.
-6. Lacunas de dado que uma busca resolveria na hora.
+6. Notas sem cabeçalho, ou com `resumo` que precisa de um "e" pra ficar verdadeiro
+   (sinal de que são duas notas coladas).
+7. Notas com `atualizado` velho num assunto que mudou desde então.
+8. Notas `status: pendente` que já poderiam ser preenchidas.
+9. Caminho citado em qualquer arquivo do repo apontando pra nota que não existe mais:
+
+```bash
+grep -ro "Conhecimento/[A-Za-z0-9._/-]*\.md" --include="*.md" --include="*.json" . \
+  | cut -d: -f2- | sort -u | while read -r p; do [ -f "$p" ] || echo "MORTO $p"; done
+```
 
 Entregue um relatório curto, achado por achado. Corrija sozinho o que é estrutura (link
-quebrado, órfã, índice desatualizado); pergunte antes de corrigir qualquer contradição
-que envolva julgamento de conteúdo.
+quebrado, órfã, índice desatualizado, cabeçalho faltando); pergunte antes de corrigir
+qualquer contradição que envolva julgamento de conteúdo.
 
 > **Regra de workspace:** abrir o Claude Code SEMPRE na raiz `SITE PAAPS/`. Projetos
 > novos (eventos, pitches, portfólios, provas de conceito) nascem como subpasta daqui:

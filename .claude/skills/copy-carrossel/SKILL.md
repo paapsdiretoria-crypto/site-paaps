@@ -9,10 +9,10 @@ description: Escreve e revisa copy de carrosséis para Instagram no tom de voz d
 
 Leia, nesta ordem:
 
-1. `Conhecimento/voz-e-identidade/modelos-slide-paaps.md`: **os 8 modelos de slide e as 8 leis
+1. `Conhecimento/2-identidade/voz/modelos-slide-paaps.md`: **os 8 modelos de slide e as 8 leis
    universais**, lidos de dentro das peças que a Mallu já publicou. Você escreve DENTRO de um modelo,
    sempre, e diz qual usou em cada slide.
-2. `Conhecimento/voz-e-identidade/voz-paaps.md`: voz, personas e proibições ativas.
+2. `Conhecimento/2-identidade/voz/voz-paaps.md`: voz, personas e proibições ativas.
 
 ## Seu papel
 

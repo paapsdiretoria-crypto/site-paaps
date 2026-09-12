@@ -67,7 +67,11 @@ conteudo/ciclos/*/B0-newsletters.md
 codigo/site/pitch-serasa/img/final - cópia.mp4
 .export-*
 
-# Config do Obsidian do cofre "segundo-cerebro": por ser pasta só de atalhos, o Obsidian
-# grava a configuração real dentro de Arquivos/ ou Conhecimento/ em vez de segundo-cerebro/
-Arquivos/.obsidian/
-Conhecimento/.obsidian/
+# Obsidian. O cofre é Conhecimento/, então a config dele fica em Conhecimento/.obsidian/.
+# graph.json ENTRA no git: é ele que carrega as cores dos 6 setores do grafo. O que fica
+# de fora é só estado de janela, que muda a cada clique e polui o diff.
+Conhecimento/.obsidian/workspace.json
+Conhecimento/.obsidian/workspace-mobile.json
+Conhecimento/.obsidian/cache
+# vault antigo da raiz inteira, aposentado: graficava 79 mil arquivos sem sentido
+.obsidian/

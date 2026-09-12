@@ -2,7 +2,7 @@
 
 > Workspace de produção de conteúdo **a ser feita no próprio dia do evento**, captando a
 > presença da PAAPS no festival via **TEAtrar**. Leitura obrigatória antes de produzir:
-> `Conhecimento/voz-e-identidade/voz-paaps.md` e `visual-instagram.md`.
+> `Conhecimento/2-identidade/voz/voz-paaps.md` e `visual-instagram.md`.
 
 ---
 

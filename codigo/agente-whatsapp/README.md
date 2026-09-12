@@ -179,7 +179,7 @@ A Railway checa a saude do agente pelo endereco `/health`.
 Abra `agents/prompts.py`. Tudo que esta ali dentro de `instructions` e a persona
 da PAAPS: quem ela e, os projetos, o tom, as proibicoes e o cuidado com saude
 mental. Edite o texto, salve e reinicie o agente. Mantenha alinhado com
-`Conhecimento/voz-e-identidade/voz-paaps.md`.
+`Conhecimento/2-identidade/voz/voz-paaps.md`.
 
 As perguntas de atalho que aparecem na tela de teste ficam em `app/config.yaml`.
 

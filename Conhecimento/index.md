@@ -1,121 +1,193 @@
-# Índice de Conhecimento
+---
+setor: 0-raiz
+tipo: inventario
+resumo: Catálogo de toda nota do cofre, organizado nos 6 setores. Porta de entrada do Segundo Cérebro
+status: vivo
+atualizado: 2026-09-12
+---
 
-Catálogo de tudo que existe em `Conhecimento/`. Atualizado a cada `compila` e a cada
-`salva isso como nota`. Para achar a página certa antes de abrir qualquer arquivo,
-comece por aqui.
+# Índice primário do Segundo Cérebro PAAPS
 
-Duas seções, dois eixos diferentes: **Projetos** é o que a PAAPS é e diz (marca,
-metodologia, comunidades). **Sistema** é como o Claude e os agentes operam aqui dentro,
-não é conteúdo da PAAPS, é o próprio maquinário.
+**Comece sempre por aqui.** Ache o setor, leia o resumo de uma linha, e só então abra a
+nota. O resumo existe justamente para você decidir se precisa abrir o arquivo sem abrir
+o arquivo.
 
-Nem todo `SITE PAAPS/` está aqui dentro: [[mapa-site-paaps]] cataloga as pastas
-operacionais (`codigo/`, `automacoes/`, `conteudo/`, `projetos/`, `hyperframes/`) e o
-que dentro delas ainda falta compilar.
+Seis setores, seis cores no grafo. A pergunta ao lado de cada um decide onde uma nota
+nova nasce, antes de pensar em nome de arquivo.
+
+| | Setor | A pergunta que decide |
+|---|---|---|
+| 🟣 | [1-fundadora](#-1-fundadora) | é sobre a Mallu, a pessoa? |
+| 🟡 | [2-identidade](#-2-identidade) | é sobre quem a PAAPS é ou como ela fala? |
+| 🟢 | [3-metodo](#-3-metodo) | é sobre o que a PAAPS sabe e como pensa? |
+| 🔵 | [4-projetos](#-4-projetos) | é uma frente com vida própria? |
+| 🟠 | [5-mercado](#-5-mercado) | é sobre a PAAPS se sustentar? |
+| ⚪ | [6-sistema](#-6-sistema) | é sobre a máquina, não sobre a PAAPS? |
+
+Duas notas de serviço fora dos setores: [[mapa-site-paaps]] cataloga o que existe
+**fora** do cofre (`codigo/`, `automacoes/`, `conteudo/`, `projetos/`), e [[log]] é a
+linha do tempo do que entrou aqui e quando.
+
+Fontes brutas de texto entram em `Conhecimento/Arquivos/`, que é onde o Obsidian Web
+Clipper salva. Elas são imutáveis: a IA lê, nunca edita.
 
 ---
 
-# Projetos
+## 🟣 1-fundadora
 
-## PAAPS (voz, identidade e institucional)
+A Mallu como pessoa. Hoje ela é a única trabalhando ativamente na PAAPS, então a
+faculdade, o CRP e a rotina dela são parte da empresa, não assunto à parte.
 
-O coração compartilhado, lido por todos os agentes de conteúdo. Fica na raiz de
-`Conhecimento/` porque a PAAPS é o projeto padrão deste cofre, não precisa de pasta
-própria pra se diferenciar de nada.
+- [[pesquisa-tcc-bh]] : a campanha de e-mail da pesquisa de TCC na rede socioassistencial
+  de BH, separada de propósito do funil comercial
 
-**voz-e-identidade/:**
-- [[voz-paaps]] : gabarito de voz e proibições ativas do ecossistema
-- [[afeto-situado-mallu]] : como iniciar uma peça quando o gancho não vem da Mallu
-- [[identidade-aplicada]] : paleta, tipografia, sistema Periódico, workflow Canva
-- [[criterios-design]] : checklist do crítico de design
-- [[qualidade-frontend]] : princípios de design para web e Canva
-- [[visual-instagram]] : os 3 modos visuais e as regras fotográficas
-- [[mapa-fontes-foto]] : hierarquia das fontes de fotografia documental
-- [[anatomia-do-carrossel-aprovado]] : o que faz um carrossel aprovado funcionar
-- [[modelos-slide-paaps]] : catálogo dos 8 modelos de slide e as 8 leis do @paaps.brasil
+*Setor recém-aberto. As notas de perfil (quem sou eu, o que eu nunca faço, o que dá
+errado, formação e CRP) entram na Fase 1, a partir do `CLAUDE.md` raiz.*
 
-**institucional/:**
-- [[o-que-e-a-paaps]] : definição institucional da PAAPS
-- [[metodologia-paaps]] : a metodologia proprietária, base do que o contrato social chama PAAPS
-- [[manual-marca-posicionamento]] : manual de marca e posicionamento público
-- [[ficha-juridica-paaps]] : situação jurídica completa, objeto social, cláusula GovTech
-- [[paaps-pesquisa-mercado]] : pesquisa de mercado da PAAPS
-- [[runbook-navegacao-mcp]] : runbook operacional de navegação via MCP
+---
 
-**base-teorica/:**
-- [[base-teorica/README]] : base teórica destilada dos fichamentos da Mallu para a
-  Tecelã, hoje ancorada na Psicologia Sócio-Histórica. Arquivo vivo, cresce a cada ciclo.
-  (Caminho completo no link porque existe outro `README.md` em `Arquivos/`, nome sozinho
-  ficaria ambíguo no grafo.)
+## 🟡 2-identidade
 
-## ECOA
+Quem a PAAPS é e como ela fala. É o setor que todo agente de conteúdo lê antes de
+escrever qualquer coisa.
 
-Comunidade ECOA (Psicologia Social Latina), projeto próprio e autocontido, por isso tem
-pasta própria. Exportado do Notion; os nomes de arquivo já foram limpos do hash da
-página original (12/09/2026).
+- [[o-que-e-a-paaps]] : definição institucional para consulta interna, escrita depois que
+  a Mallu recusou a mesma explicação como copy de site
+- [[manual-marca-posicionamento]] : manual de marca e posicionamento, convertido do DOCX
+  institucional original
 
-**identidade-e-posicionamento/:** [[Quem somos]] · [[Propósito]] ·
-[[Valores e Código de Conduta]] · [[Acordos]] · [[Identidade e Tom de Voz]] ·
-[[ECOA PSI SOCIAL]] (nota: essa página lista links pra sub-páginas que nunca chegaram a
-ser exportadas do Notion pra este cofre, ficam quebrados até alguém trazer o material)
+**juridico/**
+- [[ficha-juridica-paaps]] : ficha cadastral completa da DIGGING, objeto social alínea
+  por alínea, cláusula GovTech, sócias e checklist de habilitação
 
-**estrutura-e-rituais/:** [[ESTRUTURA DE GRUPOS 🏘️|Estrutura de Grupos]] ·
-[[Rituais]] · [[Jornada da Comunidade]] · [[Canvas de comunidade]] · [[Boas Vindas]] ·
-[[Boas Vindas (Roteiro vídeo)|Boas Vindas (roteiro de vídeo)]] ·
-[[Espaço destinado a saber os dias dos encontros da|Dias dos encontros]] ·
-[[Espaço destinado para conhecer os rituais da comun|Conhecer os rituais]] ·
-[[Espaço destinado para saber mais sobre os outros m|Saber sobre os outros membros]]
+**voz/**
+- [[voz-paaps]] : o gabarito que decide se um texto soa PAAPS. Todo agente que escreve
+  lê este antes de produzir
+- [[afeto-situado-mallu]] : como começar uma peça quando o gancho afetivo não veio dela,
+  e o que continua sendo dela mesmo assim
+- [[anatomia-do-carrossel-aprovado]] : o primeiro carrossel aprovado sem rodada de
+  correção, dissecado slide a slide
+- [[modelos-slide-paaps]] : catálogo dos 8 modelos de slide e das 8 leis universais do
+  @paaps.brasil, lidos de dentro de peças publicadas
+- [[identidade-aplicada]] : paleta, tipografia, elementos decorativos e sistema Periódico
+  como o Aplicador Visual executa
+- [[visual-instagram]] : os três modos visuais e as regras fotográficas que valem em todos
+- [[criterios-design]] : lista de checagem verificável do Crítico de Design
+- [[qualidade-frontend]] : princípios de design agnósticos de meio, valem para HTML e para
+  peça no Canva
+- [[mapa-fontes-foto]] : onde achar fotografia documental pública de uso livre
 
-**planejamento-de-conteudo/:**
+---
+
+## 🟢 3-metodo
+
+O que a PAAPS sabe e como pensa. Base teórica, metodologia, normas, temas de pesquisa e
+a evidência que sustenta cada afirmação.
+
+- [[metodologia-paaps]] : o que a PAAPS entrega e como explica cada frente, ditado pela
+  Mallu em 02/08/2026
+
+**base-teorica/**
+- [[base-teorica/README]] : fichamentos da Mallu destilados em movimentos de raciocínio
+  utilizáveis, hoje ancorados na Psicologia Sócio-Histórica. Arquivo vivo
+  (caminho completo no link porque existe outro `README.md` no cofre)
+
+*`normas/`, `temas/` e `evidencia/` abrem na Fase 2b, quando começar a entrada
+permanente de pesquisa e notícia.*
+
+---
+
+## 🔵 4-projetos
+
+Cada frente do ecossistema com vida própria. Hoje só a ECOA tem material; TEAtrar,
+Periódico da Rede PAAPS, Plantão Psicológico e Bela Vista de Minas ganham pasta quando
+tiverem conteúdo.
+
+### ecoa/
+
+Comunidade de Psicologia Social Latina. Exportada do Notion, nomes de arquivo já limpos
+do hash da página original.
+
+- [[ecoa/CLAUDE|Contexto da ECOA]] : ler antes de qualquer tarefa sobre a comunidade
+  (caminho completo no link: o cofre tem vários `CLAUDE.md`)
+
+**identidade-e-posicionamento/**
+[[Quem somos]] · [[Propósito]] · [[Valores e Código de Conduta]] · [[Acordos]] ·
+[[Identidade e Tom de Voz]]
+
+**estrutura-e-rituais/**
+[[ESTRUTURA DE GRUPOS 🏘️|Estrutura de grupos]] ·
+[[Espaço destinado para conhecer os rituais da comun|Os espaços de conversa]] ·
+[[Boas Vindas]] · [[Canvas de comunidade]]
+
+**planejamento-de-conteudo/**
 [[ERAS - O PLANEJAMENTO TEMÁTICO DA ECOA|Eras, o planejamento temático]] ·
 [[Personas]] · [[Impacto nas pessoas]] ·
-[[Referências de COMUNIDADE tipo ECOA|Referências de comunidades do tipo ECOA]]
+[[Referências de COMUNIDADE tipo ECOA|Comunidades de referência]]
 
-**porta-voz/:** [[PROGRAMA PORTA-VOZ|Programa Porta-Voz]] ·
-[[Projeto Porta Voz Ecoa|Projeto Porta-Voz ECOA]] · [[Reunião Porta Voz|Reunião Porta-Voz]]
+**porta-voz/** [[Projeto Porta Voz Ecoa|Projeto Porta-Voz]] · [[Reunião Porta Voz|Ata do Porta-Voz, 03/06]]
 
-**reunioes/:** [[Reunião Equipe|Reunião de equipe]] ·
-[[Reunião de Planejamento|Reunião de planejamento]] ·
-[[Joyce (Assistente Social) + Ecoa|Joyce (assistente social) + ECOA]]
-
-Também existe [[ecoa/CLAUDE|CLAUDE.md da ECOA]] (caminho completo no link: o vault tem
-uns 8 arquivos `CLAUDE.md`, nome sozinho seria ambíguo), o contexto do projeto ECOA em
-si, ler antes de qualquer tarefa sobre a comunidade.
-
-*(TEAtrar, Periódico da Rede PAAPS, Plantão Psicológico e Bela Vista de Minas são os
-outros projetos do ecossistema, listados no `CLAUDE.md` raiz. Nenhum tem material aqui
-ainda; quando tiver, ganha seção própria aqui, do mesmo jeito que a ECOA ganhou.)*
+**reunioes/** [[Reunião Equipe|Ata de equipe, 18/05]] ·
+[[Reunião de Planejamento|Ata de planejamento, 22/07]] ·
+[[Joyce (Assistente Social) + Ecoa|Conversa com Joyce, 30/04]]
 
 ---
 
-# Sistema
+## 🟠 5-mercado
 
-Como o Claude e os agentes operam dentro deste cofre. Não é o que a PAAPS diz ou faz, é
-o maquinário por trás.
+Como a PAAPS se sustenta. Pitch, cases, prospecção, funil, preço, editais.
 
-**arquitetura-agentes/:**
-- [[arquitetura_v2]] : árvore de dois troncos atual, tabela de agente/arquivo/status,
-  pipeline visual em HTML/CSS (reescrito em 12/09/2026, substitui a arquitetura de 4
-  camadas aposentada)
-- [[workflow-agentes]] : o mesmo fluxo em diagrama, tronco a tronco (reescrito em
-  12/09/2026)
-- [[diagnostico-grafo-conteudo-2026-08-10]] : diagnóstico datado (10/08/2026) da pasta
-  `conteudo/` na época; registro histórico, não reflete a estrutura atual
+- [[paaps-pesquisa-mercado]] : pesquisa de mercado, convertida do DOCX institucional
 
-**solto:**
-- [[padrao-llm-wiki]] : o padrão original de Karpathy por trás deste cofre, as três
-  camadas e três operações na formulação em inglês, e o que ainda não aplicamos dele
-  (frontmatter, ferramenta de busca)
-- [[sistema-gto]] : inventário do Notion GTO (o que está vazio, o que está vivo),
-  método real de produção destilado de 4 gravações, e uma proposta de 9 agentes cujo
-  status (ativa, superada pela árvore de dois troncos, ou a reconciliar) ainda não foi
-  decidido
-- [[como-trabalhar-com-claude]] : erros comuns e correção, postura de iteração,
-  Framework 4D, loop de delegação e diligência, e a ligação com o gate de aprovação que
-  a PAAPS já pratica
+**prospeccao/**
+- [[prospeccao-fria]] : esteira de status do lead, dedup de 60 dias, cadência de 15 por
+  semana e o gate de aprovação da Mallu
+
+*`pitch/`, `cases/` e `editais/` abrem na Fase 2, a partir do pitch geral atual.*
 
 ---
 
-Os logs automáticos de sessão (um por dia, gerados pelo hook `Stop`) não ficam mais
-dentro de `Conhecimento/`: moraram aqui um tempo, mas são puro registro operacional do
-`git status` de cada dia, não conhecimento curado, e só deixavam o índice poluído. Agora
-vivem em `sessoes/`, na raiz do projeto, fora do cofre `segundo-cerebro`.
+## ⚪ 6-sistema
+
+A máquina: como o Claude e os agentes operam aqui dentro. Não é o que a PAAPS diz, é o
+que faz ela funcionar.
+
+- [[padrao-llm-wiki]] : o padrão de Karpathy que sustenta este cofre, nas palavras do
+  autor, e o que dele ainda não aplicamos
+- [[como-trabalhar-com-claude]] : erros comuns de delegação e como corrigir, Framework 4D
+  e o loop de delegação e diligência
+- [[sistema-gto]] : inventário do Notion GTO e o método real de produção destilado de 4
+  gravações, com uma proposta de 9 agentes ainda sem decisão
+- [[runbook-navegacao-mcp]] : procedimento validado de navegação real via MCP, com os
+  erros conhecidos e a solução de cada um
+
+**arquitetura-agentes/**
+- [[arquitetura_v2]] : a árvore de dois troncos que vale hoje, com roster de agente por
+  arquivo e status
+- [[workflow-agentes]] : o mesmo fluxo em diagrama, tronco a tronco
+- [[diagnostico-grafo-conteudo-2026-08-10]] : diagnóstico datado de 10/08/2026,
+  `status: historico`, mantido como registro
+
+*`agentes.md` e `skills.md`, os dois índices dos 23 agentes e das 50 skills, entram na
+Fase 3.*
+
+---
+
+## Pendências conhecidas
+
+Sete notas existem mas não carregam conhecimento. Ficam marcadas `status: pendente` em
+vez de fingir que estão prontas:
+
+- Seis exports vazios da ECOA, que nunca trouxeram o conteúdo do Notion:
+  [[Rituais]], [[Jornada da Comunidade]], [[Boas Vindas (Roteiro vídeo)]],
+  [[PROGRAMA PORTA-VOZ]], [[Espaço destinado a saber os dias dos encontros da|Dias dos encontros]],
+  [[Espaço destinado para saber mais sobre os outros m|Membros da comunidade]]. Some-se a
+  [[ECOA PSI SOCIAL]], que é índice de databases nunca exportadas.
+- `identidade-mallu.md` é citada em `.claude/skills/edicao-reel-mallu/DECISOES.md` e
+  nunca foi escrita. Entra em `1-fundadora/` quando alguém escrever.
+
+---
+
+Os logs automáticos de sessão (um por dia, gerados pelo hook `Stop`) não ficam no cofre:
+são o `git status` de cada dia, registro operacional, e vivem em `sessoes/`, na raiz do
+projeto. O que é linha do tempo **do conhecimento** mora em [[log]].

@@ -1,6 +1,6 @@
 ---
 name: aplicador-visual
-description: Monta o carrossel do @paaps.brasil a partir do texto do Copywriter e das fotos do Buscador. Caminho oficial desde 31/08/2026 é HTML/CSS fotografado com Chrome headless (`conteudo/templates/carrossel-paaps/`); Canva vira exceção para edição manual. Aplica a identidade PAAPS (paleta, League Spartan, sistema Periódico, 3 modos visuais, 8 tipos de slide), exporta os slides em PNG e entrega no Drive, em pasta própria dentro do mês atual. Último agente antes de Mallu. Ler `Conhecimento/voz-e-identidade/anatomia-do-carrossel-aprovado.md` e `identidade-aplicada.md` antes de executar.
+description: Monta o carrossel do @paaps.brasil a partir do texto do Copywriter e das fotos do Buscador. Caminho oficial desde 31/08/2026 é HTML/CSS fotografado com Chrome headless (`conteudo/templates/carrossel-paaps/`); Canva vira exceção para edição manual. Aplica a identidade PAAPS (paleta, League Spartan, sistema Periódico, 3 modos visuais, 8 tipos de slide), exporta os slides em PNG e entrega no Drive, em pasta própria dentro do mês atual. Último agente antes de Mallu. Ler `Conhecimento/2-identidade/voz/anatomia-do-carrossel-aprovado.md` e `identidade-aplicada.md` antes de executar.
 model: fable
 tools: [Read, Write, Bash, WebFetch, Agent]
 memory: project
@@ -42,17 +42,17 @@ auditoria antes de exportar. Não pule.
 
 ## Antes de começar
 
-1. `Conhecimento/voz-e-identidade/modelos-slide-paaps.md`: **os 8 modelos de slide e as 8 leis
+1. `Conhecimento/2-identidade/voz/modelos-slide-paaps.md`: **os 8 modelos de slide e as 8 leis
    universais**, lidos de dentro das peças que a Mallu já publicou. É a forma que ela reconhece como
    dela. Você monta DENTRO de um modelo, sempre.
-2. `Conhecimento/voz-e-identidade/identidade-aplicada.md`: **o seu manual.** Paleta, tipografia,
+2. `Conhecimento/2-identidade/voz/identidade-aplicada.md`: **o seu manual.** Paleta, tipografia,
    sistema Periódico, os 8 tipos de slide, o workflow Canva e o posicionamento de foto por tipo.
-3. `Conhecimento/voz-e-identidade/anatomia-do-carrossel-aprovado.md`: **a peça de referência
+3. `Conhecimento/2-identidade/voz/anatomia-do-carrossel-aprovado.md`: **a peça de referência
    real.** Não é teoria: são os números exatos (opacidade de textura, opacidade de véu, posição de
    crédito) calibrados contra print da Mallu na primeira peça aprovada sem rodada nenhuma. Antes de
    inventar um valor, confira se ele já foi resolvido lá.
-4. `Conhecimento/voz-e-identidade/visual-instagram.md`: os 3 modos visuais e as regras fotográficas.
-5. `Conhecimento/voz-e-identidade/criterios-design.md`: o checklist do crítico. Leia o que vão te cobrar.
+4. `Conhecimento/2-identidade/voz/visual-instagram.md`: os 3 modos visuais e as regras fotográficas.
+5. `Conhecimento/2-identidade/voz/criterios-design.md`: o checklist do crítico. Leia o que vão te cobrar.
 6. `conteudo/templates/carrossel-paaps/README.md`: como copiar o template HTML pra uma peça nova e
    renderizar. É o seu ponto de partida em toda montagem, a partir de 31/08/2026.
 7. `.claude/agent-memory/aplicador-visual/MEMORY.md`: erros de montagem que não podem se repetir, ajustes de
@@ -92,7 +92,7 @@ amarelo. Post de dado: fundo bege, texto marrom, número em amarelo enorme. Exce
 ## Tipografia
 
 A escrita tem que sair igual à das peças do Canva da Mallu. Ver a seção 3 de
-`nucleo-comum/identidade-aplicada.md`, que é a fonte da verdade.
+`Conhecimento/2-identidade/voz/identidade-aplicada.md`, que é a fonte da verdade.
 
 **Helvetica** (400 e 700): headline, subtítulo, corpo, contato. É o padrão.
 **League Spartan** (700): só label pequena, tag e número solto. Nunca headline, nunca corpo.

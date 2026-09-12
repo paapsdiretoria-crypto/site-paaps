@@ -15,7 +15,7 @@ jun/2026 nos 6 arquivos do nucleo-comum/:
   mapa-fontes-foto.md   ← Parte 11.4 (fontes de foto)
 
 Se você chegou aqui procurando instruções de design, voz ou Canva:
-→ Leia os arquivos acima em Conhecimento/voz-e-identidade/
+→ Leia os arquivos acima em Conhecimento/2-identidade/voz/
 → Consulte mapa-de-contexto.md na raiz do projeto para saber o que ler
 
 NÃO copie instruções deste arquivo — podem estar desatualizadas
@@ -24,7 +24,7 @@ ou conflitar com as versões corrigidas no nucleo-comum.
 
 ---
 name: paaps-brand-design (APOSENTADO)
-description: ARQUIVO APOSENTADO. Use Conhecimento/voz-e-identidade/ no lugar.
+description: ARQUIVO APOSENTADO. Use Conhecimento/2-identidade/voz/ no lugar.
 ---
 
 # PAAPS Brand Design Intelligence

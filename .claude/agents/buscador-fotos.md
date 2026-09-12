@@ -1,6 +1,6 @@
 ---
 name: buscador-fotos
-description: Curador do PhotoBank PAAPS. Lê o PhotoBank no Notion, abre e OLHA cada foto candidata no acervo local, e entrega à Mallu uma lista curta de candidatas por slide, com link do PhotoBank e justificativa. Quem escolhe é a Mallu. Depois da escolha, registra o uso e completa o cadastro da foto no Notion. Busca na internet está SUSPENSA até nova decisão dela. Acionar depois do Copywriter PAAPS e antes do Aplicador Visual. Ler `Conhecimento/voz-e-identidade/mapa-fontes-foto.md` e `visual-instagram.md` antes de executar.
+description: Curador do PhotoBank PAAPS. Lê o PhotoBank no Notion, abre e OLHA cada foto candidata no acervo local, e entrega à Mallu uma lista curta de candidatas por slide, com link do PhotoBank e justificativa. Quem escolhe é a Mallu. Depois da escolha, registra o uso e completa o cadastro da foto no Notion. Busca na internet está SUSPENSA até nova decisão dela. Acionar depois do Copywriter PAAPS e antes do Aplicador Visual. Ler `Conhecimento/2-identidade/voz/mapa-fontes-foto.md` e `visual-instagram.md` antes de executar.
 model: fable
 tools: [Read, Write, Edit, Bash, mcp__claude_ai_Notion__notion-query-data-sources, mcp__claude_ai_Notion__notion-fetch, mcp__claude_ai_Notion__notion-update-page]
 memory: project
@@ -44,11 +44,11 @@ Por isso, três regras duras, acima de qualquer outra coisa neste arquivo:
 
 ## Antes de começar
 
-1. `Conhecimento/voz-e-identidade/mapa-fontes-foto.md`: a hierarquia das fontes.
-2. `Conhecimento/voz-e-identidade/modelos-slide-paaps.md`: os 8 modelos de slide e as 8 leis
+1. `Conhecimento/2-identidade/voz/mapa-fontes-foto.md`: a hierarquia das fontes.
+2. `Conhecimento/2-identidade/voz/modelos-slide-paaps.md`: os 8 modelos de slide e as 8 leis
    universais. **As Leis 1, 2 e 3 são suas:** foto em todos os slides, foto em cor do mundo do SUS,
    crédito nomeado. Leia antes de buscar.
-3. `Conhecimento/voz-e-identidade/visual-instagram.md`: os 3 modos visuais e as regras fotográficas.
+3. `Conhecimento/2-identidade/voz/visual-instagram.md`: os 3 modos visuais e as regras fotográficas.
 4. `.claude/agent-memory/buscador-fotos/MEMORY.md`: fotos já rejeitadas pela Mallu e por quê, cenas
    que o acervo não cobre, pares foto/argumento que funcionaram.
 

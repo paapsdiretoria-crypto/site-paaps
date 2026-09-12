@@ -6,7 +6,7 @@
 >
 > **Este arquivo é a memória estruturada do projeto do site.** Quem abrir uma sessão nova para
 > trabalhar no site lê este arquivo antes de escrever qualquer linha. Ele não substitui
-> `Conhecimento/institucional/metodologia-paaps.md` (o que a PAAPS vende) nem
+> `Conhecimento/3-metodo/metodologia-paaps.md` (o que a PAAPS vende) nem
 > `codigo/site/DESIGN-SYSTEM.md` (o sistema visual completo): ele os amarra e diz o que fazer.
 
 ---
@@ -52,11 +52,11 @@
     treinamento e campo. São as ÚNICAS fotos de treinamento que existem.
   </acervo_proprio>
   <documentos_fonte>
-    <doc peso="1">Conhecimento/institucional/metodologia-paaps.md</doc>
-    <doc peso="1">Conhecimento/institucional/o-que-e-a-paaps.md</doc>
+    <doc peso="1">Conhecimento/3-metodo/metodologia-paaps.md</doc>
+    <doc peso="1">Conhecimento/2-identidade/o-que-e-a-paaps.md</doc>
     <doc peso="1">codigo/site/DESIGN-SYSTEM.md</doc>
-    <doc peso="2">Conhecimento/institucional/ficha-juridica-paaps.md</doc>
-    <doc peso="2">Conhecimento/voz-e-identidade/voz-paaps.md</doc>
+    <doc peso="2">Conhecimento/2-identidade/juridico/ficha-juridica-paaps.md</doc>
+    <doc peso="2">Conhecimento/2-identidade/voz/voz-paaps.md</doc>
   </documentos_fonte>
   <contato>
     WhatsApp 55 11 99523-1724 · relacionamento@paaps.com.br · @paaps.brasil
