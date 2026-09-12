@@ -44,8 +44,11 @@ Documentos institucionais convertidos de DOCX para Markdown.
 
 ## arquitetura-agentes
 
-- [[workflow-agentes]] : desenho do fluxo entre os agentes de conteúdo
-- [[arquitetura_v2]] : arquitetura v2 dos agentes, nomes e papéis aprovados
+- [[arquitetura_v2]] : árvore de dois troncos atual, tabela de agente/arquivo/status,
+  pipeline visual em HTML/CSS (reescrito em 12/09/2026, substitui a arquitetura de 4
+  camadas aposentada)
+- [[workflow-agentes]] : o mesmo fluxo em diagrama, tronco a tronco (reescrito em
+  12/09/2026)
 - [[diagnostico-grafo-conteudo-2026-08-10]] : diagnóstico datado (10/08/2026) da pasta
   `conteudo/` na época; registro histórico, não reflete a estrutura atual
 

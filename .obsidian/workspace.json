@@ -4,24 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "4b491ba15787de31",
+        "id": "0adffa64af62a649",
         "type": "tabs",
         "children": [
           {
-            "id": "161ac1b9ed3b256f",
+            "id": "b4a6019ce6e494f7",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Arquivos/Getting better results · Claude 101.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Getting better results · Claude 101"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Visualização em gráfico"
             }
           }
-        ]
+        ],
+        "stacked": true
       }
     ],
     "direction": "vertical"
@@ -83,7 +80,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 356.54296875
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "81e583fb7e4f9593",
@@ -99,7 +97,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Arquivos/Getting better results · Claude 101.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +115,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Arquivos/Getting better results · Claude 101.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -161,7 +157,6 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Arquivos/Getting better results · Claude 101.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -188,10 +183,19 @@
       "bases:Criar nova base": false
     }
   },
-  "active": "161ac1b9ed3b256f",
+  "active": "b4a6019ce6e494f7",
   "lastOpenFiles": [
-    "Conhecimento/como-trabalhar-com-claude.md",
+    "Sem título.canvas",
+    "2026-09-12.md",
+    "hyperframes/skills/embedded-captions/SKILL.md",
+    "codigo/site/pitch-serasa/deck-v5/node_modules/eslint-plugin-react/README.md",
+    "projetos/pipeflow-crm/node_modules/next/dist/docs/01-app/01-getting-started/02-project-structure.md",
+    "projetos/pipeflow-crm/node_modules/next/dist/docs/01-app/04-glossary.md",
+    "codigo/site/pitch-serasa/deck-v5/node_modules/tailwindcss-animate/README.md",
+    "hyperframes/skills/hyperframes-animation/rules/sine-wave-loop.md",
+    "projetos/pipeflow-crm/node_modules/next/dist/docs/01-app/03-api-reference/05-config/01-next-config-js/cacheLife.md",
     "Arquivos/Getting better results · Claude 101.md",
+    "Conhecimento/como-trabalhar-com-claude.md",
     "Conhecimento/index.md",
     "Conhecimento/ecoa/estrutura-e-rituais/Rituais bbe44cb52e00833f850f01748170f2aa.md",
     "Conhecimento/ecoa/estrutura-e-rituais/Jornada da Comunidade e5744cb52e008225bc938103a579f185.md",
@@ -207,15 +211,6 @@
     "Conhecimento/ecoa/planejamento-de-conteudo/Personas 27044cb52e0083ca97d981f6a7dee7fe.md",
     "Conhecimento/ecoa/reunioes/Joyce (Assistente Social) + Ecoa 36344cb52e0080428233c08e2d754300.md",
     "Conhecimento/ecoa/identidade-e-posicionamento/Identidade e Tom de Voz ecf44cb52e008203aab201061a0823a3.md",
-    "Conhecimento/ecoa/planejamento-de-conteudo/Referências de COMUNIDADE tipo ECOA a1c44cb52e00834295d101030147a51d.md",
-    "Conhecimento/ecoa/planejamento-de-conteudo/Impacto nas pessoas f9544cb52e0082008cf801944334aa9f.md",
-    "Conhecimento/ecoa/planejamento-de-conteudo/ERAS - O PLANEJAMENTO TEMÁTICO DA ECOA 68b44cb52e00829a91a301afe1cf554f.md",
-    "Conhecimento/ecoa/porta-voz/Reunião Porta Voz 36a44cb52e0080f0a4f1c8af59f4479c.md",
-    "Conhecimento/ecoa/porta-voz/Projeto Porta Voz Ecoa 36344cb52e0080698607d61872828dc2.md",
-    "Conhecimento/ecoa/identidade-e-posicionamento/Valores e Código de Conduta 32844cb52e0083d29d3881637a4fa457.md",
-    "Conhecimento/ecoa/porta-voz/PROGRAMA PORTA-VOZ 24244cb52e0082f981590120ac3011e9.md",
-    "Conhecimento/ecoa/identidade-e-posicionamento/Propósito 45644cb52e008393a3bd810338bae47c.md",
-    "Conhecimento/ecoa/identidade-e-posicionamento/Quem somos b4744cb52e008273820e01e788ac78e1.md",
     "Conhecimento/ecoa/estrutura-e-rituais",
     "Conhecimento/ecoa/reunioes",
     "Conhecimento/ecoa/porta-voz",

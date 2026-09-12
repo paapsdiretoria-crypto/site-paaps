@@ -1,100 +1,81 @@
-# Workflow de Agentes — Produção de Conteúdo PAAPS (v2)
+# Workflow de Agentes : Produção de Conteúdo PAAPS (árvore de dois troncos)
 
-Fluxo completo de uma sessão de produção. Última revisão: jun/2026.
+Fluxo completo de uma rodada de produção. Última revisão: 12/09/2026, substitui a
+versão de jun/2026 (arquitetura de 4 camadas, aposentada em 27/07/2026). Ver também
+`arquitetura_v2.md` pra tabela de agente, arquivo e status.
 
----
-
-## Camada 1 — Inteligência
-
-```
-┌─────────────────────────────────────┐   ┌──────────────────────────────────────────┐
-│             RADAR                   │   │             SENTINELA                    │
-│  20 pautas em ascensão              │   │  Lê dashboard Windsor + perfis IG/LI     │
-│  Não o que explodiu — o que sobe    │   │  Auto-report: o que funcionou/falhou      │
-│  Política, legislação, viral,       │   │  Estratégias complexas para o ciclo      │
-│  cultura, relatórios, episódios     │   │  Cruza com as 20 pautas do Radar         │
-│  Parâmetro: potencial PAAPS +       │   │  Ranqueia top 5 pautas com mais chance   │
-│  momento de ascensão                │   │                                          │
-└─────────────┬───────────────────────┘   └────────────────────────┬─────────────────┘
-              │                                                      │
-              └──────────────────────┬───────────────────────────────┘
-                                     ↓
-┌────────────────────────────────────────────────────────────────────┐
-│                          TECELÃ                                     │
-│  Conectora criativa — não é Cartógrafo, não é academicista         │
-│  Repertório: Foucault, Lélia, Mbembe, bell hooks, Freire + 18 mais │
-│  Apresenta a ideia PRIMEIRO — referencia depois (como fotógrafo)   │
-│  Entrega: raciocínio crítico por pauta, ângulo por canal           │
-└────────────────────────────┬───────────────────────────────────────┘
-                             ↓
-┌────────────────────────────────────────────────────────────────────┐
-│                         NARRADOR                                    │
-│  Escreve o documento completo de briefing (briefing-YYYY-MM-DD.md) │
-│  Pode chamar Radar, Sentinela, Tecelã para revisão/aprofundamento  │
-│  Documento contém: conjuntura, pautas, raciocínios, sacadas,       │
-│  direcionamentos por canal, estratégia do Sentinela, pergunta      │
-│  aberta para Mallu                                                 │
-│  Salva em: conteudo/briefings/                                     │
-└────────────────────────────┬───────────────────────────────────────┘
-                             ↓
-```
+> O diagrama companheiro `workflow_agentes_conteudo_paaps.svg` e o `workflow-paaps.html`
+> ainda desenham a arquitetura antiga. Estão desatualizados, precisam de redesenho.
 
 ---
 
-## Camada 2 — Captação de Mallu
+## O que abre toda tarefa
 
 ```
-Mallu lê o documento do Narrador
-  ↓
-Fase 1: resposta livre ("Como você se posicionaria nessa semana?")
-  ↓
-Fase 2: 5-10 escolhas de tom, referências, recorte
-  ↓
-TRADUTOR (⚠ incompleto) → processa e gera briefing final para canais
+Julgamento do orquestrador (skill paaps-orquestrador-conteudo): em qual tronco a
+tarefa cai? Decisão registrada no artefato T de cada rodada.
 ```
 
----
-
-## Camada 3 — Produção por Canal (⚠ agentes incompletos)
+## Tronco A : a Mallu puxa o gancho
 
 ```
-6 canais em paralelo:
-  mallu-linkedin / mallu-reels / paaps-carrossel
-  paaps-linkedin / paaps-facebook / ecoa
-
-Cada canal aciona time de apoio:
-  critico-conteudo → voz PAAPS
-  critico-design   → visual, créditos, legibilidade
-  buscador-fotos   → foto documental real
-  aplicador-visual → Canva (já documentado em identidade-aplicada.md)
+Fase 0 : setting e ambiente
+Fase 1 : contexto situado + âncora teórica
+   ↓
+LOTE DE CONTEÚDOS (serve os dois perfis, roda fora de calendário fixo)
+   ↓
+gate de voz, peça a peça
+   ↓                    ↓
+@amalluvasconcellos   @paaps.brasil
 ```
 
----
+`conteudo/CLAUDE.md` não fixa qual agente escreve qual peça dentro do lote: os agentes
+de canal já existem prontos pra entrar aqui (`mallu-carrossel`, `mallu-linkedin`,
+`mallu-reels` pro perfil pessoal; `paaps-linkedin`, `paaps-facebook`, e o próprio
+`copywriter-paaps` pro institucional), acionados conforme o formato que o lote pede.
 
-## Camada 4 — Aprovação
+## Tronco B : o PAAPS rodando por frequência
 
 ```
-Mallu revisa e aprova cada peça
-  → aprovação: publicar
-  → ajuste pequeno: editar no Canva
-  → retrabalho profundo: volta ao Tradutor com novo ângulo
+radar (2 modos: propositivo padrão, ou dirigido a serviço do Tronco A)
+  + paaps-brasil (lê a performance real do próprio perfil)
+   ↓
+tecela (entra SEMPRE, nos dois troncos, mesmo em modo aprendizado sem escrever nada)
+   ↓
+copywriter-paaps (escreve a peça final, sucessor do antigo Narrador)
+   ↓
+critico-conteudo (nota de 0 a 100, decide se segue ou volta pra reescrita)
+   ↓
+buscador-fotos (cura o PhotoBank, entrega candidatas por slide)
+   ↓
+aplicador-visual (HTML/CSS fotografado via Chrome headless, mesma técnica do site
+institucional: puro, sem framework nem bundler. Canva é exceção pra edição manual)
+   ↓
+critico-design (avalia a peça montada contra identidade PAAPS e diretrizes de interface)
+   ↓
+Mallu (gate final, aprova, corrige ou recusa)
 ```
 
----
+## Regra que atravessa os dois troncos
 
-## Pontos de decisão humana (Mallu)
+- **Nenhum agente publica nada.** Toda peça passa pela aprovação final da Mallu.
+- **A Tecelã entra em toda rodada.** Pular apaga uma rodada de aprendizado que não volta.
+- **Quando a Mallu não fornece o gancho**, o afeto que inicia a peça é reconstituído por
+  `Conhecimento/voz-e-identidade/afeto-situado-mallu.md`, sempre ancorado em artefato
+  real, nunca vivência inventada em primeira pessoa.
 
-1. **Camada 2:** lê o documento do Narrador e responde com perspectiva pessoal
-2. **Camada 4:** valida tudo antes de publicar
+## Artefatos de handoff
 
-**Gustavo** entra apenas no agente Interlocutor ECOA.
+Uma pasta por rodada: `conteudo/ciclos/AAAA-MM-DD/`. Um agente só inicia sua etapa
+quando o artefato de entrada existe (`T`, `A0`, `A1`, `A2`, `DEC`, `B1` a `B4`, `QA`,
+seção 8 da skill orquestradora). Entregas finais:
+`conteudo/instagram/<perfil>/entregas/AAAA-MM-MÊS/<sessão>/`.
 
----
+## O que mudou da arquitetura de 4 camadas
 
-## Mudanças da v1
-
-- Radar: 20 temas (não 3), escopo jornalístico amplo, parâmetro de ascensão
-- Sentinela: novo agente de inteligência estratégica (não existia)
-- Cartógrafo → Tecelã: conectora criativa, não academicista
-- Curador → Narrador: escreve documento completo, não lista de 3 temas
-- Briefings salvos em `conteudo/briefings/`
+- A sequência fixa em camadas (Inteligência → Captação → Produção por Canal →
+  Aprovação) virou uma decisão de tronco no início de cada tarefa, não um trilho único.
+- Sentinela saiu do fluxo.
+- Narrador virou Copywriter PAAPS: escreve a peça final direto, não um documento de
+  briefing intermediário que a Mallu precisava traduzir depois.
+- Aplicador Visual trocou Canva por HTML/CSS fotografado como caminho padrão.
