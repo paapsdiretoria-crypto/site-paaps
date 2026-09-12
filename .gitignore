@@ -4,13 +4,13 @@
 .LSOverride
 ._*
 
-# Arquivos brutos / assets de produção (não vão para o repo)
-Arquivos/fotos/
-Arquivos/identidade-visual/
-Arquivos/aplicacao-id-visual/
-Arquivos/nossa-camiseta-paaps/
-Arquivos/nossos-clientes-e-parceiros/
-Arquivos/docs-imagens/*-imagens/
+# Acervo: arquivos brutos / assets de produção (não vão para o repo)
+Acervo/fotos/
+Acervo/identidade-visual/
+Acervo/aplicacao-id-visual/
+Acervo/nossa-camiseta-paaps/
+Acervo/nossos-clientes-e-parceiros/
+Acervo/docs-imagens/*-imagens/
 
 # Editor
 .vscode/
@@ -67,17 +67,17 @@ conteudo/ciclos/*/B0-newsletters.md
 codigo/site/pitch-serasa/img/final - cópia.mp4
 .export-*
 
-# Obsidian. O cofre é Conhecimento/, então a config dele fica em Conhecimento/.obsidian/.
+# Obsidian. O cofre é "Segundo Cérebro/", então a config dele fica em "Segundo Cérebro/.obsidian/".
 # graph.json ENTRA no git: é ele que carrega as cores dos 6 setores do grafo. O que fica
 # de fora é só estado de janela, que muda a cada clique e polui o diff.
-Conhecimento/.obsidian/workspace.json
-Conhecimento/.obsidian/workspace-mobile.json
-Conhecimento/.obsidian/cache
+Segundo Cérebro/.obsidian/workspace.json
+Segundo Cérebro/.obsidian/workspace-mobile.json
+Segundo Cérebro/.obsidian/cache
 # vault antigo da raiz inteira, aposentado: graficava 79 mil arquivos sem sentido.
 # A barra inicial é obrigatória: sem ela o padrão casa QUALQUER pasta .obsidian do repo,
 # inclusive a do cofre, e engole as cores do grafo.
 /.obsidian/
 
 # Tema e plugin de terceiros do cofre: reinstaláveis, não versionar
-Conhecimento/.obsidian/themes/
-Conhecimento/.obsidian/plugins/
+Segundo Cérebro/.obsidian/themes/
+Segundo Cérebro/.obsidian/plugins/
