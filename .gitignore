@@ -73,5 +73,7 @@ codigo/site/pitch-serasa/img/final - cópia.mp4
 Conhecimento/.obsidian/workspace.json
 Conhecimento/.obsidian/workspace-mobile.json
 Conhecimento/.obsidian/cache
-# vault antigo da raiz inteira, aposentado: graficava 79 mil arquivos sem sentido
-.obsidian/
+# vault antigo da raiz inteira, aposentado: graficava 79 mil arquivos sem sentido.
+# A barra inicial é obrigatória: sem ela o padrão casa QUALQUER pasta .obsidian do repo,
+# inclusive a do cofre, e engole as cores do grafo.
+/.obsidian/
