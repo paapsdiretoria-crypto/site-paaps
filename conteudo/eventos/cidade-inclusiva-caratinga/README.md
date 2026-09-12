@@ -2,7 +2,7 @@
 
 > Workspace de produção de conteúdo **a ser feita no próprio dia do evento**, captando a
 > presença da PAAPS no festival via **TEAtrar**. Leitura obrigatória antes de produzir:
-> `insumos-compartilhados/nucleo-comum/voz-paaps.md` e `visual-instagram.md`.
+> `wiki/voz-e-identidade/voz-paaps.md` e `visual-instagram.md`.
 
 ---
 

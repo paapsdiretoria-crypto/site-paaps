@@ -50,7 +50,7 @@ amalluvasconcellos/
 
 Este workspace produz conteúdo para @amalluvasconcellos. Antes de qualquer peça, ler:
 - `../../../CLAUDE.md` (raiz — proibições e linha epistemológica)
-- `../../../insumos-compartilhados/nucleo-comum/voz-paaps.md`
+- `../../../wiki/voz-e-identidade/voz-paaps.md`
 - O agente correspondente em `../../../.claude/agents/` (mallu-reels, paaps-carrossel,
   mallu-linkedin).
 

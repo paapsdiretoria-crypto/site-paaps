@@ -1,8 +1,8 @@
 # Briefing do site PAAPS : handoff para quem for construir
 
 > Consolidado em 02/08/2026, a partir de uma sessão inteira de calibração com a Mallu.
-> Leia junto: `insumos-compartilhados/docs/o-que-e-a-paaps.md` (o que a PAAPS é) e
-> `insumos-compartilhados/docs/metodologia-paaps.md` (o que vende e como explica).
+> Leia junto: `wiki/institucional/o-que-e-a-paaps.md` (o que a PAAPS é) e
+> `wiki/institucional/metodologia-paaps.md` (o que vende e como explica).
 > A hierarquia de cor está no topo de `codigo/site/DESIGN-SYSTEM.md` e manda sobre o resto dele.
 
 ---
@@ -96,7 +96,7 @@ sobre preto a **70% de transparência**, leve.
 
 **Fontes:** Helvetica/Nimbus Sans no corpo (400 e 700, letter-spacing 0), League Spartan em título,
 Evermore em palavra-chave. Todas embutidas por `@font-face` de
-`insumos-compartilhados/nucleo-comum/fontes/`. **Nunca Google Fonts.**
+`raw/fontes-tipograficas/`. **Nunca Google Fonts.**
 
 **Regras técnicas que vieram do benchmark:**
 - Primeira dobra **estática**, sem depender de JavaScript. Nenhum número pode zerar se o script
@@ -119,8 +119,8 @@ Yunus (estética da página de emergências) · O Futuro das Coisas (formulário
 - Autoria não localizada: aplicar com legenda e **sinalizar a pendência na entrega**
 
 **Radilson Carlos Gomes, fotógrafo do SUS**, é a espinha visual do site. 33 fotos em 2560px em
-`insumos-compartilhados/fotos-radilson/`. São gente de verdade, SUS de verdade, Brasil de verdade.
-Acervo próprio: `insumos-compartilhados/fotos/` (316 fotos), Mallu em `fotos/FOTOS mallu/`.
+`raw/fotos-radilson/`. São gente de verdade, SUS de verdade, Brasil de verdade.
+Acervo próprio: `raw/fotos/` (316 fotos), Mallu em `fotos/FOTOS mallu/`.
 
 **A Mallu aparece só na seção dela na home:** breve, humana, impactante. Em nenhum outro lugar.
 

@@ -62,7 +62,7 @@ Escrevo o primeiro rascunho quando você me passar os dados da seção 5. Você 
 antes de qualquer coisa ir para o n8n.
 
 ### Etapa 4 : assinatura
-Feita e fechada: `insumos-compartilhados/assinatura-email/assinatura-pesquisa-mallu.html`,
+Feita e fechada: `raw/assinatura-email/assinatura-pesquisa-mallu.html`,
 `.png` e `.jpg`. Cartão acadêmico limpo, decidido por você em 27/08/2026: sem logo, sem
 `@paaps.brasil`, sem LinkedIn da empresa, sem "Saúde mental coletiva", sem "Políticas
 públicas do futuro" e sem "CEO Founder". Ficou monocromático, marrom sobre papel, com o

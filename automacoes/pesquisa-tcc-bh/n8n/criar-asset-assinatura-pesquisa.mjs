@@ -20,7 +20,7 @@ const API = env.N8N_API_URL;
 const h = { 'X-N8N-API-KEY': env.N8N_API_KEY, 'Content-Type': 'application/json' };
 
 const imagem = readFileSync(
-  resolve(raiz, 'insumos-compartilhados/assinatura-email/assinatura-pesquisa-mallu.jpg')
+  resolve(raiz, 'raw/assinatura-email/assinatura-pesquisa-mallu.jpg')
 ).toString('base64');
 
 const workflow = {
@@ -57,7 +57,7 @@ const workflow = {
           '  }\n' +
           '}];'
       },
-      notes: 'Fonte: insumos-compartilhados/assinatura-email/assinatura-pesquisa-mallu.jpg. Cartão acadêmico, sem marca PAAPS. Para trocar, regenerar a imagem e rodar este script de novo.'
+      notes: 'Fonte: raw/assinatura-email/assinatura-pesquisa-mallu.jpg. Cartão acadêmico, sem marca PAAPS. Para trocar, regenerar a imagem e rodar este script de novo.'
     },
     {
       id: 'entrega',

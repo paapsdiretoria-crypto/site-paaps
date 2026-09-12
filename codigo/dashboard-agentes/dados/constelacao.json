@@ -14,7 +14,7 @@
         "Read",
         "Write"
       ],
-      "notas": "Produz posts para o LinkedIn pessoal de Mallu (CEO Founder). Tom analítico e de autoridade profissional B2B. Ler nucleo-comum/voz-paaps.md antes de escrever.",
+      "notas": "Produz posts para o LinkedIn pessoal de Mallu (CEO Founder). Tom analítico e de autoridade profissional B2B. Ler wiki/voz-e-identidade/voz-paaps.md antes de escrever.",
       "recebe_de": [],
       "passa_para": [],
       "url_notion": null
@@ -92,7 +92,7 @@
         "Read",
         "WebSearch"
       ],
-      "notas": "Modelo Fable 5. Ancorada na Psicologia Sócio-Histórica: base teórica em insumos-compartilhados/nucleo-comum/base-teorica/README.md (arquivo vivo, cresce a cada fichamento da Mallu). Tece por cinco movimentos: desnaturalizar, nomear a contradição, reconstituir a totalidade, achar as mediações, tomar o movimento. Lê falas por núcleos de significação. A ideia vem antes do nome do autor.",
+      "notas": "Modelo Fable 5. Ancorada na Psicologia Sócio-Histórica: base teórica em wiki/base-teorica/README.md (arquivo vivo, cresce a cada fichamento da Mallu). Tece por cinco movimentos: desnaturalizar, nomear a contradição, reconstituir a totalidade, achar as mediações, tomar o movimento. Lê falas por núcleos de significação. A ideia vem antes do nome do autor.",
       "recebe_de": [
         "radar",
         "paaps-brasil"

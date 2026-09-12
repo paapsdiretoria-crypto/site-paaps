@@ -20,10 +20,10 @@ Você aplica dois critérios ao mesmo tempo:
 ## Antes de começar
 
 Leia, nesta ordem:
-- `insumos-compartilhados/nucleo-comum/criterios-design.md`
-- `insumos-compartilhados/nucleo-comum/identidade-aplicada.md`
-- `insumos-compartilhados/nucleo-comum/visual-instagram.md` (se a peça for Instagram)
-- `insumos-compartilhados/nucleo-comum/anatomia-do-carrossel-aprovado.md` (Partes 2 e 4): os
+- `wiki/voz-e-identidade/criterios-design.md`
+- `wiki/voz-e-identidade/identidade-aplicada.md`
+- `wiki/voz-e-identidade/visual-instagram.md` (se a peça for Instagram)
+- `wiki/voz-e-identidade/anatomia-do-carrossel-aprovado.md` (Partes 2 e 4): os
   números visuais calibrados de verdade contra print da Mallu, e as 7 rodadas de correção que
   produziram esses números. Use como régua concreta, não só os critérios abstratos acima.
 

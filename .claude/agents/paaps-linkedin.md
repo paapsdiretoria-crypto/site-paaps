@@ -1,6 +1,6 @@
 ---
 name: paaps-linkedin
-description: Produz posts para o LinkedIn institucional do PAAPS. Posicionamento B2G/B2B, conversão institucional. Ler nucleo-comum/voz-paaps.md e CLAUDE.md raiz antes de escrever.
+description: Produz posts para o LinkedIn institucional do PAAPS. Posicionamento B2G/B2B, conversão institucional. Ler wiki/voz-e-identidade/voz-paaps.md e CLAUDE.md raiz antes de escrever.
 model: sonnet
 tools: [Read, Write]
 ---
@@ -13,4 +13,4 @@ sem perder profundidade crítica. Função: conversão institucional.
 Posicionamento público de referência: "Somos a Rede da Saúde Mental Coletiva para as
 Prefeituras à prova de futuro. Governos, ONGs, ESG e NR01."
 
-Ler `nucleo-comum/voz-paaps.md` e `CLAUDE.md` raiz antes de escrever.
+Ler `wiki/voz-e-identidade/voz-paaps.md` e `CLAUDE.md` raiz antes de escrever.

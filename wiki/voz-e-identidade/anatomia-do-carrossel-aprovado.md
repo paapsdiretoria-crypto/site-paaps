@@ -86,7 +86,7 @@ nenhum véu (o 5, respiro, e qualquer slide onde a foto já tem contraste sufici
 
 **Textura de marca.** Só na superfície bege/clara, por decisão dela nesta peça: o marrom fica
 sem textura até segunda ordem. Padrão: **Textura 4**, arquivo de
-`insumos-compartilhados/identidade-visual/04-texturas/`. CSS: `background-repeat: no-repeat`
+`raw/identidade-visual/04-texturas/`. CSS: `background-repeat: no-repeat`
 (nunca mosaico em `repeat`: em grade pequena o traço vira "estampa de onça", palavra literal
 dela), `background-size: 140%`, **opacidade 0,05** por cima do que já vem embutido no PNG
 (os arquivos de textura já carregam ~25% de alfa próprio). Essa opacidade não é arbitrária:

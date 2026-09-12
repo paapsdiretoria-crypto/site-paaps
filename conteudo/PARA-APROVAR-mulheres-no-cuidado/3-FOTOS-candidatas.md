@@ -28,7 +28,7 @@ formal (não tenho link para dar à Mallu), mas abri todos mesmo assim, porque a
 é muito específica e eu precisava saber se algum deles a resolvia.
 
 Também abri uma amostra de 5 de 35 arquivos do acervo Bela Vista
-(`insumos-compartilhados/fotos/case-bela-vista-de-minas/`), pensando no slide 7: se a rede
+(`raw/fotos/case-bela-vista-de-minas/`), pensando no slide 7: se a rede
 pública não tivesse cena de escritório/mesa, o caso Bela Vista (onde o PAAPS atuou dentro de
 uma prefeitura de verdade) era o próximo lugar razoável para checar.
 

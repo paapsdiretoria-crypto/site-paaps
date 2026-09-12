@@ -63,7 +63,7 @@ O design PAAPS vive no cruzamento de três tensões que nunca se resolvem comple
 > O Canva é a referência, não este arquivo. Em caso de dúvida, abrir uma peça da
 > Mallu e copiar o que se vê.
 
-**Arquivos das fontes:** `insumos-compartilhados/nucleo-comum/fontes/`
+**Arquivos das fontes:** `raw/fontes-tipograficas/`
 Nunca puxar fonte do CDN do Google: sem internet ou em render headless, cai para Arial
 e a peça sai errada. Sempre `@font-face` apontando para essa pasta.
 

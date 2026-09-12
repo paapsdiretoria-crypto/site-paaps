@@ -30,7 +30,7 @@ const KEY = env.N8N_API_KEY;
 if (!API || !KEY) throw new Error('N8N_API_URL ou N8N_API_KEY ausente em automacoes/.env');
 
 const imagem = readFileSync(
-  resolve(raiz, 'insumos-compartilhados/assinatura-email/assinatura-email-640.jpg')
+  resolve(raiz, 'raw/assinatura-email/assinatura-email-640.jpg')
 ).toString('base64');
 
 const workflow = {
@@ -75,7 +75,7 @@ const workflow = {
           '}];'
       },
       notes:
-        'Fonte: insumos-compartilhados/assinatura-email/assinatura-email-640.jpg (variante A, montanha, aprovada 26/07/2026). Para trocar a assinatura, rode de novo o criar-asset-assinatura.mjs.'
+        'Fonte: raw/assinatura-email/assinatura-email-640.jpg (variante A, montanha, aprovada 26/07/2026). Para trocar a assinatura, rode de novo o criar-asset-assinatura.mjs.'
     },
     {
       id: 'entrega',

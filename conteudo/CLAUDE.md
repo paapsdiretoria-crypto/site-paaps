@@ -52,7 +52,7 @@ quando nada do que ela está vivendo toca o noticiário. Começa no Radar.
 (serviço ao Tronco A, quando ela já tem tese e quer embasamento).
 
 **Quando a Mallu não fornece o gancho:** o afeto que inicia a peça é reconstituído pelo método de
-`../insumos-compartilhados/nucleo-comum/afeto-situado-mallu.md`. Regra dura: afeto sempre ancorado
+`../wiki/voz-e-identidade/afeto-situado-mallu.md`. Regra dura: afeto sempre ancorado
 em artefato real (comentário, campo, dado datado, sobra declarada), nunca vivência inventada em
 primeira pessoa.
 
@@ -63,7 +63,7 @@ do fluxo e o Narrador virou `copywriter-paaps`.)*
 
 ## Onde cada agente busca contexto
 
-Núcleo comum: `../insumos-compartilhados/nucleo-comum/`
+Núcleo comum: `../wiki/voz-e-identidade/`
 
 | Agente | Lê |
 |---|---|

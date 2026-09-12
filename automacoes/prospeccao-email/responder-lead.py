@@ -37,7 +37,7 @@ REMETENTE = "PAAPS Brasil <relacionamento@paaps.com.br>"
 IMAP_HOST, IMAP_PORTA = "imap.titan.email", 993
 SMTP_HOST, SMTP_PORTA = "smtp.titan.email", 465
 TEMPLATE = RAIZ / "automacoes/prospeccao-email/template-email.html"
-ASSINATURA = RAIZ / "insumos-compartilhados/assinatura-email/assinatura-paaps-a-montanha.jpg"
+ASSINATURA = RAIZ / "raw/assinatura-email/assinatura-paaps-a-montanha.jpg"
 
 
 def senha():

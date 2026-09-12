@@ -31,8 +31,8 @@ Minas.
 | `site/` | Site institucional (HTML/CSS/JS) e material de referência de design |
 | `conteudo/` | Equipe de agentes de conteúdo, ciclos, eventos, dashboard de analytics |
 | `automacoes/` | **As 5 frentes de automação do negócio** (ver `automacoes/README.md`) |
-| `insumos-compartilhados/` | Acervo comum: voz da marca, identidade, docs institucionais |
-| `sessoes/` | Logs automáticos de cada dia de trabalho (gerados por hook) |
+| `raw/` | Fontes originais imutáveis: fotos, identidade visual, fontes tipográficas, exports |
+| `wiki/` | Conhecimento sintetizado em markdown: voz da marca, base teórica, ECOA, docs institucionais, log de sessões |
 | `.claude/` | Agentes, skills e configuração do Claude Code |
 
 ---

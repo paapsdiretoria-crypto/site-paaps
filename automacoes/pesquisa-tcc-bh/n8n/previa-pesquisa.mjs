@@ -21,7 +21,7 @@ for (const c of cartas) {
   // comentário. A prévia sairia sem assinatura e o erro passaria por design.
   const ALVO = 'src="cid:assinatura"';
   if (!c.html.includes(ALVO)) throw new Error(`o molde perdeu ${ALVO}; a assinatura não entraria no e-mail`);
-  const html = c.html.replaceAll(ALVO, 'src="../../../insumos-compartilhados/assinatura-email/assinatura-pesquisa-mallu.jpg"');
+  const html = c.html.replaceAll(ALVO, 'src="../../../raw/assinatura-email/assinatura-pesquisa-mallu.jpg"');
   // A prévia é HTML puro, sem cliente de e-mail de verdade por trás, então não há como
   // mostrar um anexo de PDF de fato. Uma faixa avisa que ele vai junto, para não parecer
   // que a carta de anuência ficou de fora do envio real.

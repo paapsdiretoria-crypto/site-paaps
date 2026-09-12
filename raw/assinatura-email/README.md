@@ -90,7 +90,7 @@ em `assets/foto-montanha-minas.jpg`. Sem filtro: cor original.
 
 Logo: sempre a versão com **pontinhos coloridos**. Marrom + colorido em fundo claro, branco +
 colorido em fundo escuro. Nunca a que traz o descritivo embaixo (ver
-`nucleo-comum/identidade-aplicada.md` seção 3.1).
+`wiki/voz-e-identidade/identidade-aplicada.md` seção 3.1).
 
 Arquivos-fonte: `assinatura-a-montanha.html`, `assinatura-b-editorial.html` e `base.css`
 (paleta, League Spartan, divisor tricolor, marcadores quadrados, grão).
@@ -100,7 +100,7 @@ Arquivos-fonte: `assinatura-a-montanha.html`, `assinatura-b-editorial.html` e `b
 Copiar e colar no Terminal:
 
 ```bash
-cd "/Users/mac/Documents/SITE PAAPS/insumos-compartilhados/assinatura-email"
+cd "/Users/mac/Documents/SITE PAAPS/raw/assinatura-email"
 CH="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 "$CH" --headless=new --disable-gpu --hide-scrollbars --allow-file-access-from-files \
   --force-device-scale-factor=2 --default-background-color=00000000 \

@@ -3,7 +3,7 @@
 > Este arquivo é lido automaticamente pelo Claude Code ao abrir o repositório.
 > Ele carrega quem somos, como pensamos e o que nunca fazer. Tudo que for específico
 > de uma frente (site, conteúdo, instagram) está documentado nos `CLAUDE.md` das
-> subpastas e nos arquivos de `insumos-compartilhados/nucleo-comum/`.
+> subpastas e nos arquivos de `wiki/voz-e-identidade/`.
 
 ---
 
@@ -32,7 +32,7 @@ definida no contrato social como "Programa de Aceleração Ativa de Projetos Soc
 > site, proposta, e-mail, carrossel, legenda, apresentação e qualquer peça pública: escrever apenas
 > **PAAPS** ou **PAAPS Brasil**, nunca a expansão. Motivo: "aceleração" comunica velocidade e
 > produtividade, exatamente o oposto do que a PAAPS faz, que é cuidado. Ver
-> `insumos-compartilhados/docs/ficha-juridica-paaps.md` para o uso jurídico.
+> `wiki/institucional/ficha-juridica-paaps.md` para o uso jurídico.
 
 | Campo | Valor |
 |---|---|
@@ -61,7 +61,7 @@ Três consequências que decidem preenchimento de formulário:
   como negócio social.
 
 Ficha completa (objeto social alínea por alínea, cláusula GovTech, histórico de registro e
-checklist de documentos de habilitação): `insumos-compartilhados/docs/ficha-juridica-paaps.md`.
+checklist de documentos de habilitação): `wiki/institucional/ficha-juridica-paaps.md`.
 
 ---
 
@@ -92,7 +92,7 @@ e de consumo.
 |---|---|
 | PAAPS | Solução de Psicologia Social para políticas públicas e programas sociais |
 | TEAtrar | Teatro conduzido por psicóloga para crianças e adolescentes autistas |
-| ECOA | Comunidade de aprendizagem e vivência prática em Psicologia Social Latina. Ver `ecoa/CLAUDE.md` |
+| ECOA | Comunidade de aprendizagem e vivência prática em Psicologia Social Latina. Ver `wiki/ecoa/CLAUDE.md` |
 | Periódico da Rede PAAPS | Publicação periódica |
 | Plantão Psicológico | Psicoterapia para servidores públicos |
 | Bela Vista de Minas | Prova de conceito: 5 meses com servidores (case de impacto) |
@@ -139,7 +139,7 @@ peça**. Carrossel inteiro nessa forma vira assinatura de IA, que é o que ela r
   Ninguém pensava aquilo, e é isso que soa como máquina.
 
 Antes de usar, nomeie por escrito quem é a pessoa que acredita no X. Se não conseguir, não use.
-Detalhe em `insumos-compartilhados/nucleo-comum/voz-paaps.md` seção 4.1.
+Detalhe em `wiki/voz-e-identidade/voz-paaps.md` seção 4.1.
 
 ### Como nomear as pessoas da rede
 
@@ -167,7 +167,7 @@ longe. A PAAPS é uma rede construída por profissionais que já vivem esse dia 
 
 ### Forma do slide: os 8 modelos do carrossel PAAPS
 
-`insumos-compartilhados/nucleo-comum/modelos-slide-paaps.md` é o catálogo dos 8 modelos de slide e
+`wiki/voz-e-identidade/modelos-slide-paaps.md` é o catálogo dos 8 modelos de slide e
 das 8 leis universais do @paaps.brasil, lidos de dentro das peças publicadas. Quem escreve ou monta
 carrossel lê antes: `copywriter-paaps`, `aplicador-visual`, `buscador-fotos`, skill `copy-carrossel`.
 
@@ -254,26 +254,41 @@ linguagem coachesca. Só avançar após esse raciocínio.
 ```
 SITE PAAPS/                          ← pasta raiz (renomear para PAAPS/ no Finder)
 │
-├── insumos-compartilhados/          ← acervo compartilhado por todos os projetos
+├── raw/                             ← FONTES ORIGINAIS IMUTÁVEIS (padrão Raw/Wiki de Karpathy)
 │   ├── fotos/                       ← acervo de campo (1,5 GB, fora do git)
+│   ├── fotos-radilson/              ← fotos brutas de fotógrafo específico
 │   ├── identidade-visual/           ← logos, texturas, paleta, templates (não commitado)
 │   ├── aplicacao-id-visual/         ← exemplos de aplicação da identidade
 │   ├── nossa-camiseta-paaps/        ← não commitado
 │   ├── nossos-clientes-e-parceiros/ ← não commitado
-│   ├── docs/                        ← documentos institucionais convertidos para Markdown
+│   ├── assinatura-email/            ← HTML + imagens da assinatura de e-mail institucional
+│   ├── fontes-tipograficas/         ← arquivos .ttf/.otf (League Spartan, Nimbus Sans)
+│   ├── docs-imagens/                ← imagens extraídas dos DOCX institucionais originais
+│   └── pitch-serasa-exports/        ← exports pontuais de PDF (ex.: saida.pdf)
+│
+├── wiki/                            ← CONHECIMENTO SINTETIZADO E MANTIDO POR IA (padrão Raw/Wiki)
+│   ├── voz-e-identidade/            ← O CORAÇÃO COMPARTILHADO, lido por todos os agentes
+│   │   ├── voz-paaps.md             ← gabarito de voz e proibições ativas
+│   │   ├── afeto-situado-mallu.md   ← como iniciar a peça quando o gancho não vem dela
+│   │   ├── identidade-aplicada.md   ← paleta, tipografia, sistema Periódico, workflow Canva
+│   │   ├── criterios-design.md      ← checklist do crítico de design
+│   │   ├── qualidade-frontend.md    ← princípios de design (web + Canva)
+│   │   ├── visual-instagram.md      ← 3 modos visuais, regras fotográficas
+│   │   └── mapa-fontes-foto.md      ← fontes de fotografia documental (espaço reservado)
+│   ├── base-teorica/                ← base teórica destilada da Tecelã
+│   ├── institucional/               ← documentos institucionais convertidos para Markdown
 │   │   ├── manual-marca-posicionamento.md
 │   │   └── paaps-pesquisa-mercado.md
-│   └── nucleo-comum/                ← O CORAÇÃO COMPARTILHADO, lido por todos os agentes
-│       ├── voz-paaps.md             ← gabarito de voz e proibições ativas
-│       ├── afeto-situado-mallu.md   ← como iniciar a peça quando o gancho não vem dela
-│       ├── identidade-aplicada.md   ← paleta, tipografia, sistema Periódico, workflow Canva
-│       ├── criterios-design.md      ← checklist do crítico de design
-│       ├── qualidade-frontend.md    ← princípios de design (web + Canva)
-│       ├── visual-instagram.md      ← 3 modos visuais, regras fotográficas
-│       └── mapa-fontes-foto.md      ← fontes de fotografia documental (espaço reservado)
-│
-├── sessoes/                         ← logs automáticos de sessão (gerados por hook)
-│   └── sessao-YYYY-MM-DD.md         ← um arquivo por dia, commitado automaticamente
+│   ├── ecoa/                        ← Comunidade ECOA (Psicologia Social Latina)
+│   │   ├── CLAUDE.md                ← contexto do projeto, ler antes de qualquer tarefa sobre a ECOA
+│   │   ├── identidade-e-posicionamento/ ← o que a ECOA é, propósito, valores, tom de voz, acordos
+│   │   ├── estrutura-e-rituais/     ← grupos, rituais, jornada, canvas, boas-vindas
+│   │   ├── planejamento-de-conteudo/← Eras, personas, impacto, referências de comunidade
+│   │   ├── porta-voz/               ← Programa Porta-Voz
+│   │   └── reunioes/                ← atas de equipe, planejamento e pesquisa
+│   ├── arquitetura-agentes/         ← diagramas SVG da arquitetura + workflow-paaps.html
+│   └── log/                         ← logs automáticos de sessão (gerados por hook)
+│       └── sessao-YYYY-MM-DD.md     ← um arquivo por dia, commitado automaticamente
 │
 ├── codigo/                          ← TODO o código do ecossistema, indexado pelo CodeGraph
 │   ├── .codegraph/                  ← índice/grafo de código (SQLite local, não commitado)
@@ -291,7 +306,6 @@ SITE PAAPS/                          ← pasta raiz (renomear para PAAPS/ no Fin
 │   ├── CLAUDE.md                    ← arquitetura da equipe de agentes (doc principal)
 │   ├── .mcp.json                    ← conectores MCP (Excalidraw, Miro)
 │   ├── _skill-original-para-desmembrar.md  ← skill antiga, guardada como referência
-│   ├── arquitetura/                 ← diagramas SVG da arquitetura + workflow-paaps.html
 │   ├── ciclos/                      ← outputs do Radar e Sentinela por data
 │   ├── eventos/                     ← produção de conteúdo por evento (ex.: Caratinga)
 │   ├── briefings/                   ← briefings consolidados do Narrador
@@ -299,19 +313,21 @@ SITE PAAPS/                          ← pasta raiz (renomear para PAAPS/ no Fin
 │       ├── amalluvasconcellos/      ← workspace do perfil pessoal de Mallu
 │       └── paaps.brasil/            ← workspace do perfil institucional
 │
-├── ecoa/                            ← Projeto: Comunidade ECOA (Psicologia Social Latina)
-│   ├── CLAUDE.md                    ← contexto do projeto, ler antes de qualquer tarefa sobre a ECOA
-│   ├── identidade-e-posicionamento/ ← o que a ECOA é, propósito, valores, tom de voz, acordos
-│   ├── estrutura-e-rituais/         ← grupos, rituais, jornada, canvas, boas-vindas
-│   ├── planejamento-de-conteudo/    ← Eras, personas, impacto, referências de comunidade
-│   ├── porta-voz/                   ← Programa Porta-Voz
-│   └── reunioes/                    ← atas de equipe, planejamento e pesquisa
-│
 ├── hyperframes/                     ← projeto de vídeo HyperFrames (render HTML→MP4)
 ├── projetos/                        ← projetos avulsos (Minerva, portfólios…), não commitado
 ├── .claude/                         ← agents/, skills/ (formato pasta/SKILL.md), settings
 └── .agents/                         ← skills instaladas via npx skills (não commitado)
 ```
+
+> **Raw/Wiki (12/09/2026):** a raiz segue o padrão de um gist do Andrej Karpathy
+> (`llm-wiki.md`): `raw/` guarda fontes originais imutáveis (fotos, identidade visual,
+> fontes tipográficas, exports pontuais) e `wiki/` guarda conhecimento sintetizado e
+> mantido por IA (voz da marca, base teórica, ECOA, docs institucionais, log de sessão).
+> A antiga `insumos-compartilhados/` foi extinta: seu conteúdo se dividiu entre as duas.
+> `codigo/`, `automacoes/`, `hyperframes/`, `projetos/` e os pipelines vivos dentro de
+> `conteudo/` (`ciclos/`, `eventos/`, `templates/`...) ficaram de fora desta rodada —
+> são CÓDIGO ou processo ativo demais para separar sem quebrar o fluxo diário dos
+> agentes, não conhecimento estático.
 
 > **Regra de workspace:** abrir o Claude Code SEMPRE na raiz `SITE PAAPS/`. Projetos
 > novos (eventos, pitches, portfólios, provas de conceito) nascem como subpasta daqui:
@@ -357,12 +373,12 @@ git push
 
 ## Arquivos não commitados (ver .gitignore)
 
-- `insumos-compartilhados/fotos/`: acervo de campo (binários grandes)
-- `insumos-compartilhados/identidade-visual/`: assets originais de marca (binários)
-- `insumos-compartilhados/aplicacao-id-visual/`: exemplos de aplicação
-- `insumos-compartilhados/nossa-camiseta-paaps/`
-- `insumos-compartilhados/nossos-clientes-e-parceiros/`
-- `insumos-compartilhados/docs/*-imagens/`: imagens extraídas dos DOCX
+- `raw/fotos/`: acervo de campo (binários grandes)
+- `raw/identidade-visual/`: assets originais de marca (binários)
+- `raw/aplicacao-id-visual/`: exemplos de aplicação
+- `raw/nossa-camiseta-paaps/`
+- `raw/nossos-clientes-e-parceiros/`
+- `raw/docs-imagens/*-imagens/`: imagens extraídas dos DOCX
 - `codigo/dashboard/js/config.js`: chave Windsor AI (nunca commitar)
 - `projetos/`: projetos avulsos com conteúdo interno (mantido fora do repo por precaução)
 
@@ -424,7 +440,7 @@ Novas respostas longas pedidas "para ler no Notion" viram subpáginas dela, no f
 
 | Hook | Ordem | O que faz |
 |---|---|---|
-| **log-de-sessão** | 1º | Registra timestamp e arquivos alterados em `sessoes/sessao-YYYY-MM-DD.md` (deduplicado, ignora a própria pasta sessoes/) |
+| **log-de-sessão** | 1º | Registra timestamp e arquivos alterados em `wiki/log/sessao-YYYY-MM-DD.md` (deduplicado, ignora a própria pasta wiki/log/) |
 | **auto-push** | 2º | Detecta qualquer mudança (inclusive arquivos novos), commita com mensagem `auto: <áreas alteradas> - <data>` e faz push para `main` |
 
 Ao encerrar uma tarefa relevante, registrar em 1–3 linhas no log do dia **o que foi

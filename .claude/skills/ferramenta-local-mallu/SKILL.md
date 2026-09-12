@@ -118,7 +118,7 @@ Para o artefato financeiro (`projetos/artefato-financeiro/`), respeite a arquite
 
 ### Registro pós-sessão no Notion
 
-O hook `Stop` já escreve em `sessoes/sessao-YYYY-MM-DD.md` e já commita. Mandar para o Notion **estende esse fluxo**, não cria um paralelo: leia o arquivo do dia e publique. Duas fontes de verdade para a mesma sessão é o começo de divergência silenciosa.
+O hook `Stop` já escreve em `wiki/log/sessao-YYYY-MM-DD.md` e já commita. Mandar para o Notion **estende esse fluxo**, não cria um paralelo: leia o arquivo do dia e publique. Duas fontes de verdade para a mesma sessão é o começo de divergência silenciosa.
 
 ---
 

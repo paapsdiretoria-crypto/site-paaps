@@ -30,7 +30,7 @@ estiver desativado, a segunda-feira passa e nada sai.
   do texto. Editar aqui e rodar `montar-leva.mjs` de novo.
 - **A logística** (destinatário, ordem, horário, intervalo): `levas/<data>/leva.json`.
 - **O molde HTML**: `../template-email.html`.
-- **A assinatura**: `insumos-compartilhados/assinatura-email/assinatura-email-640.jpg`.
+- **A assinatura**: `raw/assinatura-email/assinatura-email-640.jpg`.
 
 Editar direto no n8n é o caminho errado: na próxima vez que o `montar-leva.mjs` rodar, a
 edição feita lá é sobrescrita. Editar sempre no repositório e rodar o script.

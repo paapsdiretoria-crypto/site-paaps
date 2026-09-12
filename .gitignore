@@ -5,12 +5,12 @@
 ._*
 
 # Arquivos brutos / assets de produção (não vão para o repo)
-insumos-compartilhados/fotos/
-insumos-compartilhados/identidade-visual/
-insumos-compartilhados/aplicacao-id-visual/
-insumos-compartilhados/nossa-camiseta-paaps/
-insumos-compartilhados/nossos-clientes-e-parceiros/
-insumos-compartilhados/docs/*-imagens/
+raw/fotos/
+raw/identidade-visual/
+raw/aplicacao-id-visual/
+raw/nossa-camiseta-paaps/
+raw/nossos-clientes-e-parceiros/
+raw/docs-imagens/*-imagens/
 
 # Editor
 .vscode/
@@ -65,3 +65,4 @@ conteudo/ciclos/*/B0-newsletters.md
 
 # vídeo grande, fora do git desde 01/09/2026 (travava o push, acima do limite do GitHub)
 codigo/site/pitch-serasa/img/final - cópia.mp4
+.export-*

@@ -42,7 +42,7 @@ referenciadas por ID interno do Notion, não URL de página; seguem como estão 
 | 16 | Otimização | `collection://20a44cb5-2e00-8312-8f40-07e5af1ce75f` | schema pobre demais |
 | 17 | Objetivos do cliente | `collection://47744cb5-2e00-8297-86c2-8716fe876902` | 5 objetivos datados |
 
-Fora do Notion, os agentes desta equipe também leem `insumos-compartilhados/nucleo-comum/`
+Fora do Notion, os agentes desta equipe também leem `wiki/voz-e-identidade/`
 (confirmado acessível, é pasta irmã de `conteudo/` dentro de `SITE PAAPS/`) e escrevem em
 `.claude/agents/` na raiz do repositório, não dentro de `conteudo/`.
 
@@ -57,7 +57,7 @@ Da lista de 5 perguntas da Parte 4.3 do documento-base, duas eu resolvi olhando 
    `aplicador-visual`, `critico-design`, `critico-conteudo` (placeholder vazio) já existem lá. Os três
    que o documento-base marca como inexistentes (`minerador`, `pauteiro`, `critico`) de fato não
    existem. Isso bate com o diagnóstico da Parte 3.4.
-2. **Acesso a `insumos-compartilhados/`:** confirmado, é pasta irmã de `conteudo/`, sem barreira de
+2. **Acesso a `raw/` e `wiki/`:** confirmado, são pastas irmãs de `conteudo/`, sem barreira de
    acesso.
 
 As outras três seguem abertas, e são decisão sua, não coisa que eu resolvo lendo arquivo:

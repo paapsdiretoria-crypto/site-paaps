@@ -2,7 +2,7 @@
 
 > Documento de trabalho, não é a skill ainda. A pasta não tem `SKILL.md` de propósito:
 > enquanto for spec, o Claude Code não carrega. Quando a Mallu aprovar, a parte de
-> identidade sobe para `insumos-compartilhados/nucleo-comum/identidade-mallu.md` e a
+> identidade sobe para `wiki/voz-e-identidade/identidade-mallu.md` e a
 > parte de processo vira o `SKILL.md`.
 >
 > Data: 22/07/2026. Base: 5 referências enviadas pela Mallu.
