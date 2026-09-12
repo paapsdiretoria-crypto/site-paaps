@@ -52,25 +52,46 @@ Documentos institucionais convertidos de DOCX para Markdown.
 ## ecoa
 
 Comunidade ECOA (Psicologia Social Latina). Exportado do Notion, nomes de arquivo levam
-hash da página original.
+hash da página original: o link usa o nome real, o texto mostrado usa o nome limpo.
 
-**identidade-e-posicionamento/:** Quem somos, Propósito, Valores e Código de Conduta,
-Acordos, Identidade e Tom de Voz, ECOA PSI SOCIAL.
+**identidade-e-posicionamento/:**
+[[Quem somos b4744cb52e008273820e01e788ac78e1|Quem somos]] ·
+[[Propósito 45644cb52e008393a3bd810338bae47c|Propósito]] ·
+[[Valores e Código de Conduta 32844cb52e0083d29d3881637a4fa457|Valores e Código de Conduta]] ·
+[[Acordos 39044cb52e00807aab8fed9a940e332c|Acordos]] ·
+[[Identidade e Tom de Voz ecf44cb52e008203aab201061a0823a3|Identidade e Tom de Voz]] ·
+[[ECOA PSI SOCIAL 22244cb52e0081379597c2f0f1503182|ECOA PSI SOCIAL]]
 
-**estrutura-e-rituais/:** Estrutura de Grupos, Rituais, Jornada da Comunidade, Canvas de
-comunidade, Boas Vindas (texto e roteiro de vídeo), dias dos encontros.
+**estrutura-e-rituais/:**
+[[ESTRUTURA DE GRUPOS 🏘️ 3af44cb52e00800abbf6cce69da60dbc|Estrutura de Grupos]] ·
+[[Rituais bbe44cb52e00833f850f01748170f2aa|Rituais]] ·
+[[Jornada da Comunidade e5744cb52e008225bc938103a579f185|Jornada da Comunidade]] ·
+[[Canvas de comunidade 37244cb52e0080c5a169f0b8cf3417cf|Canvas de comunidade]] ·
+[[Boas Vindas 39044cb52e0080778c83d949f925f803|Boas Vindas]] ·
+[[Boas Vindas (Roteiro vídeo) 32e44cb52e0082ab9a9481d7b5113a42|Boas Vindas (roteiro de vídeo)]] ·
+[[Espaço destinado a saber os dias dos encontros da  39044cb52e008045a1edd602e855d812|Dias dos encontros]] ·
+[[Espaço destinado para conhecer os rituais da comun 39044cb52e0080db858ed446edee5c82|Conhecer os rituais]] ·
+[[Espaço destinado para saber mais sobre os outros m 39044cb52e0080e38379e834c77565e4|Saber sobre os outros membros]]
 
-**planejamento-de-conteudo/:** Eras (planejamento temático), Personas, Impacto nas
-pessoas, Referências de comunidades do tipo ECOA.
+**planejamento-de-conteudo/:**
+[[ERAS - O PLANEJAMENTO TEMÁTICO DA ECOA 68b44cb52e00829a91a301afe1cf554f|Eras, o planejamento temático]] ·
+[[Personas 27044cb52e0083ca97d981f6a7dee7fe|Personas]] ·
+[[Impacto nas pessoas f9544cb52e0082008cf801944334aa9f|Impacto nas pessoas]] ·
+[[Referências de COMUNIDADE tipo ECOA a1c44cb52e00834295d101030147a51d|Referências de comunidades do tipo ECOA]]
 
-**porta-voz/:** Programa Porta-Voz, Projeto Porta Voz ECOA, atas de reunião do Porta-Voz.
+**porta-voz/:**
+[[PROGRAMA PORTA-VOZ 24244cb52e0082f981590120ac3011e9|Programa Porta-Voz]] ·
+[[Projeto Porta Voz Ecoa 36344cb52e0080698607d61872828dc2|Projeto Porta-Voz ECOA]] ·
+[[Reunião Porta Voz 36a44cb52e0080f0a4f1c8af59f4479c|Reunião Porta-Voz]]
 
-**reunioes/:** atas de equipe, planejamento e reunião com parceiros (ex.: Joyce,
-assistente social).
+**reunioes/:**
+[[Reunião Equipe 36344cb52e00802f9e51ce66a5ebbcfa|Reunião de equipe]] ·
+[[Reunião de Planejamento 39e44cb52e0080279cefc4388305ff32|Reunião de planejamento]] ·
+[[Joyce (Assistente Social) + Ecoa 36344cb52e0080428233c08e2d754300|Joyce (assistente social) + ECOA]]
 
-*(Catálogo por categoria, não por página individual: os nomes trazidos do Notion levam
-hash e ficam ilegíveis numa lista linear. Um índice próprio dentro de `ecoa/` pode nascer
-quando o volume justificar.)*
+Também existe [[ecoa/CLAUDE|CLAUDE.md da ECOA]] (caminho completo no link: o vault tem
+uns 8 arquivos `CLAUDE.md`, nome sozinho seria ambíguo), o contexto do projeto ECOA em
+si, ler antes de qualquer tarefa sobre a comunidade.
 
 ## log
 
