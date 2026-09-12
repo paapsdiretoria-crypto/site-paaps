@@ -102,6 +102,9 @@ o maquinário por trás.
   `conteudo/` na época; registro histórico, não reflete a estrutura atual
 
 **solto:**
+- [[padrao-llm-wiki]] : o padrão original de Karpathy por trás deste cofre, as três
+  camadas e três operações na formulação em inglês, e o que ainda não aplicamos dele
+  (frontmatter, ferramenta de busca)
 - [[sistema-gto]] : inventário do Notion GTO (o que está vazio, o que está vivo),
   método real de produção destilado de 4 gravações, e uma proposta de 9 agentes cujo
   status (ativa, superada pela árvore de dois troncos, ou a reconciliar) ainda não foi
