@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "0adffa64af62a649",
+        "id": "6b43aed4d907f8f4",
         "type": "tabs",
         "children": [
           {
-            "id": "b4a6019ce6e494f7",
+            "id": "99639d696f09a9c0",
             "type": "leaf",
             "state": {
-              "type": "graph",
+              "type": "empty",
               "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Visualização em gráfico"
+              "icon": "lucide-file",
+              "title": "Nova aba"
             }
           }
         ],
@@ -80,8 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 535.5234375
   },
   "right": {
     "id": "81e583fb7e4f9593",
@@ -183,10 +182,15 @@
       "bases:Criar nova base": false
     }
   },
-  "active": "b4a6019ce6e494f7",
+  "active": "99639d696f09a9c0",
   "lastOpenFiles": [
+    "Arquivos/fotos/16.png",
+    "segundo-cerebro",
+    "melhorias-claude.md",
+    "Sem título.md",
     "Sem título.canvas",
     "2026-09-12.md",
+    "Sem título",
     "hyperframes/skills/embedded-captions/SKILL.md",
     "codigo/site/pitch-serasa/deck-v5/node_modules/eslint-plugin-react/README.md",
     "projetos/pipeflow-crm/node_modules/next/dist/docs/01-app/01-getting-started/02-project-structure.md",
@@ -209,8 +213,6 @@
     "Conhecimento/ecoa/reunioes/Reunião de Planejamento 39e44cb52e0080279cefc4388305ff32.md",
     "Conhecimento/ecoa/reunioes/Reunião Equipe 36344cb52e00802f9e51ce66a5ebbcfa.md",
     "Conhecimento/ecoa/planejamento-de-conteudo/Personas 27044cb52e0083ca97d981f6a7dee7fe.md",
-    "Conhecimento/ecoa/reunioes/Joyce (Assistente Social) + Ecoa 36344cb52e0080428233c08e2d754300.md",
-    "Conhecimento/ecoa/identidade-e-posicionamento/Identidade e Tom de Voz ecf44cb52e008203aab201061a0823a3.md",
     "Conhecimento/ecoa/estrutura-e-rituais",
     "Conhecimento/ecoa/reunioes",
     "Conhecimento/ecoa/porta-voz",
@@ -221,8 +223,6 @@
     "Conhecimento/arquitetura-agentes/arquitetura_v2_agentes_paaps_orquestrador_criticos.svg",
     "Conhecimento/voz-e-identidade",
     "Conhecimento/log",
-    "Conhecimento/institucional",
-    "Conhecimento/ecoa",
     "Arquivos/identidade-visual/08-paaps-digging/01 - Logo Paaaps + Digging/Logo Paaps + Digging - Vinho.png",
     "Arquivos/identidade-visual/08-paaps-digging/01 - Logo Paaaps + Digging/Logo Paaps + Digging - Marrom.png",
     "Arquivos/identidade-visual/08-paaps-digging/01 - Logo Paaaps + Digging/Logo Paaps + Digging - Branco.png",
