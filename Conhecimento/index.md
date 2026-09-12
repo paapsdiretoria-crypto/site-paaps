@@ -152,6 +152,11 @@ Como a PAAPS se sustenta. Pitch, cases, prospecção, funil, preço, editais.
 A máquina: como o Claude e os agentes operam aqui dentro. Não é o que a PAAPS diz, é o
 que faz ela funcionar.
 
+**Os dois índices da máquina.** Os arquivos reais continuam em `.claude/`, nunca são
+copiados pra cá:
+- [[agentes]] : os 23 agentes, o que cada um faz e qual nota ele lê antes de executar
+- [[skills]] : as 50 skills, agrupadas por para que servem
+
 - [[padrao-llm-wiki]] : o padrão de Karpathy que sustenta este cofre, nas palavras do
   autor, e o que dele ainda não aplicamos
 - [[como-trabalhar-com-claude]] : erros comuns de delegação e como corrigir, Framework 4D
@@ -167,9 +172,6 @@ que faz ela funcionar.
 - [[workflow-agentes]] : o mesmo fluxo em diagrama, tronco a tronco
 - [[diagnostico-grafo-conteudo-2026-08-10]] : diagnóstico datado de 10/08/2026,
   `status: historico`, mantido como registro
-
-*`agentes.md` e `skills.md`, os dois índices dos 23 agentes e das 50 skills, entram na
-Fase 3.*
 
 ---
 
