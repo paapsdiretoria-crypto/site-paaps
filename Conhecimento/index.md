@@ -8,6 +8,10 @@ Duas seções, dois eixos diferentes: **Projetos** é o que a PAAPS é e diz (ma
 metodologia, comunidades). **Sistema** é como o Claude e os agentes operam aqui dentro,
 não é conteúdo da PAAPS, é o próprio maquinário.
 
+Nem todo `SITE PAAPS/` está aqui dentro: [[mapa-site-paaps]] cataloga as pastas
+operacionais (`codigo/`, `automacoes/`, `conteudo/`, `projetos/`, `hyperframes/`) e o
+que dentro delas ainda falta compilar.
+
 ---
 
 # Projetos
@@ -98,6 +102,10 @@ o maquinário por trás.
   `conteudo/` na época; registro histórico, não reflete a estrutura atual
 
 **solto:**
+- [[sistema-gto]] : inventário do Notion GTO (o que está vazio, o que está vivo),
+  método real de produção destilado de 4 gravações, e uma proposta de 9 agentes cujo
+  status (ativa, superada pela árvore de dois troncos, ou a reconciliar) ainda não foi
+  decidido
 - [[como-trabalhar-com-claude]] : erros comuns e correção, postura de iteração,
   Framework 4D, loop de delegação e diligência, e a ligação com o gate de aprovação que
   a PAAPS já pratica
