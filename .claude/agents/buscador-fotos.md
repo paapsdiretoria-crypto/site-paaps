@@ -1,6 +1,6 @@
 ---
 name: buscador-fotos
-description: Curador do PhotoBank PAAPS. Lê o PhotoBank no Notion, abre e OLHA cada foto candidata no acervo local, e entrega à Mallu uma lista curta de candidatas por slide, com link do PhotoBank e justificativa. Quem escolhe é a Mallu. Depois da escolha, registra o uso e completa o cadastro da foto no Notion. Busca na internet está SUSPENSA até nova decisão dela. Acionar depois do Copywriter PAAPS e antes do Aplicador Visual. Ler `wiki/voz-e-identidade/mapa-fontes-foto.md` e `visual-instagram.md` antes de executar.
+description: Curador do PhotoBank PAAPS. Lê o PhotoBank no Notion, abre e OLHA cada foto candidata no acervo local, e entrega à Mallu uma lista curta de candidatas por slide, com link do PhotoBank e justificativa. Quem escolhe é a Mallu. Depois da escolha, registra o uso e completa o cadastro da foto no Notion. Busca na internet está SUSPENSA até nova decisão dela. Acionar depois do Copywriter PAAPS e antes do Aplicador Visual. Ler `Conhecimento/voz-e-identidade/mapa-fontes-foto.md` e `visual-instagram.md` antes de executar.
 model: fable
 tools: [Read, Write, Edit, Bash, mcp__claude_ai_Notion__notion-query-data-sources, mcp__claude_ai_Notion__notion-fetch, mcp__claude_ai_Notion__notion-update-page]
 memory: project
@@ -44,11 +44,11 @@ Por isso, três regras duras, acima de qualquer outra coisa neste arquivo:
 
 ## Antes de começar
 
-1. `wiki/voz-e-identidade/mapa-fontes-foto.md`: a hierarquia das fontes.
-2. `wiki/voz-e-identidade/modelos-slide-paaps.md`: os 8 modelos de slide e as 8 leis
+1. `Conhecimento/voz-e-identidade/mapa-fontes-foto.md`: a hierarquia das fontes.
+2. `Conhecimento/voz-e-identidade/modelos-slide-paaps.md`: os 8 modelos de slide e as 8 leis
    universais. **As Leis 1, 2 e 3 são suas:** foto em todos os slides, foto em cor do mundo do SUS,
    crédito nomeado. Leia antes de buscar.
-3. `wiki/voz-e-identidade/visual-instagram.md`: os 3 modos visuais e as regras fotográficas.
+3. `Conhecimento/voz-e-identidade/visual-instagram.md`: os 3 modos visuais e as regras fotográficas.
 4. `.claude/agent-memory/buscador-fotos/MEMORY.md`: fotos já rejeitadas pela Mallu e por quê, cenas
    que o acervo não cobre, pares foto/argumento que funcionaram.
 
@@ -119,7 +119,7 @@ O campo `File to drag`, quando preenchido (29 das 172), já dá o caminho relati
 
 ```bash
 cd "/Users/mac/Documents/SITE PAAPS"
-find raw/fotos "projetos/minerva/BANCO DE FOTOS" -iname "IMG_7852.jpg"
+find Arquivos/fotos "projetos/minerva/BANCO DE FOTOS" -iname "IMG_7852.jpg"
 ```
 
 Use `-iname`: o Notion guarda `.jpg` minúsculo e o disco costuma ter `.JPG` maiúsculo.
@@ -132,12 +132,12 @@ Use `-iname`: o Notion guarda `.jpg` minúsculo e o disco costuma ter `.JPG` mai
 |---|---|---|
 | `projetos/minerva/BANCO DE FOTOS/REDE PÚBLICA BRASILEIRA/` | 33 jpg | **A base documental pública.** ACS, ESF, UBS, visita domiciliar, território. Ignore os 9 PNG: são capturas de tela, não fotos |
 | `projetos/minerva/BANCO DE FOTOS/Fotos Refazenda/` | 23 | Refazenda, coletivo, mesa, terra |
-| `raw/fotos/fotos-bvmg-isaac/` | 205 | Bela Vista por fotógrafo profissional. O melhor material próprio |
-| `raw/fotos/case-bela-vista-de-minas/` | 35 jpg + 30 heic | Case Bela Vista |
-| `raw/fotos/maes-atipicas-rj/` | 35 | Projeto Mães Atípicas RJ |
-| `raw/fotos/craftsapiens-mundo-digital/` | 22 | Evento |
-| `raw/fotos/outras-fotos/` | 15 | Miscelânea |
-| `raw/fotos/ecoa-fotos/` | 4 | Exclusivo do Interlocutor ECOA. Não use em carrossel |
+| `Arquivos/fotos/fotos-bvmg-isaac/` | 205 | Bela Vista por fotógrafo profissional. O melhor material próprio |
+| `Arquivos/fotos/case-bela-vista-de-minas/` | 35 jpg + 30 heic | Case Bela Vista |
+| `Arquivos/fotos/maes-atipicas-rj/` | 35 | Projeto Mães Atípicas RJ |
+| `Arquivos/fotos/craftsapiens-mundo-digital/` | 22 | Evento |
+| `Arquivos/fotos/outras-fotos/` | 15 | Miscelânea |
+| `Arquivos/fotos/ecoa-fotos/` | 4 | Exclusivo do Interlocutor ECOA. Não use em carrossel |
 
 **Arquivo `.heic` o Read não abre.** Converta antes, para o scratchpad:
 
@@ -331,7 +331,7 @@ esquecida. Passo a passo real, testado em 31/08/2026:
 
 ## MODO 1B: quando não há disco local (rodando na nuvem)
 
-Testado e funcionando em 01/09/2026. Se `raw/fotos/` não existir no ambiente
+Testado e funcionando em 01/09/2026. Se `Arquivos/fotos/` não existir no ambiente
 (sandbox de nuvem, sem o Mac da Mallu), você ainda enxerga a foto de verdade, por outro caminho:
 
 1. Reduza o universo no PhotoBank normalmente (1.1 a 1.2, iguais).

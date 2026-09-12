@@ -115,10 +115,10 @@ Ordem sugerida:
 
 ## 7. Arquivos de referência que os agentes leem
 
-- `wiki/voz-e-identidade/voz-paaps.md` (gabarito de voz e proibições)
-- `wiki/base-teorica/README.md` (base da Tecelã)
-- `wiki/voz-e-identidade/afeto-situado-mallu.md` (método quando o gancho não vem dela)
-- `wiki/voz-e-identidade/identidade-aplicada.md` e `visual-instagram.md` (montagem)
+- `Conhecimento/voz-e-identidade/voz-paaps.md` (gabarito de voz e proibições)
+- `Conhecimento/base-teorica/README.md` (base da Tecelã)
+- `Conhecimento/voz-e-identidade/afeto-situado-mallu.md` (método quando o gancho não vem dela)
+- `Conhecimento/voz-e-identidade/identidade-aplicada.md` e `visual-instagram.md` (montagem)
 - `.claude/agent-memory/paaps-brasil/baselines-e-padroes.md` (a mecânica de capa validada, 3,0% de conversão no post de 07/07)
 - `.claude/agent-memory/copywriter-paaps/APRENDIZADO.md` (registra a sobra que virou esta peça)
 - `conteudo/ciclos/tecela-2026-07-15.md` (rodada anterior, item d, semente do recorte de gênero e raça)

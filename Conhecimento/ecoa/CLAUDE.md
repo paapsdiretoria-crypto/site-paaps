@@ -280,10 +280,10 @@ capacidade antes de assumir que está disponível.
 
 ---
 
-## Mapa da pasta `wiki/ecoa/`
+## Mapa da pasta `Conhecimento/ecoa/`
 
 ```
-wiki/ecoa/
+Conhecimento/ecoa/
 ├── CLAUDE.md                          ← este arquivo
 ├── identidade-e-posicionamento/       ← o que a ECOA é, propósito, valores, tom de voz, acordos
 ├── estrutura-e-rituais/               ← grupos, rituais, jornada, canvas, boas-vindas

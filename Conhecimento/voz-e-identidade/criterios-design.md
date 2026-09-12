@@ -25,7 +25,7 @@ Este arquivo é a lista de checagem que o **Crítico de Design** aplica antes de
 - [ ] A foto é real, documental, territorial? (Nunca stock genérico)
 - [ ] O crédito do fotógrafo está visível na peça? (Não pode faltar)
 - [ ] A foto passou pelo critério de escala humana? (Rostos, mãos, cotidiano do cuidado)
-- [ ] Se a foto é do acervo PAAPS (`raw/fotos/`): a pasta de origem foi registrada?
+- [ ] Se a foto é do acervo PAAPS (`Arquivos/fotos/`): a pasta de origem foi registrada?
 
 ### Hierarquia visual
 - [ ] O olho percorre a peça na ordem certa: marcador → label → título → conteúdo?

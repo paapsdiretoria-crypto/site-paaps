@@ -5,12 +5,12 @@
 ._*
 
 # Arquivos brutos / assets de produção (não vão para o repo)
-raw/fotos/
-raw/identidade-visual/
-raw/aplicacao-id-visual/
-raw/nossa-camiseta-paaps/
-raw/nossos-clientes-e-parceiros/
-raw/docs-imagens/*-imagens/
+Arquivos/fotos/
+Arquivos/identidade-visual/
+Arquivos/aplicacao-id-visual/
+Arquivos/nossa-camiseta-paaps/
+Arquivos/nossos-clientes-e-parceiros/
+Arquivos/docs-imagens/*-imagens/
 
 # Editor
 .vscode/

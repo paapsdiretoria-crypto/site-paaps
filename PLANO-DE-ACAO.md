@@ -18,7 +18,7 @@ frentes de automação. Legenda de responsável:
 3. **[FEITO]** Criar a estrutura `automacoes/` com as 5 frentes, `README.md` de cada uma
    e o `.env.example`.
 4. **[FEITO]** Adicionar `.env` ao `.gitignore` para as chaves reais nunca subirem.
-5. **[FEITO]** Remover o token de baixo risco vazado em `wiki/log/sessao-2026-06-16.md`.
+5. **[FEITO]** Remover o token de baixo risco vazado em `Conhecimento/log/sessao-2026-06-16.md`.
 6. **[FEITO]** Vacinar contra novos vazamentos em log. O token de junho não veio do
    hook (que grava só nomes de arquivos), e sim das notas de handoff escritas no log do
    dia. A vacina certa foi uma regra nas proibições do `CLAUDE.md`, que o Claude lê toda

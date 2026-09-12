@@ -213,7 +213,7 @@ Registro para ela saber que foram consideradas e por que ficaram de fora:
   centralizado. É redesenho de slide, e ela pediu o contrário.
 
 Se em algum momento ela quiser mesmo a cena aberta, o caminho não é CSS: é **outra foto do mesmo
-dia, na horizontal**, procurada em `raw/fotos/`.
+dia, na horizontal**, procurada em `Arquivos/fotos/`.
 
 ---
 

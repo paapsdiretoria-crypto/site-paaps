@@ -30,7 +30,7 @@ Estavam na página como anexo com link assinado e temporário. Baixadas em `refs
 1. **São 20 ODS mesmo, não 17.** Eu tinha apontado erro dela. Estava errado eu: a referência
    (`refs/01`) mostra a lista brasileira ampliada, que acrescenta 18 Igualdade Racial,
    19 Arte, Cultura e Comunicação e 20 Povos Originários e Comunidades Tradicionais.
-   A pasta `raw/fotos/ods/` tem só os 17 oficiais da ONU, em SVG.
+   A pasta `Arquivos/fotos/ods/` tem só os 17 oficiais da ONU, em SVG.
 
 2. **O menu muda de rótulo e de ordem, a URL não muda.** A frase da fonte é "Corrigir isso:
    ordem, da esquerda pra direita". Nada pede troca de endereço. A pasta segue `/como-atuamos/`
@@ -69,7 +69,7 @@ novo. Cada uma vai marcada na entrega para conferência.
    esgotado, a chance disso acontecer é o dobro."
 4. **Hover da tese:** "Pesquisa própria, empírica, autorizada e executada no SUAS de Belo
    Horizonte (MG)." mais a referência em ABNT.
-5. **Foto da Mallu:** usar `raw/fotos/equipe/Foto Mallu.JPG`, com o
+5. **Foto da Mallu:** usar `Arquivos/fotos/equipe/Foto Mallu.JPG`, com o
    enquadramento descrito: do topo da cabeça, com margem mínima, até a mão no bolso da calça.
 6. **Galeria da comunidade:** no hover aparece CTA clicável "Faça parte!" apontando para
    https://onboarding-ecoa.vercel.app

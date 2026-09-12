@@ -6,7 +6,7 @@ edição manual pontual — ver seção correspondente em `.claude/agents/aplica
 Este template é o HTML da primeira peça aprovada sem rodada de correção nenhuma ("De quem é
 esse trabalho"), com o texto e as fotos daquela peça como exemplo funcional. Constituição
 visual completa, com os números calibrados, em
-`wiki/voz-e-identidade/anatomia-do-carrossel-aprovado.md`.
+`Conhecimento/voz-e-identidade/anatomia-do-carrossel-aprovado.md`.
 
 ## Como montar uma peça nova
 
@@ -28,7 +28,7 @@ visual completa, com os números calibrados, em
 - `fontes/` — League Spartan local (`@font-face`). Helvetica é fonte de sistema, não precisa
   de arquivo.
 - `texturas/` — Textura 4 (marrom e branco), a única usada na peça de referência. Outros
-  números de textura estão em `raw/identidade-visual/04-texturas/`, mas
+  números de textura estão em `Arquivos/identidade-visual/04-texturas/`, mas
   Textura 2 é reservada para uso mais raro — ver a anatomia antes de trocar.
 - `logo/` — logo com pontinhos coloridos, versão para fundo escuro.
 - `fotos/` — as fotos da peça de referência, deixadas aqui como exemplo funcional. Numa peça

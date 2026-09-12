@@ -104,7 +104,7 @@ Marrom, e pontualmente verde oliva.
 ### Tipografia
 Helvetica (Nimbus Sans local) no corpo, pesos 400 e 700, **letter-spacing 0**.
 League Spartan em título. Evermore em palavra-chave.
-As três embutidas por `@font-face` a partir de `raw/fontes-tipograficas/`.
+As três embutidas por `@font-face` a partir de `Arquivos/fontes-tipograficas/`.
 **Nunca Google Fonts.**
 
 ### Legenda de foto: obrigatória, sem exceção
@@ -113,7 +113,7 @@ As três embutidas por `@font-face` a partir de `raw/fontes-tipograficas/`.
 - Autoria não localizada: aplicar a foto com legenda e **sinalizar a pendência na entrega**
 
 **Radilson Carlos Gomes é o fotógrafo do SUS** cujas imagens formam a espinha visual do site.
-Acervo em `raw/fotos-radilson/` (33 fotos, 2560px).
+Acervo em `Arquivos/fotos-radilson/` (33 fotos, 2560px).
 
 **Razão social:** DIGGING DESENVOLVIMENTO E CAPACITAÇÃO ORGANIZACIONAL E INDIVIDUAL LTDA  
 **CNPJ:** 05.983.700/0001-67  

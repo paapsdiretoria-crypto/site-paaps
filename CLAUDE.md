@@ -3,7 +3,7 @@
 > Este arquivo é lido automaticamente pelo Claude Code ao abrir o repositório.
 > Ele carrega quem somos, como pensamos e o que nunca fazer. Tudo que for específico
 > de uma frente (site, conteúdo, instagram) está documentado nos `CLAUDE.md` das
-> subpastas e nos arquivos de `wiki/voz-e-identidade/`.
+> subpastas e nos arquivos de `Conhecimento/voz-e-identidade/`.
 
 ---
 
@@ -32,7 +32,7 @@ definida no contrato social como "Programa de Aceleração Ativa de Projetos Soc
 > site, proposta, e-mail, carrossel, legenda, apresentação e qualquer peça pública: escrever apenas
 > **PAAPS** ou **PAAPS Brasil**, nunca a expansão. Motivo: "aceleração" comunica velocidade e
 > produtividade, exatamente o oposto do que a PAAPS faz, que é cuidado. Ver
-> `wiki/institucional/ficha-juridica-paaps.md` para o uso jurídico.
+> `Conhecimento/institucional/ficha-juridica-paaps.md` para o uso jurídico.
 
 | Campo | Valor |
 |---|---|
@@ -61,7 +61,7 @@ Três consequências que decidem preenchimento de formulário:
   como negócio social.
 
 Ficha completa (objeto social alínea por alínea, cláusula GovTech, histórico de registro e
-checklist de documentos de habilitação): `wiki/institucional/ficha-juridica-paaps.md`.
+checklist de documentos de habilitação): `Conhecimento/institucional/ficha-juridica-paaps.md`.
 
 ---
 
@@ -92,7 +92,7 @@ e de consumo.
 |---|---|
 | PAAPS | Solução de Psicologia Social para políticas públicas e programas sociais |
 | TEAtrar | Teatro conduzido por psicóloga para crianças e adolescentes autistas |
-| ECOA | Comunidade de aprendizagem e vivência prática em Psicologia Social Latina. Ver `wiki/ecoa/CLAUDE.md` |
+| ECOA | Comunidade de aprendizagem e vivência prática em Psicologia Social Latina. Ver `Conhecimento/ecoa/CLAUDE.md` |
 | Periódico da Rede PAAPS | Publicação periódica |
 | Plantão Psicológico | Psicoterapia para servidores públicos |
 | Bela Vista de Minas | Prova de conceito: 5 meses com servidores (case de impacto) |
@@ -139,7 +139,7 @@ peça**. Carrossel inteiro nessa forma vira assinatura de IA, que é o que ela r
   Ninguém pensava aquilo, e é isso que soa como máquina.
 
 Antes de usar, nomeie por escrito quem é a pessoa que acredita no X. Se não conseguir, não use.
-Detalhe em `wiki/voz-e-identidade/voz-paaps.md` seção 4.1.
+Detalhe em `Conhecimento/voz-e-identidade/voz-paaps.md` seção 4.1.
 
 ### Como nomear as pessoas da rede
 
@@ -167,7 +167,7 @@ longe. A PAAPS é uma rede construída por profissionais que já vivem esse dia 
 
 ### Forma do slide: os 8 modelos do carrossel PAAPS
 
-`wiki/voz-e-identidade/modelos-slide-paaps.md` é o catálogo dos 8 modelos de slide e
+`Conhecimento/voz-e-identidade/modelos-slide-paaps.md` é o catálogo dos 8 modelos de slide e
 das 8 leis universais do @paaps.brasil, lidos de dentro das peças publicadas. Quem escreve ou monta
 carrossel lê antes: `copywriter-paaps`, `aplicador-visual`, `buscador-fotos`, skill `copy-carrossel`.
 
@@ -254,7 +254,7 @@ linguagem coachesca. Só avançar após esse raciocínio.
 ```
 SITE PAAPS/                          ← pasta raiz (renomear para PAAPS/ no Finder)
 │
-├── raw/                             ← FONTES ORIGINAIS IMUTÁVEIS (padrão Raw/Wiki de Karpathy)
+├── Arquivos/                        ← FONTES ORIGINAIS IMUTÁVEIS (padrão Raw/Wiki de Karpathy)
 │   ├── fotos/                       ← acervo de campo (1,5 GB, fora do git)
 │   ├── fotos-radilson/              ← fotos brutas de fotógrafo específico
 │   ├── identidade-visual/           ← logos, texturas, paleta, templates (não commitado)
@@ -266,7 +266,8 @@ SITE PAAPS/                          ← pasta raiz (renomear para PAAPS/ no Fin
 │   ├── docs-imagens/                ← imagens extraídas dos DOCX institucionais originais
 │   └── pitch-serasa-exports/        ← exports pontuais de PDF (ex.: saida.pdf)
 │
-├── wiki/                            ← CONHECIMENTO SINTETIZADO E MANTIDO POR IA (padrão Raw/Wiki)
+├── Conhecimento/                    ← SINTETIZADO E MANTIDO POR IA (padrão Raw/Wiki)
+│   ├── index.md                     ← catálogo de toda página, atualizado a cada `compila`
 │   ├── voz-e-identidade/            ← O CORAÇÃO COMPARTILHADO, lido por todos os agentes
 │   │   ├── voz-paaps.md             ← gabarito de voz e proibições ativas
 │   │   ├── afeto-situado-mallu.md   ← como iniciar a peça quando o gancho não vem dela
@@ -320,14 +321,82 @@ SITE PAAPS/                          ← pasta raiz (renomear para PAAPS/ no Fin
 ```
 
 > **Raw/Wiki (12/09/2026):** a raiz segue o padrão de um gist do Andrej Karpathy
-> (`llm-wiki.md`): `raw/` guarda fontes originais imutáveis (fotos, identidade visual,
-> fontes tipográficas, exports pontuais) e `wiki/` guarda conhecimento sintetizado e
+> (`llm-wiki.md`): `Arquivos/` guarda fontes originais imutáveis (fotos, identidade visual,
+> fontes tipográficas, exports pontuais) e `Conhecimento/` guarda conhecimento sintetizado e
 > mantido por IA (voz da marca, base teórica, ECOA, docs institucionais, log de sessão).
 > A antiga `insumos-compartilhados/` foi extinta: seu conteúdo se dividiu entre as duas.
 > `codigo/`, `automacoes/`, `hyperframes/`, `projetos/` e os pipelines vivos dentro de
-> `conteudo/` (`ciclos/`, `eventos/`, `templates/`...) ficaram de fora desta rodada —
+> `conteudo/` (`ciclos/`, `eventos/`, `templates/`...) ficaram de fora desta rodada:
 > são CÓDIGO ou processo ativo demais para separar sem quebrar o fluxo diário dos
 > agentes, não conhecimento estático.
+
+---
+
+## Segundo Cérebro : as três operações sobre Arquivos/ e Conhecimento/
+
+`Arquivos/` e `Conhecimento/` são a base do "segundo cérebro com memória progressiva"
+da Mallu (imersão de 12/09/2026, padrão Raw/Wiki do Karpathy localizado em português).
+`Conhecimento/` é lida no Obsidian, escrita só por IA: ela acompanha o grafo enquanto a
+conversa acontece, nunca edita a mão. Três operações nomeadas cobrem o ciclo de vida
+inteiro.
+
+**Regra de link:** toda página de `Conhecimento/` que referencia um arquivo de
+`Arquivos/` usa colchete duplo com o nome do arquivo sem a extensão: `[[nome-do-arquivo]]`.
+Com `.md` dentro do colchete o link não resolve no Obsidian e o arquivo fica solto no
+grafo. Quando dois arquivos em qualquer lugar do cofre compartilham o mesmo nome (ex.:
+dois `README.md`), o link sozinho fica ambíguo: use o caminho relativo dentro do colchete,
+`[[pasta/nome-do-arquivo]]`.
+
+**Regra de subpasta:** nenhuma subpasta nova em `Conhecimento/` nasce por antecipação.
+Ela só nasce quando material já acumulado justificar (mesmo critério que gerou
+`voz-e-identidade/`, `institucional/`, `ecoa/` etc. na reorganização de 12/09/2026).
+Enquanto isso, página nova fica solta na raiz de `Conhecimento/`.
+
+### `compila` : uma fonte nova em Arquivos/ vira página em Conhecimento/
+
+Use quando um material bruto novo chega (PDF, transcrição, artigo, foto, dado, fichamento).
+
+1. O material pousa em `Arquivos/<pasta correspondente>/`, sem alteração nenhuma.
+2. Leia o material inteiro antes de escrever qualquer coisa.
+3. Converse com quem pediu sobre o que ali importa: nem tudo que está na fonte merece
+   virar página.
+4. Escreva ou atualize a página em `Conhecimento/`, na subpasta temática mais próxima
+   das já existentes, ou solta na raiz se nenhuma servir (ver regra de subpasta acima).
+5. Linke a fonte com colchete duplo sem extensão (ver regra de link acima).
+6. Atualize `Conhecimento/index.md`: uma linha por página, com link e resumo de uma frase.
+7. Se a fonte nova contradiz algo já escrito, nomeie a contradição na própria página.
+   Não apague o que havia antes sem registrar por que mudou.
+
+Uma fonte só pode mexer em várias páginas ao mesmo tempo. Isso é esperado, não é erro.
+
+### `salva isso como nota` : uma resposta boa vira página permanente
+
+Use quando uma pergunta no chat gerou resposta, comparação ou análise que vale guardar,
+não só responder e deixar sumir no histórico da conversa.
+
+1. Escreva a resposta como página nova em `Conhecimento/` (solta na raiz, ver regra de
+   subpasta acima).
+2. Linke as páginas e arquivos que a resposta usou como base, no mesmo formato de
+   colchete duplo sem extensão.
+3. Atualize `Conhecimento/index.md` com a página nova.
+4. Se a resposta generaliza algo que outras notas futuras vão repetir, avalie se ela
+   deveria virar parte de uma página de conceito já existente, em vez de ficar solta.
+
+### `audita` : exame de saúde de Conhecimento/
+
+Use por pedido explícito, ou de tempos em tempos, sem pauta puxada por uma fonte específica.
+
+Procure, em ordem:
+1. Contradições entre páginas diferentes.
+2. Afirmações antigas que uma fonte mais recente já superou e ninguém atualizou.
+3. Páginas órfãs: nada linka para elas.
+4. Conceitos citados repetidamente que ainda não têm página própria.
+5. Links que deveriam existir e não existem.
+6. Lacunas de dado que uma busca resolveria na hora.
+
+Entregue um relatório curto, achado por achado. Corrija sozinho o que é estrutura (link
+quebrado, órfã, índice desatualizado); pergunte antes de corrigir qualquer contradição
+que envolva julgamento de conteúdo.
 
 > **Regra de workspace:** abrir o Claude Code SEMPRE na raiz `SITE PAAPS/`. Projetos
 > novos (eventos, pitches, portfólios, provas de conceito) nascem como subpasta daqui:
@@ -373,12 +442,12 @@ git push
 
 ## Arquivos não commitados (ver .gitignore)
 
-- `raw/fotos/`: acervo de campo (binários grandes)
-- `raw/identidade-visual/`: assets originais de marca (binários)
-- `raw/aplicacao-id-visual/`: exemplos de aplicação
-- `raw/nossa-camiseta-paaps/`
-- `raw/nossos-clientes-e-parceiros/`
-- `raw/docs-imagens/*-imagens/`: imagens extraídas dos DOCX
+- `Arquivos/fotos/`: acervo de campo (binários grandes)
+- `Arquivos/identidade-visual/`: assets originais de marca (binários)
+- `Arquivos/aplicacao-id-visual/`: exemplos de aplicação
+- `Arquivos/nossa-camiseta-paaps/`
+- `Arquivos/nossos-clientes-e-parceiros/`
+- `Arquivos/docs-imagens/*-imagens/`: imagens extraídas dos DOCX
 - `codigo/dashboard/js/config.js`: chave Windsor AI (nunca commitar)
 - `projetos/`: projetos avulsos com conteúdo interno (mantido fora do repo por precaução)
 
@@ -440,7 +509,7 @@ Novas respostas longas pedidas "para ler no Notion" viram subpáginas dela, no f
 
 | Hook | Ordem | O que faz |
 |---|---|---|
-| **log-de-sessão** | 1º | Registra timestamp e arquivos alterados em `wiki/log/sessao-YYYY-MM-DD.md` (deduplicado, ignora a própria pasta wiki/log/) |
+| **log-de-sessão** | 1º | Registra timestamp e arquivos alterados em `Conhecimento/log/sessao-YYYY-MM-DD.md` (deduplicado, ignora a própria pasta Conhecimento/log/) |
 | **auto-push** | 2º | Detecta qualquer mudança (inclusive arquivos novos), commita com mensagem `auto: <áreas alteradas> - <data>` e faz push para `main` |
 
 Ao encerrar uma tarefa relevante, registrar em 1–3 linhas no log do dia **o que foi

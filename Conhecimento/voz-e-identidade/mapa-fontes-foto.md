@@ -158,7 +158,7 @@ Ordenados por utilidade real para carrossel do PAAPS.
 ---
 
 ## 4. Fonte pontual: Acervo local PAAPS
-- Caminho: `raw/fotos/`
+- Caminho: `Arquivos/fotos/`
 - Subpastas:
   - `case-bela-vista-de-minas/` : caso municipal (~87 arquivos, JPG/HEIC/MOV)
   - `fotos-bvmg-isaac/` : fotógrafo profissional Isaac, caso BVMG (~208 JPGs)

@@ -34,7 +34,7 @@ IMAP_HOST, IMAP_PORTA = "imap.titan.email", 993
 PASTA_ENVIADOS = "Sent"
 BASE_CARTAS = "c531c0c866a241ffa0a44559888c19dc"   # (EMP) Cartas de Prospecção
 TEMPLATE = RAIZ / "automacoes/prospeccao-email/template-email.html"
-ASSINATURA = RAIZ / "raw/assinatura-email/assinatura-paaps-a-montanha.jpg"
+ASSINATURA = RAIZ / "Arquivos/assinatura-email/assinatura-paaps-a-montanha.jpg"
 ENSAIO = "--ensaio" in sys.argv
 
 

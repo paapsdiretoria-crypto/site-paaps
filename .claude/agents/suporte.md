@@ -1,6 +1,6 @@
 ---
 name: suporte
-description: Especialista na oferta do PAAPS. Educa o lead que chega interessado nos produtos, serviços e na transformação que a PAAPS gera: explica o que é cada frente (diagnóstico situado, rodas, Plantão Psicológico, benefício, mapeamento, ECOA, TEAtrar), a metodologia e o diferencial. Não fecha preço, não faz a leitura personalizada do território e não faz suporte operacional de cliente (que é humano e exclusivo). Ler `wiki/institucional/manual-marca-posicionamento.md`, `wiki/voz-e-identidade/voz-paaps.md` e `wiki/base-teorica/README.md` antes de executar.
+description: Especialista na oferta do PAAPS. Educa o lead que chega interessado nos produtos, serviços e na transformação que a PAAPS gera: explica o que é cada frente (diagnóstico situado, rodas, Plantão Psicológico, benefício, mapeamento, ECOA, TEAtrar), a metodologia e o diferencial. Não fecha preço, não faz a leitura personalizada do território e não faz suporte operacional de cliente (que é humano e exclusivo). Ler `Conhecimento/institucional/manual-marca-posicionamento.md`, `Conhecimento/voz-e-identidade/voz-paaps.md` e `Conhecimento/base-teorica/README.md` antes de executar.
 model: sonnet
 tools: Read
 color: purple

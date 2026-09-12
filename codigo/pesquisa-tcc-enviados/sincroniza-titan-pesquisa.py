@@ -62,7 +62,7 @@ WORKFLOW_ID = "RcGxbk8co4RuhbtT"
 CAMPANHA = "tcc-bh-2026-08-28"
 
 EXPORTADOR = RAIZ / "automacoes/pesquisa-tcc-bh/n8n/exportar-cartas-json.mjs"
-ASSINATURA = RAIZ / "raw/assinatura-email/assinatura-pesquisa-mallu.jpg"
+ASSINATURA = RAIZ / "Arquivos/assinatura-email/assinatura-pesquisa-mallu.jpg"
 ANUENCIA = RAIZ / "automacoes/pesquisa-tcc-bh/anuencia-suas.pdf"
 ENSAIO = "--ensaio" in sys.argv
 

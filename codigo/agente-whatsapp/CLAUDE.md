@@ -16,7 +16,7 @@ responder).
 
 - **Persona e regras de voz:** `agents/prompts.py`. E o coracao. Reflete a voz
   PAAPS, os projetos, as proibicoes ativas e o cuidado com saude mental. Ao
-  alterar, manter alinhado com `wiki/voz-e-identidade/voz-paaps.md`.
+  alterar, manter alinhado com `Conhecimento/voz-e-identidade/voz-paaps.md`.
 - **O agente em si (modelo, memoria, hooks):** `agents/agente_paaps.py`.
 - **Seguranca (anti prompt-injection e fragmentacao):** `agents/guardrails/`.
 - **Mensagens que chegam (audio/imagem/doc):** `agents/hooks/media.py`.
