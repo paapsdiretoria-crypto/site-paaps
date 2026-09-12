@@ -4,6 +4,12 @@ Catálogo de tudo que existe em `Conhecimento/`. Atualizado a cada `compila` e a
 `salva isso como nota`. Para achar a página certa antes de abrir qualquer arquivo,
 comece por aqui.
 
+## Solto (sem subpasta ainda)
+
+- [[como-trabalhar-com-claude]] : erros comuns e correção, postura de iteração,
+  Framework 4D, loop de delegação e diligência, e a ligação com o gate de aprovação que
+  a PAAPS já pratica
+
 ## voz-e-identidade
 
 O coração compartilhado, lido por todos os agentes de conteúdo.
