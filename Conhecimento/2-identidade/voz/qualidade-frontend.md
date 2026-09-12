@@ -6,18 +6,18 @@ status: vivo
 atualizado: 2026-09-12
 ---
 
-# Qualidade de Design — Princípios Agnósticos de Meio
+# Qualidade de Design: Princípios Agnósticos de Meio
 
 Este arquivo descreve os princípios de design de alta qualidade de forma **agnóstica de meio**: valem tanto para HTML/CSS quanto para peças no Canva. Esta é uma instrução explícita da Mallu: os princípios de tipografia distintiva, layout não-genérico, composição espacial e ruptura de grid NÃO são exclusivos de web.
 
 **Fonte:** skill frontend-design.md (desmembrada e generalizada em jun/2026).
 
 **Quem lê este arquivo:** agente construtor de dashboard, produtor de peças editoriais HTML, agentes do site, aplicador visual de carrossel.
-**Quem NÃO lê:** o copywriter de texto puro (legenda, roteiro de Reel) — este arquivo é sobre construção visual, não sobre escrita.
+**Quem NÃO lê:** o copywriter de texto puro (legenda, roteiro de Reel): este arquivo é sobre construção visual, não sobre escrita.
 
 ---
 
-## 1. Antes de Criar — Três Perguntas Obrigatórias
+## 1. Antes de Criar: Três Perguntas Obrigatórias
 
 1. **Para quem é essa peça?** Interno (equipe) / externo (gestor público, RH, psicóloga) / híbrido?
 2. **Qual é o objetivo único?** Informar / engajar / converter / posicionar?
@@ -32,8 +32,8 @@ Só depois de responder as três, começar a construir.
 **Princípio:** a tipografia comunica antes mesmo de o texto ser lido. Ela carrega personalidade, urgência, credibilidade.
 
 **O que fazer:**
-- Criar contraste real entre título e corpo — peso, tamanho e espaçamento diferentes o suficiente para criar hierarquia visível
-- `letter-spacing` é uma ferramenta de caráter — 0.08em em títulos densos, até 0.22em em labels menores
+- Criar contraste real entre título e corpo: peso, tamanho e espaçamento diferentes o suficiente para criar hierarquia visível
+- `letter-spacing` é uma ferramenta de caráter: 0.08em em títulos densos, até 0.22em em labels menores
 - Pesos extremos (800) para impacto; pesos suaves (400) para leitura longa
 
 **Como se traduz em HTML/CSS:**
@@ -47,7 +47,7 @@ h1 { font-family: var(--fonte-titulo); font-weight: 800; font-size: clamp(2.4rem
 - Body: Helvetica Regular (400), tamanho que cria contraste real com o headline (nunca tamanho similar)
 - Labels acima do título: pequenos, em caps, `letter-spacing: 0`. A hierarquia vem do tamanho e da cor, não do espaçamento entre letras
 
-**Anti-padrão:** tamanho uniforme em todos os elementos do slide — isso é o que produz "visual de IA", sem hierarquia, sem caráter.
+**Anti-padrão:** tamanho uniforme em todos os elementos do slide: isso é o que produz "visual de IA", sem hierarquia, sem caráter.
 
 ---
 
@@ -70,18 +70,18 @@ h1 { font-family: var(--fonte-titulo); font-weight: 800; font-size: clamp(2.4rem
 
 **Como se traduz no Canva:**
 - Foto que ocupa 60–70% do frame, não centralizada mas alinhada a uma borda
-- Texto que começa fora da margem "segura" — a tensão é proposital
-- Evitar: foto no centro, texto em cima, texto embaixo em tamanhos iguais — é o template padrão, é o que parece feito por IA
+- Texto que começa fora da margem "segura": a tensão é proposital
+- Evitar: foto no centro, texto em cima, texto embaixo em tamanhos iguais: é o template padrão, é o que parece feito por IA
 
 ---
 
 ## 4. Composição Espacial
 
-**Princípio:** o espaço em branco (ou preto, ou a cor de fundo) é um elemento ativo — não preenchimento por preguiça.
+**Princípio:** o espaço em branco (ou preto, ou a cor de fundo) é um elemento ativo: não preenchimento por preguiça.
 
 **O que fazer:**
 - Generosidade de espaço ao redor de elementos-chave aumenta o peso deles
-- Densidade controlada: algumas áreas densas, outras respiradas — cria ritmo
+- Densidade controlada: algumas áreas densas, outras respiradas: cria ritmo
 - Um slide com muito respiro pode ser mais poderoso que um lotado de informação
 
 **Como se traduz em HTML/CSS:**
@@ -91,7 +91,7 @@ section { padding: clamp(48px, 8vw, 96px) 0; }
 ```
 
 **Como se traduz no Canva:**
-- Não preencher todos os cantos do slide — deixar área de respiro intencional
+- Não preencher todos os cantos do slide: deixar área de respiro intencional
 - Quando o headline é grande e poderoso, deixá-lo "respirar" (não encher o slide de elementos secundários)
 - Regra prática: se um slide parece "vazio", antes de adicionar elementos, avaliar se o vazio é proposital
 
@@ -99,12 +99,12 @@ section { padding: clamp(48px, 8vw, 96px) 0; }
 
 ## 5. Ruptura de Grid
 
-**Princípio:** um elemento que "escapa" levemente do grid cria tensão visual positiva — desde que seja o elemento mais importante.
+**Princípio:** um elemento que "escapa" levemente do grid cria tensão visual positiva: desde que seja o elemento mais importante.
 
 **O que fazer:**
 - Identificar o elemento de mais peso visual na peça
 - Permitir que ele ultrapasse as margens, sobreponha outros elementos, ou ocupe espaço desproporcional
-- O resto da composição fica ordenado — só o elemento-âncora "rompe"
+- O resto da composição fica ordenado: só o elemento-âncora "rompe"
 
 **Como se traduz em HTML/CSS:**
 ```css
@@ -115,8 +115,8 @@ section { padding: clamp(48px, 8vw, 96px) 0; }
 ```
 
 **Como se traduz no Canva:**
-- Texto que ultrapassa levemente a margem de segurança (não por erro — por decisão)
-- Foto posicionada de forma que parte dela é "cortada" pela borda do slide — cria sensação de que há mais para ver
+- Texto que ultrapassa levemente a margem de segurança (não por erro: por decisão)
+- Foto posicionada de forma que parte dela é "cortada" pela borda do slide: cria sensação de que há mais para ver
 - Elemento de destaque (número, palavra-chave) que ocupa mais espaço do que o grid "permitiria"
 
 ---
@@ -127,7 +127,7 @@ Para HTML/CSS apenas. Não se aplica ao Canva.
 
 **O que fazer:**
 - `IntersectionObserver` para ativar animações quando o elemento entra na viewport
-- Staggered reveals com `animation-delay` — cria orquestração, não caos
+- Staggered reveals com `animation-delay`: cria orquestração, não caos
 - Um momento de entrada bem construído vale mais que micro-interações espalhadas
 
 ```css
@@ -139,7 +139,7 @@ Para HTML/CSS apenas. Não se aplica ao Canva.
 .animar-delay-4 { transition-delay: 0.4s; }
 ```
 
-**Anti-padrão:** bounce, spring, efeitos excessivos — produzem sensação de produto barato.
+**Anti-padrão:** bounce, spring, efeitos excessivos: produzem sensação de produto barato.
 
 ---
 
@@ -153,7 +153,7 @@ Para HTML/CSS apenas. Não se aplica ao Canva.
 
 **Como se traduz no Canva:**
 - Adicionar overlay sutil de textura quando possível
-- Evitar fundo branco puro — usar a cor de fundo PAAPS (`#f5f1e1`) ou marrom escuro
+- Evitar fundo branco puro: usar a cor de fundo PAAPS (`#f5f1e1`) ou marrom escuro
 
 ---
 

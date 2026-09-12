@@ -53,3 +53,35 @@ touch 10-15 wiki pages."* Virou a regra que governa toda escrita aqui.
 O `log.md` que você está lendo precisava existir. Eu tinha escrito em
 `6-sistema/padrao-llm-wiki.md` que `sessoes/` já cobria esse papel, e estava errado:
 `sessoes/` registra arquivo alterado, não conhecimento produzido.
+
+## [2026-09-12] compila | CLAUDE.md raiz explodido em notas específicas
+
+O `CLAUDE.md` de 539 linhas era a fonte mais densa do repositório e nunca tinha sido
+lido como fonte. Virou 30 notas específicas, uma por coisa que alguém pode precisar
+saber sozinha: sete proibições, sete calibrações, cinco notas jurídicas, cinco páginas
+de pessoa, quatro de método e norma, três de mercado, duas de sistema.
+
+**O arquivo não encolheu**, por decisão da Mallu: as notas nascem primeiro, a redução do
+`CLAUDE.md` vira decisão dela depois, e as proibições ativas e a situação jurídica nunca
+saem de lá.
+
+Duas coisas apareceram na leitura:
+
+**Contradição em aberto sobre o título da Mallu.** O `CLAUDE.md` a descreve como
+"Psicóloga Social"; a calibração de 22/08/2026 diz "formanda em psicologia", porque o
+título é regulado pelo CFP e o CRP só sai em fevereiro. As duas não podem valer ao mesmo
+tempo em peça pública. Registrado em [[quem-sou-eu]] e [[formacao-e-crp]], sem escolher
+por ela: em peça externa vale "formanda", que é a versão sem risco.
+
+**245 travessões dentro do próprio cofre**, em notas que documentam a regra que proíbe
+travessão. Corrigidos nas sete que eram síntese minha. Ficaram de fora
+`manual-marca-posicionamento` (88) e `paaps-pesquisa-mercado` (38), que são conversão
+dos DOCX dela: mexer na pontuação daquilo é editar conteúdo dela, não dívida minha.
+
+## [2026-09-12] entrevista | Índice de agentes e de skills
+
+Os 23 agentes e as 50 skills viraram [[agentes]] e [[skills]], índice sem cópia: os
+arquivos continuam em `.claude/`. Três defeitos achados na leitura: `critico-design` e
+`aplicador-visual` liam `nucleo-comum/`, pasta extinta (corrigido); três agentes estão
+incompletos e dizem isso na própria descrição; `precificacao-paaps/` é pasta vazia sem
+`SKILL.md`, então a skill não carrega.

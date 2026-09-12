@@ -11,10 +11,10 @@
             "id": "3943f21f104bfbaa",
             "type": "leaf",
             "state": {
-              "type": "empty",
+              "type": "graph",
               "state": {},
-              "icon": "lucide-file",
-              "title": "Nova aba"
+              "icon": "lucide-git-fork",
+              "title": "Visualização em gráfico"
             }
           }
         ],
@@ -81,7 +81,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 985.6
+    "width": 200
   },
   "right": {
     "id": "81e583fb7e4f9593",
@@ -183,8 +183,10 @@
       "bases:Criar nova base": false
     }
   },
-  "active": "d1fdf0b82269f09e",
+  "active": "3943f21f104bfbaa",
   "lastOpenFiles": [
+    "memoria-claude/MEMORY.md",
+    "CLAUDE.md",
     "Sem título.base",
     "Arquivos/fotos/16.png",
     "segundo-cerebro",
@@ -214,7 +216,6 @@
     "Conhecimento/ecoa/estrutura-e-rituais/Boas Vindas 39044cb52e0080778c83d949f925f803.md",
     "Conhecimento/ecoa/reunioes/Reunião de Planejamento 39e44cb52e0080279cefc4388305ff32.md",
     "Conhecimento/ecoa/reunioes/Reunião Equipe 36344cb52e00802f9e51ce66a5ebbcfa.md",
-    "Conhecimento/ecoa/planejamento-de-conteudo/Personas 27044cb52e0083ca97d981f6a7dee7fe.md",
     "Conhecimento/ecoa/estrutura-e-rituais",
     "Conhecimento/ecoa/reunioes",
     "Conhecimento/ecoa/porta-voz",
@@ -224,7 +225,6 @@
     "Conhecimento/arquitetura-agentes/workflow-paaps.html",
     "Conhecimento/arquitetura-agentes/arquitetura_v2_agentes_paaps_orquestrador_criticos.svg",
     "Conhecimento/voz-e-identidade",
-    "sessoes",
     "Arquivos/identidade-visual/08-paaps-digging/01 - Logo Paaaps + Digging/Logo Paaps + Digging - Vinho.png",
     "Arquivos/identidade-visual/08-paaps-digging/01 - Logo Paaaps + Digging/Logo Paaps + Digging - Marrom.png",
     "Arquivos/identidade-visual/08-paaps-digging/01 - Logo Paaaps + Digging/Logo Paaps + Digging - Branco.png",

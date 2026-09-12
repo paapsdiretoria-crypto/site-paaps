@@ -36,13 +36,13 @@ Inclusive o slide de dado institucional. Inclusive o slide de número.
 Não existe "slide sem foto". Não existe "tipografia sobre textura PAAPS" como padrão.
 A tipografia sozinha é exceção rara, e precisa ser justificada peça a peça.
 
-### Lei 2 : documental real, do mundo do SUS — cor ou P&B, os dois servem
+### Lei 2 : documental real, do mundo do SUS: cor ou P&B, os dois servem
 
 **Revogada em 31/08/2026 a exigência de cor.** Valeu de 30/07 a 31/08: nesse meio-tempo, a
 primeira peça aprovada sem rodada de correção nenhuma saiu com 7 dos 8 slides em P&B, porque é
 isso que o acervo documental real (Radilson, `REDE PÚBLICA BRASILEIRA`) entrega. **O critério
 nunca foi a paleta de cor da foto**, foi ser documental real e contextualizável. Peça mista
-(P&B + cor no mesmo carrossel) também passa — foi o caso da peça de referência, com o slide de
+(P&B + cor no mesmo carrossel) também passa: foi o caso da peça de referência, com o slide de
 tela dividida em cor e o resto em P&B.
 
 A foto mostra gente e lugar reconhecíveis da rede pública brasileira: balcão de UBS, sala de
@@ -54,13 +54,13 @@ Hierarquia de fontes e onde buscar: `mapa-fontes-foto.md`.
 ### Lei 3 : crédito nomeado, quando existir
 
 Toda foto leva crédito **quando a origem é conhecida**. Formato validado na peça de
-referência, escrito na própria foto (canto superior esquerdo, Helvetica 16px — ver
+referência, escrito na própria foto (canto superior esquerdo, Helvetica 16px: ver
 `anatomia-do-carrossel-aprovado.md`, Parte 2):
 
 > Fotos: Radilson Carlos Gomes, Fotógrafo do SUS.
 
 Quando a pessoa fotografada é uma trabalhadora da rede e o nome dela é conhecido, ele entra
-no lugar do fotógrafo genérico — nomear quem trabalha é conteúdo, não apêndice burocrático.
+no lugar do fotógrafo genérico: nomear quem trabalha é conteúdo, não apêndice burocrático.
 **Sem origem conhecida, omita a linha inteira**, nunca invente crédito: a peça de referência
 tem 2 fotos (slide de tela dividida) sem crédito, declaradas como tal, e isso foi aprovado.
 
@@ -101,7 +101,7 @@ sofrimento", depois "isso tem nome: Risco Psicossocial", depois a NR-01.
 > CAPS, UBS, CRAS, NASF, ESCOLAS: onde há suporte para a equipe, há cuidado de qualidade.
 > impactos em toda a equipe: até em quem acabou de chegar.
 
-Travessão grande (—) segue proibido em absoluto no ecossistema inteiro.
+Travessão grande (-) segue proibido em absoluto no ecossistema inteiro.
 
 ---
 

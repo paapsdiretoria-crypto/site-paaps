@@ -6,7 +6,7 @@ status: vivo
 atualizado: 2026-09-12
 ---
 
-# Identidade Visual Aplicada — O Olho do PAAPS
+# Identidade Visual Aplicada: O Olho do PAAPS
 
 Este arquivo é operacional: descreve o que o **Aplicador Visual** executa e o que o **Crítico de Design** verifica. Cobre paleta, tipografia, elementos decorativos, sistema Periódico e o workflow completo de carrossel no Canva.
 
@@ -14,13 +14,13 @@ Este arquivo é operacional: descreve o que o **Aplicador Visual** executa e o q
 
 ---
 
-## 1. DNA Visual — Os Três Tensionamentos
+## 1. DNA Visual: Os Três Tensionamentos
 
 O design PAAPS vive no cruzamento de três tensões que nunca se resolvem completamente:
 
-- **Acadêmico ↔ Acessível** — rigor técnico sem elitismo
-- **Institucional ↔ Humano** — estado e comunidade ao mesmo tempo
-- **Urgente ↔ Cuidadoso** — não apela ao medo, apela à consciência
+- **Acadêmico ↔ Acessível**: rigor técnico sem elitismo
+- **Institucional ↔ Humano**: estado e comunidade ao mesmo tempo
+- **Urgente ↔ Cuidadoso**: não apela ao medo, apela à consciência
 
 **O que a marca NÃO é:**
 - Não é startup tech com gradientes azuis
@@ -36,15 +36,15 @@ O design PAAPS vive no cruzamento de três tensões que nunca se resolvem comple
 
 ```css
 :root {
-  --cor-fundo:     #f5f1e1;  /* off-white arenoso — fundo padrão */
-  --cor-marrom:    #442309;  /* marrom escuro — texto principal */
-  --cor-terracota: #cb4710;  /* terracota — CTA, urgência, destaque */
-  --cor-oliva:     #aea349;  /* oliva/dourado — editorial, secundário */
-  --cor-amarelo:   #f7c31c;  /* amarelo — números, acentos vivos */
-  --cor-bege-rosa: #bbada2;  /* bege rosado — labels, subtextos */
-  --cor-lilas:     #bcb6f2;  /* lilás — card empresas (uso restrito) */
+  --cor-fundo:     #f5f1e1;  /* off-white arenoso: fundo padrão */
+  --cor-marrom:    #442309;  /* marrom escuro: texto principal */
+  --cor-terracota: #cb4710;  /* terracota: CTA, urgência, destaque */
+  --cor-oliva:     #aea349;  /* oliva/dourado: editorial, secundário */
+  --cor-amarelo:   #f7c31c;  /* amarelo: números, acentos vivos */
+  --cor-bege-rosa: #bbada2;  /* bege rosado: labels, subtextos */
+  --cor-lilas:     #bcb6f2;  /* lilás: card empresas (uso restrito) */
   --cor-branco:    #ffffff;
-  --raio: 4px;               /* border-radius PADRÃO — nunca mais */
+  --raio: 4px;               /* border-radius PADRÃO: nunca mais */
   --fonte-titulo: Helvetica, 'Nimbus Sans PAAPS', Arial, sans-serif;
   --fonte-corpo:  Helvetica, 'Nimbus Sans PAAPS', Arial, sans-serif;
   --fonte-label:  'League Spartan', Helvetica, Arial, sans-serif;  /* só label/tag/número */
@@ -149,7 +149,7 @@ rede", frase que Mallu não usa e já pediu para retirar mais de uma vez.
 <span style="width:12px;height:12px;border-radius:2px;background:var(--cor-oliva);display:inline-block;"></span>
 ```
 Ordem canônica no hero: amarelo → terracota → oliva → branco.
-`border-radius: 2px` sempre — quadrado-arredondado, não círculo.
+`border-radius: 2px` sempre: quadrado-arredondado, não círculo.
 
 ### Divisor tricolor (marca editorial)
 ```html
@@ -164,13 +164,13 @@ Ordem canônica no hero: amarelo → terracota → oliva → branco.
 ```css
 background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
 ```
-Opacity: 0.03 (sutil) a 0.06 (expressivo). **Nunca remover** — é o que faz a marca parecer impressa, orgânica, real.
+Opacity: 0.03 (sutil) a 0.06 (expressivo). **Nunca remover**: é o que faz a marca parecer impressa, orgânica, real.
 
 ---
 
-## 5. Sistema Periódico — Estética Fundacional
+## 5. Sistema Periódico: Estética Fundacional
 
-O design PAAPS se inspira no **relatório de campo** e no **periódico editorial impresso**. Cada peça parece ter sido projetada para ser impressa e distribuída — mesmo sendo digital. Comunica: seriedade, permanência, profundidade intelectual.
+O design PAAPS se inspira no **relatório de campo** e no **periódico editorial impresso**. Cada peça parece ter sido projetada para ser impressa e distribuída: mesmo sendo digital. Comunica: seriedade, permanência, profundidade intelectual.
 
 **Referências conceituais:** periódico editorial mensal; relatórios de campo de pesquisadores; jornais de arquitetura e urbanismo; design editorial latino-americano dos anos 80–90.
 
@@ -273,14 +273,14 @@ main { animation: fadeIn 0.5s ease; }
 
 | Tipo | Descrição | Elementos editáveis |
 |---|---|---|
-| 1 — CAPA | Headline grande + foto + sub-headline + contexto + crédito | 5 |
-| 2 — AFIRMAÇÃO | Afirmação forte (caps) + dado + corpo + crédito | 5 |
-| 3 — CITAÇÃO | Citação direta longa + atribuição + tag + referência | 6 |
-| 4 — NÚMERO | Número enorme + headline + detalhe + crédito | 5 |
-| 5 — FRASE IMPACTO | Citação curta entre aspas + confirmação | 4 |
-| 6 — CONTEXTO EDITORIAL | Afirmação + headline menor + fonte notícia + detalhe + data | 6 |
-| 7 — CONTEXTUALIZAÇÃO | Data/período + sub + headline + detalhe + crédito | 6 |
-| 8 — MANIFESTO/CTA | Texto grande + tag + crédito | 3 |
+| 1: CAPA | Headline grande + foto + sub-headline + contexto + crédito | 5 |
+| 2: AFIRMAÇÃO | Afirmação forte (caps) + dado + corpo + crédito | 5 |
+| 3: CITAÇÃO | Citação direta longa + atribuição + tag + referência | 6 |
+| 4: NÚMERO | Número enorme + headline + detalhe + crédito | 5 |
+| 5: FRASE IMPACTO | Citação curta entre aspas + confirmação | 4 |
+| 6: CONTEXTO EDITORIAL | Afirmação + headline menor + fonte notícia + detalhe + data | 6 |
+| 7: CONTEXTUALIZAÇÃO | Data/período + sub + headline + detalhe + crédito | 6 |
+| 8: MANIFESTO/CTA | Texto grande + tag + crédito | 3 |
 
 **Estrutura visual de cada slide:**
 ```
@@ -288,7 +288,7 @@ main { animation: fadeIn 0.5s ease; }
 │  TEXTO SUPERIOR (top: 66–200px) │
 │  TEXTO HEADLINE (top: 66–640px) │
 │                                 │
-│  [FOTO P&B — placeholder]       │  top: ~664, h: ~500
+│  [FOTO P&B: placeholder]       │  top: ~664, h: ~500
 │                                 │
 │  TEXTO INFERIOR (top: 760+)     │
 │  CRÉDITO (top: ~1260)           │  @paaps.brasil · tema
@@ -307,9 +307,9 @@ main { animation: fadeIn 0.5s ease; }
    design_id: CÓPIA
    → retorna transaction_id + element_ids
 
-3. perform-editing-operations (batch — todos os slides de uma vez)
+3. perform-editing-operations (batch: todos os slides de uma vez)
    Usar find_and_replace_text para CADA região de texto
-   ⚠️ NUNCA usar replace_text — perde a formatação por região (amarelo vs branco)
+   ⚠️ NUNCA usar replace_text: perde a formatação por região (amarelo vs branco)
    ⚠️ Cada região de texto é editada separadamente
 
 4. commit-editing-transaction
@@ -317,12 +317,12 @@ main { animation: fadeIn 0.5s ease; }
 
 5. merge-designs (modify_existing_design)
    design_id: DAHLWb1s8U0 (original)
-   operations: insert_pages — source: CÓPIA, page_numbers: [1..8], after_page_number: [última]
+   operations: insert_pages: source: CÓPIA, page_numbers: [1..8], after_page_number: [última]
 ```
 
 **Regras críticas do editor:**
-- `find_and_replace_text` preserva a cor/peso de cada região — usar sempre
-- `replace_text` sobrescreve tudo com uma cor só — evitar
+- `find_and_replace_text` preserva a cor/peso de cada região: usar sempre
+- `replace_text` sobrescreve tudo com uma cor só: evitar
 - O `page_index` no `perform-editing-operations` = índice da PRIMEIRA página sendo editada
 
 ### 7.4 Posicionamento de fotos por tipo de slide
@@ -366,8 +366,8 @@ main { animation: fadeIn 0.5s ease; }
 ### 7.6 Notas de checagem antes de publicar
 
 - ⚠️ Todo dado precisa de fonte verificável antes de publicar (ver `voz-paaps.md` seção 4.5)
-- ⚠️ O dado "+56% em Bela Vista de Minas" é caso real PAAPS — confirmar período e contexto
-- ✅ Frases de relato conceitual são posicionamento — ok sem fonte numérica
-- ✅ Afirmações estruturais são opinião declarada — ok sem dado
+- ⚠️ O dado "+56% em Bela Vista de Minas" é caso real PAAPS: confirmar período e contexto
+- ✅ Frases de relato conceitual são posicionamento: ok sem fonte numérica
+- ✅ Afirmações estruturais são opinião declarada: ok sem dado
 
-**Regra de entrega:** carrossel é processo iterativo. Entregar primeira rodada e aguardar validação antes de avançar — nunca despejar o lote inteiro de uma vez.
+**Regra de entrega:** carrossel é processo iterativo. Entregar primeira rodada e aguardar validação antes de avançar: nunca despejar o lote inteiro de uma vez.

@@ -2,8 +2,8 @@
 title: "Getting better results · Claude 101"
 source: "https://academy.claude.com/courses/claude-101/getting-better-results"
 author:
-  - "[[the end]]"
-  - "[[you’ll be able to]]"
+  - "`the end`"
+  - "`you’ll be able to`"
 published:
 created: 2026-09-12
 description: "Getting better results — Claude 101 on Claude Academy"

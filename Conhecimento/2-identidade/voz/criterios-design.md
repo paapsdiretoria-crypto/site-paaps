@@ -6,15 +6,15 @@ status: vivo
 atualizado: 2026-09-12
 ---
 
-# Critérios de Design — Lista de Verificação do Crítico de Design
+# Critérios de Design: Lista de Verificação do Crítico de Design
 
-Este arquivo é a lista de checagem que o **Crítico de Design** aplica antes de qualquer peça fechar. É verificável item a item — não é guia de inspiração, é protocolo de aprovação.
+Este arquivo é a lista de checagem que o **Crítico de Design** aplica antes de qualquer peça fechar. É verificável item a item: não é guia de inspiração, é protocolo de aprovação.
 
 **Fonte:** Partes 1.4, 2.2, 6 da skill paaps-brand-design + princípios de qualidade-frontend.md aplicados ao Canva (instrução da Mallu, jun/2026).
 
 ---
 
-## 1. Checklist de Aprovação — Aplicar a Toda Peça
+## 1. Checklist de Aprovação: Aplicar a Toda Peça
 
 ### Identidade visual
 - [ ] Paleta: todas as cores são da paleta PAAPS? Nenhum hex fora do sistema?
@@ -49,13 +49,13 @@ Este arquivo é a lista de checagem que o **Crítico de Design** aplica antes de
 
 ### Web (checklist adicional para HTML/CSS)
 - [ ] Grain texture no body?
-- [ ] Breakpoints respeitados (≤960px, ≤768px, ≤480px — nunca criar novos)?
+- [ ] Breakpoints respeitados (≤960px, ≤768px, ≤480px: nunca criar novos)?
 - [ ] Máximo 4 delays de animação (delay máximo: 0.4s)?
 - [ ] Nenhuma sombra de card no estilo Periódico (usar bordas)?
 
 ---
 
-## 2. Anti-padrões Visuais — O Que Reprovar Imediatamente
+## 2. Anti-padrões Visuais: O Que Reprovar Imediatamente
 
 ### Reprovar e devolver ao agente produtor
 - ❌ Gradiente roxo, azul ou qualquer gradiente de texto
@@ -80,18 +80,18 @@ Este arquivo é a lista de checagem que o **Crítico de Design** aplica antes de
 
 ## 3. Princípios de Qualidade de Design Aplicados ao Canva
 
-*Estes princípios vêm de `qualidade-frontend.md` e se aplicam igualmente a peças digitais e a carrosséis no Canva — instrução explícita da Mallu.*
+*Estes princípios vêm de `qualidade-frontend.md` e se aplicam igualmente a peças digitais e a carrosséis no Canva: instrução explícita da Mallu.*
 
 **Tipografia distinta:**
-- No Canva: escolher peso e tamanho que criem contraste real com o corpo — nunca tamanho uniforme em todos os elementos
+- No Canva: escolher peso e tamanho que criem contraste real com o corpo: nunca tamanho uniforme em todos os elementos
 - Headline deve dominar a composição visualmente; se não domina, aumentar
 
 **Layout que foge do genérico:**
-- No Canva: evitar composição centralizada com foto no meio e texto em cima/baixo em tamanhos iguais — isso é o padrão "IA"
+- No Canva: evitar composição centralizada com foto no meio e texto em cima/baixo em tamanhos iguais: isso é o padrão "IA"
 - O que funciona: texto que sangra, foto que ocupa mais de 60% do frame, assimetria intencional
 
 **Composição espacial:**
-- Espaço em branco (ou preto) é um elemento ativo — não preenchimento por preguiça
+- Espaço em branco (ou preto) é um elemento ativo: não preenchimento por preguiça
 - No Canva: um slide com muito respiro pode ser mais poderoso que um lotado de informação
 
 **Ruptura de grid:**
@@ -105,12 +105,12 @@ Este arquivo é a lista de checagem que o **Crítico de Design** aplica antes de
 O Crítico de Design verifica não só se os itens técnicos estão corretos, mas se a peça provoca a sensação certa:
 
 **Dashboard (equipe interna):**
-*"Este é meu aliado estratégico de manhã."* — não austero, tem alma. Insights em linguagem PAAPS, não tabela fria.
+*"Este é meu aliado estratégico de manhã."*: não austero, tem alma. Insights em linguagem PAAPS, não tabela fria.
 
 **Site institucional (primeiros 3 segundos):**
-*"Curiosidade — é tão bom que não parece verdade. Esperança."* — sem elemento que grite "clique aqui". Convida, não empurra.
+*"Curiosidade: é tão bom que não parece verdade. Esperança."*: sem elemento que grite "clique aqui". Convida, não empurra.
 
 **Instagram:**
-*"Reconhecimento + choque de precisão."* — "Alguém finalmente nomeou isso."
+*"Reconhecimento + choque de precisão."*: "Alguém finalmente nomeou isso."
 
 Se a peça não provoca a sensação certa, algo está errado mesmo que os itens técnicos estejam todos marcados.

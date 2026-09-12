@@ -2,7 +2,7 @@
 title: "What Is Andrej Karpathy's LLM Wiki? How to Build a Personal Knowledge Base With Claude Code"
 source: "https://www.mindstudio.ai/blog/andrej-karpathy-llm-wiki-knowledge-base-claude-code"
 author:
-  - "[[Luis Chavez-Mattos]]"
+  - "`Luis Chavez-Mattos`"
 published: 2026-04-05
 created: 2026-09-12
 description: "Karpathy's LLM wiki turns raw documents into a structured markdown knowledge base Claude can query. Here's how to set it up in 5 minutes with Obsidian."
@@ -150,7 +150,7 @@ Write the main content here.
 
 ## Related Notes
 
-- [[Note Title]]
+- `Note Title`
 ```
 
 You don’t need to follow this exactly. The key is that every note has a summary line and tags. These give Claude quick signals about relevance without reading the full file.
@@ -272,7 +272,7 @@ If you write “RAG” in some notes and “retrieval augmented generation” in
 
 ### Link Notes to Each Other
 
-Obsidian’s `[[wiki links]]` format creates connections between notes. Claude can follow these connections, which means a well-linked wiki gives the model a richer graph to reason over than a flat collection of isolated files. For a deeper look at this same idea applied to large codebases, [Graphify’s knowledge-graph approach for Claude Code](https://www.mindstudio.ai/blog/graphify-claude-code-knowledge-graph-large-codebase-70x) compresses huge repositories into navigable mental models — the same principle that makes a well-linked wiki outperform a flat folder.
+Obsidian’s ``wiki links`` format creates connections between notes. Claude can follow these connections, which means a well-linked wiki gives the model a richer graph to reason over than a flat collection of isolated files. For a deeper look at this same idea applied to large codebases, [Graphify’s knowledge-graph approach for Claude Code](https://www.mindstudio.ai/blog/graphify-claude-code-knowledge-graph-large-codebase-70x) compresses huge repositories into navigable mental models — the same principle that makes a well-linked wiki outperform a flat folder.
 
 ### Keep Notes Focused
 

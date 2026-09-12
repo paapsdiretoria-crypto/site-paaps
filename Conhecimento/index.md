@@ -38,11 +38,16 @@ Clipper salva. Elas são imutáveis: a IA lê, nunca edita.
 A Mallu como pessoa. Hoje ela é a única trabalhando ativamente na PAAPS, então a
 faculdade, o CRP e a rotina dela são parte da empresa, não assunto à parte.
 
+- [[quem-sou-eu]] : quem é Mallu Vasconcellos e por que hoje ela e a PAAPS são
+  praticamente a mesma coisa. **Carrega uma contradição em aberto sobre o título**
+- [[formacao-e-crp]] : é formanda, não psicóloga, até o CRP sair em fevereiro
+- [[linha-de-pensamento]] : psicologia além do consultório e do RH, suleada, sistêmica
+- [[frase-mote]] : a frase-mote pessoal, para usar literal
 - [[pesquisa-tcc-bh]] : a campanha de e-mail da pesquisa de TCC na rede socioassistencial
   de BH, separada de propósito do funil comercial
 
-*Setor recém-aberto. As notas de perfil (quem sou eu, o que eu nunca faço, o que dá
-errado, formação e CRP) entram na Fase 1, a partir do `CLAUDE.md` raiz.*
+*Ainda faltam, do roteiro de entrevista: o que eu entrego, como meu trabalho é medido,
+como eu trabalho, o que eu nunca faço, o que dá errado.*
 
 ---
 
@@ -56,9 +61,33 @@ escrever qualquer coisa.
 - [[manual-marca-posicionamento]] : manual de marca e posicionamento, convertido do DOCX
   institucional original
 
-**juridico/**
-- [[ficha-juridica-paaps]] : ficha cadastral completa da DIGGING, objeto social alínea
-  por alínea, cláusula GovTech, sócias e checklist de habilitação
+**juridico/** : o que decide preenchimento de formulário e edital
+- [[digging-e-a-empresa]] : quem assina contrato é a DIGGING; o PAAPS é a metodologia dela
+- [[clausula-govtech]] : o PAAPS não pode ser vendido em licitação, só licenciado
+- [[sede-fiscal-e-sao-paulo]] : onde pedirem UF da empresa, é SP, não MG
+- [[composicao-societaria]] : 99% feminina, capital integralizado, administração isolada
+- [[paaps-brasil-e-nome-proprio]] : nunca abrir a sigla em peça pública
+- [[ficha-juridica-paaps]] : a ficha cadastral completa, alínea por alínea
+
+**proibicoes/** : o que nunca sai daqui, uma nota por proibição
+- [[travessao-proibido]] · [[linguagem-coachesca]] · [[metaforas-de-guerra]] ·
+  [[texto-com-cara-de-ia]] · [[linguagem-clinica-patologizante]] ·
+  [[critica-politica-velada]] · [[segredo-em-arquivo-commitado]] ·
+  [[chapeu-eyebrow-proibido]] · [[sem-frase-de-efeito-vazia]] · [[sem-julgamento-moral]]
+
+**calibracoes/** : regras que não são proibição absoluta, cada uma com o teste que decide
+- [[nao-e-x-e-y]] : exceção rara, e o X negado precisa ser crença que alguém tem
+- [[lexico-pessoas-da-rede]] : nunca "colaborador", nunca "Servidor" sozinho
+- [[copy-com-conectivos]] : o "só então" que amarra o método
+- [[escrever-grande]] : entre cortar texto e diminuir a letra, corta-se texto
+- [[foto-em-cor-em-todos-os-slides]] : as duas leis que revogaram regras antigas
+- [[nunca-afirmar-tendencia-sem-verificar]] : vale dentro de copy e pitch também
+- [[capilarizado-nunca-capitalizado]] : uma letra que derruba a peça inteira
+
+**pessoas/** : página de entidade por pessoa
+- [[como-apresentar-a-equipe]] : os três níveis e a ordem exata das palavras
+- [[fabiane-vasconcellos]] · [[luiz-sergio-barbosa]] · [[gustavo-faria]] ·
+  [[supervisao-da-metodologia]]
 
 **voz/**
 - [[voz-paaps]] : o gabarito que decide se um texto soa PAAPS. Todo agente que escreve
@@ -84,6 +113,8 @@ escrever qualquer coisa.
 O que a PAAPS sabe e como pensa. Base teórica, metodologia, normas, temas de pesquisa e
 a evidência que sustenta cada afirmação.
 
+- [[linha-epistemologica-estrutural]] : estrutural e sistêmica, nunca individualista. O
+  conteúdo não convence, nomeia
 - [[metodologia-paaps]] : o que a PAAPS entrega e como explica cada frente, ditado pela
   Mallu em 02/08/2026
 
@@ -92,8 +123,17 @@ a evidência que sustenta cada afirmação.
   utilizáveis, hoje ancorados na Psicologia Sócio-Histórica. Arquivo vivo
   (caminho completo no link porque existe outro `README.md` no cofre)
 
-*`normas/`, `temas/` e `evidencia/` abrem na Fase 2b, quando começar a entrada
-permanente de pesquisa e notícia.*
+**normas/**
+- [[nr-01]] : não obriga prefeitura nem servidor estatutário. Serve de enquadramento,
+  nunca de obrigatoriedade
+- [[regulacao-cfp-e-crp]] : o que o Conselho limita, e a lacuna de pesquisa que sobrou
+
+**regras-de-execucao/**
+- [[pesquisa-fontes-aceitas]] : as fontes que valem, as bloqueadas, e o ritual de 3 a 5
+  ciclos com parágrafo reflexivo
+
+*`temas/` e `evidencia/` abrem quando começar a entrada permanente de pesquisa e notícia:
+uma nota por notícia, ligada a um nó de tema.*
 
 ---
 
@@ -137,13 +177,19 @@ do hash da página original.
 
 Como a PAAPS se sustenta. Pitch, cases, prospecção, funil, preço, editais.
 
+- [[mercado-do-cuidado]] : a PAAPS não está no mercado de saúde nem no de bem-estar. Esse
+  reframe decide quem é concorrente e qual é o tamanho do mercado
+- [[erro-de-leitura-do-bem-estar-corporativo]] : por que equipe pública reage mal a
+  programa de bem-estar, e por que ela tem razão
+- [[capilaridade-do-sus]] : 5.570 municípios, a maior malha de cuidado já construída
 - [[paaps-pesquisa-mercado]] : pesquisa de mercado, convertida do DOCX institucional
 
 **prospeccao/**
 - [[prospeccao-fria]] : esteira de status do lead, dedup de 60 dias, cadência de 15 por
   semana e o gate de aprovação da Mallu
 
-*`pitch/`, `cases/` e `editais/` abrem na Fase 2, a partir do pitch geral atual.*
+*`pitch/`, `cases/` e `editais/` abrem na Fase 2, a partir do pitch geral atual: uma nota
+por case, uma por objeção, uma pro modelo licenciado fora do Brasil.*
 
 ---
 
@@ -163,6 +209,8 @@ copiados pra cá:
   e o loop de delegação e diligência
 - [[sistema-gto]] : inventário do Notion GTO e o método real de produção destilado de 4
   gravações, com uma proposta de 9 agentes ainda sem decisão
+- [[regra-de-workspace]] : abrir sempre na raiz. Fora dela não existe contexto nem backup
+- [[hooks-e-auto-push]] : os dois hooks do evento `Stop` e o que cada um grava
 - [[runbook-navegacao-mcp]] : procedimento validado de navegação real via MCP, com os
   erros conhecidos e a solução de cada um
 

@@ -6,7 +6,7 @@ status: vivo
 atualizado: 2026-09-12
 ---
 
-# Runbook — Navegação real no navegador (MCP)
+# Runbook: Navegação real no navegador (MCP)
 
 > Criado em 06/07/2026 para nunca mais repetir o dia 16/06 (8 horas de tentativa e erro
 > para o Playwright MCP navegar). Procedimento validado + erros conhecidos e solução.
@@ -15,11 +15,11 @@ atualizado: 2026-09-12
 
 | Situação | Ferramenta |
 |---|---|
-| Navegar, clicar, ler página, tirar screenshot em site público | **Claude in Chrome** (MCP oficial `claude-in-chrome`) — preferido, usa o Chrome já logado |
+| Navegar, clicar, ler página, tirar screenshot em site público | **Claude in Chrome** (MCP oficial `claude-in-chrome`): preferido, usa o Chrome já logado |
 | Automação com o perfil logado (Instagram, Notion web) | Claude in Chrome, ou Playwright MCP em modo `--extension` |
-| Análise rápida de texto de página que não bloqueia robôs | WebFetch — **nunca** para benchmark visual/UX (inventa defeitos falsos; regra na memória do projeto) |
+| Análise rápida de texto de página que não bloqueia robôs | WebFetch: **nunca** para benchmark visual/UX (inventa defeitos falsos; regra na memória do projeto) |
 
-## Playwright MCP — configuração que funciona
+## Playwright MCP: configuração que funciona
 
 - Config no `.mcp.json` da raiz: `@playwright/mcp` com `--extension`.
 - O token da extensão **não fica no .mcp.json** (repo é público). Ele vem da variável
@@ -27,7 +27,7 @@ atualizado: 2026-09-12
 - Se o token mudar (extensão reinstalada/corrompida): atualizar SÓ o
   `settings.local.json`, nunca o `.mcp.json`.
 - Conflito conhecido: config global em `~/.claude.json` pode brigar com a do projeto e
-  quebrar a navegação — checar lá primeiro (memória `project_playwright_mcp_config`).
+  quebrar a navegação: checar lá primeiro (memória `project_playwright_mcp_config`).
 
 ## Erros conhecidos e o que fazer
 
