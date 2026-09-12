@@ -149,6 +149,6 @@ Valem para qualquer modo.
 
 **@paaps.brasil** usa os três modos com igual frequência.
 
-**@amalluvasconcellos:** o perfil de Mallu é mais pessoal, voz na primeira pessoa, mais próxima do público. O Modo 1 (Palavra-Manifesto) e o Modo 2 (Foto-Documento) se aplicam diretamente. O Modo 3 (Carrossel Estrutural) também, mas com tom mais reflexivo e menos institucional. As regras fotográficas são as mesmas: nunca stock, sempre real.
+**@malluvasconcellos:** o perfil de Mallu é mais pessoal, voz na primeira pessoa, mais próxima do público. O Modo 1 (Palavra-Manifesto) e o Modo 2 (Foto-Documento) se aplicam diretamente. O Modo 3 (Carrossel Estrutural) também, mas com tom mais reflexivo e menos institucional. As regras fotográficas são as mesmas: nunca stock, sempre real.
 
 O tom de voz específico de Mallu (pessoal, reflexivo, comprometido) está em `conteudo/instagram/amalluvasconcellos/CLAUDE.md`.
