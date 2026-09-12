@@ -1,7 +1,7 @@
 ---
 setor: 4-projetos
 tipo: inventario
-resumo: A página PROGRAMA PORTA-VOZ no Notion não descreve o programa, é a vista do CRM que lista quem está marcado como Ecoa Porta-Voz
+resumo: "A página PROGRAMA PORTA-VOZ no Notion não descreve o programa, é a vista do CRM que lista quem está marcado como Ecoa Porta-Voz"
 status: vivo
 atualizado: 2026-09-12
 fontes: [https://app.notion.com/p/24244cb52e0082f981590120ac3011e9, https://app.notion.com/p/3aa44cb52e008096a4d6ff65a4c9d288]

@@ -413,8 +413,16 @@ Um `CLAUDE.md` vira uma nota por proibição, uma por calibração, uma por norm
 **Regra de cabeçalho:** toda nota nova abre com o bloco YAML do molde em
 `Conhecimento/_templates/nota.md`, com `setor`, `tipo`, `resumo`, `status` e
 `atualizado` preenchidos. O `resumo` é o que permite decidir se vale abrir o arquivo sem
-abrir o arquivo: é a economia de token do sistema inteiro. Sem cabeçalho, a nota não
-entra no índice e não ganha cor no grafo.
+abrir o arquivo: é a economia de token do sistema inteiro, e vai **sempre entre aspas
+duplas**, porque dois-pontos solto no meio do valor quebra o YAML e a nota perde setor,
+tipo e status de uma vez, em silêncio. Sem cabeçalho, a nota não entra no índice e não
+ganha cor no grafo.
+
+**Regra de alias:** conceito com mais de um nome ganha `aliases` no cabeçalho, com os
+termos que alguém de fato digita ao procurar (`aliases: [NR-1, NR1, risco psicossocial]`).
+Serve duas vezes: no Obsidian faz `[[NR-1]]` resolver mesmo não sendo o nome do arquivo, e
+na leitura por LLM encurta o caminho até a nota certa. É a dica de terminologia
+consistente do padrão, aplicada em 12/09/2026 a 69 notas.
 
 **Regra de link:** `[[nome-do-arquivo]]`, sem extensão. Com `.md` dentro do colchete o
 link não resolve no Obsidian e a nota fica solta no grafo. Quando dois arquivos do cofre

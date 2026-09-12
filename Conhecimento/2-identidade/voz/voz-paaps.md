@@ -1,7 +1,8 @@
 ---
 setor: 2-identidade
 tipo: runbook
-resumo: O gabarito de voz que decide se um texto soa PAAPS, lido por todo agente antes de escrever qualquer peça
+aliases: [gabarito de voz, tom de voz, voz da marca]
+resumo: "O gabarito de voz que decide se um texto soa PAAPS, lido por todo agente antes de escrever qualquer peça"
 status: vivo
 atualizado: 2026-09-12
 ---

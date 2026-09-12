@@ -1,7 +1,8 @@
 ---
 setor: 2-identidade
 tipo: calibracao
-resumo: Copy se escreve com conectivos que amarram o raciocínio, nunca como lista justaposta de entregas
+aliases: [só então, lista sem nexo, conectivos]
+resumo: "Copy se escreve com conectivos que amarram o raciocínio, nunca como lista justaposta de entregas"
 status: vivo
 atualizado: 2026-09-12
 decidido-em: 2026-08-14

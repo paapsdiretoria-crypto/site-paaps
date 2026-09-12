@@ -1,7 +1,7 @@
 ---
 setor: 4-projetos
 tipo: conceito
-resumo: Os valores da ECOA escritos como comportamentos esperados na convivência, não como princípios abstratos
+resumo: "Os valores da ECOA escritos como comportamentos esperados na convivência, não como princípios abstratos"
 status: vivo
 atualizado: 2026-09-12
 ---

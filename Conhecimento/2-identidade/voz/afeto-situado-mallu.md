@@ -1,7 +1,8 @@
 ---
 setor: 2-identidade
 tipo: runbook
-resumo: Como começar uma peça quando o gancho afetivo não veio da Mallu, e o que continua sendo dela mesmo assim
+aliases: [afeto situado, gancho, passo 3]
+resumo: "Como começar uma peça quando o gancho afetivo não veio da Mallu, e o que continua sendo dela mesmo assim"
 status: vivo
 atualizado: 2026-09-12
 ---

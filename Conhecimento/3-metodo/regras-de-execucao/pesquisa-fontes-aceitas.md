@@ -1,7 +1,8 @@
 ---
 setor: 3-metodo
 tipo: runbook
-resumo: Quais fontes valem numa pesquisa da PAAPS, quais estão bloqueadas, e o ritual de 3 a 5 ciclos com parágrafo reflexivo antes de cada busca
+aliases: [fontes de pesquisa, SciELO, como pesquisar, fontes bloqueadas]
+resumo: "Quais fontes valem numa pesquisa da PAAPS, quais estão bloqueadas, e o ritual de 3 a 5 ciclos com parágrafo reflexivo antes de cada busca"
 status: vivo
 atualizado: 2026-09-12
 fontes: [CLAUDE.md]

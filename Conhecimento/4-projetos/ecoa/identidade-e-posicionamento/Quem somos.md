@@ -1,7 +1,7 @@
 ---
 setor: 4-projetos
 tipo: conceito
-resumo: O que é a ECOA: comunidade de quem acredita que saúde mental e cuidado coletivo são construções em comunidade, principalmente na rede pública
+resumo: "O que é a ECOA: comunidade de quem acredita que saúde mental e cuidado coletivo são construções em comunidade, principalmente na rede pública"
 status: vivo
 atualizado: 2026-09-12
 ---

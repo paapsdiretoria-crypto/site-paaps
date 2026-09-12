@@ -1,7 +1,8 @@
 ---
 setor: 6-sistema
 tipo: runbook
-resumo: Abrir o Claude Code sempre na raiz SITE PAAPS, porque fora dela não existe CLAUDE.md, skill, cofre nem auto-push
+aliases: [workspace, onde abrir o Claude, raiz do projeto]
+resumo: "Abrir o Claude Code sempre na raiz SITE PAAPS, porque fora dela não existe CLAUDE.md, skill, cofre nem auto-push"
 status: vivo
 atualizado: 2026-09-12
 fontes: [CLAUDE.md]

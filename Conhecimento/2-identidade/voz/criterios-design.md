@@ -1,7 +1,8 @@
 ---
 setor: 2-identidade
 tipo: runbook
-resumo: Lista de checagem verificável que o Crítico de Design aplica antes de qualquer peça fechar
+aliases: [checklist de design, crítico de design, anti-padrão visual]
+resumo: "Lista de checagem verificável que o Crítico de Design aplica antes de qualquer peça fechar"
 status: vivo
 atualizado: 2026-09-12
 ---

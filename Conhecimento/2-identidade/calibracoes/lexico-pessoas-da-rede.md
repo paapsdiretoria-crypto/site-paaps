@@ -1,7 +1,8 @@
 ---
 setor: 2-identidade
 tipo: calibracao
-resumo: Como nomear as pessoas da rede, com duas palavras banidas
+aliases: [colaborador, servidor público, como chamar as pessoas, léxico]
+resumo: "Como nomear as pessoas da rede, com duas palavras banidas"
 status: vivo
 atualizado: 2026-09-12
 fontes: [CLAUDE.md]

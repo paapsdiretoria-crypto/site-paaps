@@ -1,7 +1,8 @@
 ---
 setor: 2-identidade
 tipo: proibicao
-resumo: A lista fechada de expressões de coach e marketing que nunca entram em peça da PAAPS
+aliases: [coach, mindset, alta performance, gatilhos mentais]
+resumo: "A lista fechada de expressões de coach e marketing que nunca entram em peça da PAAPS"
 status: vivo
 atualizado: 2026-09-12
 fontes: [CLAUDE.md]

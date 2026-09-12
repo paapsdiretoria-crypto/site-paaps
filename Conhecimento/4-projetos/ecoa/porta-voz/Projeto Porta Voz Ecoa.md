@@ -1,7 +1,7 @@
 ---
 setor: 4-projetos
 tipo: conceito
-resumo: O Projeto Porta-Voz da ECOA como proposta de impacto positivo
+resumo: "O Projeto Porta-Voz da ECOA como proposta de impacto positivo"
 status: vivo
 atualizado: 2026-09-12
 ---

@@ -1,7 +1,8 @@
 ---
 setor: 6-sistema
 tipo: inventario
-resumo: Inventário do Notion GTO e o método real de produção destilado de 4 gravações, com a proposta de 9 agentes ainda sem decisão
+aliases: [GTO, Notion GTO]
+resumo: "Inventário do Notion GTO e o método real de produção destilado de 4 gravações, com a proposta de 9 agentes ainda sem decisão"
 status: vivo
 atualizado: 2026-09-12
 ---

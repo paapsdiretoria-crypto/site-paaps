@@ -1,7 +1,8 @@
 ---
 setor: 2-identidade
 tipo: calibracao
-resumo: A estrutura "não é X, é Y" é exceção rara de no máximo uma por peça, e só passa se o X negado for crença que alguém de verdade tem
+aliases: [estrutura binária, não é X é Y, negação]
+resumo: "A estrutura 'não é X, é Y' é exceção rara de no máximo uma por peça, e só passa se o X negado for crença que alguém de verdade tem"
 status: vivo
 atualizado: 2026-09-12
 decidido-em: 2026-07-30

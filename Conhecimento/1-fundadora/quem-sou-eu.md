@@ -1,7 +1,8 @@
 ---
 setor: 1-fundadora
 tipo: pessoa
-resumo: Quem é Mallu Vasconcellos, o que ela faz e por que hoje ela e a PAAPS são praticamente a mesma coisa
+aliases: [Mallu Vasconcellos, Maria Luiza Vasconcellos Barbosa, fundadora]
+resumo: "Quem é Mallu Vasconcellos, o que ela faz e por que hoje ela e a PAAPS são praticamente a mesma coisa"
 status: vivo
 atualizado: 2026-09-12
 fontes: [CLAUDE.md]

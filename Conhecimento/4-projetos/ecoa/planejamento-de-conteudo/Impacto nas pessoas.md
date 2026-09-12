@@ -1,7 +1,7 @@
 ---
 setor: 4-projetos
 tipo: conceito
-resumo: Que impacto a ECOA pretende causar na vida de quem participa dela
+resumo: "Que impacto a ECOA pretende causar na vida de quem participa dela"
 status: vivo
 atualizado: 2026-09-12
 ---

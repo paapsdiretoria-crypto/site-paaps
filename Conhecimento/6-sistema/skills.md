@@ -1,7 +1,8 @@
 ---
 setor: 6-sistema
 tipo: inventario
-resumo: As 50 skills de .claude/skills/, agrupadas por para que servem, e quais delas são do PAAPS e quais vieram de terceiros
+aliases: [índice de skills, catálogo de skills]
+resumo: "As 50 skills de .claude/skills/, agrupadas por para que servem, e quais delas são do PAAPS e quais vieram de terceiros"
 status: vivo
 atualizado: 2026-09-12
 fontes: [.claude/skills/]

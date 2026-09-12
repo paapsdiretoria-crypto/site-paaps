@@ -1,7 +1,8 @@
 ---
 setor: 2-identidade
 tipo: proibicao
-resumo: Valor real de segredo ou dado pessoal nunca pode ser escrito em arquivo que vai pro git
+aliases: [token, chave de API, senha, segredo, env]
+resumo: "Valor real de segredo ou dado pessoal nunca pode ser escrito em arquivo que vai pro git"
 status: vivo
 atualizado: 2026-09-12
 fontes: [CLAUDE.md, automacoes/.env.example]

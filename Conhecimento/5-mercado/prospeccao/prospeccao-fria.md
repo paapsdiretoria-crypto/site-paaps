@@ -1,7 +1,8 @@
 ---
 setor: 5-mercado
 tipo: runbook
-resumo: Como o sistema de prospecção fria opera: esteira de status, dedup de 60 dias, cadência e gate de aprovação
+aliases: [prospecção, carta fria, funil, cooldown de 60 dias]
+resumo: "Como o sistema de prospecção fria opera: esteira de status, dedup de 60 dias, cadência e gate de aprovação"
 status: vivo
 atualizado: 2026-09-12
 ---

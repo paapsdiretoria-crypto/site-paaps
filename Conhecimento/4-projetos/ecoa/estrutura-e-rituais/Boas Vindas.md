@@ -1,7 +1,7 @@
 ---
 setor: 4-projetos
 tipo: runbook
-resumo: Roteiro de boas-vindas da Mallu para quem entra na ECOA
+resumo: "Roteiro de boas-vindas da Mallu para quem entra na ECOA"
 status: vivo
 atualizado: 2026-09-12
 ---

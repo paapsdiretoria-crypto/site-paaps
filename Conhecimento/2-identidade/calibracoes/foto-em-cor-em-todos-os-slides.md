@@ -1,7 +1,8 @@
 ---
 setor: 2-identidade
 tipo: calibracao
-resumo: Duas leis do carrossel que revogaram regras antigas: foto em todos os slides, e foto em cor
+aliases: [preto e branco, foto no slide, foto em cor]
+resumo: "Duas leis do carrossel que revogaram regras antigas: foto em todos os slides, e foto em cor"
 status: vivo
 atualizado: 2026-09-12
 fontes: [CLAUDE.md]

@@ -1,7 +1,8 @@
 ---
 setor: 1-fundadora
 tipo: pessoa
-resumo: Mallu é formanda em psicologia e o CRP sai em fevereiro, e até lá "psicóloga" não pode ser usado em peça pública
+aliases: [CRP, psicóloga, formanda, registro profissional]
+resumo: "Mallu é formanda em psicologia e o CRP sai em fevereiro, e até lá 'psicóloga' não pode ser usado em peça pública"
 status: vivo
 atualizado: 2026-09-12
 decidido-em: 2026-08-22

@@ -1,7 +1,8 @@
 ---
 setor: 2-identidade
 tipo: proibicao
-resumo: O travessão grande é proibido em qualquer saída da PAAPS, sem exceção de contexto
+aliases: [em dash, travessão, travessão grande]
+resumo: "O travessão grande é proibido em qualquer saída da PAAPS, sem exceção de contexto"
 status: vivo
 atualizado: 2026-09-12
 decidido-em: 2026-07-09

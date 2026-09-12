@@ -1,7 +1,8 @@
 ---
 setor: 3-metodo
 tipo: conceito
-resumo: A linha epistemológica da PAAPS é estrutural e sistêmica, e isso decide toda análise e todo conteúdo
+aliases: [estrutural e sistêmica, epistemologia, o conteúdo não convence]
+resumo: "A linha epistemológica da PAAPS é estrutural e sistêmica, e isso decide toda análise e todo conteúdo"
 status: vivo
 atualizado: 2026-09-12
 fontes: [CLAUDE.md]

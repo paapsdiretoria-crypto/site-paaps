@@ -1,7 +1,8 @@
 ---
 setor: 2-identidade
 tipo: calibracao
-resumo: A estrutura de três níveis da equipe semente e a ordem exata das palavras de cada descritivo, válida para site, proposta, edital e apresentação
+aliases: [equipe semente, time, founders, slide de equipe]
+resumo: "A estrutura de três níveis da equipe semente e a ordem exata das palavras de cada descritivo, válida para site, proposta, edital e apresentação"
 status: vivo
 atualizado: 2026-09-12
 decidido-em: 2026-08-22

@@ -1,7 +1,7 @@
 ---
 setor: 4-projetos
 tipo: decisao
-resumo: Ata da reunião de planejamento da ECOA de 22/07/2026
+resumo: "Ata da reunião de planejamento da ECOA de 22/07/2026"
 status: vivo
 atualizado: 2026-09-12
 ---

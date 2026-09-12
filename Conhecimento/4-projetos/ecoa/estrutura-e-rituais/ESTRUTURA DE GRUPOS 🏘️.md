@@ -1,7 +1,7 @@
 ---
 setor: 4-projetos
 tipo: runbook
-resumo: Como os grupos da ECOA se dividem entre ECOA Psi Social e Rede PAAPS
+resumo: "Como os grupos da ECOA se dividem entre ECOA Psi Social e Rede PAAPS"
 status: vivo
 atualizado: 2026-09-12
 ---

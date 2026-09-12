@@ -1,7 +1,7 @@
 ---
 setor: 4-projetos
 tipo: conceito
-resumo: Quem a ECOA quer alcançar: pessoas que trabalham com cuidado, direta ou indiretamente
+resumo: "Quem a ECOA quer alcançar: pessoas que trabalham com cuidado, direta ou indiretamente"
 status: vivo
 atualizado: 2026-09-12
 ---

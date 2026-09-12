@@ -1,7 +1,8 @@
 ---
 setor: 2-identidade
 tipo: pessoa
-resumo: Gustavo Faria é o especialista em comunidade da PAAPS, e o descritivo de prospecção saiu de vez
+aliases: [Gustavo, community led growth]
+resumo: "Gustavo Faria é o especialista em comunidade da PAAPS, e o descritivo de prospecção saiu de vez"
 status: vivo
 atualizado: 2026-09-12
 fontes: [CLAUDE.md]

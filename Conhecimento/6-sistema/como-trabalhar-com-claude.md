@@ -1,7 +1,8 @@
 ---
 setor: 6-sistema
 tipo: resumo-de-fonte
-resumo: Erros comuns de delegação ao Claude e como corrigir, com o Framework 4D e o loop de delegação e diligência
+aliases: [Framework 4D, delegação, diligência]
+resumo: "Erros comuns de delegação ao Claude e como corrigir, com o Framework 4D e o loop de delegação e diligência"
 status: vivo
 atualizado: 2026-09-12
 ---

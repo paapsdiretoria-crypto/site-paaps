@@ -1,7 +1,8 @@
 ---
 setor: 5-mercado
 tipo: conceito
-resumo: O ativo não é o tamanho do mercado, é a capilaridade do SUS, que chega a 5.570 municípios e é a maior malha de cuidado já construída
+aliases: [SUS, capilaridade, 5570 municípios]
+resumo: "O ativo não é o tamanho do mercado, é a capilaridade do SUS, que chega a 5.570 municípios e é a maior malha de cuidado já construída"
 status: vivo
 atualizado: 2026-09-12
 decidido-em: 2026-08-14

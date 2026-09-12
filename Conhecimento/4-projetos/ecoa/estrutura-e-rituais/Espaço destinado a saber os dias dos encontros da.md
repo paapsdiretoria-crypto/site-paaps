@@ -1,7 +1,7 @@
 ---
 setor: 4-projetos
 tipo: inventario
-resumo: Não existe nenhum lugar no Notion que responda em que dia é o próximo encontro da ECOA
+resumo: "Não existe nenhum lugar no Notion que responda em que dia é o próximo encontro da ECOA"
 status: pendente
 atualizado: 2026-09-12
 fontes: [https://app.notion.com/p/22244cb52e0081379597c2f0f1503182, https://app.notion.com/p/2f844cb52e00803ab433dd44647064bd, https://app.notion.com/p/36344cb52e0080d0be73ed59828f09dd]

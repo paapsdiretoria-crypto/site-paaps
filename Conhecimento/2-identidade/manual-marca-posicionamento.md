@@ -1,7 +1,8 @@
 ---
 setor: 2-identidade
 tipo: resumo-de-fonte
-resumo: Manual de marca e posicionamento da PAAPS, convertido do DOCX institucional original
+aliases: [manual de marca, posicionamento]
+resumo: "Manual de marca e posicionamento da PAAPS, convertido do DOCX institucional original"
 status: vivo
 atualizado: 2026-09-12
 ---

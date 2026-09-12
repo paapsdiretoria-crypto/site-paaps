@@ -1,7 +1,8 @@
 ---
 setor: 6-sistema
 tipo: sintese
-resumo: A arquitetura de agentes em árvore de dois troncos que vale hoje, com roster de agente por arquivo e status
+aliases: [árvore de dois troncos, dois troncos, arquitetura de agentes]
+resumo: "A arquitetura de agentes em árvore de dois troncos que vale hoje, com roster de agente por arquivo e status"
 status: vivo
 atualizado: 2026-09-12
 ---

@@ -1,7 +1,8 @@
 ---
 setor: 2-identidade
 tipo: norma
-resumo: O PAAPS é ativo intangível pré-existente da DIGGING e não pode ser alienado em licitação, só licenciado
+aliases: [GovTech, licenciamento, ativo intangível, cessão de uso]
+resumo: "O PAAPS é ativo intangível pré-existente da DIGGING e não pode ser alienado em licitação, só licenciado"
 status: vivo
 atualizado: 2026-09-12
 fontes: [CLAUDE.md, Conhecimento/2-identidade/juridico/ficha-juridica-paaps.md]

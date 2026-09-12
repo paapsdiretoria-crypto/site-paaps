@@ -1,7 +1,7 @@
 ---
 setor: 4-projetos
 tipo: conceito
-resumo: Os acordos de convivência que mantêm a ECOA um espaço seguro para compartilhar dúvida e vulnerabilidade
+resumo: "Os acordos de convivência que mantêm a ECOA um espaço seguro para compartilhar dúvida e vulnerabilidade"
 status: vivo
 atualizado: 2026-09-12
 ---

@@ -1,7 +1,8 @@
 ---
 setor: 3-metodo
 tipo: conceito
-resumo: O que a PAAPS entrega e como explica cada frente, ditado pela Mallu em 02/08/2026
+aliases: [metodologia, o que a PAAPS vende, frentes de ação]
+resumo: "O que a PAAPS entrega e como explica cada frente, ditado pela Mallu em 02/08/2026"
 status: vivo
 atualizado: 2026-09-12
 ---

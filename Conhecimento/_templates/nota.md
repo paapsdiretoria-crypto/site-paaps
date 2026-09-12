@@ -1,7 +1,8 @@
 ---
 setor: 
 tipo: 
-resumo: 
+aliases: []
+resumo: ""
 status: vivo
 atualizado: 
 fontes: []
@@ -39,9 +40,16 @@ Data da decisão e quem decidiu, quando for calibração da Mallu.
 > `evidencia` · `case` · `perfil` · `runbook` · `decisao` · `inventario` ·
 > `resumo-de-fonte` · `sintese` · `comparacao`
 >
+> `aliases` : os outros nomes pelos quais alguém procura esta coisa. `[NR-1, NR1, risco
+> psicossocial]`. Serve duas vezes: no Obsidian faz `[[NR-1]]` resolver mesmo não sendo o
+> nome do arquivo, e na leitura por LLM é o termo que a pessoa realmente digita. Só
+> quando o conceito tem mais de um nome; deixar `[]` quando não tiver.
+>
 > `resumo` : uma frase dizendo o que esta nota responde. **Teste: se o resumo só fica
 > verdadeiro usando um "e", são duas notas.** É este campo que permite ao Claude decidir
-> se abre o arquivo sem abrir o arquivo.
+> se abre o arquivo sem abrir o arquivo. **Sempre entre aspas duplas:** dois-pontos solto
+> no meio de um valor quebra o YAML inteiro, e a nota perde setor, tipo e status de uma
+> vez, em silêncio.
 >
 > `status` : `vivo` (vale hoje) · `historico` (foi superado, fica registrado com o
 > motivo) · `pendente` (falta material)

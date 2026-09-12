@@ -1,7 +1,8 @@
 ---
 setor: 6-sistema
 tipo: runbook
-resumo: Procedimento validado para navegar de verdade no navegador via MCP, com os erros conhecidos e a solução de cada um
+aliases: [MCP, Playwright, navegação real]
+resumo: "Procedimento validado para navegar de verdade no navegador via MCP, com os erros conhecidos e a solução de cada um"
 status: vivo
 atualizado: 2026-09-12
 ---

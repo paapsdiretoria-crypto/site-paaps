@@ -1,7 +1,8 @@
 ---
 setor: 2-identidade
 tipo: inventario
-resumo: Onde achar fotografia documental pública de uso livre, a partir do acervo de Radilson Carlos Gomes
+aliases: [PhotoBank, Radilson, banco de fotos, fotografia documental]
+resumo: "Onde achar fotografia documental pública de uso livre, a partir do acervo de Radilson Carlos Gomes"
 status: vivo
 atualizado: 2026-09-12
 ---

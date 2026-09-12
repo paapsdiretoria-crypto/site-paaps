@@ -1,7 +1,7 @@
 ---
 setor: 4-projetos
 tipo: inventario
-resumo: A database Membros do Notion é a lista de quem está na ECOA, e ela nunca é copiada para este repositório
+resumo: "A database Membros do Notion é a lista de quem está na ECOA, e ela nunca é copiada para este repositório"
 status: vivo
 atualizado: 2026-09-12
 fontes: [https://app.notion.com/p/39044cb52e0080e38379e834c77565e4, https://app.notion.com/p/89d44cb52e0082c29bfd811655472e4c]

@@ -1,7 +1,8 @@
 ---
 setor: 1-fundadora
 tipo: perfil
-resumo: A campanha de e-mail da pesquisa de TCC da Mallu na rede socioassistencial de BH, separada de propósito do funil comercial da PAAPS
+aliases: [TCC, PUC Minas, pesquisa acadêmica]
+resumo: "A campanha de e-mail da pesquisa de TCC da Mallu na rede socioassistencial de BH, separada de propósito do funil comercial da PAAPS"
 status: vivo
 atualizado: 2026-09-12
 ---

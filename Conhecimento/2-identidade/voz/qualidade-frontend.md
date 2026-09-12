@@ -1,7 +1,8 @@
 ---
 setor: 2-identidade
 tipo: conceito
-resumo: Princípios de design de alta qualidade escritos de forma agnóstica de meio, válidos tanto para HTML quanto para peça no Canva
+aliases: [princípios de design, design de alta qualidade]
+resumo: "Princípios de design de alta qualidade escritos de forma agnóstica de meio, válidos tanto para HTML quanto para peça no Canva"
 status: vivo
 atualizado: 2026-09-12
 ---

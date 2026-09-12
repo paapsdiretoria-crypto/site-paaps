@@ -1,7 +1,8 @@
 ---
 setor: 6-sistema
 tipo: resumo-de-fonte
-resumo: O padrão LLM Wiki de Karpathy nas palavras do autor, e o que dele ainda não aplicamos aqui
+aliases: [LLM Wiki, Karpathy, segundo cérebro, raw wiki schema]
+resumo: "O padrão LLM Wiki de Karpathy nas palavras do autor, e o que dele ainda não aplicamos aqui"
 status: vivo
 atualizado: 2026-09-12
 ---
@@ -22,7 +23,7 @@ compilado uma vez e mantido atualizado, não redescoberto a cada pergunta.
 
 | Camada do padrão original | O que é | Onde vive neste cofre |
 |---|---|---|
-| Raw sources | coleção de origem, imutável, a IA só lê | `Arquivos/` |
+| Raw sources | coleção de origem, imutável, a IA só lê | `Conhecimento/Arquivos/` |
 | The wiki | markdown gerado pela IA: resumo, entidade, conceito, síntese | `Conhecimento/` |
 | The schema | documento de regras (`CLAUDE.md`), como o wiki é estruturado e o que fazer em cada operação | `CLAUDE.md` raiz, seção "Segundo Cérebro" |
 
@@ -43,20 +44,43 @@ desvio dele.
 
 ## index.md e log.md no padrão original
 
-`index.md` é sobre conteúdo, `log.md` é sobre tempo. O padrão recomenda os dois. Aqui
-adaptamos: `Conhecimento/index.md` existe e cumpre o papel de conteúdo. O papel de
-`log.md` (registro cronológico do que mudou e quando) já era coberto por `sessoes/`
-antes mesmo desta imersão existir, então não duplicamos um `log.md` novo dentro de
-`Conhecimento/`, o log de sessão automático (hook `Stop`) já faz esse trabalho.
+`index.md` é sobre conteúdo, `log.md` é sobre tempo. O padrão recomenda os dois, e aqui
+os dois existem: [[index]] e [[log]].
 
-## Duas dicas do padrão que ainda não aplicamos aqui
+> **Correção de 12/09/2026.** Esta nota dizia antes que `sessoes/` já cumpria o papel do
+> `log.md` e que por isso ele não precisava existir. Estava errado: `sessoes/` registra
+> qual arquivo o git viu mudar no dia, não o que virou conhecimento. São coisas
+> diferentes, e o `log.md` foi criado.
 
-- **Ferramenta de busca (`qmd` ou script próprio):** o padrão diz que o índice sozinho
-  funciba bem até a casa de 100 fontes e algumas centenas de páginas, e é onde estamos
-  hoje. Vale revisitar se `Conhecimento/` crescer muito além disso.
-- **Frontmatter YAML + Dataview:** o padrão sugere marcar páginas com data e
-  metadado pra gerar tabela dinâmica no Obsidian. Nenhuma página de `Conhecimento/`
-  usa frontmatter hoje. Não é urgente, mas é um ganho barato se o volume crescer.
+## Os números do padrão, e o que eles NÃO significam
+
+O gist fala em "~100 sources, ~hundreds of pages", e o artigo em "under ~100K words".
+**Nenhum dos dois é limite do Obsidian**, que roda com dezenas de milhares de notas.
+
+| O número | Do que ele fala mesmo | Onde estamos |
+|---|---|---|
+| ~100 fontes, centenas de notas | até onde o `index.md` sozinho basta para achar a nota certa, sem instalar ferramenta de busca | 6 fontes, 95 notas |
+| ~100 mil palavras | até onde dá para colar o cofre inteiro numa janela de chat. Não é o nosso caso: o Claude Code lê do disco, guiado pelo índice | 61,5 mil palavras |
+
+O que degrada primeiro não é o Obsidian nem o tamanho do cofre: é a capacidade de achar
+a nota certa a partir do índice. Por isso o `resumo` de uma linha e os `aliases` são a
+parte mais importante do cabeçalho.
+
+## O que do padrão ainda não aplicamos aqui
+
+- **Ferramenta de busca (`qmd` ou script próprio):** só faz sentido quando o índice
+  sozinho começar a errar. Longe disso.
+- **Plugin Dataview:** o frontmatter já está em todas as notas desde 12/09/2026, então a
+  tabela dinâmica é só instalar o plugin quando alguém quiser. O dado já existe.
+
+## Aliases: a dica do artigo que aplicamos em 12/09/2026
+
+> *"Add a brief alias line if a concept has multiple names."*
+
+69 notas ganharam `aliases` no cabeçalho. Serve para duas coisas ao mesmo tempo: no
+Obsidian, `[[em dash]]` e `[[NR-1]]` passam a resolver para a nota certa mesmo não sendo
+o nome do arquivo; e na leitura por LLM, o alias é o termo que alguém realmente digita
+quando procura aquilo.
 
 ## Por que o padrão funciona, na formulação do próprio autor
 

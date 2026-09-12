@@ -1,7 +1,8 @@
 ---
 setor: 6-sistema
 tipo: runbook
-resumo: Os dois hooks do evento Stop, o que cada um grava, e por que eles usam variável de ambiente em vez de caminho fixo
+aliases: [hook, auto-push, evento Stop, log de sessão]
+resumo: "Os dois hooks do evento Stop, o que cada um grava, e por que eles usam variável de ambiente em vez de caminho fixo"
 status: vivo
 atualizado: 2026-09-12
 fontes: [.claude/settings.json]

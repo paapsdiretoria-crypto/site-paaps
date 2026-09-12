@@ -1,7 +1,7 @@
 ---
 setor: 4-projetos
 tipo: runbook
-resumo: Onde está o roteiro do vídeo de boas-vindas da ECOA, já que a página de mesmo nome no Notion está em branco
+resumo: "Onde está o roteiro do vídeo de boas-vindas da ECOA, já que a página de mesmo nome no Notion está em branco"
 status: vivo
 atualizado: 2026-09-12
 fontes: [https://app.notion.com/p/32e44cb52e0082ab9a9481d7b5113a42, https://app.notion.com/p/39044cb52e0080778c83d949f925f803]

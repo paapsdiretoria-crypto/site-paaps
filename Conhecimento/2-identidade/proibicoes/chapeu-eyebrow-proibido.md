@@ -1,7 +1,8 @@
 ---
 setor: 2-identidade
 tipo: proibicao
-resumo: A linha curta em caixa alta espaçada acima de um título é banida em qualquer peça, e o rótulo bom vira título grande em vez de sumir
+aliases: [chapéu, eyebrow, kicker, label-secao, caixa alta espaçada]
+resumo: "A linha curta em caixa alta espaçada acima de um título é banida em qualquer peça, e o rótulo bom vira título grande em vez de sumir"
 status: vivo
 atualizado: 2026-09-12
 decidido-em: 2026-08-02

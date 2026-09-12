@@ -1,7 +1,8 @@
 ---
 setor: 0-raiz
 tipo: inventario
-resumo: Linha do tempo append-only do que entrou no cofre, o que virou nota e o que a auditoria achou
+aliases: [linha do tempo, histórico do cofre]
+resumo: "Linha do tempo append-only do que entrou no cofre, o que virou nota e o que a auditoria achou"
 status: vivo
 atualizado: 2026-09-12
 ---
@@ -85,3 +86,21 @@ arquivos continuam em `.claude/`. Três defeitos achados na leitura: `critico-de
 `aplicador-visual` liam `nucleo-comum/`, pasta extinta (corrigido); três agentes estão
 incompletos e dizem isso na própria descrição; `precificacao-paaps/` é pasta vazia sem
 `SKILL.md`, então a skill não carrega.
+
+## [2026-09-12] estrutura | Aliases e cabeçalho YAML válido em todas as notas
+
+69 notas ganharam `aliases`, a dica de terminologia consistente do padrão:
+*"Add a brief alias line if a concept has multiple names."* Agora `[[NR-1]]`,
+`[[em dash]]`, `[[GovTech]]`, `[[colaborador]]` e `[[SUS]]` resolvem para a nota certa
+mesmo não sendo o nome do arquivo.
+
+**Defeito achado na validação:** sete cabeçalhos tinham YAML quebrado, porque o `resumo`
+carregava dois-pontos no meio do valor. Cabeçalho quebrado não falha com erro: o Obsidian
+simplesmente ignora o bloco inteiro, e a nota perde setor, tipo e status de uma vez, em
+silêncio, ficando sem cor no grafo. Os 95 resumos passaram a ser escritos entre aspas, e
+a regra entrou no `CLAUDE.md` e no molde de nota.
+
+Corrigido junto em [[padrao-llm-wiki]]: a nota dizia que `sessoes/` dispensava o
+`log.md`, o que estava errado, e descrevia o número "~100" do gist de forma imprecisa,
+como se fosse limite do Obsidian. Não é: é o ponto em que o índice sozinho deixa de
+bastar para achar a nota certa. Estamos em 6 fontes, 95 notas, 61,5 mil palavras.

@@ -1,7 +1,8 @@
 ---
 setor: 2-identidade
 tipo: conceito
-resumo: Definição institucional da PAAPS para consulta interna, escrita depois que a Mallu recusou a mesma explicação como copy de site
+aliases: [PAAPS, o que é a PAAPS, definição institucional]
+resumo: "Definição institucional da PAAPS para consulta interna, escrita depois que a Mallu recusou a mesma explicação como copy de site"
 status: vivo
 atualizado: 2026-09-12
 ---

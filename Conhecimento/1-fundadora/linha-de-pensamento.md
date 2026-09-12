@@ -1,7 +1,8 @@
 ---
 setor: 1-fundadora
 tipo: conceito
-resumo: A linha de pensamento da Mallu: psicologia além do consultório e do RH, psicologia suleada, impacto sistêmico
+aliases: [psicologia suleada, além do consultório, impacto sistêmico]
+resumo: "A linha de pensamento da Mallu: psicologia além do consultório e do RH, psicologia suleada, impacto sistêmico"
 status: vivo
 atualizado: 2026-09-12
 fontes: [CLAUDE.md]

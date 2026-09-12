@@ -1,7 +1,8 @@
 ---
 setor: 2-identidade
 tipo: norma
-resumo: A DIGGING tem composição societária 99% feminina e capital de R$ 95.400 integralizado, com administração isolada ou conjunta das duas
+aliases: [sócias, capital social, quadro societário]
+resumo: "A DIGGING tem composição societária 99% feminina e capital de R$ 95.400 integralizado, com administração isolada ou conjunta das duas"
 status: vivo
 atualizado: 2026-09-12
 fontes: [CLAUDE.md]

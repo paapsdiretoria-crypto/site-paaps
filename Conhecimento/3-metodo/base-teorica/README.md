@@ -1,7 +1,8 @@
 ---
 setor: 3-metodo
 tipo: conceito
-resumo: Base teórica destilada dos fichamentos da Mallu em movimentos de raciocínio utilizáveis, hoje ancorada na Psicologia Sócio-Histórica
+aliases: [Tecelã, base teórica, Psicologia Sócio-Histórica, fichamentos]
+resumo: "Base teórica destilada dos fichamentos da Mallu em movimentos de raciocínio utilizáveis, hoje ancorada na Psicologia Sócio-Histórica"
 status: vivo
 atualizado: 2026-09-12
 ---

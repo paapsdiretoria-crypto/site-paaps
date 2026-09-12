@@ -1,7 +1,8 @@
 ---
 setor: 2-identidade
 tipo: calibracao
-resumo: Legibilidade é valor de marca, então entre cortar texto e diminuir a letra, corta-se texto
+aliases: [legibilidade, tamanho de fonte, letra pequena]
+resumo: "Legibilidade é valor de marca, então entre cortar texto e diminuir a letra, corta-se texto"
 status: vivo
 atualizado: 2026-09-12
 decidido-em: 2026-08-23

@@ -1,7 +1,8 @@
 ---
 setor: 2-identidade
 tipo: pessoa
-resumo: Luiz Sérgio Barbosa é o consultor financeiro da PAAPS, ex-diretor financeiro da FEBRABAN, e o nome se escreve Luiz com z
+aliases: [Luiz Sérgio, FEBRABAN, consultor financeiro]
+resumo: "Luiz Sérgio Barbosa é o consultor financeiro da PAAPS, ex-diretor financeiro da FEBRABAN, e o nome se escreve Luiz com z"
 status: vivo
 atualizado: 2026-09-12
 fontes: [CLAUDE.md]

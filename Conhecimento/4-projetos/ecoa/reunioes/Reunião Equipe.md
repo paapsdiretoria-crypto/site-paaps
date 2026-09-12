@@ -1,7 +1,7 @@
 ---
 setor: 4-projetos
 tipo: decisao
-resumo: Ata da reunião de equipe da ECOA de 18/05/2026
+resumo: "Ata da reunião de equipe da ECOA de 18/05/2026"
 status: vivo
 atualizado: 2026-09-12
 ---

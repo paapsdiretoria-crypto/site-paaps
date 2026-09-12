@@ -1,7 +1,8 @@
 ---
 setor: 3-metodo
 tipo: norma
-resumo: Falar de psicologia é terreno regulado pelo CFP, e isso limita o que pode ser escrito e por quem
+aliases: [CFP, CRP, conselho de psicologia, registro profissional]
+resumo: "Falar de psicologia é terreno regulado pelo CFP, e isso limita o que pode ser escrito e por quem"
 status: vivo
 atualizado: 2026-09-12
 fontes: [CLAUDE.md]

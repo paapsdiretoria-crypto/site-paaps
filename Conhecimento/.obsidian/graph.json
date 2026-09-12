@@ -1,5 +1,4 @@
 {
-  "_comentario": "Grupos de cor do grafo, um por setor. O Obsidian sobrescreve .obsidian/graph.json enquanto está aberto, então esta é a cópia versionada. Para aplicar: FECHE o Obsidian e rode, da raiz do projeto: cp Conhecimento/_templates/graph-cores.json Conhecimento/.obsidian/graph.json",
   "collapse-filter": true,
   "search": "",
   "showTags": false,
@@ -8,14 +7,62 @@
   "showOrphans": true,
   "collapse-color-groups": false,
   "colorGroups": [
-    { "query": "path:\"1-fundadora\"", "color": { "a": 1, "rgb": 11032055 } },
-    { "query": "path:\"2-identidade\"", "color": { "a": 1, "rgb": 15381256 } },
-    { "query": "path:\"3-metodo\"", "color": { "a": 1, "rgb": 2278750 } },
-    { "query": "path:\"4-projetos\"", "color": { "a": 1, "rgb": 3900150 } },
-    { "query": "path:\"5-mercado\"", "color": { "a": 1, "rgb": 16347926 } },
-    { "query": "path:\"6-sistema\"", "color": { "a": 1, "rgb": 9741240 } },
-    { "query": "path:\"Arquivos\"", "color": { "a": 1, "rgb": 6710886 } },
-    { "query": "[\"status\":\"pendente\"]", "color": { "a": 1, "rgb": 14431557 } }
+    {
+      "query": "path:\"1-fundadora\"",
+      "color": {
+        "a": 1,
+        "rgb": 11032055
+      }
+    },
+    {
+      "query": "path:\"2-identidade\"",
+      "color": {
+        "a": 1,
+        "rgb": 15381256
+      }
+    },
+    {
+      "query": "path:\"3-metodo\"",
+      "color": {
+        "a": 1,
+        "rgb": 2278750
+      }
+    },
+    {
+      "query": "path:\"4-projetos\"",
+      "color": {
+        "a": 1,
+        "rgb": 3900150
+      }
+    },
+    {
+      "query": "path:\"5-mercado\"",
+      "color": {
+        "a": 1,
+        "rgb": 16347926
+      }
+    },
+    {
+      "query": "path:\"6-sistema\"",
+      "color": {
+        "a": 1,
+        "rgb": 9741240
+      }
+    },
+    {
+      "query": "path:\"Arquivos\"",
+      "color": {
+        "a": 1,
+        "rgb": 6710886
+      }
+    },
+    {
+      "query": "[\"status\":\"pendente\"]",
+      "color": {
+        "a": 1,
+        "rgb": 14431557
+      }
+    }
   ],
   "collapse-display": true,
   "showArrow": false,
@@ -27,6 +74,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.95,
+  "scale": 0.7144656843875389,
   "close": true
 }

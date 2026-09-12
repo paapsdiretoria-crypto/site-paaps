@@ -1,7 +1,8 @@
 ---
 setor: 2-identidade
 tipo: proibicao
-resumo: Vocabulário clínico sem contexto relacional e sistêmico não entra em peça da PAAPS
+aliases: [patologizante, diagnóstico, linguagem clínica]
+resumo: "Vocabulário clínico sem contexto relacional e sistêmico não entra em peça da PAAPS"
 status: vivo
 atualizado: 2026-09-12
 fontes: [CLAUDE.md]

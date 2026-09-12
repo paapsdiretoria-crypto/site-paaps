@@ -1,7 +1,8 @@
 ---
 setor: 0-raiz
 tipo: inventario
-resumo: Todo primeiro nível de SITE PAAPS catalogado, inclusive o que nunca vai virar nota, com o backlog do que falta compilar
+aliases: [mapa, mapa do repositório, backlog de compilação]
+resumo: "Todo primeiro nível de SITE PAAPS catalogado, inclusive o que nunca vai virar nota, com o backlog do que falta compilar"
 status: vivo
 atualizado: 2026-09-12
 ---

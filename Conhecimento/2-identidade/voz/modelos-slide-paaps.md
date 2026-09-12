@@ -1,7 +1,8 @@
 ---
 setor: 2-identidade
 tipo: inventario
-resumo: Catálogo dos 8 modelos de slide e das 8 leis universais do @paaps.brasil, lidos de dentro de peças já publicadas
+aliases: [8 modelos de slide, 8 leis, catálogo de slide]
+resumo: "Catálogo dos 8 modelos de slide e das 8 leis universais do @paaps.brasil, lidos de dentro de peças já publicadas"
 status: vivo
 atualizado: 2026-09-12
 ---

@@ -1,7 +1,8 @@
 ---
 setor: 2-identidade
 tipo: proibicao
-resumo: Os marcadores de texto gerado por máquina que a Mallu reconhece de longe e recusa
+aliases: [padrão de IA, AI-ism, cara de IA, texto de máquina]
+resumo: "Os marcadores de texto gerado por máquina que a Mallu reconhece de longe e recusa"
 status: vivo
 atualizado: 2026-09-12
 fontes: [CLAUDE.md]

@@ -1,7 +1,8 @@
 ---
 setor: 2-identidade
 tipo: runbook
-resumo: Os três modos visuais do Instagram PAAPS e as regras fotográficas que valem em todos eles
+aliases: [3 modos visuais, modos visuais, regras fotográficas]
+resumo: "Os três modos visuais do Instagram PAAPS e as regras fotográficas que valem em todos eles"
 status: vivo
 atualizado: 2026-09-12
 ---

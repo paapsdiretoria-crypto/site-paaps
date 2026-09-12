@@ -1,7 +1,8 @@
 ---
 setor: 2-identidade
 tipo: norma
-resumo: A pessoa jurídica que assina contrato e emite nota é a DIGGING; o PAAPS é a metodologia proprietária dela, e confundir os dois em edital é erro grave
+aliases: [DIGGING, razão social, CNPJ, pessoa jurídica]
+resumo: "A pessoa jurídica que assina contrato e emite nota é a DIGGING; o PAAPS é a metodologia proprietária dela, e confundir os dois em edital é erro grave"
 status: vivo
 atualizado: 2026-09-12
 fontes: [CLAUDE.md, Conhecimento/2-identidade/juridico/ficha-juridica-paaps.md]

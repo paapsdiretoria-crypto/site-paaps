@@ -1,7 +1,7 @@
 ---
 setor: 4-projetos
 tipo: runbook
-resumo: Como a ECOA escreve e como chama as pessoas dela, incluindo os emojis autorizados
+resumo: "Como a ECOA escreve e como chama as pessoas dela, incluindo os emojis autorizados"
 status: vivo
 atualizado: 2026-09-12
 ---

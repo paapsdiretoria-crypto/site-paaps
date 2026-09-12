@@ -1,7 +1,7 @@
 ---
 setor: 4-projetos
 tipo: decisao
-resumo: Canvas de comunidade construído na reunião de 15/07/2026
+resumo: "Canvas de comunidade construído na reunião de 15/07/2026"
 status: vivo
 atualizado: 2026-09-12
 ---

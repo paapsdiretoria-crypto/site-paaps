@@ -1,7 +1,8 @@
 ---
 setor: 2-identidade
 tipo: proibicao
-resumo: Oração de fecho que anuncia importância sem nomear a coisa é cortada, e sai junto quando o referente sai
+aliases: [fecho de efeito, frase de efeito, fecho vazio]
+resumo: "Oração de fecho que anuncia importância sem nomear a coisa é cortada, e sai junto quando o referente sai"
 status: vivo
 atualizado: 2026-09-12
 decidido-em: 2026-08-23

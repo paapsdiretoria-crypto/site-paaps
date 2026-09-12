@@ -1,7 +1,8 @@
 ---
 setor: 6-sistema
 tipo: inventario
-resumo: Os 23 agentes de .claude/agents/, o que cada um faz e qual nota do cofre ele lê antes de executar
+aliases: [índice de agentes, subagentes, roster]
+resumo: "Os 23 agentes de .claude/agents/, o que cada um faz e qual nota do cofre ele lê antes de executar"
 status: vivo
 atualizado: 2026-09-12
 fontes: [.claude/agents/]

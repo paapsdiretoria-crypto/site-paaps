@@ -1,7 +1,7 @@
 ---
 setor: 4-projetos
 tipo: inventario
-resumo: Comunidades de referência estudadas para estruturar a ECOA, começando por Microsolidarity
+resumo: "Comunidades de referência estudadas para estruturar a ECOA, começando por Microsolidarity"
 status: vivo
 atualizado: 2026-09-12
 ---

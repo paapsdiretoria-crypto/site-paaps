@@ -1,7 +1,8 @@
 ---
 setor: 0-raiz
 tipo: inventario
-resumo: Catálogo de toda nota do cofre, organizado nos 6 setores. Porta de entrada do Segundo Cérebro
+aliases: [índice, índice primário, porta de entrada]
+resumo: "Catálogo de toda nota do cofre, organizado nos 6 setores. Porta de entrada do Segundo Cérebro"
 status: vivo
 atualizado: 2026-09-12
 ---

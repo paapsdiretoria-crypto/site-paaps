@@ -1,7 +1,8 @@
 ---
 setor: 5-mercado
 tipo: resumo-de-fonte
-resumo: Pesquisa de mercado da PAAPS, convertida do DOCX institucional original
+aliases: [pesquisa de mercado]
+resumo: "Pesquisa de mercado da PAAPS, convertida do DOCX institucional original"
 status: vivo
 atualizado: 2026-09-12
 ---

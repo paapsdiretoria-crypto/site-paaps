@@ -1,7 +1,7 @@
 ---
 setor: 4-projetos
 tipo: inventario
-resumo: O que existe na página raiz da ECOA no Notion, item por item, e qual parte está viva e qual está vazia
+resumo: "O que existe na página raiz da ECOA no Notion, item por item, e qual parte está viva e qual está vazia"
 status: vivo
 atualizado: 2026-09-12
 fontes: [https://app.notion.com/p/22244cb52e0081379597c2f0f1503182]

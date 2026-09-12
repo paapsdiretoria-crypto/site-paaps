@@ -1,7 +1,8 @@
 ---
 setor: 2-identidade
 tipo: calibracao
-resumo: Toda alegação de tendência numérica ou social passa pela régua de verificação, inclusive dentro de copy e pitch
+aliases: [verificar tendência, checar dado, alegação numérica]
+resumo: "Toda alegação de tendência numérica ou social passa pela régua de verificação, inclusive dentro de copy e pitch"
 status: vivo
 atualizado: 2026-09-12
 decidido-em: 2026-08-17

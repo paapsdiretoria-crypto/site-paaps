@@ -1,7 +1,8 @@
 ---
 setor: 4-projetos
 tipo: perfil
-resumo: Contexto da Comunidade ECOA que precisa ser lido antes de qualquer tarefa sobre ela
+aliases: [ECOA, comunidade ECOA, Psicologia Social Latina]
+resumo: "Contexto da Comunidade ECOA que precisa ser lido antes de qualquer tarefa sobre ela"
 status: vivo
 atualizado: 2026-09-12
 ---

@@ -1,7 +1,8 @@
 ---
 setor: 1-fundadora
 tipo: calibracao
-resumo: A frase-mote pessoal da Mallu, do jeito que ela escreve, para bio e apresentação
+aliases: [bio, frase-mote, posicionamento pessoal]
+resumo: "A frase-mote pessoal da Mallu, do jeito que ela escreve, para bio e apresentação"
 status: vivo
 atualizado: 2026-09-12
 fontes: [CLAUDE.md]

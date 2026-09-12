@@ -1,7 +1,7 @@
 ---
 setor: 4-projetos
 tipo: decisao
-resumo: Ata da conversa com Joyce, assistente social, em 30/04/2026
+resumo: "Ata da conversa com Joyce, assistente social, em 30/04/2026"
 status: vivo
 atualizado: 2026-09-12
 ---

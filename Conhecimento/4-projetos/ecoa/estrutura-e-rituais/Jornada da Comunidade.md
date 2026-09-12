@@ -1,7 +1,7 @@
 ---
 setor: 4-projetos
 tipo: runbook
-resumo: O roteiro de entrada na ECOA tem quatro etapas nomeadas e nenhuma escrita, então o onboarding humanizado segue valendo como regra
+resumo: "O roteiro de entrada na ECOA tem quatro etapas nomeadas e nenhuma escrita, então o onboarding humanizado segue valendo como regra"
 status: pendente
 atualizado: 2026-09-12
 fontes: [https://app.notion.com/p/e5744cb52e008225bc938103a579f185]

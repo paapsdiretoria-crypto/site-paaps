@@ -1,7 +1,8 @@
 ---
 setor: 2-identidade
 tipo: proibicao
-resumo: Adjetivo moral sobre pessoas é proibido nos dois sentidos, elogio incluído
+aliases: [julgamento moral, gente boa, adjetivo moral]
+resumo: "Adjetivo moral sobre pessoas é proibido nos dois sentidos, elogio incluído"
 status: vivo
 atualizado: 2026-09-12
 fontes: [CLAUDE.md]

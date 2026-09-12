@@ -1,7 +1,7 @@
 ---
 setor: 4-projetos
 tipo: conceito
-resumo: O planejamento temático da ECOA por Eras, com os debates que abrem cada uma
+resumo: "O planejamento temático da ECOA por Eras, com os debates que abrem cada uma"
 status: vivo
 atualizado: 2026-09-12
 ---

@@ -1,7 +1,8 @@
 ---
 setor: 2-identidade
 tipo: pessoa
-resumo: Quem faz a supervisão na metodologia PAAPS, e por que nunca se escreve "supervisão clínica em campo"
+aliases: [Gabriela Diniz, Lucas Pimenta, supervisão]
+resumo: "Quem faz a supervisão na metodologia PAAPS, e por que nunca se escreve 'supervisão clínica em campo'"
 status: vivo
 atualizado: 2026-09-12
 decidido-em: 2026-08-22

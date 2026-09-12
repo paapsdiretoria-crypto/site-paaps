@@ -1,7 +1,8 @@
 ---
 setor: 6-sistema
 tipo: sintese
-resumo: O fluxo de uma rodada de produção de conteúdo em diagrama, tronco a tronco
+aliases: [workflow de agentes, fluxo de conteúdo]
+resumo: "O fluxo de uma rodada de produção de conteúdo em diagrama, tronco a tronco"
 status: vivo
 atualizado: 2026-09-12
 ---

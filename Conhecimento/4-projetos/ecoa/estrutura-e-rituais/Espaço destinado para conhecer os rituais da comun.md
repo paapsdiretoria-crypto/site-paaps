@@ -1,7 +1,7 @@
 ---
 setor: 4-projetos
 tipo: runbook
-resumo: Os espaços de conversa da ECOA e como participar de cada um
+resumo: "Os espaços de conversa da ECOA e como participar de cada um"
 status: vivo
 atualizado: 2026-09-12
 ---

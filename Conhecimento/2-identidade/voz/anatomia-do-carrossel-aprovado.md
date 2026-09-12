@@ -1,7 +1,8 @@
 ---
 setor: 2-identidade
 tipo: sintese
-resumo: O que faz funcionar o primeiro carrossel do @paaps.brasil aprovado sem rodada de correção, dissecado slide a slide
+aliases: [De quem é esse trabalho, carrossel aprovado]
+resumo: "O que faz funcionar o primeiro carrossel do @paaps.brasil aprovado sem rodada de correção, dissecado slide a slide"
 status: vivo
 atualizado: 2026-09-12
 ---

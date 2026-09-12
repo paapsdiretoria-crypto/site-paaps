@@ -1,7 +1,7 @@
 ---
 setor: 6-sistema
 tipo: sintese
-resumo: Diagnóstico datado da pasta conteudo em 10/08/2026, mantido como registro e superado pela arquitetura atual
+resumo: "Diagnóstico datado da pasta conteudo em 10/08/2026, mantido como registro e superado pela arquitetura atual"
 status: historico
 atualizado: 2026-09-12
 ---

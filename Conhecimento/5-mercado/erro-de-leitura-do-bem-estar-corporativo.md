@@ -1,7 +1,8 @@
 ---
 setor: 5-mercado
 tipo: conceito
-resumo: Quando a instituição oferece terapia para um problema que ela mesma produz, a falha passa a ser de quem não aguentou, e é por isso que equipe pública reage mal a programa de bem-estar
+aliases: [bem-estar corporativo, setembro amarelo, aguentar nunca foi o problema]
+resumo: "Quando a instituição oferece terapia para um problema que ela mesma produz, a falha passa a ser de quem não aguentou, e é por isso que equipe pública reage mal a programa de bem-estar"
 status: vivo
 atualizado: 2026-09-12
 decidido-em: 2026-08-14

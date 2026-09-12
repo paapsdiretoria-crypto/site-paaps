@@ -1,7 +1,7 @@
 ---
 setor: 4-projetos
 tipo: runbook
-resumo: Ritual na ECOA é convite e nunca obrigação, e é isso que decide como se escreve a chamada de qualquer um deles
+resumo: "Ritual na ECOA é convite e nunca obrigação, e é isso que decide como se escreve a chamada de qualquer um deles"
 status: vivo
 atualizado: 2026-09-12
 fontes: [https://app.notion.com/p/39044cb52e0080db858ed446edee5c82, https://app.notion.com/p/bbe44cb52e00833f850f01748170f2aa]

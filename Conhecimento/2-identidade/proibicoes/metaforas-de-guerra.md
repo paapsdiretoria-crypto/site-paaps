@@ -1,7 +1,8 @@
 ---
 setor: 2-identidade
 tipo: proibicao
-resumo: Metáfora de guerra, violência ou competição nunca entra em peça da PAAPS
+aliases: [metáfora de guerra, competição, batalha]
+resumo: "Metáfora de guerra, violência ou competição nunca entra em peça da PAAPS"
 status: vivo
 atualizado: 2026-09-12
 fontes: [CLAUDE.md]

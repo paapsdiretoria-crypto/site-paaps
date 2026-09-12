@@ -1,7 +1,8 @@
 ---
 setor: 2-identidade
 tipo: calibracao
-resumo: Em peça pública escreve-se PAAPS ou PAAPS Brasil, nunca a expansão da sigla, que só existe dentro do contrato social
+aliases: [PAAPS Brasil, Programa de Aceleração Ativa de Projetos Sociais, expansão da sigla]
+resumo: "Em peça pública escreve-se PAAPS ou PAAPS Brasil, nunca a expansão da sigla, que só existe dentro do contrato social"
 status: vivo
 atualizado: 2026-09-12
 decidido-em: 2026-08-02

@@ -1,7 +1,8 @@
 ---
 setor: 2-identidade
 tipo: runbook
-resumo: Paleta, tipografia, elementos decorativos e sistema Periódico como o Aplicador Visual executa na prática
+aliases: [paleta, tipografia, sistema Periódico, identidade visual]
+resumo: "Paleta, tipografia, elementos decorativos e sistema Periódico como o Aplicador Visual executa na prática"
 status: vivo
 atualizado: 2026-09-12
 ---

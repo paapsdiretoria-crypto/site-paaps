@@ -1,7 +1,8 @@
 ---
 setor: 2-identidade
 tipo: inventario
-resumo: Ficha cadastral completa da DIGGING: CNPJ, objeto social alínea por alínea, cláusula GovTech, sócias e checklist de habilitação
+aliases: [contrato social, habilitação, ficha jurídica, CNAE]
+resumo: "Ficha cadastral completa da DIGGING: CNPJ, objeto social alínea por alínea, cláusula GovTech, sócias e checklist de habilitação"
 status: vivo
 atualizado: 2026-09-12
 ---

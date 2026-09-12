@@ -1,7 +1,8 @@
 ---
 setor: 2-identidade
 tipo: norma
-resumo: Onde o formulário pedir UF e cidade da empresa, a resposta é SP e São Paulo, porque Minas e Rio são território de operação, não domicílio
+aliases: [sede, UF da empresa, domicílio fiscal]
+resumo: "Onde o formulário pedir UF e cidade da empresa, a resposta é SP e São Paulo, porque Minas e Rio são território de operação, não domicílio"
 status: vivo
 atualizado: 2026-09-12
 fontes: [CLAUDE.md]

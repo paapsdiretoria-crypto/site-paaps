@@ -1,7 +1,8 @@
 ---
 setor: 2-identidade
 tipo: pessoa
-resumo: Fabiane Vasconcellos, founder da DIGGING e sócia majoritária, é o lastro executivo que a PAAPS apresenta a investidor
+aliases: [Fabiane, Fabiane Quarez de Vasconcellos]
+resumo: "Fabiane Vasconcellos, founder da DIGGING e sócia majoritária, é o lastro executivo que a PAAPS apresenta a investidor"
 status: vivo
 atualizado: 2026-09-12
 fontes: [CLAUDE.md]

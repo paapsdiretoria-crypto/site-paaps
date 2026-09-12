@@ -1,7 +1,8 @@
 ---
 setor: 5-mercado
 tipo: conceito
-resumo: A PAAPS está no mercado do cuidado, não no de saúde nem no de bem-estar corporativo, e esse reframe decide quem é concorrente e qual é o tamanho do mercado
+aliases: [em que negócio a PAAPS está, mercado do cuidado, reframe]
+resumo: "A PAAPS está no mercado do cuidado, não no de saúde nem no de bem-estar corporativo, e esse reframe decide quem é concorrente e qual é o tamanho do mercado"
 status: vivo
 atualizado: 2026-09-12
 decidido-em: 2026-08-14

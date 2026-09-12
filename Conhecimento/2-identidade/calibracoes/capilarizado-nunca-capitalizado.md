@@ -1,7 +1,8 @@
 ---
 setor: 2-identidade
 tipo: calibracao
-resumo: O SUS é capilarizado, nunca capitalizado, e dizer o contrário derruba a credibilidade da peça inteira
+aliases: [capitalizado, capilarizado]
+resumo: "O SUS é capilarizado, nunca capitalizado, e dizer o contrário derruba a credibilidade da peça inteira"
 status: vivo
 atualizado: 2026-09-12
 fontes: [CLAUDE.md]

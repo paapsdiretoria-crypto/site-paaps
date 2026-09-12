@@ -1,7 +1,8 @@
 ---
 setor: 2-identidade
 tipo: proibicao
-resumo: A PAAPS critica o sistema político veladamente, nunca de forma pejorativa e explícita
+aliases: [crítica política, sistema político]
+resumo: "A PAAPS critica o sistema político veladamente, nunca de forma pejorativa e explícita"
 status: vivo
 atualizado: 2026-09-12
 fontes: [CLAUDE.md]
