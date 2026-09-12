@@ -267,8 +267,9 @@ SITE PAAPS/                          ← pasta raiz (renomear para PAAPS/ no Fin
 │   └── pitch-serasa-exports/        ← exports pontuais de PDF (ex.: saida.pdf)
 │
 ├── Conhecimento/                    ← SINTETIZADO E MANTIDO POR IA (padrão Raw/Wiki)
-│   ├── index.md                     ← catálogo de toda página, atualizado a cada `compila`
-│   ├── voz-e-identidade/            ← O CORAÇÃO COMPARTILHADO, lido por todos os agentes
+│   ├── index.md                     ← catálogo de toda página, separado em Projetos x Sistema
+│   │
+│   ├── voz-e-identidade/            ← PROJETO PAAPS (fica na raiz, é o projeto padrão do cofre)
 │   │   ├── voz-paaps.md             ← gabarito de voz e proibições ativas
 │   │   ├── afeto-situado-mallu.md   ← como iniciar a peça quando o gancho não vem dela
 │   │   ├── identidade-aplicada.md   ← paleta, tipografia, sistema Periódico, workflow Canva
@@ -276,20 +277,28 @@ SITE PAAPS/                          ← pasta raiz (renomear para PAAPS/ no Fin
 │   │   ├── qualidade-frontend.md    ← princípios de design (web + Canva)
 │   │   ├── visual-instagram.md      ← 3 modos visuais, regras fotográficas
 │   │   └── mapa-fontes-foto.md      ← fontes de fotografia documental (espaço reservado)
-│   ├── base-teorica/                ← base teórica destilada da Tecelã
-│   ├── institucional/               ← documentos institucionais convertidos para Markdown
+│   ├── institucional/               ← PROJETO PAAPS : documentos convertidos de DOCX
 │   │   ├── manual-marca-posicionamento.md
 │   │   └── paaps-pesquisa-mercado.md
-│   ├── ecoa/                        ← Comunidade ECOA (Psicologia Social Latina)
+│   ├── base-teorica/                ← PROJETO PAAPS : base teórica destilada da Tecelã
+│   │
+│   ├── ecoa/                        ← PROJETO ECOA (Psicologia Social Latina), autocontido
 │   │   ├── CLAUDE.md                ← contexto do projeto, ler antes de qualquer tarefa sobre a ECOA
 │   │   ├── identidade-e-posicionamento/ ← o que a ECOA é, propósito, valores, tom de voz, acordos
 │   │   ├── estrutura-e-rituais/     ← grupos, rituais, jornada, canvas, boas-vindas
 │   │   ├── planejamento-de-conteudo/← Eras, personas, impacto, referências de comunidade
 │   │   ├── porta-voz/               ← Programa Porta-Voz
 │   │   └── reunioes/                ← atas de equipe, planejamento e pesquisa
-│   ├── arquitetura-agentes/         ← diagramas SVG da arquitetura + workflow-paaps.html
-│   └── log/                         ← logs automáticos de sessão (gerados por hook)
-│       └── sessao-YYYY-MM-DD.md     ← um arquivo por dia, commitado automaticamente
+│   │
+│   └── sistema/                     ← SISTEMA (como o Claude e os agentes operam aqui, não é a PAAPS)
+│       ├── arquitetura-agentes/     ← árvore de dois troncos, diagramas SVG + workflow-paaps.html
+│       └── como-trabalhar-com-claude.md
+│
+├── sessoes/                         ← logs automáticos de sessão (gerados por hook), fora do
+│   └── sessao-YYYY-MM-DD.md         ← cofre segundo-cerebro de propósito: é operacional, não conhecimento
+│
+├── segundo-cerebro/                 ← cofre Obsidian dedicado: dois atalhos, Arquivos/ e
+│                                       Conhecimento/, sem o resto do repositório
 │
 ├── codigo/                          ← TODO o código do ecossistema, indexado pelo CodeGraph
 │   ├── .codegraph/                  ← índice/grafo de código (SQLite local, não commitado)
@@ -339,6 +348,18 @@ da Mallu (imersão de 12/09/2026, padrão Raw/Wiki do Karpathy localizado em por
 `Conhecimento/` é lida no Obsidian, escrita só por IA: ela acompanha o grafo enquanto a
 conversa acontece, nunca edita a mão. Três operações nomeadas cobrem o ciclo de vida
 inteiro.
+
+**Regra de projeto (decide ONDE a página nasce, antes de qualquer outra regra):**
+`Conhecimento/` separa dois eixos, sempre. **Projeto** é o que a PAAPS é ou diz: a
+própria PAAPS fica na raiz (`voz-e-identidade/`, `institucional/`, `base-teorica/`,
+por ser o projeto padrão do cofre), cada projeto autocontido do ecossistema (ECOA,
+e no futuro TEAtrar, Periódico da Rede PAAPS, Plantão Psicológico, Bela Vista de Minas,
+ver `## Projetos do ecossistema` acima) ganha sua própria pasta de topo quando material
+justificar. **Sistema** é como o Claude e os agentes operam aqui dentro, nunca conteúdo
+da PAAPS: mora em `Conhecimento/sistema/` (arquitetura de agentes, como colaborar com o
+Claude, convenções operacionais). Antes de escrever qualquer página nova, pergunte: isso
+é sobre o que a PAAPS é/diz, ou sobre como a máquina por trás funciona? A resposta decide
+o galho, projeto ou sistema, antes mesmo de pensar em subpasta.
 
 **Regra de link:** toda página de `Conhecimento/` que referencia um arquivo de
 `Arquivos/` usa colchete duplo com o nome do arquivo sem a extensão: `[[nome-do-arquivo]]`.
@@ -509,7 +530,7 @@ Novas respostas longas pedidas "para ler no Notion" viram subpáginas dela, no f
 
 | Hook | Ordem | O que faz |
 |---|---|---|
-| **log-de-sessão** | 1º | Registra timestamp e arquivos alterados em `Conhecimento/log/sessao-YYYY-MM-DD.md` (deduplicado, ignora a própria pasta Conhecimento/log/) |
+| **log-de-sessão** | 1º | Registra timestamp e arquivos alterados em `sessoes/sessao-YYYY-MM-DD.md` (deduplicado, ignora a própria pasta sessoes/) |
 | **auto-push** | 2º | Detecta qualquer mudança (inclusive arquivos novos), commita com mensagem `auto: <áreas alteradas> - <data>` e faz push para `main` |
 
 Ao encerrar uma tarefa relevante, registrar em 1–3 linhas no log do dia **o que foi

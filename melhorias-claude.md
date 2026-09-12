@@ -33,14 +33,14 @@ arquivos novos (untracked)**. Se a sessão só criou arquivos novos (caso comum:
 carrossel, novo log, nova skill), o hook conclui "nada mudou" e não commita nem faz push.
 O CLAUDE.md promete "auto-push ativo", então ninguém confere — trabalho fica para trás.
 
-**Evidência:** `Conhecimento/log/sessao-2026-07-06.md` criado pelo hook às 13:49 de hoje e nunca
+**Evidência:** `sessoes/sessao-2026-07-06.md` criado pelo hook às 13:49 de hoje e nunca
 commitado. Problema secundário: o log de sessão registra `git status --short` cru,
 que se autopolui (registra o próprio log) e duplica blocos idênticos.
 
 **Ação:** trocar a detecção por `git status --porcelain` (vê untracked); mensagem de
 commit passa a listar as áreas alteradas em vez do genérico "auto: atualização do site"
 (84% do histórico atual é essa mensagem, que já escondeu até uma remoção de 22 arquivos).
-Log de sessão passa a excluir a própria pasta `Conhecimento/log/` do status.
+Log de sessão passa a excluir a própria pasta `sessoes/` do status.
 
 ## 3. Segredos expostos em repositório PÚBLICO (CORREÇÃO de segurança) ✅ executado
 
@@ -109,7 +109,7 @@ O CLAUDE.md raiz — lido por toda sessão — descreve um repo que não existe 
 - `.agents/` está no `.gitignore` mas **595 arquivos continuam rastreados** (gitignore
   não remove o que já foi commitado). ✅ removidos do índice (`git rm --cached`).
 - `.playwright-mcp/` na raiz: 680 KB de lixo de debug de 16/jun. ✅ apagado.
-- `workflow-paaps.html` solto na raiz. ✅ movido para `Conhecimento/arquitetura-agentes/`.
+- `workflow-paaps.html` solto na raiz. ✅ movido para `Conhecimento/sistema/arquitetura-agentes/`.
 - Imagens de 2–5 MB rastreadas (`site/paaps-site/imagens/*.jpg`) e ~14 screenshots de
   benchmark commitados. ➜ **nada por agora** (funcionam no site publicado); candidato
   futuro: otimizar/converter para WebP.
@@ -149,12 +149,12 @@ oficial — o runbook indica quando usar cada um.
 
 ## 10. Logs de sessão pobres para handoff (AUTOMAÇÃO leve) ✅ executado
 
-Você usa o log de `Conhecimento/log/` como memória entre sessões ("leia o log da última sessão" —
+Você usa o log de `sessoes/` como memória entre sessões ("leia o log da última sessão" —
 4 sessões só no dia 16), mas o hook grava apenas timestamp + `git status`, que não diz
 **o que** foi feito nem **por quê**. As retomadas dependem de você recolar contexto.
 
 **Ação:** hook melhorado (item 2) + instrução no CLAUDE.md: ao encerrar tarefas
-relevantes, registrar decisão/estado em `Conhecimento/log/` (1–3 linhas) e na memória persistente
+relevantes, registrar decisão/estado em `sessoes/` (1–3 linhas) e na memória persistente
 do Claude — que já existe e é o mecanismo correto para isso (o log de 16/jun manual
 provou o valor).
 

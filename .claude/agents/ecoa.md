@@ -19,4 +19,4 @@ Antes de construir este agente, ler:
 - `Conhecimento/voz-e-identidade/voz-paaps.md`
 - `Conhecimento/voz-e-identidade/identidade-aplicada.md`
 - `conteudo/CLAUDE.md`
-- `Conhecimento/arquitetura-agentes/arquitetura_v2.md`
+- `Conhecimento/sistema/arquitetura-agentes/arquitetura_v2.md`

@@ -66,3 +66,8 @@ conteudo/ciclos/*/B0-newsletters.md
 # vídeo grande, fora do git desde 01/09/2026 (travava o push, acima do limite do GitHub)
 codigo/site/pitch-serasa/img/final - cópia.mp4
 .export-*
+
+# Config do Obsidian do cofre "segundo-cerebro": por ser pasta só de atalhos, o Obsidian
+# grava a configuração real dentro de Arquivos/ ou Conhecimento/ em vez de segundo-cerebro/
+Arquivos/.obsidian/
+Conhecimento/.obsidian/

@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "6b43aed4d907f8f4",
+        "id": "af4f385485130bda",
         "type": "tabs",
         "children": [
           {
-            "id": "99639d696f09a9c0",
+            "id": "3943f21f104bfbaa",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -52,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "cofre",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -76,11 +76,12 @@
               "title": "Marcadores"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 535.5234375
+    "width": 985.6
   },
   "right": {
     "id": "81e583fb7e4f9593",
@@ -182,8 +183,9 @@
       "bases:Criar nova base": false
     }
   },
-  "active": "99639d696f09a9c0",
+  "active": "d1fdf0b82269f09e",
   "lastOpenFiles": [
+    "Sem título.base",
     "Arquivos/fotos/16.png",
     "segundo-cerebro",
     "melhorias-claude.md",
@@ -222,14 +224,13 @@
     "Conhecimento/arquitetura-agentes/workflow-paaps.html",
     "Conhecimento/arquitetura-agentes/arquitetura_v2_agentes_paaps_orquestrador_criticos.svg",
     "Conhecimento/voz-e-identidade",
-    "Conhecimento/log",
+    "sessoes",
     "Arquivos/identidade-visual/08-paaps-digging/01 - Logo Paaaps + Digging/Logo Paaps + Digging - Vinho.png",
     "Arquivos/identidade-visual/08-paaps-digging/01 - Logo Paaaps + Digging/Logo Paaps + Digging - Marrom.png",
     "Arquivos/identidade-visual/08-paaps-digging/01 - Logo Paaaps + Digging/Logo Paaps + Digging - Branco.png",
     "Arquivos/identidade-visual/08-paaps-digging/02 - Formas Paaps + Digging/Paapas + Digging Forma 7-8.png",
     "Arquivos/identidade-visual/08-paaps-digging/02 - Formas Paaps + Digging/Paapas + Digging Forma 8-8.png",
     "Arquivos/identidade-visual/08-paaps-digging/02 - Formas Paaps + Digging/Paapas + Digging Forma 9-8.png",
-    "Arquivos/identidade-visual/08-paaps-digging/02 - Formas Paaps + Digging/Paapas + Digging Forma 6-8.png",
-    "Arquivos/identidade-visual/08-paaps-digging/02 - Formas Paaps + Digging/Paapas + Digging Forma 5-8.png"
+    "Arquivos/identidade-visual/08-paaps-digging/02 - Formas Paaps + Digging/Paapas + Digging Forma 6-8.png"
   ]
 }

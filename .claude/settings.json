@@ -10,7 +10,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "cd \"${CLAUDE_PROJECT_DIR:-.}\"; mkdir -p Conhecimento/log; D=$(date '+%Y-%m-%d'); T=$(date '+%H:%M'); F=\"Conhecimento/log/sessao-${D}.md\"; L=\".claude/.ultimo-status-logado\"; test -f \"$F\" || echo \"# Log de Sessão - ${D}\" > \"$F\"; C=$(git status --short 2>/dev/null | grep -v 'Conhecimento/log/'); if [ -n \"$C\" ] && [ \"$C\" != \"$(cat \"$L\" 2>/dev/null)\" ]; then echo \"\" >> \"$F\"; echo \"## ${T}\" >> \"$F\"; echo '```' >> \"$F\"; echo \"$C\" >> \"$F\"; echo '```' >> \"$F\"; echo \"\" >> \"$F\"; echo \"$C\" > \"$L\"; fi"
+            "command": "cd \"${CLAUDE_PROJECT_DIR:-.}\"; mkdir -p sessoes; D=$(date '+%Y-%m-%d'); T=$(date '+%H:%M'); F=\"sessoes/sessao-${D}.md\"; L=\".claude/.ultimo-status-logado\"; test -f \"$F\" || echo \"# Log de Sessão - ${D}\" > \"$F\"; C=$(git status --short 2>/dev/null | grep -v 'sessoes/'); if [ -n \"$C\" ] && [ \"$C\" != \"$(cat \"$L\" 2>/dev/null)\" ]; then echo \"\" >> \"$F\"; echo \"## ${T}\" >> \"$F\"; echo '```' >> \"$F\"; echo \"$C\" >> \"$F\"; echo '```' >> \"$F\"; echo \"\" >> \"$F\"; echo \"$C\" > \"$L\"; fi"
           },
           {
             "type": "command",
