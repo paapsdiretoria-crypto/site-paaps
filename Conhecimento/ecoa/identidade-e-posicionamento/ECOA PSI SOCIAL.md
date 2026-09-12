@@ -1,24 +1,31 @@
 # ECOA PSI SOCIAL
 
-[Materiais da Comunidade ](ECOA%20PSI%20SOCIAL/Materiais%20da%20Comunidade%2036344cb52e00802eb155d584c57b53f7.md)
+> Esta página listava links para databases do Notion (Materiais da Comunidade,
+> Encontros + Roteiros, Reuniões, Lista de Atividades, Calendário e outras) que nunca
+> foram exportadas pra este repositório, mudam com frequência maior do que vale a pena
+> versionar em Markdown. Os nomes ficam registrados abaixo como texto, sem link, pra não
+> criar arquivo novo sozinho ao clicar. Ver `Conhecimento/ecoa/CLAUDE.md`, seção "Fonte
+> viva no Notion", pra acessar o conteúdo de verdade.
 
-[Encontros + Roteiros ](ECOA%20PSI%20SOCIAL/Encontros%20+%20Roteiros%2036344cb52e0080d0be73ed59828f09dd.md)
+Materiais da Comunidade
 
-[Planejamento Mensal da Comunidade ](ECOA%20PSI%20SOCIAL/Planejamento%20Mensal%20da%20Comunidade%2034d44cb52e00802f97a9d85492f817f3.md)
+Encontros + Roteiros
 
-[Como a Ecoa Funciona Hoje (1)](ECOA%20PSI%20SOCIAL/Como%20a%20Ecoa%20Funciona%20Hoje%20(1)%2038044cb52e0080769a70e7d379c483d2.md)
+Planejamento Mensal da Comunidade
 
-[Como a Ecoa Funciona Hoje (Mallu) ](ECOA%20PSI%20SOCIAL/Como%20a%20Ecoa%20Funciona%20Hoje%20(Mallu)%203a344cb52e0080339f4ed518d854f834.md)
+Como a Ecoa Funciona Hoje (1)
 
-[Espaço ECOA ](ECOA%20PSI%20SOCIAL/Espa%C3%A7o%20ECOA%203d444cb52e0083869c47817e80e80776.md)
+Como a Ecoa Funciona Hoje (Mallu)
+
+Espaço ECOA
 
 ## MOVIMENTAÇÕES
 
-[Projetos ](ECOA%20PSI%20SOCIAL/Projetos%2036344cb52e0080489cddca4b012158a3.md)
+Projetos
 
 ## MOVIMENTAÇÕES
 
-[Lista de Atividades](ECOA%20PSI%20SOCIAL/Lista%20de%20Atividades%202079c7bd9974492d9e8eab212792d2cf_all.csv)
+Lista de Atividades
 
 sort: 
 Prazo estimado: ascending
@@ -26,23 +33,21 @@ Prazo estimado: ascending
 - 
     
     
-    [Reuniões](ECOA%20PSI%20SOCIAL/Reuni%C3%B5es%20d5d14aa4c9184549aeb9324901789a81_all.csv)
+    Reuniões
     
     sort: 
     Data da reunião: descending
     
 
-[Links Importantes](ECOA%20PSI%20SOCIAL/Links%20Importantes%202f844cb52e00806fb98fe73b93430782.md)
+Links Importantes
 
-[Logo, imagens e documentos](ECOA%20PSI%20SOCIAL/Logo,%20imagens%20e%20documentos%202f844cb52e00805da993f27cad6790e5.md)
+Logo, imagens e documentos
 
-[Informações importantes](ECOA%20PSI%20SOCIAL/Informa%C3%A7%C3%B5es%20importantes%202f844cb52e008029a7a3c9ae5c84cd16.md)
+Informações importantes
 
-[Calendário](ECOA%20PSI%20SOCIAL/Calend%C3%A1rio%202f844cb52e00803ab433dd44647064bd.md)
+Calendário
 
 - Projetos
-    
-    [](ECOA%20PSI%20SOCIAL/Sem%20t%C3%ADtulo%2035544cb52e008159a566f5beee72738e.md)
     
 - Objetivo da Comunidade
     
