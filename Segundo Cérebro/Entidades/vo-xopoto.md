@@ -3,8 +3,9 @@ tags: [entidades, organizacao]
 origem: "Trabalho"
 resumo: "Vó Xopotó é a marca autônoma dos produtores de Desterro do Melo, nascida em 2025 a partir da Refazenda Rio Xopotó"
 serve-para: []
-status: historico
+status: vivo
 atualizado: 2026-09-13
+decidido-em: 2026-09-13
 aliases: [Vó Xopotó]
 ---
 
@@ -15,11 +16,12 @@ Refazenda Rio Xopotó, formada em 2025** quando Xarasinho assumiu o mandato de p
 Posiciona a comida e o acolhimento da roça mineira como "tecnologia de acolhimento
 ancestral" para o adoecimento da vida contemporânea.
 
-## Mesma régua da Refazenda, por precaução
+## Pode ser citada, ao contrário da Refazenda
 
-**Como nasce diretamente da [[refazenda-rio-xopoto|Refazenda Rio Xopotó]]**, que está
-proibida de aparecer em qualquer peça pública (ver [[paaps]]), esta nota trata a Vó Xopotó
-com a mesma cautela até a Mallu confirmar se a proibição se estende a ela.
+**Decisão da Mallu em 13/09/2026: a Vó Xopotó não entra na proibição que vale para a
+[[refazenda-rio-xopoto|Refazenda Rio Xopotó]].** É marca autônoma, consolidada depois que
+a Refazenda deixou de ser o centro do movimento, e pode aparecer em peça pública quando
+fizer sentido.
 
 ## Ligações
 
@@ -27,4 +29,5 @@ com a mesma cautela até a Mallu confirmar se a proibição se estende a ela.
 
 ## Onde isso serve
 
-Registro histórico interno. Não citar em peça pública sem a Mallu confirmar a régua.
+Em [[conteudo-paaps]] e [[conteudo-mallu]], quando a peça precisar do exemplo de
+tecnologia ancestral de acolhimento.
