@@ -1,4 +1,5 @@
 {
+  "_comentario": "Cores do grafo, uma por setor. O Obsidian sobrescreve .obsidian/graph.json enquanto esta aberto, entao esta e a copia versionada. Para aplicar: FECHE o Obsidian e rode, da raiz do projeto: cp 'Segundo Cerebro/Mapa/_modelos/graph-cores.json' 'Segundo Cerebro/.obsidian/graph.json'",
   "collapse-filter": true,
   "search": "",
   "showTags": false,
@@ -88,6 +89,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.7265030181858005,
+  "scale": 0.95,
   "close": true
 }
