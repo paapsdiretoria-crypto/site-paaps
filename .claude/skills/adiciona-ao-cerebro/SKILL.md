@@ -28,6 +28,14 @@ Não pode cruzar sem a Mallu:
 - **dado de pessoa real** (e-mail, telefone, CPF, nome completo de lead). Isso vive no CRM
   do Notion, nunca em arquivo commitado.
 
+**Proibição irmã do gate:** o material processado pode revelar uma pendência de execução
+(um bug no código, um dado errado publicado no site, uma atualização que falta no
+LinkedIn ou currículo, algo pra ajustar numa automação). Isso nunca vira nota nem entra
+como "o que falta" em arquivo do cérebro: é tarefa avulsa na database Notion, escrita pela
+skill `tarefa-avulsa-quadro-projetos`. Segundo Cérebro é conhecimento durável, não lista de
+tarefas (ver `Segundo Cérebro/Mapa/Visão Geral.md`). Categoria nova, contradição e dúvida
+de setor continuam sem nota própria: entram no resumo final de perguntas para a Mallu.
+
 O resto se decide sozinho.
 
 ---
@@ -43,8 +51,9 @@ O resto se decide sozinho.
 5. **As notas que o material destravou**, cada uma no setor certo.
 6. **Linkar nas duas direções** e acrescentar cada nota nova na capa do setor dela.
 7. **Uma linha no `Mapa/Índice.md` e uma no `Mapa/Log.md`.**
-8. **O que ficou faltando vira linha em `Mapa/O que falta.md`** e bloco
-   `## O que ainda falta` dentro da nota.
+8. **O que ficou faltando vira pergunta no resumo final para a Mallu**, nunca nota nem
+   arquivo de pendência. Se o que falta é execução (corrigir algo fora do cérebro), vira
+   tarefa avulsa pela skill `tarefa-avulsa-quadro-projetos`, nunca bloco dentro da nota.
 
 ---
 
