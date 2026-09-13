@@ -23,9 +23,11 @@ Lei, dado oficial, estudo, notícia, aula, vídeo, livro e material de concorren
 - [[anotacoes-reuniao-joyce]] : As anotações de caderno da Mallu na escuta com a Joyce, assistente social, ditadas em 12/09/2026
 - [[ata-registro-precos-saude-mental-servidor]] : O governo federal previu R$ 26,9 milhões em ata de registro de preços para acolher a saúde mental de servidores
 - [[dados-afastamento-por-transtorno-mental]] : Afastamentos por transtorno mental bateram recorde da década em 2025 e custam cerca de R$ 3,5 bilhões por ano ao INSS
+- [[dados-autorizados-do-site]] : Os quatro dados que estão no ar no site da PAAPS, com a referência completa de cada um
 - [[dados-do-adoecimento-de-quem-sustenta-a-rede]] : Os números do tamanho da rede pública brasileira e do adoecimento ligado ao trabalho de quem a sustenta
 - [[dados-do-esgotamento-e-erro]] : Quem atende esgotado tem o dobro de chance de errar no atendimento, e o endividamento do servidor alimenta esse esgotamento
 - [[nr-01]] : A NR-01 não vincula prefeitura nem servidor estatutário, então ela pode ser citada como referência de enquadramento mas nunca como obrigatoriedade legal
+- [[obras-da-ciencia-que-sustentam-o-metodo]] : As quatro obras que o site apresenta como base científica do método PAAPS
 - [[oms-recomendacao-formar-gestores]] : Formar gestores e trabalhar a equipe é a única recomendação forte da OMS em saúde mental no trabalho
 - [[oms-solidao-e-conexao-social]] : Uma em cada seis pessoas no mundo é afetada pela solidão, e o isolamento social é associado a cem mortes por hora
 - [[pitch-impulsiona-serasa]] : O pitch v5 e o handout da inscrição no Impulsiona Startups, onde o argumento da PAAPS está mais destilado

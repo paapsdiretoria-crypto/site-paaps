@@ -55,6 +55,12 @@ tomo uma decisão que é da Mallu, entra uma linha aqui.
     gargalos da saúde mental no SUS, greve da atenção básica no Rio, suicídios no trabalho,
     ODS, ISO 9000 e 9001, metadesign e capitalismo regenerativo.
 
+15. **Inconsistência a resolver:** o site cita o estudo do BMJ 2022 como 40 estudos com
+    mais de 32 mil profissionais; o pitch cita o mesmo estudo como revisão de 35 estudos.
+    Um dos dois está errado. Ver [[dados-autorizados-do-site]].
+16. **O TEAtrar não está na lista de projetos ativos**, mas a Gabriela Diniz o apresenta no
+    site como parte do que ela traz para a PAAPS. É frente própria ou projeto dela?
+
 ## Inputs que a Mallu vai mandar
 
 - Drive da faculdade, uma pasta por disciplina

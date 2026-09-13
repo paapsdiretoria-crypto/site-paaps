@@ -52,6 +52,7 @@ A frente de conteúdo do perfil pessoal da Mallu, em todos os canais
 
 A frente de conteúdo institucional da PAAPS, em todos os canais
 
+- [[site-paaps-no-ar]] : O que o site paaps.com.br diz hoje, na ordem em que diz, e as regras que a copy dele fixou
 
 ### [[digging-times-e-lideres]] `pendente`
 
@@ -97,6 +98,7 @@ O mapa da máquina da PAAPS: o que roda sozinho, o que dispara cada coisa e quem
 - [[diagnostico-grafo-conteudo-2026-08-10-ai-first]] : Diagnóstico datado da pasta conteudo em 10/08/2026, mantido como registro e superado pela arquitetura atual
 - [[hooks-e-auto-push-ai-first]] : Os dois hooks do evento Stop, o que cada um grava, e por que eles usam variável de ambiente em vez de caminho fixo
 - [[regra-de-workspace-ai-first]] : Abrir o Claude Code sempre na raiz SITE PAAPS, porque fora dela não existe CLAUDE.md, skill, cofre nem auto-push
+- [[risco-de-marca-ponto-de-apoio]] `pendente` : Existe registro vivo no INPI para PONTO DE APOIO na classe 41, que é exatamente o campo da DIGGING, e isso precisa de advogado
 - [[runbook-navegacao-mcp-ai-first]] : Procedimento validado para navegar de verdade no navegador via MCP, com os erros conhecidos e a solução de cada um
 - [[sistema-gto-ai-first]] : Inventário do Notion GTO e o método real de produção destilado de 4 gravações, com a proposta de 9 agentes ainda sem decisão
 - [[skills-ai-first]] : As 50 skills de .claude/skills/, agrupadas por para que servem, e quais delas são do PAAPS e quais vieram de terceiros
@@ -132,14 +134,17 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 - [[digging]] : A pessoa jurídica que assina contrato e emite nota é a DIGGING; o PAAPS é a metodologia proprietária dela, e confundir os dois em edital é erro grave
 - [[equipe-paaps]] : A estrutura de três níveis da equipe semente e a ordem exata das palavras de cada descritivo, válida para site, proposta, edital e apresentação
 - [[fabiane-vasconcellos]] : Fabiane Vasconcellos, founder da DIGGING e sócia majoritária, é o lastro executivo que a PAAPS apresenta a investidor
+- [[gabriela-diniz]] : Psicóloga e atriz, supervisora na metodologia PAAPS e criadora do TEAtrar
 - [[gustavo-faria]] : Gustavo Faria é especialista em comunidade da PAAPS e companheiro da Mallu, moram juntos
-- [[iago-torres]] `pendente` : Iago Torres, candidato a deputado estadual por São Paulo, já fez collab com a PAAPS
+- [[lucas-pimenta]] : Psicólogo do território, supervisor na metodologia PAAPS, cunhou o conceito do Avesso da Clínica
 - [[luiz-sergio-barbosa]] : Luiz Sérgio Barbosa é o consultor financeiro da PAAPS, ex-diretor financeiro da FEBRABAN, e o nome se escreve Luiz com z
 - [[mallu-formacao-e-crp]] : Mallu é formanda em psicologia e o CRP sai em fevereiro, e até lá 'psicóloga' não pode ser usado em peça pública
 - [[mallu-vasconcellos]] : Quem é Mallu Vasconcellos, o que ela faz e por que hoje ela e a PAAPS são praticamente a mesma coisa
 - [[paaps]] : Definição institucional da PAAPS para consulta interna, escrita depois que a Mallu recusou a mesma explicação como copy de site
 - [[refazenda-rio-xopoto]] : Refazenda Rio Xopotó, em Desterro do Melo, foi parceria de 2024 e hoje não há relação ativa
 - [[sara-vitral]] : Sara Vitral, candidata a deputada estadual por Minas Gerais, fez collab em vídeo com a Mallu
+- [[schwartz-center]] : O Schwartz Center, de Boston, licencia hoje as Schwartz Rounds no Reino Unido e na Irlanda, e é a referência internacional que a PAAPS cita
+- [[yago-torres]] : Yago Torres, candidato a deputado estadual por São Paulo, já fez collab com a PAAPS
 - [[yunus-negocios-sociais]] : Yunus Negócios Sociais é referência de metodologia de impacto e parceira ativa via Desafio Regenera
 
 ## 🔴 Histórias
@@ -165,6 +170,7 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 
 - [[Conceitos]] : O que cada palavra significa dentro da PAAPS
 - [[a-resposta-ja-esta-na-equipe]] : A PAAPS não leva solução pronta: ela desvela o que a própria equipe já sabe e não consegue acessar sozinha
+- [[avesso-da-clinica]] `pendente` : O Avesso da Clínica é a psicologia feita onde as pessoas estão, e não onde o consultório espera que elas apareçam
 - [[capilaridade-do-sus]] : O ativo não é o tamanho do mercado, é a capilaridade do SUS, que chega a 5.570 municípios e é a maior malha de cuidado já construída
 - [[cascata-do-cuidado]] : Cuidar da equipe melhora o cuidado que a população recebe, e esse efeito é mensurável
 - [[crenca-mutua-entre-quem-cuida-e-cidadao]] : O trabalho na rede só funciona com crença mútua, e a lógica individualista é o que quebra essa crença dos dois lados
@@ -227,6 +233,7 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 - [[metodologia-paaps]] : O que a PAAPS entrega e como explica cada frente, ditado pela Mallu em 02/08/2026
 - [[roda-de-equipe-paaps]] : A Roda de Equipe é o encontro mensal de até 10 servidores conduzido por psicóloga formada no método, em três fases
 - [[supervisao-da-metodologia]] : Quem faz a supervisão na metodologia PAAPS, e por que nunca se escreve 'supervisão clínica em campo'
+- [[tres-frentes-de-oferta]] : A PAAPS vende três frentes: cuidado e integração de rede, treinamentos, e urgências e eventos extremos
 
 ## 🔵 Fontes
 
@@ -236,11 +243,14 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 - [[anotacoes-reuniao-joyce]] : As anotações de caderno da Mallu na escuta com a Joyce, assistente social, ditadas em 12/09/2026
 - [[ata-registro-precos-saude-mental-servidor]] : O governo federal previu R$ 26,9 milhões em ata de registro de preços para acolher a saúde mental de servidores
 - [[dados-afastamento-por-transtorno-mental]] : Afastamentos por transtorno mental bateram recorde da década em 2025 e custam cerca de R$ 3,5 bilhões por ano ao INSS
+- [[dados-autorizados-do-site]] : Os quatro dados que estão no ar no site da PAAPS, com a referência completa de cada um
 - [[dados-do-adoecimento-de-quem-sustenta-a-rede]] : Os números do tamanho da rede pública brasileira e do adoecimento ligado ao trabalho de quem a sustenta
 - [[dados-do-esgotamento-e-erro]] : Quem atende esgotado tem o dobro de chance de errar no atendimento, e o endividamento do servidor alimenta esse esgotamento
 - [[nr-01]] : A NR-01 não vincula prefeitura nem servidor estatutário, então ela pode ser citada como referência de enquadramento mas nunca como obrigatoriedade legal
+- [[obras-da-ciencia-que-sustentam-o-metodo]] : As quatro obras que o site apresenta como base científica do método PAAPS
 - [[oms-recomendacao-formar-gestores]] : Formar gestores e trabalhar a equipe é a única recomendação forte da OMS em saúde mental no trabalho
 - [[oms-solidao-e-conexao-social]] : Uma em cada seis pessoas no mundo é afetada pela solidão, e o isolamento social é associado a cem mortes por hora
+- [[pitch-impulsiona-serasa]] : O pitch v5 e o handout da inscrição no Impulsiona Startups, onde o argumento da PAAPS está mais destilado
 - [[regulacao-cfp-e-crp]] : Falar de psicologia é terreno regulado pelo CFP, e isso limita o que pode ser escrito e por quem
 
 ## 🟠 Ideias

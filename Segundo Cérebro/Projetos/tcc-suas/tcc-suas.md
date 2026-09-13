@@ -9,7 +9,14 @@ atualizado: 2026-09-12
 
 # Pesquisa de TCC: SUAS
 
-TCC 2, em construção e em fase de coleta de dados. A coleta acontece nas rodas.
+**Os Saberes das Encruzilhadas e os Servidores Públicos da Linha de Frente.** Trabalho de
+Conclusão de Curso em Psicologia, PUC Minas, Belo Horizonte, 2026.
+
+Pesquisa própria, empírica, autorizada e executada no **SUAS de Belo Horizonte** e no
+**Hospital do IPSEMG**. TCC 2 em construção, com a coleta acontecendo nas rodas.
+
+É a única obra da seção "Mas antes, ciência" do site que é autoria da PAAPS. Ver
+[[obras-da-ciencia-que-sustentam-o-metodo]].
 
 Drive atualizado: `drive.google.com/drive/folders/1vzNduNF5k3bhmWzHulphslnnQMkMur5s`
 

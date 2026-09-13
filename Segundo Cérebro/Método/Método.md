@@ -26,6 +26,7 @@ O trabalho em campo: as fases, a supervisão, a base teórica e a régua de font
 - [[metodologia-paaps]] : O que a PAAPS entrega e como explica cada frente, ditado pela Mallu em 02/08/2026
 - [[roda-de-equipe-paaps]] : A Roda de Equipe é o encontro mensal de até 10 servidores conduzido por psicóloga formada no método, em três fases
 - [[supervisao-da-metodologia]] : Quem faz a supervisão na metodologia PAAPS, e por que nunca se escreve 'supervisão clínica em campo'
+- [[tres-frentes-de-oferta]] : A PAAPS vende três frentes: cuidado e integração de rede, treinamentos, e urgências e eventos extremos
 
 ## Onde isso serve
 

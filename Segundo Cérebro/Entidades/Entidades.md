@@ -26,8 +26,9 @@ Uma nota por pessoa e por instituição que importa para a PAAPS. Cada uma diz q
 - [[digging]] : A pessoa jurídica que assina contrato e emite nota é a DIGGING; o PAAPS é a metodologia proprietária dela, e confundir os dois em edital é erro grave
 - [[equipe-paaps]] : A estrutura de três níveis da equipe semente e a ordem exata das palavras de cada descritivo, válida para site, proposta, edital e apresentação
 - [[fabiane-vasconcellos]] : Fabiane Vasconcellos, founder da DIGGING e sócia majoritária, é o lastro executivo que a PAAPS apresenta a investidor
+- [[gabriela-diniz]] : Psicóloga e atriz, supervisora na metodologia PAAPS e criadora do TEAtrar
 - [[gustavo-faria]] : Gustavo Faria é especialista em comunidade da PAAPS e companheiro da Mallu, moram juntos
-- [[iago-torres]] : Iago Torres, candidato a deputado estadual por São Paulo, já fez collab com a PAAPS
+- [[lucas-pimenta]] : Psicólogo do território, supervisor na metodologia PAAPS, cunhou o conceito do Avesso da Clínica
 - [[luiz-sergio-barbosa]] : Luiz Sérgio Barbosa é o consultor financeiro da PAAPS, ex-diretor financeiro da FEBRABAN, e o nome se escreve Luiz com z
 - [[mallu-formacao-e-crp]] : Mallu é formanda em psicologia e o CRP sai em fevereiro, e até lá 'psicóloga' não pode ser usado em peça pública
 - [[mallu-vasconcellos]] : Quem é Mallu Vasconcellos, o que ela faz e por que hoje ela e a PAAPS são praticamente a mesma coisa
@@ -35,6 +36,7 @@ Uma nota por pessoa e por instituição que importa para a PAAPS. Cada uma diz q
 - [[refazenda-rio-xopoto]] : Refazenda Rio Xopotó, em Desterro do Melo, foi parceria de 2024 e hoje não há relação ativa
 - [[sara-vitral]] : Sara Vitral, candidata a deputada estadual por Minas Gerais, fez collab em vídeo com a Mallu
 - [[schwartz-center]] : O Schwartz Center, de Boston, licencia hoje as Schwartz Rounds no Reino Unido e na Irlanda, e é a referência internacional que a PAAPS cita
+- [[yago-torres]] : Yago Torres, candidato a deputado estadual por São Paulo, já fez collab com a PAAPS
 - [[yunus-negocios-sociais]] : Yunus Negócios Sociais é referência de metodologia de impacto e parceira ativa via Desafio Regenera
 
 ## Onde isso serve

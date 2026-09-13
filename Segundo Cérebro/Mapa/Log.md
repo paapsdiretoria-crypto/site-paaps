@@ -35,15 +35,15 @@ registrada em [[equipe-paaps]]: vínculo nunca escondido, descritivo sempre prof
 diante de cliente.
 
 Cinco organizações de posicionamento e história entraram como entidade: [[sara-vitral]] e
-[[iago-torres]] (collab com candidatos, relação ativa), [[yunus-negocios-sociais]]
+[[yago-torres]] (collab com candidatos, relação ativa), [[yunus-negocios-sociais]]
 (Desafio Regenera, relação ativa), [[refazenda-rio-xopoto]] e [[associacao-allos]]
 (relação encerrada, nunca citáveis em peça pública, ligadas à proibição já existente em
 [[paaps]]).
 
 ## [2026-09-13] faxina | ECOA de 12 para 10 notas
 
-[[proposito-ecoa]] e [[quem-somos-ecoa]] fundidas em [[identidade-ecoa]]: respondiam a
-mesma pergunta duas vezes. [[personas-ecoa]] absorvida em [[estrutura-de-grupos-ecoa]],
+[[posicionamento-ecoa]] e [[identidade-ecoa]] fundidas em [[identidade-ecoa]]: respondiam a
+mesma pergunta duas vezes. [[posicionamento-ecoa]] absorvida em [[estrutura-de-grupos-ecoa]],
 por ser um resumo de duas frases redirecionando para a mesma evidência. Zero conteúdo
 perdido, zero link quebrado.
 
@@ -59,3 +59,11 @@ conceitos ([[cascata-do-cuidado]], [[a-resposta-ja-esta-na-equipe]],
 [[ponto-de-apoio-estrategia]]), seis notas de dado com fonte, o [[schwartz-center]] com as
 quatro regras de citação, e [[risco-de-marca-ponto-de-apoio]], que é registro vivo no INPI
 na classe 41 e precisa de advogado.
+
+## [2026-09-13] site | o que está no ar virou 6 notas
+
+A copy publicada em paaps.com.br entrou: [[site-paaps-no-ar]] com a ordem dos blocos e as
+regras que a copy fixou, [[tres-frentes-de-oferta]], [[dados-autorizados-do-site]] com os
+quatro dados já publicados, [[obras-da-ciencia-que-sustentam-o-metodo]], mais
+[[lucas-pimenta]], [[gabriela-diniz]] e o conceito [[avesso-da-clinica]]. O título real do
+TCC apareceu aqui e completou [[tcc-suas]].

@@ -26,7 +26,7 @@ a proibição de conteúdo pejorativo sobre o governo vigente.
 
 ## Ligações
 
-[[mallu-vasconcellos]] · [[iago-torres]] · [[conteudo-paaps]]
+[[mallu-vasconcellos]] · [[yago-torres]] · [[conteudo-paaps]]
 
 ## Onde isso serve
 

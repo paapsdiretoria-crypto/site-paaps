@@ -21,6 +21,7 @@ A mina principal destas notas é [[tcc-suas]], onde as conceituações são cons
 ## O que tem aqui
 
 - [[a-resposta-ja-esta-na-equipe]] : A PAAPS não leva solução pronta: ela desvela o que a própria equipe já sabe e não consegue acessar sozinha
+- [[avesso-da-clinica]] : O Avesso da Clínica é a psicologia feita onde as pessoas estão, e não onde o consultório espera que elas apareçam
 - [[capilaridade-do-sus]] : O ativo não é o tamanho do mercado, é a capilaridade do SUS, que chega a 5.570 municípios e é a maior malha de cuidado já construída
 - [[cascata-do-cuidado]] : Cuidar da equipe melhora o cuidado que a população recebe, e esse efeito é mensurável
 - [[crenca-mutua-entre-quem-cuida-e-cidadao]] : O trabalho na rede só funciona com crença mútua, e a lógica individualista é o que quebra essa crença dos dois lados
