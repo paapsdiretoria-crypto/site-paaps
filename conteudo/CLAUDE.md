@@ -76,7 +76,7 @@ Núcleo comum: `../Segundo Cérebro/Voz/Voz.md`
 | buscador-fotos | `mapa-fontes-foto.md` + `visual-instagram.md` |
 | aplicador-visual | `identidade-aplicada.md` + `visual-instagram.md` |
 | critico-design | `criterios-design.md` + `qualidade-frontend.md` |
-| critico-conteudo | `voz-paaps.md` (agente ainda vazio, ver pendências) |
+| critico-conteudo | `voz-paaps.md` + `modelos-slide-paaps.md` + `anatomia-do-carrossel-aprovado.md` + próprio `APRENDIZADO.md` |
 
 ---
 
@@ -92,8 +92,6 @@ Entregas finais de peça: `conteudo/instagram/<perfil>/entregas/AAAA-MM-MÊS/<se
 
 ## Pendências abertas
 
-- **`critico-conteudo` é placeholder vazio.** O QA final da seção 8 não tem dono, então hoje quem
-  julga o texto é quem escreveu. É o ponto mais frágil do fluxo rodando sem a Mallu.
 - **`ecoa` incompleto.** Não entra em produção antes de sessão dedicada com ela.
 - **Nó visual.** A régua subiu ao nível Radilson e não há fonte própria que a sustente.
 - **Corpus de voz pessoal da Mallu não mapeado** (reels, carrosséis e LinkedIn do

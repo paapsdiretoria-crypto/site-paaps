@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>INSS: o órgão que carimba sofrimento e não vê o próprio : sessão 01</title>
+<style>
+  @font-face{ font-family:'League Spartan'; src:url('fontes/LeagueSpartan-Bold.ttf'); font-weight:700; }
+  @font-face{ font-family:'League Spartan'; src:url('fontes/LeagueSpartan-ExtraBold.ttf'); font-weight:800; }
+
+  :root{
+    --cor-fundo:#f5f1e1;
+    --cor-marrom:#442309;
+    --cor-terracota:#cb4710;
+    --cor-oliva:#aea349;
+    --cor-amarelo:#f7c31c;
+    --cor-bege-rosa:#bbada2;
+    --cor-branco:#ffffff;
+    --fonte-titulo:Helvetica,'Nimbus Sans PAAPS',Arial,sans-serif;
+    --fonte-label:'League Spartan',Helvetica,Arial,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:#111;}
+  .slide{
+    width:1080px;height:1350px;position:relative;overflow:hidden;
+    background:var(--cor-marrom);
+    font-family:var(--fonte-titulo);
+    color:var(--cor-branco);
+    page-break-after:always;
+  }
+  .slide::after{
+    content:'';position:absolute;inset:0;pointer-events:none;
+    background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+  }
+  .foto{position:absolute;left:0;width:1080px;object-fit:cover;z-index:0;}
+
+  /* véu chapado, uniforme : nunca gradiente. Opacidade varia por slide via style inline. */
+  .escurecer{position:absolute;inset:0;z-index:1;background:#000;}
+
+  /* textura de marca : Textura 4, esparsa (sem repeat), opacidade 0.05, só sobre área sólida
+     de cor (card, area-dado), nunca sobre foto direta. Número calibrado na peça de referência. */
+  .textura{position:absolute;inset:0;z-index:1;pointer-events:none;
+           background-repeat:no-repeat;background-position:center;background-size:140%;opacity:0.05;}
+  .textura--marrom{background-image:url('texturas/textura-marrom.png');}
+  .textura--branco{background-image:url('texturas/textura-branco.png');}
+
+  .conteudo{position:relative;z-index:2;width:100%;height:100%;padding:72px 76px;display:flex;flex-direction:column;}
+  .amarelo{color:var(--cor-amarelo);font-weight:700;}
+  .amarelo-sub{text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:6px;}
+  .label{font-family:var(--fonte-label);font-weight:700;letter-spacing:0;text-transform:uppercase;}
+
+  /* fonte do dado : só onde existe reivindicação verificável. Helvetica negrito, nunca League Spartan. */
+  .fonte-rodape{position:absolute;left:76px;bottom:56px;z-index:3;font-family:var(--fonte-titulo);font-weight:700;font-size:22px;color:var(--cor-branco);max-width:640px;line-height:1.3;}
+  .logo{position:absolute;right:76px;bottom:52px;z-index:3;height:52px;}
+
+  .headline-grande{font-size:68px;font-weight:700;line-height:1.16;}
+  .headline-media{font-size:52px;font-weight:700;line-height:1.18;}
+  .corpo{font-size:34px;font-weight:400;line-height:1.4;}
+  .corpo-menor{font-size:29px;font-weight:400;line-height:1.42;color:rgba(255,255,255,0.92);}
+
+  /* ===================== SLIDE 1 : CAPA-PERGUNTA (M1), 3 blocos de escala decrescente ===================== */
+  #s1 .foto{top:0;height:1350px;object-position:44% 38%;}
+  #s1 .escurecer{background:rgba(0,0,0,0.58);}
+  #s1 .conteudo{justify-content:flex-end;padding-bottom:150px;gap:22px;}
+  #s1 .bloco1{font-size:50px;font-weight:700;line-height:1.2;text-transform:uppercase;}
+  #s1 .bloco2{font-size:32px;font-weight:700;line-height:1.28;text-transform:uppercase;color:rgba(255,255,255,0.95);}
+  #s1 .bloco3{font-size:24px;font-weight:400;line-height:1.36;text-transform:uppercase;color:rgba(255,255,255,0.82);max-width:820px;margin-left:36px;padding-left:20px;border-left:2px solid rgba(255,255,255,0.35);}
+
+  /* ===================== SLIDE 2 : AFIRMAÇÃO CONTINUADA (M2) ===================== */
+  #s2 .foto{top:0;height:1350px;object-position:66% 56%;}
+  #s2 .escurecer{background:rgba(0,0,0,0.52);}
+  #s2 .conteudo{justify-content:flex-end;padding-bottom:170px;gap:26px;}
+  #s2 .abertura{font-size:44px;font-weight:700;line-height:1.22;text-transform:uppercase;}
+  #s2 .fecho{font-size:36px;font-weight:400;line-height:1.32;}
+
+  /* ===================== SLIDE 3 : DADO EM CARD (M5). Card marrom sólido (variante aprovada). ===================== */
+  #s3 .foto{top:0;height:620px;object-position:63% 48%;}
+  #s3 .card{position:absolute;left:76px;right:76px;top:590px;
+             border:1px solid rgba(255,255,255,0.16);padding:56px 60px;z-index:2;overflow:hidden;
+             background:var(--cor-marrom);color:var(--cor-branco);}
+  #s3 .card .headline-media{color:var(--cor-branco);font-size:42px;margin-bottom:28px;position:relative;z-index:2;text-transform:uppercase;}
+  #s3 .card .corpo{color:rgba(255,255,255,0.92);font-size:32px;position:relative;z-index:2;}
+  #s3 .amarelo{color:var(--cor-amarelo);}
+  #s3 .fonte-rodape{color:var(--cor-branco);}
+
+  /* ===================== SLIDE 4 : CITAÇÃO (M4), voz real de Miucha Cicaroni =====================
+     Foto: recorte deliberadamente fechado no grupo que escuta (de costas), evitando por completo o
+     rosto de quem fala ao microfone na foto de origem : risco de confusão de autoria sinalizado pelo
+     Buscador (a citação é de Miucha Cicaroni, não da pessoa fotografada). Fundo/zoom calibrados via
+     background-position em vez de object-fit, pra controlar o corte com precisão. */
+  #s4 .foto-wrap{position:absolute;inset:0;z-index:0;background-image:url('fotos/slide-04.jpg');
+                  background-repeat:no-repeat;background-size:260%;background-position:82% 78%;}
+  #s4 .escurecer{background:rgba(0,0,0,0.68);}
+  #s4 .conteudo{justify-content:center;gap:28px;padding-top:60px;padding-bottom:60px;}
+  #s4 .aspa{font-family:var(--fonte-label);font-size:110px;color:var(--cor-amarelo);line-height:0.5;font-weight:800;}
+  #s4 .citacao{font-size:46px;font-weight:700;line-height:1.34;text-transform:uppercase;}
+  #s4 .atribuicao{font-size:24px;color:var(--cor-bege-rosa);font-weight:400;line-height:1.44;max-width:860px;}
+  #s4 .fonte-rodape{color:var(--cor-branco);}
+
+  /* ===================== SLIDE 5 : AFIRMAÇÃO CONTINUADA (M2), o mecanismo ===================== */
+  #s5 .foto{top:0;height:1350px;object-position:50% 42%;}
+  #s5 .escurecer{background:rgba(0,0,0,0.55);}
+  #s5 .conteudo{justify-content:flex-end;padding-bottom:170px;gap:24px;}
+  #s5 .abertura{font-size:42px;font-weight:700;line-height:1.24;text-transform:uppercase;}
+  #s5 .fecho{font-size:33px;font-weight:400;line-height:1.34;max-width:900px;}
+
+  /* ===================== SLIDE 6 : NÚMERO GIGANTE (M6) ===================== */
+  #s6{background:var(--cor-marrom);}
+  #s6 .foto{top:0;height:560px;object-position:55% 55%;}
+  #s6 .area-dado{position:absolute;left:0;right:0;top:560px;bottom:0;z-index:1;background:var(--cor-marrom);overflow:hidden;}
+  #s6 .conteudo{justify-content:flex-end;padding-bottom:180px;gap:16px;}
+  #s6 .numero{font-family:var(--fonte-label);font-weight:800;font-size:150px;color:var(--cor-amarelo);line-height:0.95;}
+  #s6 .headline-media{font-size:36px;font-weight:400;max-width:840px;line-height:1.32;}
+  #s6 .fonte-rodape{max-width:700px;}
+
+  /* ===================== SLIDE 7 : NOMEAÇÃO (M7), a virada ===================== */
+  #s7 .foto{top:0;height:1350px;object-position:55% 45%;}
+  #s7 .escurecer{background:rgba(0,0,0,0.62);}
+  #s7 .conteudo{justify-content:flex-start;padding-top:96px;gap:30px;}
+  #s7 .entrada{font-size:32px;font-weight:700;line-height:1.26;text-transform:uppercase;}
+  #s7 .virada{font-family:var(--fonte-label);font-size:42px;font-weight:700;line-height:1.32;max-width:900px;}
+  #s7 .lista{display:flex;flex-direction:column;gap:10px;}
+  #s7 .lista div{font-size:27px;font-weight:700;line-height:1.32;}
+  #s7 .enquadre{font-size:25px;font-weight:700;line-height:1.4;text-transform:uppercase;color:rgba(255,255,255,0.94);max-width:900px;}
+  #s7 .fonte-rodape{color:var(--cor-branco);}
+
+  /* ===================== SLIDE 8 : FECHAMENTO (M1 variante), pergunta diagnóstica =====================
+     Foto sangra até o fim, sem faixa (regra da anatomia aprovada, Parte 2). */
+  #s8 .foto{top:0;height:1350px;object-position:50% 24%;}
+  #s8 .escurecer{background:rgba(0,0,0,0.56);}
+  #s8 .conteudo{justify-content:flex-end;padding-bottom:150px;gap:32px;}
+  #s8 .movimento{font-size:29px;font-weight:400;line-height:1.42;max-width:920px;color:rgba(255,255,255,0.94);}
+  #s8 .pergunta{font-size:46px;font-weight:700;line-height:1.28;max-width:920px;text-transform:uppercase;}
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1 : CAPA-PERGUNTA (M1) -->
+<section class="slide" id="s1">
+  <img class="foto" src="fotos/slide-01.jpg">
+  <div class="escurecer"></div>
+  <div class="conteudo">
+    <div class="bloco1">O INSS carimba o sofrimento de quem trabalha no Brasil inteiro. <span class="amarelo amarelo-sub">Quem carimba o sofrimento de quem trabalha aqui dentro?</span></div>
+    <div class="bloco2">A fila pra conseguir esse carimbo só cresce. E quem deveria dar esse carimbo também está&nbsp;adoecendo.</div>
+    <div class="bloco3">A fila tem número público, atualizado todo mês. Quem lê esse sofrimento inteiro, todo dia, não tem nenhum.</div>
+  </div>
+  <img class="logo" src="logo/logo-branco.png">
+</section>
+
+<!-- SLIDE 2 : AFIRMAÇÃO CONTINUADA (M2) -->
+<section class="slide" id="s2">
+  <img class="foto" src="fotos/slide-02.jpg">
+  <div class="escurecer"></div>
+  <div class="conteudo">
+    <div class="abertura">Em vinte anos, governo após governo, por escolha orçamentária repetida, sem repor o quadro na mesma velocidade em que ele se esvaziava,</div>
+    <div class="fecho">o INSS perdeu <span class="amarelo">56%</span> dos servidores que já teve: 24 mil vagas a menos.</div>
+  </div>
+  <div class="fonte-rodape">Agência Pública, mar. 2026.</div>
+  <img class="logo" src="logo/logo-branco.png">
+</section>
+
+<!-- SLIDE 3 : DADO EM CARD (M5) -->
+<section class="slide" id="s3">
+  <img class="foto" src="fotos/slide-03.jpg">
+  <div class="card">
+    <div class="textura textura--branco"></div>
+    <div class="headline-media">A fila pra conseguir esse carimbo <span class="amarelo">triplicou</span> em três anos.</div>
+    <div class="corpo">De 1,08 milhão de pedidos parados, em dezembro de 2022, para 3,1 milhões, em fevereiro de 2026.</div>
+  </div>
+  <div class="fonte-rodape">Agência Pública, mar. 2026.</div>
+  <img class="logo" src="logo/logo-branco.png">
+</section>
+
+<!-- SLIDE 4 : CITAÇÃO (M4) : Miucha Cicaroni -->
+<section class="slide" id="s4">
+  <div class="foto-wrap"></div>
+  <div class="escurecer"></div>
+  <div class="conteudo">
+    <div class="aspa">&ldquo;</div>
+    <div class="citacao">Numa tentativa de se adaptar, a gente vai <span class="amarelo">adoecendo</span>.</div>
+    <div class="atribuicao">Miucha Cicaroni, 47 anos, servidora do INSS em Campinas (SP). Trabalha na concessão de benefícios, inclusive no auxílio-doença de quem precisa se afastar do próprio trabalho. Foi diagnosticada com burnout em setembro de 2025, o segundo episódio dela desde 2021. Denunciou o próprio INSS ao Ministério Público do Trabalho.</div>
+  </div>
+  <div class="fonte-rodape">Agência Pública, mar. 2026.</div>
+  <img class="logo" src="logo/logo-branco.png">
+</section>
+
+<!-- SLIDE 5 : AFIRMAÇÃO CONTINUADA (M2) : o mecanismo -->
+<section class="slide" id="s5">
+  <img class="foto" src="fotos/slide-05.jpg">
+  <div class="escurecer"></div>
+  <div class="conteudo">
+    <div class="abertura">Quanto menos gente sobra pra ler esse sofrimento todo,</div>
+    <div class="fecho">mais fila se acumula, que vira mais meta de mutirão, que aperta ainda mais quem ficou, até quem ficou também <span class="amarelo">adoecer</span>: e o círculo se fecha sozinho.</div>
+  </div>
+  <img class="logo" src="logo/logo-branco.png">
+</section>
+
+<!-- SLIDE 6 : NÚMERO GIGANTE (M6) -->
+<section class="slide" id="s6">
+  <img class="foto" src="fotos/slide-06.jpg">
+  <div class="area-dado"><div class="textura textura--branco"></div></div>
+  <div class="conteudo">
+    <div class="numero">1.871</div>
+    <div class="headline-media">servidores do INSS afastados por transtorno mental ou comportamental, só entre 2024 e 2025.</div>
+  </div>
+  <div class="fonte-rodape">1.871 servidores afastados entre 2024 e 2025, por transtorno mental ou comportamental. Fonte: Agência Pública, mar. 2026.</div>
+  <img class="logo" src="logo/logo-branco.png">
+</section>
+
+<!-- SLIDE 7 : NOMEAÇÃO (M7) : a virada -->
+<section class="slide" id="s7">
+  <img class="foto" src="fotos/slide-07.jpg">
+  <div class="escurecer"></div>
+  <div class="conteudo">
+    <div class="entrada">A fila tem número público todo mês.</div>
+    <div class="virada">A mesma máquina que lê o laudo de um país inteiro não consegue ler <span class="amarelo">o próprio</span>.</div>
+    <div class="lista">
+      <div>Meta de mutirão pra dar conta da fila.</div>
+      <div>Sofrimento alheio, lido todo dia, sem pausa pra processar.</div>
+      <div>Isso também é trabalho: e a própria instituição nunca mediu.</div>
+    </div>
+    <div class="enquadre">O Estado pediu concurso para 8.500 vagas em 2026: resposta de gente faltando, não de como esse trabalho é organizado.</div>
+  </div>
+  <div class="fonte-rodape">Agência Pública, mar. 2026.</div>
+  <img class="logo" src="logo/logo-branco.png">
+</section>
+
+<!-- SLIDE 8 : FECHAMENTO (M1 variante) : pergunta diagnóstica -->
+<section class="slide" id="s8">
+  <img class="foto" src="fotos/slide-08.jpg">
+  <div class="escurecer"></div>
+  <div class="conteudo">
+    <div class="movimento">Vinte anos de decisão silenciosa viraram fila, viraram manchete, viraram CPI: o Congresso agora investiga o próprio órgão. Se as 8.500 vagas novas repetirem o mesmo jeito de organizar esse trabalho, o salto que já tirou 1.871 pessoas da ativa por transtorno mental se repete, maior.</div>
+    <div class="pergunta"><span class="amarelo amarelo-sub">Que outro órgão, na sua rede, também carimba o sofrimento alheio e não vê o próprio?</span></div>
+  </div>
+  <img class="logo" src="logo/logo-branco.png">
+</section>
+
+<script>
+(()=>{
+  const n = new URLSearchParams(location.search).get('solo');
+  if(!n) return;
+  document.querySelectorAll('.slide').forEach((s)=>{
+    s.style.display = (s.id === ('s'+n)) ? '' : 'none';
+  });
+  window.scrollTo(0,0);
+})();
+</script>
+</body>
+</html>

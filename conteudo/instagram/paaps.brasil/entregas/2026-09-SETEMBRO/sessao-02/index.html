@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Rotatividade das ACS — sessao-02 — 02/09/2026</title>
+<style>
+  @font-face{ font-family:'League Spartan'; src:url('fontes/LeagueSpartan-Bold.ttf'); font-weight:700; }
+  @font-face{ font-family:'League Spartan'; src:url('fontes/LeagueSpartan-ExtraBold.ttf'); font-weight:800; }
+
+  :root{
+    --cor-fundo:#f5f1e1;
+    --cor-marrom:#442309;
+    --cor-terracota:#cb4710;
+    --cor-oliva:#aea349;
+    --cor-amarelo:#f7c31c;
+    --cor-bege-rosa:#bbada2;
+    --cor-branco:#ffffff;
+    --fonte-titulo:Helvetica,'Nimbus Sans PAAPS',Arial,sans-serif;
+    --fonte-label:'League Spartan',Helvetica,Arial,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:#111;}
+  .slide{
+    width:1080px;height:1350px;position:relative;overflow:hidden;
+    background:var(--cor-marrom);
+    font-family:var(--fonte-titulo);
+    color:var(--cor-branco);
+    page-break-after:always;
+  }
+  .slide::after{
+    content:'';position:absolute;inset:0;pointer-events:none;
+    background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+  }
+  .foto{position:absolute;left:0;width:1080px;object-fit:cover;z-index:0;}
+
+  /* véu chapado, uniforme — nunca gradiente. Opacidade varia por slide via style inline. */
+  .escurecer{position:absolute;inset:0;z-index:1;background:#000;}
+
+  /* textura de marca — só na faixa bege/creme (o marrom fica sem textura). Textura 4,
+     sem repeat, opacidade 0.05 (anatomia-do-carrossel-aprovado.md). */
+  .textura{position:absolute;inset:0;z-index:1;pointer-events:none;
+           background-repeat:no-repeat;background-position:center;background-size:140%;opacity:0.05;}
+  .textura--marrom{background-image:url('texturas/textura-marrom.png');}
+  .textura--branco{background-image:url('texturas/textura-branco.png');}
+
+  .conteudo{position:relative;z-index:2;width:100%;height:100%;padding:72px 76px;display:flex;flex-direction:column;}
+  .amarelo{color:var(--cor-amarelo);font-weight:700;}
+  .amarelo-sub{text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:6px;}
+  .label{font-family:var(--fonte-label);font-weight:700;letter-spacing:0;text-transform:uppercase;}
+
+  /* fonte do dado — só onde existe reivindicação verificável. Helvetica negrito, nunca League Spartan. */
+  .fonte-rodape{position:absolute;left:76px;bottom:56px;z-index:3;font-family:var(--fonte-titulo);font-weight:700;font-size:24px;color:var(--cor-branco);max-width:640px;line-height:1.3;}
+  .logo{position:absolute;right:76px;bottom:52px;z-index:3;height:52px;}
+
+  /* Nenhum slide desta peça tem crédito de fotógrafo/pessoa conhecido (ver fotos-peca2.md:
+     acervo próprio PAAPS, licença não declarada, sem nome). Lei 3 do catálogo: sem origem
+     conhecida, omite a linha inteira — por isso .credito-foto não é usada em nenhum #sN aqui. */
+
+  .headline-grande{font-size:68px;font-weight:700;line-height:1.16;}
+  .headline-media{font-size:52px;font-weight:700;line-height:1.18;}
+  .corpo{font-size:34px;font-weight:400;line-height:1.4;}
+  .corpo-menor{font-size:29px;font-weight:400;line-height:1.42;color:rgba(255,255,255,0.92);}
+
+  /* SLIDE 1 — CAPA (M1, variante declarativa de impossibilidade estrutural) */
+  #s1 .foto{top:0;height:1350px;object-position:32% 30%;}
+  #s1 .escurecer{background:rgba(0,0,0,0.5);}
+  #s1 .conteudo{justify-content:flex-end;padding-bottom:190px;gap:24px;}
+
+  /* SLIDE 2 — AFIRMAÇÃO CONTINUADA (M2) */
+  #s2 .foto{top:0;height:1350px;object-position:62% 38%;}
+  #s2 .escurecer{background:rgba(0,0,0,0.42);}
+  #s2 .conteudo{justify-content:flex-end;padding-bottom:190px;gap:26px;}
+
+  /* SLIDE 3 — DADO EM CARD (M5). Aqui o Copywriter pediu o achado FORA do card, em cima da
+     foto (anatomia original do M5, passo 2 separado do passo 3) — por isso a foto leva véu
+     e a frase de abertura entra no .conteudo, com o card entrando depois, mais abaixo. */
+  #s3 .foto{top:0;height:760px;object-position:30% 40%;}
+  #s3 .escurecer{position:absolute;left:0;right:0;top:0;height:760px;z-index:1;background:rgba(0,0,0,0.4);}
+  #s3 .conteudo{justify-content:flex-start;padding-top:84px;padding-bottom:0;}
+  #s3 .headline-media{font-size:44px;}
+  #s3 .card{position:absolute;left:76px;right:76px;top:760px;bottom:170px;
+             border:1px solid rgba(255,255,255,0.16);padding:48px 56px;z-index:2;overflow:hidden;
+             background:var(--cor-marrom);color:var(--cor-branco);display:flex;flex-direction:column;justify-content:center;}
+  #s3 .card .corpo{color:rgba(255,255,255,0.92);font-size:32px;position:relative;z-index:2;}
+  #s3 .fonte-rodape{color:var(--cor-branco);}
+
+  /* SLIDE 4 — CITAÇÃO (M4) */
+  #s4 .foto{top:0;height:1350px;object-position:80% 42%;}
+  #s4 .escurecer{background:rgba(0,0,0,0.62);}
+  #s4 .conteudo{justify-content:center;gap:34px;}
+  #s4 .aspa{font-family:var(--fonte-label);font-size:120px;color:var(--cor-amarelo);line-height:0.5;font-weight:800;}
+  #s4 .citacao{font-size:56px;font-weight:700;line-height:1.32;}
+  #s4 .atribuicao{font-size:27px;color:var(--cor-bege-rosa);font-weight:400;}
+
+  /* SLIDE 5 — RESPIRO (M3). Véu bem leve (0.22) só pra garantir contraste onde a janela
+     estoura de luz atrás do texto — a foto é clara por natureza, isso não é um véu de
+     legibilidade pesado. Sem crédito, sem bloco de dado — regra do próprio modelo. */
+  #s5 .foto{top:0;height:1350px;object-position:38% 42%;}
+  #s5 .escurecer{background:rgba(0,0,0,0.22);}
+  #s5 .conteudo{justify-content:center;align-items:flex-start;padding-top:150px;}
+  #s5 .headline-grande{font-size:58px;max-width:940px;font-weight:700;color:var(--cor-branco);}
+
+  /* SLIDE 6 — VIRADA / NOMEAÇÃO (M7). Foto única (não split: essa peça não tem par de
+     fotos para o slide 6), com véu mais forte pela quantidade de texto em camadas. */
+  #s6 .foto{top:0;height:1350px;object-position:50% 38%;}
+  #s6 .escurecer{background:rgba(0,0,0,0.58);}
+  #s6 .conteudo{justify-content:flex-start;padding-top:80px;gap:22px;}
+  #s6 .entrada{font-size:40px;font-weight:700;line-height:1.22;}
+  #s6 .virada{font-size:42px;font-weight:400;line-height:1.28;}
+  #s6 .virada strong{font-weight:700;}
+  #s6 .lista{font-size:27px;font-weight:700;line-height:1.42;color:rgba(255,255,255,0.94);}
+  #s6 .lista div{margin-bottom:2px;}
+  #s6 .enquadre{font-size:25px;font-weight:700;line-height:1.4;color:rgba(255,255,255,0.92);max-width:900px;}
+
+  /* SLIDE 7 — NÚMERO GIGANTE (M6) */
+  #s7{background:var(--cor-marrom);}
+  #s7 .foto{top:0;height:560px;object-position:50% 12%;}
+  #s7 .area-dado{position:absolute;left:0;right:0;top:560px;bottom:0;z-index:1;background:var(--cor-marrom);overflow:hidden;}
+  #s7 .conteudo{justify-content:flex-end;padding-bottom:170px;gap:16px;}
+  #s7 .numero{font-family:var(--fonte-label);font-weight:800;font-size:150px;color:var(--cor-amarelo);line-height:0.95;}
+  #s7 .headline-media{font-size:38px;font-weight:400;max-width:840px;}
+  #s7 .corpo-menor{max-width:860px;}
+
+  /* SLIDE 8 — PERGUNTA (M1, variante diagnóstica). Sem CTA institucional, sem link, sem
+     nome do PAAPS no texto (o eixo da peça pede fechamento em pergunta, não conversão). */
+  #s8 .foto{top:0;height:1350px;object-position:50% 30%;}
+  #s8 .escurecer{background:rgba(0,0,0,0.5);}
+  #s8 .conteudo{justify-content:flex-end;padding-bottom:170px;gap:30px;}
+  #s8 .abertura{font-size:36px;font-weight:700;line-height:1.28;max-width:940px;}
+  #s8 .pergunta{font-size:34px;font-weight:400;line-height:1.42;max-width:900px;}
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1 : CAPA — M1 variante declarativa -->
+<section class="slide" id="s1">
+  <img class="foto" src="fotos/slide-01.jpg">
+  <div class="escurecer"></div>
+  <div class="conteudo">
+    <div class="headline-grande">A PORTA SÓ ABRE PORQUE ELA <span class="amarelo amarelo-sub">MORA</span> NO MESMO BAIRRO.</div>
+    <div class="corpo">É esse mesmo vínculo que a meta diária da Agente Comunitária de Saúde, a <strong>ACS</strong>, gasta até romper.</div>
+  </div>
+  <img class="logo" src="logo/logo-branco.png">
+</section>
+
+<!-- SLIDE 2 : RAIZ HISTÓRICA — M2 afirmação continuada -->
+<section class="slide" id="s2">
+  <img class="foto" src="fotos/slide-02.jpg">
+  <div class="escurecer"></div>
+  <div class="conteudo">
+    <div class="headline-grande">DESDE A LEI QUE CRIOU A CARREIRA, EM 2006, a exigência para ser Agente Comunitária de Saúde é morar no bairro onde vai trabalhar: a Lei 11.350 fez da vizinhança o <span class="amarelo">pré-requisito do contrato</span> dela.</div>
+  </div>
+  <img class="logo" src="logo/logo-branco.png">
+</section>
+
+<!-- SLIDE 3 : CONTRADIÇÃO EM DADO — M5 dado em card (achado fora do card, sobre a foto) -->
+<section class="slide" id="s3">
+  <img class="foto" src="fotos/slide-03.jpg">
+  <div class="escurecer"></div>
+  <div class="conteudo">
+    <div class="headline-media">PARA A PORTA ABRIR, A AGENTE COMUNITÁRIA DE SAÚDE PRECISA SER <span class="amarelo">VIZINHA</span>. PARA A META FECHAR, A VISITA DELA VIRA NÚMERO.</div>
+  </div>
+  <div class="card">
+    <div class="textura textura--branco"></div>
+    <div class="corpo">1 Agente Comunitária de Saúde para cada 750 pessoas, com no mínimo 8 visitas por dia: o mesmo vínculo que abre a porta é o que a meta conta.</div>
+  </div>
+  <div class="fonte-rodape">Lei 11.350/2006 · parâmetro de cobertura do Ministério da Saúde</div>
+  <img class="logo" src="logo/logo-branco.png">
+</section>
+
+<!-- SLIDE 4 : CITAÇÃO REAL — M4 -->
+<section class="slide" id="s4">
+  <img class="foto" src="fotos/slide-04.jpg">
+  <div class="escurecer"></div>
+  <div class="conteudo">
+    <div class="aspa">&ldquo;</div>
+    <div class="citacao">DIREITO DE FAZER SEM <span class="amarelo amarelo-sub">DIREITO DE SER</span>.</div>
+    <div class="atribuicao">Agente Comunitária de Saúde, em comentário público no @paaps.brasil</div>
+  </div>
+  <img class="logo" src="logo/logo-branco.png">
+</section>
+
+<!-- SLIDE 5 : RESPIRO — M3 -->
+<section class="slide" id="s5">
+  <img class="foto" src="fotos/slide-05.jpg">
+  <div class="escurecer"></div>
+  <div class="conteudo">
+    <div class="headline-grande">A maior malha de cuidado público do mundo anda de porta em porta, sustentada por quem a rede mais <span class="amarelo amarelo-sub">&ldquo;deixa ir embora.&rdquo;</span></div>
+  </div>
+</section>
+
+<!-- SLIDE 6 : VIRADA — M7 nomeação -->
+<section class="slide" id="s6">
+  <img class="foto" src="fotos/slide-06.jpg">
+  <div class="escurecer"></div>
+  <div class="conteudo">
+    <div class="entrada">A CATEGORIA LUTOU 30 ANOS PELO PISO QUE CHEGOU EM 2026.</div>
+    <div class="virada">O salário sobe. <strong>A régua de <span class="amarelo">750 pessoas por agente</span> segue igual.</strong></div>
+    <div class="lista">
+      <div>Mesma rua. Mesmas casas.</div>
+      <div>A mesma agente sozinha nelas, sem reforço de enfermagem.</div>
+      <div>Nenhuma vaga nova para dividir o território.</div>
+    </div>
+    <div class="enquadre">O PISO CHEGA POR EMENDA CONSTITUCIONAL, NÃO POR LEI ORDINÁRIA: A MEDIDA DE QUANTO ESSA CATEGORIA AINDA PRECISA SE PROTEGER SOZINHA.</div>
+  </div>
+  <img class="logo" src="logo/logo-branco.png">
+</section>
+
+<!-- SLIDE 7 : NÚMERO GIGANTE — M6 -->
+<section class="slide" id="s7">
+  <img class="foto" src="fotos/slide-07.jpg">
+  <div class="area-dado"><div class="textura textura--branco"></div></div>
+  <div class="conteudo">
+    <div class="numero">39,9%</div>
+    <div class="headline-media">das Agentes Comunitárias de Saúde contratadas por CLT deixam o posto em até 12 meses.</div>
+    <div class="corpo-menor">O contrato temporário que devia segurar o vínculo é o mesmo que libera a saída quando a sobrecarga aperta. Fonte: levantamento setorial CLT citado em Ciência &amp; Saúde Coletiva/SciELO, 2025, e Revista Médica de Minas Gerais (RMMG), ano não confirmado.</div>
+  </div>
+  <img class="logo" src="logo/logo-branco.png">
+</section>
+
+<!-- SLIDE 8 : FECHAMENTO, PERGUNTA — M1 variante diagnóstica -->
+<section class="slide" id="s8">
+  <img class="foto" src="fotos/slide-08.jpg">
+  <div class="escurecer"></div>
+  <div class="conteudo">
+    <div class="abertura">A rede mais capilarizada do mundo anda de porta em porta com quem ela mais deixa ir embora.</div>
+    <div class="pergunta">No seu município, o que falta primeiro pra Agente Comunitária de Saúde <span class="amarelo amarelo-sub">ficar</span>: salário, gente pra dividir o território, ou suporte de enfermagem pra quem já entrou sem ele?</div>
+  </div>
+  <img class="logo" src="logo/logo-branco.png">
+</section>
+
+<script>
+(()=>{
+  const n = new URLSearchParams(location.search).get('solo');
+  if(!n) return;
+  document.querySelectorAll('.slide').forEach((s)=>{
+    s.style.display = (s.id === ('s'+n)) ? '' : 'none';
+  });
+  window.scrollTo(0,0);
+})();
+</script>
+</body>
+</html>

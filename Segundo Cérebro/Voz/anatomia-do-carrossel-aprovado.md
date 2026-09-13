@@ -104,6 +104,17 @@ ela mediu no próprio Canva e ditou "nível cinco de cem". Textura sempre estrit
 dentro da própria caixa (`overflow:hidden` no elemento pai): nunca vaza para a foto nem para
 uma textura vizinha.
 
+**Correção de 03/09/2026: "só Textura 4" era o exemplo da peça de referência, não a regra
+final.** A Mallu revisou o primeiro lote inteiro (3 peças, 02/09/2026) montado só com Textura 4
+em toda superfície clara e marcou como problema estético (menor que o de foto, mas real): a
+identidade visual da PAAPS tem mais de uma textura em
+`insumos-compartilhados/identidade-visual/04-texturas/`, e o template/`aplicador-visual.md`
+tinham fixado só a 4 como se fosse a única disponível. Daqui pra frente, variar a textura
+entre peças do mesmo lote (não a mesma textura em todas as 3), mantendo os mesmos parâmetros
+calibrados acima (`no-repeat`, `140%`, opacidade 0,05) para qualquer textura escolhida, não só
+a 4. Textura 2 segue reservada para uso mais raro, mas não é mais a única alternativa: olhar o
+catálogo completo antes de fixar a mesma peça o lote inteiro.
+
 **Crédito da foto.** Escrito na própria foto, canto superior esquerdo, Helvetica 16px,
 `rgba(255,255,255,0.85)` com `text-shadow` leve para legibilidade em qualquer fundo. Texto
 padrão: `Fotos: Radilson Carlos Gomes, Fotógrafo do SUS.`: só quando a foto é dele. Em slide
@@ -172,6 +183,15 @@ ainda não tem indicador ou programa de cuidado.").
 termo de política pública que o público de gestão não domina de cor ("presenteísmo",
 "Acolhe Mais") nunca aparece só nomeado: vem com o que ele significa na prática, no mesmo
 fôlego.
+
+**Correção de 08/09/2026, peça do INSS.** Termo técnico ou metáfora sem tradução é sintoma de
+uma causa mais funda: a peça usou material já comprimido e analítico da Tecelã (frase pronta,
+mediação institucional) como abertura, sem antes encarnar a mediação que descreve cena ou
+vivência concreta. O teste não é só "isto está explicado?": é "existe, antes desta frase, uma
+cena que faz o leitor sentir que já viveu isto, antes de a peça cobrar dele uma indignação
+institucional"? Frase pronta e conexão inusitada da Tecelã são material de fechamento ou meio,
+já comprimido por ela; nunca abertura sem transformação. Ver `copywriter-paaps.md`, "Como se
+escreve para o slide", regra 3, e `critico-conteudo.md`, item 14 do checklist.
 
 **Notícia recente vira o dado do slide de número quando ela citar uma estatística
 verificável e datada**: não basta ela existir, ela precisa efetivamente conter o número que

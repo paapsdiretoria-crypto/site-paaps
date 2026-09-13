@@ -470,3 +470,28 @@ reagindo ao que eu escrevi ou ao que ela lembra de ter lido.
    autorizado).
 
 Registrado aqui porque as duas vieram do mesmo carrossel de teste, no mesmo slide (4 e 8).
+
+---
+
+## Situação: peça aprovada pelo Crítico (nota alta) ainda assim "tem texto demais" pra Mallu
+
+**Quando acontece:** as 3 peças da rodada de 02/09/2026 (INSS 100/100, ACS 97/100, card 97/100)
+passaram pelo checklist do Crítico sem achado bloqueante de volume de texto (ele mede "uma frase
+de impacto por slide" e "cabe no teto do template", não densidade acumulada da peça inteira). A
+Mallu, olhando o lote pronto, achou "um pouco de texto demais em alguns slides" mesmo assim.
+
+**O que isso revela:** o gate do Crítico cobre estrutura (uma ideia por slide, sem dois murros,
+sem estourar região) mas não cobre a sensação de densidade que vem de somar corpo + rodapé +
+fonte + atribuição em slides que já têm CAPS + destaque. Nenhuma das 3 peças teve achado
+bloqueante nisso, então a régua atual do Crítico não pega esse tipo de "demais".
+
+**Regra que fica (calibração aberta, não fechada ainda):** ao entregar peça pronta, mesmo com
+nota alta do Crítico, reler o lote como um leitor rolando o feed rápido, não slide a slide
+isolado: se dois ou mais slides seguidos têm bloco de corpo + rodapé de fonte + atribuição, o
+volume acumulado pode pesar mesmo que cada slide individualmente esteja dentro do teto. Ainda não
+temos um teste objetivo pra isso (ao contrário do teto de palavras por região, que já é medido);
+próxima rodada, perguntar explicitamente à Mallu quais slides pesaram, pra converter em regra
+com número, não só em impressão.
+
+**Por quê:** o Crítico testa contra o texto que ele tem na mão; a Mallu testa contra a experiência
+de rolar o carrossel inteiro. As duas coisas são diferentes e a segunda ainda não tem instrumento.

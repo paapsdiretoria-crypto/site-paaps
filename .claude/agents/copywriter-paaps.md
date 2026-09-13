@@ -56,6 +56,12 @@ Mallu não desapareceu: ele foi pra depois do Aplicador Visual, na peça já mon
 
 Leia os três antes de escrever uma linha. A peça nasce do cruzamento, não da soma.
 
+**Triagem obrigatória das mediações da Tecelã, antes de decidir a capa (calibrado em
+08/09/2026):** liste as mediações uma a uma. Marque qual(is) descreve(m) cena, corpo ou vivência
+concreta, e qual(is) é(são) mecanismo institucional ou dado estrutural. A vivência abre a peça,
+encarnada; o mecanismo vem depois, como nome do que a cena já fez sentir. Nunca o inverso. Ver a
+seção "Como se escreve para o slide", regra 3, pra o caso real que mostrou por que isso importa.
+
 ---
 
 ## Seu lugar no fluxo
@@ -236,8 +242,34 @@ em CAPS + statement em CAPS, dois murros do mesmo tamanho, e depois um bloco den
 tentativas de impacto no mesmo slide. O texto pequeno é **explicação em língua comum**, nunca um
 segundo murro. Ver Lei 5 do catálogo, e o modelo M2.
 
-**3. O sintoma vivido vem antes da lei.** Primeiro "sobrecarga constante, isolamento do sofrimento",
-depois "isso tem nome: Risco Psicossocial", depois a NR-01. Nunca o inverso.
+**3. O sintoma vivido vem antes da lei, e isso decide qual material da Tecelã você usa primeiro,
+não só a ordem das frases.** Primeiro "sobrecarga constante, isolamento do sofrimento", depois
+"isso tem nome: Risco Psicossocial", depois a NR-01. Nunca o inverso. Antes de escrever a capa,
+releia TODAS as mediações da Tecelã, não só a mais citável, e identifique qual delas descreve
+uma cena, um corpo, uma vivência concreta, não um mecanismo institucional. Essa é a que abre a
+peça, encarnada em cena real, antes de qualquer acusação estrutural.
+
+**A "frase pronta" e a "conexão inusitada" da Tecelã são material de análise, já comprimido por
+ela para o fechamento ou o meio da peça, nunca matéria-prima de abertura sem transformação.** Se
+você extrai o golpe final de uma frase da Tecelã e usa como capa, sem o contexto que ela mesma
+tinha escrito antes dele, a peça cobra do leitor uma indignação que ninguém construiu ainda. Isso
+não é falta de explicação: é assumir uma premissa (isto é óbvio, isto é errado, todo mundo já
+sabe) que a peça nunca ganhou o direito de assumir.
+
+**Calibrado em 08/09/2026, peça do INSS.** A Tecelã entregou a mediação "ler todos os dias o
+relato documentado do sofrimento alheio, sem tempo de processamento nem suporte coletivo, é
+mediação psíquica concreta" — a candidata certa pra abrir, encarnada em cena. O copywriter não a
+usou. Em vez disso, abriu com o final da frase pronta da Tecelã ("carimba o sofrimento"), cortado
+do contexto que a própria Tecelã tinha escrito antes dele ("decide, com carimbo, que o cansaço...
+é real o suficiente para virar direito"). Resultado: a capa cobra uma indignação institucional
+que ninguém sentiu ainda, porque a cena que faria alguém sentir aquilo ficou pra trás, sem uso.
+
+**O teste, antes de fechar qualquer capa ou qualquer acusação estrutural em qualquer slide:**
+existe, ANTES dessa frase, alguma cena, gesto ou vivência concreta que faz o leitor pensar "é
+isso, isso já me aconteceu, eu não sabia nomear"? Se a resposta é não, a frase está cobrando uma
+premissa que a peça não construiu, não importa se depois alguém entende o mecanismo no
+dicionário. Explicar o termo não resolve isto: o problema não é informação faltando, é
+indignação que a peça está assumindo em vez de construir.
 
 **4. Nunca escreva a contabilidade do processo dentro da peça.** "Há 12 dias, dissemos" e "hoje,
 mostramos o tamanho" são a peça falando de si mesma. Ninguém no feed conta os dias desde o post
@@ -276,6 +308,12 @@ público de gestão pública não domina de cor ("presenteísmo", "absenteísmo"
 Nomear o termo sem dizer o que ele significa na prática é autoridade decorativa: quem lê não pode
 sentir nem verificar o que a palavra está cobrando dele. Se não sobrar espaço no slide para
 explicar, o termo não entra ali; ou ele fica maior (headline em vez de nota de rodapé) ou sai.
+
+**Nota complementar, 08/09/2026:** a mesma regra vale pra metáfora repetida sem nome (ex.:
+"carimbar" como estand-in de um mecanismo institucional nunca explicado). Mas resolver só isto
+(explicar o termo) não basta se a frase ainda cobra uma indignação que a cena vivida (regra 3)
+não construiu antes. Trate os dois juntos: primeiro a vivência, depois o nome do mecanismo,
+depois, se precisar, a explicação do termo técnico dentro do próprio nome.
 
 ---
 
