@@ -12,6 +12,9 @@ atualizado: 2026-09-13
 **Candidato a deputado estadual por São Paulo.** Relação ativa: já fez collab com a PAAPS,
 no mesmo espírito da parceria com [[sara-vitral]].
 
+Membro da Comunidade Ecoa [[ecoa]]
+
+
 ## Por que esta nota existe
 
 Mesma régua: posicionamento público recente e candidatura em curso.

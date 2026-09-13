@@ -50,8 +50,11 @@ projetos · Tarefas avulsas · Fazendo · Em pausa · Projetos prioridades, 3 me
 uma `Frente de movimento` (Comunicação, Produtos, Pesquisa, Financeiro, Gestão,
 Operacional) e uma `Área da vida` (paaps, mallu vasconcellos, ou as duas).
 
-**Tarefa avulsa não é conhecimento deste cofre.** A Mallu registra tarefa solta no
-planner físico dela; o Quadro de Projetos guarda só o que tem porte de projeto.
+**Tarefa avulsa não é conhecimento deste cofre, mas mora nesta mesma database.** Cada alvo
+(o site, o LinkedIn, a infraestrutura de agentes) tem uma página com `Status = "Tarefas
+avulsas"` que acumula uma lista de alterações até a Mallu fechar um lote. A skill
+`tarefa-avulsa-quadro-projetos` escreve ali. Não é planner físico: é a mesma database do
+Quadro de Projetos, só que numa coluna de status diferente da dos projetos de porte.
 
 ## As duas páginas de origem, e por que uma vale mais que a outra
 
