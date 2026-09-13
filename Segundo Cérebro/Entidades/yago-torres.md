@@ -17,7 +17,7 @@ Membro da Comunidade Ecoa [[ecoa]]
 
 ## Por que esta nota existe
 
-Mesma régua: posicionamento público recente e candidatura em curso.
+Posicionamento público recente e candidatura em curso.
 
 ## Ligações
 
