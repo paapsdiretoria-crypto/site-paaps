@@ -26,3 +26,23 @@ Nasceram 10 notas: 7 conceitos ([[entraves-institucionais]],
 [[culpabilizacao-do-individuo]], [[crenca-mutua-entre-quem-cuida-e-cidadao]]), a fonte
 [[anotacoes-reuniao-joyce]], a oferta pedida em [[o-que-o-cliente-ideal-pede]], e a
 atualização de [[joyce-cliente-ideal]].
+
+## [2026-09-13] entidades | vínculos familiares e organizações de posicionamento
+
+Cadastrados os vínculos pessoais da Mallu: Fabiane Vasconcellos (mãe, sócia da DIGGING),
+Luiz Sérgio Barbosa (pai, sócio de 1%) e Gustavo Faria (companheiro, moram juntos). Regra
+registrada em [[equipe-paaps]]: vínculo nunca escondido, descritivo sempre profissional
+diante de cliente.
+
+Cinco organizações de posicionamento e história entraram como entidade: [[sara-vitral]] e
+[[iago-torres]] (collab com candidatos, relação ativa), [[yunus-negocios-sociais]]
+(Desafio Regenera, relação ativa), [[refazenda-rio-xopoto]] e [[associacao-allos]]
+(relação encerrada, nunca citáveis em peça pública, ligadas à proibição já existente em
+[[paaps]]).
+
+## [2026-09-13] faxina | ECOA de 12 para 10 notas
+
+[[proposito-ecoa]] e [[quem-somos-ecoa]] fundidas em [[identidade-ecoa]]: respondiam a
+mesma pergunta duas vezes. [[personas-ecoa]] absorvida em [[estrutura-de-grupos-ecoa]],
+por ser um resumo de duas frases redirecionando para a mesma evidência. Zero conteúdo
+perdido, zero link quebrado.

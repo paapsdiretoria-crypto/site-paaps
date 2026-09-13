@@ -1,17 +1,24 @@
 ---
 tags: [entidades, pessoa]
-origem: "CLAUDE.md"
-resumo: "Gustavo Faria é o especialista em comunidade da PAAPS, e o descritivo de prospecção saiu de vez"
+origem: "Trabalho"
+resumo: "Gustavo Faria é especialista em comunidade da PAAPS e companheiro da Mallu, moram juntos"
 serve-para: []
 status: vivo
-atualizado: 2026-09-12
-aliases: [Gustavo, community led growth]
+atualizado: 2026-09-13
+decidido-em: 2026-09-13
 ---
 
 # Gustavo Faria
 
 **Especialista em comunidade e relacionamento, com estratégia de *community led
-growth*.**
+growth*.** Responsável pela ECOA, incluindo o Programa Porta-Voz. Companheiro de Mallu:
+namoram e moram juntos.
+
+## Vínculo pessoal: companheiro da Mallu
+
+**O vínculo nunca é escondido, e em peça pública o descritivo é o profissional.** Mesma
+regra que vale para Fabiane e Luiz Sérgio: perante cliente, ele é o especialista em
+comunidade, não "o companheiro da fundadora".
 
 ## O descritivo que caiu
 
@@ -20,12 +27,13 @@ da construção de comunidade, que na PAAPS significa a ECOA.
 
 ## Onde ele aparece no material
 
-Participa das reuniões registradas em [[4-projetos/ecoa/CLAUDE|ECOA]], incluindo
-[[Reunião Porta Voz]], [[Reunião Equipe]] e [[Canvas de comunidade]].
+Ele tem portfólio próprio em `gustavofaria.site`, que inclui a Mallu e estruturas da
+própria PAAPS. Participa das reuniões da ECOA, incluindo o [[porta-voz-ecoa|Programa
+Porta-Voz]] e a decisão de onboarding registrada em [[onboarding-ecoa]].
 
 ## Ligações
 
-[[equipe-paaps]]
+[[equipe-paaps]] · [[mallu-vasconcellos]] · [[ecoa]] · [[porta-voz-ecoa]]
 
 ## Onde isso serve
 

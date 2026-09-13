@@ -17,11 +17,9 @@ principalmente na rede pública.** Vive no WhatsApp, com encontros ao vivo.
 
 | | |
 |---|---|
-| Por que existe | [[proposito-ecoa]] |
-| O que é | [[quem-somos-ecoa]] |
+| Quem é, e por que existe | [[identidade-ecoa]] |
 | Onde se encaixa na PAAPS | [[posicionamento-ecoa]] |
 | Quem está dentro, e em que camada | [[estrutura-de-grupos-ecoa]] |
-| Quem são essas pessoas | [[personas-ecoa]] |
 | Como fala | [[tom-de-voz-ecoa]] |
 | Como se convive | [[acordos-e-valores-ecoa]] |
 | O que acontece | [[rituais-ecoa]] |

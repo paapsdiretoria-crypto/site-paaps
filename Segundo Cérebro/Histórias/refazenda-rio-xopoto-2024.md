@@ -11,6 +11,11 @@ atualizado: 2026-09-12
 
 A Mallu passou 2024 inteira na Refazenda Rio Xopotó.
 
+## Ligações
+
+[[refazenda-rio-xopoto]] (o registro da organização e por que ela não pode ser
+citada em peça pública)
+
 ## O que ainda falta
 Quase tudo. Falta: o que é a Refazenda, o que ela fez lá, com quem, o que viu que não se
 vê de fora, e o que isso ensinou que serve hoje. Existe um framework da Refazenda no

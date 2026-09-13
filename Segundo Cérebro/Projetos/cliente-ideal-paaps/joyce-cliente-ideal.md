@@ -76,7 +76,7 @@ O que ela pediu como apoio concreto está em [[o-que-o-cliente-ideal-pede]], e o
 
 ## Ligações
 
-[[cliente-ideal-paaps]] · [[o-que-o-cliente-ideal-pede]] · [[personas-ecoa]] · [[ecoa]] · [[mercado-do-cuidado]] ·
+[[cliente-ideal-paaps]] · [[o-que-o-cliente-ideal-pede]] · [[estrutura-de-grupos-ecoa]] · [[ecoa]] · [[mercado-do-cuidado]] ·
 [[erro-de-leitura-do-bem-estar-corporativo]] · [[linguagem-clinica-patologizante]]
 
 ## Onde isso serve

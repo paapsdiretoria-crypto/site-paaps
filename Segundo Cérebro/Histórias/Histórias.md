@@ -24,6 +24,10 @@ matéria-prima que ninguém consegue copiar.
 [[ministerio-publico-mulheres-vitimas-de-racismo]] · [[cuidados-paliativos]] ·
 [[sistema-socioeducativo]] · [[criancas-vitimas-de-violencia-sexual]] · [[puc-sp]]
 
+**As quatro pesquisas de campo, que são o lastro do pitch:**
+[[desterro-do-melo-2024]] · [[complexo-da-mare-2025]] · [[proinape-rio-2025]] ·
+[[bela-vista-e-materlandia-2025]]
+
 ## O que ainda falta
 **Tudo isso é uma fração, e a Mallu já disse que é.** O que está escrito aqui saiu do
 LinkedIn e do que ela contou nesta conversa, que é o que cabe em currículo. Falta:

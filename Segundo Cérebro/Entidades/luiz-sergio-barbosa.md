@@ -19,9 +19,16 @@ de carreira no sistema bancário brasileiro. Detém 1% da DIGGING.
 - **FEBRABAN**, com N no fim. A Mallu dita "FEBRABAM" no áudio; é engano de fala, não
   grafia alternativa.
 
+## Vínculo familiar: pai da Mallu
+
+**Luiz Sérgio é pai de Mallu.** Mesma regra da Fabiane: o vínculo nunca é escondido, e em
+peça pública o descritivo é o profissional (consultor financeiro, sócio de 1% da DIGGING),
+não o familiar.
+
 ## Ligações
 
-[[equipe-paaps]] · [[digging-composicao-societaria]]
+[[equipe-paaps]] · [[digging-composicao-societaria]] · [[mallu-vasconcellos]] ·
+[[fabiane-vasconcellos]]
 
 ## Onde isso serve
 

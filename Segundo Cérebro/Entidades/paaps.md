@@ -185,7 +185,9 @@ inicial da rede e uma proposta de composição.
 Travessão grande · linguagem coachesca (mindset, alta performance, virada de chave, escala) ·
 metáforas de guerra · promessa ou garantia de resultado · leitura individualista ou meritocrática ·
 "absenteísmo" como termo principal (é *faltas e afastamentos*) · a expansão da sigla PAAPS ·
-menção a Minerva, Associação Allos, PROSAMES, Bela Vista de Minas, Refazenda ou Motiva ·
+menção a Minerva, [[associacao-allos|Associação Allos]], PROSAMES, Bela Vista de Minas,
+[[refazenda-rio-xopoto|Refazenda]] ou Motiva (relação encerrada com todas: ver as notas
+de cada uma) ·
 "cuidar de quem cuida" como eixo (é clichê de mercado e assinatura do concorrente) ·
 comparação ou depreciação de concorrente.
 

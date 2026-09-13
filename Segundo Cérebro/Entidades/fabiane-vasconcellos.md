@@ -28,6 +28,14 @@ desenvolvimento pessoal.
 É ela que dá à PAAPS um CNPJ **ativo desde 2003** em vez de uma empresa recém-aberta, e é
 esse tempo de existência que vários editais pontuam. Ver [[digging]].
 
+## Vínculo familiar: mãe da Mallu
+
+**Fabiane é mãe de Mallu.** A relação entre as duas é profissional dentro da PAAPS e da
+DIGGING, e isso nunca é escondido nem é o que se destaca perante cliente. Regra decidida
+pela Mallu em 13/09/2026: **não esconder o vínculo, e manter o profissionalismo diante de
+clientes sempre.** Em peça pública, o descritivo de Fabiane é o de founder e sócia (ver
+[[equipe-paaps]]), não o de mãe.
+
 ## Ligações
 
 [[equipe-paaps]] · [[digging-composicao-societaria]] · [[mallu-vasconcellos]]

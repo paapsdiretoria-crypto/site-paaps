@@ -25,7 +25,7 @@ outras plataformas. O conteúdo da ECOA é produzido em ritmo próprio, comunit�
 
 ## Ligações
 
-[[ecoa]] · [[proposito-ecoa]] · [[estrutura-de-grupos-ecoa]] · [[paaps-ai-first]]
+[[ecoa]] · [[identidade-ecoa]] · [[estrutura-de-grupos-ecoa]] · [[paaps-ai-first]]
 
 ## Onde isso serve
 

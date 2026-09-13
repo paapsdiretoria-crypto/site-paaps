@@ -4,7 +4,7 @@ origem: "Sistema"
 resumo: "O catálogo de toda nota do Segundo Cérebro, por setor"
 serve-para: []
 status: vivo
-atualizado: 2026-09-12
+atualizado: 2026-09-13
 ---
 
 # Índice
@@ -65,12 +65,10 @@ A Comunidade ECOA: o que ela é, como funciona e onde ela toca o resto do ecossi
 - [[acordos-e-valores-ecoa]] : Os acordos de convivência e os valores inegociáveis de quem participa da ECOA
 - [[eras-ecoa]] : As Eras são o planejamento temático da ECOA: um tema por período, com debates próprios
 - [[estrutura-de-grupos-ecoa]] : Os quatro níveis de vínculo com a ECOA, de rede ampla a porta-voz, cada um com sua regra de ouro
+- [[identidade-ecoa]] : Quem é a ECOA e por que ela existe: comunidade que acredita que cuidado se constrói em coletivo, principalmente na rede pública
 - [[onboarding-ecoa]] : Onboarding na ECOA é humanizado por decisão: mensagem pessoal e duas perguntas por áudio, nunca formulário frio
-- [[personas-ecoa]] `pendente` : Quem são as pessoas da ECOA: trabalhadoras do cuidado, direta ou indiretamente
 - [[porta-voz-ecoa]] : O Programa Porta-Voz dá papel ativo de representação a membras da ECOA e é canal indireto de prospecção
 - [[posicionamento-ecoa]] : A ECOA não é marca-produto da PAAPS: é comunidade, e fortalece a PAAPS de forma indireta
-- [[proposito-ecoa]] : O propósito da ECOA é construir pontes entre as pessoas que cuidam, e qualificar essa rede
-- [[quem-somos-ecoa]] : A ECOA é uma comunidade de quem acredita que cuidado e saúde mental se constroem em coletivo, na rede pública
 - [[rituais-ecoa]] : Os cinco rituais da ECOA, e a regra de que ritual é convite e nunca cobrança
 - [[tom-de-voz-ecoa]] : Como a ECOA fala: corajosa-afetiva, crítica e densa sem virar inacessível
 
@@ -78,7 +76,11 @@ A Comunidade ECOA: o que ela é, como funciona e onde ela toca o resto do ecossi
 
 A frente que decide em que negócio a PAAPS está e como ela se sustenta
 
+- [[modelo-de-negocio-estrategia]] : O preço, a margem e o contrato-padrão da PAAPS: R$ 1.100 por Roda, 60,1% de margem, R$ 924 mil por município ao ano
 - [[pesquisa-de-mercado-estrategia]] : Pesquisa de mercado da PAAPS, convertida do DOCX institucional original
+- [[ponto-de-apoio-estrategia]] : O Ponto de Apoio é o app que transforma cada Roda em registro e cria a estatística de adoecimento do servidor municipal que hoje não existe
+- [[roadmap-estrategia]] : De uma rede por vez a uma malha nacional, em oito marcos, com praticamente a mesma estrutura fixa
+- [[tam-sam-som-estrategia]] : O mercado da PAAPS em três camadas: 5.570 municípios, 2.550 que comportam contrato, 100 em cinco anos
 
 ### [[inteligencia-competitiva]]
 
@@ -122,6 +124,7 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 *Quem: gente e instituição*
 
 - [[Entidades]] : Quem: gente e instituição
+- [[associacao-allos]] : Associação Allos incubou a PAAPS em fase inicial; hoje não existe relação ativa
 - [[digging-clausula-govtech]] : O PAAPS é ativo intangível pré-existente da DIGGING e não pode ser alienado em licitação, só licenciado
 - [[digging-composicao-societaria]] : A DIGGING tem composição societária 99% feminina e capital de R$ 95.400 integralizado, com administração isolada ou conjunta das duas
 - [[digging-ficha-juridica]] : Ficha cadastral completa da DIGGING: CNPJ, objeto social alínea por alínea, cláusula GovTech, sócias e checklist de habilitação
@@ -129,21 +132,29 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 - [[digging]] : A pessoa jurídica que assina contrato e emite nota é a DIGGING; o PAAPS é a metodologia proprietária dela, e confundir os dois em edital é erro grave
 - [[equipe-paaps]] : A estrutura de três níveis da equipe semente e a ordem exata das palavras de cada descritivo, válida para site, proposta, edital e apresentação
 - [[fabiane-vasconcellos]] : Fabiane Vasconcellos, founder da DIGGING e sócia majoritária, é o lastro executivo que a PAAPS apresenta a investidor
-- [[gustavo-faria]] : Gustavo Faria é o especialista em comunidade da PAAPS, e o descritivo de prospecção saiu de vez
+- [[gustavo-faria]] : Gustavo Faria é especialista em comunidade da PAAPS e companheiro da Mallu, moram juntos
+- [[iago-torres]] `pendente` : Iago Torres, candidato a deputado estadual por São Paulo, já fez collab com a PAAPS
 - [[luiz-sergio-barbosa]] : Luiz Sérgio Barbosa é o consultor financeiro da PAAPS, ex-diretor financeiro da FEBRABAN, e o nome se escreve Luiz com z
 - [[mallu-formacao-e-crp]] : Mallu é formanda em psicologia e o CRP sai em fevereiro, e até lá 'psicóloga' não pode ser usado em peça pública
 - [[mallu-vasconcellos]] : Quem é Mallu Vasconcellos, o que ela faz e por que hoje ela e a PAAPS são praticamente a mesma coisa
 - [[paaps]] : Definição institucional da PAAPS para consulta interna, escrita depois que a Mallu recusou a mesma explicação como copy de site
+- [[refazenda-rio-xopoto]] : Refazenda Rio Xopotó, em Desterro do Melo, foi parceria de 2024 e hoje não há relação ativa
+- [[sara-vitral]] : Sara Vitral, candidata a deputada estadual por Minas Gerais, fez collab em vídeo com a Mallu
+- [[yunus-negocios-sociais]] : Yunus Negócios Sociais é referência de metodologia de impacto e parceira ativa via Desafio Regenera
 
 ## 🔴 Histórias
 
 *O que eu vivi e posso contar*
 
 - [[Histórias]] `pendente` : A porta de entrada do repositório de histórias vividas pela Mallu
+- [[bela-vista-e-materlandia-2025]] : Mais de 180 servidores acompanhados em Bela Vista de Minas e Materlândia, e o primeiro diagnóstico de gestão pública da PAAPS
+- [[complexo-da-mare-2025]] : Um ano de encontros semanais com mães de escola municipal no Complexo da Maré, território marcado pelo conflito armado urbano
 - [[criancas-vitimas-de-violencia-sexual]] `pendente` : A Mallu trabalhou com crianças vítimas de exploração e violência sexual
 - [[cuidados-paliativos]] `pendente` : A Mallu trabalhou com cuidados paliativos antes de fundar a PAAPS
+- [[desterro-do-melo-2024]] : Um ano inteiro dentro da rotina da rede pública de Desterro do Melo, em Minas, com saúde e educação completas
 - [[ministerio-publico-mulheres-vitimas-de-racismo]] `pendente` : A Mallu trabalhou com mulheres vítimas de racismo no Ministério Público
 - [[mudanca-para-o-interior-de-minas]] : Em 2024 a Mallu saiu de São Paulo capital para uma cidade de menos de 3 mil habitantes em Minas
+- [[proinape-rio-2025]] : Mais de 300 horas de plantão psicológico e grupos na Rede Municipal de Educação do Rio, pelo PROINAPE
 - [[puc-sp]] `pendente` : A Mallu se formou na PUC-SP, que ela descreve como uma das melhores universidades da América Latina
 - [[refazenda-rio-xopoto-2024]] `pendente` : A Mallu passou o ano de 2024 inteiro na Refazenda Rio Xopotó
 - [[sistema-socioeducativo]] `pendente` : A Mallu trabalhou no sistema socioeducativo antes de fundar a PAAPS
@@ -153,7 +164,9 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 *O que a palavra significa dentro da PAAPS*
 
 - [[Conceitos]] : O que cada palavra significa dentro da PAAPS
+- [[a-resposta-ja-esta-na-equipe]] : A PAAPS não leva solução pronta: ela desvela o que a própria equipe já sabe e não consegue acessar sozinha
 - [[capilaridade-do-sus]] : O ativo não é o tamanho do mercado, é a capilaridade do SUS, que chega a 5.570 municípios e é a maior malha de cuidado já construída
+- [[cascata-do-cuidado]] : Cuidar da equipe melhora o cuidado que a população recebe, e esse efeito é mensurável
 - [[crenca-mutua-entre-quem-cuida-e-cidadao]] : O trabalho na rede só funciona com crença mútua, e a lógica individualista é o que quebra essa crença dos dois lados
 - [[culpabilizacao-do-individuo]] : A leitura assistencialista culpa o indivíduo pela situação dele em vez de garantir seguridade e equidade
 - [[entraves-institucionais]] : Entrave institucional é o obstáculo que a própria instituição cria entre o profissional e o direito que ele deveria garantir
@@ -163,6 +176,7 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 - [[linha-de-pensamento-mallu]] : A linha de pensamento da Mallu: psicologia além do consultório e do RH, psicologia suleada, impacto sistêmico
 - [[mercado-do-cuidado]] : A PAAPS está no mercado do cuidado, não no de saúde nem no de bem-estar corporativo, e esse reframe decide quem é concorrente e qual é o tamanho do mercado
 - [[o-cidadao-esta-no-meio]] : O cidadão fica no meio entre os setores que não se falam, e é o contexto dele que nenhum deles considera
+- [[roda-nao-e-o-jeito-barato]] : Trabalhar em roda é o formato que a OMS reconhece, não uma forma barata de atender muita gente de uma vez
 - [[saude-social-nao-e-vista-como-saude]] : Dentro do hospital, o laudo médico vale como saúde e o trabalho social não, o que faz o paciente sair sem direitos
 
 ## 🩷 Voz
@@ -206,9 +220,12 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 
 - [[Método]] : Como a PAAPS trabalha
 - [[base-teorica]] : Base teórica destilada dos fichamentos da Mallu em movimentos de raciocínio utilizáveis, hoje ancorada na Psicologia Sócio-Histórica
+- [[diagnostico-360]] : O Diagnóstico 360 é a leitura da rede do município e a porta de entrada comercial da PAAPS, a R$ 10 mil
 - [[fontes-aceitas]] : Quais fontes valem numa pesquisa da PAAPS, quais estão bloqueadas, e o ritual de 3 a 5 ciclos com parágrafo reflexivo antes de cada busca
+- [[jornada-do-cliente-paaps]] : O cliente entra pelo Diagnóstico 360, segue nas Rodas de Equipe e é acompanhado pelo Ponto de Apoio
 - [[linha-epistemologica-estrutural]] : A linha epistemológica da PAAPS é estrutural e sistêmica, e isso decide toda análise e todo conteúdo
 - [[metodologia-paaps]] : O que a PAAPS entrega e como explica cada frente, ditado pela Mallu em 02/08/2026
+- [[roda-de-equipe-paaps]] : A Roda de Equipe é o encontro mensal de até 10 servidores conduzido por psicóloga formada no método, em três fases
 - [[supervisao-da-metodologia]] : Quem faz a supervisão na metodologia PAAPS, e por que nunca se escreve 'supervisão clínica em campo'
 
 ## 🔵 Fontes
@@ -217,7 +234,13 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 
 - [[Fontes]] : O que veio de fora e dá para reconferir
 - [[anotacoes-reuniao-joyce]] : As anotações de caderno da Mallu na escuta com a Joyce, assistente social, ditadas em 12/09/2026
+- [[ata-registro-precos-saude-mental-servidor]] : O governo federal previu R$ 26,9 milhões em ata de registro de preços para acolher a saúde mental de servidores
+- [[dados-afastamento-por-transtorno-mental]] : Afastamentos por transtorno mental bateram recorde da década em 2025 e custam cerca de R$ 3,5 bilhões por ano ao INSS
+- [[dados-do-adoecimento-de-quem-sustenta-a-rede]] : Os números do tamanho da rede pública brasileira e do adoecimento ligado ao trabalho de quem a sustenta
+- [[dados-do-esgotamento-e-erro]] : Quem atende esgotado tem o dobro de chance de errar no atendimento, e o endividamento do servidor alimenta esse esgotamento
 - [[nr-01]] : A NR-01 não vincula prefeitura nem servidor estatutário, então ela pode ser citada como referência de enquadramento mas nunca como obrigatoriedade legal
+- [[oms-recomendacao-formar-gestores]] : Formar gestores e trabalhar a equipe é a única recomendação forte da OMS em saúde mental no trabalho
+- [[oms-solidao-e-conexao-social]] : Uma em cada seis pessoas no mundo é afetada pela solidão, e o isolamento social é associado a cem mortes por hora
 - [[regulacao-cfp-e-crp]] : Falar de psicologia é terreno regulado pelo CFP, e isso limita o que pode ser escrito e por quem
 
 ## 🟠 Ideias

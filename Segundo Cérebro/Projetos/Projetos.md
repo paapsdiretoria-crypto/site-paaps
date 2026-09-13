@@ -26,7 +26,7 @@ Cada projeto é uma pasta, com uma nota-capa e as notas dele. O nome de toda not
 - **[[conteudo-paaps]]** : A frente de conteúdo institucional da PAAPS, em todos os canais
 - **[[digging-times-e-lideres]]** : A frente de times e líderes conduzida pela Fabi Vasconcellos dentro da DIGGING
 - **[[ecoa]]** : A Comunidade ECOA: o que ela é, como funciona e onde ela toca o resto do ecossistema
-  [[acordos-e-valores-ecoa]] · [[eras-ecoa]] · [[estrutura-de-grupos-ecoa]] · [[onboarding-ecoa]] · [[personas-ecoa]] · [[porta-voz-ecoa]] · [[posicionamento-ecoa]] · [[proposito-ecoa]] · [[quem-somos-ecoa]] · [[rituais-ecoa]] · [[tom-de-voz-ecoa]]
+  [[acordos-e-valores-ecoa]] · [[eras-ecoa]] · [[estrutura-de-grupos-ecoa]] · [[identidade-ecoa]] · [[onboarding-ecoa]] · [[porta-voz-ecoa]] · [[posicionamento-ecoa]] · [[rituais-ecoa]] · [[tom-de-voz-ecoa]]
 - **[[estrategia-de-negocio]]** : A frente que decide em que negócio a PAAPS está e como ela se sustenta
   [[pesquisa-de-mercado-estrategia]]
 - **[[inteligencia-competitiva]]** : A frente que acompanha quem concorre com a PAAPS e o que a gente faz diferente

@@ -35,6 +35,15 @@ Serasa, e duas delas são armadilha jurídica se erradas.
 
 Ver [[supervisao-da-metodologia]].
 
+## Vínculo familiar e afetivo: nunca escondido, sempre profissional
+
+**Decidido pela Mallu em 13/09/2026.** Fabiane é mãe da Mallu. Luiz Sérgio é pai da Mallu.
+Gustavo é companheiro da Mallu, moram juntos. **Nenhum desses vínculos é escondido em
+nenhuma circunstância.** Ao mesmo tempo, **perante cliente o descritivo é sempre o papel
+profissional** (founder, sócio, especialista em comunidade), nunca o familiar ou afetivo.
+As duas coisas coexistem: transparência sobre o vínculo, sobriedade profissional na
+apresentação.
+
 ## Cadeiras COO, CMO e CXO
 
 Ficam numa faixa à parte, **fora da hierarquia**, descritas como já rodando por

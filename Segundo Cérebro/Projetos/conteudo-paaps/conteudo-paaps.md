@@ -6,7 +6,6 @@ serve-para: []
 status: vivo
 atualizado: 2026-09-12
 ---
-
 # Conteúdo PAAPS
 
 Canais: Instagram @paaps.brasil · LinkedIn PAAPS Brasil · Blog · YouTube.
@@ -20,3 +19,4 @@ palavras significam) e `Histórias/` (o que sustenta a peça com coisa vivida).
 
 ## O que ainda falta
 Falta uma nota por canal, com o que cada um é, quem é o leitor e o que funciona lá.
+

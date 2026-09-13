@@ -36,10 +36,22 @@ As duas afirmações não podem valer ao mesmo tempo em peça pública. Ver
 [[mallu-formacao-e-crp]]. Enquanto ela não decidir, **a versão que vale em peça externa é
 "formanda"**, porque é a que não cria risco de registro profissional.
 
+## Família e vínculo pessoal
+
+**Filha de [[fabiane-vasconcellos|Fabiane Vasconcellos]] (mãe, sócia da DIGGING) e de
+[[luiz-sergio-barbosa|Luiz Sérgio Barbosa]] (pai, sócio de 1% da DIGGING).** Companheira de
+[[gustavo-faria|Gustavo Faria]]: namoram e moram juntos.
+
+**Regra decidida em 13/09/2026: nenhum desses vínculos é escondido, e todos são tratados
+com profissionalismo diante de cliente.** Em peça pública, cada pessoa é apresentada pelo
+papel que exerce na PAAPS ou na DIGGING (ver [[equipe-paaps]]), nunca pelo vínculo
+familiar ou afetivo com a Mallu.
+
 ## Ligações
 
 [[frases-mote]] · [[linha-de-pensamento-mallu]] · [[mallu-formacao-e-crp]] ·
-[[equipe-paaps]] · [[paaps]]
+[[equipe-paaps]] · [[paaps]] · [[fabiane-vasconcellos]] · [[luiz-sergio-barbosa]] ·
+[[gustavo-faria]]
 
 ## Onde isso serve
 
