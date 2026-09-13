@@ -82,6 +82,7 @@ A Comunidade ECOA: o que ela é, como funciona e onde ela toca o resto do ecossi
 
 A frente que decide em que negócio a PAAPS está e como ela se sustenta
 
+- [[caminhos-legais-venda-ao-governo]] : A PAAPS entra em prefeitura por dispensa até R$ 65.492,11 por ano ou por inexigibilidade acima disso, e o contrato social foi redigido para abrir essa segunda porta
 - [[modelo-de-negocio-estrategia]] : O preço, a margem e o contrato-padrão da PAAPS: R$ 1.100 por Roda, 60,1% de margem, R$ 924 mil por município ao ano
 - [[pesquisa-de-mercado-estrategia]] : Pesquisa de mercado da PAAPS, convertida do DOCX institucional original
 - [[ponto-de-apoio-estrategia]] : O Ponto de Apoio é o app que transforma cada Roda em registro e cria a estatística de adoecimento do servidor municipal que hoje não existe
@@ -102,10 +103,18 @@ A frente que acompanha quem concorre com a PAAPS e o que a gente faz diferente
 - [[a-lacuna-que-a-paaps-ocupa-intel]] : Nenhum concorrente mapeado junta diagnóstico territorial, intervenção psicossocial sistêmica e capacidade instalada como entrega
 - [[agenda-publica-intel]] : A Agenda Pública é think tank de políticas públicas e serve de referência de cadência editorial e de dado, não de concorrência de serviço
 - [[asdoseculo21-intel]] : asdoseculo21 é referência de comunicação digital em tema social, não concorrente de serviço
+- [[ashoka-intel]] : A Ashoka seleciona e apoia empreendedores sociais individuais no mundo todo, e não vende psicologia nem intervenção de equipe
 - [[cepam-intel]] : A CEPAM faz consultoria de processo administrativo para gestão pública, com comunicação datada, e a PAAPS tem vantagem de linguagem e método
+- [[dataway-intel]] `pendente` : A DataWay vende tecnologia da informação para prefeitura, sem nenhuma frente de saúde mental do servidor
 - [[denise-santos-intel]] : Uma psicanalista bem posicionada no LinkedIn prova que o canal individual da Mallu é disputa real, e pode render tanto quanto o canal da empresa
+- [[desis-network-intel]] : A Desis Network articula laboratórios de design para inovação social em universidades do mundo todo, e não faz psicologia nem intervenção de equipe
 - [[digix-intel]] : A DIGIX é o concorrente mais perigoso porque disputa a mesma atenção digital sobre saúde mental no setor público sem ter profundidade metodológica
 - [[esafi-intel]] : A ESAFI capacita gestor público em competência técnica, e a PAAPS trabalha a condição psicossocial que permite exercer essa competência
+- [[grupo-orzil-intel]] : O Grupo Orzil vende curso de licitação e contrato público para gestor, não intervenção psicossocial de equipe
+- [[ideo-org-intel]] : A IDEO.org aplica design centrado no ser humano contra a pobreza, e não faz psicologia nem intervenção de saúde mental de equipe
+- [[nesta-intel]] : A Nesta é fundação britânica de inovação em políticas públicas, referência de método, não concorrente de serviço
+- [[ore-intel]] : A Oré vende consultoria de impacto social e certificação ESG para empresas, não intervenção psicossocial de equipe
+- [[universaude-intel]] : A UniverSaúde vende inteligência de dados para secretarias de saúde, não intervenção psicossocial de equipe
 - [[yunus-intel]] : Yunus modela negócio de impacto e não faz psicologia, então coexiste com a PAAPS: um modela, o outro cuida de quem executa
 
 ### [[paaps-ai-first]]
@@ -174,17 +183,17 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 - [[bela-vista-e-materlandia-2025]] : Mais de 180 servidores acompanhados em Bela Vista de Minas e Materlândia, e o primeiro diagnóstico de gestão pública da PAAPS
 - [[carta-compromisso-desterro-do-melo]] : Os três candidatos a prefeito de Desterro do Melo assinaram juntos, antes da eleição de 2024, uma carta compromisso baseada nos objetivos da ONU para 2050
 - [[complexo-da-mare-2025]] : Um ano de encontros semanais com mães de escola municipal no Complexo da Maré, território marcado pelo conflito armado urbano
-- [[criancas-vitimas-de-violencia-sexual]] `pendente` : A Mallu trabalhou com crianças vítimas de exploração e violência sexual
-- [[cuidados-paliativos]] `pendente` : A Mallu trabalhou com cuidados paliativos antes de fundar a PAAPS
+- [[criancas-vitimas-de-violencia-sexual]] : Pelo PET Psicologia da PUC-SP, a Mallu acompanhou psicossocialmente adolescentes vítimas de violência e exploração sexual em Heliópolis, de 2022 a 2024
+- [[cuidados-paliativos]] : A Mallu estagiou em cuidados paliativos no Centro Dia Angels 4U, no Butantã, de fevereiro a julho de 2023, e publicou sobre a experiência
 - [[desterro-do-melo-2024]] : Um ano inteiro dentro da rotina da rede pública de Desterro do Melo, em Minas, com saúde e educação completas
 - [[entrada-pela-educacao-desterro-do-melo]] : Como a PAAPS entrou em Desterro do Melo pela escola, do primeiro almoço de vínculo até o primeiro serviço remunerado
 - [[entrada-pela-saude-desterro-do-melo]] : Como a PAAPS entrou na UBS de Desterro do Melo, pela auto-organização das trabalhadoras da saúde no Setembro Amarelo
-- [[ministerio-publico-mulheres-vitimas-de-racismo]] `pendente` : A Mallu trabalhou com mulheres vítimas de racismo no Ministério Público
+- [[ministerio-publico-mulheres-vitimas-de-racismo]] : No projeto de extensão Racismo, Gênero e Branquitude, a Mallu escutou vítimas de crimes de racismo pelo Ministério Público de São Paulo, de agosto de 2022 a março de 2023
 - [[mudanca-para-o-interior-de-minas]] : Em 2024 a Mallu saiu de São Paulo capital para uma cidade de menos de 3 mil habitantes em Minas
 - [[proinape-rio-2025]] : Mais de 300 horas de plantão psicológico e grupos na Rede Municipal de Educação do Rio, pelo PROINAPE
-- [[puc-sp]] `pendente` : A Mallu se formou na PUC-SP, que ela descreve como uma das melhores universidades da América Latina
+- [[puc-sp]] : A formação da Mallu na PUC-SP entre 2021 e 2024, com Liga Acadêmica, Centro Acadêmico, monitoria e as duas primeiras publicações
 - [[refazenda-rio-xopoto-2024]] `pendente` : A Mallu passou o ano de 2024 inteiro na Refazenda Rio Xopotó
-- [[sistema-socioeducativo]] `pendente` : A Mallu trabalhou no sistema socioeducativo antes de fundar a PAAPS
+- [[sistema-socioeducativo]] : Duas passagens da Mallu pelo sistema socioeducativo: estágio observacional em Tremembé, SP, em 2023, e educadora comunitária no Instituto ELO, BH, em 2025
 
 ## 🟢 Conceitos
 
@@ -222,6 +231,7 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 - [[atribuicao-retroativa-a-paaps]] : Ação de campo da Mallu antes de a marca PAAPS existir pode ser narrada como ação da PAAPS, inclusive em peça pública
 - [[capilarizado-nunca-capitalizado]] : O SUS é capilarizado, nunca capitalizado, e dizer o contrário derruba a credibilidade da peça inteira
 - [[chapeu-eyebrow-proibido]] : A linha curta em caixa alta espaçada acima de um título é banida em qualquer peça, e o rótulo bom vira título grande em vez de sumir
+- [[como-citar-bela-vista-proinape-mare]] : Bela Vista de Minas, PROINAPE e Complexo da Maré podem ser citados, estritamente como sob gestão da PAAPS
 - [[conteudo-sem-razao-nao-entra]] : Todo conteúdo precisa de razão de existir, e volume sem propósito não entra na grade
 - [[copy-com-conectivos]] : Copy se escreve com conectivos que amarram o raciocínio, nunca como lista justaposta de entregas
 - [[criterios-design]] : Lista de checagem verificável que o Crítico de Design aplica antes de qualquer peça fechar
@@ -278,17 +288,23 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 - [[afastamentos-saude-mental-2025-inss]] `pendente` : O Brasil bateu recorde de 534 mil afastamentos por saúde mental em 2025, alta de 13,2% sobre 2024, e o burnout cresceu 800% em 4 anos
 - [[anotacoes-reuniao-joyce]] : As anotações de caderno da Mallu na escuta com a Joyce, assistente social, ditadas em 12/09/2026
 - [[ata-registro-precos-saude-mental-servidor]] : O governo federal previu R$ 26,9 milhões em ata de registro de preços para acolher a saúde mental de servidores
+- [[carrossel-vendas-pra-quem-e-como-funciona]] : Carrossel de vendas de 6 peças (pra quem é, como funciona, o que resolve) com o detalhamento das três perguntas do diagnóstico
+- [[censopsi-2022-precariedade-psicologia]] : O CensoPsi 2022 do CFP mostra que 55,2% dos psicólogos brasileiros precisam de mais de um vínculo para viver, porque o mercado paga por acúmulo, não por profundidade
 - [[dados-afastamento-por-transtorno-mental]] : Afastamentos por transtorno mental bateram recorde da década em 2025 e custam cerca de R$ 3,5 bilhões por ano ao INSS
 - [[dados-autorizados-do-site]] : Os quatro dados que estão no ar no site da PAAPS, com a referência completa de cada um
 - [[dados-do-adoecimento-de-quem-sustenta-a-rede]] : Os números do tamanho da rede pública brasileira e do adoecimento ligado ao trabalho de quem a sustenta
 - [[dados-do-esgotamento-e-erro]] : Quem atende esgotado tem o dobro de chance de errar no atendimento, e o endividamento do servidor alimenta esse esgotamento
 - [[estresse-no-trabalho-brasil-isma]] `pendente` : O Brasil é o 2º país do mundo com a força de trabalho mais estressada, 72% relatam estresse e 32% têm sintomas de burnout
 - [[eventos-traumaticos-policial-vs-civil]] `pendente` : Em 40 anos, um civil vive cerca de 5 eventos traumáticos e um policial cerca de 900
+- [[igd-repasse-automatico-formacao-equipe]] : O IGD repassa automaticamente, todo mês, dinheiro que o município já pode gastar em formação de equipe da assistência social, e não usar reduz o repasse seguinte
+- [[microcredito-periodicidade-do-encontro]] : Um experimento com microcrédito em Calcutá isolou o efeito do encontro periódico entre as mesmas pessoas, e ele reduziu a inadimplência em três vezes; a responsabilidade solidária do grupo não teve esse efeito
+- [[minerva-paaps-framework-notion]] `pendente` : O Notion Minerva-paaps FrameWork descreve uma parceria pausada, ainda não representada no cofre, em que universitários da Minerva viveriam imersão na Refazenda Rio Xopotó para atuar dentro do PAAPS em Desterro do Melo
 - [[nr-01]] : A NR-01 não vincula prefeitura nem servidor estatutário, então ela pode ser citada como referência de enquadramento mas nunca como obrigatoriedade legal
 - [[obras-da-ciencia-que-sustentam-o-metodo]] : As quatro obras que o site apresenta como base científica do método PAAPS
 - [[oms-recomendacao-formar-gestores]] : Formar gestores e trabalhar a equipe é a única recomendação forte da OMS em saúde mental no trabalho
 - [[oms-solidao-e-conexao-social]] : Uma em cada seis pessoas no mundo é afetada pela solidão, e o isolamento social é associado a cem mortes por hora
 - [[pitch-impulsiona-serasa]] : O pitch v5 e o handout da inscrição no Impulsiona Startups, onde o argumento da PAAPS está mais destilado
+- [[pitch-paaps-short-2]] : O deck curto paaps-short-2, com os dados frios (nome, data, escala) dos quatro casos de campo da PAAPS
 - [[regulacao-cfp-e-crp]] : Falar de psicologia é terreno regulado pelo CFP, e isso limita o que pode ser escrito e por quem
 
 ## 🟠 Ideias

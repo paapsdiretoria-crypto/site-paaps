@@ -34,5 +34,13 @@ Como registro de história interna. Nunca em peça pública: ver [[paaps]].
 ## Quando a relação existiu
 
 O contrato com a Allos foi um Resultado-Chave cumprido no 1º trimestre de 2026 (100%),
-dentro da meta de estatuto e proteção jurídica. Ver [[metas-2026]]. É a data mais próxima
-que se tem do início formal da relação, hoje encerrada.
+dentro da meta de estatuto e proteção jurídica. Ver [[metas-2026]].
+
+**Antes disso, a Mallu trabalhou lá diretamente: Diretora de Projetos Sociais na
+Associação Allos de Psicologia, de 03/25 a 12/25, como estagiária supervisionada e
+coordenadora de um núcleo de projetos**, articulando psicologia, políticas públicas e
+rede comunitária. Planejou grupos terapêuticos, rodas de conversa e intervenções
+psicossociais em escolas e serviços municipais parceiros da Associação.
+
+É experiência pessoal da Mallu, distinta do contrato formal PAAPS-Allos de 2026: as duas
+seguem a mesma proibição de citação pública.

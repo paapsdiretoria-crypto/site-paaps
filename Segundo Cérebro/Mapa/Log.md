@@ -212,3 +212,19 @@ ainda não verificado ([[estresse-no-trabalho-brasil-isma]],
 enriquecidas, sem contradizer a proibição de citação pública já registrada em [[paaps]].
 [[tres-frentes-de-oferta]] ganhou a nuance de que a psicoterapia individual é via
 parceria, não entrega direta.
+
+## [2026-09-13] correção | Bela Vista de Minas, PROINAPE e Maré podem ser citados
+
+Decisão da Mallu: os três podem aparecer em peça pública, estritamente como "sob gestão
+da PAAPS" (ver [[como-citar-bela-vista-proinape-mare]]). Diferente de Refazenda, Allos,
+PROSAMES e Motiva, que seguem proibidos. [[paaps]] corrigida.
+
+## [2026-09-13] CV 2026 | a formação da Mallu ganha datas exatas
+
+Dois CVs (completo e one-page) leram-se por inteiro e substituíram estimativa por data
+exata em seis histórias: [[puc-sp]], [[criancas-vitimas-de-violencia-sexual]],
+[[ministerio-publico-mulheres-vitimas-de-racismo]], [[cuidados-paliativos]] e
+[[sistema-socioeducativo]] (que revelou serem DUAS passagens distintas: Tremembé 2023 e
+Instituto ELO, BH, 2025). [[tcc-suas]] ganhou o título exato e o supervisor, Alexandre
+Kaitel. [[associacao-allos]] ganhou o vínculo pessoal da Mallu como Diretora de Projetos
+Sociais lá, de 03/25 a 12/25, distinto do contrato formal PAAPS-Allos de 2026.

@@ -27,6 +27,7 @@ Toda regra de escrita e de imagem da PAAPS mora aqui. Quem vai escrever ou desen
 - [[atribuicao-retroativa-a-paaps]] : Ação de campo da Mallu antes de a marca PAAPS existir pode ser narrada como ação da PAAPS, inclusive em peça pública
 - [[capilarizado-nunca-capitalizado]] : O SUS é capilarizado, nunca capitalizado, e dizer o contrário derruba a credibilidade da peça inteira
 - [[chapeu-eyebrow-proibido]] : A linha curta em caixa alta espaçada acima de um título é banida em qualquer peça, e o rótulo bom vira título grande em vez de sumir
+- [[como-citar-bela-vista-proinape-mare]] : Bela Vista de Minas, PROINAPE e Complexo da Maré podem ser citados, estritamente como sob gestão da PAAPS
 - [[conteudo-sem-razao-nao-entra]] : Todo conteúdo precisa de razão de existir, e volume sem propósito não entra na grade
 - [[copy-com-conectivos]] : Copy se escreve com conectivos que amarram o raciocínio, nunca como lista justaposta de entregas
 - [[criterios-design]] : Lista de checagem verificável que o Crítico de Design aplica antes de qualquer peça fechar
