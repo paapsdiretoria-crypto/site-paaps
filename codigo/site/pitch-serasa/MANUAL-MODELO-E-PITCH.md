@@ -1,7 +1,6 @@
 # Manual do modelo de negócio da PAAPS, e como ele vira pitch
 
-> Documento único, 17/08/2026. Substitui `RACIOCINIO-DO-ZERO.md`,
-> `MODELO-DE-NEGOCIO.md` e `MODELO-PAAPS-COMPLETO.md`.
+> Documento único do modelo de negócio, 17/08/2026. É a fonte, não há outra.
 > Escrito para reler devagar. Cada parte só usa o que veio antes.
 >
 > **Nenhum slide do deck foi alterado.** A Parte VII traz a redação proposta,

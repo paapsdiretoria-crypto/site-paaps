@@ -24,6 +24,7 @@ O trabalho em campo: as fases, a supervisão, a base teórica e a régua de font
 - [[jornada-do-cliente-paaps]] : O cliente entra pelo Diagnóstico 360, segue nas Rodas de Equipe e é acompanhado pelo Ponto de Apoio
 - [[linha-epistemologica-estrutural]] : A linha epistemológica da PAAPS é estrutural e sistêmica, e isso decide toda análise e todo conteúdo
 - [[metodologia-paaps]] : O que a PAAPS entrega e como explica cada frente, ditado pela Mallu em 02/08/2026
+- [[motor-da-paaps]] : As peças da PAAPS formam um motor: o conhecimento entra pela consultoria, chega pela Roda, é entregue por psicóloga local e volta como dado que melhora o método
 - [[roda-de-equipe-paaps]] : A Roda de Equipe é o encontro mensal de até 10 servidores conduzido por psicóloga formada no método, em três fases
 - [[supervisao-da-metodologia]] : Quem faz a supervisão na metodologia PAAPS, e por que nunca se escreve 'supervisão clínica em campo'
 - [[tres-frentes-de-oferta]] : A PAAPS vende três frentes: cuidado e integração de rede, treinamentos, e urgências e eventos extremos

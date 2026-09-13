@@ -118,3 +118,14 @@ fechar um lote de deploy). [[dados-autorizados-do-site]] perdeu o bloco de pend�
 código, que foi para a página "Site PAAPS 3.0 - revisão" no Notion. `CLAUDE.md` e
 `adiciona-ao-cerebro` ganharam a proibição explícita, e [[Visão Geral]] ganhou o destino
 (antes só dizia que pendência não entra, não dizia para onde ir).
+
+## [2026-09-13] limpeza | o histórico morto do pitch saiu, e sobrou uma tese
+
+Treze documentos de processo do pitch foram apagados: três que o próprio
+`MANUAL-MODELO-E-PITCH.md` declarava substituídos, cinco planos e checklists de rodadas
+que terminaram, quatro specs de slide e a transcrição da versão anterior. Antes de sair,
+saíram deles as duas únicas coisas que passaram no critério da Mallu:
+[[paaps-e-uma-transposicao]] e [[motor-da-paaps]].
+
+Critério aplicado, decidido por ela nesta data: uma lição só entra se **muda o que a PAAPS
+diz, vende ou cobra** e **sobrevive à troca de ferramenta e de ano**.
