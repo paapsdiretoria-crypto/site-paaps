@@ -24,7 +24,7 @@ Políticas Públicas do futuro."
 3. **R$ 1 volta em R$ 4**, com Chisholm: o retorno para o município
 4. **Quando a equipe está no limite**, com Hodkinson: erro e insatisfação em dobro
 5. **A rede pública cuida da população, a gente cuida da rede**: postinho, CRAS, CREAS, CAPS, escola
-6. **Os 8 ODS** impactados diretamente
+6. **Os 8 ODS** impactados diretamente. A lista que a peça usa é a **brasileira ampliada, de 20 ODS**, que acrescenta aos 17 da ONU o 18 Igualdade Racial, o 19 Arte, Cultura e Comunicação e o 20 Povos Originários e Comunidades Tradicionais
 7. **As três frentes de oferta**. Ver [[tres-frentes-de-oferta]]
 8. **Quem contrata**: gestão pública e ONGs
 9. **Sigilo e ética**

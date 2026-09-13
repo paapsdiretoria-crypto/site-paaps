@@ -1,13 +1,17 @@
 # Como colocar o site no ar em paaps.com.br
 
-Esta pasta é o site inteiro, pronto. Não precisa instalar nada, não precisa rodar nenhum comando:
-é só subir o **conteúdo de dentro dela** (não a pasta em si) para o servidor.
+Esta pasta guarda **só esta instrução**. O site em si mora em `codigo/site/home/`, que é
+onde ele é construído e editado.
 
-## O que tem aqui dentro
+## Antes de subir, peça o pacote
 
-- `index.html` : a Home
-- `treinamentos/`, `como-atuamos/`, `urgencias/`, `contato/` : as outras 4 páginas
-- `css/`, `js/`, `fontes/`, `img/` : tudo que o site precisa para funcionar
+O pacote de publicação é **gerado na hora**, a partir de `home/`, para nunca subir uma
+versão velha. Peça no chat: **"gera o pacote de deploy do site"**. Em segundos você recebe
+uma pasta pronta, com a Home, as quatro páginas internas e tudo que o site precisa para
+funcionar.
+
+Antes existia uma cópia do site aqui dentro. Ela saiu porque cópia envelhece: ficavam dois
+sites iguais no computador, e quem editasse o errado publicaria o que não quis.
 
 Os formulários de cadastro (Contato e o de dentro de Como Atuamos) já estão ligados no Notion e no
 seu e-mail. Não precisa configurar banco de dados nem nada: isso já está funcionando.
