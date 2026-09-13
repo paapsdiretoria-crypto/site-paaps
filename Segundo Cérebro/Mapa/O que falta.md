@@ -1,7 +1,7 @@
 ---
 tags: [mapa, pendencia]
 origem: "Sistema"
-resumo: "A lista viva dos buracos do cérebro, para voltarmos neles"
+resumo: "O plano completo do que falta no Segundo Cérebro para ele ficar auto-inteligível: decisões suas e conteúdo que só chega quando você mandar"
 serve-para: []
 status: pendente
 atualizado: 2026-09-13
@@ -9,64 +9,109 @@ atualizado: 2026-09-13
 
 # O que falta
 
-**Buraco escondido é pior que buraco.** Toda vez que uma nota nasce incompleta, ou que eu
-tomo uma decisão que é da Mallu, entra uma linha aqui.
+**Levantamento completo em 13/09/2026, varrendo as 165 notas do cofre.** Duas naturezas
+de pendência, que nunca se misturam:
 
-## Decisões que são da Mallu
+- **A. Decisão sua.** Eu não avanço sem ela: é chamada, nome, ou informação que só você
+  tem. Uma vez respondida, eu escrevo e a linha sai daqui.
+- **B. Conteúdo que chega quando você mandar.** Não são perguntas: são materiais
+  (gravação, Drive, export do Notion) que, quando chegarem, viram nota pela skill
+  `adiciona-ao-cerebro`. Ficam aqui só para não se perder de vista.
 
-1. **A frase-mote de hoje.** [[frases-mote]] tem a linha do tempo, mas a atual está
-   marcada como leitura minha do LinkedIn, não como decisão dela.
-2. **`Projetos/prospeccao-e-vendas/` eu criei** porque ela citou "prospecção e vendas"
-   como exemplo de frente, mas não estava na lista de 12. Confirma?
-3. **Identidade visual** (modelos de slide, paleta, tipografia, critérios de design) está
-   dentro de [[Voz]], são 8 notas. Fica ali ou vira setor próprio?
-4. **`Método/` tem só 5 notas** depois que a máquina foi para [[paaps-ai-first]]. Segue
-   como setor ou vira parte de [[Conceitos]]?
+Nenhuma pergunta é urgente por si só. Responda na ordem que fizer sentido pra você.
 
-## Conteúdo que falta ser levantado
+---
 
-5. **[[Histórias]] está incompleto por construção.** O que saiu do LinkedIn e do Lattes é
-   uma fração. Falta a sessão de co-criação, a história contada por áudio no Notion, os
-   destaques do Instagram (um por lugar), as viagens e os estágios um a um.
-6. **[[cliente-ideal-paaps]] tem uma evidência forte e duas vazias.**
-   [[joyce-cliente-ideal]] está escrita. [[itiquira-mt-cliente-ideal]] espera a anotação
-   da reunião. As rodas do TCC ainda vão chegar, e são o material mais forte que existe.
-7. **[[inteligencia-competitiva]] está vazia.** Falta importar a base do Notion e escrever
-   uma nota por concorrente.
-8. **[[Conceitos]] tem 4 notas.** As conceituações de verdade (o que é cuidado, o que é
-   violência, o que é saúde mental, o que é servidor público de linha de frente) estão no
-   TCC e entram quando o Drive do TCC 2 chegar.
-9. **[[Fontes]] tem 2 notas.** Os 6 materiais de estudo que estão em `Arquivos/` ainda não
-   ganharam nota de fonte, e a tipagem espera a estrutura que a Mallu disse que ia mandar.
-10. **Nenhum dos 23 agentes tem nota própria.** Hoje são lidos só pelo índice
-    [[agentes-ai-first]].
-11. **Não está confirmado quais das cinco frentes de automação rodam hoje** e quais estão
-    só escritas. Ver [[paaps-ai-first]].
-12. **Os 176 caminhos que os agentes usam** ainda apontam para a estrutura antiga de
-    pastas. Enquanto não forem corrigidos, os agentes não acham as notas.
+## A. Decisões que só você toma
 
-11. **Risco de marca no nome Ponto de Apoio.** Existe registro vivo no INPI na classe 41,
-    que é o campo da DIGGING. Precisa de advogado de propriedade industrial antes de
-    investir em identidade visual ou domínio. Ver [[risco-de-marca-ponto-de-apoio]].
-12. **Dezoito dos 27 documentos do pitch ainda não foram lidos**, entre eles o raciocínio
-    do zero, o modelo PAAPS completo e as cinco pesquisas.
-13. **O site inteiro ainda não foi compilado:** 8 documentos e o HTML de 40 KB que está no ar.
-14. **Dezenove clippings e PDFs em `Arquivos/` sem nota de Fonte**, entre eles PROSAMES,
-    gargalos da saúde mental no SUS, greve da atenção básica no Rio, suicídios no trabalho,
-    ODS, ISO 9000 e 9001, metadesign e capitalismo regenerativo.
+### Nomenclatura e estrutura do cofre
 
-15. **O TEAtrar não está na lista de projetos ativos**, mas a Gabriela Diniz o apresenta no
-    site como parte do que ela traz para a PAAPS. É frente própria ou projeto dela?
+1. **`Método/` continua setor próprio, ou vira parte de `Conceitos/`?** Hoje `Método` tem
+   só 3 notas porque a máquina foi para `paaps-ai-first`.
+2. **Identidade visual** (modelos de slide, paleta, tipografia, critérios de design) está
+   dentro de `Voz/`, são 8 notas. Fica ali ou vira setor próprio?
+3. **`gestao-estrategica-paaps`** é nome que eu escolhi para a frente de Metas e Quadro de
+   Projetos, a partir do seu próprio pedido. Confirma o nome, ou prefere outro?
+4. **`prospeccao-e-vendas`** eu criei por conta, porque você citou como exemplo de frente
+   da empresa, mas ela não estava na sua lista de 12 projetos. Confirma que existe como
+   projeto próprio?
 
-## Inputs que a Mallu vai mandar
+### Frases e nome
 
-- Drive da faculdade, uma pasta por disciplina
-- Drive do TCC 2, em coleta, com as transcrições das rodas
-- Export do Notion: Sistema GTO, Quadro de Projetos, Inteligência Competitiva, Modelo de Negócio
-- Vídeos transcritos, para o repositório de temas
-- Estágios da faculdade, LinkedIn e Lattes
-- Framework da Refazenda Rio Xopotó
+5. **Qual é a sua frase-mote de hoje?** A do LinkedIn ("uma psicossocióloga que constrói
+   o re-desenho...") é leitura minha, não confirmação sua. Ver [[frases-mote]].
+6. **O nome PONTO DE APOIO**: existe registro vivo no INPI de outra parte, na mesma
+   classe. Precisa de advogado antes de investir mais no nome. Ver
+   [[risco-de-marca-ponto-de-apoio]].
+
+### Sobre projetos e frentes
+
+7. **Digging, Times e Líderes (Fabi)**: o que essa frente entrega hoje, para quem, e é
+   marca separada da PAAPS ou a mesma empresa com duas ofertas? Ver
+   [[digging-times-e-lideres]].
+8. **TEAtrar**: é frente própria da PAAPS, ou projeto da Gabriela Diniz que a PAAPS
+   acolhe? Não está na sua lista de 12 projetos ativos. Ver [[gabriela-diniz]].
+9. **Projeto Minerva**: está em pausa no Quadro de Projetos e não tem nenhuma nota nem
+   entidade neste cofre. Cria nota agora, ou espera ele sair da gaveta?
+10. **Clínica 2027**: quase tudo ainda depende de você contar o que ela atende, para
+    quem, em que formato, sozinha ou com equipe. Ver [[clinica-mallu-2027]].
+11. **As cinco frentes de automação** (`paaps-ai-first`): quais rodam de verdade hoje e
+    quais estão só escritas no papel? Confirma uma por uma.
+
+---
+
+## B. Conteúdo que chega quando você mandar
+
+### Drive e material acadêmico
+- **Drive da faculdade**, uma pasta por disciplina → alimenta [[puc-sp]] e
+  [[psicologia-social]]
+- **Drive do TCC 2**, com as transcrições das rodas → alimenta [[tcc-suas]] e as
+  conceituações de `Conceitos/`
+- **18 dos 27 documentos do pitch Impulsiona Serasa** ainda não foram lidos (o raciocínio
+  do zero, o modelo PAAPS completo, as cinco pesquisas) → ver [[pitch-impulsiona-serasa]]
+
+### Notion
+- **Export do Modelo de Negócio** → [[estrategia-de-negocio]]
+- **Base de concorrentes da Inteligência Competitiva** → [[inteligencia-competitiva]]
+- **Framework da Refazenda Rio Xopotó** → [[refazenda-rio-xopoto]]
+
+### Histórias vividas, aguardando você contar mais
+Onze histórias têm só o esqueleto de currículo, sem o que só quem viveu pode contar:
+[[desterro-do-melo-2024]] · [[complexo-da-mare-2025]] ·
+[[criancas-vitimas-de-violencia-sexual]] · [[cuidados-paliativos]] ·
+[[ministerio-publico-mulheres-vitimas-de-racismo]] ·
+[[mudanca-para-o-interior-de-minas]] · [[proinape-rio-2025]] ·
+[[refazenda-rio-xopoto-2024]] · [[sistema-socioeducativo]] ·
+[[bela-vista-e-materlandia-2025]]. Mais: a história completa que você já contou por
+áudio, que está no Notion, e os destaques do Instagram, um por lugar onde você esteve.
+
+### Reuniões e entrevistas ainda não trazidas
+- **Itiquira, MT**: a reunião inteira, para [[itiquira-mt-cliente-ideal]]
+- **Datas e formato exatos** das collabs com [[sara-vitral]] e [[yago-torres]]
+- **O que já foi submetido** no Desafio Regenera, para [[yunus-negocios-sociais]]
+- **Data exata de início e fim** da incubação na Allos, para [[associacao-allos]]
+- **Os 5 editais de 2026**, um a um, com nome e o que cada um pedia, para [[captacao]]
+
+### Site: pausado nesta sessão por decisão sua
+
+Havia trabalho em andamento de extrair os documentos de construção do site (design
+system, regras de mobile, briefing) quando você pediu para eu focar em outra coisa. O
+que eu já tinha visto, antes de parar:
+
+- **`REGRAS-MOBILE-PAAPS-SITE.md`** já se declara fonte da verdade e já delega a Voz o
+  que é cross-canal. Provavelmente não precisa de nota nova, só ficar citado por caminho.
+- **`briefing-site-paaps.md`** tem uma lista de pendências que só você resolve (título da
+  página de Emergências, autoria de duas fotos, faixa de preço por porte de município,
+  lista final de clientes para a esteira, quem decide do lado das ONGs) que ainda não
+  entrou aqui.
+- **`DESIGN-SYSTEM.md`** (1223 linhas) é majoritariamente especificação técnica de CSS:
+  minha leitura preliminar é que fica no código, não vira nota, exceto se você discordar.
+
+Isso só volta a andar se você pedir de novo.
+
+---
 
 ## Onde isso serve
 
-Em toda sessão de trabalho neste cérebro: é a primeira nota a abrir.
+É a primeira nota a abrir em qualquer sessão nova: mostra o que está de pé, o que espera
+você, e o que espera material.
