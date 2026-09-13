@@ -156,7 +156,7 @@ Cabeçalho: `tags`, `origem`, `resumo` entre aspas duplas, `serve-para`, `status
 | "O título da página do Notion já é o nome da nota" | Título de página não é conceito. "Espaço destinado para saber mais sobre os outros membros" não é nota |
 | "Essa fala é parecida com outra, deixa junto" | Duas coisas parecidas viram duas notas linkadas, não uma nota grande |
 | "É material dela, então vai em Histórias" | `Histórias` é só o que a Mallu viveu |
-| "Não sei em que projeto isso serve, deixo vazio" | Se não sabe, é pergunta para a Mallu, e vira linha em `O que falta` |
+| "Não sei em que projeto isso serve, deixo vazio" | Se não sabe, é pergunta para a Mallu no resumo final, nunca nota nem arquivo de pendência |
 
 ---
 
@@ -167,8 +167,10 @@ A varredura da pasta `Arquivos/` usa este mesmo ciclo, com três diferenças:
 1. **Decide sozinha:** setor, quantidade de notas, nome de arquivo, links, capa, índice e
    log. Isso é trabalho mecânico e tem régua acima.
 2. **Nunca decide sozinha:** categoria nova, contradição com calibração da Mallu, dado de
-   pessoa real, e apagar ou marcar nota como `historico`. Cada um desses vira linha em
-   `Mapa/O que falta.md`, com o material esperando.
+   pessoa real, e apagar ou marcar nota como `historico`. Cada um desses entra no resumo
+   final como pergunta para a Mallu, com o material esperando; nunca vira nota nem arquivo
+   de pendência. Se o achado for de execução (bug, dado errado publicado, ação num canal
+   externo), a skill `tarefa-avulsa-quadro-projetos` registra no Notion, não aqui.
 3. **Entrega um resumo do que entrou:** quantos arquivos foram lidos, quantas notas
    nasceram, quais perguntas ficaram na fila para a Mallu.
 
@@ -185,6 +187,7 @@ isso que marca o material como consumido.
 - [ ] Cada nota tem `## Onde isso serve` preenchido
 - [ ] Cada nota nova entrou na capa do setor dela
 - [ ] Índice e Log atualizados
-- [ ] O que faltou está escrito em `Mapa/O que falta.md`
+- [ ] O que faltou virou pergunta no resumo final para a Mallu, não nota nem arquivo de pendência
+- [ ] Nenhuma pendência de execução (bug, ação externa) foi escrita como nota: foi para `tarefa-avulsa-quadro-projetos`
 - [ ] Nenhuma nota cita o passado da organização
 - [ ] `bash codigo/verifica-caminhos.sh` passa

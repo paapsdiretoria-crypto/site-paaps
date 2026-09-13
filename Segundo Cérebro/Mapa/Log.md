@@ -105,3 +105,16 @@ A Mallu apontou o erro: `Mapa/O que falta.md` era lista de tarefa disfarçada de
 contrariando a própria régua de triagem escrita em [[Visão Geral]] ("agenda ou lista de
 tarefas, muda toda semana, fica fora do grafo"). O arquivo foi apagado e as 5 referências
 a ele, corrigidas. O site: sem pendência ativa, por decisão dela.
+
+## [2026-09-13] infraestrutura | skill tarefa-avulsa-quadro-projetos, pendência sai de vez do cofre
+
+Nasceu a skill `tarefa-avulsa-quadro-projetos`: toda pendência de execução (código, site,
+LinkedIn, currículo, blog, artefato, automação) vira tarefa avulsa na database Notion
+"Quadro Estratégico de Projetos" (Status "Tarefas avulsas"), nunca nota. Motivo direto: eu
+tinha escrito "falta corrigir o índice.html" dentro de [[dados-autorizados-do-site]], e a
+Mallu já mantém esse padrão à mão no Notion (páginas "Site PAAPS 3.0 - revisão" e "LinkedIn
+— ATUALIZAR Experiência & Autoridade", cada uma acumulando uma lista de alterações até
+fechar um lote de deploy). [[dados-autorizados-do-site]] perdeu o bloco de pendência de
+código, que foi para a página "Site PAAPS 3.0 - revisão" no Notion. `CLAUDE.md` e
+`adiciona-ao-cerebro` ganharam a proibição explícita, e [[Visão Geral]] ganhou o destino
+(antes só dizia que pendência não entra, não dizia para onde ir).

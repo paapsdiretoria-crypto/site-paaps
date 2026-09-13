@@ -44,6 +44,17 @@ Guarda automática: `bash codigo/verifica-caminhos.sh` falha se alguém quebrar 
 > **Sobre a memória automática do Claude Code** (em `~/.claude/projects/.../memory/`):
 > conhecimento da PAAPS não mora lá. Vai para `Segundo Cérebro/`, sempre.
 
+> **Pendência nunca é conhecimento, e o Segundo Cérebro não é lista de tarefas.**
+> Calibrado pela Mallu em 13/09/2026, depois de eu escrever "falta corrigir o código X" numa
+> nota de `Fontes/`. Corrigir código, atualizar LinkedIn, currículo, blog, artefato ou
+> automação é execução, muda toda semana, e execução some do cofre (regra já escrita em
+> `Segundo Cérebro/Mapa/Visão Geral.md`: "nunca lista de pendência como nota própria").
+> Toda pendência de execução vai para a database Notion "Quadro Estratégico de Projetos"
+> (Status "Tarefas avulsas"), pela skill `tarefa-avulsa-quadro-projetos`, nunca para nota,
+> bloco "o que falta" ou arquivo de pendência dentro de `Segundo Cérebro/`. Uma dúvida de
+> nomenclatura ou estrutura do próprio cofre também não vira arquivo: é pergunta direta
+> para a Mallu, na hora, na conversa.
+
 > Este arquivo é lido automaticamente pelo Claude Code ao abrir o repositório. Ele carrega
 > quem somos, como pensamos e o que nunca fazer.
 
@@ -483,6 +494,7 @@ A pasta ainda se chama `SITE PAAPS/` por limitação do ambiente. Para renomear 
 | `paaps-orquestrador-conteudo` | **Fonte da verdade do fluxo de conteúdo.** Julga em qual dos dois troncos a tarefa cai (A: a Mallu puxa o gancho; B: o PAAPS por frequência, começando no Radar), conduz o montante daquele tronco, aplica os 7 guardrails, opera o gate de voz peça a peça e aciona os agentes que já existem. Ler antes de qualquer produção de conteúdo |
 | `exporta-html-pdf` | Converter peça em HTML/CSS (pitch, carrossel, relatório, one-pager) em PDF, PNG ou JPG para anexo, inscrição ou postagem. Traz o script `exportar-slides.sh`, que fotografa tela a tela e monta o PDF sem folha de impressão, então o arquivo sai idêntico ao navegador. Guarda as armadilhas (filtro SVG que estoura o peso, transform que posiciona, página em mm x largura de projeto) e as bibliotecas de terceiros já reprovadas |
 | `ajuste-fino-tipografico` | Acabamento tipográfico de peça em HTML/CSS que a Mallu vai olhar: régua de linhas (título até 3, destaque 2, descritivo de número 1 ou 2), ordem certa das alavancas para reduzir quebra (cortar palavra, ganhar largura no padding, e só então o corpo, nunca menor do que já estava), `<br>` para forçar 2+2, sombra em camadas e respaldo sobre foto clara. Traz os scripts de console que MEDEM contagem de linhas e colisão entre elementos, em vez de julgar por print |
+| `tarefa-avulsa-quadro-projetos` | Registrar uma pendência de execução (corrigir código, atualizar LinkedIn, currículo, blog, artefato, automação, ajustar copy publicada) como tarefa avulsa na database Notion "Quadro Estratégico de Projetos" (Status "Tarefas avulsas"). É o único destino de pendência de execução: nunca vira nota do Segundo Cérebro |
 
 ### Notion : página de operações
 

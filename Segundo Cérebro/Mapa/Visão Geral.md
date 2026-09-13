@@ -4,7 +4,7 @@ origem: "Sistema"
 resumo: "O manual do Segundo Cérebro: o que vira nota, o ciclo de entrada e a faxina do grafo"
 serve-para: []
 status: vivo
-atualizado: 2026-09-12
+atualizado: 2026-09-13
 ---
 
 # Visão Geral
@@ -77,7 +77,10 @@ ideia que ele destrava: são quatro notas, não uma.
   meses.
 - **Nunca lista de pendência como nota própria.** "O que falta" não é conhecimento
   durável, é tarefa, e tarefa muda toda semana: seguindo a mesma régua de triagem lá em
-  cima, fica fora do grafo.
+  cima, fica fora do grafo. Pendência de execução (corrigir código, atualizar LinkedIn,
+  currículo, blog, artefato, automação) vai para a database Notion "Quadro Estratégico de
+  Projetos" pela skill `tarefa-avulsa-quadro-projetos`. Dúvida de nomenclatura ou
+  categoria do próprio cofre é pergunta direta para a Mallu, na conversa, não arquivo.
 
 **Teste do resumo:** se o `resumo` só fica verdadeiro usando um "e", são duas notas.
 
