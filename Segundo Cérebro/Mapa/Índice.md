@@ -12,8 +12,6 @@ atualizado: 2026-09-13
 Ache o setor, leia o resumo de uma linha, e só então abra a nota. Cada setor tem capa: é
 ela que liga as notas entre si.
 
-Nota marcada `pendente` está incompleta de propósito e aparece em [[O que falta]].
-
 ## Os setores
 
 [[Projetos]] · [[Entidades]] · [[Histórias]] · [[Conceitos]] · [[Voz]] · [[Método]] ·
@@ -273,7 +271,6 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 - [[Contrato de caminhos]] : A regra que impede o cérebro de quebrar os agentes toda vez que uma nota muda de lugar
 - [[Legenda de cores]] : O que cada cor do grafo significa, e a pergunta que cada setor responde
 - [[Log]] : A linha do tempo do que entra no Segundo Cérebro, uma linha por entrada
-- [[O que falta]] `pendente` : A lista viva dos buracos do cérebro, para voltarmos neles
 - [[Visão Geral]] : O manual do Segundo Cérebro: o que vira nota, o ciclo de entrada e a faxina do grafo
 - [[mapa-do-ecossistema]] : Todo primeiro nível de SITE PAAPS catalogado, inclusive o que nunca vai virar nota, com o backlog do que falta compilar
 - [[padrao-llm-wiki]] : O padrão LLM Wiki de Karpathy nas palavras do autor, e o que dele ainda não aplicamos aqui

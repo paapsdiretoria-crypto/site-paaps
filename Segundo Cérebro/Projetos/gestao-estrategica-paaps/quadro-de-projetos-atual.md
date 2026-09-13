@@ -36,11 +36,9 @@ usando o cofre como referência de trabalho dentro do próprio quadro.
 | Sistema GTO no Notion e Segundo Cérebro | Comunicação/Produtos | [[sistema-gto-ai-first]] |
 | Inteligência Competitiva / Relatório de Concorrentes | Pesquisa/Gestão | [[inteligencia-competitiva]] |
 | Banco de Histórias Vivas PAAPS | Comunicação/Produtos | [[Histórias]] |
-| Faculdade de Psicologia no Segundo Cérebro | Operacional/Comunicação/Pesquisa | O que falta, item 6 |
+| Faculdade de Psicologia no Segundo Cérebro | Operacional/Comunicação/Pesquisa | (aguardando o Drive) |
 
-**Os quatro coincidem com frentes que este cérebro já tem aberta ou já sinalizou como
-pendente.** Nenhum é novidade: são exatamente os buracos já nomeados em
-[[O que falta]].
+**Os quatro coincidem com frentes que este cérebro já tem aberta.** Nenhum é novidade.
 
 ## Em pausa
 

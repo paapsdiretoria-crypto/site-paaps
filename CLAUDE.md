@@ -7,7 +7,6 @@
 > **`Segundo Cérebro/Mapa/Visão Geral.md`** : o manual. O que vira nota e o que não vira,
 > o ciclo de cinco passos e a faxina do grafo.
 > **`Segundo Cérebro/Mapa/Contrato de caminhos.md`** : a regra que segura tudo isso de pé.
-> **`Segundo Cérebro/Mapa/O que falta.md`** : os buracos conhecidos, escritos como buracos.
 >
 > `Segundo Cérebro/` é a **fonte primária de conhecimento durável** deste ecossistema.
 > Antes de responder qualquer coisa que dependa de saber algo sobre a PAAPS, passe pelo
@@ -29,6 +28,7 @@ lê descobre sozinho o que abrir. Nota muda de nome e de lugar; a capa não muda
 | `Segundo Cérebro/Fontes/Fontes.md` | dado, lei, estudo, notícia, com fonte |
 | `Segundo Cérebro/Ideias/Ideias.md` | as faíscas guardadas, e onde cada uma serve |
 | `Segundo Cérebro/Projetos/Projetos.md` | que projetos existem |
+
 | `Segundo Cérebro/Projetos/<projeto>/<projeto>.md` | quando o trabalho é de um projeto só |
 
 Guarda automática: `bash codigo/verifica-caminhos.sh` falha se alguém quebrar a regra.
@@ -312,7 +312,7 @@ SITE PAAPS/
 │   ├── Arquivos/            ← A SACOLA: cru, imutável. O Web Clipper salva aqui.
 │   │
 │   ├── Mapa/         ⚪     ← Índice · Log · Visão Geral · Legenda de cores ·
-│   │                          O que falta · Contrato de caminhos · _modelos/
+│   │                          Contrato de caminhos · _modelos/
 │   │
 │   ├── Projetos/     🟣     ← no que a Mallu trabalha. Uma pasta por projeto, cor
 │   │                          própria no grafo, e toda nota termina com o apelido dele
@@ -375,8 +375,8 @@ que fala, o dado citado e a ideia que ele destrava: são quatro notas.
 - **A regra escrita como regra:** "nunca escrever X, escrever Y".
 - **O negativo explícito.** O que a nota proíbe vale tanto quanto o que ela permite.
 - **`## Onde isso serve` é obrigatório.** Nota que não diz onde serve vira lixo.
-- **`## O que ainda falta`** quando a nota nasce incompleta, mais uma linha em
-  `Mapa/O que falta.md`. Buraco escondido é pior que buraco.
+- **Nunca lista de pendência como nota própria.** O que falta se pergunta no chat, nunca
+  vira arquivo: agenda e lista de tarefa mudam toda semana e ficam fora do grafo.
 - **Link nas duas direções**, e a capa do setor ganha a linha da nota nova.
 - **Nada de arqueologia.** A nota diz o que é e o que se faz, nunca o que era antes.
 

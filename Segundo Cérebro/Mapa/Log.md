@@ -15,7 +15,7 @@ Append-only: entrada nova vai para o fim, nada é reescrito.
 ## [2026-09-12] estrutura | o cérebro entrou no ar
 
 Nove setores com cor, treze projetos com pasta, dez moldes de nota e o manual em
-[[Visão Geral]]. O que ainda não existe está escrito em [[O que falta]].
+[[Visão Geral]]. O que ainda não existe é pedido direto no chat, nunca listado como nota.
 
 ## [2026-09-12] ditado | anotações de caderno da escuta com a Joyce
 
@@ -97,4 +97,11 @@ estudos/1.002), cada uma com seu próprio OR. O pitch estava certo; o site tinha
 número de um desfecho que a própria frase dele nem usa. [[dados-do-esgotamento-e-erro]]
 ganhou a tabela completa das três sub-análises, e [[dados-autorizados-do-site]] registra a
 correção e a pendência de código (trocar o número em `codigo/site/home/index.html:193`, que
-ainda não foi editado). Item 15 de [[O que falta]] removido, resolvido.
+ainda não foi editado). Item de pendência resolvido.
+
+## [2026-09-13] correção | lista de pendência não é nota, saiu do cofre
+
+A Mallu apontou o erro: `Mapa/O que falta.md` era lista de tarefa disfarçada de nota,
+contrariando a própria régua de triagem escrita em [[Visão Geral]] ("agenda ou lista de
+tarefas, muda toda semana, fica fora do grafo"). O arquivo foi apagado e as 5 referências
+a ele, corrigidas. O site: sem pendência ativa, por decisão dela.

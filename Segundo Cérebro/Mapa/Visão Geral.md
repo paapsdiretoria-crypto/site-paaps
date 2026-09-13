@@ -75,8 +75,9 @@ ideia que ele destrava: são quatro notas, não uma.
 - **Link nas duas direções.** Nota que ninguém aponta é nota que ninguém acha.
 - **`## Onde isso serve` é obrigatório.** Nota que não diz onde serve vira lixo em três
   meses.
-- **O que falta fica escrito.** Nota incompleta abre `## O que ainda falta` e entra em
-  `O que falta.md`. Buraco escondido é pior que buraco.
+- **Nunca lista de pendência como nota própria.** "O que falta" não é conhecimento
+  durável, é tarefa, e tarefa muda toda semana: seguindo a mesma régua de triagem lá em
+  cima, fica fora do grafo.
 
 **Teste do resumo:** se o `resumo` só fica verdadeiro usando um "e", são duas notas.
 
@@ -93,7 +94,7 @@ Some a isso: pasta vazia não existe, e bolinha sem cor no grafo é erro, não d
 
 ## Ligações
 
-[[Índice]] · [[Log]] · [[Legenda de cores]] · [[O que falta]] · [[padrao-llm-wiki]]
+[[Índice]] · [[Log]] · [[Legenda de cores]] · [[padrao-llm-wiki]]
 
 Os setores: [[Projetos]] · [[Entidades]] · [[Histórias]] · [[Conceitos]] · [[Voz]] ·
 [[Método]] · [[Fontes]] · [[Ideias]]

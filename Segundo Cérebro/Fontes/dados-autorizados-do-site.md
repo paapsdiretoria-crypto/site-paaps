@@ -28,7 +28,7 @@ link: "https://www.paaps.com.br"
 desleixo, é risco psicossocial do trabalho". Nunca escrever **absenteísmo**: escrever
 **faltas e afastamentos**.
 
-## Uma inconsistência já resolvida na fonte, ainda não corrigida no código
+## Uma inconsistência resolvida: qual número é o certo
 
 O site citava o estudo do BMJ 2022 como **40 estudos com mais de 32 mil profissionais**. O
 pitch cita o mesmo estudo como **revisão de 35 estudos**. Verificado em 13/09/2026 contra o
@@ -38,11 +38,8 @@ própria frase do site descreve. O número certo para "o dobro de chance do aten
 fora do esperado" é **35 estudos, 41.059 profissionais**. Tabela completa das três
 sub-análises em [[dados-do-esgotamento-e-erro]].
 
-**O que ainda falta:** trocar "40 estudos, com mais de 32 mil profissionais de saúde" por
-"35 estudos, com mais de 41 mil profissionais de saúde" em `codigo/site/home/index.html`
-(linha 193) e no mesmo trecho em `codigo/site/deploy-paaps-com-br/index.html`. Isso é
-correção de código, não de conhecimento: por isso fica como pendência aqui, não em
-[[O que falta]].
+A correção do texto publicado é execução, não conhecimento: fica registrada como tarefa
+avulsa em Notion (skill `tarefa-avulsa-quadro-projetos`), nunca aqui.
 
 ## Ligações
 
