@@ -228,3 +228,29 @@ exata em seis histórias: [[puc-sp]], [[criancas-vitimas-de-violencia-sexual]],
 Instituto ELO, BH, 2025). [[tcc-suas]] ganhou o título exato e o supervisor, Alexandre
 Kaitel. [[associacao-allos]] ganhou o vínculo pessoal da Mallu como Diretora de Projetos
 Sociais lá, de 03/25 a 12/25, distinto do contrato formal PAAPS-Allos de 2026.
+
+## [2026-09-13] consolidação | 4 páginas do Notion, e as capas que ficaram para trás
+
+O agente do Notion terminou depois do commit anterior e seus arquivos foram varridos
+junto por um `git add -A` que não tinha esse objetivo: por isso o commit "CV 2026 entra"
+carrega também este material, sem descrevê-lo. Registro aqui o que entrou de fato:
+
+**Minerva paaps FrameWork:** [[minerva-paaps-framework-notion]], a parceria pausada de
+universitários em imersão na Refazenda, hoje sem pasta própria no cofre.
+
+**Concorrência (16 notas ao todo em `Projetos/inteligencia-competitiva/`):** metade já
+tinha sido escrita por uma automação paralela na mesma sessão; o agente completou com
+[[ashoka-intel]], [[nesta-intel]], [[ideo-org-intel]], [[desis-network-intel]],
+[[ore-intel]], [[grupo-orzil-intel]], [[dataway-intel]], [[universaude-intel]].
+
+**Refazenda Rio Xopotó no Notion:** [[refazenda-rio-xopoto]] ganhou o modelo Roça-Office,
+o 1º lugar no WorldPackers e a cobertura de Globo e O Tempo, sem tocar a proibição de
+citação pública já vigente.
+
+**Modelo de Negócio:** [[caminhos-legais-venda-ao-governo]] (dispensa, inexigibilidade,
+consórcio público), mais três fontes de dado: [[censopsi-2022-precariedade-psicologia]],
+[[microcredito-periodicidade-do-encontro]], [[igd-repasse-automatico-formacao-equipe]].
+[[schwartz-center]] ganhou a estrutura de licenciamento como precedente do modelo PAAPS.
+
+Regenerei as capas de Fontes, Entidades, Conceitos e das duas pastas de projeto tocadas,
+que não listavam os satélites novos até agora.
