@@ -1,9 +1,9 @@
 ---
 tags: [voz, calibracao]
 origem: "Calibração da Mallu"
-resumo: "A linha do tempo das frases-mote da Mallu, com a que vale hoje ainda a confirmar"
+resumo: "A frase-mote vigente da Mallu, e a linha do tempo das que já existiram"
 serve-para: ["[[conteudo-paaps]]", "[[conteudo-mallu]]"]
-status: pendente
+status: vivo
 atualizado: 2026-09-12
 aliases: [bio, frase-mote, frase mote, posicionamento pessoal]
 ---
@@ -14,14 +14,12 @@ aliases: [bio, frase-mote, frase mote, posicionamento pessoal]
 Esta nota guarda todas as que já existiram, porque saber qual caiu e por quê vale tanto
 quanto saber qual vale hoje.
 
-## A que vale hoje: falta confirmar
-
-A seção "Sobre" do LinkedIn dela, em 12/09/2026, abre assim:
+## A que vale hoje
 
 > "Uma psicossocióloga que constrói o re-desenho da Saúde Mental Coletiva no Brasil."
 
-**Isto ainda não é decisão, é leitura minha do perfil dela.** A Mallu precisa dizer se
-essa é a frase-mote de hoje ou se é outra.
+**Confirmada pela Mallu em 13/09/2026.** É a mesma que abre a seção Sobre do LinkedIn e a
+apresentação dela no site. Usar literal, sem melhorar uma palavra.
 
 ## Aposentada: a de até 12/09/2026
 

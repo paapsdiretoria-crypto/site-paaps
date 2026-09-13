@@ -1,72 +1,61 @@
 ---
 tags: [projetos, indice]
 origem: "Trabalho"
-resumo: "O quadro de projetos ativos da PAAPS hoje, por status de execução, ligado aos projetos que já existem no cérebro"
+resumo: "Que projetos a PAAPS tem abertos, a que frente cada um pertence, e onde ele toca este cérebro"
 serve-para: ["[[gestao-estrategica-paaps]]"]
 status: vivo
 atualizado: 2026-09-13
+aliases: [quadro de projetos, projetos ativos]
 ---
 
-# Quadro de Projetos Atual
+# Quadro de projetos
 
-**Esta é a página que está de verdade em dia**, ao contrário de [[metas-2026]]. Cada linha
-tem `Tipo` (Projeto ou Artefato Interno), `Frente de movimento`, `Prioridade` e `Área da
-vida` (paaps, mallu vasconcellos, ou as duas). Tarefa avulsa fica no planner físico da
-Mallu, nunca aqui.
+**Que projetos existem e a que frente cada um pertence.** Prazo, prioridade e status de
+execução não moram aqui: eles mudam toda semana e vivem no quadro do Notion, que é a fonte.
+Aqui fica só o que é estável, que é a existência do projeto e a que frente ele responde.
 
-## Fazendo, agora
+## Em movimento
 
-| Projeto | Frente · Prioridade | Prazo | Liga com |
-|---|---|---|---|
-| tcc-saberes-SUAS | Pesquisa · Importante | — | [[tcc-suas]] |
-| Produção de CONTEÚDO | Operacional · Urgente | 13/09/2026 | [[conteudo-paaps]] |
-| Teoria da Mudança e Canvas C, Desafio Regenera | Produtos · Urgente | 19/09/2026 | [[yunus-negocios-sociais]] |
-| Deck financeiro e plano de captação de investimentos | Produtos · Urgente | 26/09/2026 | [[captacao]] |
-| Pitch-decks comercial e de captação | Produtos · Urgente | 04/10/2026 | [[captacao]] |
-| AVM, assistente virtual moderna que tira do operacional | Gestão/Comunicação · Importante | — | [[paaps-ai-first]] |
-
-**"Produção de CONTEÚDO" já cita este cofre por dentro do Notion**: o anexo daquela linha
-aponta para o `Índice` e para `conteudo-paaps` deste Segundo Cérebro. A Mallu já está
-usando o cofre como referência de trabalho dentro do próprio quadro.
-
-## Projetos prioridade, próximos 3 meses
-
-| Projeto | Frente | Liga com |
+| Projeto | Frente | Toca em |
 |---|---|---|
-| Sistema GTO no Notion e Segundo Cérebro | Comunicação/Produtos | [[sistema-gto-ai-first]] |
-| Inteligência Competitiva / Relatório de Concorrentes | Pesquisa/Gestão | [[inteligencia-competitiva]] |
-| Banco de Histórias Vivas PAAPS | Comunicação/Produtos | [[Histórias]] |
-| Faculdade de Psicologia no Segundo Cérebro | Operacional/Comunicação/Pesquisa | (aguardando o Drive) |
+| tcc-saberes-SUAS | Pesquisa | [[tcc-suas]] |
+| Produção de conteúdo | Operacional | [[conteudo-paaps]] |
+| Teoria da Mudança e Canvas C, Desafio Regenera | Produtos | [[yunus-negocios-sociais]] |
+| Deck financeiro e plano de captação | Produtos | [[captacao]] |
+| Pitch-decks comercial e de captação | Produtos | [[captacao]] |
+| AVM, assistente virtual que tira do operacional | Gestão e comunicação | [[paaps-ai-first]] |
+| Sistema GTO no Notion e no cofre | Comunicação e produtos | [[sistema-gto-ai-first]] |
+| Inteligência competitiva, relatório de concorrentes | Pesquisa e gestão | [[inteligencia-competitiva]] |
+| Banco de Histórias Vivas | Comunicação e produtos | [[Histórias]] |
+| Faculdade de Psicologia no cofre | Pesquisa | [[psicologia-social]] |
 
-**Os quatro coincidem com frentes que este cérebro já tem aberta.** Nenhum é novidade.
+**Nenhum desses é novidade para este cérebro:** todos coincidem com frente que já existe
+aqui. Antes de sugerir projeto novo, olhar se ele não é um destes com outro nome.
 
-## Em pausa
+## Parados
 
-| Projeto | Frente | Liga com |
+| Projeto | Frente | Toca em |
 |---|---|---|
-| Projeto Minerva | Produtos/Pesquisa | (sem nota própria ainda) |
-| Clínica 2027, Strategy | Produtos | [[clinica-mallu-2027]] |
-| Comunicação e marca pessoal, Mallu Vasconcellos | Comunicação | [[conteudo-mallu]] |
-| LinkedIn profissional com estratégia própria | Comunicação/Pesquisa | [[conteudo-mallu]] |
+| Projeto Minerva | Produtos e pesquisa | sem representação no cofre |
+| Clínica 2027, estratégia | Produtos | [[clinica-mallu-2027]] |
+| Comunicação e marca pessoal da Mallu | Comunicação | [[conteudo-mallu]] |
+| LinkedIn com estratégia própria | Comunicação | [[conteudo-mallu]] |
+| Bot de novos seguidores e repost de stories | Comunicação | [[conteudo-paaps]] |
+| Campanhas de tráfego pago | Comunicação | [[paaps-ai-first]] |
+| Dashboard de métricas de perfis | Gestão | [[paaps-ai-first]] |
 
-## Gaveta de projetos (pausados, sem trabalho agora)
+## Já entregues
 
-Bot para receber novos seguidores e reposts de stories · Gestão de campanhas de tráfego
-pago · Dashboard de métricas de perfis.
+Segundo Cérebro · organização dos projetos no Claude · Design System · upgrade do site ·
+edição de vídeo no Claude Code · Photo-Bank · política de privacidade do site · pitch
+completo · Série 01 de vídeos · prospecção automatizada com notificação de retorno · ditado
+por voz.
 
-## Feito
+## Ligações
 
-Criar Segundo Cérebro, inteligência PAAPS · Tracking e organização dos projetos Claude ·
-Design System · Site, upgrade · Edição de vídeos, Claude Code · Final de semestre da
-faculdade · Ditado, prompts falados · Photo-Bank · Política de privacidade do site ·
-Pitch completo da PAAPS · Série de vídeos, Série 01 · Prospecção automatizada com
-notificação de retorno.
-
-**"Criar Segundo Cérebro, inteligência PAAPS" está marcado feito**, com prioridade
-Urgente e frente de Gestão. É a prova, dentro do próprio Notion da Mallu, de que este
-cofre é reconhecido como entrega concluída, não só um experimento em andamento.
+[[gestao-estrategica-paaps]] · [[Projetos]] · [[paaps-ai-first]]
 
 ## Onde isso serve
 
-Em [[gestao-estrategica-paaps]] e em toda decisão de prioridade: antes de sugerir um
-projeto novo, olhar aqui se ele já não está na gaveta, em pausa ou já feito.
+Em [[gestao-estrategica-paaps]] e em toda decisão de prioridade: antes de abrir frente
+nova, conferir aqui se ela já existe parada ou já foi entregue.
