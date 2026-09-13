@@ -4,7 +4,7 @@ origem: "Operação"
 resumo: "O mapa da máquina da PAAPS: o que roda sozinho, o que dispara cada coisa e quem é o gate"
 serve-para: ["[[paaps-ai-first]]"]
 status: vivo
-atualizado: 2026-09-12
+atualizado: 2026-09-13
 aliases: [AI FIRST, automações, automacoes, a máquina]
 ---
 
@@ -54,6 +54,7 @@ Em toda frente que depende de coisa acontecendo sozinha: [[conteudo-paaps]],
 ## O que ainda falta
 
 - Confirmar, uma por uma, quais das cinco frentes **rodam hoje** e quais estão só escritas.
-- Duas rotinas de sincronização de e-mail param por falta de permissão de disco no Mac, e
-  só a Mallu resolve isso, porque exige a senha dela.
 - Nenhum dos 23 agentes tem nota própria: são lidos hoje só pelo índice [[agentes-ai-first]].
+
+Pendência de execução (rotina de sincronização travada por permissão de disco no Mac) fica
+registrada como tarefa avulsa no Notion, não aqui.

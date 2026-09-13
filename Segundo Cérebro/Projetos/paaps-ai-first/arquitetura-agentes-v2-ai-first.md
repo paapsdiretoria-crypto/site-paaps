@@ -4,7 +4,7 @@ origem: "Operação"
 resumo: "A arquitetura de agentes em árvore de dois troncos que vale hoje, com roster de agente por arquivo e status"
 serve-para: ["[[estrategia-de-negocio]]"]
 status: vivo
-atualizado: 2026-09-12
+atualizado: 2026-09-13
 aliases: [árvore de dois troncos, dois troncos, arquitetura de agentes]
 ---
 
@@ -17,8 +17,8 @@ do fluxo é a skill `.claude/skills/paaps-orquestrador-conteudo/SKILL.md`; este 
 divergirem no futuro, `conteudo/CLAUDE.md` vence, por ser lido a cada sessão.
 
 > O diagrama companheiro `arquitetura_v2_agentes_paaps_orquestrador_criticos.svg` ainda
-> desenha a arquitetura antiga de 4 camadas. Está desatualizado e precisa de redesenho;
-> não confiar nele até lá.
+> desenha a arquitetura antiga de 4 camadas: não confiar nele. Redesenho é execução, fica
+> como tarefa avulsa no Notion, não aqui.
 
 ---
 
@@ -51,14 +51,14 @@ Começa no Radar.
 | **PAAPS LinkedIn** | `.claude/agents/paaps-linkedin.md` | Posts de LinkedIn institucional, B2G/B2B | ✅ Definido |
 | **PAAPS Facebook** | `.claude/agents/paaps-facebook.md` | Conteúdo institucional pro Facebook | ⚠ Instrução inicial, aguardando sessão dedicada |
 | **Interlocutor ECOA** | `.claude/agents/ecoa.md` | Conteúdo/gatilho da comunidade ECOA | ⚠ Incompleto, não entra em produção antes de sessão dedicada |
-| **Sentinela** | `.claude/agents/sentinela.md` | Inteligência estratégica, cruzava dashboard + perfis | ⛔ Fora do fluxo desde 27/07/2026. Arquivo ainda no disco, aponta pra caminho velho de dashboard. Decidir se aposenta de vez |
+| **Sentinela** | `.claude/agents/sentinela.md` | Inteligência estratégica, cruzava dashboard + perfis | ⛔ Fora do fluxo desde 27/07/2026. Arquivo ainda no disco, aponta pra caminho velho de dashboard (tarefa avulsa no Notion: decidir se aposenta) |
 | **Tradutor** | `.claude/agents/tradutor.md` | Papel original: processar a resposta da Mallu em briefing final | ⚠ Instrução inicial, não aparece mais no diagrama vigente de `conteudo/CLAUDE.md`. Status a confirmar: aposentado como o Sentinela, ou ainda tem função a definir |
 
 **Nota sobre o Crítico de Conteúdo:** `conteudo/CLAUDE.md` ainda lista "`critico-conteudo`
 é placeholder vazio" nas pendências abertas, mas o arquivo real
 (`.claude/agents/critico-conteudo.md`) tem 211 linhas e descreve um processo completo de
-nota e decisão. A pendência parece resolvida e não atualizada no `CLAUDE.md` de
-`conteudo/`. Vale confirmar com a Mallu e corrigir aquele arquivo também.
+nota e decisão. A pendência parece desatualizada. Confirmar e corrigir `conteudo/CLAUDE.md`
+é execução, fica como tarefa avulsa no Notion, não aqui.
 
 ## Onde cada agente busca contexto
 
@@ -90,12 +90,11 @@ peça manualmente depois de pronta.
 - **Corpus de voz pessoal da Mallu não mapeado** (reels, carrosséis e LinkedIn do
   @amalluvasconcellos). Sem ele, o gate de voz para o perfil pessoal roda com afeto
   emprestado do corpus institucional.
-- **`sentinela` fora do fluxo**, arquivo ainda aponta pra caminho velho de dashboard.
-  Decidir se aposenta.
 - **`tradutor` não aparece no diagrama vigente.** Confirmar se está aposentado junto com
   o Sentinela, ou se ainda tem papel a definir.
-- **A pendência de `critico-conteudo` em `conteudo/CLAUDE.md` parece desatualizada**, ver
-  nota na tabela acima.
+
+`sentinela` fora do fluxo e a pendência de `critico-conteudo` em `conteudo/CLAUDE.md` são
+execução (arquivo a corrigir ou aposentar): tarefa avulsa no Notion, ver tabela acima.
 
 ## O que mudou da arquitetura de 4 camadas
 

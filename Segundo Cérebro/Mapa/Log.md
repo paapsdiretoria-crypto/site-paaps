@@ -129,3 +129,18 @@ saíram deles as duas únicas coisas que passaram no critério da Mallu:
 
 Critério aplicado, decidido por ela nesta data: uma lição só entra se **muda o que a PAAPS
 diz, vende ou cobra** e **sobrevive à troca de ferramenta e de ano**.
+
+## [2026-09-13] varredura | 6 pendências de execução saíram de 4 notas para o Notion
+
+Agente varreu as ~50 notas com "O que ainda falta" ou "pendência" no corpo. 44 eram lacuna
+de conhecimento legítima (ficam). 6 eram execução disfarçada de conhecimento, todas em
+`paaps-ai-first/` e uma em [[gestao-estrategica-paaps]]: rotina de sincronização travada por
+permissão de disco, página de Metas a recriar no Notion, `conteudo/CLAUDE.md` desatualizado
+sobre o `critico-conteudo`, diagrama SVG da arquitetura de agentes desatualizado, `sentinela`
+apontando pra caminho velho, e a pasta vazia `precificacao-paaps/`. As seis migraram para a
+página "PAAPS AI-First — infraestrutura pendente" (Status "Tarefas avulsas") no Notion, e as
+notas de origem ([[paaps-ai-first]], [[gestao-estrategica-paaps]],
+`arquitetura-agentes-v2-ai-first`, `skills-ai-first`) ficaram só com o conhecimento.
+`diagnostico-grafo-conteudo-2026-08-10-ai-first.md` tinha 3 achados parecidos, mas está
+marcado `historico` (superado, mantido como registro de época): não mexi, fica para a Mallu
+confirmar se ainda vale migrar ou se já é passado.

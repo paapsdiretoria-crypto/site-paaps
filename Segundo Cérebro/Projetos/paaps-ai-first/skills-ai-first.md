@@ -4,7 +4,7 @@ origem: ".claude/skills/"
 resumo: "As 50 skills de .claude/skills/, agrupadas por para que servem, e quais delas são do PAAPS e quais vieram de terceiros"
 serve-para: ["[[estrategia-de-negocio]]"]
 status: vivo
-atualizado: 2026-09-12
+atualizado: 2026-09-13
 aliases: [índice de skills, catálogo de skills]
 ---
 
@@ -106,9 +106,8 @@ porta de entrada e roteia para as outras.
 
 ## Pendências
 
-- **`precificacao-paaps/` é uma pasta vazia**, criada em 10/08/2026 e nunca preenchida.
-  Como não tem `SKILL.md`, o Claude Code não a carrega: pedir "precifica isso" não
-  aciona nada. Ou ela é escrita, ou a pasta sai. Decisão da Mallu.
+- **`precificacao-paaps/` é uma pasta vazia** desde 10/08/2026, sem `SKILL.md` (execução:
+  escrever ou apagar é tarefa avulsa no Notion, não aqui).
 - **A régua de preço existe, mas espalhada:** está em
   `automacoes/prospeccao-email/respostas/mantena-margem-e-precificacao.md` e
   `mantena-calculo-equipes.md`, fora do cofre. Vira nota de `5-mercado/` na Fase 2.
