@@ -1,6 +1,6 @@
 ---
 tags: [voz, inventario]
-origem: "Cofre anterior, reorganizado em 12/09/2026"
+origem: "Calibração da Mallu"
 resumo: "Onde achar fotografia documental pública de uso livre, a partir do acervo de Radilson Carlos Gomes"
 serve-para: ["[[conteudo-paaps]]", "[[conteudo-mallu]]"]
 status: vivo

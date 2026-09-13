@@ -1,6 +1,6 @@
 ---
 tags: [metodo, sintese]
-origem: "Cofre anterior, reorganizado em 12/09/2026"
+origem: "Operação"
 resumo: "Diagnóstico datado da pasta conteudo em 10/08/2026, mantido como registro e superado pela arquitetura atual"
 serve-para: ["[[estrategia-de-negocio]]"]
 status: historico

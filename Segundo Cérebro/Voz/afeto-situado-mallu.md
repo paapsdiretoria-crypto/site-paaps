@@ -1,6 +1,6 @@
 ---
 tags: [voz, runbook]
-origem: "Cofre anterior, reorganizado em 12/09/2026"
+origem: "Calibração da Mallu"
 resumo: "Como começar uma peça quando o gancho afetivo não veio da Mallu, e o que continua sendo dela mesmo assim"
 serve-para: ["[[conteudo-paaps]]", "[[conteudo-mallu]]"]
 status: vivo

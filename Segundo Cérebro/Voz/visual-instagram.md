@@ -1,6 +1,6 @@
 ---
 tags: [voz, runbook]
-origem: "Cofre anterior, reorganizado em 12/09/2026"
+origem: "Calibração da Mallu"
 resumo: "Os três modos visuais do Instagram PAAPS e as regras fotográficas que valem em todos eles"
 serve-para: ["[[conteudo-paaps]]", "[[conteudo-mallu]]"]
 status: vivo

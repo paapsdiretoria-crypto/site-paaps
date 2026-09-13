@@ -1,6 +1,6 @@
 ---
 tags: [metodo, inventario]
-origem: "Cofre anterior, reorganizado em 12/09/2026"
+origem: "Operação"
 resumo: "Inventário do Notion GTO e o método real de produção destilado de 4 gravações, com a proposta de 9 agentes ainda sem decisão"
 serve-para: ["[[estrategia-de-negocio]]"]
 status: vivo

@@ -1,6 +1,6 @@
 ---
 tags: [voz, sintese]
-origem: "Cofre anterior, reorganizado em 12/09/2026"
+origem: "Calibração da Mallu"
 resumo: "O que faz funcionar o primeiro carrossel do @paaps.brasil aprovado sem rodada de correção, dissecado slide a slide"
 serve-para: ["[[conteudo-paaps]]", "[[conteudo-mallu]]"]
 status: vivo

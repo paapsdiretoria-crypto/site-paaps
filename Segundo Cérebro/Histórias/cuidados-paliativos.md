@@ -1,6 +1,6 @@
 ---
 tags: [historias, historia]
-origem: "Seção Sobre do LinkedIn da Mallu, lida em 12/09/2026"
+origem: "Vivência"
 resumo: "A Mallu trabalhou com cuidados paliativos antes de fundar a PAAPS"
 serve-para: []
 status: pendente

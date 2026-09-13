@@ -36,7 +36,7 @@
       }
     },
     {
-      "query": "path:\"Voz\"",
+      "query": "path:\"Regras de Voz\"",
       "color": {
         "a": 1,
         "rgb": 15485081
@@ -67,7 +67,7 @@
       "query": "path:\"Mapa\"",
       "color": {
         "a": 1,
-        "rgb": 9741240
+        "rgb": 15592941
       }
     },
     {
@@ -88,6 +88,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.7265030181858005,
+  "scale": 1.3124513703288565,
   "close": true
 }

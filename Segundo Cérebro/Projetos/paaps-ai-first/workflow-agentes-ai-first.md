@@ -1,6 +1,6 @@
 ---
 tags: [metodo, sintese]
-origem: "Cofre anterior, reorganizado em 12/09/2026"
+origem: "Operação"
 resumo: "O fluxo de uma rodada de produção de conteúdo em diagrama, tronco a tronco"
 serve-para: ["[[estrategia-de-negocio]]"]
 status: vivo

@@ -1,6 +1,6 @@
 ---
 tags: [metodo, runbook]
-origem: "Cofre anterior, reorganizado em 12/09/2026"
+origem: "Operação"
 resumo: "Procedimento validado para navegar de verdade no navegador via MCP, com os erros conhecidos e a solução de cada um"
 serve-para: ["[[estrategia-de-negocio]]"]
 status: vivo

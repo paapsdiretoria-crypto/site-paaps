@@ -1,6 +1,6 @@
 ---
 tags: [metodo, conceito]
-origem: "Cofre anterior, reorganizado em 12/09/2026"
+origem: "Operação"
 resumo: "O que a PAAPS entrega e como explica cada frente, ditado pela Mallu em 02/08/2026"
 serve-para: ["[[estrategia-de-negocio]]"]
 status: vivo

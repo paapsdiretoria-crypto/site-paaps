@@ -1,6 +1,6 @@
 ---
 tags: [projetos, projeto]
-origem: "Lista de projetos ativos ditada pela Mallu em 12/09/2026"
+origem: "Trabalho"
 resumo: "A frente que decide em que negócio a PAAPS está e como ela se sustenta"
 serve-para: []
 status: vivo
@@ -19,7 +19,7 @@ Drive: `drive.google.com/drive/folders/1tKhd_UrouV5dH1yO4sxtFR75MJLpkEnw`
 [[mercado-do-cuidado]] · [[capilaridade-do-sus]] · [[erro-de-leitura-do-bem-estar-corporativo]]
 
 ## Notas desta pasta
-[[pesquisa-de-mercado]]
+[[pesquisa-de-mercado-estrategia]]
 
 ## Onde isso serve
 Em pitch, proposta, edital e em qualquer conversa sobre preço.

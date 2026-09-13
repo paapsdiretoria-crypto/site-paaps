@@ -1,6 +1,6 @@
 ---
 tags: [historias, historia]
-origem: "Seção Sobre do LinkedIn da Mallu, lida em 12/09/2026"
+origem: "Vivência"
 resumo: "Em 2024 a Mallu saiu de São Paulo capital para uma cidade de menos de 3 mil habitantes em Minas"
 serve-para: ["[[conteudo-paaps]]", "[[conteudo-mallu]]"]
 status: vivo

@@ -18,7 +18,7 @@ A regra que vale antes de qualquer uma: **acionar o agente que já existe em vez
 na mão.** Essa é a falha mais repetida aqui.
 
 A arquitetura que organiza os agentes de conteúdo é a árvore de dois troncos, descrita
-em [[arquitetura-agentes-v2]] e desenhada em [[workflow-agentes]]. Quem decide em qual tronco a
+em [[arquitetura-agentes-v2-ai-first]] e desenhada em [[workflow-agentes-ai-first]]. Quem decide em qual tronco a
 tarefa cai é a skill `paaps-orquestrador-conteudo`, não um agente.
 
 ## Conteúdo : o fluxo do carrossel, na ordem
@@ -84,7 +84,7 @@ Detalhe de como o sistema opera em [[prospeccao-fria]].
   saídas, fronteiras, um de cada vez, com aprovação explícita da Mallu. O processo está
   em `.claude/skills/cria-agente-paaps/SKILL.md`.
 
-Ver também [[skills]], que é o outro lado da máquina.
+Ver também [[skills-ai-first]], que é o outro lado da máquina.
 
 ## Onde isso serve
 

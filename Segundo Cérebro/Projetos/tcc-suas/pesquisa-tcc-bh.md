@@ -1,6 +1,6 @@
 ---
 tags: [projetos, perfil]
-origem: "Cofre anterior, reorganizado em 12/09/2026"
+origem: "Trabalho"
 resumo: "A campanha de e-mail da pesquisa de TCC da Mallu na rede socioassistencial de BH, separada de propósito do funil comercial da PAAPS"
 serve-para: ["[[tcc-suas]]"]
 status: vivo

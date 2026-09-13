@@ -1,18 +1,101 @@
 {
-  "_comentario": "Cores do grafo, uma por setor. O Obsidian sobrescreve .obsidian/graph.json enquanto esta aberto, entao esta e a copia versionada. Para aplicar: FECHE o Obsidian e rode, da raiz do projeto: cp 'Segundo Cerebro/Mapa/_modelos/graph-cores.json' 'Segundo Cerebro/.obsidian/graph.json'",
   "collapse-filter": true,
   "search": "",
   "showTags": false,
   "showAttachments": false,
-  "hideUnresolved": false,
+  "hideUnresolved": true,
   "showOrphans": true,
   "collapse-color-groups": false,
   "colorGroups": [
     {
-      "query": "path:\"Projetos\"",
+      "query": "path:\"Projetos/ecoa\"",
       "color": {
         "a": 1,
-        "rgb": 11032055
+        "rgb": 1920728
+      }
+    },
+    {
+      "query": "path:\"Projetos/tcc-suas\"",
+      "color": {
+        "a": 1,
+        "rgb": 1409085
+      }
+    },
+    {
+      "query": "path:\"Projetos/clinica-mallu-2027\"",
+      "color": {
+        "a": 1,
+        "rgb": 12458077
+      }
+    },
+    {
+      "query": "path:\"Projetos/digging-times-e-lideres\"",
+      "color": {
+        "a": 1,
+        "rgb": 9584654
+      }
+    },
+    {
+      "query": "path:\"Projetos/psicologia-social\"",
+      "color": {
+        "a": 1,
+        "rgb": 8141549
+      }
+    },
+    {
+      "query": "path:\"Projetos/captacao\"",
+      "color": {
+        "a": 1,
+        "rgb": 12131356
+      }
+    },
+    {
+      "query": "path:\"Projetos/conteudo-paaps\"",
+      "color": {
+        "a": 1,
+        "rgb": 561586
+      }
+    },
+    {
+      "query": "path:\"Projetos/conteudo-mallu\"",
+      "color": {
+        "a": 1,
+        "rgb": 12730636
+      }
+    },
+    {
+      "query": "path:\"Projetos/prospeccao-e-vendas\"",
+      "color": {
+        "a": 1,
+        "rgb": 5078031
+      }
+    },
+    {
+      "query": "path:\"Projetos/estrategia-de-negocio\"",
+      "color": {
+        "a": 1,
+        "rgb": 1013358
+      }
+    },
+    {
+      "query": "path:\"Projetos/inteligencia-competitiva\"",
+      "color": {
+        "a": 1,
+        "rgb": 4405450
+      }
+    },
+    {
+      "query": "path:\"Projetos/cliente-ideal-paaps\"",
+      "color": {
+        "a": 1,
+        "rgb": 10576391
+      }
+    },
+    {
+      "query": "path:\"Projetos/paaps-ai-first\"",
+      "color": {
+        "a": 1,
+        "rgb": 7153881
       }
     },
     {
@@ -65,6 +148,13 @@
       }
     },
     {
+      "query": "path:\"Projetos\"",
+      "color": {
+        "a": 1,
+        "rgb": 11032055
+      }
+    },
+    {
       "query": "path:\"Mapa\"",
       "color": {
         "a": 1,
@@ -85,7 +175,7 @@
   "nodeSizeMultiplier": 1.1,
   "lineSizeMultiplier": 1,
   "collapse-forces": true,
-  "centerStrength": 0.518713248970312,
+  "centerStrength": 0.5187,
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,

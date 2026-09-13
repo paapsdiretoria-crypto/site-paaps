@@ -1,6 +1,6 @@
 ---
 tags: [projetos, projeto]
-origem: "Lista de projetos ativos ditada pela Mallu em 12/09/2026"
+origem: "Trabalho"
 resumo: "A clínica de Psicologia Clínica da Mallu Vasconcellos, prevista para 2027"
 serve-para: ["[[clinica-mallu-2027]]"]
 status: pendente
@@ -11,10 +11,9 @@ atualizado: 2026-09-12
 
 Projeto próprio da Mallu, com abertura prevista para 2027.
 
-## Por que esta nota existe
-Porque na versão anterior deste cofre a clínica não era projeto: aparecia só como uma
-regra de CRP, do que não se pode falar. Isso estava errado. A clínica é uma frente com
-vida própria, e a ideia que nasce pensando na PAAPS pode ser o que abre a clínica.
+## Por que ela é projeto, e não um detalhe da PAAPS
+A clínica é frente com vida própria. A ideia que nasce pensando na PAAPS pode ser o que
+abre a clínica, e por isso ela mora no mesmo cérebro, com link atravessando os dois lados.
 
 ## Onde isso serve
 Em [[conteudo-mallu]] e nas ideias que servem aos dois lados.

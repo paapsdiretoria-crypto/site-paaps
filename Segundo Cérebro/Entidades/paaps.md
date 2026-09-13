@@ -1,6 +1,6 @@
 ---
 tags: [entidades, conceito]
-origem: "Cofre anterior, reorganizado em 12/09/2026"
+origem: "Trabalho"
 resumo: "Definição institucional da PAAPS para consulta interna, escrita depois que a Mallu recusou a mesma explicação como copy de site"
 serve-para: []
 status: vivo

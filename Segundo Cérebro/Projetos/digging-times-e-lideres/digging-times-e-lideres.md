@@ -1,6 +1,6 @@
 ---
 tags: [projetos, projeto]
-origem: "Lista de projetos ativos ditada pela Mallu em 12/09/2026"
+origem: "Trabalho"
 resumo: "A frente de times e líderes conduzida pela Fabi Vasconcellos dentro da DIGGING"
 serve-para: []
 status: pendente

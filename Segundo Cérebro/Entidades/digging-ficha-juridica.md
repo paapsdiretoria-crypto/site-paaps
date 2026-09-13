@@ -1,6 +1,6 @@
 ---
 tags: [entidades, inventario]
-origem: "Cofre anterior, reorganizado em 12/09/2026"
+origem: "Trabalho"
 resumo: "Ficha cadastral completa da DIGGING: CNPJ, objeto social alínea por alínea, cláusula GovTech, sócias e checklist de habilitação"
 serve-para: []
 status: vivo
@@ -80,7 +80,7 @@ Lista conferida no cartão emitido em **13/08/2026 às 12:12:26**, que já refle
 - 82.30-0-01 : Serviços de organização de feiras, congressos, exposições e festas
 - 85.99-6-99 : Outras atividades de ensino não especificadas anteriormente
 
-> **A dúvida que estava aberta aqui está resolvida.** A versão anterior desta ficha listava
+> **Resolvido.** Listava
 > cinco CNAEs, tirados do cartão de 14/12/2023, e alertava que a AC-08 podia não ter chegado
 > ao cadastro. Chegou: **o CNAE de psicologia e psicanálise já consta**, e com ele os três de
 > tecnologia que sustentam a autodefinição como GovTech (62.02, 62.04 e 63.11). Em edital que

@@ -1,6 +1,6 @@
 ---
 tags: [voz, runbook]
-origem: "Cofre anterior, reorganizado em 12/09/2026"
+origem: "Calibração da Mallu"
 resumo: "O gabarito de voz que decide se um texto soa PAAPS, lido por todo agente antes de escrever qualquer peça"
 serve-para: ["[[conteudo-paaps]]", "[[conteudo-mallu]]"]
 status: vivo
@@ -241,7 +241,7 @@ pequeno é explicação em língua comum, nunca segundo murro; o sintoma vivido 
 
 ## 8. Contradições da Skill Anterior : Resolvidas
 
-A versão anterior da skill tinha a instrução de buscar fotos no Unsplash. **Esta instrução está revogada.** A regra de fonte de imagem está em `mapa-fontes-foto.md`.
+**Unsplash não é fonte de imagem da PAAPS.** A regra de onde a foto vem está em [[mapa-fontes-foto]].
 
 ---
 

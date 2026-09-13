@@ -1,6 +1,6 @@
 ---
 tags: [metodo, conceito]
-origem: "Cofre anterior, reorganizado em 12/09/2026"
+origem: "Operação"
 resumo: "Base teórica destilada dos fichamentos da Mallu em movimentos de raciocínio utilizáveis, hoje ancorada na Psicologia Sócio-Histórica"
 serve-para: ["[[estrategia-de-negocio]]"]
 status: vivo

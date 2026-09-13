@@ -1,6 +1,6 @@
 ---
 tags: [voz, calibracao]
-origem: "CLAUDE.md raiz, LinkedIn da Mallu e conversa de 12/09/2026"
+origem: "Calibração da Mallu"
 resumo: "A linha do tempo das frases-mote da Mallu, com a que vale hoje ainda a confirmar"
 serve-para: ["[[conteudo-paaps]]", "[[conteudo-mallu]]"]
 status: pendente

@@ -1,6 +1,6 @@
 ---
 tags: [metodo, resumo-de-fonte]
-origem: "Cofre anterior, reorganizado em 12/09/2026"
+origem: "Operação"
 resumo: "Erros comuns de delegação ao Claude e como corrigir, com o Framework 4D e o loop de delegação e diligência"
 serve-para: ["[[estrategia-de-negocio]]"]
 status: vivo

@@ -1,6 +1,6 @@
 ---
 tags: [projetos, projeto]
-origem: "Citada pela Mallu como exemplo de frente da empresa, em 12/09/2026"
+origem: "Trabalho"
 resumo: "A frente que leva a PAAPS até a prefeitura, do primeiro toque à reunião"
 serve-para: []
 status: pendente

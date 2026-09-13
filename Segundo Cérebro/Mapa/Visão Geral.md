@@ -1,6 +1,6 @@
 ---
 tags: [mapa, manual]
-origem: "Metodologia trazida pela Mallu em 12/09/2026, do padrão LLM Wiki"
+origem: "Sistema"
 resumo: "O manual do Segundo Cérebro: o que vira nota, o ciclo de entrada e a faxina do grafo"
 serve-para: []
 status: vivo
@@ -85,7 +85,7 @@ ideia que ele destrava: são quatro notas, não uma.
 A cada poucas semanas, uma passada resolve a maior parte da entropia:
 
 - **Notas órfãs:** sem nenhum link de entrada ou de saída. Ou conecta, ou apaga.
-- **Links quebrados:** `[[Nome]]` apontando para nota que não existe. O Obsidian mostra
+- **Links quebrados:** um link apontando para nota que não existe. O Obsidian mostra
   em cinza no grafo.
 - **Duplicatas:** duas notas quase iguais sobre a mesma coisa. Junta uma na outra.
 
@@ -93,7 +93,10 @@ Some a isso: pasta vazia não existe, e bolinha sem cor no grafo é erro, não d
 
 ## Ligações
 
-[[Índice]] · [[Log]] · [[Legenda de cores]] · [[O que falta]]
+[[Índice]] · [[Log]] · [[Legenda de cores]] · [[O que falta]] · [[padrao-llm-wiki]]
+
+Os setores: [[Projetos]] · [[Entidades]] · [[Histórias]] · [[Conceitos]] · [[Voz]] ·
+[[Método]] · [[Fontes]] · [[Ideias]]
 
 ## Onde isso serve
 

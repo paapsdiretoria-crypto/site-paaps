@@ -113,7 +113,7 @@ porta de entrada e roteia para as outras.
   `automacoes/prospeccao-email/respostas/mantena-margem-e-precificacao.md` e
   `mantena-calculo-equipes.md`, fora do cofre. Vira nota de `5-mercado/` na Fase 2.
 
-Ver também [[agentes]], que é o outro lado da máquina.
+Ver também [[agentes-ai-first]], que é o outro lado da máquina.
 
 ## Onde isso serve
 

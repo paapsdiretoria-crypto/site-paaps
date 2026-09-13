@@ -26,11 +26,11 @@ sem contexto e **sem backup**, e ninguém percebe até precisar dele.
 Já aconteceu uma pasta inteira nascer fora e virar trabalho órfão. Também já aconteceu de
 um caminho fixo em hook quebrar quando a pasta migrou de `~/Desktop` para `~/Documents`,
 em 07/07/2026, deixando 2 dias sem commit. Por isso os hooks usam `$CLAUDE_PROJECT_DIR` e
-nunca caminho fixo. Ver [[hooks-e-auto-push]].
+nunca caminho fixo. Ver [[hooks-e-auto-push-ai-first]].
 
 ## Ligações
 
-[[hooks-e-auto-push]] · [[mapa-do-ecossistema]] · [[segredo-em-arquivo-commitado]]
+[[hooks-e-auto-push-ai-first]] · [[mapa-do-ecossistema]] · [[segredo-em-arquivo-commitado]]
 
 ## Onde isso serve
 

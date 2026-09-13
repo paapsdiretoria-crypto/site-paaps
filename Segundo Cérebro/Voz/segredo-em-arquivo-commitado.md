@@ -34,7 +34,7 @@ configuração na mão.
 
 ## Ligações
 
-[[regra-de-workspace]] · [[hooks-e-auto-push]]
+[[regra-de-workspace-ai-first]] · [[hooks-e-auto-push-ai-first]]
 
 ## Onde isso serve
 

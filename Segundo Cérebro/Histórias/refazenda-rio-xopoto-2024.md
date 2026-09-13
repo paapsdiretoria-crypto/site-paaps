@@ -1,6 +1,6 @@
 ---
 tags: [historias, historia]
-origem: "Contado pela Mallu em 12/09/2026"
+origem: "Vivência"
 resumo: "A Mallu passou o ano de 2024 inteiro na Refazenda Rio Xopotó"
 serve-para: ["[[conteudo-paaps]]", "[[conteudo-mallu]]"]
 status: pendente

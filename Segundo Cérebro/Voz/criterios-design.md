@@ -1,6 +1,6 @@
 ---
 tags: [voz, runbook]
-origem: "Cofre anterior, reorganizado em 12/09/2026"
+origem: "Calibração da Mallu"
 resumo: "Lista de checagem verificável que o Crítico de Design aplica antes de qualquer peça fechar"
 serve-para: ["[[conteudo-paaps]]", "[[conteudo-mallu]]"]
 status: vivo

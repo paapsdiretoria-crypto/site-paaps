@@ -1,6 +1,6 @@
 ---
 tags: [metodo, sintese]
-origem: "Cofre anterior, reorganizado em 12/09/2026"
+origem: "Operação"
 resumo: "A arquitetura de agentes em árvore de dois troncos que vale hoje, com roster de agente por arquivo e status"
 serve-para: ["[[estrategia-de-negocio]]"]
 status: vivo

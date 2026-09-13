@@ -1,6 +1,6 @@
 ---
 tags: [projetos, projeto]
-origem: "Lista de projetos ativos ditada pela Mallu em 12/09/2026"
+origem: "Trabalho"
 resumo: "A frente que acompanha quem concorre com a PAAPS e o que a gente faz diferente"
 serve-para: ["[[estrategia-de-negocio]]", "[[conteudo-paaps]]"]
 status: vivo

@@ -1,6 +1,6 @@
 ---
 tags: [mapa, inventario]
-origem: "Cofre anterior, reorganizado em 12/09/2026"
+origem: "Sistema"
 resumo: "Todo primeiro nível de SITE PAAPS catalogado, inclusive o que nunca vai virar nota, com o backlog do que falta compilar"
 serve-para: []
 status: vivo
@@ -56,7 +56,7 @@ cases, tese, TAM/SAM/SOM, modelo financeiro, ODS, uma por objeção.
 **Fase 3, as 5 frentes de `automacoes/`** com agentes e skills interligados:
 - [x] `automacoes/prospeccao-email/*` → [[prospeccao-fria]] (a reescrever no formato novo)
 - [x] `automacoes/pesquisa-tcc-bh/*` → [[pesquisa-tcc-bh]] (a reescrever no formato novo)
-- [x] `conteudo/sistema-gto/*` → [[sistema-gto]]
+- [x] `conteudo/sistema-gto/*` → [[sistema-gto-ai-first]]
 - [ ] `automacoes/funil-leads/`, `conteudo-pipeline/`, `crescimento-instagram/`, `trafego-pago/`
 - [ ] `6-sistema/agentes.md` e `6-sistema/skills.md`, os dois índices
 
@@ -68,7 +68,7 @@ morreu: `projetos/impulsiona-startups-serasa/`, `minerva/`, `impactarte/`,
 
 Regra pra todo item: a fonte original fica onde está, nunca é movida nem copiada pro
 cofre. A nota cita o caminho real dela em texto simples, no campo `fontes` do cabeçalho,
-nunca como `[[link]]`, porque essas pastas ficam fora do cofre de propósito.
+nunca como ``[[link]]``, porque essas pastas ficam fora do cofre de propósito.
 
 ## Onde isso serve
 

@@ -1,6 +1,6 @@
 ---
 tags: [voz, resumo-de-fonte]
-origem: "Cofre anterior, reorganizado em 12/09/2026"
+origem: "Calibração da Mallu"
 resumo: "Manual de marca e posicionamento da PAAPS, convertido do DOCX institucional original"
 serve-para: ["[[conteudo-paaps]]", "[[conteudo-mallu]]"]
 status: vivo

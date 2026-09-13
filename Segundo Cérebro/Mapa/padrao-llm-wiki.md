@@ -1,6 +1,6 @@
 ---
 tags: [metodo, resumo-de-fonte]
-origem: "Cofre anterior, reorganizado em 12/09/2026"
+origem: "Operação"
 resumo: "O padrão LLM Wiki de Karpathy nas palavras do autor, e o que dele ainda não aplicamos aqui"
 serve-para: ["[[estrategia-de-negocio]]"]
 status: vivo

@@ -1,6 +1,6 @@
 ---
 tags: [voz, inventario]
-origem: "Cofre anterior, reorganizado em 12/09/2026"
+origem: "Calibração da Mallu"
 resumo: "Catálogo dos 8 modelos de slide e das 8 leis universais do @paaps.brasil, lidos de dentro de peças já publicadas"
 serve-para: ["[[conteudo-paaps]]", "[[conteudo-mallu]]"]
 status: vivo

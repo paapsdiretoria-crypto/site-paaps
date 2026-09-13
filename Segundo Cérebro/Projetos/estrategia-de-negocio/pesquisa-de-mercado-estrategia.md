@@ -1,6 +1,6 @@
 ---
 tags: [projetos, resumo-de-fonte]
-origem: "Cofre anterior, reorganizado em 12/09/2026"
+origem: "Trabalho"
 resumo: "Pesquisa de mercado da PAAPS, convertida do DOCX institucional original"
 serve-para: ["[[estrategia-de-negocio]]"]
 status: vivo

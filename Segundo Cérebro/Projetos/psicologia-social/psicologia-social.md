@@ -1,6 +1,6 @@
 ---
 tags: [projetos, projeto]
-origem: "Lista de projetos ativos ditada pela Mallu em 12/09/2026"
+origem: "Trabalho"
 resumo: "A frente teórica e crítico-criativa de Psicologia Social da Mallu"
 serve-para: ["[[conteudo-mallu]]", "[[conteudo-paaps]]"]
 status: vivo

@@ -1,6 +1,6 @@
 ---
 tags: [projetos, projeto]
-origem: "Lista de projetos ativos ditada pela Mallu em 12/09/2026"
+origem: "Trabalho"
 resumo: "A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas"
 serve-para: ["[[psicologia-social]]"]
 status: vivo

@@ -1,6 +1,6 @@
 ---
 tags: [historias, indice]
-origem: "LinkedIn da Mallu, lido em 12/09/2026"
+origem: "Vivência"
 resumo: "A porta de entrada do repositório de histórias vividas pela Mallu"
 serve-para: ["[[conteudo-paaps]]", "[[conteudo-mallu]]"]
 status: pendente

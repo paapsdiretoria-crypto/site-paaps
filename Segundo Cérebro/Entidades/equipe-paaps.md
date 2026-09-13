@@ -46,7 +46,7 @@ orquestração de IA e virando humanas a qualquer momento.
 - **Confundir DIGGING e PAAPS:** ver [[digging]].
 - **Nunca chamar Mallu e Fabiane de "sócias" quando se fala das duas juntas.** O termo é
   **founder**.
-- **Luiz Sérgio Barbosa**, com Luiz, como está no contrato social. Nunca "Luís".
+- **Luiz Sérgio Barbosa**, com Luiz, como está no contrato social.
 - **FEBRABAN**, com N. Ela dita "FEBRABAM" no áudio; é engano de fala.
 - **A ordem do descritivo da Fabiane é de propósito:** o Pão de Açúcar vem antes do coach,
   porque é o fato que pesa para investidor.

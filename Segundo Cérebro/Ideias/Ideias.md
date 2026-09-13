@@ -1,6 +1,6 @@
 ---
 tags: [ideias, indice]
-origem: "Reorganização de 12/09/2026"
+origem: "Ideias"
 resumo: "A porta de entrada da mineração de ideias, o objetivo número um deste cofre"
 serve-para: []
 status: pendente

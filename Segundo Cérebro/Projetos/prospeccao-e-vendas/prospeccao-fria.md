@@ -1,6 +1,6 @@
 ---
 tags: [projetos, runbook]
-origem: "Cofre anterior, reorganizado em 12/09/2026"
+origem: "Trabalho"
 resumo: "Como o sistema de prospecção fria opera: esteira de status, dedup de 60 dias, cadência e gate de aprovação"
 serve-para: ["[[prospeccao-e-vendas]]"]
 status: vivo

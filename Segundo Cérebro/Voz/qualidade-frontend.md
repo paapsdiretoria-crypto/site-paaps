@@ -1,6 +1,6 @@
 ---
 tags: [voz, conceito]
-origem: "Cofre anterior, reorganizado em 12/09/2026"
+origem: "Calibração da Mallu"
 resumo: "Princípios de design de alta qualidade escritos de forma agnóstica de meio, válidos tanto para HTML quanto para peça no Canva"
 serve-para: ["[[conteudo-paaps]]", "[[conteudo-mallu]]"]
 status: vivo

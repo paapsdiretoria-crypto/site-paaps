@@ -1,6 +1,6 @@
 ---
 tags: [historias, historia]
-origem: "Seção Sobre do LinkedIn da Mallu, lida em 12/09/2026"
+origem: "Vivência"
 resumo: "A Mallu trabalhou com mulheres vítimas de racismo no Ministério Público"
 serve-para: []
 status: pendente

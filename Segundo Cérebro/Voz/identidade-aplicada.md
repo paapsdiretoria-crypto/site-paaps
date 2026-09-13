@@ -1,6 +1,6 @@
 ---
 tags: [voz, runbook]
-origem: "Cofre anterior, reorganizado em 12/09/2026"
+origem: "Calibração da Mallu"
 resumo: "Paleta, tipografia, elementos decorativos e sistema Periódico como o Aplicador Visual executa na prática"
 serve-para: ["[[conteudo-paaps]]", "[[conteudo-mallu]]"]
 status: vivo

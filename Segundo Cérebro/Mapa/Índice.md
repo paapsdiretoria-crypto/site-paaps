@@ -1,6 +1,6 @@
 ---
 tags: [mapa, indice]
-origem: "Reorganização de 12/09/2026"
+origem: "Sistema"
 resumo: "O catálogo de toda nota do Segundo Cérebro, por setor"
 serve-para: []
 status: vivo
@@ -9,32 +9,119 @@ atualizado: 2026-09-12
 
 # Índice
 
-A porta de entrada. Ache o setor, leia o resumo de uma linha, e só então abra a nota.
-Nota marcada com `pendente` está incompleta de propósito e aparece em [[O que falta]].
+Ache o setor, leia o resumo de uma linha, e só então abra a nota. Cada setor tem uma nota
+de capa: é ela que liga as notas entre si, e é por isso que o grafo faz bolo em vez de
+virar estrela em volta deste índice.
+
+Nota marcada `pendente` está incompleta de propósito e aparece em [[O que falta]].
+
+## Os setores
+
+[[Projetos]] · [[Entidades]] · [[Histórias]] · [[Conceitos]] · [[Voz]] · [[Método]] ·
+[[Fontes]] · [[Ideias]]
+
+O manual do sistema é [[Visão Geral]]. O que ainda não existe está em [[O que falta]].
 
 ## 🟣 Projetos
 
 *No que eu estou trabalhando*
 
-- [[captacao]] : A frente de investimento, editais e inscrições, com o histórico do que já foi enviado
-- [[clinica-mallu-2027]] `pendente` : A clínica de Psicologia Clínica da Mallu Vasconcellos, prevista para 2027
-- [[conteudo-mallu]] : A frente de conteúdo do perfil pessoal da Mallu, em todos os canais
-- [[conteudo-paaps]] : A frente de conteúdo institucional da PAAPS, em todos os canais
-- [[digging-times-e-lideres]] `pendente` : A frente de times e líderes conduzida pela Fabi Vasconcellos dentro da DIGGING
-- [[ecoa]] : Contexto da Comunidade ECOA que precisa ser lido antes de qualquer tarefa sobre ela
-- [[estrategia-de-negocio]] : A frente que decide em que negócio a PAAPS está e como ela se sustenta
-- [[pesquisa-de-mercado]] : Pesquisa de mercado da PAAPS, convertida do DOCX institucional original
-- [[inteligencia-competitiva]] : A frente que acompanha quem concorre com a PAAPS e o que a gente faz diferente
-- [[prospeccao-e-vendas]] `pendente` : A frente que leva a PAAPS até a prefeitura, do primeiro toque à reunião
+### [[captacao]]
+
+A frente de investimento, editais e inscrições, com o histórico do que já foi enviado
+
+
+### [[cliente-ideal-paaps]] `pendente`
+
+Quem é o cliente ideal da PAAPS, montado a partir de evidência e não de suposição
+
+- [[itiquira-mt-cliente-ideal]] `pendente` : O que a reunião com Itiquira, no Mato Grosso, ensina sobre o cliente ideal da PAAPS
+- [[joyce-cliente-ideal]] : A escuta com a Joyce, assistente social, mostra que o profissional da rede adoece porque absorve a falha estrutural como falha pessoal
+
+### [[clinica-mallu-2027]] `pendente`
+
+A clínica de Psicologia Clínica da Mallu Vasconcellos, prevista para 2027
+
+
+### [[conteudo-mallu]]
+
+A frente de conteúdo do perfil pessoal da Mallu, em todos os canais
+
+
+### [[conteudo-paaps]]
+
+A frente de conteúdo institucional da PAAPS, em todos os canais
+
+
+### [[digging-times-e-lideres]] `pendente`
+
+A frente de times e líderes conduzida pela Fabi Vasconcellos dentro da DIGGING
+
+
+### [[ecoa]]
+
+A Comunidade ECOA: o que ela é, como funciona e onde ela toca o resto do ecossistema
+
+- [[acordos-e-valores-ecoa]] : Os acordos de convivência e os valores inegociáveis de quem participa da ECOA
+- [[eras-ecoa]] : As Eras são o planejamento temático da ECOA: um tema por período, com debates próprios
+- [[estrutura-de-grupos-ecoa]] : Os quatro níveis de vínculo com a ECOA, de rede ampla a porta-voz, cada um com sua regra de ouro
+- [[onboarding-ecoa]] : Onboarding na ECOA é humanizado por decisão: mensagem pessoal e duas perguntas por áudio, nunca formulário frio
+- [[personas-ecoa]] `pendente` : Quem são as pessoas da ECOA: trabalhadoras do cuidado, direta ou indiretamente
+- [[porta-voz-ecoa]] : O Programa Porta-Voz dá papel ativo de representação a membras da ECOA e é canal indireto de prospecção
+- [[posicionamento-ecoa]] : A ECOA não é marca-produto da PAAPS: é comunidade, e fortalece a PAAPS de forma indireta
+- [[proposito-ecoa]] : O propósito da ECOA é construir pontes entre as pessoas que cuidam, e qualificar essa rede
+- [[quem-somos-ecoa]] : A ECOA é uma comunidade de quem acredita que cuidado e saúde mental se constroem em coletivo, na rede pública
+- [[rituais-ecoa]] : Os cinco rituais da ECOA, e a regra de que ritual é convite e nunca cobrança
+- [[tom-de-voz-ecoa]] : Como a ECOA fala: corajosa-afetiva, crítica e densa sem virar inacessível
+
+### [[estrategia-de-negocio]]
+
+A frente que decide em que negócio a PAAPS está e como ela se sustenta
+
+- [[pesquisa-de-mercado-estrategia]] : Pesquisa de mercado da PAAPS, convertida do DOCX institucional original
+
+### [[inteligencia-competitiva]]
+
+A frente que acompanha quem concorre com a PAAPS e o que a gente faz diferente
+
+
+### [[paaps-ai-first]]
+
+O mapa da máquina da PAAPS: o que roda sozinho, o que dispara cada coisa e quem é o gate
+
+- [[agentes-ai-first]] : Os 23 agentes de .claude/agents/, o que cada um faz e qual nota do cofre ele lê antes de executar
+- [[arquitetura-agentes-v2-ai-first]] : A arquitetura de agentes em árvore de dois troncos que vale hoje, com roster de agente por arquivo e status
+- [[como-trabalhar-com-claude-ai-first]] : Erros comuns de delegação ao Claude e como corrigir, com o Framework 4D e o loop de delegação e diligência
+- [[diagnostico-grafo-conteudo-2026-08-10-ai-first]] : Diagnóstico datado da pasta conteudo em 10/08/2026, mantido como registro e superado pela arquitetura atual
+- [[hooks-e-auto-push-ai-first]] : Os dois hooks do evento Stop, o que cada um grava, e por que eles usam variável de ambiente em vez de caminho fixo
+- [[regra-de-workspace-ai-first]] : Abrir o Claude Code sempre na raiz SITE PAAPS, porque fora dela não existe CLAUDE.md, skill, cofre nem auto-push
+- [[runbook-navegacao-mcp-ai-first]] : Procedimento validado para navegar de verdade no navegador via MCP, com os erros conhecidos e a solução de cada um
+- [[sistema-gto-ai-first]] : Inventário do Notion GTO e o método real de produção destilado de 4 gravações, com a proposta de 9 agentes ainda sem decisão
+- [[skills-ai-first]] : As 50 skills de .claude/skills/, agrupadas por para que servem, e quais delas são do PAAPS e quais vieram de terceiros
+- [[workflow-agentes-ai-first]] : O fluxo de uma rodada de produção de conteúdo em diagrama, tronco a tronco
+
+### [[prospeccao-e-vendas]] `pendente`
+
+A frente que leva a PAAPS até a prefeitura, do primeiro toque à reunião
+
 - [[prospeccao-fria]] : Como o sistema de prospecção fria opera: esteira de status, dedup de 60 dias, cadência e gate de aprovação
-- [[psicologia-social]] : A frente teórica e crítico-criativa de Psicologia Social da Mallu
+
+### [[psicologia-social]]
+
+A frente teórica e crítico-criativa de Psicologia Social da Mallu
+
+
+### [[tcc-suas]]
+
+A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
+
 - [[pesquisa-tcc-bh]] : A campanha de e-mail da pesquisa de TCC da Mallu na rede socioassistencial de BH, separada de propósito do funil comercial da PAAPS
-- [[tcc-suas]] : A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 
 ## 🟡 Entidades
 
 *Quem: gente e instituição*
 
+- [[Entidades]] : Quem: gente e instituição
 - [[digging-clausula-govtech]] : O PAAPS é ativo intangível pré-existente da DIGGING e não pode ser alienado em licitação, só licenciado
 - [[digging-composicao-societaria]] : A DIGGING tem composição societária 99% feminina e capital de R$ 95.400 integralizado, com administração isolada ou conjunta das duas
 - [[digging-ficha-juridica]] : Ficha cadastral completa da DIGGING: CNPJ, objeto social alínea por alínea, cláusula GovTech, sócias e checklist de habilitação
@@ -65,6 +152,7 @@ Nota marcada com `pendente` está incompleta de propósito e aparece em [[O que 
 
 *O que a palavra significa dentro da PAAPS*
 
+- [[Conceitos]] : O que cada palavra significa dentro da PAAPS
 - [[capilaridade-do-sus]] : O ativo não é o tamanho do mercado, é a capilaridade do SUS, que chega a 5.570 municípios e é a maior malha de cuidado já construída
 - [[erro-de-leitura-do-bem-estar-corporativo]] : Quando a instituição oferece terapia para um problema que ela mesma produz, a falha passa a ser de quem não aguentou, e é por isso que equipe pública reage mal a programa de bem-estar
 - [[linha-de-pensamento-mallu]] : A linha de pensamento da Mallu: psicologia além do consultório e do RH, psicologia suleada, impacto sistêmico
@@ -74,6 +162,7 @@ Nota marcada com `pendente` está incompleta de propósito e aparece em [[O que 
 
 *Como a PAAPS fala, e o que ela nunca diz*
 
+- [[Voz]] : Como a PAAPS fala, e o que ela nunca diz
 - [[afeto-situado-mallu]] : Como começar uma peça quando o gancho afetivo não veio da Mallu, e o que continua sendo dela mesmo assim
 - [[anatomia-do-carrossel-aprovado]] : O que faz funcionar o primeiro carrossel do @paaps.brasil aprovado sem rodada de correção, dissecado slide a slide
 - [[capilarizado-nunca-capitalizado]] : O SUS é capilarizado, nunca capitalizado, e dizer o contrário derruba a credibilidade da peça inteira
@@ -108,27 +197,18 @@ Nota marcada com `pendente` está incompleta de propósito e aparece em [[O que 
 
 *Como a PAAPS trabalha*
 
-- [[agentes]] : Os 23 agentes de .claude/agents/, o que cada um faz e qual nota do cofre ele lê antes de executar
-- [[arquitetura-agentes-v2]] : A arquitetura de agentes em árvore de dois troncos que vale hoje, com roster de agente por arquivo e status
+- [[Método]] : Como a PAAPS trabalha
 - [[base-teorica]] : Base teórica destilada dos fichamentos da Mallu em movimentos de raciocínio utilizáveis, hoje ancorada na Psicologia Sócio-Histórica
-- [[como-trabalhar-com-claude]] : Erros comuns de delegação ao Claude e como corrigir, com o Framework 4D e o loop de delegação e diligência
-- [[diagnostico-grafo-conteudo-2026-08-10]] : Diagnóstico datado da pasta conteudo em 10/08/2026, mantido como registro e superado pela arquitetura atual
 - [[fontes-aceitas]] : Quais fontes valem numa pesquisa da PAAPS, quais estão bloqueadas, e o ritual de 3 a 5 ciclos com parágrafo reflexivo antes de cada busca
-- [[hooks-e-auto-push]] : Os dois hooks do evento Stop, o que cada um grava, e por que eles usam variável de ambiente em vez de caminho fixo
 - [[linha-epistemologica-estrutural]] : A linha epistemológica da PAAPS é estrutural e sistêmica, e isso decide toda análise e todo conteúdo
 - [[metodologia-paaps]] : O que a PAAPS entrega e como explica cada frente, ditado pela Mallu em 02/08/2026
-- [[padrao-llm-wiki]] : O padrão LLM Wiki de Karpathy nas palavras do autor, e o que dele ainda não aplicamos aqui
-- [[regra-de-workspace]] : Abrir o Claude Code sempre na raiz SITE PAAPS, porque fora dela não existe CLAUDE.md, skill, cofre nem auto-push
-- [[runbook-navegacao-mcp]] : Procedimento validado para navegar de verdade no navegador via MCP, com os erros conhecidos e a solução de cada um
-- [[sistema-gto]] : Inventário do Notion GTO e o método real de produção destilado de 4 gravações, com a proposta de 9 agentes ainda sem decisão
-- [[skills]] : As 50 skills de .claude/skills/, agrupadas por para que servem, e quais delas são do PAAPS e quais vieram de terceiros
 - [[supervisao-da-metodologia]] : Quem faz a supervisão na metodologia PAAPS, e por que nunca se escreve 'supervisão clínica em campo'
-- [[workflow-agentes]] : O fluxo de uma rodada de produção de conteúdo em diagrama, tronco a tronco
 
 ## 🔵 Fontes
 
 *O que veio de fora e dá para reconferir*
 
+- [[Fontes]] : O que veio de fora e dá para reconferir
 - [[nr-01]] : A NR-01 não vincula prefeitura nem servidor estatutário, então ela pode ser citada como referência de enquadramento mas nunca como obrigatoriedade legal
 - [[regulacao-cfp-e-crp]] : Falar de psicologia é terreno regulado pelo CFP, e isso limita o que pode ser escrito e por quem
 
@@ -143,17 +223,18 @@ Nota marcada com `pendente` está incompleta de propósito e aparece em [[O que 
 *Onde fica tudo*
 
 - [[Legenda de cores]] : O que cada cor do grafo significa, e a pergunta que cada setor responde
-- [[Log]] : Linha do tempo append-only do que entrou no cofre, o que virou nota e o que a auditoria achou
+- [[Log]] : A linha do tempo do que entra no Segundo Cérebro, uma linha por entrada
 - [[O que falta]] `pendente` : A lista viva dos buracos do cofre, para voltarmos neles com a Mallu
 - [[Visão Geral]] : O manual do Segundo Cérebro: o que vira nota, o ciclo de entrada e a faxina do grafo
 - [[mapa-do-ecossistema]] : Todo primeiro nível de SITE PAAPS catalogado, inclusive o que nunca vai virar nota, com o backlog do que falta compilar
-- [[Índice]] : Catálogo de toda nota do cofre, organizado nos 6 setores. Porta de entrada do Segundo Cérebro
+- [[padrao-llm-wiki]] : O padrão LLM Wiki de Karpathy nas palavras do autor, e o que dele ainda não aplicamos aqui
+- [[Índice]] : O catálogo de toda nota do Segundo Cérebro, por setor
 
 ## ⚫ Arquivos
 
 *O material cru, imutável. Não é nota: é a sacola de onde as notas saem.*
 
-`Arquivos/` guarda hoje 31 arquivos: os 6 clippings de estudo e os 25 do export da ECOA.
+Hoje: 6 clippings de estudo e o export bruto da ECOA, já destilado em [[ecoa]].
 
 ## Onde isso serve
 

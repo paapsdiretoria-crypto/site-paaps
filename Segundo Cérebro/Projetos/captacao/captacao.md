@@ -1,6 +1,6 @@
 ---
 tags: [projetos, projeto]
-origem: "Lista de projetos ativos ditada pela Mallu em 12/09/2026"
+origem: "Trabalho"
 resumo: "A frente de investimento, editais e inscrições, com o histórico do que já foi enviado"
 serve-para: []
 status: vivo

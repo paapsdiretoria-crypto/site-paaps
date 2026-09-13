@@ -37,7 +37,7 @@ do conhecimento é [[Log]], dentro do cofre, escrita à mão pelas operações.
 
 ## Ligações
 
-[[regra-de-workspace]] · [[Log]] · [[agentes]]
+[[regra-de-workspace-ai-first]] · [[Log]] · [[agentes-ai-first]]
 
 ## Onde isso serve
 
