@@ -18,10 +18,22 @@ Janeiro**, pelo PROINAPE, na Secretaria de Educação.
 Escala dentro de rede grande. Desterro do Melo mostra profundidade numa cidade pequena;
 esta mostra volume numa capital.
 
+## O projeto por dentro
+
+O nome do projeto é **RAMA, Rede de Apoio à Maternidade Atípica**, em articulação com o
+PROINAPE e a rede municipal de educação. Ancorado no território escolar, leva rodas
+terapêuticas e práticas de autoconhecimento a mães atípicas nos territórios de Parada de
+Lucas, Vigário Geral e Jardim América, todos no Rio de Janeiro. Em execução desde julho de
+2025.
+
+Escala: mais de 300 horas de plantão psicológico disponibilizadas · mais de 35 encontros
+presenciais semanais de rodas terapêuticas, mediados por profissionais da psicologia ·
+mais de 50 mães diretamente frequentadoras dos encontros.
+
 ## Ligações
 
 [[desterro-do-melo-2024]] · [[complexo-da-mare-2025]] · [[bela-vista-e-materlandia-2025]] ·
-[[Histórias]]
+[[pitch-paaps-short-2]] · [[Histórias]]
 
 ## Onde isso serve
 

@@ -19,14 +19,26 @@ marcado pelo conflito armado urbano.**
 armado não é cenário de programa de bem-estar, e é exatamente onde a PAAPS esteve, semana
 após semana, por um ano.
 
+## O projeto por dentro
+
+O nome do projeto é **Mães Atípicas, Maré de Cuidado**, operado com o Coletivo Especiais
+da Maré de Mães Atípicas, voltado a mães de pessoas atípicas (crianças e jovens
+neurodivergentes) dentro do Complexo da Maré. Em execução desde março de 2025.
+
+Escala: mais de 800 mães na rede do projeto · mais de 55 encontros presenciais semanais de
+rodas terapêuticas, mediados por profissionais da psicologia · 4 capacitações com
+convidados. Escuta qualificada com técnicas grupais, rede de apoio entre as mães e
+articulação com os equipamentos locais.
+
 ## Na mídia
 
-TV Bandeirantes.
+TV Bandeirantes: 1 evento midiático que levou mães e famílias atípicas a uma praia
+acessibilizada em Copacabana.
 
 ## Ligações
 
 [[desterro-do-melo-2024]] · [[proinape-rio-2025]] · [[bela-vista-e-materlandia-2025]] ·
-[[Histórias]]
+[[pitch-paaps-short-2]] · [[Histórias]]
 
 ## Onde isso serve
 
