@@ -18,11 +18,12 @@ roda que a sustenta.
 
 | Fonte de evidência | O que ela ensina | Estado |
 |---|---|---|
-| [[joyce-cliente-ideal]] | conversa com assistente social | a escrever |
+| [[joyce-cliente-ideal]] | escuta com assistente social de hospital e educação | **escrita**, com 7 conceitos próprios |
 | [[itiquira-mt-cliente-ideal]] | reunião com o município | a escrever |
 | Rodas do TCC | conversa direta com o cliente ideal, em grupo | as transcrições ainda vão chegar |
 | Histórias da Mallu | o que ela viu de dentro da rede | [[Histórias]] |
 | Entrevistas e reuniões de lead | o que o município diz que precisa | a levantar |
+| [[o-que-o-cliente-ideal-pede]] | o apoio que ela mesma pediu, em ordem | **escrita** |
 
 ## Por que as rodas do TCC são o material mais forte
 
@@ -32,7 +33,17 @@ cada roda vira uma nota aqui, e a síntese é reescrita em cima delas.
 
 ## O retrato de hoje
 
-_A preencher. Nenhuma linha entra aqui sem evidência apontada._
+Uma evidência forte já permite dizer três coisas, todas apontadas:
+
+1. **A dor de entrada não é saúde mental: é não ser enxergada no próprio trabalho.**
+   Ver [[saude-social-nao-e-vista-como-saude]].
+2. **O adoecimento tem mecanismo nomeado pela própria ponta:** a falha estrutural chega
+   como culpa pessoal. Ver [[falha-estrutural-lida-como-falha-pessoal]].
+3. **Ela sabe o que quer, e não é terapia:** categoria unida, supervisão, menos carga,
+   política pública para ela. Ver [[o-que-o-cliente-ideal-pede]].
+
+O concorrente real não é outra consultoria: é o grupo de categoria que já existe e não
+acolhe.
 
 ## Onde isso serve
 

@@ -9,9 +9,8 @@ atualizado: 2026-09-12
 
 # Índice
 
-Ache o setor, leia o resumo de uma linha, e só então abra a nota. Cada setor tem uma nota
-de capa: é ela que liga as notas entre si, e é por isso que o grafo faz bolo em vez de
-virar estrela em volta deste índice.
+Ache o setor, leia o resumo de uma linha, e só então abra a nota. Cada setor tem capa: é
+ela que liga as notas entre si.
 
 Nota marcada `pendente` está incompleta de propósito e aparece em [[O que falta]].
 
@@ -20,7 +19,7 @@ Nota marcada `pendente` está incompleta de propósito e aparece em [[O que falt
 [[Projetos]] · [[Entidades]] · [[Histórias]] · [[Conceitos]] · [[Voz]] · [[Método]] ·
 [[Fontes]] · [[Ideias]]
 
-O manual do sistema é [[Visão Geral]]. O que ainda não existe está em [[O que falta]].
+O manual é [[Visão Geral]]. A regra de caminho é [[Contrato de caminhos]].
 
 ## 🟣 Projetos
 
@@ -37,6 +36,7 @@ Quem é o cliente ideal da PAAPS, montado a partir de evidência e não de supos
 
 - [[itiquira-mt-cliente-ideal]] `pendente` : O que a reunião com Itiquira, no Mato Grosso, ensina sobre o cliente ideal da PAAPS
 - [[joyce-cliente-ideal]] : A escuta com a Joyce, assistente social, mostra que o profissional da rede adoece porque absorve a falha estrutural como falha pessoal
+- [[o-que-o-cliente-ideal-pede]] : Quando perguntam o que faria diferença, a trabalhadora da rede pede supervisão, menos carga e política pública para ela, nunca terapia
 
 ### [[clinica-mallu-2027]] `pendente`
 
@@ -154,9 +154,16 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 
 - [[Conceitos]] : O que cada palavra significa dentro da PAAPS
 - [[capilaridade-do-sus]] : O ativo não é o tamanho do mercado, é a capilaridade do SUS, que chega a 5.570 municípios e é a maior malha de cuidado já construída
+- [[crenca-mutua-entre-quem-cuida-e-cidadao]] : O trabalho na rede só funciona com crença mútua, e a lógica individualista é o que quebra essa crença dos dois lados
+- [[culpabilizacao-do-individuo]] : A leitura assistencialista culpa o indivíduo pela situação dele em vez de garantir seguridade e equidade
+- [[entraves-institucionais]] : Entrave institucional é o obstáculo que a própria instituição cria entre o profissional e o direito que ele deveria garantir
 - [[erro-de-leitura-do-bem-estar-corporativo]] : Quando a instituição oferece terapia para um problema que ela mesma produz, a falha passa a ser de quem não aguentou, e é por isso que equipe pública reage mal a programa de bem-estar
+- [[falha-estrutural-lida-como-falha-pessoal]] : O profissional da rede adoece porque absorve a falha estrutural como se fosse falha dele
+- [[governo-da-com-uma-mao-e-tira-com-a-outra]] : A formulação da ponta para a política pública que concede um direito e retira outro no mesmo movimento
 - [[linha-de-pensamento-mallu]] : A linha de pensamento da Mallu: psicologia além do consultório e do RH, psicologia suleada, impacto sistêmico
 - [[mercado-do-cuidado]] : A PAAPS está no mercado do cuidado, não no de saúde nem no de bem-estar corporativo, e esse reframe decide quem é concorrente e qual é o tamanho do mercado
+- [[o-cidadao-esta-no-meio]] : O cidadão fica no meio entre os setores que não se falam, e é o contexto dele que nenhum deles considera
+- [[saude-social-nao-e-vista-como-saude]] : Dentro do hospital, o laudo médico vale como saúde e o trabalho social não, o que faz o paciente sair sem direitos
 
 ## 🩷 Voz
 
@@ -209,6 +216,7 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 *O que veio de fora e dá para reconferir*
 
 - [[Fontes]] : O que veio de fora e dá para reconferir
+- [[anotacoes-reuniao-joyce]] : As anotações de caderno da Mallu na escuta com a Joyce, assistente social, ditadas em 12/09/2026
 - [[nr-01]] : A NR-01 não vincula prefeitura nem servidor estatutário, então ela pode ser citada como referência de enquadramento mas nunca como obrigatoriedade legal
 - [[regulacao-cfp-e-crp]] : Falar de psicologia é terreno regulado pelo CFP, e isso limita o que pode ser escrito e por quem
 
@@ -222,9 +230,10 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 
 *Onde fica tudo*
 
+- [[Contrato de caminhos]] : A regra que impede o cérebro de quebrar os agentes toda vez que uma nota muda de lugar
 - [[Legenda de cores]] : O que cada cor do grafo significa, e a pergunta que cada setor responde
 - [[Log]] : A linha do tempo do que entra no Segundo Cérebro, uma linha por entrada
-- [[O que falta]] `pendente` : A lista viva dos buracos do cofre, para voltarmos neles com a Mallu
+- [[O que falta]] `pendente` : A lista viva dos buracos do cérebro, para voltarmos neles
 - [[Visão Geral]] : O manual do Segundo Cérebro: o que vira nota, o ciclo de entrada e a faxina do grafo
 - [[mapa-do-ecossistema]] : Todo primeiro nível de SITE PAAPS catalogado, inclusive o que nunca vai virar nota, com o backlog do que falta compilar
 - [[padrao-llm-wiki]] : O padrão LLM Wiki de Karpathy nas palavras do autor, e o que dele ainda não aplicamos aqui
@@ -232,10 +241,10 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 
 ## ⚫ Arquivos
 
-*O material cru, imutável. Não é nota: é a sacola de onde as notas saem.*
+*O material cru, imutável. É a sacola de onde as notas saem.*
 
-Hoje: 6 clippings de estudo e o export bruto da ECOA, já destilado em [[ecoa]].
+Hoje: os clippings de estudo, o export bruto da ECOA e os ditados da Mallu.
 
 ## Onde isso serve
 
-Em toda leitura deste cofre: é a primeira nota que qualquer pessoa ou agente abre.
+Em toda leitura deste cofre: é a primeira nota que se abre.

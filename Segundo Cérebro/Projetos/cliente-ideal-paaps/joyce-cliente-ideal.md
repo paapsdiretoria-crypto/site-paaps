@@ -61,9 +61,22 @@ multidisciplinares. Joyce disse que nunca tinha pensado assim e que fez sentido 
    nomeou o mecanismo estrutural, e falar como se fosse fraqueza dela é perder a
    interlocutora.
 
+## O que as anotações de caderno acrescentaram à ata
+
+As anotações físicas da Mallu, ditadas em 12/09/2026, são mais densas que a ata e
+destravaram sete conceitos próprios:
+
+[[entraves-institucionais]] · [[falha-estrutural-lida-como-falha-pessoal]] ·
+[[saude-social-nao-e-vista-como-saude]] · [[o-cidadao-esta-no-meio]] ·
+[[governo-da-com-uma-mao-e-tira-com-a-outra]] · [[culpabilizacao-do-individuo]] ·
+[[crenca-mutua-entre-quem-cuida-e-cidadao]]
+
+O que ela pediu como apoio concreto está em [[o-que-o-cliente-ideal-pede]], e o bruto em
+[[anotacoes-reuniao-joyce]].
+
 ## Ligações
 
-[[cliente-ideal-paaps]] · [[personas-ecoa]] · [[ecoa]] · [[mercado-do-cuidado]] ·
+[[cliente-ideal-paaps]] · [[o-que-o-cliente-ideal-pede]] · [[personas-ecoa]] · [[ecoa]] · [[mercado-do-cuidado]] ·
 [[erro-de-leitura-do-bem-estar-corporativo]] · [[linguagem-clinica-patologizante]]
 
 ## Onde isso serve

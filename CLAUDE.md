@@ -456,6 +456,7 @@ A pasta ainda se chama `SITE PAAPS/` por limitação do ambiente. Para renomear 
 
 | Skill | Acionar quando |
 |---|---|
+| `adiciona-ao-cerebro` | **Transformar qualquer material em notas do Segundo Cérebro**: ditado, transcrição de vídeo, entrevista, livro, TCC, blog, export do Notion, perfil de rede. Traz o ciclo, as 7 perguntas, o que caçar em cada formato e a régua de setor. É a mesma skill que a automação da pasta `Arquivos/` usa |
 | `meta-architect` | Transformar briefing informal em prompt estruturado em XML |
 | `evita-padrao-ia-imersao-claude` | Auditar e reescrever texto removendo padrões de IA em PT-BR |
 | `copy-carrossel` | Escrever copy de carrossel para Instagram no tom de voz da Mallu, com revisão anti-IA embutida |
