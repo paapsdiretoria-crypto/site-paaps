@@ -20,7 +20,7 @@ link: "https://www.paaps.com.br"
 | **Quase 10 em cada 10** na educação, **8 em cada 10** na saúde | ligam o próprio adoecimento mental às condições de trabalho | Apeoesp, profissionais da educação e da saúde, estado de São Paulo, 2026 |
 | **2 em cada 5** professores · **1 em cada 3** agentes comunitários · **1 em cada 5** médicos | dão sinal de sofrimento mental: insônia, cansaço que não passa, nervosismo, dificuldade de decidir | Coledam, D. H. C. e outros. Ciência e Saúde Coletiva, v. 27, n. 2, 2022. Análise de 89 estudos e mais de 56 mil trabalhadores brasileiros |
 | **R$ 1 volta em R$ 4** para o município | retorno do investimento em saúde, em menos afastamento, menos falta e mais gente conseguindo trabalhar | Chisholm, D. e outros. The Lancet Psychiatry, v. 3, n. 5, 2016. OMS acompanhou 36 países |
-| **O dobro** de chance de o atendimento sair fora do esperado, e **mais que o dobro** de chance de quem foi atendido sair insatisfeito | quando os profissionais estão esgotados | Hodkinson, A. e outros. British Medical Journal, v. 378, 2022. 40 estudos, mais de 32 mil profissionais. Os dados foram levantados com médicos |
+| **O dobro** de chance de o atendimento sair fora do esperado (35 estudos, 41.059 profissionais), e **mais que o dobro** de chance de quem foi atendido sair insatisfeito (8 estudos, 1.002 profissionais) | quando os profissionais estão esgotados | Hodkinson, A. e outros. British Medical Journal, v. 378, 2022. Dados levantados com médicos. Ver [[dados-do-esgotamento-e-erro]] para a tabela completa das três sub-análises do mesmo paper |
 
 ## A régua de como esses dados são escritos
 
@@ -28,11 +28,21 @@ link: "https://www.paaps.com.br"
 desleixo, é risco psicossocial do trabalho". Nunca escrever **absenteísmo**: escrever
 **faltas e afastamentos**.
 
-## Uma inconsistência que precisa ser resolvida
+## Uma inconsistência já resolvida na fonte, ainda não corrigida no código
 
-O site cita o estudo do BMJ 2022 como **40 estudos com mais de 32 mil profissionais**. O
-pitch cita o mesmo estudo como **revisão de 35 estudos**. Os dois não podem estar certos, e
-o número errado derruba a peça se alguém conferir. Ver [[O que falta]].
+O site citava o estudo do BMJ 2022 como **40 estudos com mais de 32 mil profissionais**. O
+pitch cita o mesmo estudo como **revisão de 35 estudos**. Verificado em 13/09/2026 contra o
+paper original: **o pitch está certo**. O site pegou o número de um desfecho diferente do
+mesmo paper (baixo profissionalismo, que nenhuma frase da PAAPS usa), não do desfecho que a
+própria frase do site descreve. O número certo para "o dobro de chance do atendimento sair
+fora do esperado" é **35 estudos, 41.059 profissionais**. Tabela completa das três
+sub-análises em [[dados-do-esgotamento-e-erro]].
+
+**O que ainda falta:** trocar "40 estudos, com mais de 32 mil profissionais de saúde" por
+"35 estudos, com mais de 41 mil profissionais de saúde" em `codigo/site/home/index.html`
+(linha 193) e no mesmo trecho em `codigo/site/deploy-paaps-com-br/index.html`. Isso é
+correção de código, não de conhecimento: por isso fica como pendência aqui, não em
+[[O que falta]].
 
 ## Ligações
 

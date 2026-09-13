@@ -86,3 +86,15 @@ desde o 1º trimestre, e liga com a contradição já registrada em
 Sete notas existentes foram atualizadas com os fatos novos: [[captacao]],
 [[yunus-negocios-sociais]], [[inteligencia-competitiva]], [[mallu-formacao-e-crp]],
 [[associacao-allos]], [[Histórias]] e [[clinica-mallu-2027]].
+
+## [2026-09-13] fontes | Inconsistência do BMJ 2022 resolvida: site errado, pitch certo
+
+O site citava o estudo do BMJ 2022 (Hodkinson et al.) como "40 estudos, mais de 32 mil
+profissionais" e o pitch como "35 estudos". Verificação contra o paper original mostrou que
+são **três sub-análises diferentes dentro do mesmo estudo** (incidentes de segurança: 35
+estudos/41.059; baixo profissionalismo: 40 estudos/32.321; insatisfação do paciente: 8
+estudos/1.002), cada uma com seu próprio OR. O pitch estava certo; o site tinha citado o
+número de um desfecho que a própria frase dele nem usa. [[dados-do-esgotamento-e-erro]]
+ganhou a tabela completa das três sub-análises, e [[dados-autorizados-do-site]] registra a
+correção e a pendência de código (trocar o número em `codigo/site/home/index.html:193`, que
+ainda não foi editado). Item 15 de [[O que falta]] removido, resolvido.
