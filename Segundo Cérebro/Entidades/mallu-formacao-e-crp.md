@@ -34,9 +34,16 @@ quando o CRP sair, esta nota, [[mallu-vasconcellos]], [[equipe-paaps]] e o
 A metodologia PAAPS não depende do registro dela: a supervisão é feita por profissionais
 registrados, ver [[supervisao-da-metodologia]].
 
+## O que a gestão estratégica mostra sobre este prazo
+
+A inscrição no CRP é meta desde o 1º trimestre de 2026, apareceu de novo como
+pré-requisito da meta do 3º trimestre, e em 13/09/2026 segue em 0% nas duas. Ver
+[[metas-2026]]. Não é atraso escondido: é a mesma pendência carregada de trimestre em
+trimestre, coerente com o prazo de fevereiro citado acima.
+
 ## Ligações
 
-[[mallu-vasconcellos]] · [[regulacao-cfp-e-crp]] · [[equipe-paaps]]
+[[mallu-vasconcellos]] · [[regulacao-cfp-e-crp]] · [[equipe-paaps]] · [[metas-2026]]
 
 ## Onde isso serve
 

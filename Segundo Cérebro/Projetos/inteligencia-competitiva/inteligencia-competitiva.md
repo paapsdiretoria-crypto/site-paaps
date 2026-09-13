@@ -28,3 +28,5 @@ faz de diferente sem nomear ninguém.
 
 ## O que ainda falta
 A pasta está vazia: falta importar a base do Notion e escrever uma nota por concorrente.
+Já é prioridade nomeada para os próximos 3 meses no [[quadro-de-projetos-atual]], frente
+de Pesquisa e Gestão.

@@ -28,6 +28,11 @@ matéria-prima que ninguém consegue copiar.
 [[desterro-do-melo-2024]] · [[complexo-da-mare-2025]] · [[proinape-rio-2025]] ·
 [[bela-vista-e-materlandia-2025]]
 
+## Já é prioridade nomeada
+
+"Banco de Histórias Vivas PAAPS" está no [[quadro-de-projetos-atual]] como prioridade dos
+próximos 3 meses. Este setor é onde essa prioridade se cumpre.
+
 ## O que ainda falta
 **Tudo isso é uma fração, e a Mallu já disse que é.** O que está escrito aqui saiu do
 LinkedIn e do que ela contou nesta conversa, que é o que cabe em currículo. Falta:

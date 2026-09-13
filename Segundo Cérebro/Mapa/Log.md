@@ -67,3 +67,22 @@ regras que a copy fixou, [[tres-frentes-de-oferta]], [[dados-autorizados-do-site
 quatro dados já publicados, [[obras-da-ciencia-que-sustentam-o-metodo]], mais
 [[lucas-pimenta]], [[gabriela-diniz]] e o conceito [[avesso-da-clinica]]. O título real do
 TCC apareceu aqui e completou [[tcc-suas]].
+
+## [2026-09-13] gestão estratégica | Metas 2026 e Quadro de Projetos importados
+
+Nasceu o projeto [[gestao-estrategica-paaps]], com a metodologia de Objetivo,
+Resultado-Chave e Projeto, extraída direto do schema do Notion. Duas notas: [[metas-2026]]
+(histórico, a página que será refeita) e [[quadro-de-projetos-atual]] (viva, a fonte de
+verdade de agora).
+
+Achado principal: em três das dez metas de 2026 o status marcado à mão contradiz o
+progresso calculado do Resultado-Chave (conteúdo com IA, prospecção qualificada). A meta
+central de receita (prefeitura pagando R$ 20 mil/mês) tem 5 de 6 pré-requisitos ainda em
+zero a duas semanas do fim do trimestre. A inscrição no CRP é a mesma pendência carregada
+desde o 1º trimestre, e liga com a contradição já registrada em
+[[mallu-formacao-e-crp]]. O contrato com a Associação Allos ganhou data: 1º trimestre de
+2026, cumprido.
+
+Sete notas existentes foram atualizadas com os fatos novos: [[captacao]],
+[[yunus-negocios-sociais]], [[inteligencia-competitiva]], [[mallu-formacao-e-crp]],
+[[associacao-allos]], [[Histórias]] e [[clinica-mallu-2027]].

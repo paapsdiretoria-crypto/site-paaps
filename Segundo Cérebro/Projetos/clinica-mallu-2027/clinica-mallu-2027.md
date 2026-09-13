@@ -18,6 +18,11 @@ abre a clínica, e por isso ela mora no mesmo cérebro, com link atravessando os
 ## Onde isso serve
 Em [[conteudo-mallu]] e nas ideias que servem aos dois lados.
 
+## Estado de execução
+
+Em pausa no [[quadro-de-projetos-atual]], frente de Produtos. Pausado não é abandonado:
+é o que a Mallu está deliberadamente não tocando agora.
+
 ## O que ainda falta
 Quase tudo. Falta a Mallu contar: o que a clínica atende, para quem, em que formato,
 sozinha ou com equipe, e o que já está decidido e não se reabre.

@@ -83,6 +83,13 @@ A frente que decide em que negócio a PAAPS está e como ela se sustenta
 - [[roadmap-estrategia]] : De uma rede por vez a uma malha nacional, em oito marcos, com praticamente a mesma estrutura fixa
 - [[tam-sam-som-estrategia]] : O mercado da PAAPS em três camadas: 5.570 municípios, 2.550 que comportam contrato, 100 em cinco anos
 
+### [[gestao-estrategica-paaps]]
+
+Como a PAAPS planeja: Objetivo, Resultado-Chave, Projeto, e os prazos que cada um pode ter
+
+- [[metas-2026]] : As 10 metas que a PAAPS tinha para 2026, e a análise de quais foram cumpridas até 13/09/2026
+- [[quadro-de-projetos-atual]] : O quadro de projetos ativos da PAAPS hoje, por status de execução, ligado aos projetos que já existem no cérebro
+
 ### [[inteligencia-competitiva]]
 
 A frente que acompanha quem concorre com a PAAPS e o que a gente faz diferente

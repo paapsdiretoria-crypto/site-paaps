@@ -33,7 +33,12 @@ CNPJ ativo da DIGGING é critério eliminatório de inscrição (ver [[digging-f
 Em [[captacao]], como candidatura em andamento, e como referência de linguagem em
 [[estrategia-de-negocio]].
 
+## Onde está o trabalho agora
+
+A etapa em curso é a Teoria da Mudança e o Canvas C, com prazo em 19/09/2026, status
+"Fazendo", prioridade Urgente. Ver [[quadro-de-projetos-atual]].
+
 ## O que ainda falta
 
-Prazo do Desafio Regenera, o que já foi submetido, e a instituição parceira do desafio
-(PUC-Rio) precisa de nota própria se a relação seguir ativa.
+O que exatamente foi submetido até aqui, e a instituição parceira do desafio (PUC-Rio)
+precisa de nota própria se a relação seguir ativa.
