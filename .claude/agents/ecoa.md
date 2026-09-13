@@ -15,8 +15,8 @@ Agente da Camada 3/4 do workflow de conteúdo PAAPS.
 Recebe o briefing do Narrador e produz conteúdo específico para o canal correspondente.
 
 Antes de construir este agente, ler:
-- `Conhecimento/4-projetos/ecoa/CLAUDE.md` (contexto do projeto: o que é a ECOA, posicionamento, voz, governança)
-- `Conhecimento/2-identidade/voz/voz-paaps.md`
-- `Conhecimento/2-identidade/voz/identidade-aplicada.md`
+- `Segundo Cérebro/Projetos/ecoa/ecoa.md` (contexto do projeto: o que é a ECOA, posicionamento, voz, governança)
+- `Segundo Cérebro/Voz/Voz.md`
+- `Segundo Cérebro/Voz/Voz.md`
 - `conteudo/CLAUDE.md`
-- `Conhecimento/6-sistema/arquitetura-agentes/arquitetura_v2.md`
+- `Segundo Cérebro/Projetos/paaps-ai-first/paaps-ai-first.md`

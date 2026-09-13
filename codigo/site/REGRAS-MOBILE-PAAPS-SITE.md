@@ -330,10 +330,10 @@ Mesma regra do catálogo de modelos de slide.
 
 ## PARTE 7 : o que este arquivo não resolve
 
-- **Os 8 modelos de slide e as 8 leis do carrossel:** `Conhecimento/2-identidade/voz/modelos-slide-paaps.md`.
-- **Voz e proibições de escrita:** `Conhecimento/2-identidade/voz/voz-paaps.md`.
-- **Paleta, tipografia e workflow do Canva:** `Conhecimento/2-identidade/voz/identidade-aplicada.md`.
-- **Onde buscar foto e com que hierarquia:** `Conhecimento/2-identidade/voz/mapa-fontes-foto.md`.
-- **Os três modos visuais do Instagram:** `Conhecimento/2-identidade/voz/visual-instagram.md`.
+- **Os 8 modelos de slide e as 8 leis do carrossel:** `Segundo Cérebro/Voz/Voz.md`.
+- **Voz e proibições de escrita:** `Segundo Cérebro/Voz/Voz.md`.
+- **Paleta, tipografia e workflow do Canva:** `Segundo Cérebro/Voz/Voz.md`.
+- **Onde buscar foto e com que hierarquia:** `Segundo Cérebro/Voz/Voz.md`.
+- **Os três modos visuais do Instagram:** `Segundo Cérebro/Voz/Voz.md`.
 - **Regras de mobile para POST:** arquivo próprio, ainda a escrever, que nasce deste aqui.
 - **Quem aprova e quem publica:** só a Mallu. Nenhum agente publica nada.

@@ -1,6 +1,6 @@
 ---
 tags: [entidades, norma]
-origem: "CLAUDE.md, Conhecimento/2-identidade/juridico/ficha-juridica-paaps.md"
+origem: "CLAUDE.md, Segundo Cérebro/Entidades/Entidades.md"
 resumo: "O PAAPS é ativo intangível pré-existente da DIGGING e não pode ser alienado em licitação, só licenciado"
 serve-para: []
 status: vivo

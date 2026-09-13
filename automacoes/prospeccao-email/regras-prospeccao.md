@@ -203,7 +203,7 @@ O agente **nunca** avança de fase sozinho. Na dúvida, o gate é integral.
   de sessão. Este runbook guarda a lógica, não os dados.
 - **Descadastro:** honrado na hora; o contato sai da fila e não volta.
 - **Voz PAAPS:** estrutural e sistêmica, sem linguagem coachesca, sem a estrutura "não é X, é
-  Y", sem travessão grande. Ver `Conhecimento/2-identidade/voz/voz-paaps.md` e `moldes/carta-mallu.md`.
+  Y", sem travessão grande. Ver `Segundo Cérebro/Voz/Voz.md` e `moldes/carta-mallu.md`.
 
 Status: regras definidas em 14/07. Pendente: montar os fluxos JSON no n8n (captura, disparo
 Resend, retorno de eventos, aviso no WhatsApp) e ligar o canal de WhatsApp.

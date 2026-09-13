@@ -71,7 +71,7 @@ Mallu (gate final, aprova, corrige ou recusa)
 - **Nenhum agente publica nada.** Toda peça passa pela aprovação final da Mallu.
 - **A Tecelã entra em toda rodada.** Pular apaga uma rodada de aprendizado que não volta.
 - **Quando a Mallu não fornece o gancho**, o afeto que inicia a peça é reconstituído por
-  `Conhecimento/2-identidade/voz/afeto-situado-mallu.md`, sempre ancorado em artefato
+  `Segundo Cérebro/Voz/Voz.md`, sempre ancorado em artefato
   real, nunca vivência inventada em primeira pessoa.
 
 ## Artefatos de handoff

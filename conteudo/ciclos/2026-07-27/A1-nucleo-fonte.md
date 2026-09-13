@@ -1,7 +1,7 @@
 # A1 : Núcleo da fonte : 27/07/2026
 
 **Fase 1 da skill `paaps-orquestrador-conteudo`. Executada pelo Claude, sem a Mallu.**
-Método: `Conhecimento/2-identidade/voz/afeto-situado-mallu.md`.
+Método: `Segundo Cérebro/Voz/Voz.md`.
 
 ---
 

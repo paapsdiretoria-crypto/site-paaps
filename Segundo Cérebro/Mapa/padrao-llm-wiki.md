@@ -24,15 +24,15 @@ compilado uma vez e mantido atualizado, não redescoberto a cada pergunta.
 
 | Camada do padrão original | O que é | Onde vive neste cofre |
 |---|---|---|
-| Raw sources | coleção de origem, imutável, a IA só lê | `Conhecimento/Arquivos/` |
-| The wiki | markdown gerado pela IA: resumo, entidade, conceito, síntese | `Conhecimento/` |
+| Raw sources | coleção de origem, imutável, a IA só lê | `Segundo Cérebro/Arquivos/` |
+| The wiki | markdown gerado pela IA: resumo, entidade, conceito, síntese | `Segundo Cérebro/` |
 | The schema | documento de regras (`CLAUDE.md`), como o wiki é estruturado e o que fazer em cada operação | `CLAUDE.md` raiz, seção "Segundo Cérebro" |
 
 ## As três operações do padrão, e o nome que demos a cada uma
 
 | Original | Aqui | O que faz |
 |---|---|---|
-| Ingest | `compila` | fonte nova em `Arquivos/` vira página em `Conhecimento/`, pode tocar 10-15 páginas de uma vez |
+| Ingest | `compila` | fonte nova em `Arquivos/` vira página em `Segundo Cérebro/`, pode tocar 10-15 páginas de uma vez |
 | Query (+ "salvar boa resposta como página") | `salva isso como nota` | uma resposta boa do chat vira página permanente, não some no histórico |
 | Lint | `audita` | contradição entre páginas, afirmação velha superada, página órfã, conceito sem página própria, link faltando |
 

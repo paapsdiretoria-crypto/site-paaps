@@ -9,6 +9,12 @@ atualizado: 2026-09-12
 
 # Ideias
 
+> **Caminho desta pasta:** `Segundo Cérebro/Ideias/`
+> Quem for abrir uma nota daqui monta o caminho com esta pasta mais o nome da nota.
+> **Esta capa é o endereço estável do setor.** Nota muda de nome e muda de lugar;
+> a capa não muda. Quem cita caminho, cita esta.
+
+
 **A mineração é o objetivo número um deste cofre.** Uma faísca entra aqui crua, e o que
 a torna útil é uma coisa só: o campo **onde isso serve**. Ideia que não diz onde serve
 morre em três meses.

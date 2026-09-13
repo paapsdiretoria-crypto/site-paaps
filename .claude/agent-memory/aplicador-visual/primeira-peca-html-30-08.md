@@ -7,7 +7,7 @@ aprovou o resultado e decidiu que **HTML vira o caminho oficial**; Canva passa a
 para quando ela quiser editar manualmente depois.
 
 **O que rendeu 7 rodadas de correção**, cada uma nomeada em
-`Conhecimento/2-identidade/voz/anatomia-do-carrossel-aprovado.md` (Parte 4): véu de
+`Segundo Cérebro/Voz/Voz.md` (Parte 4): véu de
 legibilidade em gradiente e em cor de marca (devia ser sólido e preto), sobrancelha acima do
 título, legenda repetida ao lado do logo (era metadado de handoff, não texto pra renderizar),
 frase inventada no fechamento de um slide, concordância quebrada entre slides vizinhos,
@@ -24,5 +24,5 @@ esquerdo em Helvetica 700, logo sempre no rodapé direito, nunca a linha `@perfi
 várias combinações lado a lado) e escolher sozinho qual sobrevive, em vez de gastar uma
 rodada dela por tentativa. Mesmo assim, a palavra final continua sendo o print real dela.
 
-Ver `Conhecimento/2-identidade/voz/anatomia-do-carrossel-aprovado.md` para a peça
+Ver `Segundo Cérebro/Voz/Voz.md` para a peça
 inteira, o texto de todos os 8 slides e a constituição visual completa.

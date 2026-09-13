@@ -62,7 +62,7 @@ nota e decisão. A pendência parece resolvida e não atualizada no `CLAUDE.md` 
 
 ## Onde cada agente busca contexto
 
-Núcleo comum: `Conhecimento/2-identidade/voz/`.
+Núcleo comum: `Segundo Cérebro/Voz/Voz.md`.
 
 | Agente | Lê |
 |---|---|

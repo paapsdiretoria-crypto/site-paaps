@@ -13,6 +13,11 @@ Lei, dado oficial, estudo, notícia, aula, vídeo, livro e material de concorren
 
 **Fonte sem tipo não se acha.** A régua de qual fonte vale está em [[fontes-aceitas]].
 
+> **Caminho desta pasta:** `Segundo Cérebro/Fontes/`
+> Quem for abrir uma nota daqui monta o caminho com esta pasta mais o nome da nota.
+> **Esta capa é o endereço estável do setor.** Nota muda de nome e muda de lugar;
+> a capa não muda. Quem cita caminho, cita esta.
+
 ## O que tem aqui
 
 - [[nr-01]] : A NR-01 não vincula prefeitura nem servidor estatutário, então ela pode ser citada como referência de enquadramento mas nunca como obrigatoriedade legal

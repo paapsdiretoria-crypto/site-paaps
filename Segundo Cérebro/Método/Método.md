@@ -11,6 +11,11 @@ atualizado: 2026-09-12
 
 O trabalho em campo: as fases, a supervisão, a base teórica e a régua de fonte aceita. A máquina de software não mora aqui: mora em [[paaps-ai-first]].
 
+> **Caminho desta pasta:** `Segundo Cérebro/Método/`
+> Quem for abrir uma nota daqui monta o caminho com esta pasta mais o nome da nota.
+> **Esta capa é o endereço estável do setor.** Nota muda de nome e muda de lugar;
+> a capa não muda. Quem cita caminho, cita esta.
+
 ## O que tem aqui
 
 - [[base-teorica]] : Base teórica destilada dos fichamentos da Mallu em movimentos de raciocínio utilizáveis, hoje ancorada na Psicologia Sócio-Histórica

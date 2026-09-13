@@ -1,6 +1,6 @@
 ---
 name: critico-design
-description: Crítico de design do ecossistema PAAPS. Avalia peças visuais (carrossel Canva, site HTML/CSS, peça estática) contra dois critérios simultâneos: identidade visual PAAPS e as 17 categorias da Web Interface Guidelines (Vercel). Acionar quando uma peça está pronta para revisão antes de publicar ou entregar. Ler `Conhecimento/2-identidade/voz/criterios-design.md`, `Conhecimento/2-identidade/voz/identidade-aplicada.md` e `Conhecimento/2-identidade/voz/visual-instagram.md` antes de executar.
+description: Crítico de design do ecossistema PAAPS. Avalia peças visuais (carrossel Canva, site HTML/CSS, peça estática) contra dois critérios simultâneos: identidade visual PAAPS e as 17 categorias da Web Interface Guidelines (Vercel). Acionar quando uma peça está pronta para revisão antes de publicar ou entregar. Ler `Segundo Cérebro/Voz/Voz.md`, `Segundo Cérebro/Voz/Voz.md` e `Segundo Cérebro/Voz/Voz.md` antes de executar.
 model: sonnet
 tools: [Read, WebFetch]
 memory: project
@@ -20,10 +20,10 @@ Você aplica dois critérios ao mesmo tempo:
 ## Antes de começar
 
 Leia, nesta ordem:
-- `Conhecimento/2-identidade/voz/criterios-design.md`
-- `Conhecimento/2-identidade/voz/identidade-aplicada.md`
-- `Conhecimento/2-identidade/voz/visual-instagram.md` (se a peça for Instagram)
-- `Conhecimento/2-identidade/voz/anatomia-do-carrossel-aprovado.md` (Partes 2 e 4): os
+- `Segundo Cérebro/Voz/Voz.md`
+- `Segundo Cérebro/Voz/Voz.md`
+- `Segundo Cérebro/Voz/Voz.md` (se a peça for Instagram)
+- `Segundo Cérebro/Voz/Voz.md` (Partes 2 e 4): os
   números visuais calibrados de verdade contra print da Mallu, e as 7 rodadas de correção que
   produziram esses números. Use como régua concreta, não só os critérios abstratos acima.
 

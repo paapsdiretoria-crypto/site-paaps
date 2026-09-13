@@ -79,7 +79,7 @@ exatamente quais eventos de webhook o Resend expõe, e o desenho do dashboard.
 
 Regras fechadas desde 14/07/2026. Por memória de sessão mais recente, o disparo via
 n8n já funciona; falta ligar porteiro, carta-fria, gate e escrivão no fluxo
-automático (ver `Conhecimento/mapa-site-paaps.md`, e o histórico completo de
+automático (ver `Segundo Cérebro/Mapa/mapa-do-ecossistema.md`, e o histórico completo de
 prospecção na memória de sessão do Claude, fora deste cofre).
 
 ## Onde isso serve

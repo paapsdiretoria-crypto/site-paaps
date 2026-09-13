@@ -13,6 +13,11 @@ Toda regra de escrita e de imagem da PAAPS mora aqui. Quem vai escrever ou desen
 
 **Proibição não é conceito.** Se a nota diz *nunca escreva assim*, ela é Voz. Se a nota diz *isto significa isto*, ela é [[Conceitos]].
 
+> **Caminho desta pasta:** `Segundo Cérebro/Voz/`
+> Quem for abrir uma nota daqui monta o caminho com esta pasta mais o nome da nota.
+> **Esta capa é o endereço estável do setor.** Nota muda de nome e muda de lugar;
+> a capa não muda. Quem cita caminho, cita esta.
+
 ## O que tem aqui
 
 - [[afeto-situado-mallu]] : Como começar uma peça quando o gancho afetivo não veio da Mallu, e o que continua sendo dela mesmo assim

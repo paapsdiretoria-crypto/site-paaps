@@ -11,6 +11,11 @@ atualizado: 2026-09-12
 
 Cada projeto é uma pasta, com uma nota-capa e as notas dele. O nome de toda nota de projeto termina com o apelido do projeto, para nunca existir um *Propósito* solto que ninguém sabe de quem é.
 
+> **Caminho desta pasta:** `Segundo Cérebro/Projetos/`
+> Quem for abrir uma nota daqui monta o caminho com esta pasta mais o nome da nota.
+> **Esta capa é o endereço estável do setor.** Nota muda de nome e muda de lugar;
+> a capa não muda. Quem cita caminho, cita esta.
+
 ## O que tem aqui
 
 - **[[captacao]]** : A frente de investimento, editais e inscrições, com o histórico do que já foi enviado

@@ -14,6 +14,11 @@ histórias do especialista" vazio desde 13/08/2026, e é justamente ele que faz 
 escrever como PAAPS em vez de escrever como qualquer IA. História vivida é a única
 matéria-prima que ninguém consegue copiar.
 
+> **Caminho desta pasta:** `Segundo Cérebro/Histórias/`
+> Quem for abrir uma nota daqui monta o caminho com esta pasta mais o nome da nota.
+> **Esta capa é o endereço estável do setor.** Nota muda de nome e muda de lugar;
+> a capa não muda. Quem cita caminho, cita esta.
+
 ## O que tem aqui hoje
 [[refazenda-rio-xopoto-2024]] · [[mudanca-para-o-interior-de-minas]] ·
 [[ministerio-publico-mulheres-vitimas-de-racismo]] · [[cuidados-paliativos]] ·

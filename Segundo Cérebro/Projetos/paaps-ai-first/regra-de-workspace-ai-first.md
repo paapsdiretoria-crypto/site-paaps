@@ -18,7 +18,7 @@ Nunca em `~/Documents`, nunca na home, nunca dentro de pasta técnica como
 
 ## O que se perde fora da raiz
 
-Não existem `CLAUDE.md`, skills, o cofre `Conhecimento/` nem auto-push. O trabalho fica
+Não existem `CLAUDE.md`, skills, o cofre `Segundo Cérebro/` nem auto-push. O trabalho fica
 sem contexto e **sem backup**, e ninguém percebe até precisar dele.
 
 ## O precedente

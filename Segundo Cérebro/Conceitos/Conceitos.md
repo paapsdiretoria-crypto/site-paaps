@@ -13,6 +13,11 @@ As definições próprias da PAAPS. Não é o que a palavra significa no dicion�
 
 A mina principal destas notas é [[tcc-suas]], onde as conceituações são construídas com evidência de campo.
 
+> **Caminho desta pasta:** `Segundo Cérebro/Conceitos/`
+> Quem for abrir uma nota daqui monta o caminho com esta pasta mais o nome da nota.
+> **Esta capa é o endereço estável do setor.** Nota muda de nome e muda de lugar;
+> a capa não muda. Quem cita caminho, cita esta.
+
 ## O que tem aqui
 
 - [[capilaridade-do-sus]] : O ativo não é o tamanho do mercado, é a capilaridade do SUS, que chega a 5.570 municípios e é a maior malha de cuidado já construída

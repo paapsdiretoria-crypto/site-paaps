@@ -11,9 +11,9 @@ aliases: [mapa, mapa do repositório, backlog de compilação]
 # Mapa completo de SITE PAAPS
 
 Todo primeiro nível de `SITE PAAPS/`, pra nada ficar invisível pro Segundo Cérebro,
-mesmo o que nunca vai virar página em `Conhecimento/`. Três status possíveis:
+mesmo o que nunca vai virar página em `Segundo Cérebro/`. Três status possíveis:
 
-- **✅ compilado** : já tem página própria em `Conhecimento/`
+- **✅ compilado** : já tem página própria em `Segundo Cérebro/`
 - **📋 catalogado, não compilado** : tem conhecimento real dentro, ainda não passou
   por `compila`, listado no backlog abaixo
 - **🔧 é código ou binário, não se aplica** : máquina, dependência ou mídia bruta,
@@ -21,8 +21,8 @@ mesmo o que nunca vai virar página em `Conhecimento/`. Três status possíveis:
 
 | Pasta | Tamanho | O que é | Status |
 |---|---|---|---|
-| `Conhecimento/` | pequeno | **o cofre**, vault do Obsidian. Este arquivo mora aqui | ✅ é a própria base |
-| `Conhecimento/Arquivos/` | pequeno | fontes brutas de texto, dentro do cofre. Onde o Web Clipper salva | ✅ é a própria base |
+| `Segundo Cérebro/` | pequeno | **o cofre**, vault do Obsidian. Este arquivo mora aqui | ✅ é a própria base |
+| `Segundo Cérebro/Arquivos/` | pequeno | fontes brutas de texto, dentro do cofre. Onde o Web Clipper salva | ✅ é a própria base |
 | `Arquivos/` (raiz) | 1,5 GB | acervo binário: foto, fonte tipográfica, identidade visual | 🔧 mídia bruta, nunca entra no grafo |
 | `codigo/` | 1,1 GB | site institucional, dashboards, automação de vídeo/WhatsApp, indexado pelo CodeGraph | 📋 os 5 `CLAUDE.md` de dentro são constituição, viram nota (ver backlog); o código em si é 🔧 |
 | `automacoes/` | 11 MB | scripts e regras das 5 frentes de automação do negócio | 📋 tem regra/plano real dentro (ver backlog) |
@@ -46,7 +46,7 @@ a que a Mallu fechou em 12/09/2026.
 - [ ] `codigo/dashboard-agentes/CLAUDE.md`
 - [ ] `conteudo/instagram/amalluvasconcellos/CLAUDE.md`
 - [ ] `conteudo/instagram/paaps.brasil/CLAUDE.md`
-- [ ] `Conhecimento/4-projetos/ecoa/CLAUDE.md`
+- [ ] `Segundo Cérebro/Projetos/ecoa/ecoa.md`
 - [ ] `projetos/minerva/CLAUDE.md`
 
 **Fase 2, o pitch geral atual** (só o geral, nunca os projetos): `codigo/site/pitch-serasa/`,

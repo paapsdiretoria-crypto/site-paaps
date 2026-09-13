@@ -54,7 +54,7 @@ paaps.brasil/
 Este workspace produz conteúdo institucional para @paaps.brasil. Antes de qualquer peça,
 ler:
 - `../../../CLAUDE.md` (raiz)
-- `../../../Conhecimento/2-identidade/voz/voz-paaps.md`
+- `../../../Segundo Cérebro/Voz/Voz.md`
 - Agentes `paaps-carrossel.md` e `paaps-linkedin.md`.
 
 Paleta deste canal: PAAPS PURO. Função: posicionamento institucional, parceiros, B2G.

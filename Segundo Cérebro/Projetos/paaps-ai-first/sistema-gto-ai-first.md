@@ -94,7 +94,7 @@ próprio sobre o cliente, todo contexto vem da página do cliente no Notion". Ne
 três agentes novos que a proposta pede (`minerador`, `pauteiro`, `critico`) foi
 construído até hoje (12/09/2026), e `buscador-fotos` não foi reescrito como
 recomendado. **Se essa proposta ainda vale, foi superada pela árvore de dois troncos
-(`Conhecimento/6-sistema/arquitetura-agentes/`), ou precisa de reconciliação com ela, é
+(`Segundo Cérebro/Projetos/paaps-ai-first/paaps-ai-first.md`), ou precisa de reconciliação com ela, é
 uma decisão em aberto, não resolvida nesta compilação.**
 
 ## Perguntas que o próprio documento levanta e seguem sem resposta

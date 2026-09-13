@@ -11,6 +11,11 @@ atualizado: 2026-09-12
 
 Uma nota por pessoa e por instituição que importa para a PAAPS. Cada uma diz quem é, em que projetos aparece, como trabalha e o que aprendemos com ela.
 
+> **Caminho desta pasta:** `Segundo Cérebro/Entidades/`
+> Quem for abrir uma nota daqui monta o caminho com esta pasta mais o nome da nota.
+> **Esta capa é o endereço estável do setor.** Nota muda de nome e muda de lugar;
+> a capa não muda. Quem cita caminho, cita esta.
+
 ## O que tem aqui
 
 - [[digging-clausula-govtech]] : O PAAPS é ativo intangível pré-existente da DIGGING e não pode ser alienado em licitação, só licenciado

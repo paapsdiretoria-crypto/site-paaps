@@ -1,6 +1,6 @@
 ---
 tags: [entidades, norma]
-origem: "CLAUDE.md, Conhecimento/2-identidade/juridico/ficha-juridica-paaps.md"
+origem: "CLAUDE.md, Segundo Cérebro/Entidades/Entidades.md"
 resumo: "A pessoa jurídica que assina contrato e emite nota é a DIGGING; o PAAPS é a metodologia proprietária dela, e confundir os dois em edital é erro grave"
 serve-para: []
 status: vivo

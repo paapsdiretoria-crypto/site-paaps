@@ -10,7 +10,7 @@ tools: [Read, Write]
 Processo minucioso e iterativo. **Entregar apenas a primeira rodada (capa + lógica geral)
 e aguardar validação da Mallu antes de avançar.** Nunca oferecer o lote inteiro de uma vez.
 
-Ler `Conhecimento/2-identidade/voz/voz-paaps.md` antes de escrever.
+Ler `Segundo Cérebro/Voz/Voz.md` antes de escrever.
 
 ## Carrossel @amalluvasconcellos
 

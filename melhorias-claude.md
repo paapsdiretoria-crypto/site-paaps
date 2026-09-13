@@ -109,7 +109,7 @@ O CLAUDE.md raiz — lido por toda sessão — descreve um repo que não existe 
 - `.agents/` está no `.gitignore` mas **595 arquivos continuam rastreados** (gitignore
   não remove o que já foi commitado). ✅ removidos do índice (`git rm --cached`).
 - `.playwright-mcp/` na raiz: 680 KB de lixo de debug de 16/jun. ✅ apagado.
-- `workflow-paaps.html` solto na raiz. ✅ movido para `Conhecimento/6-sistema/arquitetura-agentes/`.
+- `workflow-paaps.html` solto na raiz. ✅ movido para `Segundo Cérebro/Projetos/paaps-ai-first/paaps-ai-first.md`.
 - Imagens de 2–5 MB rastreadas (`site/paaps-site/imagens/*.jpg`) e ~14 screenshots de
   benchmark commitados. ➜ **nada por agora** (funcionam no site publicado); candidato
   futuro: otimizar/converter para WebP.
@@ -142,7 +142,7 @@ timeouts de 180 s, token da extensão colado manualmente 3×, ciclo fechar-Chrom
 Claude dezenas de vezes. A solução final (modo `--extension` + token) só sobreviveu
 porque você ditou o registro no log à mão.
 
-**Ação:** runbook `Conhecimento/6-sistema/runbook-navegacao-mcp.md` com o
+**Ação:** runbook `Segundo Cérebro/Projetos/paaps-ai-first/paaps-ai-first.md` com o
 procedimento que funciona, os erros conhecidos e o que fazer em cada um; token agora vem
 de variável de ambiente (item 3). Obs.: hoje também existe o MCP "Claude in Chrome"
 oficial — o runbook indica quando usar cada um.

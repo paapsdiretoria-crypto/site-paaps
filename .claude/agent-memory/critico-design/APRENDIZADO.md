@@ -12,5 +12,5 @@ legibilidade em gradiente ou em cor de marca em vez de preto sólido; textura va
 própria caixa para a foto ou para textura vizinha; texto estourando a borda por não ter sido
 checado na imagem renderizada) — nenhum desses existe no vocabulário de erro do Canva.
 
-Ver `Conhecimento/2-identidade/voz/anatomia-do-carrossel-aprovado.md` para a peça de
+Ver `Segundo Cérebro/Voz/Voz.md` para a peça de
 referência e a lista completa das 7 rodadas de correção que já aconteceram nesse pipeline.

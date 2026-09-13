@@ -100,7 +100,7 @@ não finge neutralidade: explicita de onde fala.
 fenômeno tal qual é: suas contradições e o que o determina, o que o leva a se apresentar
 do jeito que se apresenta. Nunca se contente com a aparência dos fatos.
 
-**Conhecimento é produção, não coleta.** Não é apropriação linear de uma realidade pronta.
+**Segundo Cérebro é produção, não coleta.** Não é apropriação linear de uma realidade pronta.
 É construtivo-interpretativo. Não vale por corresponder linearmente ao real.
 
 **Sujeito e objeto se transformam mutuamente.** Quem age sobre o objeto o transforma e é

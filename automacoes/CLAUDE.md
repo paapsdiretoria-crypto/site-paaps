@@ -151,8 +151,8 @@ Doc divergente é pior que doc ausente, porque o agente obedece o que lê.
    `ficha-municipio.md` (desde 24/07) e `rubrica-0-100.md` (30/07), que fecha a lacuna:
    os cinco critérios da skill viraram pontos, com quatro reprovações automáticas e o
    corte de 85. O passo 5 do runbook passou a ter critério.
-3. **`Conhecimento/2-identidade/voz/voz-paaps.md` é referenciado por caminho relativo** em
-   `regras-prospeccao.md`, mas mora em `Conhecimento/2-identidade/voz/` na raiz. O caminho não
+3. **`Segundo Cérebro/Voz/Voz.md` é referenciado por caminho relativo** em
+   `regras-prospeccao.md`, mas mora em `Segundo Cérebro/Voz/Voz.md` na raiz. O caminho não
    resolve daqui.
 
 ## Lacunas de orquestração (o trabalho de verdade)

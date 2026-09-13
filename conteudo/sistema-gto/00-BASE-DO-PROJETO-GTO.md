@@ -712,9 +712,9 @@ Ordem de prioridade, pelo impacto na qualidade do que sai:
 1. **Onde fica o projeto com os `.claude/agents/*.md` reais?** A pasta `conteudo/` que eu acesso
    não tem `.claude/agents/` nem `.claude/skills/` preenchidos. Preciso desse caminho montado
    para reescrever os agentes em vez de só descrevê-los.
-2. **Acesso a `Conhecimento/`** (irmã de `conteudo/` dentro de SITE PAAPS). É onde vivem
+2. **Acesso a `Segundo Cérebro/`** (irmã de `conteudo/` dentro de SITE PAAPS). É onde vivem
    `voz-paaps.md`, `identidade-aplicada.md`, `visual-instagram.md`, `mapa-fontes-foto.md` (em
-   `Conhecimento/2-identidade/voz/`) e a base teórica da Tecelã (`Conhecimento/3-metodo/base-teorica/`).
+   `Segundo Cérebro/Voz/Voz.md`) e a base teórica da Tecelã (`Segundo Cérebro/Método/Método.md`).
 3. **A GTO atende PAAPS, Mallu e Fabi como três clientes com equipes iguais, ou a equipe é uma só
    com três contextos?** Isso muda se os agentes ficam num repo por cliente ou num repo só.
 4. **A peça "Cuidar da ponta, impactar o mundo" (gravação 4) não achei no Calendário.** Ela é um
@@ -725,7 +725,7 @@ Ordem de prioridade, pelo impacto na qualidade do que sai:
 
 ## Próximo passo sugerido
 
-Com as respostas de 4.3 e o acesso a `Conhecimento/`, o passo seguinte é escrever os
+Com as respostas de 4.3 e o acesso a `Segundo Cérebro/`, o passo seguinte é escrever os
 três agentes que não existem (minerador, pauteiro, critico) e reescrever o pesquisador-foto com
 as regras da Parte 2, um a um, com revisão sua entre cada, que é a regra que o `CLAUDE.md` atual
 já estabelece e que continua valendo aqui.
