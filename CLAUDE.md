@@ -125,9 +125,11 @@ Psicologia Social para gestão pública). Psicóloga Social com mais de 5 anos e
 e políticas públicas. Linha de pensamento: psicologia além do consultório e do RH,
 psicologia suleada, impacto sistêmico.
 
-Frase-mote pessoal:
-"Uma psicologia à prova de futuro para uma sociedade que já exige outras respostas.
-Indo além do consultório ou RH no @paaps.brasil. Comunidade ECOA."
+Frase-mote vigente, confirmada por ela em 13/09/2026:
+"Uma psicossocióloga que constrói o re-desenho da Saúde Mental Coletiva no Brasil."
+
+Usar literal, sem melhorar uma palavra. A linha do tempo das frases anteriores, e a razão
+de cada uma ter caído, está em `Segundo Cérebro/Voz/Voz.md`.
 
 ---
 
@@ -410,6 +412,33 @@ outra) · pasta vazia (não existe) · nota `pendente` que já dá pra preencher
 > **Regra de workspace:** abrir o Claude Code SEMPRE na raiz `SITE PAAPS/`. Projeto novo
 > nasce como subpasta daqui, nunca na home.
 
+## Comandos
+
+Não há build nem suíte de testes no nível da raiz: o repositório é um monorepo de frentes
+independentes. Cada uma sobe do jeito dela.
+
+| O que | Comando |
+|---|---|
+| **Guarda do contrato de caminhos** (falha se um agente citar caminho de nota) | `bash codigo/verifica-caminhos.sh` |
+| **Site, para ver no navegador** | `cd codigo/site/home && python3 -m http.server 8080` |
+| **Deck do pitch** (Next.js; as dependências não são versionadas) | `cd codigo/site/pitch-serasa/deck-v5 && npm install && npm run dev` |
+| **Agente de WhatsApp**, testes | `cd codigo/agente-whatsapp && pytest -q` |
+| **Agente de WhatsApp**, um teste só | `cd codigo/agente-whatsapp && pytest tests/test_guardrails.py -q` |
+| **Agente de WhatsApp**, local em container | `cd codigo/agente-whatsapp && docker compose up` (porta 8000, deploy em Railway pelo `Dockerfile`) |
+| **HyperFrames**, estúdio de vídeo | `cd hyperframes && bun run dev` |
+| **Entender código antes de abrir arquivo** | `codegraph explore "<pergunta>" --path codigo` |
+| **Limpeza de log de sessão** (automática a cada 14 dias, roda sozinha no hook) | `bash codigo/limpa-sessoes.sh` |
+
+**O dashboard** (`codigo/dashboard/`) é HTML estático: abrir `index.html` no navegador. A
+chave da Windsor AI mora em `js/config.js`, que não é versionado, então em máquina nova o
+painel abre vazio até a chave existir.
+
+**Se `AVISO-BACKUP-PARADO.md` aparecer na raiz**, o envio automático para o GitHub falhou e
+o trabalho está só nesta máquina. Conserto: resolver o que bloqueia o `git push` e enviar; o
+arquivo some sozinho no próximo encerramento bem-sucedido.
+
+---
+
 ## GitHub
 
 Repositório: https://github.com/paapsdiretoria-crypto/site-paaps
@@ -437,12 +466,13 @@ git push
 
 ## Arquivos não commitados (ver .gitignore)
 
-- `Arquivos/fotos/`: acervo de campo (binários grandes)
-- `Arquivos/identidade-visual/`: assets originais de marca (binários)
-- `Arquivos/aplicacao-id-visual/`: exemplos de aplicação
-- `Arquivos/nossa-camiseta-paaps/`
-- `Arquivos/nossos-clientes-e-parceiros/`
-- `Arquivos/docs-imagens/*-imagens/`: imagens extraídas dos DOCX
+- `Acervo/fotos/`: acervo de campo (binários grandes)
+- `Acervo/identidade-visual/`: assets originais de marca (binários)
+- `Acervo/aplicacao-id-visual/`: exemplos de aplicação
+- `Acervo/nossa-camiseta-paaps/`
+- `Acervo/nossos-clientes-e-parceiros/`
+- `Acervo/docs-imagens/*-imagens/`: imagens extraídas dos DOCX
+- `AVISO-BACKUP-PARADO.md`: aparece na raiz quando o push falha, some quando volta
 - `codigo/dashboard/js/config.js`: chave Windsor AI (nunca commitar)
 - `projetos/`: projetos avulsos com conteúdo interno (mantido fora do repo por precaução)
 
