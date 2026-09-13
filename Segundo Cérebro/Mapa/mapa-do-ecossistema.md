@@ -72,4 +72,5 @@ nunca como ``[[link]]``, porque essas pastas ficam fora do cofre de propósito.
 
 ## Onde isso serve
 
-_A preencher na revisão com a Mallu._
+Em toda decisão de onde um material novo pousa: o que já é nota, o que ainda é
+arquivo cru fora do cofre, e o que nunca vai virar nota.

@@ -31,4 +31,5 @@ de investir tempo na proposta.
 
 ## Onde isso serve
 
-_A preencher na revisão com a Mallu._
+Em formulário que peça UF e cidade da empresa: a resposta é sempre São Paulo capital,
+nunca Minas Gerais ou Rio de Janeiro.

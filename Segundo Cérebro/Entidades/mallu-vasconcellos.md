@@ -55,4 +55,5 @@ familiar ou afetivo com a Mallu.
 
 ## Onde isso serve
 
-_A preencher na revisão com a Mallu._
+Em toda peça que precise apresentar a fundadora, e em toda decisão sobre o que se
+pode ou não dizer sobre a vida dela em público.

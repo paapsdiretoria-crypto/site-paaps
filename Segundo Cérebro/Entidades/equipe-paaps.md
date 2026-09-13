@@ -67,4 +67,5 @@ orquestração de IA e virando humanas a qualquer momento.
 
 ## Onde isso serve
 
-_A preencher na revisão com a Mallu._
+Em todo slide de equipe, apresentação e proposta que precise descrever quem faz a
+PAAPS acontecer.

@@ -37,4 +37,4 @@ Porta-Voz]] e a decisão de onboarding registrada em [[onboarding-ecoa]].
 
 ## Onde isso serve
 
-_A preencher na revisão com a Mallu._
+Em slide de equipe, e em toda nota da ECOA que precise dizer quem toca aquela frente.

@@ -35,4 +35,5 @@ Ao falar de Mallu e Fabiane juntas, o termo é **founder**, nunca "sócias". Ver
 
 ## Onde isso serve
 
-_A preencher na revisão com a Mallu._
+Em due diligence, edital que peça composição societária, e sempre que for preciso
+provar que a DIGGING é 99% feminina.

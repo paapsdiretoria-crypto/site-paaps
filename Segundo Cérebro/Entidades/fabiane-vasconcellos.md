@@ -42,4 +42,5 @@ clientes sempre.** Em peça pública, o descritivo de Fabiane é o de founder e 
 
 ## Onde isso serve
 
-_A preencher na revisão com a Mallu._
+Em slide de equipe e apresentação institucional, sempre com o descritivo profissional
+na frente do vínculo familiar.

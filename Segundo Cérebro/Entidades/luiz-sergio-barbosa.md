@@ -32,4 +32,5 @@ não o familiar.
 
 ## Onde isso serve
 
-_A preencher na revisão com a Mallu._
+Em slide de equipe e apresentação institucional, sempre com o descritivo profissional
+na frente do vínculo familiar.

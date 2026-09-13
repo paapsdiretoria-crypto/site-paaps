@@ -32,4 +32,5 @@ autodefinição como negócio social, e não só a narrativa.
 
 ## Onde isso serve
 
-_A preencher na revisão com a Mallu._
+Em edital e proposta que peçam cessão total de direitos sobre a solução: é a cláusula
+que prova que a PAAPS só pode licenciar, nunca ceder.

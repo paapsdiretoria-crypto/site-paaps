@@ -39,4 +39,5 @@ importa quando a PAAPS assinar contrato maior. Fica como pendência de pesquisa.
 
 ## Onde isso serve
 
-_A preencher na revisão com a Mallu._
+Em [[mallu-formacao-e-crp]] e em toda peça que precise citar o CFP ou o registro
+profissional com precisão.

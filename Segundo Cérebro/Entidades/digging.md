@@ -44,4 +44,5 @@ Ficha completa, objeto social alínea por alínea e checklist de habilitação:
 
 ## Onde isso serve
 
-_A preencher na revisão com a Mallu._
+Em toda peça jurídica, contrato, edital e proposta: é a entidade que assina, nunca a
+PAAPS.

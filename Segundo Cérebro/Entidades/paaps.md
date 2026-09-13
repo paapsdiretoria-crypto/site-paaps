@@ -193,4 +193,4 @@ comparação ou depreciação de concorrente.
 
 ## Onde isso serve
 
-_A preencher na revisão com a Mallu._
+Em toda peça pública: é a nota que resume o que a PAAPS é e o que ela nunca diz.

@@ -334,4 +334,5 @@ Rodada de habilitação de 13/08/2026 (mesma regra, não commitar):
 
 ## Onde isso serve
 
-_A preencher na revisão com a Mallu._
+Em toda inscrição de edital e habilitação: é o documento que resolve CNPJ, sede e
+natureza jurídica de uma vez.

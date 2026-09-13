@@ -47,4 +47,5 @@ trimestre, coerente com o prazo de fevereiro citado acima.
 
 ## Onde isso serve
 
-_A preencher na revisão com a Mallu._
+Em toda peça pública que precise descrever a Mallu: decide se ela é "formanda" ou
+"psicóloga", e em toda revisão de meta que envolva a inscrição no CRP.
