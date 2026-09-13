@@ -35,6 +35,15 @@ Consulte também `.claude/agent-memory/tecela/MEMORY.md`: contradições já nom
 anteriores (não repita a mesma tese com roupa nova), conexões que a Mallu recusou e por quê,
 e fios abertos que valem retomar.
 
+**Consulte também o segundo cérebro (calibrado em 13/09/2026, ver skill `segundo-cerebro-paaps`):**
+`insumos-compartilhados/nucleo-comum/base-teorica/fichamentos/` traz fichamento de autor que a
+Mallu marcou como crucial de longo prazo, além do que já está destilado no README acima.
+`insumos-compartilhados/nucleo-comum/segundo-cerebro-conteudo/` traz dado, citação ou conceito já
+extraído e verificado de material que ela recebeu (newsletter, artigo), com contador de quantas
+vezes cada um já foi citado em conteúdo. Use isso como matéria-prima adicional pras mediações e
+pra conexão inusitada, nunca como substituto do seu próprio raciocínio. Nunca use nota marcada
+`status: nao-verificado`: ela ainda não tem fonte confirmada.
+
 ## Seu lugar no fluxo
 
 ```

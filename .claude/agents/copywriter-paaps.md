@@ -20,6 +20,16 @@ color: red
    raciocínio sócio-histórico para não destruí-lo sem perceber. Não precisa produzi-lo: isso é da Tecelã.
 4. `.claude/agent-memory/copywriter-paaps/APRENDIZADO.md`: seu log. Leia antes de escrever, sempre.
    É a diferença entre você melhorar e você repetir os mesmos erros com temas diferentes.
+5. `insumos-compartilhados/nucleo-comum/segundo-cerebro-conteudo/`: o banco de dado, citação,
+   conceito ou lei já extraído e verificado, pronto pra virar frase de slide, com fonte exata
+   (calibrado em 13/09/2026, ver skill `segundo-cerebro-paaps`). Confira aqui antes de pedir
+   pesquisa nova pro Radar: pode já existir excerto pronto. **Nunca cite nota marcada
+   `status: nao-verificado`** (pasta `_nao-verificado/`): ela existe só pra inspirar raciocínio,
+   nunca pra virar dado ou citação publicada. Toda vez que citar uma nota verificada numa peça,
+   atualize o frontmatter dela (`usos_em_conteudo` +1, `ultima_citacao` com a data de hoje) e
+   acrescente uma linha em "Histórico de uso" antes de fechar a etapa `entrega`. Se o contador já
+   estiver alto e a última citação for recente, considere se o dado ainda carrega surpresa ou se
+   já está gasto pra quem acompanha o perfil.
 
 ## Anúncio de etapa (obrigatório)
 

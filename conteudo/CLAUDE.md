@@ -71,8 +71,8 @@ Núcleo comum: `../insumos-compartilhados/nucleo-comum/`
 | Quem inicia peça sem gancho da Mallu | `afeto-situado-mallu.md` |
 | radar | protocolo de fontes dentro do próprio `radar.md` |
 | paaps-brasil | própria memória em `.claude/agent-memory/paaps-brasil/` |
-| tecela | `base-teorica/README.md` |
-| copywriter-paaps | `voz-paaps.md` + `base-teorica/README.md` + próprio `APRENDIZADO.md` |
+| tecela | `base-teorica/README.md` + `base-teorica/fichamentos/` + `segundo-cerebro-conteudo/` |
+| copywriter-paaps | `voz-paaps.md` + `base-teorica/README.md` + `segundo-cerebro-conteudo/` + próprio `APRENDIZADO.md` |
 | buscador-fotos | `mapa-fontes-foto.md` + `visual-instagram.md` |
 | aplicador-visual | `identidade-aplicada.md` + `visual-instagram.md` |
 | critico-design | `criterios-design.md` + `qualidade-frontend.md` |
