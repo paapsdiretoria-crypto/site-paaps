@@ -14,7 +14,11 @@
           },
           {
             "type": "command",
-            "command": "cd \"${CLAUDE_PROJECT_DIR:-.}\" && if [ -n \"$(git status --porcelain 2>/dev/null)\" ]; then A=$(git status --porcelain | sed 's/^...//' | cut -d/ -f1 | sort -u | head -6 | paste -s -d ',' - | sed 's/,/, /g'); git add -A && git commit -m \"auto: ${A} - $(date '+%Y-%m-%d %H:%M')\" && git push; fi"
+            "command": "cd \"${CLAUDE_PROJECT_DIR:-.}\" && if [ -n \"$(git status --porcelain 2>/dev/null)\" ]; then A=$(git status --porcelain | sed 's/^...//' | cut -d/ -f1 | sort -u | head -6 | paste -s -d ',' - | sed 's/,/, /g'); git add -A && git commit -q -m \"auto: ${A} - $(date '+%Y-%m-%d %H:%M')\"; fi; if git push -q 2>/dev/null; then rm -f AVISO-BACKUP-PARADO.md; else { echo \"# O backup no GitHub parou\"; echo \"\"; echo \"O envio automatico falhou em $(date '+%d/%m/%Y as %H:%M'). O seu trabalho esta salvo no computador, mas NAO esta no GitHub.\"; echo \"\"; echo \"O que fazer: abra o Claude Code e peca \\\"conserta o backup do GitHub\\\".\"; echo \"\"; echo \"Este arquivo some sozinho assim que o envio voltar a funcionar.\"; } > AVISO-BACKUP-PARADO.md; fi"
+          },
+          {
+            "type": "command",
+            "command": "cd \"${CLAUDE_PROJECT_DIR:-.}\" && bash codigo/limpa-sessoes.sh 2>/dev/null || true"
           }
         ]
       }

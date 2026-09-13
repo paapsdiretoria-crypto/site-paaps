@@ -507,7 +507,12 @@ Novas respostas longas pedidas "para ler no Notion" viram subpáginas dela, no f
 | Hook | Ordem | O que faz |
 |---|---|---|
 | **log-de-sessão** | 1º | Registra timestamp e arquivos alterados em `sessoes/sessao-YYYY-MM-DD.md` (deduplicado, ignora a própria pasta sessoes/) |
-| **auto-push** | 2º | Detecta qualquer mudança (inclusive arquivos novos), commita com mensagem `auto: <áreas alteradas> - <data>` e faz push para `main` |
+| **auto-push** | 2º | Commita com mensagem `auto: <áreas alteradas> - <data>` e envia para `main`. **Se o envio falhar, cria `AVISO-BACKUP-PARADO.md` na raiz**, com o que fazer escrito em português; o arquivo some sozinho quando o envio volta |
+| **limpa-sessoes** | 3º | Roda `codigo/limpa-sessoes.sh`: uma vez a cada 14 dias, apaga log de sessão com mais de 14 dias, **e só depois de confirmar que já está no GitHub** |
+
+**O aviso existe porque o push falhou em silêncio por 12 dias** (01 a 13/09/2026): o hook
+fazia `commit && push`, o push era rejeitado e ninguém ficava sabendo. Se
+`AVISO-BACKUP-PARADO.md` aparecer na raiz, o backup parou e precisa ser consertado.
 
 Ao encerrar uma tarefa relevante, registrar em 1–3 linhas no log do dia **o que foi
 decidido/entregue** (não só o status do git): é o handoff para a próxima sessão.

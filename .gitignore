@@ -81,3 +81,6 @@ Segundo Cérebro/.obsidian/cache
 # Tema e plugin de terceiros do cofre: reinstaláveis, não versionar
 Segundo Cérebro/.obsidian/themes/
 Segundo Cérebro/.obsidian/plugins/
+
+# Aviso de backup parado: visível na pasta, nunca versionado
+AVISO-BACKUP-PARADO.md
