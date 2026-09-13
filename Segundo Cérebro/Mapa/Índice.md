@@ -117,6 +117,11 @@ A frente que acompanha quem concorre com a PAAPS e o que a gente faz diferente
 - [[universaude-intel]] : A UniverSaúde vende inteligência de dados para secretarias de saúde, não intervenção psicossocial de equipe
 - [[yunus-intel]] : Yunus modela negócio de impacto e não faz psicologia, então coexiste com a PAAPS: um modela, o outro cuida de quem executa
 
+### [[minerva]]
+
+Minerva foi uma proposta de parceria universitária pausada, recusada no escopo, arquivada como ideia para reativar quando surgir oportunidade parecida
+
+
 ### [[paaps-ai-first]]
 
 O mapa da máquina da PAAPS: o que roda sozinho, o que dispara cada coisa e quem é o gate
@@ -276,6 +281,7 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 - [[linha-epistemologica-estrutural]] : A linha epistemológica da PAAPS é estrutural e sistêmica, e isso decide toda análise e todo conteúdo
 - [[metodologia-paaps]] : O que a PAAPS entrega e como explica cada frente, ditado pela Mallu em 02/08/2026
 - [[motor-da-paaps]] : As peças da PAAPS formam um motor: o conhecimento entra pela consultoria, chega pela Roda, é entregue por psicóloga local e volta como dado que melhora o método
+- [[projetos-esg-para-empresas]] : A PAAPS oferece Projetos ESG personalizados para empresas, mas empresa nunca é persona de conteúdo público
 - [[roda-de-equipe-paaps]] : A Roda de Equipe é o encontro mensal de até 10 servidores conduzido por psicóloga formada no método, em três fases
 - [[supervisao-da-metodologia]] : Quem faz a supervisão na metodologia PAAPS, e por que nunca se escreve 'supervisão clínica em campo'
 - [[tres-frentes-de-oferta]] : A PAAPS vende três frentes: cuidado e integração de rede, treinamentos, e urgências e eventos extremos

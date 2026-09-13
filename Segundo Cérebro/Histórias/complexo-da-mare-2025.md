@@ -21,9 +21,15 @@ após semana, por um ano.
 
 ## O projeto por dentro
 
-O nome do projeto é **Mães Atípicas, Maré de Cuidado**, operado com o Coletivo Especiais
-da Maré de Mães Atípicas, voltado a mães de pessoas atípicas (crianças e jovens
-neurodivergentes) dentro do Complexo da Maré. Em execução desde março de 2025.
+**É uma parceria de três pontas: a Escola Municipal, a associação que incubava a PAAPS
+na época, e o Coletivo Especiais da Maré**, de famílias atípicas do Complexo da Maré. Os
+grupos aconteciam na escola, com a maioria das mães sendo da própria comunidade escolar,
+e o coletivo entrando como parceiro. O nome do projeto é **Mães Atípicas, Maré de
+Cuidado**, voltado a mães de pessoas atípicas (crianças e jovens neurodivergentes). Em
+execução desde março de 2025.
+
+**O recorte público é sempre "Escola Municipal", nunca "coletivo de mães atípicas"**: é o
+recorte que mais tem a ver com a PAAPS, por decisão da Mallu.
 
 Escala: mais de 800 mães na rede do projeto · mais de 55 encontros presenciais semanais de
 rodas terapêuticas, mediados por profissionais da psicologia · 4 capacitações com

@@ -254,3 +254,31 @@ consórcio público), mais três fontes de dado: [[censopsi-2022-precariedade-ps
 
 Regenerei as capas de Fontes, Entidades, Conceitos e das duas pastas de projeto tocadas,
 que não listavam os satélites novos até agora.
+
+## [2026-09-13] respostas da Mallu | ESG, taglines, Maré, Minerva e financeiro DIGGING
+
+Seis contradições do agente do Notion e do PDF, todas resolvidas pela Mallu na hora:
+
+**ESG:** a PAAPS oferece sim [[projetos-esg-para-empresas]], mas empresa nunca é persona
+de conteúdo público. Yunus é referência de operação, não cliente.
+
+**Pilares antigos:** confirmados obsoletos, registrado em [[tres-frentes-de-oferta]].
+
+**Claim de ineditismo e duas taglines:** aprovados em [[paaps]]. "Cuidar é um ato
+coletivo" pode variar com criatividade; a tagline institucional tem versão para
+Yunus/ESG substituindo "Políticas Públicas e Institutos" por "Projetos ESG ou
+Responsabilidade Social Empresarial".
+
+**Lucas Pimenta e Gabriela Diniz:** confirmados ativos, psicólogos supervisores da PAAPS.
+
+**Complexo da Maré:** é a mesma ação. Parceria de três pontas (Escola Municipal, a
+associação que incubava a PAAPS, Coletivo Especiais da Maré); recorte público sempre
+"Escola Municipal".
+
+**Financeiro da DIGGING:** autorizado a entrar em [[digging-ficha-juridica]] (receita
+2025, lucro, margem, termos do financiamento Yunus).
+
+**Projeto Minerva:** ganhou pasta própria, [[minerva]], arquivado mas reativável como
+ideia. O material chegou a circular externamente e recebeu recusa de escopo, não é mais
+tratado como "uso restrito por incerteza": é registro de tentativa real com desfecho
+conhecido.

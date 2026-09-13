@@ -29,6 +29,13 @@ rede, quando os serviços não conversam?" A escolha é do gestor, e é ela que 
 **ONGs e institutos:** organizações que atendem população em situação de vulnerabilidade e
 sustentam equipes expostas à violência todos os dias.
 
+## A estrutura antiga, superada
+
+PDF e carrossel de vendas anteriores usavam quatro "pilares" (articulação de atores
+sociais, capacitações vivenciais, psicologia de grupos, intervenções sistêmicas
+territoriais). **Material obsoleto, confirmado pela Mallu em 13/09/2026.** As três frentes
+acima são a estrutura vigente.
+
 ## Nunca escrever "produto"
 
 São frentes de atuação, nunca produtos. E a ordem é gestão pública primeiro, ONGs depois.

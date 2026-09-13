@@ -53,8 +53,13 @@ peça de Instagram ou site. "Minerva" e "Refazenda" estão os dois na lista de n
 proibidos de citação pública, em [[paaps]]. Este registro é documentação interna da
 existência da parceria, nunca fonte para conteúdo de canal público.
 
+## O desfecho
+
+O material chegou a ser enviado a um representante da instituição parceira, e a resposta
+foi negativa no escopo específico proposto. Ver [[minerva]] para o registro completo,
+inclusive por que a Mallu decidiu manter a ideia viva apesar da recusa.
+
 ## Onde isso serve
 
-Como registro de que a parceria existe, está pausada e ainda não tem nota própria no
-cofre. Serve para a Mallu decidir, quando quiser retomar o assunto, onde essa parceria mora
-no cofre.
+Como a fonte primária do que a proposta continha. O projeto em si, seu desfecho e a
+decisão de arquivar como ideia reativável moram em [[minerva]].
