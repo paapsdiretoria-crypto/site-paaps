@@ -33,6 +33,8 @@ A mina principal destas notas é [[tcc-suas]], onde as conceituações são cons
 - [[linha-de-pensamento-mallu]] : A linha de pensamento da Mallu: psicologia além do consultório e do RH, psicologia suleada, impacto sistêmico
 - [[mercado-do-cuidado]] : A PAAPS está no mercado do cuidado, não no de saúde nem no de bem-estar corporativo, e esse reframe decide quem é concorrente e qual é o tamanho do mercado
 - [[o-cidadao-esta-no-meio]] : O cidadão fica no meio entre os setores que não se falam, e é o contexto dele que nenhum deles considera
+- [[o-que-a-paaps-e]] : A PAAPS é um programa de tecnologia social em psicologia, com três marcas que a definem: diagnóstico antes, coletivo como unidade, capacidade instalada como entrega
+- [[o-que-a-paaps-recusa-ser]] : A lista do que a PAAPS recusa ser, escrita com a mesma clareza do que ela é
 - [[paaps-e-uma-transposicao]] : A PAAPS é a tradução para a rede pública da consultoria boutique que a DIGGING já vende, e é isso que responde à pergunta sobre prova de mercado
 - [[roda-nao-e-o-jeito-barato]] : Trabalhar em roda é o formato que a OMS reconhece, não uma forma barata de atender muita gente de uma vez
 - [[saude-social-nao-e-vista-como-saude]] : Dentro do hospital, o laudo médico vale como saúde e o trabalho social não, o que faz o paciente sair sem direitos

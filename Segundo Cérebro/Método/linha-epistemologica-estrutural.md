@@ -13,6 +13,18 @@ aliases: [estrutural e sistêmica, epistemologia, o conteúdo não convence]
 **Nunca individualista, nunca meritocrática.** A ferida tocada é sempre coletiva e
 estrutural, nunca individual e de consumo.
 
+## A premissa, e ela é o chão, não a epígrafe
+
+> *"Realizar uma psicologia da libertação exige primeiro lograr uma libertação da
+> Psicologia."*
+> Ignácio Martín-Baró
+
+**A PAAPS parte daí e não se afasta.** Não é citação de abertura de apresentação: é o chão
+epistemológico do programa. A psicologia que a PAAPS pratica não é clínica individualista,
+não parte do indivíduo patológico, parte do sistema que produz o sofrimento e intervém no
+sistema. Isso decide o produto, a linguagem, o público, a forma de vender e o que se recusa
+a comunicar.
+
 ## A frase que resume o método de escrita
 
 **O conteúdo não convence: nomeia.** Peça que tenta convencer argumenta; peça que nomeia

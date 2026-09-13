@@ -45,6 +45,14 @@ Uma evidência forte já permite dizer três coisas, todas apontadas:
 O concorrente real não é outra consultoria: é o grupo de categoria que já existe e não
 acolhe.
 
+## Notas desta pasta
+
+- [[claudia-cliente-ideal]] : Cláudia é a técnica ou coordenadora de equipamento público que carrega o peso de cuidar sem ser cuidada
+- [[itiquira-mt-cliente-ideal]] : O que a reunião com Itiquira, no Mato Grosso, ensina sobre o cliente ideal da PAAPS
+- [[joyce-cliente-ideal]] : A escuta com a Joyce, assistente social, mostra que o profissional da rede adoece porque absorve a falha estrutural como falha pessoal
+- [[o-que-o-cliente-ideal-pede]] : Quando perguntam o que faria diferença, a trabalhadora da rede pede supervisão, menos carga e política pública para ela, nunca terapia
+- [[rh-genuino-cliente-ideal]] : O RH genuíno é o gestor de empresa de médio porte que quer fazer certo, e não só cumprir a NR-1
+
 ## Onde isso serve
 
 Em [[inteligencia-competitiva]], em [[prospeccao-e-vendas]], em [[estrategia-de-negocio]]

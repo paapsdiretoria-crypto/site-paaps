@@ -34,3 +34,9 @@ taquigrafia de uma conversa interna, e virou frase sem referente numa peça púb
 ## Onde isso serve
 
 Em [[conteudo-paaps]] e [[conteudo-mallu]].
+
+## Formato mínimo da fonte, quando o dado aparece na peça
+
+**Nenhuma estatística entra sem fonte clara e acessível**, no Instagram, no LinkedIn ou no
+site. Formato mínimo: `(Fonte: INSS, 2024)` ou `(MTE, Portaria 1.419/2024)`. Dado sem
+fonte não é dado, é afirmação.

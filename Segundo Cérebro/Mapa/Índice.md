@@ -34,9 +34,11 @@ A frente de investimento, editais e inscrições, com o histórico do que já fo
 
 Quem é o cliente ideal da PAAPS, montado a partir de evidência e não de suposição
 
+- [[claudia-cliente-ideal]] : Cláudia é a técnica ou coordenadora de equipamento público que carrega o peso de cuidar sem ser cuidada
 - [[itiquira-mt-cliente-ideal]] `pendente` : O que a reunião com Itiquira, no Mato Grosso, ensina sobre o cliente ideal da PAAPS
 - [[joyce-cliente-ideal]] : A escuta com a Joyce, assistente social, mostra que o profissional da rede adoece porque absorve a falha estrutural como falha pessoal
 - [[o-que-o-cliente-ideal-pede]] : Quando perguntam o que faria diferença, a trabalhadora da rede pede supervisão, menos carga e política pública para ela, nunca terapia
+- [[rh-genuino-cliente-ideal]] : O RH genuíno é o gestor de empresa de médio porte que quer fazer certo, e não só cumprir a NR-1
 
 ### [[clinica-mallu-2027]] `pendente`
 
@@ -47,11 +49,16 @@ A clínica de Psicologia Clínica da Mallu Vasconcellos, prevista para 2027
 
 A frente de conteúdo do perfil pessoal da Mallu, em todos os canais
 
+- [[instagram-conteudo-mallu]] : O @amalluvasconcellos é presença intelectual com rosto, e existe para gerar reconhecimento, nunca admiração
+- [[linkedin-conteudo-mallu]] : O LinkedIn da Mallu é a voz de quem lê sistemas, não de quem compartilha vivência: a emoção existe mas não é o argumento
 
 ### [[conteudo-paaps]]
 
 A frente de conteúdo institucional da PAAPS, em todos os canais
 
+- [[arquitetura-dos-cinco-canais-conteudo-paaps]] : Os cinco canais não são perfis separados: cada um faz uma coisa que os outros não fazem, e juntos formam um percurso
+- [[instagram-conteudo-paaps]] : O @paaps.brasil é comunicação política viva, e existe para criar identificação, nunca admiração
+- [[linkedin-conteudo-paaps]] : O LinkedIn da PAAPS é a organização falando com organizações, e não vende: demonstra
 - [[site-paaps-no-ar]] : O que o site paaps.com.br diz hoje, na ordem em que diz, e as regras que a copy dele fixou
 
 ### [[digging-times-e-lideres]] `pendente`
@@ -88,12 +95,20 @@ A frente que decide em que negócio a PAAPS está e como ela se sustenta
 Como a PAAPS planeja: Objetivo, Resultado-Chave, Projeto, e os prazos que cada um pode ter
 
 - [[metas-2026]] `historico` : As 10 metas que a PAAPS tinha para 2026, e a análise de quais foram cumpridas até 13/09/2026
-- [[quadro-de-projetos-atual]] : O quadro de projetos ativos da PAAPS hoje, por status de execução, ligado aos projetos que já existem no cérebro
+- [[quadro-de-projetos-atual]] : Que projetos a PAAPS tem abertos, a que frente cada um pertence, e onde ele toca este cérebro
 
 ### [[inteligencia-competitiva]]
 
 A frente que acompanha quem concorre com a PAAPS e o que a gente faz diferente
 
+- [[a-lacuna-que-a-paaps-ocupa-intel]] : Nenhum concorrente mapeado junta diagnóstico territorial, intervenção psicossocial sistêmica e capacidade instalada como entrega
+- [[agenda-publica-intel]] : A Agenda Pública é think tank de políticas públicas e serve de referência de cadência editorial e de dado, não de concorrência de serviço
+- [[asdoseculo21-intel]] : asdoseculo21 é referência de comunicação digital em tema social, não concorrente de serviço
+- [[cepam-intel]] : A CEPAM faz consultoria de processo administrativo para gestão pública, com comunicação datada, e a PAAPS tem vantagem de linguagem e método
+- [[denise-santos-intel]] : Uma psicanalista bem posicionada no LinkedIn prova que o canal individual da Mallu é disputa real, e pode render tanto quanto o canal da empresa
+- [[digix-intel]] : A DIGIX é o concorrente mais perigoso porque disputa a mesma atenção digital sobre saúde mental no setor público sem ter profundidade metodológica
+- [[esafi-intel]] : A ESAFI capacita gestor público em competência técnica, e a PAAPS trabalha a condição psicossocial que permite exercer essa competência
+- [[yunus-intel]] : Yunus modela negócio de impacto e não faz psicologia, então coexiste com a PAAPS: um modela, o outro cuida de quem executa
 
 ### [[paaps-ai-first]]
 
@@ -187,6 +202,8 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 - [[linha-de-pensamento-mallu]] : A linha de pensamento da Mallu: psicologia além do consultório e do RH, psicologia suleada, impacto sistêmico
 - [[mercado-do-cuidado]] : A PAAPS está no mercado do cuidado, não no de saúde nem no de bem-estar corporativo, e esse reframe decide quem é concorrente e qual é o tamanho do mercado
 - [[o-cidadao-esta-no-meio]] : O cidadão fica no meio entre os setores que não se falam, e é o contexto dele que nenhum deles considera
+- [[o-que-a-paaps-e]] : A PAAPS é um programa de tecnologia social em psicologia, com três marcas que a definem: diagnóstico antes, coletivo como unidade, capacidade instalada como entrega
+- [[o-que-a-paaps-recusa-ser]] : A lista do que a PAAPS recusa ser, escrita com a mesma clareza do que ela é
 - [[paaps-e-uma-transposicao]] : A PAAPS é a tradução para a rede pública da consultoria boutique que a DIGGING já vende, e é isso que responde à pergunta sobre prova de mercado
 - [[roda-nao-e-o-jeito-barato]] : Trabalhar em roda é o formato que a OMS reconhece, não uma forma barata de atender muita gente de uma vez
 - [[saude-social-nao-e-vista-como-saude]] : Dentro do hospital, o laudo médico vale como saúde e o trabalho social não, o que faz o paciente sair sem direitos
@@ -198,19 +215,22 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 - [[Voz]] : Como a PAAPS fala, e o que ela nunca diz
 - [[afeto-situado-mallu]] : Como começar uma peça quando o gancho afetivo não veio da Mallu, e o que continua sendo dela mesmo assim
 - [[anatomia-do-carrossel-aprovado]] : O que faz funcionar o primeiro carrossel do @paaps.brasil aprovado sem rodada de correção, dissecado slide a slide
+- [[as-sete-perguntas-antes-de-entregar]] : As sete perguntas que qualquer agente responde antes de entregar peça, e a resposta certa de cada uma
+- [[assinatura-intelectual-mallu]] : A Mallu escreve em três movimentos: mostra o fenômeno, desmonta a premissa dominante e nomeia a raiz estrutural
 - [[capilarizado-nunca-capitalizado]] : O SUS é capilarizado, nunca capitalizado, e dizer o contrário derruba a credibilidade da peça inteira
 - [[chapeu-eyebrow-proibido]] : A linha curta em caixa alta espaçada acima de um título é banida em qualquer peça, e o rótulo bom vira título grande em vez de sumir
+- [[conteudo-sem-razao-nao-entra]] : Todo conteúdo precisa de razão de existir, e volume sem propósito não entra na grade
 - [[copy-com-conectivos]] : Copy se escreve com conectivos que amarram o raciocínio, nunca como lista justaposta de entregas
 - [[criterios-design]] : Lista de checagem verificável que o Crítico de Design aplica antes de qualquer peça fechar
 - [[critica-politica-velada]] : A PAAPS critica o sistema político veladamente, nunca de forma pejorativa e explícita
 - [[escrever-grande]] : Legibilidade é valor de marca, então entre cortar texto e diminuir a letra, corta-se texto
 - [[foto-em-cor-em-todos-os-slides]] : Duas leis do carrossel que revogaram regras antigas: foto em todos os slides, e foto em cor
-- [[frases-mote]] `pendente` : A linha do tempo das frases-mote da Mallu, com a que vale hoje ainda a confirmar
+- [[frases-mote]] : A frase-mote vigente da Mallu, e a linha do tempo das que já existiram
 - [[identidade-aplicada]] : Paleta, tipografia, elementos decorativos e sistema Periódico como o Aplicador Visual executa na prática
+- [[lexico-paaps]] : As palavras que a PAAPS usa e as que ela evita, porque cada palavra revela o que se acredita
 - [[lexico-pessoas-da-rede]] : Como nomear as pessoas da rede, com duas palavras banidas
 - [[linguagem-clinica-patologizante]] : Vocabulário clínico sem contexto relacional e sistêmico não entra em peça da PAAPS
 - [[linguagem-coachesca]] : A lista fechada de expressões de coach e marketing que nunca entram em peça da PAAPS
-- [[manual-marca-posicionamento]] : Manual de marca e posicionamento da PAAPS, convertido do DOCX institucional original
 - [[mapa-fontes-foto]] : Onde achar fotografia documental pública de uso livre, a partir do acervo de Radilson Carlos Gomes
 - [[metaforas-de-guerra]] : Metáfora de guerra, violência ou competição nunca entra em peça da PAAPS
 - [[modelos-slide-paaps]] : Catálogo dos 8 modelos de slide e das 8 leis universais do @paaps.brasil, lidos de dentro de peças já publicadas
@@ -219,8 +239,13 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 - [[paaps-brasil-e-nome-proprio]] : Em peça pública escreve-se PAAPS ou PAAPS Brasil, nunca a expansão da sigla, que só existe dentro do contrato social
 - [[qualidade-frontend]] : Princípios de design de alta qualidade escritos de forma agnóstica de meio, válidos tanto para HTML quanto para peça no Canva
 - [[segredo-em-arquivo-commitado]] : Valor real de segredo ou dado pessoal nunca pode ser escrito em arquivo que vai pro git
+- [[sem-apropriar-sofrimento-alheio]] : Case e história de campo são ativos, mas nunca exposição de pessoa ou coletivo vulnerável para fim de marketing
 - [[sem-frase-de-efeito-vazia]] : Oração de fecho que anuncia importância sem nomear a coisa é cortada, e sai junto quando o referente sai
 - [[sem-julgamento-moral]] : Adjetivo moral sobre pessoas é proibido nos dois sentidos, elogio incluído
+- [[sem-promessa-de-resultado]] : A PAAPS nunca promete resultado individual: ela cria condição, não entrega estado emocional
+- [[sem-simplificar-sofrimento]] : Burnout, violência institucional e adoecimento coletivo nunca viram checklist ou infográfico de três passos
+- [[sem-tendencia-que-contradiz-a-identidade]] : Trend de rede social que contradiz a identidade não entra, porque autoridade vale mais que alcance de curto prazo
+- [[sem-vender-meritocracia]] : Nem a trajetória da Mallu nem o resultado da PAAPS são prova de que qualquer um consegue
 - [[texto-com-cara-de-ia]] : Os marcadores de texto gerado por máquina que a Mallu reconhece de longe e recusa
 - [[travessao-proibido]] : O travessão grande é proibido em qualquer saída da PAAPS, sem exceção de contexto
 - [[visual-instagram]] : Os três modos visuais do Instagram PAAPS e as regras fotográficas que valem em todos eles

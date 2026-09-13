@@ -162,3 +162,35 @@ A limpeza que ele mandou fazer:
   [[Visão Geral]]), o diagnóstico datado da pasta conteudo (já superado) e o runbook de
   navegação por MCP (procedimento de ferramenta).
 - [[hooks-e-auto-push-ai-first]] passou a descrever os três hooks e o aviso de backup parado.
+
+## [2026-09-13] quebra | o manual de marca virou 12 notas nos setores certos
+
+`manual-marca-posicionamento` tinha 618 linhas e misturava sete assuntos diferentes numa
+nota só, incluindo um mapa de concorrentes enterrado na linha 510 enquanto
+[[inteligencia-competitiva]] estava vazia. Quebrado assim:
+
+- **Sete concorrentes viraram sete notas**, mais [[a-lacuna-que-a-paaps-ocupa-intel]], que
+  registra a distinção que vem antes de tudo: a PAAPS não compete com plataforma de
+  bem-estar, compete no ecossistema de gestão pública e impacto.
+- **Seis regras absolutas viraram seis notas de Voz:** [[sem-promessa-de-resultado]],
+  [[sem-simplificar-sofrimento]], [[sem-vender-meritocracia]],
+  [[conteudo-sem-razao-nao-entra]], [[sem-apropriar-sofrimento-alheio]] e
+  [[sem-tendencia-que-contradiz-a-identidade]]. A sétima, sobre formato de fonte, foi fundida
+  em [[nunca-afirmar-tendencia-sem-verificar]], que já existia.
+- **Os cinco canais ganharam nota própria**, o que era o buraco declarado pelas duas capas
+  de conteúdo, mais [[arquitetura-dos-cinco-canais-conteudo-paaps]] com o percurso.
+- **As duas personas saíram da nota de voz e foram para o cliente ideal:**
+  [[claudia-cliente-ideal]] e [[rh-genuino-cliente-ideal]].
+- [[o-que-a-paaps-e]], [[o-que-a-paaps-recusa-ser]], [[lexico-paaps]],
+  [[assinatura-intelectual-mallu]] e [[as-sete-perguntas-antes-de-entregar]].
+- A premissa de Martín-Baró foi para [[linha-epistemologica-estrutural]], e a trajetória que
+  dá peso à escrita dela, para [[mallu-vasconcellos]].
+
+**Descartado por estar superado:** o diagnóstico do site antigo, que descrevia uma versão
+que não existe mais, e o fluxo de geração de conteúdo, que a skill `paaps-orquestrador-conteudo`
+já governa. **Registrado como cuidado:** os números de MVP municipal do manual não estão no
+conjunto autorizado do site, e não saem sem a Mallu confirmar a fonte.
+
+O quadro de projetos perdeu prazo, prioridade e status, que envelhecem e vivem no Notion, e
+ficou só com quais projetos existem e a que frente cada um responde. A frase-mote vigente
+foi confirmada por ela.

@@ -36,6 +36,14 @@ As duas afirmações não podem valer ao mesmo tempo em peça pública. Ver
 [[mallu-formacao-e-crp]]. Enquanto ela não decidir, **a versão que vale em peça externa é
 "formanda"**, porque é a que não cria risco de registro profissional.
 
+## O que a formou, e é o que dá peso à escrita dela
+
+Absorveu Martín-Baró, bell hooks e Fanon. Trabalhou em unidade de internação provisória de
+adolescentes em conflito com a lei, fez rodas no Complexo da Maré, foi para Desterro do Melo
+no primeiro projeto da PAAPS, é **coautora de livro sobre psicodrama e relações raciais**, e
+escreve o TCC sobre violência e cuidado no SUAS. Não é uma CEO padrão: é intelectual de
+campo, e a escrita dela não nasce da abstração. Ver [[assinatura-intelectual-mallu]].
+
 ## Família e vínculo pessoal
 
 **Filha de [[fabiane-vasconcellos|Fabiane Vasconcellos]] (mãe, sócia da DIGGING) e de
