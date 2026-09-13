@@ -21,5 +21,3 @@ Onde está hoje, e o que precisa acontecer para virar a próxima fase.
 Data, o que foi decidido, e por quê. Não se reabre o que está aqui.
 
 ## Onde isso serve
-
-## O que ainda falta

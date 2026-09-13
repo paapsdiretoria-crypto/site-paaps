@@ -49,7 +49,3 @@ acolhe.
 
 Em [[inteligencia-competitiva]], em [[prospeccao-e-vendas]], em [[estrategia-de-negocio]]
 e em toda peça de [[conteudo-paaps]] que precise falar com quem decide no município.
-
-## O que ainda falta
-
-Tudo o que está marcado como "a escrever" e "a levantar" na tabela acima.

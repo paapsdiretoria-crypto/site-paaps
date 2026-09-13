@@ -70,8 +70,3 @@ cofre é reconhecido como entrega concluída, não só um experimento em andamen
 
 Em [[gestao-estrategica-paaps]] e em toda decisão de prioridade: antes de sugerir um
 projeto novo, olhar aqui se ele já não está na gaveta, em pausa ou já feito.
-
-## O que ainda falta
-
-Ligar "Projeto Minerva" a uma entidade ou nota própria: hoje ele não tem representação
-neste cofre e está em pausa há tempo indeterminado.

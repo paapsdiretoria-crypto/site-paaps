@@ -9,11 +9,6 @@ atualizado: 2026-09-12
 
 # Itiquira, MT: o que a reunião ensinou
 
-## O que ainda falta
-
-A reunião inteira. Falta trazer a anotação ou a gravação para `Arquivos/`, e extrair o
-que ela diz sobre porte do município, quem decide, o que dói e o que eles já tentaram.
-
 ## Ligações
 
 [[cliente-ideal-paaps]]

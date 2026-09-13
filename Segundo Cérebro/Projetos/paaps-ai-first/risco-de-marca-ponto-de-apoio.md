@@ -40,7 +40,3 @@ do que a consulta.
 ## Onde isso serve
 
 Em [[estrategia-de-negocio]] e em toda decisão sobre o nome do aplicativo.
-
-## O que ainda falta
-
-A consulta ao advogado, e a decisão da Mallu sobre manter ou trocar o nome.

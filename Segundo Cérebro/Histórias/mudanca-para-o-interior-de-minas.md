@@ -23,8 +23,5 @@ com quem a sustenta, que está na origem da PAAPS.
 ## Pode ser contada em público?
 Sim. Já está pública no LinkedIn dela.
 
-## O que ainda falta
-O nome da cidade, o que aconteceu lá mês a mês, e as pessoas que ela conheceu.
-
 ## Onde isso serve
 Em [[conteudo-paaps]] e [[conteudo-mallu]], e em toda abertura de pitch.

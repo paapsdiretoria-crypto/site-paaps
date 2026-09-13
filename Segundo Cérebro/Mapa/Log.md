@@ -144,3 +144,21 @@ notas de origem ([[paaps-ai-first]], [[gestao-estrategica-paaps]],
 `diagnostico-grafo-conteudo-2026-08-10-ai-first.md` tinha 3 achados parecidos, mas está
 marcado `historico` (superado, mantido como registro de época): não mexi, fica para a Mallu
 confirmar se ainda vale migrar ou se já é passado.
+
+## [2026-09-13] critério | os dois testes viraram regra, e o cofre passou por eles
+
+O critério que decide o que entra ficou escrito em [[Visão Geral]] e na skill
+`adiciona-ao-cerebro`: uma lição só entra se **muda o que a PAAPS diz, vende ou cobra** e
+se **sobrevive à troca de ferramenta e de ano**. Junto foi a razão de ele existir: o que eu
+media antes era o meu espanto, não o valor dela.
+
+A limpeza que ele mandou fazer:
+
+- **Os 46 blocos "o que ainda falta" saíram de todas as notas e dos moldes.** A regra é que
+  pendência de execução vai pro Notion e lacuna de conhecimento é pergunta na conversa, não
+  arquivo. Escrever a pergunta num bloco era adiar a pergunta.
+- **Quatro notas apagadas por reprovarem nos dois testes:** o inventário de pastas do
+  repositório (mudava toda semana e carregava backlog), o padrão LLM Wiki (duplicava
+  [[Visão Geral]]), o diagnóstico datado da pasta conteudo (já superado) e o runbook de
+  navegação por MCP (procedimento de ferramenta).
+- [[hooks-e-auto-push-ai-first]] passou a descrever os três hooks e o aviso de backup parado.

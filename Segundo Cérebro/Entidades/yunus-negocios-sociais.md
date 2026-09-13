@@ -37,8 +37,3 @@ Em [[captacao]], como candidatura em andamento, e como referência de linguagem 
 
 A etapa em curso é a Teoria da Mudança e o Canvas C, com prazo em 19/09/2026, status
 "Fazendo", prioridade Urgente. Ver [[quadro-de-projetos-atual]].
-
-## O que ainda falta
-
-O que exatamente foi submetido até aqui, e a instituição parceira do desafio (PUC-Rio)
-precisa de nota própria se a relação seguir ativa.

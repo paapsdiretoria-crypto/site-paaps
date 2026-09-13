@@ -48,6 +48,47 @@ fica fora do grafo.
 fonte única); foto, áudio e binário (ficam em `Acervo/`, fora do cofre); peça em produção
 (HTML, PNG, deck) que mora nas pastas de trabalho.
 
+## Os dois testes que decidem, e uma lição precisa passar nos dois
+
+Calibrado pela Mallu em 13/09/2026, depois de eu trazer oito "aprendizados" do pitch e do
+site e ela reprovar todos.
+
+1. **Muda o que a PAAPS diz, vende ou cobra?** Se não altera argumento, oferta, preço ou
+   posicionamento, não entra.
+2. **Sobrevive à troca de ferramenta e de ano?** Se morre quando trocar o gerador de
+   imagem, o CSS, o Canva ou a versão do deck, não entra. Teste: isso ainda vai ser
+   verdade em 2028?
+
+**Passa nos dois, e por isso entrou:** a PAAPS é a tradução da consultoria que a DIGGING já
+vende, então a pergunta do investidor deixa de ser "vocês conseguem vender?" e vira "vocês
+conseguem traduzir?". Muda o argumento, e não depende de ferramenta nenhuma.
+
+**Reprovadas, e são o tipo de coisa que enchia o cofre de lixo:** proporção de foto para
+não duplicar no gerador de imagem; desfoque feito com a foto salva pequena em vez de filtro
+de CSS; a contagem de caractere da linha de fonte de uma versão de um deck; o bug de
+alinhamento que já foi corrigido; o plano de uma rodada que terminou.
+
+**Por que o critério é esse.** O que eu media antes era o meu espanto, não o valor dela. O
+cofre guarda o que ficou valendo, nunca como a gente chegou lá: processo é o que a gente
+descarta junto, resultado é o que fica.
+
+## Pendência não é conhecimento
+
+**Nenhuma nota tem bloco "o que ainda falta", e não existe arquivo de pendência dentro do
+cofre.** Calibrado em 13/09/2026.
+
+- **Falta de execução** (corrigir código, atualizar LinkedIn, ingerir um Drive, importar
+  uma base, consultar advogado) vai para a database "Quadro Estratégico de Projetos" no
+  Notion, pela skill `tarefa-avulsa-quadro-projetos`.
+- **Falta de conhecimento** (o nome da escola, o que aconteceu naquele ano, qual é a
+  frase-mote de hoje) é **pergunta para a Mallu, na conversa, na hora**. Escrever a
+  pergunta num arquivo é adiar a pergunta.
+- **Dúvida sobre o próprio cofre** (o nome de um setor, se um projeto existe) também é
+  pergunta direta, nunca arquivo.
+
+O que a nota pode carregar é o campo `status: pendente` no cabeçalho, que sinaliza nota
+incompleta sem virar lista de tarefa.
+
 ## O ciclo: chegou algo, virou nota
 
 Toda vez que algo relevante aparece (um PDF, uma conversa importante, um aprendizado), o
@@ -97,7 +138,7 @@ Some a isso: pasta vazia não existe, e bolinha sem cor no grafo é erro, não d
 
 ## Ligações
 
-[[Índice]] · [[Log]] · [[Legenda de cores]] · [[padrao-llm-wiki]]
+[[Índice]] · [[Log]] · [[Legenda de cores]]
 
 Os setores: [[Projetos]] · [[Entidades]] · [[Histórias]] · [[Conceitos]] · [[Voz]] ·
 [[Método]] · [[Fontes]] · [[Ideias]]

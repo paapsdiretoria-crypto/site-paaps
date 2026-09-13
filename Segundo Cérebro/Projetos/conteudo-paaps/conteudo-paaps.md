@@ -16,7 +16,3 @@ palavras significam) e `Histórias/` (o que sustenta a peça com coisa vivida).
 
 ## Onde isso serve
 É o destino final da maior parte das notas de `Ideias/` e de `Fontes/`.
-
-## O que ainda falta
-Falta uma nota por canal, com o que cada um é, quem é o leitor e o que funciona lá.
-

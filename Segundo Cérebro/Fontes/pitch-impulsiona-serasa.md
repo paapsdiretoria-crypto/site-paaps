@@ -40,8 +40,3 @@ que o deck não tem tempo de fazer, como a objeção sobre trabalhar em roda.
 ## Onde isso serve
 
 Em [[captacao]], em [[estrategia-de-negocio]] e em [[conteudo-paaps]].
-
-## O que ainda falta
-
-Dezoito dos 27 documentos ainda não foram lidos, entre eles o raciocínio do zero (957
-linhas), o modelo PAAPS completo (891) e as cinco pesquisas.

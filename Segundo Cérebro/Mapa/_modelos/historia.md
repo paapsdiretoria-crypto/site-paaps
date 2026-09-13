@@ -21,5 +21,3 @@ Peça, pitch, aula, proposta, edital.
 Sim, não, ou sim com estas condições.
 
 ## Onde isso serve
-
-## O que ainda falta

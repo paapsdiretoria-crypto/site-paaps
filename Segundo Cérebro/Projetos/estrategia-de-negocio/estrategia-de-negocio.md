@@ -23,6 +23,3 @@ Drive: `drive.google.com/drive/folders/1tKhd_UrouV5dH1yO4sxtFR75MJLpkEnw`
 
 ## Onde isso serve
 Em pitch, proposta, edital e em qualquer conversa sobre preço.
-
-## O que ainda falta
-Falta importar o Modelo de Negócio do Notion e o material do Drive.

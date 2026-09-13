@@ -38,8 +38,3 @@ local e turismo comunitário. Isso importa: não foi contrato, foi campo.
 
 Em [[conteudo-paaps]], em abertura de pitch, em [[captacao]] e como evidência em
 [[cliente-ideal-paaps]].
-
-## O que ainda falta
-
-O nome das pessoas, o que foi feito mês a mês, e a confirmação de que Desterro do Melo é a
-cidade de menos de 3 mil habitantes citada no LinkedIn em [[mudanca-para-o-interior-de-minas]].

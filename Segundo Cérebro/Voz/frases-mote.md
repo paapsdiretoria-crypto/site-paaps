@@ -49,8 +49,3 @@ O léxico de posicionamento é **fechado**: nenhuma expressão nova entra sem de
 
 Em bio, apresentação, assinatura, abertura de pitch e qualquer lugar onde a Mallu se
 apresenta em uma linha.
-
-## O que ainda falta
-
-Qual é a frase-mote de hoje, dita por ela. E as frases que existiram antes de 2026, que
-eu não conheço.

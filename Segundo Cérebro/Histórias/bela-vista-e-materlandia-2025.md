@@ -28,8 +28,3 @@ Ver [[diagnostico-360]].
 
 Em [[estrategia-de-negocio]], em [[prospeccao-e-vendas]] como case de porte parecido, e em
 [[captacao]].
-
-## O que ainda falta
-
-O resultado do diagnóstico. Qual foi o achado, o que a gestão fez com ele, e o que os 180
-servidores relataram.

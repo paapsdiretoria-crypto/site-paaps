@@ -54,8 +54,3 @@ tamanho do problema antes de saber que existe alguém vendendo alguma coisa.
 
 Em [[conteudo-paaps]] e em [[prospeccao-e-vendas]]: é a página para onde todo e-mail frio
 aponta.
-
-## O que ainda falta
-
-Os 8 documentos de construção do site (design system, regras mobile, briefing, constituição)
-ainda não foram compilados, e as páginas internas ainda não existem.

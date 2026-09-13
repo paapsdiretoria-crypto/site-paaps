@@ -72,6 +72,22 @@ diferente.
 | padrão percebido em meses de dados | foto, áudio bruto, PDF financeiro |
 | formulação literal de quem vive a coisa | opinião genérica sem fonte e sem dono |
 
+**Os dois testes, e precisa passar nos dois** (calibrado pela Mallu em 13/09/2026):
+
+1. **Muda o que a PAAPS diz, vende ou cobra?** Se não altera argumento, oferta, preço ou
+   posicionamento, não entra.
+2. **Sobrevive à troca de ferramenta e de ano?** Se morre quando trocar o gerador de
+   imagem, o CSS, o Canva ou a versão do deck, não entra.
+
+Reprovadas por esses testes: proporção de foto, truque de CSS, contagem de caractere de
+uma versão, ajuste de enquadramento, bug já corrigido, plano de rodada já executada. O que
+mede o espanto de quem processa não é conhecimento de quem usa.
+
+**2b. Isto é pendência?** Se for, não vira nota, em hipótese nenhuma. Falta de execução vai
+para o Notion pela skill `tarefa-avulsa-quadro-projetos`; falta de conhecimento e dúvida
+sobre o cofre são pergunta direta para a Mallu, na conversa. Nenhuma nota abre bloco
+"o que ainda falta".
+
 **3. Quantas notas isto é?** Teste do resumo: se a frase de resumo só fica verdadeira
 usando um "e", são duas notas.
 
@@ -103,7 +119,8 @@ nota nova e marcar a antiga como `status: historico` com o motivo, depois de per
 serve`. Nota sem isso vira lixo em três meses, e este cérebro existe para minerar ideia,
 não para arquivar.
 
-**7. O que ficou faltando?** Escrever como faltando. Buraco escondido é pior que buraco.
+**7. O que ficou faltando?** Se é execução, vira tarefa no Notion. Se é conhecimento ou
+dúvida de estrutura, é pergunta para a Mallu agora, na conversa. Nunca vira bloco na nota.
 
 ---
 
@@ -152,7 +169,9 @@ Cabeçalho: `tags`, `origem`, `resumo` entre aspas duplas, `serve-para`, `status
 | "O material já está organizado, é só mover" | Mover não é destilar. Export do Notion é cru, e cru fica em `Arquivos/` |
 | "Vou criar uma categoria nova pra isso caber" | As categorias são da Mallu. Pergunte |
 | "Vale explicar que antes isso ficava em outro lugar" | Arqueologia. O cérebro registra o que é, não o que foi |
-| "Depois eu preencho o onde isso serve" | Nota sem aplicabilidade é lixo. Preencha agora ou escreva que falta |
+| "Depois eu preencho o onde isso serve" | Nota sem aplicabilidade é lixo. Preencha agora ou pergunte agora |
+| "Isso me surpreendeu, então é conhecimento" | Seu espanto não é o valor dela. Aplique os dois testes |
+| "Anoto o que falta na nota pra não esquecer" | Pendência não mora no cofre. Notion ou pergunta, nunca arquivo |
 | "O título da página do Notion já é o nome da nota" | Título de página não é conceito. "Espaço destinado para saber mais sobre os outros membros" não é nota |
 | "Essa fala é parecida com outra, deixa junto" | Duas coisas parecidas viram duas notas linkadas, não uma nota grande |
 | "É material dela, então vai em Histórias" | `Histórias` é só o que a Mallu viveu |

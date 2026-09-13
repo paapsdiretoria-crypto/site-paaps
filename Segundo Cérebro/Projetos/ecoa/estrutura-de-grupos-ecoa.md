@@ -41,8 +41,3 @@ de território na base de membros, que segue registrando só "Psicóloga" em `Pr
 
 Em [[prospeccao-e-vendas]], porque o nível 4 é porta de entrada qualificada, e em toda
 decisão de onde uma mensagem deve ser publicada.
-
-## O que ainda falta
-
-O retrato de quem forma o nível 3 tem uma evidência forte (Joyce) e nenhuma outra. Falta
-território, rede de atuação e data de entrada na base de membros.

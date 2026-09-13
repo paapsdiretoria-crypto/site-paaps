@@ -33,16 +33,5 @@ matéria-prima que ninguém consegue copiar.
 "Banco de Histórias Vivas PAAPS" está no [[quadro-de-projetos-atual]] como prioridade dos
 próximos 3 meses. Este setor é onde essa prioridade se cumpre.
 
-## O que ainda falta
-**Tudo isso é uma fração, e a Mallu já disse que é.** O que está escrito aqui saiu do
-LinkedIn e do que ela contou nesta conversa, que é o que cabe em currículo. Falta:
-
-- a sessão de co-criação com ela, para levantar as histórias que não estão em lugar nenhum
-- a história completa que ela já contou por áudio, que está no Notion
-- os destaques do Instagram, um por lugar onde ela esteve: cada um é história e é insumo
-- as viagens que ela fez por conta própria
-- os estágios da faculdade, um por um, do Lattes
-- o framework da Refazenda Rio Xopotó, que está no Notion
-
 ## Onde isso serve
 Em toda peça, pitch, aula e proposta que precise de chão em vez de afirmação.

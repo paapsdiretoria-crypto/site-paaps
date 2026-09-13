@@ -69,11 +69,3 @@ planner físico dela; o Quadro de Projetos guarda só o que tem porte de projeto
 
 Toda vez que for preciso saber se um projeto novo já existe, em que trimestre uma meta
 vencia, ou por que uma meta não foi cumprida.
-
-## O que ainda falta
-
-Esta é uma frente nova, criada nesta sessão a partir do pedido direto da Mallu. Falta ela
-confirmar se "gestão estratégica" é mesmo o nome que quer para esta pasta.
-
-Recriar a página de Metas no Notion com os prazos semanal e quinzenal é execução, não
-conhecimento: fica registrada como tarefa avulsa no Notion, não aqui.

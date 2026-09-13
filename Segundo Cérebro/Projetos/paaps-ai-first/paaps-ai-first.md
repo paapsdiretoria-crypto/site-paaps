@@ -44,17 +44,9 @@ são código e processo vivo. Aqui mora o que eles significam.
 [[agentes-ai-first]] · [[skills-ai-first]] · [[arquitetura-agentes-v2-ai-first]] ·
 [[workflow-agentes-ai-first]] · [[hooks-e-auto-push-ai-first]] ·
 [[sistema-gto-ai-first]] · [[como-trabalhar-com-claude-ai-first]] ·
-[[regra-de-workspace-ai-first]] · [[runbook-navegacao-mcp-ai-first]]
+[[regra-de-workspace-ai-first]]
 
 ## Onde isso serve
 
 Em toda frente que depende de coisa acontecendo sozinha: [[conteudo-paaps]],
 [[conteudo-mallu]], [[prospeccao-e-vendas]], [[ecoa]] e [[captacao]].
-
-## O que ainda falta
-
-- Confirmar, uma por uma, quais das cinco frentes **rodam hoje** e quais estão só escritas.
-- Nenhum dos 23 agentes tem nota própria: são lidos hoje só pelo índice [[agentes-ai-first]].
-
-Pendência de execução (rotina de sincronização travada por permissão de disco no Mac) fica
-registrada como tarefa avulsa no Notion, não aqui.

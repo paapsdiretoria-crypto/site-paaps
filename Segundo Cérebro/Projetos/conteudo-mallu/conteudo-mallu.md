@@ -16,6 +16,3 @@ Identidade visual e tipográfica são **incompatíveis** entre os dois perfis, e
 misturam. A peça do perfil pessoal nasce de reflexão própria dela, não de pauta.
 
 ## Onde isso serve
-
-## O que ainda falta
-Falta uma nota por canal e a ingestão dos vídeos já transcritos.

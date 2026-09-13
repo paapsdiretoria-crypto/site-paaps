@@ -31,8 +31,3 @@ TV Bandeirantes.
 ## Onde isso serve
 
 Em [[conteudo-paaps]] e em [[captacao]].
-
-## O que ainda falta
-
-O nome da escola, quantas mães, o que mudou nelas e o que a Mallu viu que não se vê de
-fora. E a régua do que pode ser contado em público, porque o território é sensível.

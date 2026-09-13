@@ -31,7 +31,3 @@ a proibição de conteúdo pejorativo sobre o governo vigente.
 ## Onde isso serve
 
 Em [[conteudo-paaps]] e [[conteudo-mallu]], quando o vídeo em collab for referenciado.
-
-## O que ainda falta
-
-Data do vídeo, canal onde foi publicado, e se há mais collabs previstas.

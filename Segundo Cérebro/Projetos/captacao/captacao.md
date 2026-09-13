@@ -30,6 +30,3 @@ Nenhum tem nome registrado: a base de metas só guarda "1º edital", "2º edital
 **Em andamento agora:** o deck financeiro e o plano de captação de investimentos (prazo
 26/09/2026) e os pitch-decks comercial e de captação (prazo 04/10/2026). Ver
 [[quadro-de-projetos-atual]].
-
-## O que ainda falta
-Nomear os 5 editais de 2026 um a um, com o que cada um pedia e o que foi respondido.

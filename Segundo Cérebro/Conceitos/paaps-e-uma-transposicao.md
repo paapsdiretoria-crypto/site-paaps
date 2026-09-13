@@ -54,12 +54,3 @@ Quem tenta maquiar a irregularidade perde o argumento inteiro.
 
 Em [[captacao]], em [[estrategia-de-negocio]] e sempre que alguém perguntar quem é a PAAPS
 para fazer o que faz.
-
-## O que ainda falta
-
-Duas coisas que são da Mallu e travam o uso pleno da tese:
-1. **A receita caiu 22% de 2024 para 2025** (R$ 372 mil para R$ 291 mil). A explicação é
-   dela para dar. Se a peça abrir pela consultoria, quem lê vai olhar a série.
-2. **A consultoria é operação da Fabiane e a PAAPS é da Mallu.** Ao dizer "nós já temos uma
-   consultoria", precisa ficar óbvio que é a mesma casa e as mesmas sócias, senão parece
-   que a PAAPS toma emprestada a tração de outra pessoa.

@@ -18,7 +18,3 @@ A frente que amarra o que a Mallu estuda com o que ela publica.
 
 ## Onde isso serve
 Em [[conteudo-mallu]], em [[conteudo-paaps]] e em [[tcc-suas]].
-
-## O que ainda falta
-Falta a ingestão do Drive da faculdade (uma pasta por disciplina) e dos vídeos já
-transcritos que viram repositório de temas para roteiro.

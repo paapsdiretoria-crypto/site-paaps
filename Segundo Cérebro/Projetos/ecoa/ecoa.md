@@ -37,9 +37,3 @@ Identidade e estratégia consolidadas se lêem neste cofre. O que está acontece
 Em [[conteudo-paaps]], que puxa tema das Eras; em [[prospeccao-e-vendas]], porque o
 Programa Porta-Voz é porta de entrada qualificada; e em [[cliente-ideal-paaps]], porque é
 na ECOA que a PAAPS escuta o cliente ideal dela falando.
-
-## O que ainda falta
-
-A data dos encontros não mora em lugar nenhum. A jornada operacional de entrada tem quatro
-etapas nomeadas e nenhuma escrita. E o campo de profissão na base de membros ainda diz só
-"Psicóloga", enquanto a comunidade já se abriu para a rede inteira.

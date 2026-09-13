@@ -1,22 +1,33 @@
 ---
 tags: [metodo, runbook]
 origem: ".claude/settings.json"
-resumo: "Os dois hooks do evento Stop, o que cada um grava, e por que eles usam variável de ambiente em vez de caminho fixo"
+resumo: "Os três hooks do evento Stop, o que cada um faz, e o aviso que aparece quando o backup para"
 serve-para: ["[[estrategia-de-negocio]]"]
 status: vivo
-atualizado: 2026-09-12
+atualizado: 2026-09-13
 aliases: [hook, auto-push, evento Stop, log de sessão]
 ---
 
 # Hooks ativos e auto-push
 
-**Dois hooks rodam automaticamente no evento `Stop`, ao final de cada resposta. Nenhuma
+**Três hooks rodam automaticamente no evento `Stop`, ao final de cada resposta. Nenhuma
 ação manual é necessária.**
 
 | Ordem | Hook | O que faz |
 |---|---|---|
 | 1º | log de sessão | grava timestamp e arquivos alterados em `sessoes/sessao-AAAA-MM-DD.md`, deduplicado, ignorando a própria pasta |
-| 2º | auto-push | detecta qualquer mudança, commita como `auto: <áreas> - <data>` e empurra para `main` |
+| 2º | auto-push | commita como `auto: <áreas> - <data>` e envia para `main` |
+| 3º | limpa-sessoes | uma vez a cada 14 dias, apaga log de sessão com mais de 14 dias, e só depois de confirmar que já está no GitHub |
+
+## Push que falha grita, porque já falhou calado
+
+De 01 a 13/09/2026 o envio foi rejeitado todo dia e ninguém soube: o hook fazia
+`commit && push` e a linha terminava ali, com 72 commits parados na máquina. **Agora, push
+que falha grava `AVISO-BACKUP-PARADO.md` na raiz da pasta**, escrito em português, com o
+que aconteceu e o que fazer. O arquivo some sozinho quando o envio volta a funcionar.
+
+A trava da limpeza é a mesma lógica pelo avesso: ela consulta o GitHub antes de apagar
+qualquer coisa e, se existir um único commit pendente, não apaga nada e diz por quê.
 
 ## A obrigação humana que o hook não cobre
 

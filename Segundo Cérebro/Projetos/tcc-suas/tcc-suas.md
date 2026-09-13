@@ -31,6 +31,3 @@ sai dela.
 
 ## Onde isso serve
 Em [[psicologia-social]], em `Conceitos/` e em toda peça que precise de base teórica.
-
-## O que ainda falta
-Falta a ingestão do Drive do TCC 2 e a extração das conceituações.

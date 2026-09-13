@@ -23,7 +23,3 @@ Mesma régua: posicionamento público recente e candidatura em curso.
 ## Onde isso serve
 
 Em [[conteudo-paaps]] e [[conteudo-mallu]], quando a collab for referenciada.
-
-## O que ainda falta
-
-O formato exato da collab (vídeo, evento, outro) e a data.

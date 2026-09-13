@@ -27,8 +27,3 @@ esta mostra volume numa capital.
 
 Em [[conteudo-paaps]], em [[captacao]] e como evidência de [[cliente-ideal-paaps]]:
 300 horas de escuta são 300 horas de dado sobre quem é esse profissional.
-
-## O que ainda falta
-
-O que apareceu nessas 300 horas. É a maior massa de escuta que a PAAPS já fez e não existe
-nenhuma nota sobre o conteúdo dela.

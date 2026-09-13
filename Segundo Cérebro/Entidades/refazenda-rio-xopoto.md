@@ -33,7 +33,3 @@ e não é revogada por esta nota.
 ## Onde isso serve
 
 Como registro de história interna. Nunca em peça pública: ver [[paaps]].
-
-## O que ainda falta
-
-O framework da Refazenda, que está no Notion e ainda não entrou em `Arquivos/`.

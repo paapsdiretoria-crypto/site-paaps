@@ -12,6 +12,8 @@ atualizado: 2026-09-13
 Ache o setor, leia o resumo de uma linha, e só então abra a nota. Cada setor tem capa: é
 ela que liga as notas entre si.
 
+`pendente` é nota incompleta; `historico` é nota superada, mantida como registro.
+
 ## Os setores
 
 [[Projetos]] · [[Entidades]] · [[Histórias]] · [[Conceitos]] · [[Voz]] · [[Método]] ·
@@ -85,7 +87,7 @@ A frente que decide em que negócio a PAAPS está e como ela se sustenta
 
 Como a PAAPS planeja: Objetivo, Resultado-Chave, Projeto, e os prazos que cada um pode ter
 
-- [[metas-2026]] : As 10 metas que a PAAPS tinha para 2026, e a análise de quais foram cumpridas até 13/09/2026
+- [[metas-2026]] `historico` : As 10 metas que a PAAPS tinha para 2026, e a análise de quais foram cumpridas até 13/09/2026
 - [[quadro-de-projetos-atual]] : O quadro de projetos ativos da PAAPS hoje, por status de execução, ligado aos projetos que já existem no cérebro
 
 ### [[inteligencia-competitiva]]
@@ -100,11 +102,9 @@ O mapa da máquina da PAAPS: o que roda sozinho, o que dispara cada coisa e quem
 - [[agentes-ai-first]] : Os 23 agentes de .claude/agents/, o que cada um faz e qual nota do cofre ele lê antes de executar
 - [[arquitetura-agentes-v2-ai-first]] : A arquitetura de agentes em árvore de dois troncos que vale hoje, com roster de agente por arquivo e status
 - [[como-trabalhar-com-claude-ai-first]] : Erros comuns de delegação ao Claude e como corrigir, com o Framework 4D e o loop de delegação e diligência
-- [[diagnostico-grafo-conteudo-2026-08-10-ai-first]] : Diagnóstico datado da pasta conteudo em 10/08/2026, mantido como registro e superado pela arquitetura atual
-- [[hooks-e-auto-push-ai-first]] : Os dois hooks do evento Stop, o que cada um grava, e por que eles usam variável de ambiente em vez de caminho fixo
+- [[hooks-e-auto-push-ai-first]] : Os três hooks do evento Stop, o que cada um faz, e o aviso que aparece quando o backup para
 - [[regra-de-workspace-ai-first]] : Abrir o Claude Code sempre na raiz SITE PAAPS, porque fora dela não existe CLAUDE.md, skill, cofre nem auto-push
 - [[risco-de-marca-ponto-de-apoio]] `pendente` : Existe registro vivo no INPI para PONTO DE APOIO na classe 41, que é exatamente o campo da DIGGING, e isso precisa de advogado
-- [[runbook-navegacao-mcp-ai-first]] : Procedimento validado para navegar de verdade no navegador via MCP, com os erros conhecidos e a solução de cada um
 - [[sistema-gto-ai-first]] : Inventário do Notion GTO e o método real de produção destilado de 4 gravações, com a proposta de 9 agentes ainda sem decisão
 - [[skills-ai-first]] : As 50 skills de .claude/skills/, agrupadas por para que servem, e quais delas são do PAAPS e quais vieram de terceiros
 - [[workflow-agentes-ai-first]] : O fluxo de uma rodada de produção de conteúdo em diagrama, tronco a tronco
@@ -131,7 +131,7 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 *Quem: gente e instituição*
 
 - [[Entidades]] : Quem: gente e instituição
-- [[associacao-allos]] : Associação Allos incubou a PAAPS em fase inicial; hoje não existe relação ativa
+- [[associacao-allos]] `historico` : Associação Allos incubou a PAAPS em fase inicial; hoje não existe relação ativa
 - [[digging-clausula-govtech]] : O PAAPS é ativo intangível pré-existente da DIGGING e não pode ser alienado em licitação, só licenciado
 - [[digging-composicao-societaria]] : A DIGGING tem composição societária 99% feminina e capital de R$ 95.400 integralizado, com administração isolada ou conjunta das duas
 - [[digging-ficha-juridica]] : Ficha cadastral completa da DIGGING: CNPJ, objeto social alínea por alínea, cláusula GovTech, sócias e checklist de habilitação
@@ -146,7 +146,7 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 - [[mallu-formacao-e-crp]] : Mallu é formanda em psicologia e o CRP sai em fevereiro, e até lá 'psicóloga' não pode ser usado em peça pública
 - [[mallu-vasconcellos]] : Quem é Mallu Vasconcellos, o que ela faz e por que hoje ela e a PAAPS são praticamente a mesma coisa
 - [[paaps]] : Definição institucional da PAAPS para consulta interna, escrita depois que a Mallu recusou a mesma explicação como copy de site
-- [[refazenda-rio-xopoto]] : Refazenda Rio Xopotó, em Desterro do Melo, foi parceria de 2024 e hoje não há relação ativa
+- [[refazenda-rio-xopoto]] `historico` : Refazenda Rio Xopotó, em Desterro do Melo, foi parceria de 2024 e hoje não há relação ativa
 - [[sara-vitral]] : Sara Vitral, candidata a deputada estadual por Minas Gerais, fez collab em vídeo com a Mallu
 - [[schwartz-center]] : O Schwartz Center, de Boston, licencia hoje as Schwartz Rounds no Reino Unido e na Irlanda, e é a referência internacional que a PAAPS cita
 - [[yago-torres]] : Yago Torres, candidato a deputado estadual por São Paulo, já fez collab com a PAAPS
@@ -187,6 +187,7 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 - [[linha-de-pensamento-mallu]] : A linha de pensamento da Mallu: psicologia além do consultório e do RH, psicologia suleada, impacto sistêmico
 - [[mercado-do-cuidado]] : A PAAPS está no mercado do cuidado, não no de saúde nem no de bem-estar corporativo, e esse reframe decide quem é concorrente e qual é o tamanho do mercado
 - [[o-cidadao-esta-no-meio]] : O cidadão fica no meio entre os setores que não se falam, e é o contexto dele que nenhum deles considera
+- [[paaps-e-uma-transposicao]] : A PAAPS é a tradução para a rede pública da consultoria boutique que a DIGGING já vende, e é isso que responde à pergunta sobre prova de mercado
 - [[roda-nao-e-o-jeito-barato]] : Trabalhar em roda é o formato que a OMS reconhece, não uma forma barata de atender muita gente de uma vez
 - [[saude-social-nao-e-vista-como-saude]] : Dentro do hospital, o laudo médico vale como saúde e o trabalho social não, o que faz o paciente sair sem direitos
 
@@ -236,6 +237,7 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 - [[jornada-do-cliente-paaps]] : O cliente entra pelo Diagnóstico 360, segue nas Rodas de Equipe e é acompanhado pelo Ponto de Apoio
 - [[linha-epistemologica-estrutural]] : A linha epistemológica da PAAPS é estrutural e sistêmica, e isso decide toda análise e todo conteúdo
 - [[metodologia-paaps]] : O que a PAAPS entrega e como explica cada frente, ditado pela Mallu em 02/08/2026
+- [[motor-da-paaps]] : As peças da PAAPS formam um motor: o conhecimento entra pela consultoria, chega pela Roda, é entregue por psicóloga local e volta como dado que melhora o método
 - [[roda-de-equipe-paaps]] : A Roda de Equipe é o encontro mensal de até 10 servidores conduzido por psicóloga formada no método, em três fases
 - [[supervisao-da-metodologia]] : Quem faz a supervisão na metodologia PAAPS, e por que nunca se escreve 'supervisão clínica em campo'
 - [[tres-frentes-de-oferta]] : A PAAPS vende três frentes: cuidado e integração de rede, treinamentos, e urgências e eventos extremos
@@ -272,15 +274,11 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 - [[Legenda de cores]] : O que cada cor do grafo significa, e a pergunta que cada setor responde
 - [[Log]] : A linha do tempo do que entra no Segundo Cérebro, uma linha por entrada
 - [[Visão Geral]] : O manual do Segundo Cérebro: o que vira nota, o ciclo de entrada e a faxina do grafo
-- [[mapa-do-ecossistema]] : Todo primeiro nível de SITE PAAPS catalogado, inclusive o que nunca vai virar nota, com o backlog do que falta compilar
-- [[padrao-llm-wiki]] : O padrão LLM Wiki de Karpathy nas palavras do autor, e o que dele ainda não aplicamos aqui
 - [[Índice]] : O catálogo de toda nota do Segundo Cérebro, por setor
 
 ## ⚫ Arquivos
 
 *O material cru, imutável. É a sacola de onde as notas saem.*
-
-Hoje: os clippings de estudo, o export bruto da ECOA e os ditados da Mallu.
 
 ## Onde isso serve
 

@@ -14,7 +14,6 @@ atualizado: 2026-09-12
 > **Esta capa é o endereço estável do setor.** Nota muda de nome e muda de lugar;
 > a capa não muda. Quem cita caminho, cita esta.
 
-
 **A mineração é o objetivo número um deste cofre.** Uma faísca entra aqui crua, e o que
 a torna útil é uma coisa só: o campo **onde isso serve**. Ideia que não diz onde serve
 morre em três meses.
@@ -28,8 +27,3 @@ ideia pensada para a PAAPS é o que abre a [[clinica-mallu-2027]].
 ## Onde isso serve
 
 Em [[conteudo-paaps]], [[conteudo-mallu]] e em qualquer projeto que precise de ângulo.
-
-## O que ainda falta
-
-A pasta está vazia de propósito: ela enche a partir de agora, com o que você dita, com o
-que os vídeos transcritos destravam e com o que sai da leitura das fontes.

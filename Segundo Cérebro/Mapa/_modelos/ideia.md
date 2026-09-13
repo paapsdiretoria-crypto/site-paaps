@@ -19,5 +19,3 @@ Qual projeto, qual canal, qual formato. Sem isso a ideia morre em três meses.
 
 ## O que nasceu daqui
 [[nota-filha]] · [[nota-filha]]
-
-## O que ainda falta

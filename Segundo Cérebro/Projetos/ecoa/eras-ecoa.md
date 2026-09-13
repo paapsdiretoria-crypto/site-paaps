@@ -26,8 +26,3 @@ Um tema por período, com os debates que ele abre.
 ## Onde isso serve
 
 No planejamento mensal da comunidade e em [[conteudo-paaps]], que pode puxar tema daqui.
-
-## O que ainda falta
-
-As Eras não têm data fechada de início e fim, e a data dos encontros não mora em lugar
-nenhum hoje. Nunca afirmar dia ou frequência de encontro a partir deste cofre.

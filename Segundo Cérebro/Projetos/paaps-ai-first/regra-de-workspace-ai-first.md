@@ -30,7 +30,7 @@ nunca caminho fixo. Ver [[hooks-e-auto-push-ai-first]].
 
 ## Ligações
 
-[[hooks-e-auto-push-ai-first]] · [[mapa-do-ecossistema]] · [[segredo-em-arquivo-commitado]]
+[[hooks-e-auto-push-ai-first]] · [[segredo-em-arquivo-commitado]]
 
 ## Onde isso serve
 

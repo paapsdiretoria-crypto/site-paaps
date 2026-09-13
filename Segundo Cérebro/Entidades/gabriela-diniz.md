@@ -29,8 +29,3 @@ cuida e quem é cuidado.
 ## Onde isso serve
 
 Em [[conteudo-paaps]] e em [[captacao]].
-
-## O que ainda falta
-
-O TEAtrar é frente própria da PAAPS ou projeto dela que a PAAPS acolhe? Não está na lista
-de projetos ativos, e isso precisa ser decidido.

@@ -30,8 +30,3 @@ desde o Aglomerado da Serra, em Belo Horizonte.
 ## Onde isso serve
 
 Em [[conteudo-paaps]] e em [[psicologia-social]].
-
-## O que ainda falta
-
-A formulação completa dele. O que está aqui é a leitura da apresentação no site, não o
-conceito escrito pelo autor.

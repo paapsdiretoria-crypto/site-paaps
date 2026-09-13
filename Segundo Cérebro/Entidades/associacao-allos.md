@@ -36,7 +36,3 @@ Como registro de história interna. Nunca em peça pública: ver [[paaps]].
 O contrato com a Allos foi um Resultado-Chave cumprido no 1º trimestre de 2026 (100%),
 dentro da meta de estatuto e proteção jurídica. Ver [[metas-2026]]. É a data mais próxima
 que se tem do início formal da relação, hoje encerrada.
-
-## O que ainda falta
-
-Data exata de início e fim da incubação, e o que ela ofereceu enquanto durou.

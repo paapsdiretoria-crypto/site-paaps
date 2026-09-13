@@ -44,7 +44,7 @@ Cada projeto é uma pasta, com uma nota-capa e as notas dele. O nome de toda not
 - **[[inteligencia-competitiva]]** : A frente que acompanha quem concorre com a PAAPS e o que a gente faz diferente
 
 - **[[paaps-ai-first]]** : O mapa da máquina da PAAPS: o que roda sozinho, o que dispara cada coisa e quem é o gate
-  [[agentes-ai-first]] · [[arquitetura-agentes-v2-ai-first]] · [[como-trabalhar-com-claude-ai-first]] · [[diagnostico-grafo-conteudo-2026-08-10-ai-first]] · [[hooks-e-auto-push-ai-first]] · [[regra-de-workspace-ai-first]] · [[risco-de-marca-ponto-de-apoio]] · [[runbook-navegacao-mcp-ai-first]] · [[sistema-gto-ai-first]] · [[skills-ai-first]] · [[workflow-agentes-ai-first]]
+  [[agentes-ai-first]] · [[arquitetura-agentes-v2-ai-first]] · [[como-trabalhar-com-claude-ai-first]] · [[hooks-e-auto-push-ai-first]] · [[regra-de-workspace-ai-first]] · [[risco-de-marca-ponto-de-apoio]] · [[sistema-gto-ai-first]] · [[skills-ai-first]] · [[workflow-agentes-ai-first]]
 
 - **[[prospeccao-e-vendas]]** : A frente que leva a PAAPS até a prefeitura, do primeiro toque à reunião
   [[prospeccao-fria]]

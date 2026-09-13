@@ -20,8 +20,3 @@ o que isso ensina sobre o ICP.
 [[prospeccao-fria]]
 
 ## Onde isso serve
-
-## O que ainda falta
-**Esta pasta eu criei por conta.** Você citou "prospecção e vendas" como exemplo de frente
-da empresa, mas ela não estava na sua lista de 12. Confirma que ela existe como frente, ou
-ela é parte de outra?
