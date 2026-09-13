@@ -45,6 +45,16 @@ tomo uma decisão que é da Mallu, entra uma linha aqui.
 12. **Os 176 caminhos que os agentes usam** ainda apontam para a estrutura antiga de
     pastas. Enquanto não forem corrigidos, os agentes não acham as notas.
 
+11. **Risco de marca no nome Ponto de Apoio.** Existe registro vivo no INPI na classe 41,
+    que é o campo da DIGGING. Precisa de advogado de propriedade industrial antes de
+    investir em identidade visual ou domínio. Ver [[risco-de-marca-ponto-de-apoio]].
+12. **Dezoito dos 27 documentos do pitch ainda não foram lidos**, entre eles o raciocínio
+    do zero, o modelo PAAPS completo e as cinco pesquisas.
+13. **O site inteiro ainda não foi compilado:** 8 documentos e o HTML de 40 KB que está no ar.
+14. **Dezenove clippings e PDFs em `Arquivos/` sem nota de Fonte**, entre eles PROSAMES,
+    gargalos da saúde mental no SUS, greve da atenção básica no Rio, suicídios no trabalho,
+    ODS, ISO 9000 e 9001, metadesign e capitalismo regenerativo.
+
 ## Inputs que a Mallu vai mandar
 
 - Drive da faculdade, uma pasta por disciplina

@@ -46,3 +46,16 @@ Cinco organizações de posicionamento e história entraram como entidade: [[sar
 mesma pergunta duas vezes. [[personas-ecoa]] absorvida em [[estrutura-de-grupos-ecoa]],
 por ser um resumo de duas frases redirecionando para a mesma evidência. Zero conteúdo
 perdido, zero link quebrado.
+
+## [2026-09-13] pitch | o deck v5 e o handout viraram 21 notas
+
+Entrou o pitch do Impulsiona Startups, deck de 19 slides e handout. Nasceram: as 4
+pesquisas de campo como histórias ([[desterro-do-melo-2024]], [[complexo-da-mare-2025]],
+[[proinape-rio-2025]], [[bela-vista-e-materlandia-2025]]), o método de entrega
+([[roda-de-equipe-paaps]], [[jornada-do-cliente-paaps]], [[diagnostico-360]]), três
+conceitos ([[cascata-do-cuidado]], [[a-resposta-ja-esta-na-equipe]],
+[[roda-nao-e-o-jeito-barato]]), quatro notas de estratégia
+([[modelo-de-negocio-estrategia]], [[tam-sam-som-estrategia]], [[roadmap-estrategia]],
+[[ponto-de-apoio-estrategia]]), seis notas de dado com fonte, o [[schwartz-center]] com as
+quatro regras de citação, e [[risco-de-marca-ponto-de-apoio]], que é registro vivo no INPI
+na classe 41 e precisa de advogado.
