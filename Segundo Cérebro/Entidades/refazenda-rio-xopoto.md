@@ -14,6 +14,16 @@ aliases: [Refazenda, Rio Xopotó, Desterro do Melo]
 Hoje não existe relação ativa.** A presença da Mallu lá durante 2024 inteira é o case de
 impacto, não uma parceria em curso.
 
+## O que ela é, e desde quando
+
+**Casa coletiva de turismo comunitário a 8 km de Desterro do Melo, à beira do Rio Xopotó,
+fundada em 2020.** Quatro pilares sustentam o projeto: turismo comunitário, a relação com
+tempo e trabalho, comunidade, e conexão. Cobrança em três faixas (abundante, ideal,
+consciente) e porta aberta a quem não tem como pagar e a moradores de Desterro do Melo.
+
+Em 2025 nasceu **[[vo-xopoto|Vó Xopotó]]**, marca autônoma dos produtores locais, filha
+direta da Refazenda.
+
 ## O que isso significa na prática
 
 Toda menção a este nome é sobre um período fechado. Nenhuma peça pode sugerir parceria

@@ -194,3 +194,21 @@ conjunto autorizado do site, e não saem sem a Mallu confirmar a fonte.
 O quadro de projetos perdeu prazo, prioridade e status, que envelhecem e vivem no Notion, e
 ficou só com quais projetos existem e a que frente cada um responde. A frase-mote vigente
 foi confirmada por ela.
+
+## [2026-09-13] Desterro do Melo 2024 | a fonte quente entra
+
+Processado o documento "VÓ XOPOTÓ: as tecnologias de acolhimento ancestrais ainda
+respiram" (Maria Luiza Vasconcellos), a versão quente e detalhada do ano de 2024.
+
+Nasceram: [[atribuicao-retroativa-a-paaps]] (a regra que rege tudo o resto: ação de campo
+da Mallu antes de a marca existir se narra como ação da PAAPS), três histórias novas
+([[entrada-pela-educacao-desterro-do-melo]], [[entrada-pela-saude-desterro-do-melo]],
+[[carta-compromisso-desterro-do-melo]]), a entidade [[vo-xopoto]] (marca nascida da
+Refazenda em 2025, régua de citação pública em aberto), e três notas de fonte com dado
+ainda não verificado ([[estresse-no-trabalho-brasil-isma]],
+[[eventos-traumaticos-policial-vs-civil]], [[afastamentos-saude-mental-2025-inss]]).
+
+[[refazenda-rio-xopoto]], [[refazenda-rio-xopoto-2024]] e [[desterro-do-melo-2024]] foram
+enriquecidas, sem contradizer a proibição de citação pública já registrada em [[paaps]].
+[[tres-frentes-de-oferta]] ganhou a nuance de que a psicoterapia individual é via
+parceria, não entrega direta.

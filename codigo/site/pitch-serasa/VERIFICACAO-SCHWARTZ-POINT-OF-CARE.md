@@ -1,7 +1,7 @@
 # Verificação: Schwartz Center, Point of Care Foundation e o risco do nome "Ponto de Apoio"
 
 > **Data:** 22/08/2026
-> **O que foi verificado:** as três afirmações que o `index-v4.html` faz sobre as rodas de
+> **O que foi verificado:** as três afirmações que o deck faz sobre as rodas de
 > equipe no Reino Unido e na Irlanda (slides 09, 10 e 11), a natureza jurídica e a relação
 > entre as duas instituições britânica e americana, o formato do encontro, a evidência
 > publicada, a premiação e o risco de marca sobre o nome "Ponto de Apoio".
@@ -430,7 +430,7 @@ aberto, e que registrar cedo a marca própria é decisão barata hoje e cara dep
 
 Frases prontas para colar, respeitando o que as fontes autorizam.
 
-### Slide 09, título (linha 240 do `index-v4.html`)
+### Slide 09, título
 
 Trocar "padrão licenciado na Europa" por:
 

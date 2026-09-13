@@ -100,7 +100,7 @@ Arquivos-fonte: `assinatura-a-montanha.html`, `assinatura-b-editorial.html` e `b
 Copiar e colar no Terminal:
 
 ```bash
-cd "/Users/mac/Documents/SITE PAAPS/Arquivos/assinatura-email"
+cd "/Users/mac/Documents/SITE PAAPS/Acervo/assinatura-email"
 CH="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 "$CH" --headless=new --disable-gpu --hide-scrollbars --allow-file-access-from-files \
   --force-device-scale-factor=2 --default-background-color=00000000 \

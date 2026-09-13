@@ -16,7 +16,7 @@ fi
 # 2) fora do cofre, só capa pode ser citada
 capas=$(printf '%s\n' "$V/Mapa/Índice.md" "$V/Mapa/Visão Geral.md" "$V/Mapa/Log.md" \
   "$V/Mapa/Legenda de cores.md" "$V/Mapa/O que falta.md" "$V/Mapa/Contrato de caminhos.md" \
-  "$V/Mapa/mapa-do-ecossistema.md" "$V/Voz/Voz.md" "$V/Conceitos/Conceitos.md" \
+  "$V/Voz/Voz.md" "$V/Conceitos/Conceitos.md" \
   "$V/Método/Método.md" "$V/Entidades/Entidades.md" "$V/Histórias/Histórias.md" \
   "$V/Fontes/Fontes.md" "$V/Ideias/Ideias.md" "$V/Projetos/Projetos.md")
 while read -r p; do

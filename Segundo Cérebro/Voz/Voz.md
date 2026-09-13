@@ -24,6 +24,7 @@ Toda regra de escrita e de imagem da PAAPS mora aqui. Quem vai escrever ou desen
 - [[anatomia-do-carrossel-aprovado]] : O que faz funcionar o primeiro carrossel do @paaps.brasil aprovado sem rodada de correção, dissecado slide a slide
 - [[as-sete-perguntas-antes-de-entregar]] : As sete perguntas que qualquer agente responde antes de entregar peça, e a resposta certa de cada uma
 - [[assinatura-intelectual-mallu]] : A Mallu escreve em três movimentos: mostra o fenômeno, desmonta a premissa dominante e nomeia a raiz estrutural
+- [[atribuicao-retroativa-a-paaps]] : Ação de campo da Mallu antes de a marca PAAPS existir pode ser narrada como ação da PAAPS, inclusive em peça pública
 - [[capilarizado-nunca-capitalizado]] : O SUS é capilarizado, nunca capitalizado, e dizer o contrário derruba a credibilidade da peça inteira
 - [[chapeu-eyebrow-proibido]] : A linha curta em caixa alta espaçada acima de um título é banida em qualquer peça, e o rótulo bom vira título grande em vez de sumir
 - [[conteudo-sem-razao-nao-entra]] : Todo conteúdo precisa de razão de existir, e volume sem propósito não entra na grade

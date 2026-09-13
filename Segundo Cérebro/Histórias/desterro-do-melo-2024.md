@@ -29,10 +29,24 @@ Programa Tô Indo, da Globo.
 Conduzida por valor simbólico, em parceria com projeto de pesquisa universitária, projeto
 local e turismo comunitário. Isso importa: não foi contrato, foi campo.
 
+## O ano por dentro, em três frentes
+
+[[entrada-pela-educacao-desterro-do-melo]] (a escola, o primeiro grupo, o primeiro serviço
+remunerado) · [[entrada-pela-saude-desterro-do-melo]] (a UBS, o Setembro Amarelo) ·
+[[carta-compromisso-desterro-do-melo]] (os três candidatos a prefeito, a mesma mesa)
+
+Onde a Mallu morou durante esse ano inteiro: [[refazenda-rio-xopoto-2024]].
+
+## Como isso se nomeia hoje
+
+Ver [[atribuicao-retroativa-a-paaps]]: a marca PAAPS não existia em 2024, mas a ação já
+era ela, e por isso se narra "a PAAPS foi convidada", "a PAAPS coorganizou".
+
 ## Ligações
 
 [[mudanca-para-o-interior-de-minas]] · [[complexo-da-mare-2025]] ·
-[[proinape-rio-2025]] · [[bela-vista-e-materlandia-2025]] · [[Histórias]]
+[[proinape-rio-2025]] · [[bela-vista-e-materlandia-2025]] · [[Histórias]] ·
+[[refazenda-rio-xopoto-2024]]
 
 ## Onde isso serve
 

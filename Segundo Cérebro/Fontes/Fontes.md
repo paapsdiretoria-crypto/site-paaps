@@ -20,12 +20,15 @@ Lei, dado oficial, estudo, notícia, aula, vídeo, livro e material de concorren
 
 ## O que tem aqui
 
+- [[afastamentos-saude-mental-2025-inss]] : O Brasil bateu recorde de 534 mil afastamentos por saúde mental em 2025, alta de 13,2% sobre 2024, e o burnout cresceu 800% em 4 anos
 - [[anotacoes-reuniao-joyce]] : As anotações de caderno da Mallu na escuta com a Joyce, assistente social, ditadas em 12/09/2026
 - [[ata-registro-precos-saude-mental-servidor]] : O governo federal previu R$ 26,9 milhões em ata de registro de preços para acolher a saúde mental de servidores
 - [[dados-afastamento-por-transtorno-mental]] : Afastamentos por transtorno mental bateram recorde da década em 2025 e custam cerca de R$ 3,5 bilhões por ano ao INSS
 - [[dados-autorizados-do-site]] : Os quatro dados que estão no ar no site da PAAPS, com a referência completa de cada um
 - [[dados-do-adoecimento-de-quem-sustenta-a-rede]] : Os números do tamanho da rede pública brasileira e do adoecimento ligado ao trabalho de quem a sustenta
 - [[dados-do-esgotamento-e-erro]] : Quem atende esgotado tem o dobro de chance de errar no atendimento, e o endividamento do servidor alimenta esse esgotamento
+- [[estresse-no-trabalho-brasil-isma]] : O Brasil é o 2º país do mundo com a força de trabalho mais estressada, 72% relatam estresse e 32% têm sintomas de burnout
+- [[eventos-traumaticos-policial-vs-civil]] : Em 40 anos, um civil vive cerca de 5 eventos traumáticos e um policial cerca de 900
 - [[nr-01]] : A NR-01 não vincula prefeitura nem servidor estatutário, então ela pode ser citada como referência de enquadramento mas nunca como obrigatoriedade legal
 - [[obras-da-ciencia-que-sustentam-o-metodo]] : As quatro obras que o site apresenta como base científica do método PAAPS
 - [[oms-recomendacao-formar-gestores]] : Formar gestores e trabalhar a equipe é a única recomendação forte da OMS em saúde mental no trabalho

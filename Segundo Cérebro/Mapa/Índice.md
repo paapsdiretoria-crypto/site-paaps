@@ -12,8 +12,6 @@ atualizado: 2026-09-13
 Ache o setor, leia o resumo de uma linha, e só então abra a nota. Cada setor tem capa: é
 ela que liga as notas entre si.
 
-`pendente` é nota incompleta; `historico` é nota superada, mantida como registro.
-
 ## Os setores
 
 [[Projetos]] · [[Entidades]] · [[Histórias]] · [[Conceitos]] · [[Voz]] · [[Método]] ·
@@ -94,7 +92,7 @@ A frente que decide em que negócio a PAAPS está e como ela se sustenta
 
 Como a PAAPS planeja: Objetivo, Resultado-Chave, Projeto, e os prazos que cada um pode ter
 
-- [[metas-2026]] `historico` : As 10 metas que a PAAPS tinha para 2026, e a análise de quais foram cumpridas até 13/09/2026
+- [[metas-2026]] : As 10 metas que a PAAPS tinha para 2026, e a análise de quais foram cumpridas até 13/09/2026
 - [[quadro-de-projetos-atual]] : Que projetos a PAAPS tem abertos, a que frente cada um pertence, e onde ele toca este cérebro
 
 ### [[inteligencia-competitiva]]
@@ -146,7 +144,7 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 *Quem: gente e instituição*
 
 - [[Entidades]] : Quem: gente e instituição
-- [[associacao-allos]] `historico` : Associação Allos incubou a PAAPS em fase inicial; hoje não existe relação ativa
+- [[associacao-allos]] : Associação Allos incubou a PAAPS em fase inicial; hoje não existe relação ativa
 - [[digging-clausula-govtech]] : O PAAPS é ativo intangível pré-existente da DIGGING e não pode ser alienado em licitação, só licenciado
 - [[digging-composicao-societaria]] : A DIGGING tem composição societária 99% feminina e capital de R$ 95.400 integralizado, com administração isolada ou conjunta das duas
 - [[digging-ficha-juridica]] : Ficha cadastral completa da DIGGING: CNPJ, objeto social alínea por alínea, cláusula GovTech, sócias e checklist de habilitação
@@ -161,9 +159,10 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 - [[mallu-formacao-e-crp]] : Mallu é formanda em psicologia e o CRP sai em fevereiro, e até lá 'psicóloga' não pode ser usado em peça pública
 - [[mallu-vasconcellos]] : Quem é Mallu Vasconcellos, o que ela faz e por que hoje ela e a PAAPS são praticamente a mesma coisa
 - [[paaps]] : Definição institucional da PAAPS para consulta interna, escrita depois que a Mallu recusou a mesma explicação como copy de site
-- [[refazenda-rio-xopoto]] `historico` : Refazenda Rio Xopotó, em Desterro do Melo, foi parceria de 2024 e hoje não há relação ativa
+- [[refazenda-rio-xopoto]] : Refazenda Rio Xopotó, em Desterro do Melo, foi parceria de 2024 e hoje não há relação ativa
 - [[sara-vitral]] : Sara Vitral, candidata a deputada estadual por Minas Gerais, fez collab em vídeo com a Mallu
 - [[schwartz-center]] : O Schwartz Center, de Boston, licencia hoje as Schwartz Rounds no Reino Unido e na Irlanda, e é a referência internacional que a PAAPS cita
+- [[vo-xopoto]] : Vó Xopotó é a marca autônoma dos produtores de Desterro do Melo, nascida em 2025 a partir da Refazenda Rio Xopotó
 - [[yago-torres]] : Yago Torres, candidato a deputado estadual por São Paulo, já fez collab com a PAAPS
 - [[yunus-negocios-sociais]] : Yunus Negócios Sociais é referência de metodologia de impacto e parceira ativa via Desafio Regenera
 
@@ -173,10 +172,13 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 
 - [[Histórias]] `pendente` : A porta de entrada do repositório de histórias vividas pela Mallu
 - [[bela-vista-e-materlandia-2025]] : Mais de 180 servidores acompanhados em Bela Vista de Minas e Materlândia, e o primeiro diagnóstico de gestão pública da PAAPS
+- [[carta-compromisso-desterro-do-melo]] : Os três candidatos a prefeito de Desterro do Melo assinaram juntos, antes da eleição de 2024, uma carta compromisso baseada nos objetivos da ONU para 2050
 - [[complexo-da-mare-2025]] : Um ano de encontros semanais com mães de escola municipal no Complexo da Maré, território marcado pelo conflito armado urbano
 - [[criancas-vitimas-de-violencia-sexual]] `pendente` : A Mallu trabalhou com crianças vítimas de exploração e violência sexual
 - [[cuidados-paliativos]] `pendente` : A Mallu trabalhou com cuidados paliativos antes de fundar a PAAPS
 - [[desterro-do-melo-2024]] : Um ano inteiro dentro da rotina da rede pública de Desterro do Melo, em Minas, com saúde e educação completas
+- [[entrada-pela-educacao-desterro-do-melo]] : Como a PAAPS entrou em Desterro do Melo pela escola, do primeiro almoço de vínculo até o primeiro serviço remunerado
+- [[entrada-pela-saude-desterro-do-melo]] : Como a PAAPS entrou na UBS de Desterro do Melo, pela auto-organização das trabalhadoras da saúde no Setembro Amarelo
 - [[ministerio-publico-mulheres-vitimas-de-racismo]] `pendente` : A Mallu trabalhou com mulheres vítimas de racismo no Ministério Público
 - [[mudanca-para-o-interior-de-minas]] : Em 2024 a Mallu saiu de São Paulo capital para uma cidade de menos de 3 mil habitantes em Minas
 - [[proinape-rio-2025]] : Mais de 300 horas de plantão psicológico e grupos na Rede Municipal de Educação do Rio, pelo PROINAPE
@@ -217,6 +219,7 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 - [[anatomia-do-carrossel-aprovado]] : O que faz funcionar o primeiro carrossel do @paaps.brasil aprovado sem rodada de correção, dissecado slide a slide
 - [[as-sete-perguntas-antes-de-entregar]] : As sete perguntas que qualquer agente responde antes de entregar peça, e a resposta certa de cada uma
 - [[assinatura-intelectual-mallu]] : A Mallu escreve em três movimentos: mostra o fenômeno, desmonta a premissa dominante e nomeia a raiz estrutural
+- [[atribuicao-retroativa-a-paaps]] : Ação de campo da Mallu antes de a marca PAAPS existir pode ser narrada como ação da PAAPS, inclusive em peça pública
 - [[capilarizado-nunca-capitalizado]] : O SUS é capilarizado, nunca capitalizado, e dizer o contrário derruba a credibilidade da peça inteira
 - [[chapeu-eyebrow-proibido]] : A linha curta em caixa alta espaçada acima de um título é banida em qualquer peça, e o rótulo bom vira título grande em vez de sumir
 - [[conteudo-sem-razao-nao-entra]] : Todo conteúdo precisa de razão de existir, e volume sem propósito não entra na grade
@@ -272,12 +275,15 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 *O que veio de fora e dá para reconferir*
 
 - [[Fontes]] : O que veio de fora e dá para reconferir
+- [[afastamentos-saude-mental-2025-inss]] `pendente` : O Brasil bateu recorde de 534 mil afastamentos por saúde mental em 2025, alta de 13,2% sobre 2024, e o burnout cresceu 800% em 4 anos
 - [[anotacoes-reuniao-joyce]] : As anotações de caderno da Mallu na escuta com a Joyce, assistente social, ditadas em 12/09/2026
 - [[ata-registro-precos-saude-mental-servidor]] : O governo federal previu R$ 26,9 milhões em ata de registro de preços para acolher a saúde mental de servidores
 - [[dados-afastamento-por-transtorno-mental]] : Afastamentos por transtorno mental bateram recorde da década em 2025 e custam cerca de R$ 3,5 bilhões por ano ao INSS
 - [[dados-autorizados-do-site]] : Os quatro dados que estão no ar no site da PAAPS, com a referência completa de cada um
 - [[dados-do-adoecimento-de-quem-sustenta-a-rede]] : Os números do tamanho da rede pública brasileira e do adoecimento ligado ao trabalho de quem a sustenta
 - [[dados-do-esgotamento-e-erro]] : Quem atende esgotado tem o dobro de chance de errar no atendimento, e o endividamento do servidor alimenta esse esgotamento
+- [[estresse-no-trabalho-brasil-isma]] `pendente` : O Brasil é o 2º país do mundo com a força de trabalho mais estressada, 72% relatam estresse e 32% têm sintomas de burnout
+- [[eventos-traumaticos-policial-vs-civil]] `pendente` : Em 40 anos, um civil vive cerca de 5 eventos traumáticos e um policial cerca de 900
 - [[nr-01]] : A NR-01 não vincula prefeitura nem servidor estatutário, então ela pode ser citada como referência de enquadramento mas nunca como obrigatoriedade legal
 - [[obras-da-ciencia-que-sustentam-o-metodo]] : As quatro obras que o site apresenta como base científica do método PAAPS
 - [[oms-recomendacao-formar-gestores]] : Formar gestores e trabalhar a equipe é a única recomendação forte da OMS em saúde mental no trabalho

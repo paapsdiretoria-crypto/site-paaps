@@ -7,7 +7,7 @@ description: Use no acabamento tipográfico de peça em HTML/CSS que a Mallu vai
 
 A régua de acabamento que a Mallu aplica quando olha uma peça pronta. Ela foi
 extraída de um dia inteiro de iteração no pitch da Serasa
-(`codigo/site/pitch-serasa/index-v4.html` + `pitch.css`) e existe para que a
+(o deck em `codigo/site/pitch-serasa/deck-v5/`) e existe para que a
 próxima peça acerte na primeira rodada.
 
 O princípio que organiza tudo, nas palavras dela:
