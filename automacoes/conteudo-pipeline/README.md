@@ -12,7 +12,7 @@ O que já existe (e fica onde está, não é movido para cá):
 - Agentes em `.claude/agents/` : Radar, Sentinela, Tecelã, Narrador, carrossel, reels.
 - Skills em `.claude/skills/` : copy-carrossel, legendas-otimizadas, edicao-reel-paaps,
   entre outras.
-- Dashboard de analytics em `conteudo/dashboard/`.
+- Dashboard de analytics em `codigo/dashboard/`.
 
 ## O que precisa existir aqui
 

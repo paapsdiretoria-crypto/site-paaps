@@ -1,4 +1,4 @@
-# CLAUDE.md — automacoes/
+# CLAUDE.md : automacoes/
 
 > Lido ao abrir esta pasta. Herda o CLAUDE.md da raiz `SITE PAAPS/` (identidade, voz,
 > proibições, epistemologia). Este arquivo cuida só do que é próprio daqui: **a
