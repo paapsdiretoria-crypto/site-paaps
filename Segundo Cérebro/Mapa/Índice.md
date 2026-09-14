@@ -256,6 +256,7 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 - [[nao-e-x-e-y]] : A estrutura 'não é X, é Y' é exceção rara de no máximo uma por peça, e só passa se o X negado for crença que alguém de verdade tem
 - [[nunca-afirmar-tendencia-sem-verificar]] : Toda alegação de tendência numérica ou social passa pela régua de verificação, inclusive dentro de copy e pitch
 - [[paaps-brasil-e-nome-proprio]] : Em peça pública escreve-se PAAPS ou PAAPS Brasil, nunca a expansão da sigla, que só existe dentro do contrato social
+- [[paragrafo-padrao-email-institucional]] : O parágrafo que abre qualquer e-mail institucional descrevendo o que a PAAPS faz, com o nome do município sempre personalizado
 - [[qualidade-frontend]] : Princípios de design de alta qualidade escritos de forma agnóstica de meio, válidos tanto para HTML quanto para peça no Canva
 - [[segredo-em-arquivo-commitado]] : Valor real de segredo ou dado pessoal nunca pode ser escrito em arquivo que vai pro git
 - [[sem-apropriar-sofrimento-alheio]] : Case e história de campo são ativos, mas nunca exposição de pessoa ou coletivo vulnerável para fim de marketing

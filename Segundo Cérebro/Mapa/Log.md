@@ -310,3 +310,13 @@ registro, e o workflow foi apagado antes de confirmar o resultado, perdendo até
 execução. Nasceu [[envio-de-email-institucional]] em [[Método]], que fecha essa lacuna:
 qual ferramenta usar por caso, e o que nunca fazer. Detalhe técnico datado em
 `automacoes/CLAUDE.md`.
+
+## [2026-09-14] voz | parágrafo padrão de e-mail institucional, e o erro que o corrigiu
+
+Ao escrever dois e-mails (Itiquira e Mantena) copiei a estrutura de uma carta antiga já
+enviada, sem passar por `Voz/` nem `Método/` antes. A Mallu corrigiu na hora: baniu o
+parágrafo genérico usado ("Fazemos pesquisa e trabalho de campo com servidores de linha de
+frente do SUS e do SUAS...") e ditou o texto novo, literal, com os nomes certos das
+frentes. Nasceu [[paragrafo-padrao-email-institucional]] em [[Voz]], ligada a
+[[frases-mote]] e [[tres-frentes-de-oferta]]. A lição maior que a frase em si: peça antiga
+enviada não é fonte, o cofre é.
