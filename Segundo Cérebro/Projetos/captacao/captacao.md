@@ -30,3 +30,7 @@ Nenhum tem nome registrado: a base de metas só guarda "1º edital", "2º edital
 **Em andamento agora:** o deck financeiro e o plano de captação de investimentos (prazo
 26/09/2026) e os pitch-decks comercial e de captação (prazo 04/10/2026). Ver
 [[quadro-de-projetos-atual]].
+
+**Via nova, ainda não mapeada:** a Yunus recusou a modalidade de dívida em 09/09/2026 e
+isso abriu a busca por recurso a fundo perdido via edital de subvenção, que não vira
+dívida. Ver [[recursos-a-fundo-perdido-subvencao]].

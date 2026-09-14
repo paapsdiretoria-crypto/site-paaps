@@ -312,6 +312,7 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 - [[oms-solidao-e-conexao-social]] : Uma em cada seis pessoas no mundo é afetada pela solidão, e o isolamento social é associado a cem mortes por hora
 - [[pitch-impulsiona-serasa]] : O pitch v5 e o handout da inscrição no Impulsiona Startups, onde o argumento da PAAPS está mais destilado
 - [[pitch-paaps-short-2]] : O deck curto paaps-short-2, com os dados frios (nome, data, escala) dos quatro casos de campo da PAAPS
+- [[recursos-a-fundo-perdido-subvencao]] : Recurso a fundo perdido é financiamento não reembolsável por edital de subvenção (FINEP e afins), via de captação que a PAAPS ainda não tinha mapeado
 - [[regulacao-cfp-e-crp]] : Falar de psicologia é terreno regulado pelo CFP, e isso limita o que pode ser escrito e por quem
 
 ## 🟠 Ideias

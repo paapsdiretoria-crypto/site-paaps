@@ -292,3 +292,11 @@ associação que incubava a PAAPS, Coletivo Especiais da Maré); recorte públic
 ideia. O material chegou a circular externamente e recebeu recusa de escopo, não é mais
 tratado como "uso restrito por incerteza": é registro de tentativa real com desfecho
 conhecido.
+
+## [2026-09-14] fontes | resposta da Yunus destrava um conceito novo de captação
+
+A Yunus Negócios Sociais recusou a PAAPS para a modalidade de dívida (fluxo de caixa
+ainda não recorrente), e a resposta da Mallu a esse feedback nomeou um caminho que a
+PAAPS ainda não tinha mapeado: recurso a fundo perdido por editais de subvenção. Nasceu
+[[recursos-a-fundo-perdido-subvencao]] em [[Fontes]], ligada a [[captacao]] e
+[[yunus-negocios-sociais]].

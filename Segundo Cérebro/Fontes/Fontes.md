@@ -41,6 +41,7 @@ Lei, dado oficial, estudo, notícia, aula, vídeo, livro e material de concorren
 - [[pitch-impulsiona-serasa]] : O pitch v5 e o handout da inscrição no Impulsiona Startups, onde o argumento da PAAPS está mais destilado
 - [[pitch-paaps-short-2]] : O deck curto paaps-short-2, com os dados frios (nome, data, escala) dos quatro casos de campo da PAAPS
 - [[regulacao-cfp-e-crp]] : Falar de psicologia é terreno regulado pelo CFP, e isso limita o que pode ser escrito e por quem
+- [[recursos-a-fundo-perdido-subvencao]] : Recurso a fundo perdido é financiamento não reembolsável por edital de subvenção (FINEP e afins), via de captação que a PAAPS ainda não tinha mapeado
 
 ## Onde isso serve
 
