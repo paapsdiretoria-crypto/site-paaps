@@ -350,3 +350,37 @@ Mudança, PDF do Capitalismo Regenerativo, print dos três entregáveis com data
 chegou a este repositório: conferido `Arquivos/` e todo o histórico de `main` até
 14/09/2026, nada bate com essas descrições. Registrado em [[desafio-regenera-entregaveis]]
 como pendência de sincronização, para processar assim que chegarem.
+
+## [2026-09-14] captação | os 4 materiais do Desafio Regenera chegaram por upload direto
+
+Os materiais da entrada acima chegaram por upload direto (não pela sincronização do
+Obsidian): a aula da Teoria da Mudança (PDF, 19 páginas), o Modelo Teoria da Mudança +
+Indicadores de Impacto (docx), o Modelo C 2.0 (docx) e a Folha de Respostas PAAPS/Yunus
+(docx). Processados pela skill `adiciona-ao-cerebro`. Nasceram 4 notas em [[Fontes]]:
+[[aula-teoria-da-mudanca-desafio-regenera]] (método oficial: 5 elos, pressupostos, 5
+passos, 2 exemplos reais), [[modelo-teoria-da-mudanca-indicadores-impacto]] e
+[[modelo-canvas-c2-desafio-regenera]] (estrutura exata dos dois templates do 1º
+entregável), e [[paaps-yunus-folha-de-respostas]] (faturamento real: R$ 290.934,99 em 2025,
+projeção R$ 420.000 em 2026, pedido de R$ 500 mil dividido em 4 frentes de uso).
+
+**Correção de data, com fonte mais confiável que o Quadro de Projetos:** o print oficial do
+onboarding do Desafio Regenera, colado pela Mallu no chat, mostra que a Teoria da Mudança
+fecha em **18/09** (não 19/09) e o Deck financeiro em **30/09** (não 26/09). Corrigido em
+[[desafio-regenera-entregaveis]] e [[yunus-negocios-sociais]]. Também descoberta uma regra
+que não estava registrada: os 3 entregáveis são obrigatórios para a PAAPS entrar na
+pré-banca que seleciona os 10 finalistas.
+
+**Pendência resolvida:** [[objetivos-de-desenvolvimento-sustentavel-onu]] tinha uma pendência
+aberta (qual ODS a PAAPS declararia). A Folha de Respostas já traz os 8 ODS oficiais (3, 4,
+5, 8, 10, 11, 16, 17), cada um com a justificativa exata que a PAAPS usou.
+
+**Gate de dado de pessoa real, aplicado:** a Folha de Respostas trazia CPF e telefone do
+representante legal. Mascarados como `[removido]` antes de qualquer coisa entrar em
+`Arquivos/` (o .docx original, com o dado real, foi apagado sem nunca ser commitado; só a
+transcrição já redigida ficou no cofre). Regra do `CLAUDE.md` raiz: dado de pessoa real
+nunca em arquivo commitado.
+
+**Pendência de execução, para o Notion, não para o cofre:** a própria Folha de Respostas
+sinalizava 5 itens antes de poder ser enviada (valor da captação incoerente, pitch deck e
+cap table não anexados, LGPD não marcada, setor de atuação a revisar). Registrado via
+`tarefa-avulsa-quadro-projetos`, nunca como nota.

@@ -175,11 +175,13 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 - [[luiz-sergio-barbosa]] : Luiz Sérgio Barbosa é o consultor financeiro da PAAPS, ex-diretor financeiro da FEBRABAN, e o nome se escreve Luiz com z
 - [[mallu-formacao-e-crp]] : Mallu é formanda em psicologia e o CRP sai em fevereiro, e até lá 'psicóloga' não pode ser usado em peça pública
 - [[mallu-vasconcellos]] : Quem é Mallu Vasconcellos, o que ela faz e por que hoje ela e a PAAPS são praticamente a mesma coisa
-- [[objetivos-de-desenvolvimento-sustentavel-onu]] : Os 17 ODS são o arcabouço institucional da Teoria da Mudança do Desafio Regenera, ligado à Yunus
+- [[objetivos-de-desenvolvimento-sustentavel-onu]] : Os 8 ODS que a PAAPS já declarou oficialmente ao Desafio Regenera, ligado à Yunus
 - [[paaps]] : Definição institucional da PAAPS para consulta interna, escrita depois que a Mallu recusou a mesma explicação como copy de site
+- [[prosames]] : PROSAMES é o programa de saúde mental do servidor da Associação Allos, referência direta de mercado
 - [[refazenda-rio-xopoto]] : Refazenda Rio Xopotó, em Desterro do Melo, foi parceria de 2024 e hoje não há relação ativa
 - [[sara-vitral]] : Sara Vitral, candidata a deputada estadual por Minas Gerais, fez collab em vídeo com a Mallu
 - [[schwartz-center]] : O Schwartz Center, de Boston, licencia hoje as Schwartz Rounds no Reino Unido e na Irlanda, e é a referência internacional que a PAAPS cita
+- [[universaude]] : UniverSaúde é GovTech de inteligência de dados em saúde para secretarias municipais, referência de posicionamento GovTech
 - [[vo-xopoto]] : Vó Xopotó é a marca autônoma dos produtores de Desterro do Melo, nascida em 2025 a partir da Refazenda Rio Xopotó
 - [[yago-torres]] : Yago Torres, candidato a deputado estadual por São Paulo, já fez collab com a PAAPS
 - [[yunus-negocios-sociais]] : Yunus Negócios Sociais é referência de metodologia de impacto e parceira ativa via Desafio Regenera
@@ -304,6 +306,7 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 *O que veio de fora e dá para reconferir*
 
 - [[Fontes]] : O que veio de fora e dá para reconferir
+- [[aula-teoria-da-mudanca-desafio-regenera]] : Teoria da Mudança conecta ação a impacto de longo prazo por uma cadeia de 5 elos, e nomear os pressupostos evita surpresa
 - [[afastamentos-saude-mental-2025-inss]] `pendente` : O Brasil bateu recorde de 534 mil afastamentos por saúde mental em 2025, alta de 13,2% sobre 2024, e o burnout cresceu 800% em 4 anos
 - [[anotacoes-reuniao-joyce]] : As anotações de caderno da Mallu na escuta com a Joyce, assistente social, ditadas em 12/09/2026
 - [[ata-registro-precos-saude-mental-servidor]] : O governo federal previu R$ 26,9 milhões em ata de registro de preços para acolher a saúde mental de servidores
@@ -317,14 +320,18 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 - [[eventos-traumaticos-policial-vs-civil]] `pendente` : Em 40 anos, um civil vive cerca de 5 eventos traumáticos e um policial cerca de 900
 - [[igd-repasse-automatico-formacao-equipe]] : O IGD repassa automaticamente, todo mês, dinheiro que o município já pode gastar em formação de equipe da assistência social, e não usar reduz o repasse seguinte
 - [[microcredito-periodicidade-do-encontro]] : Um experimento com microcrédito em Calcutá isolou o efeito do encontro periódico entre as mesmas pessoas, e ele reduziu a inadimplência em três vezes; a responsabilidade solidária do grupo não teve esse efeito
+- [[modelo-canvas-c2-desafio-regenera]] : O Canvas C 2.0 cruza fluxo de impacto e fluxo comercial em 3 blocos: Desafio Socioambiental, Capacidade Operacional e Gestão Estratégica
+- [[modelo-teoria-da-mudanca-indicadores-impacto]] : O template do 1º entregável do Desafio Regenera tem 5 blocos, do contexto aos indicadores de cada etapa
 - [[minerva-paaps-framework-notion]] `pendente` : O Notion Minerva-paaps FrameWork descreve uma parceria pausada, ainda não representada no cofre, em que universitários da Minerva viveriam imersão na Refazenda Rio Xopotó para atuar dentro do PAAPS em Desterro do Melo
 - [[nr-01]] : A NR-01 não vincula prefeitura nem servidor estatutário, então ela pode ser citada como referência de enquadramento mas nunca como obrigatoriedade legal
 - [[obras-da-ciencia-que-sustentam-o-metodo]] : As quatro obras que o site apresenta como base científica do método PAAPS
 - [[oms-recomendacao-formar-gestores]] : Formar gestores e trabalhar a equipe é a única recomendação forte da OMS em saúde mental no trabalho
 - [[oms-solidao-e-conexao-social]] : Uma em cada seis pessoas no mundo é afetada pela solidão, e o isolamento social é associado a cem mortes por hora
+- [[paaps-yunus-folha-de-respostas]] : Faturamento de R$ 290.934,99 em 2025 e projeção de R$ 420.000 em 2026, com pedido de captação de R$ 500 mil dividido em 4 frentes
 - [[pitch-impulsiona-serasa]] : O pitch v5 e o handout da inscrição no Impulsiona Startups, onde o argumento da PAAPS está mais destilado
 - [[pitch-paaps-short-2]] : O deck curto paaps-short-2, com os dados frios (nome, data, escala) dos quatro casos de campo da PAAPS
 - [[recursos-a-fundo-perdido-subvencao]] : Recurso a fundo perdido é financiamento não reembolsável por edital de subvenção (FINEP e afins), via de captação que a PAAPS ainda não tinha mapeado
+- [[regenerative-capitalism-2015-pdf]] `pendente` : Paper de 2015 sobre Capitalismo Regenerativo, ainda não lido por completo (extração de PDF indisponível no ambiente)
 - [[regulacao-cfp-e-crp]] : Falar de psicologia é terreno regulado pelo CFP, e isso limita o que pode ser escrito e por quem
 - [[serie-caio-vassao-inovacao-regenerativa]] : Série de ensaios de Caio Vassão sobre o Novo Ciclo Global de Inovação, base da tese de inovação regenerativa
 

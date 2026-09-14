@@ -41,7 +41,9 @@ Em [[captacao]], como candidatura em andamento, e como referência de linguagem 
 
 ## Onde está o trabalho agora
 
-A etapa em curso é a Teoria da Mudança e o Canvas C, com prazo em 19/09/2026, status
-"Fazendo", prioridade Urgente. Ver [[quadro-de-projetos-atual]] para os prazos e
+A etapa em curso é a Teoria da Mudança e o Canvas C, com entrega em **18/09/2026**
+(corrigido em 14/09/2026 contra o print oficial do onboarding do programa; o Quadro de
+Projetos tinha 19/09), status "Fazendo", prioridade Urgente. Os 3 entregáveis do programa
+são obrigatórios para a PAAPS entrar na pré-banca que seleciona os 10 finalistas. Ver
 [[desafio-regenera-entregaveis]] para o que alimenta cada um dos três entregáveis e como
 eles se conectam entre si.

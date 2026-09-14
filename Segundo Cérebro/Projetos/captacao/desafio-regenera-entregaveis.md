@@ -9,11 +9,21 @@ atualizado: 2026-09-14
 
 # Os três entregáveis do Desafio Regenera, e o que alimenta cada um
 
-Três entregas, nesta ordem, todas com prazo confirmado em [[quadro-de-projetos-atual]]:
+Três trilhas, cada uma com um entregável, nesta ordem. **Datas corrigidas em 14/09/2026**
+contra o print oficial do onboarding do Desafio Regenera (fonte mais confiável que o que
+estava registrado antes, vindo do Quadro de Projetos): a Teoria da Mudança fecha em 18/09,
+não 19/09, e o Deck financeiro fecha em 30/09, não 26/09.
 
-1. **Teoria da Mudança + Canvas C 2.0** — prazo 19/09/2026, status "Fazendo", prioridade Urgente.
-2. **Deck financeiro + Plano de captação de investimentos** — prazo 26/09/2026.
-3. **Pitch-decks, comercial e de captação** (dois pitches distintos) — prazo 04/10/2026.
+1. **Trilha 1, Impacto Socioambiental** (1 a 17/09): Teoria da Mudança + Indicadores de
+   Impacto definidos. **Entrega: 18/09/2026.**
+2. **Trilha 2, Finanças e Capital de Impacto** (22 a 29/09): Deck financeiro + Plano de
+   captação de investimentos. **Entrega: 30/09/2026.**
+3. **Trilha 3, Narrativa e Pitch** (1º/10): Pitch duplo, deck comercial (B2B/B2C) + pitch de
+   captação. **Entrega: 04/10/2026.**
+
+**Regra dura do programa:** os 3 entregáveis sobem no Moodle e se consolidam na entrega
+final do pitch. É obrigatória a entrega dos 3 para participar da pré-banca que seleciona os
+10 finalistas. Entregar fora do prazo, ou faltando um dos três, tira a PAAPS da seleção.
 
 ## Por que a ordem importa: cada entrega alimenta a próxima
 
@@ -40,10 +50,15 @@ depois (investidor de impacto) evita retrabalho nos pitches.
   para a Teoria da Mudança (pendência real, ver a própria nota); decidir isso é pré-requisito
   para fechar o Canvas.
 - [[regenerative-capitalism-2015-pdf]]: paper-base do conceito de capitalismo regenerativo,
-  ainda pendente de leitura completa (sem ferramenta de PDF neste ambiente). **Se a Mallu já
-  tiver lido ou tiver anotações da aula da Teoria da Mudança, isso destrava esta pendência.**
+  ainda pendente de leitura completa (sem ferramenta de PDF neste ambiente).
 - [[serie-caio-vassao-inovacao-regenerativa]]: vocabulário de apoio (leapfrogging do Eixo
   Sul, Programa de Maturação vs. investimento ASG).
+- [[aula-teoria-da-mudanca-desafio-regenera]]: o método oficial do programa (5 elos,
+  pressupostos, 5 passos, dois exemplos reais).
+- [[modelo-teoria-da-mudanca-indicadores-impacto]] e [[modelo-canvas-c2-desafio-regenera]]:
+  os dois templates exatos a preencher para a Trilha 1.
+- [[objetivos-de-desenvolvimento-sustentavel-onu]]: os 8 ODS já declarados oficialmente pela
+  PAAPS (3, 4, 5, 8, 10, 11, 16, 17), resolvendo a pendência anterior.
 
 ## O que alimenta o Deck financeiro e o Plano de captação
 
@@ -57,6 +72,9 @@ depois (investidor de impacto) evita retrabalho nos pitches.
   captação como opção real, ao lado do capital de investidor.
 - [[digging-ficha-juridica]]: CNPJ ativo é critério eliminatório de qualquer inscrição, e o
   deck financeiro é sempre da DIGGING, nunca da PAAPS como pessoa jurídica própria.
+- [[paaps-yunus-folha-de-respostas]]: faturamento real (R$ 290.934,99 em 2025, projeção de
+  R$ 420.000 em 2026) e o pedido de captação de R$ 500 mil já dividido em 4 frentes de uso,
+  ponto de partida numérico para o deck financeiro.
 
 ## O que alimenta os dois Pitch-decks (comercial e de captação)
 
