@@ -331,3 +331,22 @@ uma. Ligada a [[instagram-conteudo-mallu]] e [[linkedin-conteudo-mallu]]. No mes
 o "Diretório de histórias do especialista" (outra database do Sistema GTO) estava vazio:
 populado com as 14 histórias já vivas em [[Histórias]], sem criar nota nova (o cofre já
 tinha o conteúdo, faltava só espelhar no Notion que os agentes de conteúdo consultam).
+
+## [2026-09-14] captação | os três entregáveis do Desafio Regenera ganharam nota própria
+
+A pedido da Mallu, nasceu [[desafio-regenera-entregaveis]] em `Projetos/captacao/`: os três
+entregáveis do Desafio Regenera (Teoria da Mudança + Canvas C 2.0, prazo 19/09; Deck
+financeiro + Plano de captação, prazo 26/09; Pitch-decks comercial e de captação, prazo
+04/10, todos confirmados em [[quadro-de-projetos-atual]]), com a cadeia de dependência entre
+eles e a lista de notas que alimenta cada um ([[mercado-do-cuidado]],
+[[capilaridade-do-sus]], [[inovacao-regenerativa]],
+[[objetivos-de-desenvolvimento-sustentavel-onu]], [[modelo-de-negocio-estrategia]],
+[[tam-sam-som-estrategia]], [[pitch-impulsiona-serasa]], entre outras). [[captacao]] e
+[[yunus-negocios-sociais]] passaram a linkar para ela.
+
+**Pendência real, não inventada:** a Mallu relatou ter adicionado 5 materiais novos (modelo
+do entregável Teoria de Impacto/Canvas C 2.0, "PAAPS e Yunus Respostas", aula da Teoria da
+Mudança, PDF do Capitalismo Regenerativo, print dos três entregáveis com data). Nenhum
+chegou a este repositório: conferido `Arquivos/` e todo o histórico de `main` até
+14/09/2026, nada bate com essas descrições. Registrado em [[desafio-regenera-entregaveis]]
+como pendência de sincronização, para processar assim que chegarem.

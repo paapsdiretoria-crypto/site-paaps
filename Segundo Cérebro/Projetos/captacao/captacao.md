@@ -34,3 +34,6 @@ Nenhum tem nome registrado: a base de metas só guarda "1º edital", "2º edital
 **Via nova, ainda não mapeada:** a Yunus recusou a modalidade de dívida em 09/09/2026 e
 isso abriu a busca por recurso a fundo perdido via edital de subvenção, que não vira
 dívida. Ver [[recursos-a-fundo-perdido-subvencao]].
+
+**Os três entregáveis do Desafio Regenera, com o que alimenta cada um e as interconexões
+entre eles:** ver [[desafio-regenera-entregaveis]].

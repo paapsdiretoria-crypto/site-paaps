@@ -27,6 +27,8 @@ O manual é [[Visão Geral]]. A regra de caminho é [[Contrato de caminhos]].
 
 A frente de investimento, editais e inscrições, com o histórico do que já foi enviado
 
+- [[desafio-regenera-entregaveis]] : Os três entregáveis do Desafio Regenera, com prazo, e as notas do cérebro que alimentam cada um
+
 
 ### [[cliente-ideal-paaps]] `pendente`
 
