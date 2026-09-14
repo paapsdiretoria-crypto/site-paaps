@@ -209,6 +209,16 @@ peça**. Carrossel inteiro nessa forma vira assinatura de IA, que é o que ela r
 Antes de usar, nomeie por escrito quem é a pessoa que acredita no X. Se não conseguir, não use.
 Detalhe em `Segundo Cérebro/Voz/Voz.md` seção 4.1.
 
+### Envio de e-mail institucional: canal e ferramenta certos
+
+Calibrada em 12/08/2026 e reforçada em 14/09/2026, depois de dois erros: responder pelo
+Gmail em vez do canal certo, e depois criar um workflow n8n descartável para um envio
+avulso em vez de usar a ferramenta que já existia.
+
+**E-mail em nome da PAAPS sai sempre por `relacionamento@paaps.com.br` via Titan, nunca
+por `paapsdiretoria@gmail.com`** (essa caixa só recebe). Qual ferramenta usar em cada
+caso, e o que nunca fazer: ver `Segundo Cérebro/Método/Método.md`.
+
 ### Como nomear as pessoas da rede
 
 **Usamos:** Servidores Públicos · Funcionários Públicos · Trabalhadores · Profissionais do

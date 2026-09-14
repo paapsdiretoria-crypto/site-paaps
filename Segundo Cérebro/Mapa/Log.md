@@ -300,3 +300,13 @@ ainda não recorrente), e a resposta da Mallu a esse feedback nomeou um caminho 
 PAAPS ainda não tinha mapeado: recurso a fundo perdido por editais de subvenção. Nasceu
 [[recursos-a-fundo-perdido-subvencao]] em [[Fontes]], ligada a [[captacao]] e
 [[yunus-negocios-sociais]].
+
+## [2026-09-14] método | envio de e-mail institucional vira nota própria
+
+Ao responder a Yunus (Luiz Henrique Pádua), uma sessão criou um workflow n8n descartável
+para o envio em vez de usar as ferramentas que já existiam (`responder-lead.py` e o
+webhook `Prospecção - Disparo (SMTP)`). O e-mail saiu, mas sem thread e sem nenhum
+registro, e o workflow foi apagado antes de confirmar o resultado, perdendo até o log de
+execução. Nasceu [[envio-de-email-institucional]] em [[Método]], que fecha essa lacuna:
+qual ferramenta usar por caso, e o que nunca fazer. Detalhe técnico datado em
+`automacoes/CLAUDE.md`.
