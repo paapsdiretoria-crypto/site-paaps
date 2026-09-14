@@ -145,6 +145,16 @@ notas de origem ([[paaps-ai-first]], [[gestao-estrategica-paaps]],
 marcado `historico` (superado, mantido como registro de época): não mexi, fica para a Mallu
 confirmar se ainda vale migrar ou se já é passado.
 
+## [2026-09-13] conceito | nasceu Projeto Avulso
+
+A Mallu calibrou o nome: o que a skill `tarefa-avulsa-quadro-projetos` registra (revisão
+3.0 do site, atualizar o LinkedIn, atualizar o cérebro) não é uma tarefa única nem um
+projeto grande (Teoria da Mudança do Regenera, estratégia da Clínica 2027): é um **Projeto
+Avulso**, entrega pontual com lista de ações dentro. Nasceu [[projeto-avulso]] em
+`Conceitos/`. O campo `Status` no Notion continua `"Tarefas avulsas"`, por decisão dela, pra
+não quebrar as páginas e views já montadas em cima desse nome: só a linguagem mudou, não o
+schema.
+
 ## [2026-09-13] critério | os dois testes viraram regra, e o cofre passou por eles
 
 O critério que decide o que entra ficou escrito em [[Visão Geral]] e na skill

@@ -79,7 +79,8 @@ cofre.** Calibrado em 13/09/2026.
 
 - **Falta de execução** (corrigir código, atualizar LinkedIn, ingerir um Drive, importar
   uma base, consultar advogado) vai para a database "Quadro Estratégico de Projetos" no
-  Notion, pela skill `tarefa-avulsa-quadro-projetos`.
+  Notion, como Projeto Avulso (nome do campo `Status` no Notion: "Tarefas avulsas"), pela
+  skill `tarefa-avulsa-quadro-projetos`. Ver a definição em `Conceitos/Conceitos.md`.
 - **Falta de conhecimento** (o nome da escola, o que aconteceu naquele ano, qual é a
   frase-mote de hoje) é **pergunta para a Mallu, na conversa, na hora**. Escrever a
   pergunta num arquivo é adiar a pergunta.
