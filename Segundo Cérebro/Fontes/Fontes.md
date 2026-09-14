@@ -31,7 +31,9 @@ Lei, dado oficial, estudo, notícia, aula, vídeo, livro e material de concorren
 - [[oms-recomendacao-formar-gestores]] : Formar gestores e trabalhar a equipe é a única recomendação forte da OMS em saúde mental no trabalho
 - [[oms-solidao-e-conexao-social]] : Uma em cada seis pessoas no mundo é afetada pela solidão, e o isolamento social é associado a cem mortes por hora
 - [[pitch-impulsiona-serasa]] : O pitch v5 e o handout da inscrição no Impulsiona Startups, onde o argumento da PAAPS está mais destilado
+- [[regenerative-capitalism-2015-pdf]] : Paper de 2015 sobre Capitalismo Regenerativo, ainda não lido por completo (extração de PDF indisponível no ambiente)
 - [[regulacao-cfp-e-crp]] : Falar de psicologia é terreno regulado pelo CFP, e isso limita o que pode ser escrito e por quem
+- [[serie-caio-vassao-inovacao-regenerativa]] : Série de ensaios de Caio Vassão sobre o Novo Ciclo Global de Inovação, base da tese de inovação regenerativa
 
 ## Onde isso serve
 

@@ -27,6 +27,7 @@ lê descobre sozinho o que abrir. Nota muda de nome e de lugar; a capa não muda
 | `Segundo Cérebro/Histórias/Histórias.md` | o que a Mallu viveu e pode contar |
 | `Segundo Cérebro/Fontes/Fontes.md` | dado, lei, estudo, notícia, com fonte |
 | `Segundo Cérebro/Ideias/Ideias.md` | as faíscas guardadas, e onde cada uma serve |
+| `Segundo Cérebro/Conteúdo/Conteúdo.md` | insumo perecível pra carrossel, reel, LinkedIn e blog, com contador de uso |
 | `Segundo Cérebro/Projetos/Projetos.md` | que projetos existem |
 
 | `Segundo Cérebro/Projetos/<projeto>/<projeto>.md` | quando o trabalho é de um projeto só |

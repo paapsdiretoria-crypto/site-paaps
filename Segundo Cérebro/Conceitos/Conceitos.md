@@ -21,6 +21,7 @@ A mina principal destas notas é [[tcc-suas]], onde as conceituações são cons
 ## O que tem aqui
 
 - [[a-resposta-ja-esta-na-equipe]] : A PAAPS não leva solução pronta: ela desvela o que a própria equipe já sabe e não consegue acessar sozinha
+- [[agile-learning-economia-cognitiva]] : Atenção, memória e afeto são a base da economia cognitiva, e Agile Learning é a resposta em cultura de aprendizagem
 - [[avesso-da-clinica]] : O Avesso da Clínica é a psicologia feita onde as pessoas estão, e não onde o consultório espera que elas apareçam
 - [[capilaridade-do-sus]] : O ativo não é o tamanho do mercado, é a capilaridade do SUS, que chega a 5.570 municípios e é a maior malha de cuidado já construída
 - [[cascata-do-cuidado]] : Cuidar da equipe melhora o cuidado que a população recebe, e esse efeito é mensurável
@@ -30,6 +31,8 @@ A mina principal destas notas é [[tcc-suas]], onde as conceituações são cons
 - [[erro-de-leitura-do-bem-estar-corporativo]] : Quando a instituição oferece terapia para um problema que ela mesma produz, a falha passa a ser de quem não aguentou, e é por isso que equipe pública reage mal a programa de bem-estar
 - [[falha-estrutural-lida-como-falha-pessoal]] : O profissional da rede adoece porque absorve a falha estrutural como se fosse falha dele
 - [[governo-da-com-uma-mao-e-tira-com-a-outra]] : A formulação da ponta para a política pública que concede um direito e retira outro no mesmo movimento
+- [[inovacao-regenerativa]] : Regenerativo é diferente de sustentável: não é reduzir impacto, é melhorar o ecossistema, vocabulário-chave do Desafio Regenera
+- [[iso-9000-e-9001-gestao-da-qualidade]] : A ISO 9000 define os conceitos de gestão da qualidade e a ISO 9001 é o padrão certificável, referência para Times e Líderes da DIGGING
 - [[linha-de-pensamento-mallu]] : A linha de pensamento da Mallu: psicologia além do consultório e do RH, psicologia suleada, impacto sistêmico
 - [[mercado-do-cuidado]] : A PAAPS está no mercado do cuidado, não no de saúde nem no de bem-estar corporativo, e esse reframe decide quem é concorrente e qual é o tamanho do mercado
 - [[o-cidadao-esta-no-meio]] : O cidadão fica no meio entre os setores que não se falam, e é o contexto dele que nenhum deles considera

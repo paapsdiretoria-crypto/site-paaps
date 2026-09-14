@@ -28,6 +28,7 @@ Eles citam a capa do setor ou a capa do projeto, e mais nada.**
 | `Segundo Cérebro/Histórias/Histórias.md` | quando precisa de coisa vivida |
 | `Segundo Cérebro/Fontes/Fontes.md` | quando precisa de dado com fonte |
 | `Segundo Cérebro/Ideias/Ideias.md` | quando precisa de faísca guardada |
+| `Segundo Cérebro/Conteúdo/Conteúdo.md` | quando precisa de insumo perecível pra carrossel, reel, LinkedIn ou blog |
 | `Segundo Cérebro/Projetos/Projetos.md` | quando precisa saber que projetos existem |
 | `Segundo Cérebro/Projetos/<projeto>/<projeto>.md` | quando o trabalho é de um projeto só |
 

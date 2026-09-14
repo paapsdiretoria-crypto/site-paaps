@@ -18,7 +18,7 @@ capas=$(printf '%s\n' "$V/Mapa/Índice.md" "$V/Mapa/Visão Geral.md" "$V/Mapa/Lo
   "$V/Mapa/Legenda de cores.md" "$V/Mapa/O que falta.md" "$V/Mapa/Contrato de caminhos.md" \
   "$V/Mapa/mapa-do-ecossistema.md" "$V/Voz/Voz.md" "$V/Conceitos/Conceitos.md" \
   "$V/Método/Método.md" "$V/Entidades/Entidades.md" "$V/Histórias/Histórias.md" \
-  "$V/Fontes/Fontes.md" "$V/Ideias/Ideias.md" "$V/Projetos/Projetos.md")
+  "$V/Fontes/Fontes.md" "$V/Ideias/Ideias.md" "$V/Projetos/Projetos.md" "$V/Conteúdo/Conteúdo.md")
 while read -r p; do
   [ -z "$p" ] && continue
   # capa de projeto: Projetos/<x>/<x>.md é sempre válida
@@ -36,7 +36,7 @@ while read -r p; do
 done < <(grep -rho "$V/[A-Za-zÀ-ÿ0-9._/ -]*\.md" --include="*.md" --include="*.json" .claude CLAUDE.md */CLAUDE.md 2>/dev/null | sed 's/[.,;:)`]*$//' | sort -u)
 
 # 4) toda capa de setor tem que declarar o caminho da pasta
-for s in Voz Conceitos Entidades Método Fontes Histórias Ideias Projetos; do
+for s in Voz Conceitos Entidades Método Fontes Histórias Ideias Projetos Conteúdo; do
   f="$V/$s/$s.md"
   [ -f "$f" ] || { echo "ERRO: setor $s está sem capa"; falhas=1; continue; }
   grep -q "Caminho desta pasta" "$f" || { echo "ERRO: capa de $s não declara o caminho da pasta"; falhas=1; }

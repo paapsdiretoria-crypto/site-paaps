@@ -62,9 +62,8 @@ motivo para improvisar: pare e siga direto para a Parte 3, item correspondente.
    falhar, é bloqueio total: nada mais roda.
 2. **Arquivos-base existem nos caminhos reais** (confira com `test -f`, não assuma):
    - `.claude/skills/paaps-orquestrador-conteudo/SKILL.md` (seções 6 e 6.1)
-   - `insumos-compartilhados/nucleo-comum/anatomia-do-carrossel-aprovado.md`
-   - `insumos-compartilhados/nucleo-comum/mapa-fontes-foto.md`
-   - `insumos-compartilhados/nucleo-comum/modelos-slide-paaps.md`
+   - `Segundo Cérebro/Voz/Voz.md` (capa do setor: anatomia do carrossel aprovado, mapa de
+     fontes de foto e modelos de slide vivem como notas lá dentro)
    - `.claude/agents/radar.md`, `paaps-brasil.md`, `tecela.md`, `copywriter-paaps.md`,
      `critico-conteudo.md`, `buscador-fotos.md`, `aplicador-visual.md`, `mallu-reels.md`
    - `.claude/skills/legendas-otimizadas/SKILL.md`
@@ -133,9 +132,8 @@ rodada: registre isso, não insista, não tente contornar indo para o MODO 2 (su
 ### Passo 1. Leitura obrigatória antes de qualquer escrita
 
 `.claude/skills/paaps-orquestrador-conteudo/SKILL.md` inteira (seções 3, 6 e 6.1
-especialmente), `insumos-compartilhados/nucleo-comum/anatomia-do-carrossel-aprovado.md`,
-`insumos-compartilhados/nucleo-comum/mapa-fontes-foto.md`,
-`insumos-compartilhados/nucleo-comum/modelos-slide-paaps.md`.
+especialmente), `Segundo Cérebro/Voz/Voz.md` (capa do setor: anatomia do carrossel
+aprovado, mapa de fontes de foto e modelos de slide vivem como notas lá dentro).
 
 ### Passo 2. Mapeamento de pauta
 

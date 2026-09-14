@@ -63,20 +63,22 @@ do fluxo e o Narrador virou `copywriter-paaps`.)*
 
 ## Onde cada agente busca contexto
 
-Núcleo comum: `../Segundo Cérebro/Voz/Voz.md`
+**Regra de citação:** por causa do `Segundo Cérebro/Mapa/Contrato de caminhos.md`, nenhum agente
+nem este arquivo cita nota individual do cérebro, só a capa do setor (o índice da capa aponta
+para a nota certa por dentro, e a nota pode ser renomeada sem quebrar nada aqui).
 
 | Agente | Lê |
 |---|---|
-| Todos | `voz-paaps.md` |
-| Quem inicia peça sem gancho da Mallu | `afeto-situado-mallu.md` |
+| Todos | `../Segundo Cérebro/Voz/Voz.md` |
+| Quem inicia peça sem gancho da Mallu | `../Segundo Cérebro/Voz/Voz.md` (método do afeto situado) |
 | radar | protocolo de fontes dentro do próprio `radar.md` |
 | paaps-brasil | própria memória em `.claude/agent-memory/paaps-brasil/` |
-| tecela | `base-teorica/README.md` + `base-teorica/fichamentos/` + `segundo-cerebro-conteudo/` |
-| copywriter-paaps | `voz-paaps.md` + `base-teorica/README.md` + `segundo-cerebro-conteudo/` + próprio `APRENDIZADO.md` |
-| buscador-fotos | `mapa-fontes-foto.md` + `visual-instagram.md` |
-| aplicador-visual | `identidade-aplicada.md` + `visual-instagram.md` |
-| critico-design | `criterios-design.md` + `qualidade-frontend.md` |
-| critico-conteudo | `voz-paaps.md` + `modelos-slide-paaps.md` + `anatomia-do-carrossel-aprovado.md` + próprio `APRENDIZADO.md` |
+| tecela | `../Segundo Cérebro/Método/Método.md` + `../Segundo Cérebro/Conteúdo/Conteúdo.md` + própria memória em `.claude/agent-memory/tecela/` |
+| copywriter-paaps | `../Segundo Cérebro/Voz/Voz.md` + `../Segundo Cérebro/Método/Método.md` + `../Segundo Cérebro/Conteúdo/Conteúdo.md` + próprio `APRENDIZADO.md` |
+| buscador-fotos | `../Segundo Cérebro/Voz/Voz.md` (mapa de fontes de foto e regras visuais do Instagram vivem lá dentro) |
+| aplicador-visual | `../Segundo Cérebro/Voz/Voz.md` (identidade aplicada e regras visuais do Instagram vivem lá dentro) |
+| critico-design | `../Segundo Cérebro/Voz/Voz.md` (critérios de design e qualidade de frontend vivem lá dentro) |
+| critico-conteudo | `../Segundo Cérebro/Voz/Voz.md` (modelos de slide e anatomia do carrossel aprovado vivem lá dentro) + próprio `APRENDIZADO.md` |
 
 ---
 

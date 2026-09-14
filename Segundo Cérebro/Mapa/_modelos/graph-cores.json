@@ -162,6 +162,13 @@
       }
     },
     {
+      "query": "path:\"Conteúdo\"",
+      "color": {
+        "a": 1,
+        "rgb": 10496673
+      }
+    },
+    {
       "query": "path:\"Arquivos\"",
       "color": {
         "a": 1,

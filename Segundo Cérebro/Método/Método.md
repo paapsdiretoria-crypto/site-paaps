@@ -23,6 +23,9 @@ O trabalho em campo: as fases, a supervisão, a base teórica e a régua de font
 - [[fontes-aceitas]] : Quais fontes valem numa pesquisa da PAAPS, quais estão bloqueadas, e o ritual de 3 a 5 ciclos com parágrafo reflexivo antes de cada busca
 - [[jornada-do-cliente-paaps]] : O cliente entra pelo Diagnóstico 360, segue nas Rodas de Equipe e é acompanhado pelo Ponto de Apoio
 - [[linha-epistemologica-estrutural]] : A linha epistemológica da PAAPS é estrutural e sistêmica, e isso decide toda análise e todo conteúdo
+- [[llm-wiki-padrao-segundo-cerebro]] : O padrão LLM Wiki de Andrej Karpathy é a arquitetura de fundo que sustenta o próprio Segundo Cérebro da PAAPS
+- [[metadesign-eotc]] : O modelo EOTC (Estética, Ontologia, Taxonomia, Cosmologia) de Caio Vassão é base teórica do método de aprendizagem da Roda de Equipe
+- [[metadesign-meta-jogo]] : Os quatro papéis do Meta-Jogo de Caio Vassão nomeiam o papel de facilitação da psicóloga na Roda de Equipe
 - [[metodologia-paaps]] : O que a PAAPS entrega e como explica cada frente, ditado pela Mallu em 02/08/2026
 - [[motor-da-paaps]] : As peças da PAAPS formam um motor: o conhecimento entra pela consultoria, chega pela Roda, é entregue por psicóloga local e volta como dado que melhora o método
 - [[roda-de-equipe-paaps]] : A Roda de Equipe é o encontro mensal de até 10 servidores conduzido por psicóloga formada no método, em três fases

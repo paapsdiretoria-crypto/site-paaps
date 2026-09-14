@@ -125,6 +125,23 @@ ideia que ele destrava: são quatro notas, não uma.
 
 **Teste do resumo:** se o `resumo` só fica verdadeiro usando um "e", são duas notas.
 
+## O setor Conteúdo: um critério diferente, dois cérebros interligados
+
+Calibrado pela Mallu em 13/09/2026. [[Conteúdo]] é o único setor que não usa os dois testes
+acima: entra ali tudo que é citável ou usável como matéria-prima de peça, mesmo perecível, mesmo
+preso ao ciclo de notícia da semana (ex.: uma medida que uma UBS específica tomou em 2026). O
+que é pilar da tese da PAAPS continua indo para o setor oficial certo (Conceitos, Entidades,
+Método, Histórias); o que é insumo de peça mas não é pilar vai para [[Conteúdo]].
+
+**Os dois cérebros são interligados, não isolados:** todo agente que escreve ou pensa conteúdo
+consulta os dois antes de decidir, nunca só um. Regra dela, verbatim: "tudo que está no segundo
+cérebro pode e deve ser usado para construção de conteúdos também [...] algumas coisas são
+somente do cérebro de conteúdo e outras vai além." Um item de [[Conteúdo]] pode ser promovido ao
+setor oficial se, repetido em várias peças ao longo de meses, passar nos dois testes acima.
+
+`Conteúdo/_entrada/` é a porta de material solto escopado a conteúdo (equivalente a `Arquivos/`,
+mas para o que a Mallu já sabe que é insumo de peça, não pilar de tese).
+
 ## A faxina do grafo
 
 A cada poucas semanas, uma passada resolve a maior parte da entropia:
@@ -141,7 +158,7 @@ Some a isso: pasta vazia não existe, e bolinha sem cor no grafo é erro, não d
 [[Índice]] · [[Log]] · [[Legenda de cores]]
 
 Os setores: [[Projetos]] · [[Entidades]] · [[Histórias]] · [[Conceitos]] · [[Voz]] ·
-[[Método]] · [[Fontes]] · [[Ideias]]
+[[Método]] · [[Fontes]] · [[Ideias]] · [[Conteúdo]]
 
 ## Onde isso serve
 

@@ -32,10 +32,13 @@ Uma nota por pessoa e por instituição que importa para a PAAPS. Cada uma diz q
 - [[luiz-sergio-barbosa]] : Luiz Sérgio Barbosa é o consultor financeiro da PAAPS, ex-diretor financeiro da FEBRABAN, e o nome se escreve Luiz com z
 - [[mallu-formacao-e-crp]] : Mallu é formanda em psicologia e o CRP sai em fevereiro, e até lá 'psicóloga' não pode ser usado em peça pública
 - [[mallu-vasconcellos]] : Quem é Mallu Vasconcellos, o que ela faz e por que hoje ela e a PAAPS são praticamente a mesma coisa
+- [[objetivos-de-desenvolvimento-sustentavel-onu]] : Os 17 ODS são o arcabouço institucional da Teoria da Mudança do Desafio Regenera, ligado à Yunus
 - [[paaps]] : Definição institucional da PAAPS para consulta interna, escrita depois que a Mallu recusou a mesma explicação como copy de site
+- [[prosames]] : PROSAMES é o programa de saúde mental do servidor da Associação Allos, referência direta de mercado
 - [[refazenda-rio-xopoto]] : Refazenda Rio Xopotó, em Desterro do Melo, foi parceria de 2024 e hoje não há relação ativa
 - [[sara-vitral]] : Sara Vitral, candidata a deputada estadual por Minas Gerais, fez collab em vídeo com a Mallu
 - [[schwartz-center]] : O Schwartz Center, de Boston, licencia hoje as Schwartz Rounds no Reino Unido e na Irlanda, e é a referência internacional que a PAAPS cita
+- [[universaude]] : UniverSaúde é GovTech de inteligência de dados em saúde para secretarias municipais, referência de posicionamento GovTech
 - [[yago-torres]] : Yago Torres, candidato a deputado estadual por São Paulo, já fez collab com a PAAPS
 - [[yunus-negocios-sociais]] : Yunus Negócios Sociais é referência de metodologia de impacto e parceira ativa via Desafio Regenera
 

@@ -17,7 +17,7 @@ ela que liga as notas entre si.
 ## Os setores
 
 [[Projetos]] · [[Entidades]] · [[Histórias]] · [[Conceitos]] · [[Voz]] · [[Método]] ·
-[[Fontes]] · [[Ideias]]
+[[Fontes]] · [[Ideias]] · [[Conteúdo]]
 
 O manual é [[Visão Geral]]. A regra de caminho é [[Contrato de caminhos]].
 
@@ -160,10 +160,13 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 - [[luiz-sergio-barbosa]] : Luiz Sérgio Barbosa é o consultor financeiro da PAAPS, ex-diretor financeiro da FEBRABAN, e o nome se escreve Luiz com z
 - [[mallu-formacao-e-crp]] : Mallu é formanda em psicologia e o CRP sai em fevereiro, e até lá 'psicóloga' não pode ser usado em peça pública
 - [[mallu-vasconcellos]] : Quem é Mallu Vasconcellos, o que ela faz e por que hoje ela e a PAAPS são praticamente a mesma coisa
+- [[objetivos-de-desenvolvimento-sustentavel-onu]] : Os 17 ODS são o arcabouço institucional da Teoria da Mudança do Desafio Regenera, ligado à Yunus
 - [[paaps]] : Definição institucional da PAAPS para consulta interna, escrita depois que a Mallu recusou a mesma explicação como copy de site
+- [[prosames]] : PROSAMES é o programa de saúde mental do servidor da Associação Allos, referência direta de mercado
 - [[refazenda-rio-xopoto]] `historico` : Refazenda Rio Xopotó, em Desterro do Melo, foi parceria de 2024 e hoje não há relação ativa
 - [[sara-vitral]] : Sara Vitral, candidata a deputada estadual por Minas Gerais, fez collab em vídeo com a Mallu
 - [[schwartz-center]] : O Schwartz Center, de Boston, licencia hoje as Schwartz Rounds no Reino Unido e na Irlanda, e é a referência internacional que a PAAPS cita
+- [[universaude]] : UniverSaúde é GovTech de inteligência de dados em saúde para secretarias municipais, referência de posicionamento GovTech
 - [[yago-torres]] : Yago Torres, candidato a deputado estadual por São Paulo, já fez collab com a PAAPS
 - [[yunus-negocios-sociais]] : Yunus Negócios Sociais é referência de metodologia de impacto e parceira ativa via Desafio Regenera
 
@@ -190,6 +193,7 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 
 - [[Conceitos]] : O que cada palavra significa dentro da PAAPS
 - [[a-resposta-ja-esta-na-equipe]] : A PAAPS não leva solução pronta: ela desvela o que a própria equipe já sabe e não consegue acessar sozinha
+- [[agile-learning-economia-cognitiva]] : Atenção, memória e afeto são a base da economia cognitiva, e Agile Learning é a resposta em cultura de aprendizagem
 - [[avesso-da-clinica]] `pendente` : O Avesso da Clínica é a psicologia feita onde as pessoas estão, e não onde o consultório espera que elas apareçam
 - [[capilaridade-do-sus]] : O ativo não é o tamanho do mercado, é a capilaridade do SUS, que chega a 5.570 municípios e é a maior malha de cuidado já construída
 - [[cascata-do-cuidado]] : Cuidar da equipe melhora o cuidado que a população recebe, e esse efeito é mensurável
@@ -199,6 +203,8 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 - [[erro-de-leitura-do-bem-estar-corporativo]] : Quando a instituição oferece terapia para um problema que ela mesma produz, a falha passa a ser de quem não aguentou, e é por isso que equipe pública reage mal a programa de bem-estar
 - [[falha-estrutural-lida-como-falha-pessoal]] : O profissional da rede adoece porque absorve a falha estrutural como se fosse falha dele
 - [[governo-da-com-uma-mao-e-tira-com-a-outra]] : A formulação da ponta para a política pública que concede um direito e retira outro no mesmo movimento
+- [[inovacao-regenerativa]] : Regenerativo é diferente de sustentável: não é reduzir impacto, é melhorar o ecossistema, vocabulário-chave do Desafio Regenera
+- [[iso-9000-e-9001-gestao-da-qualidade]] : A ISO 9000 define os conceitos de gestão da qualidade e a ISO 9001 é o padrão certificável, referência para Times e Líderes da DIGGING
 - [[linha-de-pensamento-mallu]] : A linha de pensamento da Mallu: psicologia além do consultório e do RH, psicologia suleada, impacto sistêmico
 - [[mercado-do-cuidado]] : A PAAPS está no mercado do cuidado, não no de saúde nem no de bem-estar corporativo, e esse reframe decide quem é concorrente e qual é o tamanho do mercado
 - [[o-cidadao-esta-no-meio]] : O cidadão fica no meio entre os setores que não se falam, e é o contexto dele que nenhum deles considera
@@ -261,6 +267,9 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 - [[fontes-aceitas]] : Quais fontes valem numa pesquisa da PAAPS, quais estão bloqueadas, e o ritual de 3 a 5 ciclos com parágrafo reflexivo antes de cada busca
 - [[jornada-do-cliente-paaps]] : O cliente entra pelo Diagnóstico 360, segue nas Rodas de Equipe e é acompanhado pelo Ponto de Apoio
 - [[linha-epistemologica-estrutural]] : A linha epistemológica da PAAPS é estrutural e sistêmica, e isso decide toda análise e todo conteúdo
+- [[llm-wiki-padrao-segundo-cerebro]] : O padrão LLM Wiki de Andrej Karpathy é a arquitetura de fundo que sustenta o próprio Segundo Cérebro da PAAPS
+- [[metadesign-eotc]] : O modelo EOTC de Caio Vassão é base teórica do método de aprendizagem da Roda de Equipe
+- [[metadesign-meta-jogo]] : Os quatro papéis do Meta-Jogo de Caio Vassão nomeiam o papel de facilitação da psicóloga na Roda de Equipe
 - [[metodologia-paaps]] : O que a PAAPS entrega e como explica cada frente, ditado pela Mallu em 02/08/2026
 - [[motor-da-paaps]] : As peças da PAAPS formam um motor: o conhecimento entra pela consultoria, chega pela Roda, é entregue por psicóloga local e volta como dado que melhora o método
 - [[roda-de-equipe-paaps]] : A Roda de Equipe é o encontro mensal de até 10 servidores conduzido por psicóloga formada no método, em três fases
@@ -283,13 +292,28 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 - [[oms-recomendacao-formar-gestores]] : Formar gestores e trabalhar a equipe é a única recomendação forte da OMS em saúde mental no trabalho
 - [[oms-solidao-e-conexao-social]] : Uma em cada seis pessoas no mundo é afetada pela solidão, e o isolamento social é associado a cem mortes por hora
 - [[pitch-impulsiona-serasa]] : O pitch v5 e o handout da inscrição no Impulsiona Startups, onde o argumento da PAAPS está mais destilado
+- [[regenerative-capitalism-2015-pdf]] `pendente` : Paper de 2015 sobre Capitalismo Regenerativo, ainda não lido por completo (extração de PDF indisponível no ambiente)
 - [[regulacao-cfp-e-crp]] : Falar de psicologia é terreno regulado pelo CFP, e isso limita o que pode ser escrito e por quem
+- [[serie-caio-vassao-inovacao-regenerativa]] : Série de ensaios de Caio Vassão sobre o Novo Ciclo Global de Inovação, base da tese de inovação regenerativa
 
 ## 🟠 Ideias
 
 *O que estalou, e onde serve*
 
 - [[Ideias]] `pendente` : A porta de entrada da mineração de ideias, o objetivo número um deste cofre
+
+## 🟤 Conteúdo
+
+*Insumo perecível de carrossel, reel, LinkedIn e blog, com contador de uso*
+
+- [[Conteúdo]] : A Biblioteca de Conteúdo: dado, citação e frase pronta, com contador de uso, interligada ao cérebro oficial
+- [[cartilha-amarela-prevencao-assedio-suicidio]] : Cartilha Amarela do MTE (2025), reservada para a produção de conteúdo desta semana
+- [[cinco-melhores-sistemas-educacao-mundo]] : Comparação de 5 sistemas educacionais: roteiro a minerar para @amalluvasconcellos
+- [[gargalos-saude-mental-sus]] : Só 11,3 mil dos 600 mil psicólogos do Brasil atuam no SUS
+- [[greve-atencao-basica-rio]] : Médicos da atenção básica do Rio em greve por sobrecarga e falta de reajuste
+- [[montessori-ou-nao]] : Deep dive no método Montessori: roteiro a minerar para @amalluvasconcellos
+- [[suicidios-relacionados-ao-trabalho]] : Assédio moral aumenta em 78% o risco suicida, segundo metanálise de 2026
+- [[waldorf-ou-nao]] : Deep dive no método Waldorf/Steiner: roteiro a minerar para @amalluvasconcellos
 
 ## ⚪ Mapa
 

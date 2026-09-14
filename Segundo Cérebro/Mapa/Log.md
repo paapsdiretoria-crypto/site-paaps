@@ -194,3 +194,41 @@ conjunto autorizado do site, e não saem sem a Mallu confirmar a fonte.
 O quadro de projetos perdeu prazo, prioridade e status, que envelhecem e vivem no Notion, e
 ficou só com quais projetos existem e a que frente cada um responde. A frase-mote vigente
 foi confirmada por ela.
+
+## [2026-09-14] setor novo | nasceu Conteúdo, a Biblioteca de Conteúdo
+
+Calibrado pela Mallu em 13/09/2026, depois de eu ter construído sem querer um sistema de
+conhecimento paralelo (skill `segundo-cerebro-paaps`, pastas em `insumos-compartilhados/`)
+sem antes olhar o Segundo Cérebro real. Correção: `git merge -X theirs origin/main` (main
+sempre ganha), remoção do sistema paralelo, e construção do 9º setor de verdade, no lugar
+certo: [[Conteúdo]], com critério mais largo que os outros oito (insumo perecível de
+carrossel/reel/LinkedIn, não pilar de tese), contador de uso por item, e a regra de que os
+dois cérebros são interligados e sempre consultados juntos por quem escreve conteúdo
+(Tecelã, copywriter-paaps). `Conteúdo/_entrada/` é a porta de material solto escopada a
+conteúdo. `codigo/verifica-caminhos.sh`, `Contrato de caminhos`, `Índice` e o `CLAUDE.md`
+raiz ganharam a 9ª entrada.
+
+Junto, triados um a um os 24 arquivos soltos de `Arquivos/` (nenhum pulado, por pedido
+explícito dela): 14 foram para o Segundo Cérebro oficial
+([[prosames]], [[universaude]] e [[objetivos-de-desenvolvimento-sustentavel-onu]] em
+Entidades; [[iso-9000-e-9001-gestao-da-qualidade]], [[inovacao-regenerativa]] e
+[[agile-learning-economia-cognitiva]] em Conceitos; [[metadesign-eotc]],
+[[metadesign-meta-jogo]] e [[llm-wiki-padrao-segundo-cerebro]] em Método;
+[[serie-caio-vassao-inovacao-regenerativa]] e [[regenerative-capitalism-2015-pdf]] em
+Fontes), 7 foram para a Biblioteca de Conteúdo ([[gargalos-saude-mental-sus]],
+[[greve-atencao-basica-rio]], [[suicidios-relacionados-ao-trabalho]],
+[[cartilha-amarela-prevencao-assedio-suicidio]], e os três roteiros de vídeo a minerar para
+@amalluvasconcellos: [[cinco-melhores-sistemas-educacao-mundo]], [[montessori-ou-nao]],
+[[waldorf-ou-nao]]), 2 foram descartados (curso genérico "Claude 101" e artigo de blog de
+marketing sobre o padrão LLM Wiki, fonte bloqueada pela régua de pesquisa) e 1 virou tarefa
+avulsa no Notion ("Nossa Equipe": pessoas da ONU Brasil pra seguir e pesquisar no LinkedIn,
+não é conhecimento do cofre).
+
+**Duas pendências reais, sem invenção de conteúdo:** `Serasa Experian.md` e o arquivo de
+nome malformado `prospeccao-e-vendas]], [[estrategia-de-negocio.md` chegaram **vazios**
+(clipping falhou); nenhuma nota foi escrita a partir deles. O segundo, sem conteúdo e com
+nome quebrado (fragmento de colagem de wikilink), foi apagado. O primeiro segue em
+`Arquivos/`, aguardando a Mallu reclipar a página se ainda quiser a entidade Serasa Experian
+registrada. [[regenerative-capitalism-2015-pdf]] também ficou `pendente`: o ambiente desta
+sessão não tinha ferramenta de extração de PDF, então o paper não foi lido, só registrado
+como fonte a conferir.
