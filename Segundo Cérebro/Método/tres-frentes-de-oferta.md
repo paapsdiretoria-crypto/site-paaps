@@ -14,7 +14,7 @@ aliases: [frentes, ofertas, serviços, o que a PAAPS vende]
 
 | Frente | Quando entra | O que inclui |
 |---|---|---|
-| **Cuidado em Saúde Mental + Integração de Rede** | cuidado quando a equipe está adoecida; integração quando os serviços não conversam | psicoterapia online para o servidor · plantão psicológico nas unidades · grupos de apoio · acordos e fluxo entre as equipes |
+| **Cuidado em Saúde Mental + Integração de Rede** | cuidado quando a equipe está adoecida; integração quando os serviços não conversam | Roda de Equipe mensal, a unidade básica (ver [[roda-de-equipe-paaps]]) · plantão psicológico nas unidades · grupos de apoio · psicoterapia individual online para o servidor, **via parceria** (não é entrega direta da PAAPS) · acordos e fluxo entre as equipes |
 | **Treinamentos PAAPS** | quando falta conhecimento situado, com caso real | fluxo e matriciamento · comunicação de equipe · RAPS e reforma psiquiátrica · saúde da mulher · saúde da população negra · NR-1 e saúde mental no trabalho |
 | **Urgências e Eventos Extremos** | enchente, acidente, violência que atinge o território inteiro | pronta resposta · estratégia com a gestão · treinamento da equipe local · condução da implementação |
 
@@ -28,6 +28,13 @@ rede, quando os serviços não conversam?" A escolha é do gestor, e é ela que 
 **Gestão pública:** prefeituras, secretarias de saúde, assistência social e educação.
 **ONGs e institutos:** organizações que atendem população em situação de vulnerabilidade e
 sustentam equipes expostas à violência todos os dias.
+
+## A estrutura antiga, superada
+
+PDF e carrossel de vendas anteriores usavam quatro "pilares" (articulação de atores
+sociais, capacitações vivenciais, psicologia de grupos, intervenções sistêmicas
+territoriais). **Material obsoleto, confirmado pela Mallu em 13/09/2026.** As três frentes
+acima são a estrutura vigente.
 
 ## Nunca escrever "produto"
 

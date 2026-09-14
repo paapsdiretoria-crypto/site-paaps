@@ -4,15 +4,13 @@ origem: "Sistema"
 resumo: "O catálogo de toda nota do Segundo Cérebro, por setor"
 serve-para: []
 status: vivo
-atualizado: 2026-09-13
+atualizado: 2026-09-14
 ---
 
 # Índice
 
 Ache o setor, leia o resumo de uma linha, e só então abra a nota. Cada setor tem capa: é
 ela que liga as notas entre si.
-
-`pendente` é nota incompleta; `historico` é nota superada, mantida como registro.
 
 ## Os setores
 
@@ -51,6 +49,7 @@ A frente de conteúdo do perfil pessoal da Mallu, em todos os canais
 
 - [[instagram-conteudo-mallu]] : O @amalluvasconcellos é presença intelectual com rosto, e existe para gerar reconhecimento, nunca admiração
 - [[linkedin-conteudo-mallu]] : O LinkedIn da Mallu é a voz de quem lê sistemas, não de quem compartilha vivência: a emoção existe mas não é o argumento
+- [[linha-editorial-conteudo-mallu]] : As cinco linhas editoriais vivas do conteúdo pessoal da Mallu, e em qual canal cada uma corre
 
 ### [[conteudo-paaps]]
 
@@ -84,6 +83,7 @@ A Comunidade ECOA: o que ela é, como funciona e onde ela toca o resto do ecossi
 
 A frente que decide em que negócio a PAAPS está e como ela se sustenta
 
+- [[caminhos-legais-venda-ao-governo]] : A PAAPS entra em prefeitura por dispensa até R$ 65.492,11 por ano ou por inexigibilidade acima disso, e o contrato social foi redigido para abrir essa segunda porta
 - [[modelo-de-negocio-estrategia]] : O preço, a margem e o contrato-padrão da PAAPS: R$ 1.100 por Roda, 60,1% de margem, R$ 924 mil por município ao ano
 - [[pesquisa-de-mercado-estrategia]] : Pesquisa de mercado da PAAPS, convertida do DOCX institucional original
 - [[ponto-de-apoio-estrategia]] : O Ponto de Apoio é o app que transforma cada Roda em registro e cria a estatística de adoecimento do servidor municipal que hoje não existe
@@ -94,7 +94,7 @@ A frente que decide em que negócio a PAAPS está e como ela se sustenta
 
 Como a PAAPS planeja: Objetivo, Resultado-Chave, Projeto, e os prazos que cada um pode ter
 
-- [[metas-2026]] `historico` : As 10 metas que a PAAPS tinha para 2026, e a análise de quais foram cumpridas até 13/09/2026
+- [[metas-2026]] : As 10 metas que a PAAPS tinha para 2026, e a análise de quais foram cumpridas até 13/09/2026
 - [[quadro-de-projetos-atual]] : Que projetos a PAAPS tem abertos, a que frente cada um pertence, e onde ele toca este cérebro
 
 ### [[inteligencia-competitiva]]
@@ -104,11 +104,24 @@ A frente que acompanha quem concorre com a PAAPS e o que a gente faz diferente
 - [[a-lacuna-que-a-paaps-ocupa-intel]] : Nenhum concorrente mapeado junta diagnóstico territorial, intervenção psicossocial sistêmica e capacidade instalada como entrega
 - [[agenda-publica-intel]] : A Agenda Pública é think tank de políticas públicas e serve de referência de cadência editorial e de dado, não de concorrência de serviço
 - [[asdoseculo21-intel]] : asdoseculo21 é referência de comunicação digital em tema social, não concorrente de serviço
+- [[ashoka-intel]] : A Ashoka seleciona e apoia empreendedores sociais individuais no mundo todo, e não vende psicologia nem intervenção de equipe
 - [[cepam-intel]] : A CEPAM faz consultoria de processo administrativo para gestão pública, com comunicação datada, e a PAAPS tem vantagem de linguagem e método
+- [[dataway-intel]] `pendente` : A DataWay vende tecnologia da informação para prefeitura, sem nenhuma frente de saúde mental do servidor
 - [[denise-santos-intel]] : Uma psicanalista bem posicionada no LinkedIn prova que o canal individual da Mallu é disputa real, e pode render tanto quanto o canal da empresa
+- [[desis-network-intel]] : A Desis Network articula laboratórios de design para inovação social em universidades do mundo todo, e não faz psicologia nem intervenção de equipe
 - [[digix-intel]] : A DIGIX é o concorrente mais perigoso porque disputa a mesma atenção digital sobre saúde mental no setor público sem ter profundidade metodológica
 - [[esafi-intel]] : A ESAFI capacita gestor público em competência técnica, e a PAAPS trabalha a condição psicossocial que permite exercer essa competência
+- [[grupo-orzil-intel]] : O Grupo Orzil vende curso de licitação e contrato público para gestor, não intervenção psicossocial de equipe
+- [[ideo-org-intel]] : A IDEO.org aplica design centrado no ser humano contra a pobreza, e não faz psicologia nem intervenção de saúde mental de equipe
+- [[nesta-intel]] : A Nesta é fundação britânica de inovação em políticas públicas, referência de método, não concorrente de serviço
+- [[ore-intel]] : A Oré vende consultoria de impacto social e certificação ESG para empresas, não intervenção psicossocial de equipe
+- [[universaude-intel]] : A UniverSaúde vende inteligência de dados para secretarias de saúde, não intervenção psicossocial de equipe
 - [[yunus-intel]] : Yunus modela negócio de impacto e não faz psicologia, então coexiste com a PAAPS: um modela, o outro cuida de quem executa
+
+### [[minerva]]
+
+Minerva foi uma proposta de parceria universitária pausada, recusada no escopo, arquivada como ideia para reativar quando surgir oportunidade parecida
+
 
 ### [[paaps-ai-first]]
 
@@ -146,7 +159,7 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 *Quem: gente e instituição*
 
 - [[Entidades]] : Quem: gente e instituição
-- [[associacao-allos]] `historico` : Associação Allos incubou a PAAPS em fase inicial; hoje não existe relação ativa
+- [[associacao-allos]] : Associação Allos incubou a PAAPS em fase inicial; hoje não existe relação ativa
 - [[digging-clausula-govtech]] : O PAAPS é ativo intangível pré-existente da DIGGING e não pode ser alienado em licitação, só licenciado
 - [[digging-composicao-societaria]] : A DIGGING tem composição societária 99% feminina e capital de R$ 95.400 integralizado, com administração isolada ou conjunta das duas
 - [[digging-ficha-juridica]] : Ficha cadastral completa da DIGGING: CNPJ, objeto social alínea por alínea, cláusula GovTech, sócias e checklist de habilitação
@@ -162,11 +175,10 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 - [[mallu-vasconcellos]] : Quem é Mallu Vasconcellos, o que ela faz e por que hoje ela e a PAAPS são praticamente a mesma coisa
 - [[objetivos-de-desenvolvimento-sustentavel-onu]] : Os 17 ODS são o arcabouço institucional da Teoria da Mudança do Desafio Regenera, ligado à Yunus
 - [[paaps]] : Definição institucional da PAAPS para consulta interna, escrita depois que a Mallu recusou a mesma explicação como copy de site
-- [[prosames]] : PROSAMES é o programa de saúde mental do servidor da Associação Allos, referência direta de mercado
-- [[refazenda-rio-xopoto]] `historico` : Refazenda Rio Xopotó, em Desterro do Melo, foi parceria de 2024 e hoje não há relação ativa
+- [[refazenda-rio-xopoto]] : Refazenda Rio Xopotó, em Desterro do Melo, foi parceria de 2024 e hoje não há relação ativa
 - [[sara-vitral]] : Sara Vitral, candidata a deputada estadual por Minas Gerais, fez collab em vídeo com a Mallu
 - [[schwartz-center]] : O Schwartz Center, de Boston, licencia hoje as Schwartz Rounds no Reino Unido e na Irlanda, e é a referência internacional que a PAAPS cita
-- [[universaude]] : UniverSaúde é GovTech de inteligência de dados em saúde para secretarias municipais, referência de posicionamento GovTech
+- [[vo-xopoto]] : Vó Xopotó é a marca autônoma dos produtores de Desterro do Melo, nascida em 2025 a partir da Refazenda Rio Xopotó
 - [[yago-torres]] : Yago Torres, candidato a deputado estadual por São Paulo, já fez collab com a PAAPS
 - [[yunus-negocios-sociais]] : Yunus Negócios Sociais é referência de metodologia de impacto e parceira ativa via Desafio Regenera
 
@@ -176,16 +188,19 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 
 - [[Histórias]] `pendente` : A porta de entrada do repositório de histórias vividas pela Mallu
 - [[bela-vista-e-materlandia-2025]] : Mais de 180 servidores acompanhados em Bela Vista de Minas e Materlândia, e o primeiro diagnóstico de gestão pública da PAAPS
+- [[carta-compromisso-desterro-do-melo]] : Os três candidatos a prefeito de Desterro do Melo assinaram juntos, antes da eleição de 2024, uma carta compromisso baseada nos objetivos da ONU para 2050
 - [[complexo-da-mare-2025]] : Um ano de encontros semanais com mães de escola municipal no Complexo da Maré, território marcado pelo conflito armado urbano
-- [[criancas-vitimas-de-violencia-sexual]] `pendente` : A Mallu trabalhou com crianças vítimas de exploração e violência sexual
-- [[cuidados-paliativos]] `pendente` : A Mallu trabalhou com cuidados paliativos antes de fundar a PAAPS
+- [[criancas-vitimas-de-violencia-sexual]] : Pelo PET Psicologia da PUC-SP, a Mallu acompanhou psicossocialmente adolescentes vítimas de violência e exploração sexual em Heliópolis, de 2022 a 2024
+- [[cuidados-paliativos]] : A Mallu estagiou em cuidados paliativos no Centro Dia Angels 4U, no Butantã, de fevereiro a julho de 2023, e publicou sobre a experiência
 - [[desterro-do-melo-2024]] : Um ano inteiro dentro da rotina da rede pública de Desterro do Melo, em Minas, com saúde e educação completas
-- [[ministerio-publico-mulheres-vitimas-de-racismo]] `pendente` : A Mallu trabalhou com mulheres vítimas de racismo no Ministério Público
+- [[entrada-pela-educacao-desterro-do-melo]] : Como a PAAPS entrou em Desterro do Melo pela escola, do primeiro almoço de vínculo até o primeiro serviço remunerado
+- [[entrada-pela-saude-desterro-do-melo]] : Como a PAAPS entrou na UBS de Desterro do Melo, pela auto-organização das trabalhadoras da saúde no Setembro Amarelo
+- [[ministerio-publico-mulheres-vitimas-de-racismo]] : No projeto de extensão Racismo, Gênero e Branquitude, a Mallu escutou vítimas de crimes de racismo pelo Ministério Público de São Paulo, de agosto de 2022 a março de 2023
 - [[mudanca-para-o-interior-de-minas]] : Em 2024 a Mallu saiu de São Paulo capital para uma cidade de menos de 3 mil habitantes em Minas
 - [[proinape-rio-2025]] : Mais de 300 horas de plantão psicológico e grupos na Rede Municipal de Educação do Rio, pelo PROINAPE
-- [[puc-sp]] `pendente` : A Mallu se formou na PUC-SP, que ela descreve como uma das melhores universidades da América Latina
+- [[puc-sp]] : A formação da Mallu na PUC-SP entre 2021 e 2024, com Liga Acadêmica, Centro Acadêmico, monitoria e as duas primeiras publicações
 - [[refazenda-rio-xopoto-2024]] `pendente` : A Mallu passou o ano de 2024 inteiro na Refazenda Rio Xopotó
-- [[sistema-socioeducativo]] `pendente` : A Mallu trabalhou no sistema socioeducativo antes de fundar a PAAPS
+- [[sistema-socioeducativo]] : Duas passagens da Mallu pelo sistema socioeducativo: estágio observacional em Tremembé, SP, em 2023, e educadora comunitária no Instituto ELO, BH, em 2025
 
 ## 🟢 Conceitos
 
@@ -211,6 +226,7 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 - [[o-que-a-paaps-e]] : A PAAPS é um programa de tecnologia social em psicologia, com três marcas que a definem: diagnóstico antes, coletivo como unidade, capacidade instalada como entrega
 - [[o-que-a-paaps-recusa-ser]] : A lista do que a PAAPS recusa ser, escrita com a mesma clareza do que ela é
 - [[paaps-e-uma-transposicao]] : A PAAPS é a tradução para a rede pública da consultoria boutique que a DIGGING já vende, e é isso que responde à pergunta sobre prova de mercado
+- [[projeto-avulso]] : Projeto Avulso é a entrega pontual com uma lista de ações dentro, menor que um projeto grande e maior que uma tarefa única
 - [[roda-nao-e-o-jeito-barato]] : Trabalhar em roda é o formato que a OMS reconhece, não uma forma barata de atender muita gente de uma vez
 - [[saude-social-nao-e-vista-como-saude]] : Dentro do hospital, o laudo médico vale como saúde e o trabalho social não, o que faz o paciente sair sem direitos
 
@@ -223,8 +239,10 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 - [[anatomia-do-carrossel-aprovado]] : O que faz funcionar o primeiro carrossel do @paaps.brasil aprovado sem rodada de correção, dissecado slide a slide
 - [[as-sete-perguntas-antes-de-entregar]] : As sete perguntas que qualquer agente responde antes de entregar peça, e a resposta certa de cada uma
 - [[assinatura-intelectual-mallu]] : A Mallu escreve em três movimentos: mostra o fenômeno, desmonta a premissa dominante e nomeia a raiz estrutural
+- [[atribuicao-retroativa-a-paaps]] : Ação de campo da Mallu antes de a marca PAAPS existir pode ser narrada como ação da PAAPS, inclusive em peça pública
 - [[capilarizado-nunca-capitalizado]] : O SUS é capilarizado, nunca capitalizado, e dizer o contrário derruba a credibilidade da peça inteira
 - [[chapeu-eyebrow-proibido]] : A linha curta em caixa alta espaçada acima de um título é banida em qualquer peça, e o rótulo bom vira título grande em vez de sumir
+- [[como-citar-bela-vista-proinape-mare]] : Bela Vista de Minas, PROINAPE e Complexo da Maré podem ser citados, estritamente como sob gestão da PAAPS
 - [[conteudo-sem-razao-nao-entra]] : Todo conteúdo precisa de razão de existir, e volume sem propósito não entra na grade
 - [[copy-com-conectivos]] : Copy se escreve com conectivos que amarram o raciocínio, nunca como lista justaposta de entregas
 - [[criterios-design]] : Lista de checagem verificável que o Crítico de Design aplica antes de qualquer peça fechar
@@ -243,6 +261,7 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 - [[nao-e-x-e-y]] : A estrutura 'não é X, é Y' é exceção rara de no máximo uma por peça, e só passa se o X negado for crença que alguém de verdade tem
 - [[nunca-afirmar-tendencia-sem-verificar]] : Toda alegação de tendência numérica ou social passa pela régua de verificação, inclusive dentro de copy e pitch
 - [[paaps-brasil-e-nome-proprio]] : Em peça pública escreve-se PAAPS ou PAAPS Brasil, nunca a expansão da sigla, que só existe dentro do contrato social
+- [[paragrafo-padrao-email-institucional]] : O parágrafo que abre qualquer e-mail institucional descrevendo o que a PAAPS faz, com o nome do município sempre personalizado
 - [[qualidade-frontend]] : Princípios de design de alta qualidade escritos de forma agnóstica de meio, válidos tanto para HTML quanto para peça no Canva
 - [[segredo-em-arquivo-commitado]] : Valor real de segredo ou dado pessoal nunca pode ser escrito em arquivo que vai pro git
 - [[sem-apropriar-sofrimento-alheio]] : Case e história de campo são ativos, mas nunca exposição de pessoa ou coletivo vulnerável para fim de marketing
@@ -264,6 +283,7 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 - [[Método]] : Como a PAAPS trabalha
 - [[base-teorica]] : Base teórica destilada dos fichamentos da Mallu em movimentos de raciocínio utilizáveis, hoje ancorada na Psicologia Sócio-Histórica
 - [[diagnostico-360]] : O Diagnóstico 360 é a leitura da rede do município e a porta de entrada comercial da PAAPS, a R$ 10 mil
+- [[envio-de-email-institucional]] : E-mail em nome da PAAPS sai sempre por relacionamento@paaps.com.br via Titan, nunca Gmail, e a ferramenta certa muda por caso
 - [[fontes-aceitas]] : Quais fontes valem numa pesquisa da PAAPS, quais estão bloqueadas, e o ritual de 3 a 5 ciclos com parágrafo reflexivo antes de cada busca
 - [[jornada-do-cliente-paaps]] : O cliente entra pelo Diagnóstico 360, segue nas Rodas de Equipe e é acompanhado pelo Ponto de Apoio
 - [[linha-epistemologica-estrutural]] : A linha epistemológica da PAAPS é estrutural e sistêmica, e isso decide toda análise e todo conteúdo
@@ -272,6 +292,7 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 - [[metadesign-meta-jogo]] : Os quatro papéis do Meta-Jogo de Caio Vassão nomeiam o papel de facilitação da psicóloga na Roda de Equipe
 - [[metodologia-paaps]] : O que a PAAPS entrega e como explica cada frente, ditado pela Mallu em 02/08/2026
 - [[motor-da-paaps]] : As peças da PAAPS formam um motor: o conhecimento entra pela consultoria, chega pela Roda, é entregue por psicóloga local e volta como dado que melhora o método
+- [[projetos-esg-para-empresas]] : A PAAPS oferece Projetos ESG personalizados para empresas, mas empresa nunca é persona de conteúdo público
 - [[roda-de-equipe-paaps]] : A Roda de Equipe é o encontro mensal de até 10 servidores conduzido por psicóloga formada no método, em três fases
 - [[supervisao-da-metodologia]] : Quem faz a supervisão na metodologia PAAPS, e por que nunca se escreve 'supervisão clínica em campo'
 - [[tres-frentes-de-oferta]] : A PAAPS vende três frentes: cuidado e integração de rede, treinamentos, e urgências e eventos extremos
@@ -281,18 +302,27 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 *O que veio de fora e dá para reconferir*
 
 - [[Fontes]] : O que veio de fora e dá para reconferir
+- [[afastamentos-saude-mental-2025-inss]] `pendente` : O Brasil bateu recorde de 534 mil afastamentos por saúde mental em 2025, alta de 13,2% sobre 2024, e o burnout cresceu 800% em 4 anos
 - [[anotacoes-reuniao-joyce]] : As anotações de caderno da Mallu na escuta com a Joyce, assistente social, ditadas em 12/09/2026
 - [[ata-registro-precos-saude-mental-servidor]] : O governo federal previu R$ 26,9 milhões em ata de registro de preços para acolher a saúde mental de servidores
+- [[carrossel-vendas-pra-quem-e-como-funciona]] : Carrossel de vendas de 6 peças (pra quem é, como funciona, o que resolve) com o detalhamento das três perguntas do diagnóstico
+- [[censopsi-2022-precariedade-psicologia]] : O CensoPsi 2022 do CFP mostra que 55,2% dos psicólogos brasileiros precisam de mais de um vínculo para viver, porque o mercado paga por acúmulo, não por profundidade
 - [[dados-afastamento-por-transtorno-mental]] : Afastamentos por transtorno mental bateram recorde da década em 2025 e custam cerca de R$ 3,5 bilhões por ano ao INSS
 - [[dados-autorizados-do-site]] : Os quatro dados que estão no ar no site da PAAPS, com a referência completa de cada um
 - [[dados-do-adoecimento-de-quem-sustenta-a-rede]] : Os números do tamanho da rede pública brasileira e do adoecimento ligado ao trabalho de quem a sustenta
 - [[dados-do-esgotamento-e-erro]] : Quem atende esgotado tem o dobro de chance de errar no atendimento, e o endividamento do servidor alimenta esse esgotamento
+- [[estresse-no-trabalho-brasil-isma]] `pendente` : O Brasil é o 2º país do mundo com a força de trabalho mais estressada, 72% relatam estresse e 32% têm sintomas de burnout
+- [[eventos-traumaticos-policial-vs-civil]] `pendente` : Em 40 anos, um civil vive cerca de 5 eventos traumáticos e um policial cerca de 900
+- [[igd-repasse-automatico-formacao-equipe]] : O IGD repassa automaticamente, todo mês, dinheiro que o município já pode gastar em formação de equipe da assistência social, e não usar reduz o repasse seguinte
+- [[microcredito-periodicidade-do-encontro]] : Um experimento com microcrédito em Calcutá isolou o efeito do encontro periódico entre as mesmas pessoas, e ele reduziu a inadimplência em três vezes; a responsabilidade solidária do grupo não teve esse efeito
+- [[minerva-paaps-framework-notion]] `pendente` : O Notion Minerva-paaps FrameWork descreve uma parceria pausada, ainda não representada no cofre, em que universitários da Minerva viveriam imersão na Refazenda Rio Xopotó para atuar dentro do PAAPS em Desterro do Melo
 - [[nr-01]] : A NR-01 não vincula prefeitura nem servidor estatutário, então ela pode ser citada como referência de enquadramento mas nunca como obrigatoriedade legal
 - [[obras-da-ciencia-que-sustentam-o-metodo]] : As quatro obras que o site apresenta como base científica do método PAAPS
 - [[oms-recomendacao-formar-gestores]] : Formar gestores e trabalhar a equipe é a única recomendação forte da OMS em saúde mental no trabalho
 - [[oms-solidao-e-conexao-social]] : Uma em cada seis pessoas no mundo é afetada pela solidão, e o isolamento social é associado a cem mortes por hora
 - [[pitch-impulsiona-serasa]] : O pitch v5 e o handout da inscrição no Impulsiona Startups, onde o argumento da PAAPS está mais destilado
-- [[regenerative-capitalism-2015-pdf]] `pendente` : Paper de 2015 sobre Capitalismo Regenerativo, ainda não lido por completo (extração de PDF indisponível no ambiente)
+- [[pitch-paaps-short-2]] : O deck curto paaps-short-2, com os dados frios (nome, data, escala) dos quatro casos de campo da PAAPS
+- [[recursos-a-fundo-perdido-subvencao]] : Recurso a fundo perdido é financiamento não reembolsável por edital de subvenção (FINEP e afins), via de captação que a PAAPS ainda não tinha mapeado
 - [[regulacao-cfp-e-crp]] : Falar de psicologia é terreno regulado pelo CFP, e isso limita o que pode ser escrito e por quem
 - [[serie-caio-vassao-inovacao-regenerativa]] : Série de ensaios de Caio Vassão sobre o Novo Ciclo Global de Inovação, base da tese de inovação regenerativa
 

@@ -24,15 +24,38 @@ que aconteceu lá. Ver [[copy-com-conectivos]].
 
 Programa Tô Indo, da Globo.
 
+## Como o projeto se nomeia e o que ele fez
+
+O nome do projeto é **Economia Solidária e Cuidado na Rede**. Trabalhou por oficinas
+psicossociais e pesquisa-ação, colocando os próprios trabalhadores da linha de frente
+como protagonistas de sua própria análise e cuidado. A Carta Melo 2050 (ver
+[[carta-compromisso-desterro-do-melo]]) alinha a visão de 50 anos do município aos ODS da
+ONU. Mais de 5 eventos grandes de conscientização ao longo do ano, incluindo o Family Day
+com mais de 120 pais e cuidadores.
+
 ## Condição do trabalho
 
 Conduzida por valor simbólico, em parceria com projeto de pesquisa universitária, projeto
 local e turismo comunitário. Isso importa: não foi contrato, foi campo.
 
+## O ano por dentro, em três frentes
+
+[[entrada-pela-educacao-desterro-do-melo]] (a escola, o primeiro grupo, o primeiro serviço
+remunerado) · [[entrada-pela-saude-desterro-do-melo]] (a UBS, o Setembro Amarelo) ·
+[[carta-compromisso-desterro-do-melo]] (os três candidatos a prefeito, a mesma mesa)
+
+Onde a Mallu morou durante esse ano inteiro: [[refazenda-rio-xopoto-2024]].
+
+## Como isso se nomeia hoje
+
+Ver [[atribuicao-retroativa-a-paaps]]: a marca PAAPS não existia em 2024, mas a ação já
+era ela, e por isso se narra "a PAAPS foi convidada", "a PAAPS coorganizou".
+
 ## Ligações
 
 [[mudanca-para-o-interior-de-minas]] · [[complexo-da-mare-2025]] ·
-[[proinape-rio-2025]] · [[bela-vista-e-materlandia-2025]] · [[Histórias]]
+[[proinape-rio-2025]] · [[bela-vista-e-materlandia-2025]] · [[Histórias]] ·
+[[refazenda-rio-xopoto-2024]] · [[pitch-paaps-short-2]]
 
 ## Onde isso serve
 

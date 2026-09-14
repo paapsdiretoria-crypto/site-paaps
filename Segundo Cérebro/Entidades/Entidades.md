@@ -38,7 +38,7 @@ Uma nota por pessoa e por instituição que importa para a PAAPS. Cada uma diz q
 - [[refazenda-rio-xopoto]] : Refazenda Rio Xopotó, em Desterro do Melo, foi parceria de 2024 e hoje não há relação ativa
 - [[sara-vitral]] : Sara Vitral, candidata a deputada estadual por Minas Gerais, fez collab em vídeo com a Mallu
 - [[schwartz-center]] : O Schwartz Center, de Boston, licencia hoje as Schwartz Rounds no Reino Unido e na Irlanda, e é a referência internacional que a PAAPS cita
-- [[universaude]] : UniverSaúde é GovTech de inteligência de dados em saúde para secretarias municipais, referência de posicionamento GovTech
+- [[vo-xopoto]] : Vó Xopotó é a marca autônoma dos produtores de Desterro do Melo, nascida em 2025 a partir da Refazenda Rio Xopotó
 - [[yago-torres]] : Yago Torres, candidato a deputado estadual por São Paulo, já fez collab com a PAAPS
 - [[yunus-negocios-sociais]] : Yunus Negócios Sociais é referência de metodologia de impacto e parceira ativa via Desafio Regenera
 

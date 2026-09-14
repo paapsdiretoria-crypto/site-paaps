@@ -24,7 +24,7 @@ notion-research-documentation, evita-padrao-ia…), e sua pergunta literal em 12
 corrigida, só contornada (o Claude lia o arquivo manualmente e imitava a skill).
 
 **Ação:** converter cada `nome.md` → `nome/SKILL.md` (o frontmatter já está correto);
-mesma coisa para `site/.claude/skills/frontend-design.md`.
+mesma coisa para `codigo/site/.claude/skills/frontend-design/SKILL.md`.
 
 ## 2. Hook de auto-push perde trabalho silenciosamente (CORREÇÃO) ✅ executado
 
@@ -33,7 +33,7 @@ arquivos novos (untracked)**. Se a sessão só criou arquivos novos (caso comum:
 carrossel, novo log, nova skill), o hook conclui "nada mudou" e não commita nem faz push.
 O CLAUDE.md promete "auto-push ativo", então ninguém confere — trabalho fica para trás.
 
-**Evidência:** `sessoes/sessao-2026-07-06.md` criado pelo hook às 13:49 de hoje e nunca
+**Evidência:** o log de sessão de 06/07/2026, criado pelo hook às 13:49 daquele dia e nunca
 commitado. Problema secundário: o log de sessão registra `git status --short` cru,
 que se autopolui (registra o próprio log) e duplica blocos idênticos.
 
@@ -120,7 +120,7 @@ Sessões PAAPS aconteceram em raízes sem contexto nenhum (sem CLAUDE.md, sem sk
 hooks de auto-push — nada é commitado lá):
 
 - `~/Documents/Claude Projects/Projeto Minerva` — pitch/posicionamento PAAPS (22 e 26/jun).
-- `conteudo/dashboard/js/Claude Portfólio Lucia` — um site inteiro construído **dentro
+- `codigo/dashboard/js/Claude Portfólio Lucia` — um site inteiro construído **dentro
   da pasta js do dashboard** (13/jun).
 - `~/` (home) — sessões aplicando skills PAAPS que falham lá (a skill é do projeto).
 - `~/Desktop/Mallu Pessoal` — finanças (ok ser separado, mas sem memória: *"já é a 20ª
@@ -160,7 +160,7 @@ provou o valor).
 
 ## 11. Dashboard publicado no Pages está quebrado (DECISÃO PENDENTE) ⚠️
 
-O workflow `deploy-dashboard.yml` publica `conteudo/dashboard/` no GitHub Pages, mas
+O workflow `deploy-dashboard.yml` publica `codigo/dashboard/` no GitHub Pages, mas
 `js/config.js` (com a chave Windsor) é ignorado — correto não publicar a chave, porém o
 dashboard público carrega sem dados (404 no config.js). Você pediu em 12/jun um "link
 sempre atualizado para colocar no Notion" — esse link hoje não funciona.

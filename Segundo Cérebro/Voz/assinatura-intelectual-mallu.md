@@ -16,7 +16,7 @@ aliases: [assinatura intelectual, três movimentos, nomear e não explicar]
 2. **Desmonta a premissa que sustenta a leitura dominante**, o que a maioria não questiona.
 3. **Nomeia a raiz estrutural**, o que o sistema prefere que não seja nomeado.
 
-Nas palavras dela: *"Argumento sempre pela raiz de uma problemática, buscando enxergar e
+Nas palavras dela: *"Argumento sempre pela raiz, buscando enxergar e
 desvelar as premissas."*
 
 ## Nomear, nunca explicar

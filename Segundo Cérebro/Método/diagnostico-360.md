@@ -24,9 +24,19 @@ O primeiro diagnóstico de gestão pública da PAAPS aconteceu em Bela Vista de 
 Materlândia, em 2025, com mais de 180 servidores acompanhados. Ver
 [[bela-vista-e-materlandia-2025]].
 
+## As três perguntas que o diagnóstico responde antes de qualquer proposta
+
+Cada projeto nasce de metodologia própria e construção participativa, nunca de solução
+pronta. As três perguntas, na ordem:
+
+1. Quem são os trabalhadores, e quais são as tensões reais do contexto?
+2. O que a instituição precisa enfrentar?
+3. Quais caminhos fazem sentido no cenário dela?
+
 ## Ligações
 
-[[jornada-do-cliente-paaps]] · [[roda-de-equipe-paaps]] · [[bela-vista-e-materlandia-2025]]
+[[jornada-do-cliente-paaps]] · [[roda-de-equipe-paaps]] · [[bela-vista-e-materlandia-2025]] ·
+[[carrossel-vendas-pra-quem-e-como-funciona]]
 
 ## Onde isso serve
 

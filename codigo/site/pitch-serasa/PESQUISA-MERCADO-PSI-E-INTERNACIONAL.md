@@ -154,7 +154,7 @@ a evidência clínica:
 | Condução | facilitadores treinados |
 | Mudança recente | em dezembro de 2025 os programas passaram da Point of Care Foundation de volta para o Schwartz Center |
 
-**Por que isso vale tanto:** o `CHECKLIST-PITCH.md` registra no item F2 a dúvida sobre o peso
+**Por que isso vale tanto:** a rodada de revisão do deck deixou em aberto a dúvida sobre o peso
 do licenciamento no deck, com a ressalva de que "é um produto que ainda não existe".
 
 > **Existe, e está rodando há dezesseis anos, em mais de 200 organizações, em três setores,
@@ -286,7 +286,7 @@ provar que impacto e sustentação financeira cabem juntos.
 > se paga, e está transpondo esse método para onde ele importa mais.
 
 Isso conecta a Frente C diretamente à tese da transposição, registrada na Parte 0 do
-`PLANO-REVISAO-ESTRUTURAL.md`.
+`MANUAL-MODELO-E-PITCH.md`.
 
 ## C.3 Onde isso entra no deck
 

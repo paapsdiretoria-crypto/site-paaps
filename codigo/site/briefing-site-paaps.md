@@ -96,7 +96,7 @@ sobre preto a **70% de transparência**, leve.
 
 **Fontes:** Helvetica/Nimbus Sans no corpo (400 e 700, letter-spacing 0), League Spartan em título,
 Evermore em palavra-chave. Todas embutidas por `@font-face` de
-`Arquivos/fontes-tipograficas/`. **Nunca Google Fonts.**
+`Acervo/fontes-tipograficas/`. **Nunca Google Fonts.**
 
 **Regras técnicas que vieram do benchmark:**
 - Primeira dobra **estática**, sem depender de JavaScript. Nenhum número pode zerar se o script
@@ -119,8 +119,8 @@ Yunus (estética da página de emergências) · O Futuro das Coisas (formulário
 - Autoria não localizada: aplicar com legenda e **sinalizar a pendência na entrega**
 
 **Radilson Carlos Gomes, fotógrafo do SUS**, é a espinha visual do site. 33 fotos em 2560px em
-`Arquivos/fotos-radilson/`. São gente de verdade, SUS de verdade, Brasil de verdade.
-Acervo próprio: `Arquivos/fotos/` (316 fotos), Mallu em `fotos/FOTOS mallu/`.
+`Acervo/fotos-radilson/`. São gente de verdade, SUS de verdade, Brasil de verdade.
+Acervo próprio: `Acervo/fotos/` (316 fotos), Mallu em `fotos/FOTOS mallu/`.
 
 **A Mallu aparece só na seção dela na home:** breve, humana, impactante. Em nenhum outro lugar.
 

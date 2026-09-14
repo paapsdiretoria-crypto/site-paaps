@@ -24,8 +24,10 @@ Toda regra de escrita e de imagem da PAAPS mora aqui. Quem vai escrever ou desen
 - [[anatomia-do-carrossel-aprovado]] : O que faz funcionar o primeiro carrossel do @paaps.brasil aprovado sem rodada de correção, dissecado slide a slide
 - [[as-sete-perguntas-antes-de-entregar]] : As sete perguntas que qualquer agente responde antes de entregar peça, e a resposta certa de cada uma
 - [[assinatura-intelectual-mallu]] : A Mallu escreve em três movimentos: mostra o fenômeno, desmonta a premissa dominante e nomeia a raiz estrutural
+- [[atribuicao-retroativa-a-paaps]] : Ação de campo da Mallu antes de a marca PAAPS existir pode ser narrada como ação da PAAPS, inclusive em peça pública
 - [[capilarizado-nunca-capitalizado]] : O SUS é capilarizado, nunca capitalizado, e dizer o contrário derruba a credibilidade da peça inteira
 - [[chapeu-eyebrow-proibido]] : A linha curta em caixa alta espaçada acima de um título é banida em qualquer peça, e o rótulo bom vira título grande em vez de sumir
+- [[como-citar-bela-vista-proinape-mare]] : Bela Vista de Minas, PROINAPE e Complexo da Maré podem ser citados, estritamente como sob gestão da PAAPS
 - [[conteudo-sem-razao-nao-entra]] : Todo conteúdo precisa de razão de existir, e volume sem propósito não entra na grade
 - [[copy-com-conectivos]] : Copy se escreve com conectivos que amarram o raciocínio, nunca como lista justaposta de entregas
 - [[criterios-design]] : Lista de checagem verificável que o Crítico de Design aplica antes de qualquer peça fechar
@@ -44,6 +46,7 @@ Toda regra de escrita e de imagem da PAAPS mora aqui. Quem vai escrever ou desen
 - [[nao-e-x-e-y]] : A estrutura 'não é X, é Y' é exceção rara de no máximo uma por peça, e só passa se o X negado for crença que alguém de verdade tem
 - [[nunca-afirmar-tendencia-sem-verificar]] : Toda alegação de tendência numérica ou social passa pela régua de verificação, inclusive dentro de copy e pitch
 - [[paaps-brasil-e-nome-proprio]] : Em peça pública escreve-se PAAPS ou PAAPS Brasil, nunca a expansão da sigla, que só existe dentro do contrato social
+- [[paragrafo-padrao-email-institucional]] : O parágrafo que abre qualquer e-mail institucional descrevendo o que a PAAPS faz, com o nome do município sempre personalizado
 - [[qualidade-frontend]] : Princípios de design de alta qualidade escritos de forma agnóstica de meio, válidos tanto para HTML quanto para peça no Canva
 - [[segredo-em-arquivo-commitado]] : Valor real de segredo ou dado pessoal nunca pode ser escrito em arquivo que vai pro git
 - [[sem-apropriar-sofrimento-alheio]] : Case e história de campo são ativos, mas nunca exposição de pessoa ou coletivo vulnerável para fim de marketing

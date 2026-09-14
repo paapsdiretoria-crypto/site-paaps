@@ -21,14 +21,15 @@ Cada projeto é uma pasta, com uma nota-capa e as notas dele. O nome de toda not
 - **[[captacao]]** : A frente de investimento, editais e inscrições, com o histórico do que já foi enviado
 
 - **[[cliente-ideal-paaps]]** : Quem é o cliente ideal da PAAPS, montado a partir de evidência e não de suposição
-  [[itiquira-mt-cliente-ideal]] · [[joyce-cliente-ideal]] · [[o-que-o-cliente-ideal-pede]]
+  [[claudia-cliente-ideal]] · [[itiquira-mt-cliente-ideal]] · [[joyce-cliente-ideal]] · [[o-que-o-cliente-ideal-pede]] · [[rh-genuino-cliente-ideal]]
 
 - **[[clinica-mallu-2027]]** : A clínica de Psicologia Clínica da Mallu Vasconcellos, prevista para 2027
 
 - **[[conteudo-mallu]]** : A frente de conteúdo do perfil pessoal da Mallu, em todos os canais
+  [[instagram-conteudo-mallu]] · [[linkedin-conteudo-mallu]]
 
 - **[[conteudo-paaps]]** : A frente de conteúdo institucional da PAAPS, em todos os canais
-  [[site-paaps-no-ar]]
+  [[arquitetura-dos-cinco-canais-conteudo-paaps]] · [[instagram-conteudo-paaps]] · [[linkedin-conteudo-paaps]] · [[site-paaps-no-ar]]
 
 - **[[digging-times-e-lideres]]** : A frente de times e líderes conduzida pela Fabi Vasconcellos dentro da DIGGING
 
@@ -36,12 +37,15 @@ Cada projeto é uma pasta, com uma nota-capa e as notas dele. O nome de toda not
   [[acordos-e-valores-ecoa]] · [[eras-ecoa]] · [[estrutura-de-grupos-ecoa]] · [[identidade-ecoa]] · [[onboarding-ecoa]] · [[porta-voz-ecoa]] · [[posicionamento-ecoa]] · [[rituais-ecoa]] · [[tom-de-voz-ecoa]]
 
 - **[[estrategia-de-negocio]]** : A frente que decide em que negócio a PAAPS está e como ela se sustenta
-  [[modelo-de-negocio-estrategia]] · [[pesquisa-de-mercado-estrategia]] · [[ponto-de-apoio-estrategia]] · [[roadmap-estrategia]] · [[tam-sam-som-estrategia]]
+  [[caminhos-legais-venda-ao-governo]] · [[modelo-de-negocio-estrategia]] · [[pesquisa-de-mercado-estrategia]] · [[ponto-de-apoio-estrategia]] · [[roadmap-estrategia]] · [[tam-sam-som-estrategia]]
 
 - **[[gestao-estrategica-paaps]]** : Como a PAAPS planeja: Objetivo, Resultado-Chave, Projeto, e os prazos que cada um pode ter
   [[metas-2026]] · [[quadro-de-projetos-atual]]
 
 - **[[inteligencia-competitiva]]** : A frente que acompanha quem concorre com a PAAPS e o que a gente faz diferente
+  [[a-lacuna-que-a-paaps-ocupa-intel]] · [[agenda-publica-intel]] · [[asdoseculo21-intel]] · [[ashoka-intel]] · [[cepam-intel]] · [[dataway-intel]] · [[denise-santos-intel]] · [[desis-network-intel]] · [[digix-intel]] · [[esafi-intel]] · [[grupo-orzil-intel]] · [[ideo-org-intel]] · [[nesta-intel]] · [[ore-intel]] · [[universaude-intel]] · [[yunus-intel]]
+
+- **[[minerva]]** : Minerva foi uma proposta de parceria universitária pausada, recusada no escopo, arquivada como ideia para reativar quando surgir oportunidade parecida
 
 - **[[paaps-ai-first]]** : O mapa da máquina da PAAPS: o que roda sozinho, o que dispara cada coisa e quem é o gate
   [[agentes-ai-first]] · [[arquitetura-agentes-v2-ai-first]] · [[como-trabalhar-com-claude-ai-first]] · [[hooks-e-auto-push-ai-first]] · [[regra-de-workspace-ai-first]] · [[risco-de-marca-ponto-de-apoio]] · [[sistema-gto-ai-first]] · [[skills-ai-first]] · [[workflow-agentes-ai-first]]

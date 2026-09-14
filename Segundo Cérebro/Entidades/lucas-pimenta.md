@@ -12,6 +12,8 @@ atualizado: 2026-09-13
 **Psicólogo, supervisor na metodologia PAAPS Brasil, nível 3 da equipe semente.** Cunhou o
 conceito do [[avesso-da-clinica]].
 
+**Confirmado ativo pela Mallu em 13/09/2026.**
+
 ## Trajetória
 
 Começou no Aglomerado da Serra, em Belo Horizonte. Desde então o trabalho dele está onde

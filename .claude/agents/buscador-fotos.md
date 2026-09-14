@@ -119,7 +119,7 @@ O campo `File to drag`, quando preenchido (29 das 172), já dá o caminho relati
 
 ```bash
 cd "/Users/mac/Documents/SITE PAAPS"
-find Arquivos/fotos "projetos/minerva/BANCO DE FOTOS" -iname "IMG_7852.jpg"
+find Acervo/fotos "projetos/minerva/BANCO DE FOTOS" -iname "IMG_7852.jpg"
 ```
 
 Use `-iname`: o Notion guarda `.jpg` minúsculo e o disco costuma ter `.JPG` maiúsculo.
@@ -132,12 +132,12 @@ Use `-iname`: o Notion guarda `.jpg` minúsculo e o disco costuma ter `.JPG` mai
 |---|---|---|
 | `projetos/minerva/BANCO DE FOTOS/REDE PÚBLICA BRASILEIRA/` | 33 jpg | **A base documental pública.** ACS, ESF, UBS, visita domiciliar, território. Ignore os 9 PNG: são capturas de tela, não fotos |
 | `projetos/minerva/BANCO DE FOTOS/Fotos Refazenda/` | 23 | Refazenda, coletivo, mesa, terra |
-| `Arquivos/fotos/fotos-bvmg-isaac/` | 205 | Bela Vista por fotógrafo profissional. O melhor material próprio |
-| `Arquivos/fotos/case-bela-vista-de-minas/` | 35 jpg + 30 heic | Case Bela Vista |
-| `Arquivos/fotos/maes-atipicas-rj/` | 35 | Projeto Mães Atípicas RJ |
-| `Arquivos/fotos/craftsapiens-mundo-digital/` | 22 | Evento |
-| `Arquivos/fotos/outras-fotos/` | 15 | Miscelânea |
-| `Arquivos/fotos/ecoa-fotos/` | 4 | Exclusivo do Interlocutor ECOA. Não use em carrossel |
+| `Acervo/fotos/fotos-bvmg-isaac/` | 205 | Bela Vista por fotógrafo profissional. O melhor material próprio |
+| `Acervo/fotos/case-bela-vista-de-minas/` | 35 jpg + 30 heic | Case Bela Vista |
+| `Acervo/fotos/maes-atipicas-rj/` | 35 | Projeto Mães Atípicas RJ |
+| `Acervo/fotos/craftsapiens-mundo-digital/` | 22 | Evento |
+| `Acervo/fotos/outras-fotos/` | 15 | Miscelânea |
+| `Acervo/fotos/ecoa-fotos/` | 4 | Exclusivo do Interlocutor ECOA. Não use em carrossel |
 
 **Arquivo `.heic` o Read não abre.** Converta antes, para o scratchpad:
 
@@ -331,7 +331,7 @@ esquecida. Passo a passo real, testado em 31/08/2026:
 
 ## MODO 1B: quando não há disco local (rodando na nuvem)
 
-Testado e funcionando em 01/09/2026. Se `Arquivos/fotos/` não existir no ambiente
+Testado e funcionando em 01/09/2026. Se `Acervo/fotos/` não existir no ambiente
 (sandbox de nuvem, sem o Mac da Mallu), você ainda enxerga a foto de verdade, por outro caminho:
 
 1. Reduza o universo no PhotoBank normalmente (1.1 a 1.2, iguais).

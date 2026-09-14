@@ -38,6 +38,21 @@ entre frequentadores regulares. **Nunca usar "caiu de 25% para 12%":** esses sã
 brutos, e os próprios autores dizem que não consideram as covariáveis. O resultado ajustado
 que eles enunciam é 19%.
 
+## O modelo de licença é precedente direto para a PAAPS
+
+O Schwartz Center licencia hoje em contrato **anual, com renovação automática, faturado uma
+vez por ano, com preço definido pelo número de equipes** que sustentam o programa dentro da
+organização, sem reembolso de taxa de licença nem de treinamento. É a mesma arquitetura que
+o licenciamento da PAAPS propõe (ver [[modelo-de-negocio-estrategia]]), operando há
+dezessete anos. A Point of Care Foundation, que conduziu o programa no Reino Unido e na
+Irlanda de 2009 a 2025, fechou por dificuldade financeira (déficit no último exercício
+fechado, receita caindo 34% do pico), não por falência: os trustees transferiram os
+programas para casas maiores em vez de simplesmente encerrar. **Uma licença que sobrevive à
+falência de quem a operava é evidência de demanda real, não de fragilidade do modelo**,
+mas também é o precedente que um investidor pode usar para perguntar se licenciamento
+sozinho sustenta uma estrutura. A ressalva vale registrar: aquela era uma charity
+britânica financiada por doação, com estrutura de receita diferente da PAAPS.
+
 ## A base teórica da PAAPS não vem daqui
 
 A PAAPS é sustentada por base teórica latino-americana própria. O Schwartz entra como prova

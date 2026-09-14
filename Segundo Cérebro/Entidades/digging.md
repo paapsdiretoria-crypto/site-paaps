@@ -14,14 +14,14 @@ aliases: [DIGGING, razão social, CNPJ, pessoa jurídica]
 contrato e emite nota fiscal é a **DIGGING**. O PAAPS é a metodologia proprietária dela,
 definida no contrato social como "Programa de Aceleração Ativa de Projetos Sociais".
 
-| | |
-|---|---|
-| Razão social | DIGGING DESENVOLVIMENTO E CAPACITACAO ORGANIZACIONAL E INDIVIDUAL LTDA |
-| CNPJ | 05.983.700/0001-67 (matriz) |
-| Situação cadastral | **ATIVA** desde 23/10/2003 |
-| Porte e natureza | ME, Sociedade Empresária Limitada (206-2) |
-| CNAE principal | 85.99-6-04, treinamento em desenvolvimento profissional e gerencial |
-| Contrato vigente | 8ª alteração e consolidação (AC-08), 01/04/2026 |
+|                    |                                                                        |
+| ------------------ | ---------------------------------------------------------------------- |
+| Razão social       | DIGGING DESENVOLVIMENTO E CAPACITACAO ORGANIZACIONAL E INDIVIDUAL LTDA |
+| CNPJ               | 05.983.700/0001-67 (matriz)                                            |
+| Situação cadastral | **ATIVA** desde 23/10/2003                                             |
+| Porte e natureza   | ME, Sociedade Empresária Limitada (206-2)                              |
+| CNAE principal     | 85.99-6-04, treinamento em desenvolvimento profissional e gerencial    |
+| Contrato vigente   | 8ª alteração e consolidação (AC-08), 01/04/2026                        |
 
 ## Por que o erro é grave e não cosmético
 

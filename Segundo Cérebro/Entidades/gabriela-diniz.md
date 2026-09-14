@@ -12,6 +12,8 @@ atualizado: 2026-09-13
 **Psicóloga e atriz há doze anos, supervisora na metodologia PAAPS Brasil, nível 3 da
 equipe semente.** Criou o TEAtrar.
 
+**Confirmada ativa pela Mallu em 13/09/2026.**
+
 ## O TEAtrar
 
 Teatro como ferramenta de desenvolvimento e vínculo, para potencializar a expressão de

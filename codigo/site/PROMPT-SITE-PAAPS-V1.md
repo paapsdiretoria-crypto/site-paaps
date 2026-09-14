@@ -44,7 +44,7 @@
     Evermore. Embutidas por @font-face. NUNCA Google Fonts.
   </fontes_locais>
   <acervo_radilson>
-    Arquivos/fotos-radilson/ (33 originais, até 2560px)
+    Acervo/fotos-radilson/ (33 originais, até 2560px)
     codigo/site/home/img/radilson/ (21 tratadas para web)
   </acervo_radilson>
   <acervo_proprio>

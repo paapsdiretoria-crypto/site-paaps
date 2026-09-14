@@ -24,6 +24,12 @@ executam esse impacto. As duas coexistem sem sobreposição de oferta.
 Participação ativa no Desafio Regenera. O prêmio do desafio é a própria rede Yunus, e o
 CNPJ ativo da DIGGING é critério eliminatório de inscrição (ver [[digging-ficha-juridica]]).
 
+Em 09/09/2026, a Yunus recusou a PAAPS para a modalidade de dívida (capital paciente),
+porque a empresa ainda não tem recorrência de receita estabelecida e um compromisso desse
+tipo agora poderia prejudicar o fluxo de caixa futuro. As portas seguem abertas para
+reavaliar assim que os critérios financeiros forem atingidos. Ver
+[[recursos-a-fundo-perdido-subvencao]] para o caminho novo que essa recusa abriu.
+
 ## Ligações
 
 [[captacao]] · [[digging]] · [[estrategia-de-negocio]]

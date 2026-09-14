@@ -12,7 +12,7 @@ confiar em número digitado à mão.
 
 Tudo parte de uma única linha do modelo: **quantos municípios estão ativos em
 cada ano**, e em qual dos dois regimes. Essa linha é o Degrau 16 de
-`MODELO-PAAPS-COMPLETO.md` e não foi alterada aqui.
+`MANUAL-MODELO-E-PITCH.md` e não foi alterada aqui.
 
 | | Ano 1 | Ano 2 | Ano 3 | Ano 4 | Ano 5 |
 |---|---|---|---|---|---|
@@ -263,5 +263,5 @@ estrutura em nenhuma conta.
 - Pinto EB. **Desmedida do capital: a degradação da saúde mental de servidores
   públicos em uma capital brasileira**. Programa de Pós-Graduação em Política
   Social e Serviço Social, UFRGS. Porto Alegre, 2008 a 2015.
-- `MODELO-PAAPS-COMPLETO.md`, Degrau 16, e `CALCULO-TAM-SAM-SOM.md`, neste
+- `MANUAL-MODELO-E-PITCH.md` e `CALCULO-TAM-SAM-SOM.md`, neste
   mesmo diretório.

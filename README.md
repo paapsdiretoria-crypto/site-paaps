@@ -28,11 +28,13 @@ Minas.
 
 | Pasta | O que é |
 |---|---|
-| `site/` | Site institucional (HTML/CSS/JS) e material de referência de design |
-| `conteudo/` | Equipe de agentes de conteúdo, ciclos, eventos, dashboard de analytics |
+| `Segundo Cérebro/` | **O cofre.** É o que a Mallu abre no Obsidian. Começa por `Mapa/Índice.md` |
+| `codigo/` | Todo o código: site, pitch, agente de WhatsApp, dashboard, ditado. Indexado pelo CodeGraph |
+| `conteudo/` | Pipelines de conteúdo por perfil e por evento |
 | `automacoes/` | **As 5 frentes de automação do negócio** (ver `automacoes/README.md`) |
-| `Arquivos/` | Fontes originais imutáveis: fotos, identidade visual, fontes tipográficas, exports |
-| `Segundo Cérebro/` | Segundo Cérebro sintetizado em markdown: voz da marca, base teórica, ECOA, docs institucionais, log de sessões |
+| `Acervo/` | Fontes originais imutáveis: foto, identidade visual, fonte tipográfica, export (fora do git) |
+| `hyperframes/` | Ferramenta de vídeo, render de HTML para MP4 |
+| `sessoes/` | Log operacional diário, apagado sozinho a cada 14 dias depois de salvo no GitHub |
 | `.claude/` | Agentes, skills e configuração do Claude Code |
 
 ---

@@ -9,8 +9,9 @@ atualizado: 2026-09-12
 
 # Pesquisa de TCC: SUAS
 
-**Os Saberes das Encruzilhadas e os Servidores Públicos da Linha de Frente.** Trabalho de
-Conclusão de Curso em Psicologia, PUC Minas, Belo Horizonte, 2026.
+**"Os saberes das encruzilhadas e Servidores Públicos Linha de Frente: a subjetividade
+na fronteira epistêmica de quem carrega o Brasil nas costas."** Trabalho de Conclusão de
+Curso em Psicologia, PUC Minas, Belo Horizonte, supervisão de Alexandre Kaitel.
 
 Pesquisa própria, empírica, autorizada e executada no **SUAS de Belo Horizonte** e no
 **Hospital do IPSEMG**. TCC 2 em construção, com a coleta acontecendo nas rodas.
@@ -27,7 +28,7 @@ constrói no TCC e que viram nota em `Conceitos/`. O TCC é a mina; os conceitos
 sai dela.
 
 ## Notas desta pasta
-[[pesquisa-tcc-bh]]
+[[pesquisa-tcc-bh]] · [[sistema-socioeducativo]]
 
 ## Onde isso serve
 Em [[psicologia-social]], em `Conceitos/` e em toda peça que precise de base teórica.

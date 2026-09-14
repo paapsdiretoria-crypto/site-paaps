@@ -30,6 +30,21 @@ Cuidamos de Funcionários Públicos para uma Saúde Mental Coletiva.
 
 Nenhuma expressão nova entra. Adaptação permitida: cortar o começo ou o fim de uma delas.
 
+## Duas frases aprovadas depois, com regra própria (13/09/2026)
+
+- **"Cuidar é um ato coletivo."** Aprovada, e diferente das quatro acima: aqui pode ter
+  variação e criatividade em cima, não só corte de início ou fim.
+- **"Psicologia Social e Sistêmica para as Políticas Públicas e Institutos do Futuro."**
+  Não é para todo cliente: vale para gestão pública e institutos. Para Yunus Negócios
+  Sociais, empresa com ESG ou Responsabilidade Social Empresarial, substituir "Políticas
+  Públicas e Institutos" por "Projetos ESG ou Responsabilidade Social Empresarial". Ver
+  [[projetos-esg-para-empresas]].
+
+## Um claim de ineditismo aprovado
+
+**"Primeira solução em Psicologia Social especializada em Institutos e Rede Pública do
+Brasil."** Aprovado pela Mallu em 13/09/2026, pode ser usado em peça pública.
+
 ---
 
 ## A ideia central
@@ -185,9 +200,10 @@ inicial da rede e uma proposta de composição.
 Travessão grande · linguagem coachesca (mindset, alta performance, virada de chave, escala) ·
 metáforas de guerra · promessa ou garantia de resultado · leitura individualista ou meritocrática ·
 "absenteísmo" como termo principal (é *faltas e afastamentos*) · a expansão da sigla PAAPS ·
-menção a Minerva, [[associacao-allos|Associação Allos]], PROSAMES, Bela Vista de Minas,
+menção a Minerva, [[associacao-allos|Associação Allos]], PROSAMES,
 [[refazenda-rio-xopoto|Refazenda]] ou Motiva (relação encerrada com todas: ver as notas
-de cada uma) ·
+de cada uma). **Bela Vista de Minas, PROINAPE e Complexo da Maré podem ser citados**,
+com a régua de [[como-citar-bela-vista-proinape-mare]] ·
 "cuidar de quem cuida" como eixo (é clichê de mercado e assinatura do concorrente) ·
 comparação ou depreciação de concorrente.
 

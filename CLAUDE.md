@@ -51,7 +51,9 @@ Guarda automática: `bash codigo/verifica-caminhos.sh` falha se alguém quebrar 
 > automação é execução, muda toda semana, e execução some do cofre (regra já escrita em
 > `Segundo Cérebro/Mapa/Visão Geral.md`: "nunca lista de pendência como nota própria").
 > Toda pendência de execução vai para a database Notion "Quadro Estratégico de Projetos"
-> (Status "Tarefas avulsas"), pela skill `tarefa-avulsa-quadro-projetos`, nunca para nota,
+> (Status "Tarefas avulsas", que a Mallu chama de **Projeto Avulso** na conversa: ver a
+> definição em `Segundo Cérebro/Conceitos/Conceitos.md`), pela skill
+> `tarefa-avulsa-quadro-projetos`, nunca para nota,
 > bloco "o que falta" ou arquivo de pendência dentro de `Segundo Cérebro/`. Uma dúvida de
 > nomenclatura ou estrutura do próprio cofre também não vira arquivo: é pergunta direta
 > para a Mallu, na hora, na conversa.
@@ -207,6 +209,16 @@ peça**. Carrossel inteiro nessa forma vira assinatura de IA, que é o que ela r
 
 Antes de usar, nomeie por escrito quem é a pessoa que acredita no X. Se não conseguir, não use.
 Detalhe em `Segundo Cérebro/Voz/Voz.md` seção 4.1.
+
+### Envio de e-mail institucional: canal e ferramenta certos
+
+Calibrada em 12/08/2026 e reforçada em 14/09/2026, depois de dois erros: responder pelo
+Gmail em vez do canal certo, e depois criar um workflow n8n descartável para um envio
+avulso em vez de usar a ferramenta que já existia.
+
+**E-mail em nome da PAAPS sai sempre por `relacionamento@paaps.com.br` via Titan, nunca
+por `paapsdiretoria@gmail.com`** (essa caixa só recebe). Qual ferramenta usar em cada
+caso, e o que nunca fazer: ver `Segundo Cérebro/Método/Método.md`.
 
 ### Como nomear as pessoas da rede
 
@@ -525,7 +537,8 @@ A pasta ainda se chama `SITE PAAPS/` por limitação do ambiente. Para renomear 
 | `paaps-orquestrador-conteudo` | **Fonte da verdade do fluxo de conteúdo.** Julga em qual dos dois troncos a tarefa cai (A: a Mallu puxa o gancho; B: o PAAPS por frequência, começando no Radar), conduz o montante daquele tronco, aplica os 7 guardrails, opera o gate de voz peça a peça e aciona os agentes que já existem. Ler antes de qualquer produção de conteúdo |
 | `exporta-html-pdf` | Converter peça em HTML/CSS (pitch, carrossel, relatório, one-pager) em PDF, PNG ou JPG para anexo, inscrição ou postagem. Traz o script `exportar-slides.sh`, que fotografa tela a tela e monta o PDF sem folha de impressão, então o arquivo sai idêntico ao navegador. Guarda as armadilhas (filtro SVG que estoura o peso, transform que posiciona, página em mm x largura de projeto) e as bibliotecas de terceiros já reprovadas |
 | `ajuste-fino-tipografico` | Acabamento tipográfico de peça em HTML/CSS que a Mallu vai olhar: régua de linhas (título até 3, destaque 2, descritivo de número 1 ou 2), ordem certa das alavancas para reduzir quebra (cortar palavra, ganhar largura no padding, e só então o corpo, nunca menor do que já estava), `<br>` para forçar 2+2, sombra em camadas e respaldo sobre foto clara. Traz os scripts de console que MEDEM contagem de linhas e colisão entre elementos, em vez de julgar por print |
-| `tarefa-avulsa-quadro-projetos` | Registrar uma pendência de execução (corrigir código, atualizar LinkedIn, currículo, blog, artefato, automação, ajustar copy publicada) como tarefa avulsa na database Notion "Quadro Estratégico de Projetos" (Status "Tarefas avulsas"). É o único destino de pendência de execução: nunca vira nota do Segundo Cérebro |
+| `tarefa-avulsa-quadro-projetos` | Registrar uma pendência de execução (corrigir código, atualizar LinkedIn, currículo, blog, artefato, automação, ajustar copy publicada) como Projeto Avulso na database Notion "Quadro Estratégico de Projetos" (Status "Tarefas avulsas", nome técnico do campo). É o único destino de pendência de execução: nunca vira nota do Segundo Cérebro |
+| `reuniao-diaria-quadro-projetos` | **Roda todo dia às 8h, pela automação agendada.** Lê o Quadro de Projetos inteiro, classifica cada tarefa em autônoma / decisão pontual / bloqueada, pergunta primeiro a pauta dela do dia, executa só o que já pode, nunca mexe no Status do card (só um comentário de uma linha), nunca inventa tarefa, e para quando não há mais o que fazer sem ela |
 
 ### Notion : página de operações
 

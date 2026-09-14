@@ -5,6 +5,13 @@ description: Use para registrar uma pendência de execução (corrigir código, 
 
 # Tarefa avulsa no Quadro de Projetos
 
+**Nome do conceito: Projeto Avulso.** Calibrado pela Mallu em 13/09/2026: a revisão 3.0 do
+site, atualizar o LinkedIn ou atualizar o Segundo Cérebro não são uma tarefa única (levam
+tempo, acumulam vários itens) nem um projeto grande (Teoria da Mudança do Desafio Regenera,
+estratégia da Clínica 2027). Definição completa em `Segundo Cérebro/Conceitos/Conceitos.md`.
+O nome do campo `Status` no Notion continua `"Tarefas avulsas"`, sem mudar: só a forma de
+falar sobre o conceito mudou.
+
 ## Lei central
 
 ```

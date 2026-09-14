@@ -4,7 +4,7 @@ origem: "Sistema"
 resumo: "A linha do tempo do que entra no Segundo Cérebro, uma linha por entrada"
 serve-para: []
 status: vivo
-atualizado: 2026-09-12
+atualizado: 2026-09-14
 ---
 
 # Log
@@ -145,6 +145,16 @@ notas de origem ([[paaps-ai-first]], [[gestao-estrategica-paaps]],
 marcado `historico` (superado, mantido como registro de época): não mexi, fica para a Mallu
 confirmar se ainda vale migrar ou se já é passado.
 
+## [2026-09-13] conceito | nasceu Projeto Avulso
+
+A Mallu calibrou o nome: o que a skill `tarefa-avulsa-quadro-projetos` registra (revisão
+3.0 do site, atualizar o LinkedIn, atualizar o cérebro) não é uma tarefa única nem um
+projeto grande (Teoria da Mudança do Regenera, estratégia da Clínica 2027): é um **Projeto
+Avulso**, entrega pontual com lista de ações dentro. Nasceu [[projeto-avulso]] em
+`Conceitos/`. O campo `Status` no Notion continua `"Tarefas avulsas"`, por decisão dela, pra
+não quebrar as páginas e views já montadas em cima desse nome: só a linguagem mudou, não o
+schema.
+
 ## [2026-09-13] critério | os dois testes viraram regra, e o cofre passou por eles
 
 O critério que decide o que entra ficou escrito em [[Visão Geral]] e na skill
@@ -195,40 +205,129 @@ O quadro de projetos perdeu prazo, prioridade e status, que envelhecem e vivem n
 ficou só com quais projetos existem e a que frente cada um responde. A frase-mote vigente
 foi confirmada por ela.
 
-## [2026-09-14] setor novo | nasceu Conteúdo, a Biblioteca de Conteúdo
+## [2026-09-13] Desterro do Melo 2024 | a fonte quente entra
 
-Calibrado pela Mallu em 13/09/2026, depois de eu ter construído sem querer um sistema de
-conhecimento paralelo (skill `segundo-cerebro-paaps`, pastas em `insumos-compartilhados/`)
-sem antes olhar o Segundo Cérebro real. Correção: `git merge -X theirs origin/main` (main
-sempre ganha), remoção do sistema paralelo, e construção do 9º setor de verdade, no lugar
-certo: [[Conteúdo]], com critério mais largo que os outros oito (insumo perecível de
-carrossel/reel/LinkedIn, não pilar de tese), contador de uso por item, e a regra de que os
-dois cérebros são interligados e sempre consultados juntos por quem escreve conteúdo
-(Tecelã, copywriter-paaps). `Conteúdo/_entrada/` é a porta de material solto escopada a
-conteúdo. `codigo/verifica-caminhos.sh`, `Contrato de caminhos`, `Índice` e o `CLAUDE.md`
-raiz ganharam a 9ª entrada.
+Processado o documento "VÓ XOPOTÓ: as tecnologias de acolhimento ancestrais ainda
+respiram" (Maria Luiza Vasconcellos), a versão quente e detalhada do ano de 2024.
 
-Junto, triados um a um os 24 arquivos soltos de `Arquivos/` (nenhum pulado, por pedido
-explícito dela): 14 foram para o Segundo Cérebro oficial
-([[prosames]], [[universaude]] e [[objetivos-de-desenvolvimento-sustentavel-onu]] em
-Entidades; [[iso-9000-e-9001-gestao-da-qualidade]], [[inovacao-regenerativa]] e
-[[agile-learning-economia-cognitiva]] em Conceitos; [[metadesign-eotc]],
-[[metadesign-meta-jogo]] e [[llm-wiki-padrao-segundo-cerebro]] em Método;
-[[serie-caio-vassao-inovacao-regenerativa]] e [[regenerative-capitalism-2015-pdf]] em
-Fontes), 7 foram para a Biblioteca de Conteúdo ([[gargalos-saude-mental-sus]],
-[[greve-atencao-basica-rio]], [[suicidios-relacionados-ao-trabalho]],
-[[cartilha-amarela-prevencao-assedio-suicidio]], e os três roteiros de vídeo a minerar para
-@amalluvasconcellos: [[cinco-melhores-sistemas-educacao-mundo]], [[montessori-ou-nao]],
-[[waldorf-ou-nao]]), 2 foram descartados (curso genérico "Claude 101" e artigo de blog de
-marketing sobre o padrão LLM Wiki, fonte bloqueada pela régua de pesquisa) e 1 virou tarefa
-avulsa no Notion ("Nossa Equipe": pessoas da ONU Brasil pra seguir e pesquisar no LinkedIn,
-não é conhecimento do cofre).
+Nasceram: [[atribuicao-retroativa-a-paaps]] (a regra que rege tudo o resto: ação de campo
+da Mallu antes de a marca existir se narra como ação da PAAPS), três histórias novas
+([[entrada-pela-educacao-desterro-do-melo]], [[entrada-pela-saude-desterro-do-melo]],
+[[carta-compromisso-desterro-do-melo]]), a entidade [[vo-xopoto]] (marca nascida da
+Refazenda em 2025, régua de citação pública em aberto), e três notas de fonte com dado
+ainda não verificado ([[estresse-no-trabalho-brasil-isma]],
+[[eventos-traumaticos-policial-vs-civil]], [[afastamentos-saude-mental-2025-inss]]).
 
-**Duas pendências reais, sem invenção de conteúdo:** `Serasa Experian.md` e o arquivo de
-nome malformado `prospeccao-e-vendas]], [[estrategia-de-negocio.md` chegaram **vazios**
-(clipping falhou); nenhuma nota foi escrita a partir deles. O segundo, sem conteúdo e com
-nome quebrado (fragmento de colagem de wikilink), foi apagado. O primeiro segue em
-`Arquivos/`, aguardando a Mallu reclipar a página se ainda quiser a entidade Serasa Experian
-registrada. [[regenerative-capitalism-2015-pdf]] também ficou `pendente`: o ambiente desta
-sessão não tinha ferramenta de extração de PDF, então o paper não foi lido, só registrado
-como fonte a conferir.
+[[refazenda-rio-xopoto]], [[refazenda-rio-xopoto-2024]] e [[desterro-do-melo-2024]] foram
+enriquecidas, sem contradizer a proibição de citação pública já registrada em [[paaps]].
+[[tres-frentes-de-oferta]] ganhou a nuance de que a psicoterapia individual é via
+parceria, não entrega direta.
+
+## [2026-09-13] correção | Bela Vista de Minas, PROINAPE e Maré podem ser citados
+
+Decisão da Mallu: os três podem aparecer em peça pública, estritamente como "sob gestão
+da PAAPS" (ver [[como-citar-bela-vista-proinape-mare]]). Diferente de Refazenda, Allos,
+PROSAMES e Motiva, que seguem proibidos. [[paaps]] corrigida.
+
+## [2026-09-13] CV 2026 | a formação da Mallu ganha datas exatas
+
+Dois CVs (completo e one-page) leram-se por inteiro e substituíram estimativa por data
+exata em seis histórias: [[puc-sp]], [[criancas-vitimas-de-violencia-sexual]],
+[[ministerio-publico-mulheres-vitimas-de-racismo]], [[cuidados-paliativos]] e
+[[sistema-socioeducativo]] (que revelou serem DUAS passagens distintas: Tremembé 2023 e
+Instituto ELO, BH, 2025). [[tcc-suas]] ganhou o título exato e o supervisor, Alexandre
+Kaitel. [[associacao-allos]] ganhou o vínculo pessoal da Mallu como Diretora de Projetos
+Sociais lá, de 03/25 a 12/25, distinto do contrato formal PAAPS-Allos de 2026.
+
+## [2026-09-13] consolidação | 4 páginas do Notion, e as capas que ficaram para trás
+
+O agente do Notion terminou depois do commit anterior e seus arquivos foram varridos
+junto por um `git add -A` que não tinha esse objetivo: por isso o commit "CV 2026 entra"
+carrega também este material, sem descrevê-lo. Registro aqui o que entrou de fato:
+
+**Minerva paaps FrameWork:** [[minerva-paaps-framework-notion]], a parceria pausada de
+universitários em imersão na Refazenda, hoje sem pasta própria no cofre.
+
+**Concorrência (16 notas ao todo em `Projetos/inteligencia-competitiva/`):** metade já
+tinha sido escrita por uma automação paralela na mesma sessão; o agente completou com
+[[ashoka-intel]], [[nesta-intel]], [[ideo-org-intel]], [[desis-network-intel]],
+[[ore-intel]], [[grupo-orzil-intel]], [[dataway-intel]], [[universaude-intel]].
+
+**Refazenda Rio Xopotó no Notion:** [[refazenda-rio-xopoto]] ganhou o modelo Roça-Office,
+o 1º lugar no WorldPackers e a cobertura de Globo e O Tempo, sem tocar a proibição de
+citação pública já vigente.
+
+**Modelo de Negócio:** [[caminhos-legais-venda-ao-governo]] (dispensa, inexigibilidade,
+consórcio público), mais três fontes de dado: [[censopsi-2022-precariedade-psicologia]],
+[[microcredito-periodicidade-do-encontro]], [[igd-repasse-automatico-formacao-equipe]].
+[[schwartz-center]] ganhou a estrutura de licenciamento como precedente do modelo PAAPS.
+
+Regenerei as capas de Fontes, Entidades, Conceitos e das duas pastas de projeto tocadas,
+que não listavam os satélites novos até agora.
+
+## [2026-09-13] respostas da Mallu | ESG, taglines, Maré, Minerva e financeiro DIGGING
+
+Seis contradições do agente do Notion e do PDF, todas resolvidas pela Mallu na hora:
+
+**ESG:** a PAAPS oferece sim [[projetos-esg-para-empresas]], mas empresa nunca é persona
+de conteúdo público. Yunus é referência de operação, não cliente.
+
+**Pilares antigos:** confirmados obsoletos, registrado em [[tres-frentes-de-oferta]].
+
+**Claim de ineditismo e duas taglines:** aprovados em [[paaps]]. "Cuidar é um ato
+coletivo" pode variar com criatividade; a tagline institucional tem versão para
+Yunus/ESG substituindo "Políticas Públicas e Institutos" por "Projetos ESG ou
+Responsabilidade Social Empresarial".
+
+**Lucas Pimenta e Gabriela Diniz:** confirmados ativos, psicólogos supervisores da PAAPS.
+
+**Complexo da Maré:** é a mesma ação. Parceria de três pontas (Escola Municipal, a
+associação que incubava a PAAPS, Coletivo Especiais da Maré); recorte público sempre
+"Escola Municipal".
+
+**Financeiro da DIGGING:** autorizado a entrar em [[digging-ficha-juridica]] (receita
+2025, lucro, margem, termos do financiamento Yunus).
+
+**Projeto Minerva:** ganhou pasta própria, [[minerva]], arquivado mas reativável como
+ideia. O material chegou a circular externamente e recebeu recusa de escopo, não é mais
+tratado como "uso restrito por incerteza": é registro de tentativa real com desfecho
+conhecido.
+
+## [2026-09-14] fontes | resposta da Yunus destrava um conceito novo de captação
+
+A Yunus Negócios Sociais recusou a PAAPS para a modalidade de dívida (fluxo de caixa
+ainda não recorrente), e a resposta da Mallu a esse feedback nomeou um caminho que a
+PAAPS ainda não tinha mapeado: recurso a fundo perdido por editais de subvenção. Nasceu
+[[recursos-a-fundo-perdido-subvencao]] em [[Fontes]], ligada a [[captacao]] e
+[[yunus-negocios-sociais]].
+
+## [2026-09-14] método | envio de e-mail institucional vira nota própria
+
+Ao responder a Yunus (Luiz Henrique Pádua), uma sessão criou um workflow n8n descartável
+para o envio em vez de usar as ferramentas que já existiam (`responder-lead.py` e o
+webhook `Prospecção - Disparo (SMTP)`). O e-mail saiu, mas sem thread e sem nenhum
+registro, e o workflow foi apagado antes de confirmar o resultado, perdendo até o log de
+execução. Nasceu [[envio-de-email-institucional]] em [[Método]], que fecha essa lacuna:
+qual ferramenta usar por caso, e o que nunca fazer. Detalhe técnico datado em
+`automacoes/CLAUDE.md`.
+
+## [2026-09-14] voz | parágrafo padrão de e-mail institucional, e o erro que o corrigiu
+
+Ao escrever dois e-mails (Itiquira e Mantena) copiei a estrutura de uma carta antiga já
+enviada, sem passar por `Voz/` nem `Método/` antes. A Mallu corrigiu na hora: baniu o
+parágrafo genérico usado ("Fazemos pesquisa e trabalho de campo com servidores de linha de
+frente do SUS e do SUAS...") e ditou o texto novo, literal, com os nomes certos das
+frentes. Nasceu [[paragrafo-padrao-email-institucional]] em [[Voz]], ligada a
+[[frases-mote]] e [[tres-frentes-de-oferta]]. A lição maior que a frase em si: peça antiga
+enviada não é fonte, o cofre é.
+
+## [2026-09-14] projetos | linha editorial do conteúdo pessoal da Mallu
+
+Na reunião diária do Quadro de Projetos, o card "Produção de CONTEÚDO" pedia ler e salvar
+no cofre a linha editorial da estratégia do Sistema GTO (Notion). Nasceu
+[[linha-editorial-conteudo-mallu]] em [[Projetos]] › conteudo-mallu, com as cinco linhas
+vivas (uma sexta, "Papo de Psi pra Psi", já está excluída no Notion) e o canal de cada
+uma. Ligada a [[instagram-conteudo-mallu]] e [[linkedin-conteudo-mallu]]. No mesmo card,
+o "Diretório de histórias do especialista" (outra database do Sistema GTO) estava vazio:
+populado com as 14 histórias já vivas em [[Histórias]], sem criar nota nova (o cofre já
+tinha o conteúdo, faltava só espelhar no Notion que os agentes de conteúdo consultam).

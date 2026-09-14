@@ -19,7 +19,7 @@ Drive: `drive.google.com/drive/folders/1tKhd_UrouV5dH1yO4sxtFR75MJLpkEnw`
 [[mercado-do-cuidado]] · [[capilaridade-do-sus]] · [[erro-de-leitura-do-bem-estar-corporativo]]
 
 ## Notas desta pasta
-[[pesquisa-de-mercado-estrategia]]
+[[caminhos-legais-venda-ao-governo]] · [[modelo-de-negocio-estrategia]] · [[pesquisa-de-mercado-estrategia]] · [[ponto-de-apoio-estrategia]] · [[roadmap-estrategia]] · [[tam-sam-som-estrategia]]
 
 ## Onde isso serve
 Em pitch, proposta, edital e em qualquer conversa sobre preço.
