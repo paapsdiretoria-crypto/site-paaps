@@ -4,7 +4,7 @@ origem: "Sistema"
 resumo: "A linha do tempo do que entra no Segundo Cérebro, uma linha por entrada"
 serve-para: []
 status: vivo
-atualizado: 2026-09-12
+atualizado: 2026-09-14
 ---
 
 # Log
@@ -320,3 +320,14 @@ frente do SUS e do SUAS...") e ditou o texto novo, literal, com os nomes certos 
 frentes. Nasceu [[paragrafo-padrao-email-institucional]] em [[Voz]], ligada a
 [[frases-mote]] e [[tres-frentes-de-oferta]]. A lição maior que a frase em si: peça antiga
 enviada não é fonte, o cofre é.
+
+## [2026-09-14] projetos | linha editorial do conteúdo pessoal da Mallu
+
+Na reunião diária do Quadro de Projetos, o card "Produção de CONTEÚDO" pedia ler e salvar
+no cofre a linha editorial da estratégia do Sistema GTO (Notion). Nasceu
+[[linha-editorial-conteudo-mallu]] em [[Projetos]] › conteudo-mallu, com as cinco linhas
+vivas (uma sexta, "Papo de Psi pra Psi", já está excluída no Notion) e o canal de cada
+uma. Ligada a [[instagram-conteudo-mallu]] e [[linkedin-conteudo-mallu]]. No mesmo card,
+o "Diretório de histórias do especialista" (outra database do Sistema GTO) estava vazio:
+populado com as 14 histórias já vivas em [[Histórias]], sem criar nota nova (o cofre já
+tinha o conteúdo, faltava só espelhar no Notion que os agentes de conteúdo consultam).

@@ -4,7 +4,7 @@ origem: "Trabalho"
 resumo: "A frente de conteúdo do perfil pessoal da Mallu, em todos os canais"
 serve-para: []
 status: vivo
-atualizado: 2026-09-12
+atualizado: 2026-09-14
 ---
 
 # Conteúdo Mallu
@@ -19,5 +19,6 @@ misturam. A peça do perfil pessoal nasce de reflexão própria dela, não de pa
 
 - [[instagram-conteudo-mallu]] : O @amalluvasconcellos é presença intelectual com rosto, e existe para gerar reconhecimento, nunca admiração
 - [[linkedin-conteudo-mallu]] : O LinkedIn da Mallu é a voz de quem lê sistemas, não de quem compartilha vivência: a emoção existe mas não é o argumento
+- [[linha-editorial-conteudo-mallu]] : As cinco linhas editoriais vivas do conteúdo pessoal da Mallu, e em qual canal cada uma corre
 
 ## Onde isso serve

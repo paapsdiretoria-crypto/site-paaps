@@ -56,7 +56,8 @@ zero.**
 ## Ligações
 
 [[conteudo-mallu]] · [[arquitetura-dos-cinco-canais-conteudo-paaps]] ·
-[[assinatura-intelectual-mallu]] · [[as-sete-perguntas-antes-de-entregar]]
+[[assinatura-intelectual-mallu]] · [[as-sete-perguntas-antes-de-entregar]] ·
+[[linha-editorial-conteudo-mallu]]
 
 ## Onde isso serve
 

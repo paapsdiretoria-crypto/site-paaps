@@ -39,7 +39,7 @@ consultoria corporativa padrão.
 ## Ligações
 
 [[conteudo-mallu]] · [[arquitetura-dos-cinco-canais-conteudo-paaps]] ·
-[[denise-santos-intel]] · [[nr-01]]
+[[denise-santos-intel]] · [[nr-01]] · [[linha-editorial-conteudo-mallu]]
 
 ## Onde isso serve
 

@@ -4,7 +4,7 @@ origem: "Sistema"
 resumo: "O catálogo de toda nota do Segundo Cérebro, por setor"
 serve-para: []
 status: vivo
-atualizado: 2026-09-13
+atualizado: 2026-09-14
 ---
 
 # Índice
@@ -49,6 +49,7 @@ A frente de conteúdo do perfil pessoal da Mallu, em todos os canais
 
 - [[instagram-conteudo-mallu]] : O @amalluvasconcellos é presença intelectual com rosto, e existe para gerar reconhecimento, nunca admiração
 - [[linkedin-conteudo-mallu]] : O LinkedIn da Mallu é a voz de quem lê sistemas, não de quem compartilha vivência: a emoção existe mas não é o argumento
+- [[linha-editorial-conteudo-mallu]] : As cinco linhas editoriais vivas do conteúdo pessoal da Mallu, e em qual canal cada uma corre
 
 ### [[conteudo-paaps]]
 
