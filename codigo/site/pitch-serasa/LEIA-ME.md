@@ -1,40 +1,29 @@
 # Pitch Serasa Experian : Impulsiona Startups
 
-Tudo do pitch da inscrição no Impulsiona Startups mora nesta pasta. São duas
-versões do mesmo deck, vivas ao mesmo tempo, para poder comparar.
+Tudo do pitch da inscrição no Impulsiona Startups mora nesta pasta.
 
-## As duas versões
+## As duas peças
 
-**Versão 4, a de estudo.** `index-v4.html` mais `pitch.css`. Dezenove slides em
-HTML e CSS puro. É onde está toda a pesquisa e todas as fontes. Congelada como
-**pitch handout**, em `pitch-handout.html` mais `pitch-handout.css`, que roda
-sozinha e não muda mais.
+**O deck**, em `deck-v5/`, feito em Next.js. Dezenove slides, é o que foi apresentado.
+O texto integral de cada slide está em `TRANSCRICAO-PITCH-V5-PT.md` e `-EN.md`, e não
+exige abrir o projeto para ler.
 
-Para abrir:
+**O handout**, em `pitch-handout.html` mais `pitch-handout.css`. É a versão que fica na
+mão de quem lê depois: mais números, mais fonte, e os argumentos que o deck não tem tempo
+de fazer.
 
-```bash
-cd "/Users/mac/Documents/SITE PAAPS/codigo/site" && python3 -m http.server 8080
+## Para rodar o deck
+
+```
+cd deck-v5 && npm install && npm run dev
 ```
 
-Depois é só abrir `http://localhost:8080/pitch-serasa/index-v4.html` no navegador.
+## Os documentos de apoio
 
-**Versão 5, a minimalista.** Pasta `deck-v5/`. Dezessete slides, construídos no
-desenho da Midday, com as fotos de campo em tela cheia e o véu marrom da casa.
+`MANUAL-MODELO-E-PITCH.md` é a fonte do modelo de negócio. As cinco `PESQUISA-*.md`, os
+dois `CALCULO-*.md` e a `ANALISE-FINANCEIRA-DIGGING.md` sustentam os números que estão nos
+slides. `VERIFICACAO-SCHWARTZ-POINT-OF-CARE.md` guarda a checagem da referência
+internacional, com os links.
 
-Para abrir:
-
-```bash
-cd "/Users/mac/Documents/SITE PAAPS/codigo/site/pitch-serasa/deck-v5" && npm run dev
-```
-
-Depois é só abrir `http://localhost:3210` no navegador. Para ver um slide
-sozinho, `http://localhost:3210/slide/7`.
-
-Para parar qualquer um dos dois, aperte `control` e `C` na janela do terminal.
-
-## O que mais tem aqui
-
-- `img/` : as fotos e os logos do deck antigo.
-- Os arquivos `.md` : pesquisa de mercado, modelo de negócio, cálculo de
-  TAM/SAM/SOM, análise financeira e as especificações slide a slide.
-- `PAAPS-pitch-impulsiona-serasa.pdf` : a exportação da versão 4.
+O conhecimento durável desse material já está no Segundo Cérebro: comece por
+`Segundo Cérebro/Mapa/Índice.md`.

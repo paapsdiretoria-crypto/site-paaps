@@ -330,10 +330,10 @@ Mesma regra do catálogo de modelos de slide.
 
 ## PARTE 7 : o que este arquivo não resolve
 
-- **Os 8 modelos de slide e as 8 leis do carrossel:** `insumos-compartilhados/nucleo-comum/modelos-slide-paaps.md`.
-- **Voz e proibições de escrita:** `insumos-compartilhados/nucleo-comum/voz-paaps.md`.
-- **Paleta, tipografia e workflow do Canva:** `insumos-compartilhados/nucleo-comum/identidade-aplicada.md`.
-- **Onde buscar foto e com que hierarquia:** `insumos-compartilhados/nucleo-comum/mapa-fontes-foto.md`.
-- **Os três modos visuais do Instagram:** `insumos-compartilhados/nucleo-comum/visual-instagram.md`.
+- **Os 8 modelos de slide e as 8 leis do carrossel:** `Segundo Cérebro/Voz/Voz.md`.
+- **Voz e proibições de escrita:** `Segundo Cérebro/Voz/Voz.md`.
+- **Paleta, tipografia e workflow do Canva:** `Segundo Cérebro/Voz/Voz.md`.
+- **Onde buscar foto e com que hierarquia:** `Segundo Cérebro/Voz/Voz.md`.
+- **Os três modos visuais do Instagram:** `Segundo Cérebro/Voz/Voz.md`.
 - **Regras de mobile para POST:** arquivo próprio, ainda a escrever, que nasce deste aqui.
 - **Quem aprova e quem publica:** só a Mallu. Nenhum agente publica nada.

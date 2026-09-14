@@ -14,6 +14,8 @@ O raciocínio inteiro está em `PLANO.md`. Este arquivo é só o passo a passo p
 | `previa/` | O e-mail montado, para abrir no navegador antes de aprovar |
 | `n8n/` | Os scripts que falam com o n8n |
 | `anuencia-suas.pdf` | A carta de anuência da DGTE, anexada em todo e-mail. Fora do git |
+| `acompanhamento-tcc.xlsx` | Planilha de acompanhamento de campo: uma linha por roda (dispositivo, equipe, coordenadora que articulou, status, datas de visita e de roda, e o pós-roda: participantes e cenas escolhidas para a escrita). Tem aba "Como usar" com a legenda. Fora do git, mesmo motivo do `unidades-bh.json`: leva nome de coordenadora e dado de campo |
+| `convite-roda-cras/`, `convite-roda-regional-noroeste/` | Peças HTML dos convites impressos (frente/verso) entregues a cada dispositivo antes da roda |
 
 ## Os cinco comandos
 

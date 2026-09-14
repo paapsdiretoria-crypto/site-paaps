@@ -61,9 +61,19 @@ Antes da saudação, responda: **sabemos quem vai ler?**
    - abertura que lê o território pelo gancho (o fato local, nomeado);
    - o padrão coletivo que o PAAPS Brasil enxerga na rede (variar entre SUS, SUAS, escolas, guarda, vigilância, Estratégia Saúde da Família; não listar tudo sempre);
    - o descritivo do PAAPS Brasil e a lógica de impacto que justifica o "coletivo";
+   - **a oferta concreta, em bullets** (padrão fechado pela Mallu em 31/08/2026, obrigatório em
+     toda carta, prefeitura ou consórcio, sem diferença): redução nos afastamentos por saúde
+     mental; menos retrabalho e menos gargalo em encaminhamento e comunicação entre as equipes;
+     cobertura para toda a equipe, com investimento médio por pessoa bem menor do que se
+     imagina. **Nunca com número de preço** (só com autorização explícita dela para aquele
+     envio). Formato: lista markdown de verdade (`- item`), nunca `<br>` dentro do parágrafo.
    - o toque na dor da gestão (RH sobrecarregado, método próprio, lado a lado);
    - a prova curta (Bela Vista de Minas e Desterro do Melo, entre outros);
    - o CTA.
+
+A carta não pode mais só prometer uma conversa: ela faz uma oferta concreta, contundente mas
+sem ser forçada. Ver `.claude/agent-memory/carta-fria/APRENDIZADO.md` para o texto exato e o
+histórico da decisão.
 5. Dar a autonota de 0 a 100 pela rubrica (`personalizacao/rubrica-0-100.md`), e dizer em uma linha o que segura a nota.
 6. Encaminhar pela nota: 85 ou mais entra na fila de envio; 70 a 84 vai ao gate da Mallu com o lead, o gancho com a fonte, o texto inteiro, o assunto e a nota; abaixo disso volta para reescrita ou para o buscador.
 7. Registrar a correção dela e, depois, o resultado real no `APRENDIZADO.md`.
@@ -86,7 +96,13 @@ Faixas: 90+ gancho fresco e específico, destinatário certo, arco limpo, voz im
 - Voz em "nós". Assinar "Mallu Vasconcellos e equipe de relacionamento PAAPS Brasil", com a linha "PAAPS Brasil - Rede de Saúde Mental Coletiva para as políticas públicas".
 - Descritivo do PAAPS Brasil: rede de saúde mental coletiva para as políticas públicas à prova de futuro, que cuida de quem cuida.
 - Lógica de impacto que justifica o "coletivo": cuidar de quem cuida para que o atendimento chegue mais qualificado na ponta, para que a política pública funcione melhor onde acontece, e para que o servidor tenha rede de suporte tão real quanto a que o município oferece ao cidadão. Coletivo porque age na estrutura do trabalho.
-- Assunto: nomeia a dor ou o território. Evita "parceria", "proposta", "solução".
+- Assunto: nomeia a dor ou o território. Evita "parceria", "proposta", "solução". **Teste duro
+  (02/09/2026):** o assunto aponta pra quem cuida de quem cuida, ou só descreve o que existe
+  (CAPS, consórcio, obra, concurso)? E sem o nome da cidade, ele ainda seria só uma fórmula
+  ("[X] anos integrando [Y] municípios", "[cidade] depende do CAPS de [outra cidade]")? Se
+  qualquer uma das duas falhar, reescrever do zero. Ver
+  `automacoes/prospeccao-email/personalizacao/auditoria-assuntos-02-09-2026.md`, onde esse
+  erro apareceu em quase 40 das 93 cartas já enviadas.
 - CTA: conversa breve, sem custo e sem compromisso, ancorada em algo concreto do lead. Fecho: "Se houver interesse, basta responder a este e-mail e combinamos o melhor momento."
 - A PAAPS Brasil acabou de chegar: nunca fale no que "fica quando a gente sai".
 

@@ -1,0 +1,236 @@
+{
+  "main": {
+    "id": "97c4a4b6b3335383",
+    "type": "split",
+    "children": [
+      {
+        "id": "af4f385485130bda",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3943f21f104bfbaa",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Visualização em gráfico"
+            }
+          }
+        ],
+        "stacked": true
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e4b3254e458c6ce1",
+    "type": "split",
+    "children": [
+      {
+        "id": "193c1385cd1187f4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "190e3b1e6e888b9c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de arquivos"
+            }
+          },
+          {
+            "id": "d1fdf0b82269f09e",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "cofre",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Procurar"
+            }
+          },
+          {
+            "id": "b599188c05d35a11",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "81e583fb7e4f9593",
+    "type": "split",
+    "children": [
+      {
+        "id": "5925dfadfe57e554",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c4befe29b20fafe4",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Links inversos"
+            }
+          },
+          {
+            "id": "8122fa2876466090",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Links de saída"
+            }
+          },
+          {
+            "id": "bc03857f1b8e3736",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Etiquetas"
+            }
+          },
+          {
+            "id": "d7fd105050534dc1",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Todas as propriedades"
+            }
+          },
+          {
+            "id": "dd41cee49d702a91",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Sumário"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir a troca rápida": false,
+      "graph:Abrir visualização em gráfico": false,
+      "canvas:Criar novo canvas": false,
+      "daily-notes:Abrir a nota de hoje": false,
+      "templates:Inserir modelo": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "bases:Criar nova base": false
+    }
+  },
+  "active": "3943f21f104bfbaa",
+  "lastOpenFiles": [
+    "memoria-claude/MEMORY.md",
+    "CLAUDE.md",
+    "Sem título.base",
+    "Arquivos/fotos/16.png",
+    "segundo-cerebro",
+    "melhorias-claude.md",
+    "Sem título.md",
+    "Sem título.canvas",
+    "2026-09-12.md",
+    "Sem título",
+    "hyperframes/skills/embedded-captions/SKILL.md",
+    "codigo/site/pitch-serasa/deck-v5/node_modules/eslint-plugin-react/README.md",
+    "projetos/pipeflow-crm/node_modules/next/dist/docs/01-app/01-getting-started/02-project-structure.md",
+    "projetos/pipeflow-crm/node_modules/next/dist/docs/01-app/04-glossary.md",
+    "codigo/site/pitch-serasa/deck-v5/node_modules/tailwindcss-animate/README.md",
+    "hyperframes/skills/hyperframes-animation/rules/sine-wave-loop.md",
+    "projetos/pipeflow-crm/node_modules/next/dist/docs/01-app/03-api-reference/05-config/01-next-config-js/cacheLife.md",
+    "Arquivos/Getting better results · Claude 101.md",
+    "Conhecimento/como-trabalhar-com-claude.md",
+    "Conhecimento/index.md",
+    "Conhecimento/ecoa/estrutura-e-rituais/Rituais bbe44cb52e00833f850f01748170f2aa.md",
+    "Conhecimento/ecoa/estrutura-e-rituais/Jornada da Comunidade e5744cb52e008225bc938103a579f185.md",
+    "Conhecimento/ecoa/estrutura-e-rituais/Espaço destinado para saber mais sobre os outros m 39044cb52e0080e38379e834c77565e4.md",
+    "Conhecimento/ecoa/estrutura-e-rituais/Espaço destinado para conhecer os rituais da comun 39044cb52e0080db858ed446edee5c82.md",
+    "Conhecimento/ecoa/estrutura-e-rituais/Espaço destinado a saber os dias dos encontros da  39044cb52e008045a1edd602e855d812.md",
+    "Conhecimento/ecoa/estrutura-e-rituais/ESTRUTURA DE GRUPOS 🏘️ 3af44cb52e00800abbf6cce69da60dbc.md",
+    "Conhecimento/ecoa/estrutura-e-rituais/Boas Vindas (Roteiro vídeo) 32e44cb52e0082ab9a9481d7b5113a42.md",
+    "Conhecimento/ecoa/estrutura-e-rituais/Canvas de comunidade 37244cb52e0080c5a169f0b8cf3417cf.md",
+    "Conhecimento/ecoa/estrutura-e-rituais/Boas Vindas 39044cb52e0080778c83d949f925f803.md",
+    "Conhecimento/ecoa/reunioes/Reunião de Planejamento 39e44cb52e0080279cefc4388305ff32.md",
+    "Conhecimento/ecoa/reunioes/Reunião Equipe 36344cb52e00802f9e51ce66a5ebbcfa.md",
+    "Conhecimento/ecoa/estrutura-e-rituais",
+    "Conhecimento/ecoa/reunioes",
+    "Conhecimento/ecoa/porta-voz",
+    "Conhecimento/ecoa/planejamento-de-conteudo",
+    "Conhecimento/ecoa/identidade-e-posicionamento",
+    "Conhecimento/arquitetura-agentes/workflow_agentes_conteudo_paaps.svg",
+    "Conhecimento/arquitetura-agentes/workflow-paaps.html",
+    "Conhecimento/arquitetura-agentes/arquitetura_v2_agentes_paaps_orquestrador_criticos.svg",
+    "Conhecimento/voz-e-identidade",
+    "Arquivos/identidade-visual/08-paaps-digging/01 - Logo Paaaps + Digging/Logo Paaps + Digging - Vinho.png",
+    "Arquivos/identidade-visual/08-paaps-digging/01 - Logo Paaaps + Digging/Logo Paaps + Digging - Marrom.png",
+    "Arquivos/identidade-visual/08-paaps-digging/01 - Logo Paaaps + Digging/Logo Paaps + Digging - Branco.png",
+    "Arquivos/identidade-visual/08-paaps-digging/02 - Formas Paaps + Digging/Paapas + Digging Forma 7-8.png",
+    "Arquivos/identidade-visual/08-paaps-digging/02 - Formas Paaps + Digging/Paapas + Digging Forma 8-8.png",
+    "Arquivos/identidade-visual/08-paaps-digging/02 - Formas Paaps + Digging/Paapas + Digging Forma 9-8.png",
+    "Arquivos/identidade-visual/08-paaps-digging/02 - Formas Paaps + Digging/Paapas + Digging Forma 6-8.png"
+  ]
+}

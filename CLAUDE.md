@@ -1,9 +1,62 @@
 # CLAUDE.md : Contexto Mestre do Ecossistema PAAPS
 
-> Este arquivo é lido automaticamente pelo Claude Code ao abrir o repositório.
-> Ele carrega quem somos, como pensamos e o que nunca fazer. Tudo que for específico
-> de uma frente (site, conteúdo, instagram) está documentado nos `CLAUDE.md` das
-> subpastas e nos arquivos de `insumos-compartilhados/nucleo-comum/`.
+## ÍNDICE PRIMÁRIO : o cérebro começa aqui
+
+> **`Segundo Cérebro/Mapa/Índice.md`** : o catálogo de toda nota, por setor. É a porta de
+> entrada. Ache o setor, leia o resumo de uma linha, só então abra a nota.
+> **`Segundo Cérebro/Mapa/Visão Geral.md`** : o manual. O que vira nota e o que não vira,
+> o ciclo de cinco passos e a faxina do grafo.
+> **`Segundo Cérebro/Mapa/Contrato de caminhos.md`** : a regra que segura tudo isso de pé.
+>
+> `Segundo Cérebro/` é a **fonte primária de conhecimento durável** deste ecossistema.
+> Antes de responder qualquer coisa que dependa de saber algo sobre a PAAPS, passe pelo
+> índice.
+
+### A regra que impede este arquivo de quebrar toda semana
+
+**Nem este arquivo, nem agente, nem skill, nem hook cita o caminho de uma nota. Só se cita
+capa.** A capa lista as notas do setor com resumo e declara o caminho da pasta, então quem
+lê descobre sozinho o que abrir. Nota muda de nome e de lugar; a capa não muda.
+
+| Endereço estável | Quando abrir |
+|---|---|
+| `Segundo Cérebro/Voz/Voz.md` | antes de escrever ou desenhar qualquer peça |
+| `Segundo Cérebro/Conceitos/Conceitos.md` | o que uma palavra significa dentro da PAAPS |
+| `Segundo Cérebro/Método/Método.md` | como a PAAPS trabalha em campo |
+| `Segundo Cérebro/Entidades/Entidades.md` | quem é uma pessoa ou instituição |
+| `Segundo Cérebro/Histórias/Histórias.md` | o que a Mallu viveu e pode contar |
+| `Segundo Cérebro/Fontes/Fontes.md` | dado, lei, estudo, notícia, com fonte |
+| `Segundo Cérebro/Ideias/Ideias.md` | as faíscas guardadas, e onde cada uma serve |
+| `Segundo Cérebro/Projetos/Projetos.md` | que projetos existem |
+
+| `Segundo Cérebro/Projetos/<projeto>/<projeto>.md` | quando o trabalho é de um projeto só |
+
+Guarda automática: `bash codigo/verifica-caminhos.sh` falha se alguém quebrar a regra.
+
+**As duas trilhas.** São o caminho de ida e o de volta do cérebro:
+
+- **Leitura.** Pergunta chega → qual setor → a capa dele → a nota → só então responder.
+  Nunca responder de memória sobre voz, conceito, método, preço ou história.
+- **Escrita.** Material novo → `Arquivos/` → uma nota em `Fontes/` → as notas que aquilo
+  destrava → `## Onde isso serve` preenchido → link nas duas direções → linha no `Índice`
+  e no `Log`.
+
+> **Sobre a memória automática do Claude Code** (em `~/.claude/projects/.../memory/`):
+> conhecimento da PAAPS não mora lá. Vai para `Segundo Cérebro/`, sempre.
+
+> **Pendência nunca é conhecimento, e o Segundo Cérebro não é lista de tarefas.**
+> Calibrado pela Mallu em 13/09/2026, depois de eu escrever "falta corrigir o código X" numa
+> nota de `Fontes/`. Corrigir código, atualizar LinkedIn, currículo, blog, artefato ou
+> automação é execução, muda toda semana, e execução some do cofre (regra já escrita em
+> `Segundo Cérebro/Mapa/Visão Geral.md`: "nunca lista de pendência como nota própria").
+> Toda pendência de execução vai para a database Notion "Quadro Estratégico de Projetos"
+> (Status "Tarefas avulsas"), pela skill `tarefa-avulsa-quadro-projetos`, nunca para nota,
+> bloco "o que falta" ou arquivo de pendência dentro de `Segundo Cérebro/`. Uma dúvida de
+> nomenclatura ou estrutura do próprio cofre também não vira arquivo: é pergunta direta
+> para a Mallu, na hora, na conversa.
+
+> Este arquivo é lido automaticamente pelo Claude Code ao abrir o repositório. Ele carrega
+> quem somos, como pensamos e o que nunca fazer.
 
 ---
 
@@ -32,7 +85,7 @@ definida no contrato social como "Programa de Aceleração Ativa de Projetos Soc
 > site, proposta, e-mail, carrossel, legenda, apresentação e qualquer peça pública: escrever apenas
 > **PAAPS** ou **PAAPS Brasil**, nunca a expansão. Motivo: "aceleração" comunica velocidade e
 > produtividade, exatamente o oposto do que a PAAPS faz, que é cuidado. Ver
-> `insumos-compartilhados/docs/ficha-juridica-paaps.md` para o uso jurídico.
+> `Segundo Cérebro/Entidades/Entidades.md` para o uso jurídico.
 
 | Campo | Valor |
 |---|---|
@@ -61,7 +114,7 @@ Três consequências que decidem preenchimento de formulário:
   como negócio social.
 
 Ficha completa (objeto social alínea por alínea, cláusula GovTech, histórico de registro e
-checklist de documentos de habilitação): `insumos-compartilhados/docs/ficha-juridica-paaps.md`.
+checklist de documentos de habilitação): `Segundo Cérebro/Entidades/Entidades.md`.
 
 ---
 
@@ -72,9 +125,11 @@ Psicologia Social para gestão pública). Psicóloga Social com mais de 5 anos e
 e políticas públicas. Linha de pensamento: psicologia além do consultório e do RH,
 psicologia suleada, impacto sistêmico.
 
-Frase-mote pessoal:
-"Uma psicologia à prova de futuro para uma sociedade que já exige outras respostas.
-Indo além do consultório ou RH no @paaps.brasil. Comunidade ECOA."
+Frase-mote vigente, confirmada por ela em 13/09/2026:
+"Uma psicossocióloga que constrói o re-desenho da Saúde Mental Coletiva no Brasil."
+
+Usar literal, sem melhorar uma palavra. A linha do tempo das frases anteriores, e a razão
+de cada uma ter caído, está em `Segundo Cérebro/Voz/Voz.md`.
 
 ---
 
@@ -88,14 +143,25 @@ e de consumo.
 
 ## Projetos do ecossistema
 
+Os 13 projetos ativos, ditados pela Mallu. **Esta lista é dela: nenhum projeto entra ou
+sai daqui por decisão minha.** Cada um tem pasta, cor própria no grafo e nota-capa em
+`Segundo Cérebro/Projetos/<projeto>/<projeto>.md`.
+
 | Projeto | O que é |
 |---|---|
-| PAAPS | Solução de Psicologia Social para políticas públicas e programas sociais |
-| TEAtrar | Teatro conduzido por psicóloga para crianças e adolescentes autistas |
-| ECOA | Comunidade de aprendizagem e vivência prática em Psicologia Social Latina. Ver `ecoa/CLAUDE.md` |
-| Periódico da Rede PAAPS | Publicação periódica |
-| Plantão Psicológico | Psicoterapia para servidores públicos |
-| Bela Vista de Minas | Prova de conceito: 5 meses com servidores (case de impacto) |
+| `ecoa` | Comunidade de Psicologia Social Latina, no WhatsApp, com encontros ao vivo |
+| `tcc-suas` | A pesquisa de TCC sobre o SUAS, em coleta pelas rodas. É a mina das conceituações |
+| `clinica-mallu-2027` | A clínica de Psicologia Clínica da Mallu, prevista para 2027 |
+| `digging-times-e-lideres` | A frente de times e líderes conduzida pela Fabi Vasconcellos |
+| `psicologia-social` | A frente teórica, de atualidades e de conteúdo crítico-criativo |
+| `captacao` | Investimento, edital, inscrição e o histórico do que já foi enviado |
+| `conteudo-paaps` | Instagram, LinkedIn, Blog e YouTube institucionais |
+| `conteudo-mallu` | Instagram, LinkedIn, Medium e vídeos do perfil pessoal |
+| `prospeccao-e-vendas` | Do e-mail frio até a Conversa de Diagnóstico agendada |
+| `estrategia-de-negocio` | Modelo de negócio, preço, posicionamento de mercado |
+| `inteligencia-competitiva` | Uma nota por concorrente, com quem pode e quem não pode ser citado |
+| `cliente-ideal-paaps` | O retrato do cliente ideal, montado só com evidência apontada |
+| `paaps-ai-first` | A máquina: 23 agentes, 50 skills, hooks e as 5 frentes de automação |
 
 ---
 
@@ -139,7 +205,7 @@ peça**. Carrossel inteiro nessa forma vira assinatura de IA, que é o que ela r
   Ninguém pensava aquilo, e é isso que soa como máquina.
 
 Antes de usar, nomeie por escrito quem é a pessoa que acredita no X. Se não conseguir, não use.
-Detalhe em `insumos-compartilhados/nucleo-comum/voz-paaps.md` seção 4.1.
+Detalhe em `Segundo Cérebro/Voz/Voz.md` seção 4.1.
 
 ### Como nomear as pessoas da rede
 
@@ -167,7 +233,7 @@ longe. A PAAPS é uma rede construída por profissionais que já vivem esse dia 
 
 ### Forma do slide: os 8 modelos do carrossel PAAPS
 
-`insumos-compartilhados/nucleo-comum/modelos-slide-paaps.md` é o catálogo dos 8 modelos de slide e
+`Segundo Cérebro/Voz/Voz.md` é o catálogo dos 8 modelos de slide e
 das 8 leis universais do @paaps.brasil, lidos de dentro das peças publicadas. Quem escreve ou monta
 carrossel lê antes: `copywriter-paaps`, `aplicador-visual`, `buscador-fotos`, skill `copy-carrossel`.
 
@@ -252,81 +318,124 @@ linguagem coachesca. Só avançar após esse raciocínio.
 ## Estrutura geral
 
 ```
-SITE PAAPS/                          ← pasta raiz (renomear para PAAPS/ no Finder)
+SITE PAAPS/
 │
-├── insumos-compartilhados/          ← acervo compartilhado por todos os projetos
-│   ├── fotos/                       ← acervo de campo (1,5 GB, fora do git)
-│   ├── identidade-visual/           ← logos, texturas, paleta, templates (não commitado)
-│   ├── aplicacao-id-visual/         ← exemplos de aplicação da identidade
-│   ├── nossa-camiseta-paaps/        ← não commitado
-│   ├── nossos-clientes-e-parceiros/ ← não commitado
-│   ├── docs/                        ← documentos institucionais convertidos para Markdown
-│   │   ├── manual-marca-posicionamento.md
-│   │   └── paaps-pesquisa-mercado.md
-│   └── nucleo-comum/                ← O CORAÇÃO COMPARTILHADO, lido por todos os agentes
-│       ├── voz-paaps.md             ← gabarito de voz e proibições ativas
-│       ├── afeto-situado-mallu.md   ← como iniciar a peça quando o gancho não vem dela
-│       ├── identidade-aplicada.md   ← paleta, tipografia, sistema Periódico, workflow Canva
-│       ├── criterios-design.md      ← checklist do crítico de design
-│       ├── qualidade-frontend.md    ← princípios de design (web + Canva)
-│       ├── visual-instagram.md      ← 3 modos visuais, regras fotográficas
-│       └── mapa-fontes-foto.md      ← fontes de fotografia documental (espaço reservado)
+├── Segundo Cérebro/         ← O CÉREBRO. É esta pasta que a Mallu abre no Obsidian.
+│   │
+│   ├── Arquivos/            ← A SACOLA: cru, imutável. O Web Clipper salva aqui.
+│   │
+│   ├── Mapa/         ⚪     ← Índice · Log · Visão Geral · Legenda de cores ·
+│   │                          Contrato de caminhos · _modelos/
+│   │
+│   ├── Projetos/     🟣     ← no que a Mallu trabalha. Uma pasta por projeto, cor
+│   │                          própria no grafo, e toda nota termina com o apelido dele
+│   ├── Entidades/    🟡     ← quem: gente e instituição
+│   ├── Histórias/    🔴     ← o que ela viveu e pode contar
+│   ├── Conceitos/    🟢     ← o que a palavra significa dentro da PAAPS
+│   ├── Voz/          🩷     ← como a PAAPS fala, e o que ela nunca diz
+│   ├── Método/       🟦     ← como a PAAPS trabalha em campo
+│   ├── Fontes/       🔵     ← o que veio de fora, por tipo, reconferível
+│   └── Ideias/       🟠     ← a mineração: faísca, gancho, ângulo novo
 │
-├── sessoes/                         ← logs automáticos de sessão (gerados por hook)
-│   └── sessao-YYYY-MM-DD.md         ← um arquivo por dia, commitado automaticamente
-│
-├── codigo/                          ← TODO o código do ecossistema, indexado pelo CodeGraph
-│   ├── .codegraph/                  ← índice/grafo de código (SQLite local, não commitado)
-│   ├── site/                        ← Projeto 1: site institucional
-│   │   ├── CLAUDE.md                ← instruções específicas do site
-│   │   ├── DESIGN-SYSTEM.md
-│   │   ├── PROMPT_CLAUDE_CODE_SITE_PAAPS.md
-│   │   ├── .claude/skills/frontend-design/SKILL.md
-│   │   ├── Sites - referências e analise/  ← screenshots de benchmark
-│   │   └── paaps-site/              ← HTML/CSS/JS do site
-│   ├── agente-whatsapp/             ← app Python do agente WhatsApp (deploy Railway)
-│   └── dashboard/                   ← analytics Windsor AI (lê @amalluvasconcellos e @paaps.brasil)
-│
-├── conteudo/                        ← Projeto 2: equipe de agentes de conteúdo
-│   ├── CLAUDE.md                    ← arquitetura da equipe de agentes (doc principal)
-│   ├── .mcp.json                    ← conectores MCP (Excalidraw, Miro)
-│   ├── _skill-original-para-desmembrar.md  ← skill antiga, guardada como referência
-│   ├── arquitetura/                 ← diagramas SVG da arquitetura + workflow-paaps.html
-│   ├── ciclos/                      ← outputs do Radar e Sentinela por data
-│   ├── eventos/                     ← produção de conteúdo por evento (ex.: Caratinga)
-│   ├── briefings/                   ← briefings consolidados do Narrador
-│   └── instagram/
-│       ├── amalluvasconcellos/      ← workspace do perfil pessoal de Mallu
-│       └── paaps.brasil/            ← workspace do perfil institucional
-│
-├── ecoa/                            ← Projeto: Comunidade ECOA (Psicologia Social Latina)
-│   ├── CLAUDE.md                    ← contexto do projeto, ler antes de qualquer tarefa sobre a ECOA
-│   ├── identidade-e-posicionamento/ ← o que a ECOA é, propósito, valores, tom de voz, acordos
-│   ├── estrutura-e-rituais/         ← grupos, rituais, jornada, canvas, boas-vindas
-│   ├── planejamento-de-conteudo/    ← Eras, personas, impacto, referências de comunidade
-│   ├── porta-voz/                   ← Programa Porta-Voz
-│   └── reunioes/                    ← atas de equipe, planejamento e pesquisa
-│
-├── hyperframes/                     ← projeto de vídeo HyperFrames (render HTML→MP4)
-├── projetos/                        ← projetos avulsos (Minerva, portfólios…), não commitado
-├── .claude/                         ← agents/, skills/ (formato pasta/SKILL.md), settings
-└── .agents/                         ← skills instaladas via npx skills (não commitado)
+├── Acervo/                  ← foto, fonte tipográfica, identidade visual (não commitado)
+├── sessoes/                 ← log automático de sessão, operacional, fora do cérebro
+├── codigo/                  ← todo código do ecossistema, indexado pelo CodeGraph
+│   └── verifica-caminhos.sh ← a guarda do contrato de caminhos
+├── conteudo/                ← pipelines de conteúdo por perfil e por evento
+├── automacoes/              ← as 5 frentes de automação
+├── hyperframes/             ← projeto de vídeo
+├── .claude/                 ← agents/ e skills/
+└── .agents/                 ← skills instaladas via npx skills (não commitado)
 ```
 
-> **Regra de workspace:** abrir o Claude Code SEMPRE na raiz `SITE PAAPS/`. Projetos
-> novos (eventos, pitches, portfólios, provas de conceito) nascem como subpasta daqui:
-> nunca em `~/Documents`, na home ou dentro de pastas técnicas como `dashboard/js/`.
-> Fora da raiz não existem CLAUDE.md, skills, memória nem auto-push: o trabalho fica
-> sem contexto e sem backup.
+**Os 13 projetos:** ecoa · tcc-suas · clinica-mallu-2027 · digging-times-e-lideres ·
+psicologia-social · captacao · conteudo-paaps · conteudo-mallu · prospeccao-e-vendas ·
+estrategia-de-negocio · inteligencia-competitiva · cliente-ideal-paaps · paaps-ai-first.
 
-> **Pasta `codigo/` + CodeGraph (jul/2026):** todo código executável do ecossistema
-> (`site/`, `agente-whatsapp/`, `dashboard/`) foi consolidado em `codigo/`. O CodeGraph
-> indexa essa pasta e mantém um grafo de código local (SQLite em `codigo/.codegraph/`,
-> não commitado). Antes de fazer grep/find ou abrir arquivos para entender ou localizar
-> código, use o CodeGraph: MCP `codegraph_explore` (após reiniciar o Claude Code) ou o
-> shell `codegraph explore "<símbolos ou pergunta>" --path codigo`. O servidor MCP está
-> apontado para `codigo/` no `.mcp.json` (`serve --mcp --path codigo`). Código novo nasce
-> dentro de `codigo/`; conteúdo, briefings e assets de marca continuam fora dela.
+> **Pasta `codigo/` + CodeGraph:** todo código executável vive em `codigo/`. Antes de
+> grep ou find para entender código, use o CodeGraph: MCP `codegraph_explore` ou
+> `codegraph explore "<pergunta>" --path codigo`.
+
+## Segundo Cérebro : como se escreve nele
+
+### A regra que governa toda escrita: muitas notas, cada uma específica
+
+**Uma nota = uma coisa que alguém pode precisar saber sozinha.** Teste: se o `resumo` só
+fica verdadeiro usando um "e", são duas notas.
+
+Uma fonte gera **várias** notas, nunca uma só. Um vídeo estudado toca a teoria, a pessoa
+que fala, o dado citado e a ideia que ele destrava: são quatro notas.
+
+### Em que setor a nota nasce
+
+| Setor | A pergunta |
+|---|---|
+| `Projetos` | é sobre uma frente em que a Mallu trabalha? |
+| `Entidades` | é sobre quem alguém é, pessoa ou instituição? |
+| `Histórias` | é sobre algo que ela viveu e pode contar? |
+| `Conceitos` | é a definição de uma palavra dentro da PAAPS? |
+| `Voz` | é regra de como falar, escrever ou aparecer? |
+| `Método` | é sobre como a PAAPS trabalha em campo? |
+| `Fontes` | veio de fora e dá para reconferir? |
+| `Ideias` | é faísca, e precisa dizer onde serve? |
+
+**Conceito não é Voz.** "Sem travessão" é proibição de tom de voz e mora em `Voz/`.
+"O que é cuidado para a PAAPS" é definição e mora em `Conceitos/`.
+
+### Como uma nota é escrita
+
+- **Conclusão primeiro.** A primeira linha depois do título diz a resposta.
+- **A regra escrita como regra:** "nunca escrever X, escrever Y".
+- **O negativo explícito.** O que a nota proíbe vale tanto quanto o que ela permite.
+- **`## Onde isso serve` é obrigatório.** Nota que não diz onde serve vira lixo.
+- **Nunca lista de pendência como nota própria.** O que falta se pergunta no chat, nunca
+  vira arquivo: agenda e lista de tarefa mudam toda semana e ficam fora do grafo.
+- **Link nas duas direções**, e a capa do setor ganha a linha da nota nova.
+- **Nada de arqueologia.** A nota diz o que é e o que se faz, nunca o que era antes.
+
+Cabeçalho: `tags`, `origem`, `resumo` (entre aspas duplas), `serve-para`, `status`
+(`vivo` · `pendente` · `historico`), `atualizado`. Moldes prontos em `Mapa/_modelos/`.
+
+### O ciclo, toda vez que material novo chega
+
+1. O bruto pousa em `Arquivos/`, sem alteração. É imutável.
+2. Nasce uma nota em `Fontes/`, com o tipo, o link e o dado exato.
+3. Nascem ou se atualizam as notas que aquilo toca, nos outros setores.
+4. Uma linha no `Mapa/Índice.md`.
+5. Uma linha no `Mapa/Log.md`.
+
+### A faxina, de tempos em tempos
+
+Nota órfã (ou conecta, ou apaga) · link apontando pro vazio · duplicata (junta uma na
+outra) · pasta vazia (não existe) · nota `pendente` que já dá pra preencher.
+
+> **Regra de workspace:** abrir o Claude Code SEMPRE na raiz `SITE PAAPS/`. Projeto novo
+> nasce como subpasta daqui, nunca na home.
+
+## Comandos
+
+Não há build nem suíte de testes no nível da raiz: o repositório é um monorepo de frentes
+independentes. Cada uma sobe do jeito dela.
+
+| O que | Comando |
+|---|---|
+| **Guarda do contrato de caminhos** (falha se um agente citar caminho de nota) | `bash codigo/verifica-caminhos.sh` |
+| **Site, para ver no navegador** | `cd codigo/site/home && python3 -m http.server 8080` |
+| **Deck do pitch** (Next.js; as dependências não são versionadas) | `cd codigo/site/pitch-serasa/deck-v5 && npm install && npm run dev` |
+| **Agente de WhatsApp**, testes | `cd codigo/agente-whatsapp && pytest -q` |
+| **Agente de WhatsApp**, um teste só | `cd codigo/agente-whatsapp && pytest tests/test_guardrails.py -q` |
+| **Agente de WhatsApp**, local em container | `cd codigo/agente-whatsapp && docker compose up` (porta 8000, deploy em Railway pelo `Dockerfile`) |
+| **HyperFrames**, estúdio de vídeo | `cd hyperframes && bun run dev` |
+| **Entender código antes de abrir arquivo** | `codegraph explore "<pergunta>" --path codigo` |
+| **Limpeza de log de sessão** (automática a cada 14 dias, roda sozinha no hook) | `bash codigo/limpa-sessoes.sh` |
+
+**O dashboard** (`codigo/dashboard/`) é HTML estático: abrir `index.html` no navegador. A
+chave da Windsor AI mora em `js/config.js`, que não é versionado, então em máquina nova o
+painel abre vazio até a chave existir.
+
+**Se `AVISO-BACKUP-PARADO.md` aparecer na raiz**, o envio automático para o GitHub falhou e
+o trabalho está só nesta máquina. Conserto: resolver o que bloqueia o `git push` e enviar; o
+arquivo some sozinho no próximo encerramento bem-sucedido.
 
 ---
 
@@ -357,12 +466,13 @@ git push
 
 ## Arquivos não commitados (ver .gitignore)
 
-- `insumos-compartilhados/fotos/`: acervo de campo (binários grandes)
-- `insumos-compartilhados/identidade-visual/`: assets originais de marca (binários)
-- `insumos-compartilhados/aplicacao-id-visual/`: exemplos de aplicação
-- `insumos-compartilhados/nossa-camiseta-paaps/`
-- `insumos-compartilhados/nossos-clientes-e-parceiros/`
-- `insumos-compartilhados/docs/*-imagens/`: imagens extraídas dos DOCX
+- `Acervo/fotos/`: acervo de campo (binários grandes)
+- `Acervo/identidade-visual/`: assets originais de marca (binários)
+- `Acervo/aplicacao-id-visual/`: exemplos de aplicação
+- `Acervo/nossa-camiseta-paaps/`
+- `Acervo/nossos-clientes-e-parceiros/`
+- `Acervo/docs-imagens/*-imagens/`: imagens extraídas dos DOCX
+- `AVISO-BACKUP-PARADO.md`: aparece na raiz quando o push falha, some quando volta
 - `codigo/dashboard/js/config.js`: chave Windsor AI (nunca commitar)
 - `projetos/`: projetos avulsos com conteúdo interno (mantido fora do repo por precaução)
 
@@ -387,6 +497,7 @@ A pasta ainda se chama `SITE PAAPS/` por limitação do ambiente. Para renomear 
 
 | Skill | Acionar quando |
 |---|---|
+| `adiciona-ao-cerebro` | **Transformar qualquer material em notas do Segundo Cérebro**: ditado, transcrição de vídeo, entrevista, livro, TCC, blog, export do Notion, perfil de rede. Traz o ciclo, as 7 perguntas, o que caçar em cada formato e a régua de setor. É a mesma skill que a automação da pasta `Arquivos/` usa |
 | `meta-architect` | Transformar briefing informal em prompt estruturado em XML |
 | `evita-padrao-ia-imersao-claude` | Auditar e reescrever texto removendo padrões de IA em PT-BR |
 | `copy-carrossel` | Escrever copy de carrossel para Instagram no tom de voz da Mallu, com revisão anti-IA embutida |
@@ -413,7 +524,7 @@ A pasta ainda se chama `SITE PAAPS/` por limitação do ambiente. Para renomear 
 | `paaps-orquestrador-conteudo` | **Fonte da verdade do fluxo de conteúdo.** Julga em qual dos dois troncos a tarefa cai (A: a Mallu puxa o gancho; B: o PAAPS por frequência, começando no Radar), conduz o montante daquele tronco, aplica os 7 guardrails, opera o gate de voz peça a peça e aciona os agentes que já existem. Ler antes de qualquer produção de conteúdo |
 | `exporta-html-pdf` | Converter peça em HTML/CSS (pitch, carrossel, relatório, one-pager) em PDF, PNG ou JPG para anexo, inscrição ou postagem. Traz o script `exportar-slides.sh`, que fotografa tela a tela e monta o PDF sem folha de impressão, então o arquivo sai idêntico ao navegador. Guarda as armadilhas (filtro SVG que estoura o peso, transform que posiciona, página em mm x largura de projeto) e as bibliotecas de terceiros já reprovadas |
 | `ajuste-fino-tipografico` | Acabamento tipográfico de peça em HTML/CSS que a Mallu vai olhar: régua de linhas (título até 3, destaque 2, descritivo de número 1 ou 2), ordem certa das alavancas para reduzir quebra (cortar palavra, ganhar largura no padding, e só então o corpo, nunca menor do que já estava), `<br>` para forçar 2+2, sombra em camadas e respaldo sobre foto clara. Traz os scripts de console que MEDEM contagem de linhas e colisão entre elementos, em vez de julgar por print |
-| `segundo-cerebro-paaps` | Processar material bruto da pasta `arquivos` (local, não commitada) em conhecimento reutilizável: extrai excerto autocontido com fonte exata, classifica entre o cérebro geral (`base-teorica/fichamentos/`, régua estreita, decisão da Mallu) e o cérebro de conteúdo (`segundo-cerebro-conteudo/`, régua larga, com contador de uso), e nunca promove excerto de fonte não confirmada pra fora da quarentena `_nao-verificado/` |
+| `tarefa-avulsa-quadro-projetos` | Registrar uma pendência de execução (corrigir código, atualizar LinkedIn, currículo, blog, artefato, automação, ajustar copy publicada) como tarefa avulsa na database Notion "Quadro Estratégico de Projetos" (Status "Tarefas avulsas"). É o único destino de pendência de execução: nunca vira nota do Segundo Cérebro |
 
 ### Notion : página de operações
 
@@ -426,7 +537,12 @@ Novas respostas longas pedidas "para ler no Notion" viram subpáginas dela, no f
 | Hook | Ordem | O que faz |
 |---|---|---|
 | **log-de-sessão** | 1º | Registra timestamp e arquivos alterados em `sessoes/sessao-YYYY-MM-DD.md` (deduplicado, ignora a própria pasta sessoes/) |
-| **auto-push** | 2º | Detecta qualquer mudança (inclusive arquivos novos), commita com mensagem `auto: <áreas alteradas> - <data>` e faz push para `main` |
+| **auto-push** | 2º | Commita com mensagem `auto: <áreas alteradas> - <data>` e envia para `main`. **Se o envio falhar, cria `AVISO-BACKUP-PARADO.md` na raiz**, com o que fazer escrito em português; o arquivo some sozinho quando o envio volta |
+| **limpa-sessoes** | 3º | Roda `codigo/limpa-sessoes.sh`: uma vez a cada 14 dias, apaga log de sessão com mais de 14 dias, **e só depois de confirmar que já está no GitHub** |
+
+**O aviso existe porque o push falhou em silêncio por 12 dias** (01 a 13/09/2026): o hook
+fazia `commit && push`, o push era rejeitado e ninguém ficava sabendo. Se
+`AVISO-BACKUP-PARADO.md` aparecer na raiz, o backup parou e precisa ser consertado.
 
 Ao encerrar uma tarefa relevante, registrar em 1–3 linhas no log do dia **o que foi
 decidido/entregue** (não só o status do git): é o handoff para a próxima sessão.

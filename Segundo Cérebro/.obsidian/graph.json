@@ -1,0 +1,93 @@
+{
+  "collapse-filter": false,
+  "search": "",
+  "showTags": false,
+  "showAttachments": false,
+  "hideUnresolved": false,
+  "showOrphans": false,
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "path:\"Projetos\"",
+      "color": {
+        "a": 1,
+        "rgb": 11032055
+      }
+    },
+    {
+      "query": "path:\"Entidades\"",
+      "color": {
+        "a": 1,
+        "rgb": 15381256
+      }
+    },
+    {
+      "query": "path:\"Histórias\"",
+      "color": {
+        "a": 1,
+        "rgb": 15680580
+      }
+    },
+    {
+      "query": "path:\"Conceitos\"",
+      "color": {
+        "a": 1,
+        "rgb": 2278750
+      }
+    },
+    {
+      "query": "path:\"Regras de Voz\"",
+      "color": {
+        "a": 1,
+        "rgb": 15485081
+      }
+    },
+    {
+      "query": "path:\"Método\"",
+      "color": {
+        "a": 1,
+        "rgb": 1357990
+      }
+    },
+    {
+      "query": "path:\"Fontes\"",
+      "color": {
+        "a": 1,
+        "rgb": 3900150
+      }
+    },
+    {
+      "query": "path:\"Ideias\"",
+      "color": {
+        "a": 1,
+        "rgb": 16347926
+      }
+    },
+    {
+      "query": "path:\"Mapa\"",
+      "color": {
+        "a": 1,
+        "rgb": 15592941
+      }
+    },
+    {
+      "query": "path:\"Arquivos\"",
+      "color": {
+        "a": 1,
+        "rgb": 7041664
+      }
+    }
+  ],
+  "collapse-display": true,
+  "showArrow": false,
+  "textFadeMultiplier": 0,
+  "nodeSizeMultiplier": 1.1,
+  "lineSizeMultiplier": 1,
+  "collapse-forces": true,
+  "centerStrength": 0.518713248970312,
+  "repelStrength": 10,
+  "linkStrength": 1,
+  "linkDistance": 250,
+  "scale": 1.0396770809540583,
+  "close": true
+}

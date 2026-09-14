@@ -4,13 +4,13 @@
 .LSOverride
 ._*
 
-# Arquivos brutos / assets de produção (não vão para o repo)
-insumos-compartilhados/fotos/
-insumos-compartilhados/identidade-visual/
-insumos-compartilhados/aplicacao-id-visual/
-insumos-compartilhados/nossa-camiseta-paaps/
-insumos-compartilhados/nossos-clientes-e-parceiros/
-insumos-compartilhados/docs/*-imagens/
+# Acervo: arquivos brutos / assets de produção (não vão para o repo)
+Acervo/fotos/
+Acervo/identidade-visual/
+Acervo/aplicacao-id-visual/
+Acervo/nossa-camiseta-paaps/
+Acervo/nossos-clientes-e-parceiros/
+Acervo/docs-imagens/*-imagens/
 
 # Editor
 .vscode/
@@ -54,6 +54,10 @@ automacoes/pesquisa-tcc-bh/unidades-bh.json
 automacoes/pesquisa-tcc-bh/previa/
 automacoes/pesquisa-tcc-bh/anuencia-suas.pdf
 
+# Planilha de acompanhamento das Rodas: leva nome de coordenadora e dado de campo,
+# mesma regra acima. A estrutura de colunas está documentada no README desta pasta.
+automacoes/pesquisa-tcc-bh/acompanhamento-tcc.xlsx
+
 # Newsletters puxadas por IMAP (automacoes/conteudo-pipeline/newsletters/puxar-newsletters.mjs):
 # carregam nome e e-mail real de remetente terceiro (dado pessoal). O Radar lê local,
 # nunca precisa estar versionado.
@@ -61,3 +65,22 @@ conteudo/ciclos/*/B0-newsletters.md
 
 # vídeo grande, fora do git desde 01/09/2026 (travava o push, acima do limite do GitHub)
 codigo/site/pitch-serasa/img/final - cópia.mp4
+.export-*
+
+# Obsidian. O cofre é "Segundo Cérebro/", então a config dele fica em "Segundo Cérebro/.obsidian/".
+# graph.json ENTRA no git: é ele que carrega as cores dos 6 setores do grafo. O que fica
+# de fora é só estado de janela, que muda a cada clique e polui o diff.
+Segundo Cérebro/.obsidian/workspace.json
+Segundo Cérebro/.obsidian/workspace-mobile.json
+Segundo Cérebro/.obsidian/cache
+# vault antigo da raiz inteira, aposentado: graficava 79 mil arquivos sem sentido.
+# A barra inicial é obrigatória: sem ela o padrão casa QUALQUER pasta .obsidian do repo,
+# inclusive a do cofre, e engole as cores do grafo.
+/.obsidian/
+
+# Tema e plugin de terceiros do cofre: reinstaláveis, não versionar
+Segundo Cérebro/.obsidian/themes/
+Segundo Cérebro/.obsidian/plugins/
+
+# Aviso de backup parado: visível na pasta, nunca versionado
+AVISO-BACKUP-PARADO.md

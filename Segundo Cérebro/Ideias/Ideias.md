@@ -1,0 +1,29 @@
+---
+tags: [ideias, indice]
+origem: "Ideias"
+resumo: "A porta de entrada da mineração de ideias, o objetivo número um deste cofre"
+serve-para: []
+status: pendente
+atualizado: 2026-09-12
+---
+
+# Ideias
+
+> **Caminho desta pasta:** `Segundo Cérebro/Ideias/`
+> Quem for abrir uma nota daqui monta o caminho com esta pasta mais o nome da nota.
+> **Esta capa é o endereço estável do setor.** Nota muda de nome e muda de lugar;
+> a capa não muda. Quem cita caminho, cita esta.
+
+**A mineração é o objetivo número um deste cofre.** Uma faísca entra aqui crua, e o que
+a torna útil é uma coisa só: o campo **onde isso serve**. Ideia que não diz onde serve
+morre em três meses.
+
+## Como uma ideia vira várias
+
+Cada nota de ideia carrega `## O que nasceu daqui`, com o link das filhas. Três meses
+depois é esse campo que mostra que cinco faíscas soltas eram a mesma ideia, ou que uma
+ideia pensada para a PAAPS é o que abre a [[clinica-mallu-2027]].
+
+## Onde isso serve
+
+Em [[conteudo-paaps]], [[conteudo-mallu]] e em qualquer projeto que precise de ângulo.

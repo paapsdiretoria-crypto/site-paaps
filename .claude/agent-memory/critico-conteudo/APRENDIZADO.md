@@ -25,7 +25,7 @@ categoria? toda citação reaproveitada declara a edição dentro do próprio te
 **Por quê:** são exatamente os achados que passaram batido na primeira reprovação (30/07,
 sem crítico dedicado) e só foram pegos porque este agente passou a existir.
 
-Ver `insumos-compartilhados/nucleo-comum/anatomia-do-carrossel-aprovado.md` para o texto
+Ver `Segundo Cérebro/Voz/Voz.md` para o texto
 final que resultou dessa calibração.
 
 ## Situação: nota alta (inclusive 100/100) não pegou repetição literal de frase nem uso de
