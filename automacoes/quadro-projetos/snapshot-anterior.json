@@ -1,0 +1,19 @@
+{
+  "capturado_em": "2026-09-14",
+  "data_source": "collection://99544cb5-2e00-8327-b5d9-8728a7a8543b",
+  "linhas": [
+    {"Name": "tcc-saberes-SUAS", "Status": "Fazendo", "Prioridade": "Importante"},
+    {"Name": "Produção de CONTEÚDO:", "Status": "Fazendo", "Prioridade": "Urgente", "date_limite": "2026-09-13"},
+    {"Name": "TEORIA DA MUDANÇA E CANVAS C - DESAFIO REGENERA YUNUS NEGÓCIOS SOCIAIS", "Status": "Fazendo", "Prioridade": "Urgente", "date_limite": "2026-09-19"},
+    {"Name": "AVM - ASSISTENTE VIRTUAL MODERNA QUE ME TIRA DO OPERACIONAL", "Status": "Fazendo", "Prioridade": "Importante"},
+    {"Name": "LinkedIn — ATUALIZAR Experiência & Autoridade", "Status": "Tarefas avulsas", "Prioridade": "Importante"},
+    {"Name": "Site PAAPS 3.0 - revisão", "Status": "Tarefas avulsas", "Prioridade": "Importante"},
+    {"Name": "ATUALIZAR O SEGUNDO CÉREBRO COM", "Status": "Tarefas avulsas", "Prioridade": "Urgente", "date_limite": "2026-09-13"},
+    {"Name": "PAAPS AI— infraestrutura pendente", "Status": "Tarefas avulsas", "Prioridade": "Importante"},
+    {"Name": "Sistema GTO + Quadro de Projetos: AVM no NOTION", "Status": "Estão no Radar (próx. 3 meses)", "Prioridade": "Importante"},
+    {"Name": "Inteligência Competitiva / Relatórios de Concorrentes", "Status": "Estão no Radar (próx. 3 meses)", "Prioridade": "Importante"},
+    {"Name": "DECK FINANCEIRO E PLANO DE CAPTAÇÃO DE INVESTIMENTOS", "Status": "Estão no Radar (próx. 3 meses)", "Prioridade": "Urgente", "date_limite": "2026-09-26"},
+    {"Name": "PITCH-DECKS: COMERCIAL E DE CAPTAÇÃO", "Status": "Estão no Radar (próx. 3 meses)", "Prioridade": "Urgente", "date_limite": "2026-10-04"},
+    {"Name": "Estudo profundo de ICPs dos Leads (TCC e traduzir)", "Status": "Estão no Radar (próx. 3 meses)", "Prioridade": "Importante"}
+  ]
+}
