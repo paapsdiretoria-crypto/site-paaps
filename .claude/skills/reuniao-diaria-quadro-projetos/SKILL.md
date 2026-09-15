@@ -93,3 +93,34 @@ que está travado nela. É visualização interna, não uma peça pra ninguém d
 Aprovar ou publicar peça pública, enviar e-mail ou mensagem real a alguém, mexer em
 configuração de conta (LinkedIn, site em produção, DNS), e qualquer contradição de
 conteúdo achada no Segundo Cérebro: sobem pra ela na pauta, nunca se resolvem sozinhas.
+
+## O formato de entrega: pauta em HTML, anexada na conversa, nunca link de Artifact
+
+Calibrado pela Mallu em 14/09/2026, depois da primeira rodada automática ter saído só
+como comentário nos cards do Notion e uma notificação de push. Ela quer a pauta **aqui na
+conversa**, como arquivo que abre do lado (`SendUserFile` com `display: "render"`),
+**nunca** publicada como Artifact (isso cria um link separado, fora da conversa, que não
+é o que ela quer).
+
+Estrutura da pauta, uma vez por rodada:
+
+- **Uma pergunta por pendência**, nunca lista corrida. Cada card: o contexto (o que já
+  foi feito ou por que trava), o passo concreto de como ela entrega a resposta, e uma
+  caixa de texto (`<textarea>`) pra ela escrever antes de colar no chat.
+- **Com prazo primeiro**, sem prazo depois, decisões rápidas por último, ação física
+  dela (fora do chat) no final.
+- **Botão "Copiar minhas respostas"** no rodapé, que junta todo texto preenchido num
+  bloco pronto pra colar aqui no chat.
+- **Decisões rápidas usam `<select>` com as opções já redigidas por mim**, nunca pergunta
+  aberta pura quando dá pra prever as alternativas reais. Regra que a Mallu fechou em
+  14/09/2026: **toda decisão rápida sempre ganha uma opção extra "Conversar sobre" com um
+  campo de texto aberto**, porque às vezes ela precisa me passar um contexto ou corrigir
+  uma informação antes de eu poder executar (exemplo dela: a skill de precificação, onde
+  o certo era confirmar os valores com ela antes de escrever, não só perguntar
+  "escrever ou apagar"). Nunca assumir que as duas opções óbvias cobrem tudo.
+- Sem capacidade de banco de dados (a pauta não é um Artifact publicado): cada rodada é
+  um arquivo novo, e a resposta dela volta por texto no chat, não por escrita persistida
+  no HTML. Isso é intencional, não uma limitação a resolver.
+
+Nunca escrever a pauta como lista de texto solta no chat quando o pedido pede este
+formato: a régua desta seção é o que a Mallu validou, não uma sugestão.

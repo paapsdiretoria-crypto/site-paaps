@@ -307,6 +307,7 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 - [[estresse-no-trabalho-brasil-isma]] `pendente` : O Brasil é o 2º país do mundo com a força de trabalho mais estressada, 72% relatam estresse e 32% têm sintomas de burnout
 - [[eventos-traumaticos-policial-vs-civil]] `pendente` : Em 40 anos, um civil vive cerca de 5 eventos traumáticos e um policial cerca de 900
 - [[igd-repasse-automatico-formacao-equipe]] : O IGD repassa automaticamente, todo mês, dinheiro que o município já pode gastar em formação de equipe da assistência social, e não usar reduz o repasse seguinte
+- [[mapeamento-produtores-vo-xopoto]] : O mapeamento de 18 produtores rurais de Desterro do Melo que sustentam a Vó Xopotó, levantado entre janeiro e julho de 2024
 - [[microcredito-periodicidade-do-encontro]] : Um experimento com microcrédito em Calcutá isolou o efeito do encontro periódico entre as mesmas pessoas, e ele reduziu a inadimplência em três vezes; a responsabilidade solidária do grupo não teve esse efeito
 - [[minerva-paaps-framework-notion]] `pendente` : O Notion Minerva-paaps FrameWork descreve uma parceria pausada, ainda não representada no cofre, em que universitários da Minerva viveriam imersão na Refazenda Rio Xopotó para atuar dentro do PAAPS em Desterro do Melo
 - [[nr-01]] : A NR-01 não vincula prefeitura nem servidor estatutário, então ela pode ser citada como referência de enquadramento mas nunca como obrigatoriedade legal

@@ -1,6 +1,6 @@
 ---
 name: sentinela
-description: Agente de inteligência estratégica. Acionar em paralelo com o Radar para analisar performance real dos perfis PAAPS e @amalluvasconcellos, cruzar com dados do dashboard e gerar auto-report crítico do que funcionou, o que não funcionou e como seguir. Ler output do Radar em `conteudo/ciclos/` e `voz-paaps.md` antes de executar.
+description: ARQUIVADO em 14/09/2026, decisão da Mallu. Fora do fluxo desde 27/07/2026 e apontava pra um caminho de dashboard antigo (`/Users/mac/Documents/SITE PAAPS/...`, de antes da migração de pasta). Não carrega mais como agente ativo (pasta `_arquivados/` não é lida pelo Claude Code). Mantido aqui só como registro; não editar nem reativar sem decisão nova dela.
 model: sonnet
 tools: [WebSearch, WebFetch, Read, Write, Bash, Edit]
 memory: project

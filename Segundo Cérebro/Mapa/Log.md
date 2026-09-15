@@ -331,3 +331,14 @@ uma. Ligada a [[instagram-conteudo-mallu]] e [[linkedin-conteudo-mallu]]. No mes
 o "Diretório de histórias do especialista" (outra database do Sistema GTO) estava vazio:
 populado com as 14 histórias já vivas em [[Histórias]], sem criar nota nova (o cofre já
 tinha o conteúdo, faltava só espelhar no Notion que os agentes de conteúdo consultam).
+
+## [2026-09-14] entidades | os produtores por trás da Vó Xopotó, nomeados
+
+A Mallu mandou um docx com o mapeamento de 18 produtores rurais de Desterro do Melo,
+levantado pela Refazenda Rio Xopotó entre janeiro e julho de 2024, dizendo que esse é o
+material real por trás da marca [[vo-xopoto]]. Nasceu [[mapeamento-produtores-vo-xopoto]]
+em [[Fontes]] (o documento fonte, salvo em `Arquivos/vo-xopoto/`), e [[vo-xopoto]] ganhou
+a seção "Quem são os produtores" com nome, produção e uma linha de história de cada um.
+Duas histórias (Rosinha e a origem do palmito pupunha) têm força narrativa própria e
+ficaram sinalizadas como candidatas a nota em [[Histórias]], se algum dia entrarem em
+peça de conteúdo, mas não viraram nota agora por falta de uso concreto ainda.
