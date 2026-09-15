@@ -384,3 +384,14 @@ nunca em arquivo commitado.
 sinalizava 5 itens antes de poder ser enviada (valor da captação incoerente, pitch deck e
 cap table não anexados, LGPD não marcada, setor de atuação a revisar). Registrado via
 `tarefa-avulsa-quadro-projetos`, nunca como nota.
+
+**Calibração da Mallu em 15/09/2026, sobre o gate de dado pessoal:** ela pediu explicitamente
+para não mascarar o CPF e o telefone dela como representante legal ("isso nem é dado sensível
+aqui pra PAAPS... qualquer um tem acesso ao CPF e telefone disponibilizados sem esforço
+algum"). Desmascarados em [[paaps-yunus-folha-de-respostas]] e na transcrição em `Arquivos/`.
+Reconciliado com a regra do `CLAUDE.md` raiz sem contradizê-la: a proibição sempre mirou
+CPF/e-mail de **lead ou Servidor Público**, terceiro de fora; nunca cobriu o CPF das próprias
+sócias em documento de habilitação institucional (é aliás o mesmo dado que já estava, sem
+máscara, em [[digging-ficha-juridica]] desde antes desta sessão). Calibração registrada como
+nota datada dentro da própria regra do `CLAUDE.md`, para outra sessão não reintroduzir a
+máscara por engano.

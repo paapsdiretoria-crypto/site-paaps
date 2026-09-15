@@ -12,8 +12,10 @@ reconferivel: sim
 # Folha de Respostas do formulário Yunus (Pipefy), 08/09/2026
 
 **Registro de segurança de um formulário ainda não enviado**, guardado em
-`Segundo Cérebro/Arquivos/PAAPS Yunus Folha de Respostas 20260908.md` com CPF e telefone
-mascarados (dado de pessoa real nunca entra em arquivo commitado). O formulário original no
+`Segundo Cérebro/Arquivos/PAAPS Yunus Folha de Respostas 20260908.md`. Traz CPF e telefone de
+Mallu como representante legal da DIGGING: calibrado pela Mallu em 15/09/2026 que esse dado,
+em documento de habilitação institucional das próprias sócias, não é sensível pra PAAPS (ver
+[[digging-ficha-juridica]], que já traz o mesmo CPF desde antes). O formulário original no
 Pipefy não foi alterado nem enviado.
 
 ## O dado financeiro exato

@@ -1,7 +1,10 @@
-> **Nota de segurança (regra do CLAUDE.md raiz):** o CPF e o telefone do representante legal
-> foram mascarados como `[removido]` nesta transcrição antes de entrar no repositório
-> commitado. Dado de pessoa real nunca vai em arquivo do git, só no CRM do Notion ou em
-> planilha privada. Fora isso, transcrição fiel do .docx original, sem alteração.
+> **Nota de segurança, atualizada em 15/09/2026:** CPF e telefone da própria Mallu/Fabiane,
+> como representantes legais da DIGGING em documento de habilitação institucional (edital,
+> formulário de captação), não são dado sensível pra PAAPS: são dado de registro que qualquer
+> um já acessa sem esforço, calibrado pela Mallu em 15/09/2026. O rule de "nunca dado pessoal
+> em arquivo commitado" do CLAUDE.md raiz mira CPF/e-mail de lead ou Servidor Público, terceiro
+> de fora, não o CPF das próprias sócias em documento jurídico/institucional. Transcrição fiel
+> do .docx original, sem alteração.
 
 Folha de Respostas — Formulário Yunus (Pipefy)
 Registro do estado atual do formulário em 08/09/2026, salvo para consulta e continuidade. O formulário não foi enviado.
@@ -18,7 +21,7 @@ Número da sede: 186
 Complemento da sede: Alto da Lapa
 CEP: 05084-020
 Nome do representante legal: MARIA LUIZA VASCONCELLOS BARBOSA
-CPF do representante legal: [removido]
+CPF do representante legal: 528.680.888-30
 Email do representante legal: relacionamento@paaps.com.br
 Data da fundação: 23/10/2003
 
@@ -82,7 +85,7 @@ Marcado: Não (campo condicional "detalhe as condições do empréstimo" e anexo
 Informações para Contato
 Nome da pessoa de contato: Mallu Vasconcellos
 Email da pessoa de contato: relacionamento@paaps.com.br
-Telefone da pessoa de contato: [removido]
+Telefone da pessoa de contato: 11 99523-1724
 
 LGPD
 Caixa de concordância com os termos da LGPD ainda NÃO marcada ("Este campo é obrigatório" aparece porque falta marcar).

@@ -188,6 +188,14 @@ sai daqui por decisão minha.** Cada um tem pasta, cor própria no grafo e nota-
   `[removido]`. Chaves reais vivem só no `.env` (ignorado pelo git); dados de pessoas,
   no CRM ou planilha privada. Ver `automacoes/.env.example` e `PLANO-DE-ACAO.md`.
 
+  > **Calibrado pela Mallu em 15/09/2026:** esta proibição mira CPF/e-mail de **lead ou
+  > Servidor Público, terceiro de fora**. Não cobre o CPF e telefone da própria Mallu ou da
+  > Fabiane, como sócias e representantes legais da DIGGING, em documento de habilitação
+  > institucional (edital, formulário de captação, ficha jurídica): esse é dado de registro
+  > que qualquer um já acessa sem esforço, então pode aparecer sem máscara em nota do Segundo
+  > Cérebro ou em qualquer arquivo do repo. Exemplo já commitado sem problema: a ficha
+  > cadastral da DIGGING em `Segundo Cérebro/Entidades/Entidades.md`.
+
 ---
 
 ## Regras calibradas : não são proibições absolutas
