@@ -395,3 +395,14 @@ sócias em documento de habilitação institucional (é aliás o mesmo dado que 
 máscara, em [[digging-ficha-juridica]] desde antes desta sessão). Calibração registrada como
 nota datada dentro da própria regra do `CLAUDE.md`, para outra sessão não reintroduzir a
 máscara por engano.
+
+**Fichamento acadêmico processado, colado direto no chat pela Mallu (15/09/2026):**
+Ginsberg (1955), estudo com escolares de São Paulo sobre atitude racial (jogo de bonecas
+branca/preta + interpretação de quadros). Bruto salvo em `Arquivos/`. Nasceu
+[[ginsberg-1955-atitudes-raciais-escolares-sao-paulo]] em [[Fontes]] (ficha completa: método,
+achado central, achados secundários) e [[criancas-atribuem-posicao-racial-a-pobreza-ginsberg-1955]]
+no cérebro de [[Conteúdo]] (ângulo pronto: em 1955 o racismo já vinha disfarçado de explicação
+econômica). Não é pilar da tese comercial da PAAPS (saúde mental de servidor público); serve
+como insumo crítico para o conteúdo pessoal da Mallu e para [[psicologia-social]], coerente com
+a linha epistemológica estrutural. Sem PII, sem categoria nova, sem contradição com nota
+existente: nenhuma pergunta pendente para ela.

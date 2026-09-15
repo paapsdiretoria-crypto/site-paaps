@@ -81,6 +81,7 @@ mesmo ciclo de [[Visão Geral]]: vira nota nesta capa, nunca fica solto por muit
 
 - [[cartilha-amarela-prevencao-assedio-suicidio]] : Cartilha Amarela do MTE (2025), reservada para a produção de conteúdo desta semana
 - [[cinco-melhores-sistemas-educacao-mundo]] : Comparação de 5 sistemas educacionais (Finlândia, Singapura, China, Japão, Canadá): roteiro a minerar para @amalluvasconcellos
+- [[criancas-atribuem-posicao-racial-a-pobreza-ginsberg-1955]] : Em 1955, crianças já explicavam a posição inferior da criança negra pela pobreza, não pelo racismo: ângulo pronto para conteúdo de @amalluvasconcellos
 - [[gargalos-saude-mental-sus]] : Só 11,3 mil dos 600 mil psicólogos do Brasil atuam no SUS, e psiquiatras estão concentrados no Sul/Sudeste
 - [[greve-atencao-basica-rio]] : Médicos da atenção básica do Rio em greve por sobrecarga (até 6 mil usuários por equipe) e falta de reajuste
 - [[montessori-ou-nao]] : Deep dive no método Montessori, incluindo a fraude do nome não registrável: roteiro a minerar para @amalluvasconcellos

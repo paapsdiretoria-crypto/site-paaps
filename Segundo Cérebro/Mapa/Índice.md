@@ -311,6 +311,7 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 - [[anotacoes-reuniao-joyce]] : As anotações de caderno da Mallu na escuta com a Joyce, assistente social, ditadas em 12/09/2026
 - [[ata-registro-precos-saude-mental-servidor]] : O governo federal previu R$ 26,9 milhões em ata de registro de preços para acolher a saúde mental de servidores
 - [[carrossel-vendas-pra-quem-e-como-funciona]] : Carrossel de vendas de 6 peças (pra quem é, como funciona, o que resolve) com o detalhamento das três perguntas do diagnóstico
+- [[ginsberg-1955-atitudes-raciais-escolares-sao-paulo]] : Estudo de 1955 mostra que a posição inferior atribuída à criança negra vinha muito mais de inferioridade socioeconômica do que de preconceito racial explícito
 - [[censopsi-2022-precariedade-psicologia]] : O CensoPsi 2022 do CFP mostra que 55,2% dos psicólogos brasileiros precisam de mais de um vínculo para viver, porque o mercado paga por acúmulo, não por profundidade
 - [[dados-afastamento-por-transtorno-mental]] : Afastamentos por transtorno mental bateram recorde da década em 2025 e custam cerca de R$ 3,5 bilhões por ano ao INSS
 - [[dados-autorizados-do-site]] : Os quatro dados que estão no ar no site da PAAPS, com a referência completa de cada um
@@ -348,6 +349,7 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 - [[Conteúdo]] : A Biblioteca de Conteúdo: dado, citação e frase pronta, com contador de uso, interligada ao cérebro oficial
 - [[cartilha-amarela-prevencao-assedio-suicidio]] : Cartilha Amarela do MTE (2025), reservada para a produção de conteúdo desta semana
 - [[cinco-melhores-sistemas-educacao-mundo]] : Comparação de 5 sistemas educacionais: roteiro a minerar para @amalluvasconcellos
+- [[criancas-atribuem-posicao-racial-a-pobreza-ginsberg-1955]] : Em 1955, crianças já explicavam a posição inferior da criança negra pela pobreza, não pelo racismo: ângulo pronto para conteúdo de @amalluvasconcellos
 - [[gargalos-saude-mental-sus]] : Só 11,3 mil dos 600 mil psicólogos do Brasil atuam no SUS
 - [[greve-atencao-basica-rio]] : Médicos da atenção básica do Rio em greve por sobrecarga e falta de reajuste
 - [[montessori-ou-nao]] : Deep dive no método Montessori: roteiro a minerar para @amalluvasconcellos

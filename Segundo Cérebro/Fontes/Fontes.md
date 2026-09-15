@@ -32,6 +32,7 @@ Lei, dado oficial, estudo, notícia, aula, vídeo, livro e material de concorren
 - [[dados-do-esgotamento-e-erro]] : Quem atende esgotado tem o dobro de chance de errar no atendimento, e o endividamento do servidor alimenta esse esgotamento
 - [[estresse-no-trabalho-brasil-isma]] : O Brasil é o 2º país do mundo com a força de trabalho mais estressada, 72% relatam estresse e 32% têm sintomas de burnout
 - [[eventos-traumaticos-policial-vs-civil]] : Em 40 anos, um civil vive cerca de 5 eventos traumáticos e um policial cerca de 900
+- [[ginsberg-1955-atitudes-raciais-escolares-sao-paulo]] : Estudo de 1955 mostra que a posição inferior atribuída à criança negra vinha muito mais de inferioridade socioeconômica do que de preconceito racial explícito
 - [[igd-repasse-automatico-formacao-equipe]] : O IGD repassa automaticamente, todo mês, dinheiro que o município já pode gastar em formação de equipe da assistência social, e não usar reduz o repasse seguinte
 - [[modelo-canvas-c2-desafio-regenera]] : O Canvas C 2.0 cruza fluxo de impacto e fluxo comercial em 3 blocos: Desafio Socioambiental, Capacidade Operacional e Gestão Estratégica
 - [[modelo-teoria-da-mudanca-indicadores-impacto]] : O template do 1º entregável do Desafio Regenera tem 5 blocos, do contexto aos indicadores de cada etapa
