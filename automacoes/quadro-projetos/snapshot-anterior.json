@@ -1,5 +1,5 @@
 {
-  "capturado_em": "2026-09-14",
+  "capturado_em": "2026-09-15",
   "data_source": "collection://99544cb5-2e00-8327-b5d9-8728a7a8543b",
   "linhas": [
     {"Name": "tcc-saberes-SUAS", "Status": "Fazendo", "Prioridade": "Importante"},
@@ -12,6 +12,8 @@
     {"Name": "Site PAAPS 3.0 - revisão", "Status": "Tarefas avulsas", "Prioridade": "Importante"},
     {"Name": "ATUALIZAR O SEGUNDO CÉREBRO COM", "Status": "Tarefas avulsas", "Prioridade": "Importante", "date_limite": "2026-09-13"},
     {"Name": "PAAPS AI— infraestrutura pendente", "Status": "Tarefas avulsas", "Prioridade": "Importante"},
+    {"Name": "Deck Pitch Impulsiona Serasa (deck-v5) - revisão", "Status": "Tarefas avulsas", "Prioridade": "Importante"},
+    {"Name": "Formulário Yunus (Pipefy) — finalizar antes de enviar", "Status": "Tarefas avulsas", "Prioridade": "Urgente"},
     {"Name": "Sistema GTO + Quadro de Projetos: AVM no NOTION", "Status": "Estão no Radar (próx. 3 meses)", "Prioridade": "Importante"},
     {"Name": "Inteligência Competitiva / Relatórios de Concorrentes", "Status": "Estão no Radar (próx. 3 meses)", "Prioridade": "Importante"},
     {"Name": "DECK FINANCEIRO E PLANO DE CAPTAÇÃO DE INVESTIMENTOS", "Status": "Estão no Radar (próx. 3 meses)", "Prioridade": "Urgente", "date_limite": "2026-09-26"},

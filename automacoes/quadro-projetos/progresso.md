@@ -1,51 +1,66 @@
 # Placar do Quadro de Projetos
 
-Rodada de 14/09/2026 (automática, 8h, via `reuniao-diaria-quadro-projetos`). Sobrescrito
-inteiro na próxima rodada. Sessão automática, sem a Mallu presente: a pauta ficou nos
-comentários dos cards, um por tarefa, esperando a resposta dela.
+Rodada de 15/09/2026 (automática, 8h, via `reuniao-diaria-quadro-projetos`). Sobrescrito
+inteiro na próxima rodada. Sessão automática, sem a Mallu presente: pauta entregue como
+arquivo HTML na conversa, comentário de status em cada card tocado no Notion, nenhum
+Status de card alterado.
+
+## O que mudou desde ontem (14/09)
+
+Dois cards novos na database, não estavam no snapshot de ontem:
+- **Deck Pitch Impulsiona Serasa (deck-v5), revisão**: ✅ resolvido sozinha. O slide de
+  Mercado (`section-mercado.tsx`) ainda mostrava SOM "100 municípios", desatualizado desde
+  a correção de 25/08/2026 documentada em `CALCULO-TAM-SAM-SOM.md`; o roadmap já estava
+  certo. Corrigido pra 68 municípios, 1,2% do total. ❌ falta dela: decidir se o PDF já
+  entregue na inscrição do Impulsiona Startups (28/08) precisa de reenvio.
+- **Formulário Yunus (Pipefy), finalizar antes de enviar**: ❌ nada autônomo. Card novo,
+  rascunho parado desde 08/09. Precisa dela: valor a captar (R$ 5.000 no campo, R$ 500 mil
+  na soma detalhada, os dois não batem), pitch deck e cap table anexados, caixa de LGPD
+  marcada, revisão dos setores de atuação.
+
+Nenhum outro card recebeu resposta dela desde ontem: os oito comentários de ontem seguem
+sem réplica (Produção de Conteúdo, Segundo Cérebro, Biblioteca/Dr. Yago, Teoria da
+Mudança, AVM, Photobank, LinkedIn, PAAPS AI infra, Site PAAPS já fechado ✅).
 
 ## Fazendo
 
-- **Produção de CONTEÚDO** ✅ parcial: li e salvei no cofre a linha editorial do Sistema
-  GTO ([[linha-editorial-conteudo-mallu]]) e preenchi o Diretório de histórias do
-  especialista (14 histórias, antes vazio). ❌ falta: buscador de fotos, briefing da
-  Karin, reunião de alinhamento, GTO no `conteudo/CLAUDE.md`.
-- **Criar o Photobank @malluvasconcellos** (novo card, prazo 20/09): página em branco, só
-  o link do Photobank. Bloqueada até ela descrever a tarefa.
-- **Teoria da Mudança/Canvas C (Regenera Yunus)**: ainda só o link da pasta do Drive, sem
-  briefing. Prazo 19/09, já perto.
+- **Produção de CONTEÚDO** ✅ parcial (feito ontem, sem novidade hoje): linha editorial do
+  Sistema GTO salva no cofre, Diretório de histórias preenchido. ❌ falta: buscador de
+  fotos, briefing da Karin, reunião de alinhamento, GTO no `conteudo/CLAUDE.md`.
+- **Criar o Photobank @malluvasconcellos** (prazo 20/09): página em branco, bloqueada até
+  ela descrever a tarefa.
+- **Teoria da Mudança/Canvas C (Regenera Yunus)**: só o link da pasta do Drive, sem
+  briefing. Prazo 19/09, 4 dias.
 - **AVM (assistente que tira do operacional)**: página em branco, sem tarefa clara.
 - **tcc-saberes-SUAS**: escrita acadêmica pessoal da Mallu, fora do escopo desta rotina.
 
 ## Tarefas avulsas
 
-- **BIBLIOTECA E CÉREBRO DE CONTEÚDOS PAAPS** (novo card, prazo hoje 14/09, urgente): a
-  Mallu quer um carrossel collab com o Dr. Yago sobre Setembro Amarelo. Falta dela: qual
-  ângulo crítico priorizar na abertura. Sem isso eu inventaria o corte, que é decisão
-  dela.
-- **Site PAAPS 3.0, revisão** ✅ feito: número do estudo BMJ 2022 corrigido em
-  `codigo/site/home/index.html` (35 estudos, 41 mil profissionais). O segundo arquivo que
-  o card citava não existe mais no repo (deploy é gerado na hora).
-- **PAAPS AI, infraestrutura pendente**: ✅ um item já estava resolvido (linha desatualizada
-  sobre `critico-conteudo` não existe mais em `conteudo/CLAUDE.md`). ❌ os outros 4 pedem
-  decisão ou acesso dela: Acesso Total ao Disco, prazos mensais de Metas 2026, sentinela.md,
-  skill precificacao-paaps, e se redesenho o SVG da arquitetura agora.
-- **Atualizar o Segundo Cérebro com** (prazo 13/09, já passou): nada processado. Itens 1-7
-  pedem o link exato de cada pasta do Drive/Notion, que o card só descreve sem linkar.
-  Itens 8-12 só ela narra.
-- **LinkedIn, atualizar experiência**: item novo (conectar com time da ONU Brasil e Marina
-  Helou) é ação da própria Mallu no LinkedIn dela, não tarefa minha.
+- **BIBLIOTECA E CÉREBRO DE CONTEÚDOS PAAPS** (prazo 14/09, vencido 1 dia): falta o
+  ângulo do carrossel collab com o Dr. Yago sobre Setembro Amarelo.
+- **Site PAAPS 3.0, revisão** ✅ feito (ontem): número do estudo BMJ 2022 corrigido.
+- **Deck Pitch Impulsiona Serasa, revisão** ✅ feito hoje: SOM corrigido de 100 para 68
+  municípios. ❌ falta decidir reenvio do PDF já submetido.
+- **Formulário Yunus (Pipefy)** (novo hoje): bloqueado, precisa de decisão de valor,
+  anexos e confirmação de LGPD.
+- **PAAPS AI, infraestrutura pendente**: 4 decisões dela pendentes (Acesso Total ao Disco,
+  prazos mensais de Metas 2026, sentinela.md, skill precificacao-paaps, redesenho do SVG).
+- **Atualizar o Segundo Cérebro com** (prazo 13/09, vencido 2 dias): precisa dos links
+  exatos das 7 pastas do Drive/Notion e da narração dos itens 8 a 12.
+- **LinkedIn, atualizar experiência**: conectar com time da ONU Brasil e Marina Helou é
+  ação da própria Mallu no LinkedIn dela.
 
 ## Estão no Radar (próx. 3 meses)
 
-Sem mudança desde a rodada anterior: Sistema GTO + AVM no Notion, Estudo de ICPs dos
-Leads, Inteligência Competitiva, Deck Financeiro (prazo 26/09), Pitch-Decks (prazo 04/10).
-Todos ainda em branco ou com só o link da pasta, nenhum com briefing pra começar.
+Sem mudança: Sistema GTO + AVM no Notion, Estudo de ICPs dos Leads, Inteligência
+Competitiva, Deck Financeiro (prazo 26/09), Pitch-Decks (prazo 04/10). Todos ainda em
+branco ou com só o link da pasta, nenhum com briefing pra começar.
 
 ## O que está travado nela, resumo
 
-Ângulo do carrossel com o Dr. Yago (prazo hoje); links das pastas de Drive/Notion do
-Segundo Cérebro; abrir e explicar as três pastas de Drive (Regenera, Deck Financeiro,
-Pitch-Decks); briefing do Photobank @malluvasconcellos e da AVM; Acesso Total ao Disco
-pros dois LaunchAgents; prazos mensais de Metas 2026; decidir sentinela.md e a skill
-precificacao-paaps; as 5 histórias e datas que só ela conta, do card do Segundo Cérebro.
+Ângulo do carrossel com o Dr. Yago (vencido); links das pastas de Drive/Notion do Segundo
+Cérebro (vencido); reenvio do PDF do Serasa; valor, anexos e LGPD do Formulário Yunus;
+briefing da Teoria da Mudança e do Photobank @malluvasconcellos; Acesso Total ao Disco
+pros dois LaunchAgents; prazos mensais de Metas 2026; sentinela.md e skill
+precificacao-paaps; redesenho do SVG de arquitetura; as histórias e datas que só ela
+conta, do card do Segundo Cérebro.
