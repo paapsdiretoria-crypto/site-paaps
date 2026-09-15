@@ -4,7 +4,7 @@ origem: "Sistema"
 resumo: "A linha do tempo do que entra no Segundo Cérebro, uma linha por entrada"
 serve-para: []
 status: vivo
-atualizado: 2026-09-14
+atualizado: 2026-09-15
 ---
 
 # Log
@@ -342,3 +342,28 @@ a seção "Quem são os produtores" com nome, produção e uma linha de históri
 Duas histórias (Rosinha e a origem do palmito pupunha) têm força narrativa própria e
 ficaram sinalizadas como candidatas a nota em [[Histórias]], se algum dia entrarem em
 peça de conteúdo, mas não viraram nota agora por falta de uso concreto ainda.
+
+## [2026-09-15] captação | os treze documentos do Pitch Impulsiona Serasa, destilados
+
+A Mallu pediu para processar o material de `codigo/site/pitch-serasa/` (a inscrição no
+Impulsiona Startups da Serasa Experian), chamando de "construção de muita importância que
+eu preciso saber de cor e salteado". Boa parte do conteúdo (TAM/SAM/SOM, modelo de preço da
+Roda, Schwartz Rounds, verba pública, microcrédito, precariedade da psicologia) já estava
+destilada em notas existentes. Nasceram 9 notas novas do que ainda não estava: em
+[[Fontes]], [[mercado-de-impacto-social-brasil]], [[divida-e-sofrimento-psiquico-richardson]],
+[[afastamento-evitado-metodologia-de-calculo]] e [[digging-historico-financeiro-2022-2025]];
+em [[estrategia-de-negocio]], [[licenciamento-do-metodo-estrategia]] (a bifurcação
+execução própria × licença Base/Plena e a métrica "pessoas por município"),
+[[projecao-cinco-anos-estrategia]] e [[fator-r-e-tributacao-estrategia]]; em
+[[captacao]], [[serasa-econsig-parceria-estrategica]] (a Serasa já opera em 600+ órgãos
+públicos pelo eConsig, incluindo Belo Horizonte); em [[Entidades]],
+[[risco-inalienabilidade-quotas-digging]] `pendente`.
+
+[[tam-sam-som-estrategia]] tinha uma contradição: guardava o SOM antigo (100 municípios),
+já superado por uma correção da própria Mallu em 25/08/2026 que [[roadmap-estrategia]] já
+refletia (68 municípios). Corrigido e sinalizado dentro da nota. [[schwartz-center]] e
+[[modelo-de-negocio-estrategia]] ganharam complemento (Team Time, marca registrada fora do
+Brasil; link para o modelo de licenciamento). Achado que ficou como pergunta para a Mallu,
+não nota: o slide 11 do deck-v5 (transcrito em 31/08) ainda mostra "100" no SOM, depois da
+correção de 25/08; vale confirmar se o PDF já submetido ao Impulsiona está com o número
+certo.

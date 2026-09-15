@@ -58,6 +58,30 @@ britânica financiada por doação, com estrutura de receita diferente da PAAPS.
 A PAAPS é sustentada por base teórica latino-americana própria. O Schwartz entra como prova
 de que o formato funciona em escala, nunca como origem do método. Ver [[base-teorica]].
 
+## Quem era Kenneth Schwartz, e por que o nome carrega origem, não só marca
+
+O Schwartz Center foi fundado em 1995, dias antes da morte de Kenneth (Ken) Schwartz,
+advogado da área da saúde diagnosticado com câncer de pulmão avançado, que escreveu sobre
+a própria experiência de cuidado em "A Patient's Story" (Boston Globe Magazine,
+16/07/1995). Útil para contar a origem do método sem inventar epopeia: nasceu do relato de
+um paciente sobre o que fez diferença no próprio cuidado.
+
+## Team Time, o formato irmão mais parecido com a Roda de Equipe
+
+Existe um segundo formato, criado na pandemia, mais próximo do desenho da PAAPS do que a
+própria Schwartz Round: **Team Time**, 45 minutos, online, facilitado, para um setor ou
+grupo pequeno que já se conhece (a Schwartz Round clássica é presencial, 1 hora, aberta à
+organização inteira). Vale como referência de que o próprio campo já criou uma versão mais
+enxuta e setorial do encontro, na mesma direção da Roda de Equipe.
+
+## "Schwartz Rounds" é marca registrada lá fora, e está livre no Brasil
+
+A expressão **SCHWARTZ ROUNDS** é marca nominativa registrada, classe 41 (educação e
+treinamento), nos Estados Unidos, União Europeia, Reino Unido, Canadá, Austrália e Nova
+Zelândia. **Não existe registro de "SCHWARTZ ROUNDS" no INPI: o nome está desprotegido no
+Brasil**, o que não gera risco para a PAAPS (a Roda de Equipe tem nome próprio), mas é
+precedente de que o método internacional trata o nome do formato como ativo registrável.
+
 ## Ligações
 
 [[roda-de-equipe-paaps]] · [[oms-recomendacao-formar-gestores]] · [[risco-de-marca-ponto-de-apoio]]

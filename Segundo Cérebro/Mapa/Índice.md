@@ -4,7 +4,7 @@ origem: "Sistema"
 resumo: "O catálogo de toda nota do Segundo Cérebro, por setor"
 serve-para: []
 status: vivo
-atualizado: 2026-09-14
+atualizado: 2026-09-15
 ---
 
 # Índice
@@ -27,6 +27,7 @@ O manual é [[Visão Geral]]. A regra de caminho é [[Contrato de caminhos]].
 
 A frente de investimento, editais e inscrições, com o histórico do que já foi enviado
 
+- [[serasa-econsig-parceria-estrategica]] : A Serasa já entra em mais de 600 órgãos públicos pela folha do servidor com o eConsig, e a PAAPS pode entrar pela mesma porta com o cuidado psíquico que falta
 
 ### [[cliente-ideal-paaps]] `pendente`
 
@@ -84,11 +85,14 @@ A Comunidade ECOA: o que ela é, como funciona e onde ela toca o resto do ecossi
 A frente que decide em que negócio a PAAPS está e como ela se sustenta
 
 - [[caminhos-legais-venda-ao-governo]] : A PAAPS entra em prefeitura por dispensa até R$ 65.492,11 por ano ou por inexigibilidade acima disso, e o contrato social foi redigido para abrir essa segunda porta
+- [[fator-r-e-tributacao-estrategia]] : O Fator R decide se a Psicologia da PAAPS paga 12,97% ou 19,05% de imposto, e cada real que sai do CLT para PJ ou IA barateia a operação mas encarece o imposto
+- [[licenciamento-do-metodo-estrategia]] : O licenciamento do método é o que faz uma pessoa da PAAPS atender 14 municípios em vez de 0,4, e é a métrica de escala que o investidor procura
 - [[modelo-de-negocio-estrategia]] : O preço, a margem e o contrato-padrão da PAAPS: R$ 1.100 por Roda, 60,1% de margem, R$ 924 mil por município ao ano
 - [[pesquisa-de-mercado-estrategia]] : Pesquisa de mercado da PAAPS, convertida do DOCX institucional original
 - [[ponto-de-apoio-estrategia]] : O Ponto de Apoio é o app que transforma cada Roda em registro e cria a estatística de adoecimento do servidor municipal que hoje não existe
+- [[projecao-cinco-anos-estrategia]] : Em cinco anos a PAAPS projeta sair de 1 para 68 municípios e de R$ 924 mil para R$ 13,52 milhões de receita, com a receita por pessoa subindo de R$ 231 mil para R$ 483 mil
 - [[roadmap-estrategia]] : De uma rede por vez a uma malha nacional, em oito marcos, com praticamente a mesma estrutura fixa
-- [[tam-sam-som-estrategia]] : O mercado da PAAPS em três camadas: 5.570 municípios, 2.550 que comportam contrato, 100 em cinco anos
+- [[tam-sam-som-estrategia]] : O mercado da PAAPS em três camadas: 5.570 municípios, 2.550 que comportam contrato, 68 em cinco anos
 
 ### [[gestao-estrategica-paaps]]
 
@@ -175,6 +179,7 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 - [[mallu-vasconcellos]] : Quem é Mallu Vasconcellos, o que ela faz e por que hoje ela e a PAAPS são praticamente a mesma coisa
 - [[paaps]] : Definição institucional da PAAPS para consulta interna, escrita depois que a Mallu recusou a mesma explicação como copy de site
 - [[refazenda-rio-xopoto]] : Refazenda Rio Xopotó, em Desterro do Melo, foi parceria de 2024 e hoje não há relação ativa
+- [[risco-inalienabilidade-quotas-digging]] `pendente` : As quotas da DIGGING são gravadas com inalienabilidade no contrato social, e isso pode travar a entrada de um investidor por participação societária
 - [[sara-vitral]] : Sara Vitral, candidata a deputada estadual por Minas Gerais, fez collab em vídeo com a Mallu
 - [[schwartz-center]] : O Schwartz Center, de Boston, licencia hoje as Schwartz Rounds no Reino Unido e na Irlanda, e é a referência internacional que a PAAPS cita
 - [[vo-xopoto]] : Vó Xopotó é a marca autônoma dos produtores de Desterro do Melo, nascida em 2025 a partir da Refazenda Rio Xopotó
@@ -303,11 +308,15 @@ A pesquisa de TCC da Mallu sobre o SUAS, em fase de coleta de dados pelas rodas
 - [[dados-afastamento-por-transtorno-mental]] : Afastamentos por transtorno mental bateram recorde da década em 2025 e custam cerca de R$ 3,5 bilhões por ano ao INSS
 - [[dados-autorizados-do-site]] : Os quatro dados que estão no ar no site da PAAPS, com a referência completa de cada um
 - [[dados-do-adoecimento-de-quem-sustenta-a-rede]] : Os números do tamanho da rede pública brasileira e do adoecimento ligado ao trabalho de quem a sustenta
+- [[afastamento-evitado-metodologia-de-calculo]] : Um afastamento por transtorno mental custa cerca de R$ 14.490 à prefeitura, e a literatura sustenta a direção do efeito de intervenção na equipe, nunca um percentual de redução
 - [[dados-do-esgotamento-e-erro]] : Quem atende esgotado tem o dobro de chance de errar no atendimento, e o endividamento do servidor alimenta esse esgotamento
+- [[digging-historico-financeiro-2022-2025]] : Em quatro exercícios fechados a DIGGING faturou R$ 1,16 milhão e nunca teve dívida, e é esse CNPJ limpo, não o mercado onde ele atua, que sustenta o argumento de captação da PAAPS
+- [[divida-e-sofrimento-psiquico-richardson]] : Uma meta-análise mostra que endividamento e sofrimento psíquico andam juntos na mesma população, mas é associação, nunca prova de que cuidar da saúde mental reduz dívida
 - [[estresse-no-trabalho-brasil-isma]] `pendente` : O Brasil é o 2º país do mundo com a força de trabalho mais estressada, 72% relatam estresse e 32% têm sintomas de burnout
 - [[eventos-traumaticos-policial-vs-civil]] `pendente` : Em 40 anos, um civil vive cerca de 5 eventos traumáticos e um policial cerca de 900
 - [[igd-repasse-automatico-formacao-equipe]] : O IGD repassa automaticamente, todo mês, dinheiro que o município já pode gastar em formação de equipe da assistência social, e não usar reduz o repasse seguinte
 - [[mapeamento-produtores-vo-xopoto]] : O mapeamento de 18 produtores rurais de Desterro do Melo que sustentam a Vó Xopotó, levantado entre janeiro e julho de 2024
+- [[mercado-de-impacto-social-brasil]] : O ecossistema brasileiro de negócios de impacto já mapeia 1.011 negócios, mas saúde é só 17% do total, fatia pequena dentro de um campo dominado por Green Tech
 - [[microcredito-periodicidade-do-encontro]] : Um experimento com microcrédito em Calcutá isolou o efeito do encontro periódico entre as mesmas pessoas, e ele reduziu a inadimplência em três vezes; a responsabilidade solidária do grupo não teve esse efeito
 - [[minerva-paaps-framework-notion]] `pendente` : O Notion Minerva-paaps FrameWork descreve uma parceria pausada, ainda não representada no cofre, em que universitários da Minerva viveriam imersão na Refazenda Rio Xopotó para atuar dentro do PAAPS em Desterro do Melo
 - [[nr-01]] : A NR-01 não vincula prefeitura nem servidor estatutário, então ela pode ser citada como referência de enquadramento mas nunca como obrigatoriedade legal

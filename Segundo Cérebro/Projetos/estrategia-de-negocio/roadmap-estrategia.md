@@ -28,7 +28,8 @@ investimento entra, a resposta é essa: escrever o método e construir a platafo
 
 ## Ligações
 
-[[modelo-de-negocio-estrategia]] · [[tam-sam-som-estrategia]] · [[ponto-de-apoio-estrategia]]
+[[modelo-de-negocio-estrategia]] · [[tam-sam-som-estrategia]] · [[ponto-de-apoio-estrategia]] ·
+[[projecao-cinco-anos-estrategia]] · [[licenciamento-do-metodo-estrategia]]
 
 ## Onde isso serve
 

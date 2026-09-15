@@ -4,7 +4,7 @@ origem: "Trabalho"
 resumo: "O pitch v5 e o handout da inscrição no Impulsiona Startups, onde o argumento da PAAPS está mais destilado"
 serve-para: ["[[captacao]]", "[[estrategia-de-negocio]]", "[[conteudo-paaps]]"]
 status: vivo
-atualizado: 2026-09-13
+atualizado: 2026-09-15
 orgao-ou-autor: "PAAPS Brasil"
 data-da-fonte: 2026-08-31
 reconferivel: sim
@@ -35,7 +35,12 @@ que o deck não tem tempo de fazer, como a objeção sobre trabalhar em roda.
 [[modelo-de-negocio-estrategia]] · [[tam-sam-som-estrategia]] · [[roadmap-estrategia]] ·
 [[ponto-de-apoio-estrategia]] · [[schwartz-center]] · [[risco-de-marca-ponto-de-apoio]] ·
 [[desterro-do-melo-2024]] · [[complexo-da-mare-2025]] · [[proinape-rio-2025]] ·
-[[bela-vista-e-materlandia-2025]] · e as seis notas de dado em [[Fontes]]
+[[bela-vista-e-materlandia-2025]] · [[licenciamento-do-metodo-estrategia]] ·
+[[projecao-cinco-anos-estrategia]] · [[fator-r-e-tributacao-estrategia]] ·
+[[digging-historico-financeiro-2022-2025]] · [[risco-inalienabilidade-quotas-digging]] ·
+[[serasa-econsig-parceria-estrategica]] · [[divida-e-sofrimento-psiquico-richardson]] ·
+[[afastamento-evitado-metodologia-de-calculo]] · [[mercado-de-impacto-social-brasil]] ·
+e as seis notas de dado em [[Fontes]]
 
 ## Onde isso serve
 

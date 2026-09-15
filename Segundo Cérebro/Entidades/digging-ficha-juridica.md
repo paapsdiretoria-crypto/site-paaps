@@ -318,7 +318,9 @@ Marcar o que já existe em mãos:
 ## 9. Financeiro 2025 e captação Yunus (autorizado pela Mallu em 13/09/2026)
 
 **Resultado da DIGGING em 2025:** receita de R$ 290.934,99, lucro líquido de
-R$ 105.061,96, margem de 36,1%.
+R$ 105.061,96, margem de 36,1%. A série completa dos quatro exercícios fechados
+(2022-2025), a restrição de caixa que ela impõe e como falar da relação DIGGING/PAAPS sem
+errar estão em [[digging-historico-financeiro-2022-2025]].
 
 **Termos do financiamento em negociação com a Yunus Negócios Sociais:** de R$ 500 mil a
 R$ 2 milhões, IPCA + 12% ao ano, prazo de até 5 anos. Ver [[yunus-negocios-sociais]] e

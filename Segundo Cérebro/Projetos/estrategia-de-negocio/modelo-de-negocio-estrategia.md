@@ -44,10 +44,19 @@ Folha calculada sobre salário de R$ 6.000, Simples Nacional, Anexo III, quarta 
 Nunca citar preço sem dizer o que ele inclui. E nunca apresentar o Diagnóstico 360° como
 receita: ele é investimento comercial. Ver [[diagnostico-360]].
 
+## Este é só o primeiro dos dois modelos de receita
+
+Tudo acima é a **execução própria** (a PAAPS vende o serviço, com psicólogas próprias). Ela
+é o que fabrica o método que sustenta o segundo modelo, o **licenciamento** (a PAAPS vende
+o direito de uso do método para a psicóloga que a prefeitura já tem), que é o que faz a
+receita por pessoa da equipe multiplicar sem multiplicar a equipe na mesma proporção. Ver
+[[licenciamento-do-metodo-estrategia]].
+
 ## Ligações
 
 [[roda-de-equipe-paaps]] · [[tam-sam-som-estrategia]] · [[diagnostico-360]] ·
-[[ata-registro-precos-saude-mental-servidor]]
+[[ata-registro-precos-saude-mental-servidor]] · [[licenciamento-do-metodo-estrategia]] ·
+[[fator-r-e-tributacao-estrategia]] · [[projecao-cinco-anos-estrategia]]
 
 ## Onde isso serve
 

@@ -11,6 +11,10 @@ atualizado: 2026-09-12
 
 Investimento, edital, inscrição e as respostas já enviadas.
 
+- [[serasa-econsig-parceria-estrategica]] : A Serasa já entra em mais de 600 órgãos
+  públicos pela folha do servidor com o eConsig, e a PAAPS pode entrar pela mesma porta com
+  o cuidado psíquico que falta
+
 ## O que cada nota carrega
 Nome do edital · prazo · o que foi enviado · o que foi respondido · o que aprendemos.
 
